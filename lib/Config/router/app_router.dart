@@ -7,6 +7,9 @@ abstract class AppRouter
 
   static final router = GoRouter(
     initialLocation: AppRoutes.kMainView,
+    //errorBuilder: (context, state) => ,
+    //navigatorKey: ,
+    //debugLogDiagnostics: ,
     routes:
     [
       // GoRoute(
