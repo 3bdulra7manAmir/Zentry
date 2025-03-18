@@ -32,5 +32,6 @@ flutter:
   #       style: italic
 
   assets:
-    - assets/icons/
+    - assets/icons/Splash/
+    - assets/icons/Login/
     - assets/images/
