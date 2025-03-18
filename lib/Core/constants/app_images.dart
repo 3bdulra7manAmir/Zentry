@@ -9,33 +9,46 @@ class AppAssets
   static final imagesSVG = _AppSVGIMGs._();
 }
 
-
+///-----------------------------------------------------------------//
 class _AppIconsPNG
 {
   _AppIconsPNG._();
 
-  final String avatarIconPNG = "";
+  //Splash
+  final String robotIconPNG = "assets/icons/Splash/Robot.png";
+
+  //Login
+  final String countryPNG = "assets/icons/Login/Country.png";
+  final String languagePNG = "assets/icons/Login/Language.png";
+  final String modePNG = "assets/icons/Login/Mode.png";
+  final String leftArrowPNG = "assets/icons/Login/Left_Arrow.png";
 }
-
-
 class _AppIconsSVG
 {
   _AppIconsSVG._();
 
-  final String avatarIconSVG = "";
+  //Splash
+  final String robotIconSVG = "assets/icons/Splash/Robot.svg";
+
+  //Login
+  final String countrySVG = "assets/icons/Login/Country.svg";
+  final String languageSVG = "assets/icons/Login/Language.svg";
+  final String modeSVG = "assets/icons/Login/Mode.svg";
+  final String leftArrowSVG = "assets/icons/Login/Left_Arrow.svg";
 }
 
-
+///-----------------------------------------------------------------//
 class _AppPNGIMGs
 {
   _AppPNGIMGs._();
 
-  final String avatarIMGPNG = "";
+  //Login
+  final String cloudRobotPNG = "assets/icons/Login/Cloud_Robot.png";
 }
-
 class _AppSVGIMGs
 {
   _AppSVGIMGs._();
 
-  final String avatarIMGSVG = "";
+  //Login
+  final String cloudRobotPNG = "assets/icons/Login/Cloud_Robot.svg";
 }
