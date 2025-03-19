@@ -1,7 +1,8 @@
 import 'package:test_app/Config/router/app_routes.dart';
 import 'package:go_router/go_router.dart';
-import 'package:test_app/Features/auth/presentation/screens/login_view.dart';
-import 'package:test_app/Features/splash/presentation/screens/splash_view.dart';
+import 'package:test_app/features/auth/presentation/screens/auth_view.dart';
+import 'package:test_app/features/auth/presentation/screens/form_view.dart';
+import 'package:test_app/features/splash/presentation/screens/splash_view.dart';
 
 abstract class AppRouter
 {
@@ -19,10 +20,17 @@ abstract class AppRouter
         name: AppRoutes.kSplashView,
         builder: (context, state) => const SplashView(),
       ),
+
+      GoRoute(
+        path: AppRoutes.kAppFormView,
+        name: AppRoutes.kAppFormView,
+        builder: (context, state) => const FormView(),
+      ),
+      
       GoRoute(
         path: AppRoutes.kLoginView,
         name: AppRoutes.kLoginView,
-        builder: (context, state) => const LoginView(),
+        builder: (context, state) => const AuthView(),
       ),
     ] 
   );

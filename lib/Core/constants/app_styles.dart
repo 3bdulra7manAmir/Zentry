@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/Core/constants/app_colors.dart';
+import 'package:test_app/Config/themes/app_colors.dart';
 
 abstract class AppStyles
 {

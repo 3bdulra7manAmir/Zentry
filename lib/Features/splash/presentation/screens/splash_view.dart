@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_app/Config/router/app_router.dart';
 import 'package:test_app/Config/router/app_routes.dart';
-import 'package:test_app/Core/constants/app_colors.dart';
+import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_images.dart';
 
 class SplashView extends StatefulWidget
@@ -19,7 +18,7 @@ class _SplashViewState extends State<SplashView>
   void initState()
   {
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () => AppRouter.router.pushNamed(AppRoutes.kLoginView),);
+    Future.delayed(const Duration(seconds: 5), () => AppRouter.router.pushNamed(AppRoutes.kAppFormView),);
   }
 
   @override

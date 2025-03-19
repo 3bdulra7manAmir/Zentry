@@ -4,7 +4,6 @@ analyzer:
   errors:
     deprecated_member_use: ignore
     avoid_print: ignore
-    unused_import: ignore
 
 linter:
   rules:

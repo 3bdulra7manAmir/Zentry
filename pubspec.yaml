@@ -7,31 +7,41 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  # APP UI on Other Devices
   device_preview: ^1.2.0
+
   flutter:
     sdk: flutter
+
+  # APP Responsive UI
   flutter_screenutil: ^5.9.3
+
+  # APP SVG ICONS
   flutter_svg: ^2.0.17
+
+  # APP Navigation
   go_router: ^14.8.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-
 flutter:
   uses-material-design: true
 
-  # fonts:
-  # - family: Roboto
-  #   fonts:
-  #     - asset: assets/fonts/roboto/Roboto-Regular.ttf
-  #     - asset: assets/fonts/roboto/Roboto-Bold.ttf
-  #       weight: 800
-  #     - asset: assets/fonts/roboto/Roboto-Italic.ttf
-  #       style: italic
+  # APP FONTS
+  fonts:
+  - family: Roboto
+    fonts:
+      - asset: assets/fonts/roboto/Roboto-Regular.ttf
+      - asset: assets/fonts/roboto/Roboto-Bold.ttf
+        weight: 800
+      - asset: assets/fonts/roboto/Roboto-Italic.ttf
+        style: italic
 
+  # APP ASSETS
   assets:
     - assets/icons/Splash/
+    - assets/icons/Setup/
     - assets/icons/Login/
     - assets/images/

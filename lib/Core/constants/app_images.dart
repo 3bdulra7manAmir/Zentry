@@ -14,41 +14,54 @@ class _AppIconsPNG
 {
   _AppIconsPNG._();
 
-  //Splash
-  final String robotIconPNG = "assets/icons/Splash/Robot.png";
+  //App Splash
+  final String robotIconPNG = "assets/icons/Splash/App_Logo.png";
 
-  //Login
-  final String countryPNG = "assets/icons/Login/Country.png";
-  final String languagePNG = "assets/icons/Login/Language.png";
-  final String modePNG = "assets/icons/Login/Mode.png";
-  final String leftArrowPNG = "assets/icons/Login/Left_Arrow.png";
+  //App Form
+  final String countryPNG = "assets/icons/Setup/Country.png";
+  final String languagePNG = "assets/icons/Setup/Language.png";
+  final String modePNG = "assets/icons/Setup/Mode.png";
+  final String leftArrowPNG = "assets/icons/Setup/Left_Arrow.png";
+
+  //App Login
+  final String egyptFlagPNG = "assets/icons/Login/Egypt_Flag.png";
+  final String corssedEyePNG = "assets/icons/Login/Crossed_Eye.png";
+  final String faceBookPNG = "assets/icons/Login/FaceBook.png";
+  final String googlePNG = "assets/icons/Login/Google.png";
+  final String applePNG = "assets/icons/Login/Apple.png";
 }
 class _AppIconsSVG
 {
   _AppIconsSVG._();
 
-  //Splash
-  final String robotIconSVG = "assets/icons/Splash/Robot.svg";
+  // App Splash
+  // final String robotIconSVG = "assets/icons/Splash/App_Logo.svg";
 
-  //Login
-  final String countrySVG = "assets/icons/Login/Country.svg";
-  final String languageSVG = "assets/icons/Login/Language.svg";
-  final String modeSVG = "assets/icons/Login/Mode.svg";
-  final String leftArrowSVG = "assets/icons/Login/Left_Arrow.svg";
+  // //App Form
+  // final String countrySVG = "assets/icons/Setup/Country.svg";
+  // final String languageSVG = "assets/icons/Setup/Language.svg";
+  // final String modeSVG = "assets/icons/Setup/Mode.svg";
+  // final String leftArrowSVG = "assets/icons/Setup/Left_Arrow.svg";
+
+  // App Login
+  // final String egyptFlagSVG = "assets/icons/Setup/Egypt_Flag.svg";
 }
+
+
+
 
 ///-----------------------------------------------------------------//
 class _AppPNGIMGs
 {
   _AppPNGIMGs._();
 
-  //Login
-  final String cloudRobotPNG = "assets/icons/Login/Cloud_Robot.png";
+  //App Form
+  final String cloudRobotPNG = "assets/icons/Setup/App_Logo_Cloud.png";
 }
 class _AppSVGIMGs
 {
   _AppSVGIMGs._();
 
-  //Login
-  final String cloudRobotPNG = "assets/icons/Login/Cloud_Robot.svg";
+  //App Form
+  //final String cloudRobotPNG = "assets/icons/Setup/App_Logo_Cloud.svg";
 }

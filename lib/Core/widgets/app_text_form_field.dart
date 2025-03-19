@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test_app/Core/constants/app_borders.dart';
-import 'package:test_app/Core/constants/app_colors.dart';
 import 'package:test_app/Core/constants/app_images.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
+import 'package:test_app/config/themes/app_colors.dart';
+import 'package:test_app/core/constants/app_borders.dart';
 
 class CustomTextFormField extends StatelessWidget
 {
   const CustomTextFormField({super.key,
-  required this.fieldPrefixIcon,
-  required this.fieldText
+  this.fieldPrefixIcon,
+  required this.fieldText,
+  this.fieldsuffixIcon
   });
 
-  final String fieldPrefixIcon;
+  final String? fieldPrefixIcon;
+  final String? fieldsuffixIcon;
   final String fieldText;
 
   @override
@@ -25,8 +26,8 @@ class CustomTextFormField extends StatelessWidget
         hintStyle: AppStyles.textStyle12.copyWith(fontWeight: FontWeight.w500, color: AppColors.kDivider),
         filled: true,
         fillColor: AppColors.kTextFormFieldFill,
-        prefixIcon: Image.asset(fieldPrefixIcon), // Before Icon
-        suffixIcon: Image.asset(AppAssets.iconsPNG.leftArrowPNG), // After Icon
+        prefixIcon: fieldPrefixIcon != null ? Image.asset(fieldPrefixIcon!) : null, // Before Icon // Only show if provided
+        suffixIcon: fieldsuffixIcon != null ? Image.asset(fieldsuffixIcon ?? AppAssets.iconsPNG.leftArrowPNG) : null, // After Icon // Default in not PRovided
         border: OutlineInputBorder(
           borderRadius: AppBorders.radiusCircular10,
           borderSide: BorderSide(color: AppColors.kTextFormFieldBorder,)

@@ -5,17 +5,17 @@ abstract class AppPadding
 {
   AppPadding._();
 
-  
-  //static EdgeInsets kSymmetric16H = EdgeInsets.symmetric(horizontal: 16.w);
+  ///App Setup
 
-  //static EdgeInsets kSymmetric16V = EdgeInsets.symmetric(vertical: 16.w);
-  //static EdgeInsets kSymmetric24V = EdgeInsets.symmetric(vertical: 24.w);
+  /// [ALL10]
+  static EdgeInsets kCloudLogoPadding = const EdgeInsets.all(10);
 
-  //App Login
-  static EdgeInsets kAll10 = const EdgeInsets.all(10);
-  static EdgeInsets kSymmetric12V = EdgeInsets.symmetric(vertical: 12.w,);
-  static EdgeInsets kSymmetric16H = EdgeInsets.symmetric(horizontal: 16.w,);
-  
-  //static EdgeInsets kAll8 = const EdgeInsets.all(8);
-  //static EdgeInsets kZeroPadding = EdgeInsets.zero;
+  /// [Symmetric_16_H]
+  static EdgeInsets kFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
+
+  /// [Symmetric_12_V]
+  static EdgeInsets kDividerPadding = EdgeInsets.symmetric(vertical: 12.w);
+
+  /// [Zero]
+  static EdgeInsets kZeroPadding = EdgeInsets.zero;
 }
