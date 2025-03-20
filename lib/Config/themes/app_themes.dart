@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ThemeManager
+class AppTheme
 {
-  ThemeManager._();
+  AppTheme._();
   static ThemeData getDefaultTheme()
   {
     return ThemeData(
-      
+
     );
   }
 }
