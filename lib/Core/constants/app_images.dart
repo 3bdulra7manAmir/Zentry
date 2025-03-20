@@ -20,13 +20,14 @@ class _AppIconsPNG
   ///AppHeader
   final String cloudPNG = "assets/icons/AppHeader/App_Cloud.png";
   final String fullHeaderPNG = "assets/icons/AppHeader/App_Logo_Cloud.png";
+  final String leftWhiteArrowPNG = "assets/icons/AppHeader/Left_White_Arrow.png";
 
 
   ///App Form
   final String countryPNG = "assets/icons/AppForm/Country.png";
   final String languagePNG = "assets/icons/AppForm/Language.png";
   final String modePNG = "assets/icons/AppForm/Mode.png";
-  final String leftArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
+  final String leftBlackArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
 
   ///App Login
   final String egyptFlagPNG = "assets/icons/Login/Egypt_Flag.png";

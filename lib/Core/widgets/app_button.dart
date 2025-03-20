@@ -45,7 +45,7 @@ class CustomButton extends StatelessWidget
         style: ButtonStyle(
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-            side: BorderSide(color: buttonBorderColor ?? AppColors.kPrimaryBlue, width: buttonBorderWidth ?? 1.w)
+            side: BorderSide(color: buttonBorderColor ?? AppColors.kSocailButtonBorderColor, width: buttonBorderWidth ?? 1.w)
             ),
           ),
           alignment: Alignment.center,

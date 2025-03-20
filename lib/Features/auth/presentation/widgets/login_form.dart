@@ -25,7 +25,7 @@ class LoginForm extends StatelessWidget
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            AppSizes.size28.verticalSpace,
+            AppSizes.size13.verticalSpace,
             
             Row(
               children:
@@ -110,7 +110,7 @@ class LoginForm extends StatelessWidget
               ],
             ),
 
-            AppSizes.size20.verticalSpace,
+            AppSizes.size12.verticalSpace,
           ],
         ),
       ),

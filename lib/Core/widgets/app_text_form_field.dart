@@ -27,7 +27,7 @@ class CustomTextFormField extends StatelessWidget
         filled: true,
         fillColor: AppColors.kTextFormFieldFill,
         prefixIcon: fieldPrefixIcon != null ? Image.asset(fieldPrefixIcon!) : null, // Before Icon // Only show if provided
-        suffixIcon: fieldsuffixIcon != null ? Image.asset(fieldsuffixIcon ?? AppAssets.iconsPNG.leftArrowPNG) : null, // After Icon // Default in not PRovided
+        suffixIcon: fieldsuffixIcon != null ? Image.asset(fieldsuffixIcon ?? AppAssets.iconsPNG.leftBlackArrowPNG) : null, // After Icon // Default in not PRovided
         border: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
           borderSide: BorderSide(color: AppColors.kTextFormFieldBorder,)

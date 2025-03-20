@@ -2,9 +2,13 @@ abstract class AppStrings
 {
   AppStrings._();
 
-  //AppForm
+  //AppHeader
   ///[Welcome_Back]
+  static const skip = "Skip";
+  ///[Skip]
   static const welcomeBack = "Welcome Back";
+
+  //AppForm
   ///[Language]
   static const language = "Langauage";
   ///[Country]

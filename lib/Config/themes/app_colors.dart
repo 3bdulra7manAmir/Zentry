@@ -11,6 +11,10 @@ class AppColors
   /// [Color_003082]
   static Color kPrimaryBlue = const Color(0xff003082);
 
+  ///App Header
+  /// [Color_003082]
+  static Color kSkip = const Color(0xffF4F4F4);
+
 
   ///App Form
   /// [Color_FFFFFF]
@@ -26,7 +30,6 @@ class AppColors
   
   ///App Login
   
-
   /// [Color_232633]
   static Color kAuthTab = const Color(0xffFF7D00);
   /// [Color_232633]
@@ -35,9 +38,9 @@ class AppColors
   static Color kForgetPasswordColor = const Color(0xff3E6FCF);
   /// [Color_B4B4B4]  
   static Color kRememberColor = const Color(0xffB4B4B4);
-  /// [Color_0xff000000]  
+  /// [Color_000000]  
   static Color korLoginWithColor = const Color(0xff000000);
-
-
+  /// [Color_E5E5E5]  
+  static Color kSocailButtonBorderColor = const Color(0xffE5E5E5);
 
 }
