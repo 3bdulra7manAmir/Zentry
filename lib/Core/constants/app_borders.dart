@@ -7,14 +7,17 @@ abstract class AppBorders
 
   //Form Border
   /// [TopLeft_20.TopRight_20]
-  static BorderRadiusGeometry formBorderRadius = BorderRadius.only(topLeft: Radius.circular(20.r), topRight: Radius.circular(20.r));
+  static BorderRadiusGeometry formBorder = BorderRadius.only(topLeft: Radius.circular(20.r), topRight: Radius.circular(20.r));
+
+  /// [TopLeft_12.TopRight_12]
+  static BorderRadiusGeometry indicatorBorder = BorderRadius.only(topLeft: Radius.circular(12.r), topRight: Radius.circular(12.r));
 
   //Divider
   /// [Circular_4]
-  static BorderRadius dividerBorderRadius = BorderRadius.circular(4.r);
+  static BorderRadius dividerBorder = BorderRadius.circular(4.r);
 
   //Text Form Field
   /// [Circular_10]
-  static BorderRadius radiusCircular10 = BorderRadius.circular(10.r);
+  static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
 
 }

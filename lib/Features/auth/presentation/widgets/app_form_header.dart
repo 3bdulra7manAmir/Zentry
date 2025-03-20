@@ -11,7 +11,7 @@ class FormHeader extends StatelessWidget
   {
     return Padding(
       padding: AppPadding.kCloudLogoPadding,
-      child: Image.asset(AppAssets.imagesPNG.cloudRobotPNG),
+      child: Image.asset(AppAssets.imagesPNG.appHeaderPNG),
     );
   }
 }

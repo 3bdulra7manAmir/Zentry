@@ -29,7 +29,7 @@ class CustomTextFormField extends StatelessWidget
         prefixIcon: fieldPrefixIcon != null ? Image.asset(fieldPrefixIcon!) : null, // Before Icon // Only show if provided
         suffixIcon: fieldsuffixIcon != null ? Image.asset(fieldsuffixIcon ?? AppAssets.iconsPNG.leftArrowPNG) : null, // After Icon // Default in not PRovided
         border: OutlineInputBorder(
-          borderRadius: AppBorders.radiusCircular10,
+          borderRadius: AppBorders.buttonBorder10,
           borderSide: BorderSide(color: AppColors.kTextFormFieldBorder,)
         ),
       ),

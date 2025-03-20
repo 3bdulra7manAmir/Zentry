@@ -44,7 +44,7 @@ class CustomButton extends StatelessWidget
       child: ElevatedButton(
         style: ButtonStyle(
           shape: WidgetStatePropertyAll(
-            RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.radiusCircular10,
+            RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
             side: BorderSide(color: buttonBorderColor ?? AppColors.kPrimaryBlue, width: buttonBorderWidth ?? 1.w)
             ),
           ),

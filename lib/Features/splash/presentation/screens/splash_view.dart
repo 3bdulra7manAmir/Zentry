@@ -31,7 +31,7 @@ class _SplashViewState extends State<SplashView>
           mainAxisAlignment: MainAxisAlignment.center,
           children:
           [
-            Image.asset(AppAssets.iconsPNG.robotIconPNG),
+            Image.asset(AppAssets.iconsPNG.appLogoPNG),
             //SvgPicture.asset(AppAssets.iconsSVG.robotIconSVG),
           ],
         ),

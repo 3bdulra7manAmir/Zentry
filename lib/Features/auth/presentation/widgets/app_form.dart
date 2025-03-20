@@ -21,7 +21,7 @@ class AppForm extends StatelessWidget
       padding: AppPadding.kFormPadding,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.formBorderRadius,
+        borderRadius: AppBorders.formBorder,
         color: AppColors.kWhite,
       ),
 
@@ -36,7 +36,7 @@ class AppForm extends StatelessWidget
             height: 3.h,
             decoration: BoxDecoration(
               color: AppColors.kSecondaryText,
-              borderRadius: AppBorders.dividerBorderRadius,
+              borderRadius: AppBorders.dividerBorder,
             ),
           ),
 

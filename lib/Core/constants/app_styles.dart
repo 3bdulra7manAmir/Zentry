@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
+import 'package:test_app/config/themes/font_system/app_sizes.dart';
 
 abstract class AppStyles
 {
@@ -18,7 +19,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 20.sp,
+      fontSize: AppSizes.size20.sp,
       fontWeight: fontWeight ?? FontWeight.w700,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -40,7 +41,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 18.sp,
+      fontSize: AppSizes.size18.sp,
       fontWeight: fontWeight ?? FontWeight.w600,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -62,7 +63,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 16.sp,
+      fontSize: AppSizes.size16.sp,
       fontWeight: fontWeight ?? FontWeight.w400,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -84,7 +85,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 14.sp,
+      fontSize: AppSizes.size14.sp,
       fontWeight: fontWeight ?? FontWeight.w700,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -106,7 +107,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 13.sp,
+      fontSize: AppSizes.size13.sp,
       fontWeight: fontWeight ?? FontWeight.w700,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -128,7 +129,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: 12.sp,
+      fontSize: AppSizes.size12.sp,
       fontWeight: fontWeight ?? FontWeight.w500,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
