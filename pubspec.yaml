@@ -49,6 +49,6 @@ flutter:
   # APP ASSETS
   assets:
     - assets/icons/Splash/
-    - assets/icons/Setup/
+    - assets/icons/AppForm/
     - assets/icons/Login/
     - assets/images/

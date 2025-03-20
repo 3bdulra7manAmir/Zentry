@@ -26,6 +26,9 @@ class AppColors
   
   ///App Login
   
+
+  /// [Color_232633]
+  static Color kAuthTab = const Color(0xffFF7D00);
   /// [Color_232633]
   static Color kTertiaryText = const Color(0xff232633);
   /// [Color_3E6FCF]  

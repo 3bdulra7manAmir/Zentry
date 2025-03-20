@@ -12,6 +12,9 @@ abstract class AppPadding
 
   /// [Symmetric_16_H]
   static EdgeInsets kFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
+  
+  /// [Symmetric_16_H_V]
+  static EdgeInsets kTabBarPadding = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w);
 
   /// [Symmetric_12_V]
   static EdgeInsets kDividerPadding = EdgeInsets.symmetric(vertical: 12.w);

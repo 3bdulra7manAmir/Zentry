@@ -6,7 +6,7 @@ class AppTheme
   static ThemeData getDefaultTheme()
   {
     return ThemeData(
-
+      
     );
   }
 }
