@@ -23,7 +23,7 @@ class CustomTextFormField extends StatelessWidget
       //controller: TextEditingController(text: fieldText),
       decoration: InputDecoration(
         hintText: fieldText,
-        hintStyle: AppStyles.textStyle12.copyWith(fontWeight: FontWeight.w500, color: AppColors.kDivider),
+        hintStyle: AppStyles.textStyle12(),
         filled: true,
         fillColor: AppColors.kTextFormFieldFill,
         prefixIcon: fieldPrefixIcon != null ? Image.asset(fieldPrefixIcon!) : null, // Before Icon // Only show if provided

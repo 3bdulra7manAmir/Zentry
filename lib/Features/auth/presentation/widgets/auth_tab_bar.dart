@@ -29,7 +29,8 @@ class AuthTabs extends StatelessWidget
               labelColor: Colors.orange,
               unselectedLabelColor: Colors.grey,
               indicatorColor: Colors.orange,
-              tabs: [Tab(text: AppStrings.login), Tab(text: AppStrings.signUp),],
+              
+              tabs: [Tab(text: AppStrings.login,), Tab(text: AppStrings.signUp),],
             ),
           ),
 

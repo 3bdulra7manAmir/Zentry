@@ -15,14 +15,14 @@ class TestApp extends StatelessWidget
       builder: (context, child)
       {
         return DevicePreview(
-          enabled: false,
+          enabled: true,
           builder: (context) => MaterialApp.router(
             builder: DevicePreview.appBuilder,
             locale: DevicePreview.locale(context),
             routerConfig: AppRouter.router,
         
             debugShowCheckedModeBanner: false,
-            //useInheritedMediaQuery: true,
+            useInheritedMediaQuery: true,
           ),
         );
       },

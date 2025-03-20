@@ -6,59 +6,137 @@ abstract class AppStyles
 {
   AppStyles._();
 
-  static TextStyle textStyle24 = TextStyle(
-    fontSize: 24.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
 
-  static TextStyle textStyle22 = TextStyle(
-    fontSize: 22.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
+  /// FontWeight = [FontWeight.w700] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  static TextStyle textStyle20({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 20.sp,
+      fontWeight: fontWeight ?? FontWeight.w700,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kPrimaryText,
+    );
+  }
 
-  static TextStyle textStyle20 = TextStyle(
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
 
-  static TextStyle textStyle18 = TextStyle(
-    fontSize: 18.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
+  /// FontWeight = [FontWeight.w600] ,, FontColor = [Color_FFFFFF] ,, FontFamily = [Roboto]
+  static TextStyle textStyle18({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 18.sp,
+      fontWeight: fontWeight ?? FontWeight.w600,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kWhite,
+    );
+  }
 
-  static TextStyle textStyle16 = TextStyle(
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
 
-  static TextStyle textStyle14 = TextStyle(
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
+  /// FontWeight = [FontWeight.w400] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  static TextStyle textStyle16({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 16.sp,
+      fontWeight: fontWeight ?? FontWeight.w400,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kPrimaryText,
+    );
+  }
 
-  static TextStyle textStyle12 = TextStyle(
-    fontSize: 12.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
 
-  static TextStyle textStyle10 = TextStyle(
-    fontSize: 10.sp,
-    fontWeight: FontWeight.w700,
-    color: AppColors.kPrimaryText,
-    fontFamily: 'Roboto',
-  );
+  /// FontWeight = [FontWeight.w700] ,, FontColor = [Color_FFFFFF] ,, FontFamily = [Roboto]
+  static TextStyle textStyle14({
+  FontWeight? fontWeight,
+  String? fontFamily,
+  TextDecoration? textDecoration,
+  TextOverflow? textOverflow,
+  Color? textDecorationColor,
+  Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 14.sp,
+      fontWeight: fontWeight ?? FontWeight.w700,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kWhite,
+    );
+  }
+
+
+  /// FontWeight = [FontWeight.w700] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  static TextStyle textStyle13({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 13.sp,
+      fontWeight: fontWeight ?? FontWeight.w700,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kPrimaryText,
+    );
+  }
+
+
+  /// FontWeight = [FontWeight.w500] ,, FontColor = [Color_9E9E9E] ,, FontFamily = [Roboto]
+  static TextStyle textStyle12({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: 12.sp,
+      fontWeight: fontWeight ?? FontWeight.w500,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kSecondaryText,
+
+    );
+  }
+
 }

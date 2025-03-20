@@ -50,7 +50,7 @@ class CustomButton extends StatelessWidget
           backgroundColor: WidgetStatePropertyAll(buttonBackgroundColor ?? AppColors.kPrimaryBlue,),
         ),
         onPressed: (){},
-        child: !isSocialButton ? Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14.copyWith(color: AppColors.kWhite),) :
+        child: !isSocialButton ? Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14()) :
         Row(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:
@@ -59,7 +59,7 @@ class CustomButton extends StatelessWidget
             
             (isLogoSpace ?? true) ? const Spacer() : 30.horizontalSpace,
             
-            Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14.copyWith(color: AppColors.kWhite),),
+            Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14()),
           ],
         )
         ,

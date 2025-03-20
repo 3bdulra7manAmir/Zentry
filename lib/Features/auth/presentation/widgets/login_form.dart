@@ -25,57 +25,61 @@ class LoginForm extends StatelessWidget
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Sizes.size28.verticalSpace,
+            AppSizes.size28.verticalSpace,
             
-            const Row(
+            Row(
               children:
               [
-                Text(AppStrings.phoneNumber),
-                Spacer(),
-                Text(AppStrings.or),
-                Text(AppStrings.email),
+                Text(AppStrings.phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.kTertiaryText,),),
+                const Spacer(),
+
+                Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.kSecondaryText,),),
+                
+                AppSizes.size4.horizontalSpace,
+
+                Text(AppStrings.email, style: AppStyles.textStyle12(fontWeight: FontWeight.w700, textDecoration: TextDecoration.underline),),
               ],
             ),
       
-            Sizes.size8.verticalSpace,
+            AppSizes.size8.verticalSpace,
       
             CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode),
       
-            Sizes.size24.verticalSpace,
+            AppSizes.size24.verticalSpace,
       
-            const Text(AppStrings.password),
+            Text(AppStrings.password, style: AppStyles.textStyle12(textColor: AppColors.kTertiaryText,),),
       
-            Sizes.size8.verticalSpace,
+            AppSizes.size8.verticalSpace,
       
             CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: AppAssets.iconsPNG.corssedEyePNG,),
       
-            Sizes.size16.verticalSpace,
+            AppSizes.size16.verticalSpace,
       
             Row(
               children:
               [
                 Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: 2.w, color: AppColors.kTextFormFieldBorder,),),
-      
-                Sizes.size8.horizontalSpace,
-      
-                const Text(AppStrings.remember),
+
+                Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.kRememberColor),),
+
                 const Spacer(),
-                const Text(AppStrings.forgetPassword, style: TextStyle(decoration: TextDecoration.underline),),
+
+                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline, ),),
               ],
             ),
       
-            Sizes.size16.verticalSpace,
+            AppSizes.size16.verticalSpace,
       
             const CustomButton(buttonText: AppStrings.login, isSocialButton: false,),
       
-            Sizes.size20.verticalSpace,
+            AppSizes.size20.verticalSpace,
       
-            const Align(
+            Align(
               alignment: Alignment.center,
-              child: Text(AppStrings.orLoginWith,) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: FontWeight.w700, textColor: AppColors.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
             ),
       
-            Sizes.size20.verticalSpace,
+            AppSizes.size20.verticalSpace,
       
             Column(
               children:
@@ -85,27 +89,27 @@ class LoginForm extends StatelessWidget
                   [
                     Expanded(
                       child: CustomButton(buttonText: AppStrings.facebook, isSocialButton: true, platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle14.copyWith(color: AppColors.kSecondaryText),),
+                      buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText)),
                     ),
                 
-                    Sizes.size12.horizontalSpace,
+                    AppSizes.size12.horizontalSpace,
                 
                     Expanded(
                       child: CustomButton(buttonText: AppStrings.google, isSocialButton: true, platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle14.copyWith(color: AppColors.kSecondaryText),),
+                      buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText)),
                     ),
                   ],
                 ),
       
-                Sizes.size12.verticalSpace,
+                AppSizes.size12.verticalSpace,
       
                 CustomButton(buttonText: AppStrings.apple, isSocialButton: true, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
                 isLogoSpace: false,
-                buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle14.copyWith(color: AppColors.kSecondaryText),),
+                buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText)),
               ],
             ),
 
-            Sizes.size20.verticalSpace,
+            AppSizes.size20.verticalSpace,
           ],
         ),
       ),

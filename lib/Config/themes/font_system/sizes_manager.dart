@@ -1,5 +1,7 @@
-abstract class Sizes
+abstract class AppSizes
 {
+  static const double size4 = 4.0;
+  
   static const double size8 = 8.0;
   static const double size12 = 12.0;
   static const double size14 = 14.0;

@@ -31,13 +31,20 @@ flutter:
 
   # APP FONTS
   fonts:
+
+  # ROBOTO
   - family: Roboto
     fonts:
-      - asset: assets/fonts/roboto/Roboto-Regular.ttf
       - asset: assets/fonts/roboto/Roboto-Bold.ttf
         weight: 800
-      - asset: assets/fonts/roboto/Roboto-Italic.ttf
-        style: italic
+      - asset: assets/fonts/roboto/Roboto-Regular.ttf
+
+
+  #SomarSans
+      - asset: assets/fonts/somar/SomarSans-Bold.ttf
+        weight: 800
+      - asset: assets/fonts/somar/SomarSans-Regular.ttf
+
 
   # APP ASSETS
   assets:

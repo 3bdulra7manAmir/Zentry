@@ -33,45 +33,45 @@ class AppForm extends StatelessWidget
           Container(
             margin: AppPadding.kDividerPadding,
             width: 73.w,
-            height: 1.h,
+            height: 3.h,
             decoration: BoxDecoration(
-              color: AppColors.kDivider,
+              color: AppColors.kSecondaryText,
               borderRadius: AppBorders.dividerBorderRadius,
             ),
           ),
 
-          Sizes.size12.verticalSpace,
+          AppSizes.size12.verticalSpace,
 
           // Welcome TEXT
-          Text(AppStrings.welcomeBack, style: AppStyles.textStyle18.copyWith(fontWeight: FontWeight.w600),),
+          Text(AppStrings.welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.kPrimaryText)),
 
-          Sizes.size28.verticalSpace,
+          AppSizes.size28.verticalSpace,
 
           // First Text Form Field
           GestureDetector(
             child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.languagePNG, fieldText: AppStrings.language,)
           ),
 
-          Sizes.size16.verticalSpace,
+          AppSizes.size16.verticalSpace,
 
           GestureDetector(
             child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.countryPNG, fieldText: AppStrings.country)
           ),
 
-          Sizes.size16.verticalSpace,
+          AppSizes.size16.verticalSpace,
 
           GestureDetector(
             child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.modePNG, fieldText: AppStrings.mode)
           ),
 
-          Sizes.size27.verticalSpace,
+          AppSizes.size27.verticalSpace,
 
           const CustomButton(buttonText: AppStrings.login, isSocialButton: false,),
 
-          Sizes.size16.verticalSpace,
+          AppSizes.size16.verticalSpace,
 
          CustomButton(buttonText: AppStrings.signUp, isSocialButton: false,
-         buttonTextStyle: AppStyles.textStyle14.copyWith(color: AppColors.kPrimaryBlue),
+         buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.kPrimaryBlue),
          buttonBackgroundColor: AppColors.kWhite,
          buttonBorderColor: AppColors.kPrimaryBlue,
          ),
