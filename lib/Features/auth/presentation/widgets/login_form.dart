@@ -4,7 +4,7 @@ import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
-import 'package:test_app/config/themes/font_system/sizes_manager.dart';
+import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_button.dart';
@@ -96,7 +96,8 @@ class LoginForm extends StatelessWidget
                 
                     Expanded(
                       child: CustomButton(buttonText: AppStrings.google, isSocialButton: true, platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText)),
+                      buttonBackgroundColor: AppColors.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText),
+                      spaceAmount: 30,),
                     ),
                   ],
                 ),
@@ -104,8 +105,8 @@ class LoginForm extends StatelessWidget
                 AppSizes.size12.verticalSpace,
       
                 CustomButton(buttonText: AppStrings.apple, isSocialButton: true, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
-                isLogoSpace: false,
-                buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText)),
+                isLogoSpace: false, buttonBackgroundColor: AppColors.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.kTertiaryText),
+                spaceAmount: 30,),
               ],
             ),
 

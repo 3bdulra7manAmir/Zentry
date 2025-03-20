@@ -18,7 +18,9 @@ class CustomButton extends StatelessWidget
   this.buttonTextStyle,
   required this.isSocialButton,
   this.platformLogo,
-  this.isLogoSpace,});
+  this.isLogoSpace,
+  this.spaceAmount,
+  });
 
   final double? buttonWidth;
   final double? buttonHeight;
@@ -31,6 +33,7 @@ class CustomButton extends StatelessWidget
   final bool isSocialButton;
   final String? platformLogo;
   final bool? isLogoSpace;
+  final double? spaceAmount;
 
   @override
   Widget build(BuildContext context)
@@ -57,7 +60,7 @@ class CustomButton extends StatelessWidget
           [
             Image.asset(platformLogo ?? AppAssets.iconsPNG.corssedEyePNG),
             
-            (isLogoSpace ?? true) ? const Spacer() : 30.horizontalSpace,
+            (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
             
             Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14()),
           ],
