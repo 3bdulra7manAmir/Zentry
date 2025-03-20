@@ -45,7 +45,7 @@ class FormHeader extends StatelessWidget
     // );
     
       Stack(
-        clipBehavior: Clip.none,
+        //clipBehavior: Clip.none,
         children:
         [
           Container(

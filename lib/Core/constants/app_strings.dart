@@ -27,6 +27,8 @@ abstract class AppStrings
   static const or = "Or";
   ///[Email]
   static const email = "Email";
+  ///[Email]
+  static const phone = "Phone";
   ///[country_Code]
   static const countryCode = "+20  |  Phone number";
   ///[Password]

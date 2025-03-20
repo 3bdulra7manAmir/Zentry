@@ -11,6 +11,8 @@ class AppTheme
     return ThemeData(
       //brightness: 
 
+      //scaffoldBackgroundColor: ,
+
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
