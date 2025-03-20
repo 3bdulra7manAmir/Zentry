@@ -50,5 +50,6 @@ flutter:
   assets:
     - assets/icons/Splash/
     - assets/icons/AppForm/
+    - assets/icons/AppHeader/
     - assets/icons/Login/
     - assets/images/
