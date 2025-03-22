@@ -49,4 +49,13 @@ abstract class AppStrings
   //SignupForm
 
 
+  ///App ForgetPassword
+  ///[Reset_Password]
+  static const resetPassword = "Reset Password";
+  ///[Forgot_Password]
+  static const forgotPassword = "Forgot password ?";
+  ///[Enter_Phone_Number_Associated]
+  static const enterPhoneNumberAssociated = "Enter the phone number associated";
+  ///[With_Your_Account]
+  static const withYourAccount = "with your account";
 }

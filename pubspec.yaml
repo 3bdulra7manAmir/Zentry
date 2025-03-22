@@ -52,4 +52,5 @@ flutter:
     - assets/icons/AppForm/
     - assets/icons/AppHeader/
     - assets/icons/Login/
+    - assets/icons/ForgetPassword/
     - assets/images/

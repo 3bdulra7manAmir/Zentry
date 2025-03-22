@@ -35,6 +35,9 @@ class _AppIconsPNG
   final String faceBookPNG = "assets/icons/Login/FaceBook.png";
   final String googlePNG = "assets/icons/Login/Google.png";
   final String applePNG = "assets/icons/Login/Apple.png";
+
+  ///App AppBar
+  final String leftArrowBlackPNG = "assets/icons/ForgetPassword/Left_Arrow_Black.png";
 }
 class _AppIconsSVG
 {

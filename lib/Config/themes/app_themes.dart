@@ -16,7 +16,7 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w,),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),

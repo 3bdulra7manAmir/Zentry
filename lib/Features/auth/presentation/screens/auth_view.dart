@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/features/auth/presentation/widgets/app_form_header.dart';
-import 'package:test_app/features/auth/presentation/widgets/auth_tab_bar.dart';
+import 'package:test_app/features/auth/presentation/widgets/auth_tabbar.dart';
 
 class AuthView extends StatelessWidget
 {
