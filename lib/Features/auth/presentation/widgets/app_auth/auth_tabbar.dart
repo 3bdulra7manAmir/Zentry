@@ -5,8 +5,8 @@ import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_strings.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_login_form.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_signup_form.dart';
+import 'package:test_app/features/auth/presentation/widgets/app_auth/app_login_form.dart';
+import 'package:test_app/features/auth/presentation/widgets/app_auth/app_signup_form.dart';
 
 class AuthTabs extends StatelessWidget
 {

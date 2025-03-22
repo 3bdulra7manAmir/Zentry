@@ -3,6 +3,7 @@ abstract class AppSizes
   static const double size4 = 4.0;
   static const double size7 = 7.0;
   static const double size8 = 8.0;
+  static const double size9 = 9.0;
   static const double size12 = 12.0;
   static const double size13 = 13.0;
   static const double size14 = 14.0;

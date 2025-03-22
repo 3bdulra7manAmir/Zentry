@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_images.dart';
+import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/app_colors.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/constants/app_styles.dart';
+import 'package:test_app/core/widgets/app_button.dart';
 import 'package:test_app/features/auth/presentation/widgets/app_appbar.dart';
+import 'package:test_app/features/auth/presentation/widgets/numeric_keyboard.dart';
 
 class ForgetPasswordView extends StatelessWidget
 {
@@ -17,6 +20,7 @@ class ForgetPasswordView extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
+      backgroundColor: AppColors.kWhite,
       body: Column(
         children:
         [
@@ -34,9 +38,49 @@ class ForgetPasswordView extends StatelessWidget
 
           AppSizes.size46.verticalSpace,
 
-          Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(textColor: AppColors.kQuaternaryText,), textAlign: TextAlign.start,),
+          Container(
+            margin: AppPadding.kFormPadding,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:
+              [
+                Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText,)),
 
-          CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
+                AppSizes.size9.verticalSpace,
+                
+                CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
+
+                AppSizes.size28.verticalSpace,
+
+                Row(
+                  children:
+                  [
+                    Text("Don't Have phone ?", style: AppStyles.textStyle14(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
+
+                    AppSizes.size14.horizontalSpace,
+
+                    Text("Try another way", style: AppStyles.textStyle14(fontWeight: FontWeight.w500,
+                        textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline,
+                        textDecorationColor: AppColors.kForgetPasswordColor,
+                      ),
+                    ),
+                  ],
+                ),
+
+                AppSizes.size24.verticalSpace,
+
+                CustomButton(buttonText: "Verify", isSocialButton: false),
+
+                
+              ],
+            ),
+          ),
+
+          Spacer(),
+
+          NumericKeyboard(),
+          
+          AppSizes.size20.verticalSpace,
         ],
       ),
     );

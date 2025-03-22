@@ -58,4 +58,5 @@ abstract class AppStrings
   static const enterPhoneNumberAssociated = "Enter the phone number associated";
   ///[With_Your_Account]
   static const withYourAccount = "with your account";
+  
 }

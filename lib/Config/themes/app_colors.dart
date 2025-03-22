@@ -51,4 +51,7 @@ class AppColors
   /// [HexColor_2E2E2E]  
   static Color kQuaternaryText = const Color(0xff2E2E2E);
 
+  /// [HexColor_FAFAFA]  
+  static Color kNumericButtonBG = const Color(0xffFAFAFA);
+
 }
