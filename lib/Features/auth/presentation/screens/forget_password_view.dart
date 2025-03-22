@@ -8,7 +8,7 @@ import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 import 'package:test_app/core/widgets/app_button.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_appbar.dart';
+import 'package:test_app/core/widgets/app_appbar.dart';
 import 'package:test_app/features/auth/presentation/widgets/numeric_keyboard.dart';
 
 class ForgetPasswordView extends StatelessWidget
@@ -25,7 +25,7 @@ class ForgetPasswordView extends StatelessWidget
         children:
         [
           AppSizes.size46.verticalSpace,
-
+      
           Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
           
           AppSizes.size13.verticalSpace,
@@ -35,30 +35,31 @@ class ForgetPasswordView extends StatelessWidget
           AppSizes.size7.verticalSpace,
           
           Text(AppStrings.withYourAccount, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
-
+      
           AppSizes.size46.verticalSpace,
-
+      
           Container(
+            alignment: Alignment.center,
             margin: AppPadding.kFormPadding,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
                 Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText,)),
-
+      
                 AppSizes.size9.verticalSpace,
                 
                 CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
-
+      
                 AppSizes.size28.verticalSpace,
-
+      
                 Row(
                   children:
                   [
                     Text("Don't Have phone ?", style: AppStyles.textStyle14(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
-
+      
                     AppSizes.size14.horizontalSpace,
-
+      
                     Text("Try another way", style: AppStyles.textStyle14(fontWeight: FontWeight.w500,
                         textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline,
                         textDecorationColor: AppColors.kForgetPasswordColor,
@@ -66,18 +67,17 @@ class ForgetPasswordView extends StatelessWidget
                     ),
                   ],
                 ),
-
+      
                 AppSizes.size24.verticalSpace,
-
+      
                 CustomButton(buttonText: "Verify", isSocialButton: false),
-
-                
+      
               ],
             ),
           ),
-
+      
           Spacer(),
-
+      
           NumericKeyboard(),
           
           AppSizes.size20.verticalSpace,

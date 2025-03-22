@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:test_app/features/auth/presentation/screens/auth_view.dart';
 import 'package:test_app/features/auth/presentation/screens/forget_password_view.dart';
 import 'package:test_app/features/auth/presentation/screens/form_view.dart';
+import 'package:test_app/features/auth/presentation/screens/new_password_view.dart';
 import 'package:test_app/features/splash/presentation/screens/splash_view.dart';
 
 
@@ -11,7 +12,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kForgetPasswordView,
+    initialLocation: AppRoutes.kNewPasswordView,
     //errorBuilder: (context, state) => ,
     //navigatorKey: ,
     //debugLogDiagnostics: true,
@@ -39,6 +40,11 @@ abstract class AppRouter
         path: AppRoutes.kForgetPasswordView,
         name: AppRoutes.kForgetPasswordView,
         builder: (context, state) => const ForgetPasswordView(),
+      ),
+      GoRoute(
+        path: AppRoutes.kNewPasswordView,
+        name: AppRoutes.kNewPasswordView,
+        builder: (context, state) => const NewPasswordView(),
       ),
     ] 
   );
