@@ -9,6 +9,7 @@ class AppColors
   static Color kTransparent =  Colors.transparent;
 
   ///App Splash
+
   /// [HexColor_003082]
   static Color kPrimaryBlue = const Color(0xff003082);
 
@@ -18,6 +19,7 @@ class AppColors
 
 
   ///App Form
+
   /// [HexColor_FFFFFF]
   static Color kWhite = const Color(0xffFFFFFF);
   /// [HexColor_9E9E9E]
@@ -50,8 +52,12 @@ class AppColors
   static Color kAppBarBGColor = const Color(0xffFBFBFB);
   /// [HexColor_2E2E2E]  
   static Color kQuaternaryText = const Color(0xff2E2E2E);
-
   /// [HexColor_FAFAFA]  
   static Color kNumericButtonBG = const Color(0xffFAFAFA);
+
+  ///App Verification
+  
+  /// [HexColor_233973]
+  static Color kVerificationUnderLink = const Color(0xff233973);
 
 }

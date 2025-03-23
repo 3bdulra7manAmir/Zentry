@@ -37,10 +37,11 @@ class _AppIconsPNG
   final String applePNG = "assets/icons/Login/Apple.png";
 
   ///App AppBar
-  final String leftArrowBlackPNG = "assets/icons/ForgetPassword/Left_Arrow_Black.png";
+  final String leftBackArrowBlackPNG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
+  final String leftArrowGreykPNG = "assets/icons/ForgetPassword/Left_Arrow_Grey.png";
 
-  ///App NewPassword
-  final String securityLockPNG = "assets/icons/NewPassword/SecurityLock.png";
+  ///App Rest Password
+  final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";
 }
 class _AppIconsSVG
 {

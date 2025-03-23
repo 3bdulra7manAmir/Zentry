@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   {
     return AppBar(
       backgroundColor: AppColors.kAppBarBGColor,
-      leading: barLeading ?? Image.asset(AppAssets.iconsPNG.leftArrowBlackPNG),
+      leading: barLeading ?? Image.asset(AppAssets.iconsPNG.leftBackArrowBlackPNG),
       leadingWidth: 65.w,
       
 

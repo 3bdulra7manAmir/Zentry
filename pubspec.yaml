@@ -7,19 +7,12 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  # APP UI on Other Devices
   device_preview: ^1.2.0
-
   flutter:
     sdk: flutter
-
-  # APP Responsive UI
+  flutter_otp_text_field: ^1.5.1+1
   flutter_screenutil: ^5.9.3
-
-  # APP SVG ICONS
   flutter_svg: ^2.0.17
-
-  # APP Navigation
   go_router: ^14.8.1
 
 dev_dependencies:
@@ -32,26 +25,24 @@ flutter:
   # APP FONTS
   fonts:
 
-  # ROBOTO
-  - family: Roboto
-    fonts:
-      - asset: assets/fonts/roboto/Roboto-Bold.ttf
-        weight: 800
-      - asset: assets/fonts/roboto/Roboto-Regular.ttf
+    # ROBOTO
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
 
-
-  #SomarSans
-      - asset: assets/fonts/somar/SomarSans-Bold.ttf
-        weight: 800
-      - asset: assets/fonts/somar/SomarSans-Regular.ttf
-
-
-  # APP ASSETS
+        #SomarSans
+        - asset: assets/fonts/somar/SomarSans-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/somar/SomarSans-Regular.ttf
+    # APP ASSETS
   assets:
     - assets/icons/Splash/
     - assets/icons/AppForm/
     - assets/icons/AppHeader/
     - assets/icons/Login/
     - assets/icons/ForgetPassword/
-    - assets/icons/NewPassword/
+    - assets/icons/RestPassword/
+    - assets/icons/Verification/
     - assets/images/

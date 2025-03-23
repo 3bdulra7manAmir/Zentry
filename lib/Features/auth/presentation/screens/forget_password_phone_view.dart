@@ -35,7 +35,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
           
           AppSizes.size7.verticalSpace,
           
-          Text(AppStrings.withYourAccount, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
+          Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondaryText, fontWeight: AppFontWeights.w400),),
       
           AppSizes.size46.verticalSpace,
       
@@ -80,7 +80,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
       
           NumericKeyboard(),
           
-          AppSizes.size20.verticalSpace,
+          AppSizes.size14.verticalSpace,
         ],
       ),
     );
