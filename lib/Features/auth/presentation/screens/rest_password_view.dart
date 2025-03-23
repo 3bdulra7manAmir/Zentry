@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
+import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
@@ -10,9 +11,9 @@ import 'package:test_app/core/constants/app_styles.dart';
 import 'package:test_app/core/widgets/app_appbar.dart';
 import 'package:test_app/core/widgets/app_button.dart';
 
-class NewPasswordView extends StatelessWidget
+class RestPasswordView extends StatelessWidget
 {
-  const NewPasswordView({super.key});
+  const RestPasswordView({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -37,7 +38,7 @@ class NewPasswordView extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
+                Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 
@@ -45,7 +46,7 @@ class NewPasswordView extends StatelessWidget
 
                 AppSizes.size24.verticalSpace,
 
-                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
+                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 
@@ -56,7 +57,7 @@ class NewPasswordView extends StatelessWidget
                 CustomButton(buttonText: "Rest Password", isSocialButton: false,),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

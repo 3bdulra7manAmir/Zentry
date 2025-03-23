@@ -15,15 +15,9 @@ class AuthView extends StatelessWidget
       body: const Column(
         children:
         [
-          Expanded(
-            flex: 1,
-            child: FormHeader()
-          ),
+          Expanded(flex: 1, child: FormHeader()),
 
-          Expanded(
-            flex: 3,
-            child: AuthTabs()
-          ),
+          Expanded(flex: 3, child: AuthTabs()),
         ],
       ),
     );

@@ -9,10 +9,20 @@ abstract class AppRoutes
 
   //APP FORM
   static const kAppFormView = '/kAppFormView';
+
   //APP Login
-  static const kLoginView = '/kLoginView';
-  //APP ForgetPassword
-  static const kForgetPasswordView = '/kForgetPasswordView';
-  //APP NewPassword
-  static const kNewPasswordView = '/kNewPasswordView';
+  static const kLoginPhoneView = '/kLoginPhoneView';
+  //APP Login
+  static const kLoginEmailView = '/kLoginEmailView';
+
+  //APP Forget Password Phone
+  static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
+  //APP Forget Password Email
+  static const kForgetPasswordEmailView = '/kForgetPasswordEmailView';
+
+  //APP Rest Password View
+  static const kResetPasswordView = '/kResetPasswordView';
+
+  //APP Verification Code View
+  static const kVerificationCodeView = '/kVerificationCodeView';
 }

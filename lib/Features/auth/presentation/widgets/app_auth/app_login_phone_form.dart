@@ -4,14 +4,15 @@ import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
+import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_button.dart';
 
-class LoginForm extends StatelessWidget
+class LoginFormWithPhone extends StatelessWidget
 {
-  const LoginForm({super.key});
+  const LoginFormWithPhone({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -37,7 +38,7 @@ class LoginForm extends StatelessWidget
                 
                 AppSizes.size4.horizontalSpace,
 
-                Text(AppStrings.email, style: AppStyles.textStyle12(fontWeight: FontWeight.w700, textDecoration: TextDecoration.underline),),
+                Text(AppStrings.email, style: AppStyles.textStyle12(fontWeight: AppFontWeights.w700, textDecoration: TextDecoration.underline),),
               ],
             ),
       
@@ -76,7 +77,7 @@ class LoginForm extends StatelessWidget
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: FontWeight.w700, textColor: AppColors.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.w700, textColor: AppColors.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
             ),
       
             AppSizes.size20.verticalSpace,
