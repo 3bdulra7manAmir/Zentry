@@ -62,5 +62,7 @@ abstract class AppStrings
   ///App NewPassword
   ///[New_Password]
   static const newPassword = "New Password";
+  ///[Confirm_Password]
+  static const confirmPassword = "Confirm Password";
   
 }

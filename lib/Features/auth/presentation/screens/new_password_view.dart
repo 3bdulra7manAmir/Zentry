@@ -8,6 +8,7 @@ import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 import 'package:test_app/core/widgets/app_appbar.dart';
+import 'package:test_app/core/widgets/app_button.dart';
 
 class NewPasswordView extends StatelessWidget
 {
@@ -24,8 +25,11 @@ class NewPasswordView extends StatelessWidget
         children:
         [
           AppSizes.size35.verticalSpace,
+
           Image.asset(AppAssets.iconsPNG.securityLockPNG, alignment: Alignment.center,),
+
           AppSizes.size24.verticalSpace,
+
           Container(
             margin: AppPadding.kFormPadding,
             width: double.infinity,
@@ -34,8 +38,22 @@ class NewPasswordView extends StatelessWidget
               children:
               [
                 Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
+
                 AppSizes.size9.verticalSpace,
-                CustomTextFormField(fieldText: "fieldText")
+
+                CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: AppAssets.iconsPNG.corssedEyePNG,),
+
+                AppSizes.size24.verticalSpace,
+
+                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: FontWeight.w500, textColor: AppColors.kQuaternaryText),),
+
+                AppSizes.size9.verticalSpace,
+
+                CustomTextFormField(fieldText: AppStrings.confirmPassword, fieldsuffixIcon: AppAssets.iconsPNG.corssedEyePNG,),
+
+                AppSizes.size24.verticalSpace,
+
+                CustomButton(buttonText: "Rest Password", isSocialButton: false,),
               ],
             ),
           )
