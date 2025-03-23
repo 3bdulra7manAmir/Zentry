@@ -38,6 +38,9 @@ class _AppIconsPNG
 
   ///App AppBar
   final String leftArrowBlackPNG = "assets/icons/ForgetPassword/Left_Arrow_Black.png";
+
+  ///App NewPassword
+  final String securityLockPNG = "assets/icons/NewPassword/SecurityLock.png";
 }
 class _AppIconsSVG
 {

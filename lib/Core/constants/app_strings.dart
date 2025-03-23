@@ -3,9 +3,9 @@ abstract class AppStrings
   AppStrings._();
 
   //AppHeader
-  ///[Welcome_Back]
-  static const skip = "Skip";
   ///[Skip]
+  static const skip = "Skip";
+  ///[Welcome_Back]
   static const welcomeBack = "Welcome Back";
 
   //AppForm
@@ -27,7 +27,7 @@ abstract class AppStrings
   static const or = "Or";
   ///[Email]
   static const email = "Email";
-  ///[Email]
+  ///[phone]
   static const phone = "Phone";
   ///[country_Code]
   static const countryCode = "+20  |  Phone number";
@@ -58,5 +58,9 @@ abstract class AppStrings
   static const enterPhoneNumberAssociated = "Enter the phone number associated";
   ///[With_Your_Account]
   static const withYourAccount = "with your account";
+
+  ///App NewPassword
+  ///[New_Password]
+  static const newPassword = "New Password";
   
 }
