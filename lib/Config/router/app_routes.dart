@@ -28,4 +28,7 @@ abstract class AppRoutes
 
   //APP Countries View
   static const kCountriesView = '/kCountriesView';
+
+  //APP Themes View
+  static const kThemesView = '/kThemesListView';
 }

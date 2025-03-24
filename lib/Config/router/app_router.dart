@@ -7,6 +7,7 @@ import 'package:test_app/features/auth/presentation/screens/form_view.dart';
 import 'package:test_app/features/auth/presentation/screens/rest_password_view.dart';
 import 'package:test_app/features/auth/presentation/screens/verification_code_view.dart';
 import 'package:test_app/features/auth/presentation/widgets/app_form/app_counties.dart';
+import 'package:test_app/features/auth/presentation/widgets/app_form/app_themes.dart';
 import 'package:test_app/features/splash/presentation/screens/splash_view.dart';
 
 
@@ -15,7 +16,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kCountriesView,
+    initialLocation: AppRoutes.kThemesView,
     //errorBuilder: (context, state) => ,
     //navigatorKey: ,
     //debugLogDiagnostics: true,
@@ -77,11 +78,18 @@ abstract class AppRouter
         builder: (context, state) => const VerificationCodeView(),
       ),
 
-      // App Verification Code View
+      // App Countries View
       GoRoute(
         path: AppRoutes.kCountriesView,
         name: AppRoutes.kCountriesView,
         builder: (context, state) => const CountiesView(),
+      ),
+
+      // App Themes View
+      GoRoute(
+        path: AppRoutes.kThemesView,
+        name: AppRoutes.kThemesView,
+        builder: (context, state) => const ThemesView(),
       ),
     ] 
   );

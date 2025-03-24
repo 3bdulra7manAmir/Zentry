@@ -72,7 +72,7 @@ class CountiesView extends StatelessWidget
                 ],
               ),
             ),
-            
+
           ],
         ),
       ),

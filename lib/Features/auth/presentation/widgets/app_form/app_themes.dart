@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
-import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_borders.dart';
-import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_padding.dart';
-import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/data/app_countries_list.dart';
+import 'package:test_app/core/data/app_theme_list.dart';
 
 
-class CountiesView extends StatelessWidget
+class ThemesView extends StatelessWidget
 {
-  const CountiesView({super.key});
+  const ThemesView({super.key});
 
   @override
   Widget build(BuildContext context)
   {
+    String? selectedValue = 'Option 1'; // Default selected option
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.kWhite,
@@ -62,13 +60,21 @@ class CountiesView extends StatelessWidget
                     shrinkWrap: true,
                     itemBuilder: (context, index) =>
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:
                       [
-                        Image.asset(countriesList[index][0]),
-
-                        AppSizes.size12.horizontalSpace,
                         
-                        Text(countriesList[index][1])
+                        Text(themesList[index]),
+                        Radio<String>(
+                          value: "Option 1",
+                          groupValue: selectedValue,
+                          onChanged: (value)
+                          {
+                            // setState(() {
+                            //   selectedValue = value;
+                            // });
+                          },
+                        ),
                       ],
                     ),
 
