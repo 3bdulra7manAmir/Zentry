@@ -42,6 +42,15 @@ class _AppIconsPNG
 
   ///App Rest Password
   final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";
+
+  ///App Countries
+  final String searchFlagPNG = "assets/icons/Countries/Search.png";
+  final String egFlagPNG = "assets/icons/Countries/Egypt.png";
+  final String saFlagPNG = "assets/icons/Countries/Saudi_Arabia.png";
+  final String uaeFlagPNG = "assets/icons/Countries/United_Arab_Emirates.png";
+  final String kuwaitFlagPNG = "assets/icons/Countries/Kuwait.png";
+  final String moroccoFlagPNG = "assets/icons/Countries/Morocco.png";
+  final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arabic_Republic.png";
 }
 class _AppIconsSVG
 {

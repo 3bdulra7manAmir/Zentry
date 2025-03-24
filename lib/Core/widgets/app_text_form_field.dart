@@ -9,12 +9,14 @@ class CustomTextFormField extends StatelessWidget
   const CustomTextFormField({super.key,
   this.fieldPrefixIcon,
   required this.fieldText,
-  this.fieldsuffixIcon
+  this.fieldsuffixIcon,
+  this.fieldhintStyle
   });
 
   final String? fieldPrefixIcon;
   final String? fieldsuffixIcon;
   final String fieldText;
+  final TextStyle? fieldhintStyle;
 
   @override
   Widget build(BuildContext context)
@@ -23,7 +25,7 @@ class CustomTextFormField extends StatelessWidget
       //controller: TextEditingController(text: fieldText),
       decoration: InputDecoration(
         hintText: fieldText,
-        hintStyle: AppStyles.textStyle12(),
+        hintStyle: fieldhintStyle ?? AppStyles.textStyle12(),
         filled: true,
         fillColor: AppColors.kTextFormFieldFill,
         prefixIcon: fieldPrefixIcon != null ? Image.asset(fieldPrefixIcon!) : null, // Before Icon // Only show if provided

@@ -84,5 +84,8 @@ abstract class AppStrings
   static const pleaseEnter5DigitalCodeSendTo = "Please Enter 5 digital code send to";
   ///[App_gmail.com_]
   static const appgmailcom = "APP@gmail.com";
-  
+
+  ///App Countries List
+  ///[Search]
+   static const search = "Search"; 
 }

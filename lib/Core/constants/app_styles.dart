@@ -141,4 +141,26 @@ abstract class AppStyles
     );
   }
 
+  /// FontWeight = [AppFontWeights.w400] ,, FontColor = [Color_9E9E9E] ,, FontFamily = [Roboto]
+  static TextStyle textStyle10({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: AppSizes.size10.sp,
+      fontWeight: fontWeight ?? AppFontWeights.w400,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kSecondaryText,
+
+    );
+  }
+
 }
