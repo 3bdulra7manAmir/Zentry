@@ -25,4 +25,7 @@ abstract class AppRoutes
 
   //APP Verification Code View
   static const kVerificationCodeView = '/kVerificationCodeView';
+
+  //APP Countries View
+  static const kCountriesView = '/kCountriesView';
 }
