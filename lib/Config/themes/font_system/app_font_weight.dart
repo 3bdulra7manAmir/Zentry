@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 abstract class AppFontWeights
 {
+  AppFontWeights._();
+
   //static const FontWeight w100 = FontWeight.w100;
   //static const FontWeight w200 = FontWeight.w200;
   //static const FontWeight w300 = FontWeight.w300;

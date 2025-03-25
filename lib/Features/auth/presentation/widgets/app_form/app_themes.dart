@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
+import 'package:test_app/Core/constants/app_styles.dart';
+import 'package:test_app/config/themes/font_system/app_font_weight.dart';
+import 'package:test_app/config/themes/font_system/app_fonts.dart';
 import 'package:test_app/config/themes/font_system/app_sizes.dart';
 import 'package:test_app/core/constants/app_borders.dart';
 import 'package:test_app/core/constants/app_padding.dart';
-import 'package:test_app/core/data/app_countries_list.dart';
 import 'package:test_app/core/data/app_theme_list.dart';
 
 
@@ -49,8 +51,8 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text("default"),
-                      Text("Selected"),
+                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kSenaryText, fontFamily: FontFamilies.cairo),),
+                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kQuinaryText, fontFamily: FontFamilies.cairo),),
                     ],
                   ),
 
@@ -66,11 +68,12 @@ class ThemesView extends StatelessWidget
                         
                         Text(themesList[index]),
                         Radio<String>(
-                          value: "Option 1",
+                          value: themesList[index],  // Dynamic value
                           groupValue: selectedValue,
                           onChanged: (value)
                           {
-                            // setState(() {
+                            // setState(()
+                            // {
                             //   selectedValue = value;
                             // });
                           },
@@ -80,7 +83,7 @@ class ThemesView extends StatelessWidget
 
                     separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
 
-                    itemCount: countriesList.length,
+                    itemCount: themesList.length,
                   ),
                 ],
               ),

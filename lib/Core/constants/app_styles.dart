@@ -54,6 +54,26 @@ abstract class AppStyles
 
 
   /// FontWeight = [AppFontWeights.w400] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  static TextStyle textStyle17({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: AppSizes.size17.sp,
+      fontWeight: fontWeight ?? AppFontWeights.w400,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.kPrimaryText,
+    );
+  }
+  /// FontWeight = [AppFontWeights.w400] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
   static TextStyle textStyle16({
     FontWeight? fontWeight,
     String? fontFamily,

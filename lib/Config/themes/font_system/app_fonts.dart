@@ -1,5 +1,6 @@
-String appFont()
+abstract class FontFamilies
 {
-  //return "roboto";
-  return "somar";
+  static final String roboto = 'Roboto';
+  static final String somar = 'Somar';
+  static final String cairo = 'Cairo';
 }

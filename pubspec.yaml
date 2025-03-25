@@ -31,11 +31,15 @@ flutter:
         - asset: assets/fonts/roboto/Roboto-Bold.ttf
           weight: 800
         - asset: assets/fonts/roboto/Roboto-Regular.ttf
-        #SomarSans
+    #SomarSans
+    - family: Somar
+      fonts:
         - asset: assets/fonts/somar/SomarSans-Bold.ttf
           weight: 800
         - asset: assets/fonts/somar/SomarSans-Regular.ttf
-        #Cairo
+    #Cairo
+    - family: Cairo
+      fonts:
         - asset: assets/fonts/cairo/Cairo-Bold.ttf
           weight: 800
         - asset: assets/fonts/cairo/Cairo-Regular.ttf

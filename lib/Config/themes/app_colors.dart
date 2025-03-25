@@ -60,4 +60,12 @@ class AppColors
   /// [HexColor_233973]
   static Color kVerificationUnderLink = const Color(0xff233973);
 
+
+  ///App Theme Menu
+  
+  /// [HexColor_717171]
+  static Color kQuinaryText = const Color(0xff717171);
+  /// [HexColor_717171]
+  static Color kSenaryText = const Color(0xff1F1F1F);
+
 }

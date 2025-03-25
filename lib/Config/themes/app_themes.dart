@@ -6,6 +6,7 @@ import 'package:test_app/core/constants/app_borders.dart';
 class AppTheme
 {
   AppTheme._();
+  
   static ThemeData lightTheme()
   {
     return ThemeData(
