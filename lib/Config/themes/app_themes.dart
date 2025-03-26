@@ -12,7 +12,38 @@ class AppTheme
     return ThemeData(
       //brightness: 
 
-      //scaffoldBackgroundColor: ,
+      //scaffoldBackgroundColor: AppColors.kWhite,
+
+      inputDecorationTheme: InputDecorationTheme(
+        focusedBorder: OutlineInputBorder(
+          borderRadius: AppBorders.buttonBorder10,
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w,),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),
+          borderRadius: AppBorders.buttonBorder10,
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),
+          borderRadius: AppBorders.buttonBorder10,
+        ),
+      ),
+
+
+      // buttonTheme: ButtonThemeData(
+      //   shape: RoundedRectangleBorder(
+          
+      //   )
+      // )
+    );
+  }
+
+  static ThemeData darkTheme()
+  {
+    return ThemeData(
+      //brightness: ,
+
+      scaffoldBackgroundColor: AppColors.kDarkScaffoldBGColor,
 
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(

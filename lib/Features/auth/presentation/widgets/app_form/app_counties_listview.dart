@@ -41,16 +41,15 @@ class CountiesView extends StatelessWidget
 
             AppSizes.size18.verticalSpace,
 
-            Container(
-              margin: AppPadding.kFormPadding,
-              width: double.infinity,
+            Padding(
+              padding: AppPadding.kFormPadding,
               child: Column(
                 children:
                 [
                   CustomTextFormField(fieldText: AppStrings.search, fieldhintStyle: AppStyles.textStyle10(),fieldPrefixIcon: AppAssets.iconsPNG.searchFlagPNG,),
-
+              
                   AppSizes.size16.verticalSpace,
-
+              
                   ListView.separated(
                     shrinkWrap: true,
                     itemBuilder: (context, index) =>
@@ -58,15 +57,15 @@ class CountiesView extends StatelessWidget
                       children:
                       [
                         Image.asset(countriesList[index][0]),
-
+              
                         AppSizes.size12.horizontalSpace,
                         
                         Text(countriesList[index][1])
                       ],
                     ),
-
+              
                     separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-
+              
                     itemCount: countriesList.length,
                   ),
                 ],

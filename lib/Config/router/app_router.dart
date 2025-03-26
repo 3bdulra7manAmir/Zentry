@@ -6,9 +6,10 @@ import 'package:test_app/features/auth/presentation/screens/forget_password_phon
 import 'package:test_app/features/auth/presentation/screens/form_view.dart';
 import 'package:test_app/features/auth/presentation/screens/rest_password_view.dart';
 import 'package:test_app/features/auth/presentation/screens/verification_code_view.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_form/app_counties.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_form/app_themes.dart';
+import 'package:test_app/features/auth/presentation/widgets/app_form/app_counties_listview.dart';
+import 'package:test_app/features/auth/presentation/widgets/app_form/app_themes_listview.dart';
 import 'package:test_app/features/splash/presentation/screens/splash_view.dart';
+import 'package:test_app/features/test.dart';
 
 
 abstract class AppRouter
@@ -16,7 +17,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kThemesView,
+    initialLocation: AppRoutes.kCountriesView,
     //errorBuilder: (context, state) => ,
     //navigatorKey: ,
     //debugLogDiagnostics: true,
@@ -44,11 +45,11 @@ abstract class AppRouter
         builder: (context, state) => const AuthView(),
       ),
       // App Login With Email View
-      // GoRoute(
-      //   path: AppRoutes.kLoginEmailView,
-      //   name: AppRoutes.kLoginEmailView,
-      //   builder: (context, state) => const AuthView(),
-      // ),
+      GoRoute(
+        path: AppRoutes.kLoginEmailView,
+        name: AppRoutes.kLoginEmailView,
+        builder: (context, state) => const AuthView(),
+      ),
 
       // App Forget Password With Phone View
       GoRoute(
@@ -90,6 +91,13 @@ abstract class AppRouter
         path: AppRoutes.kThemesView,
         name: AppRoutes.kThemesView,
         builder: (context, state) => const ThemesView(),
+      ),
+
+      // App Test View
+      GoRoute(
+        path: AppRoutes.kTestView,
+        name: AppRoutes.kTestView,
+        builder: (context, state) => const TestView(),
       ),
     ] 
   );

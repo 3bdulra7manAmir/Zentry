@@ -22,66 +22,69 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
       backgroundColor: AppColors.kWhite,
-      body: Column(
-        children:
-        [
-          AppSizes.size46.verticalSpace,
-      
-          Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
-          
-          AppSizes.size13.verticalSpace,
-          
-          Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
-          
-          AppSizes.size7.verticalSpace,
-          
-          Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondaryText, fontWeight: AppFontWeights.w400),),
-      
-          AppSizes.size46.verticalSpace,
-      
-          Container(
-            alignment: Alignment.center,
-            margin: AppPadding.kFormPadding,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-                Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText,)),
-      
-                AppSizes.size9.verticalSpace,
-                
-                CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
-      
-                AppSizes.size28.verticalSpace,
-      
-                Row(
-                  children:
-                  [
-                    Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
-      
-                    AppSizes.size14.horizontalSpace,
-      
-                    Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
-                        textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline,
-                        textDecorationColor: AppColors.kForgetPasswordColor,
+      body: SingleChildScrollView(
+        child: Column(
+          children:
+          [
+            AppSizes.size46.verticalSpace,
+        
+            Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
+            
+            AppSizes.size13.verticalSpace,
+            
+            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
+            
+            AppSizes.size7.verticalSpace,
+            
+            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondaryText, fontWeight: AppFontWeights.w400),),
+        
+            AppSizes.size46.verticalSpace,
+        
+            Container(
+              alignment: Alignment.center,
+              margin: AppPadding.kFormPadding,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:
+                [
+                  Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText,)),
+        
+                  AppSizes.size9.verticalSpace,
+                  
+                  CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
+        
+                  AppSizes.size28.verticalSpace,
+        
+                  Row(
+                    children:
+                    [
+                      Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
+        
+                      AppSizes.size14.horizontalSpace,
+        
+                      Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
+                          textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline,
+                          textDecorationColor: AppColors.kForgetPasswordColor,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-      
-                AppSizes.size24.verticalSpace,
-      
-                CustomButton(buttonText: "Verify", isSocialButton: false),
-              ],
+                    ],
+                  ),
+        
+                  AppSizes.size24.verticalSpace,
+        
+                  CustomButton(buttonText: "Verify", isSocialButton: false),
+                ],
+              ),
             ),
-          ),
-      
-          Spacer(),
-      
-          NumericKeyboard(),
-          
-          AppSizes.size14.verticalSpace,
-        ],
+
+            AppSizes.size60.verticalSpace,
+            //Spacer(),
+        
+            NumericKeyboard(),
+            
+            AppSizes.size14.verticalSpace,
+          ],
+        ),
       ),
     );
   }

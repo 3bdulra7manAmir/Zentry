@@ -68,4 +68,10 @@ class AppColors
   /// [HexColor_717171]
   static Color kSenaryText = const Color(0xff1F1F1F);
 
+
+  ///App Dark Theme Colors
+  
+  /// [HexColor_1B1B1B]
+  static Color kDarkScaffoldBGColor = const Color(0xff1B1B1B);
+
 }

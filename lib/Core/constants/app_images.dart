@@ -56,17 +56,43 @@ class _AppIconsSVG
 {
   _AppIconsSVG._();
 
-  /// App Splash
-  // final String robotIconSVG = "assets/icons/Splash/App_Logo.svg";
+  ///App Splash
+  final String appLogoSVG = "assets/icons/Splash/App_Logo.svg";
 
-  /// //App Form
-  // final String countrySVG = "assets/icons/AppForm/Country.svg";
-  // final String languageSVG = "assets/icons/AppForm/Language.svg";
-  // final String modeSVG = "assets/icons/AppForm/Mode.svg";
-  // final String leftArrowSVG = "assets/icons/AppForm/Left_Arrow.svg";
+  ///AppHeader
+  final String cloudSVG = "assets/icons/AppHeader/App_Cloud.svg";
+  final String fullHeaderSVG = "assets/icons/AppHeader/App_Logo_Cloud.svg";
+  final String leftWhiteArrowSVG = "assets/icons/AppHeader/Left_White_Arrow.svg";
 
-  /// App Login
-  // final String egyptFlagSVG = "assets/icons/AppForm/Egypt_Flag.svg";
+
+  ///App Form
+  final String countrySVG = "assets/icons/AppForm/Country.svg";
+  final String languageSVG = "assets/icons/AppForm/Language.svg";
+  final String modeSVG = "assets/icons/AppForm/Mode.svg";
+  final String leftBlackArrowSVG = "assets/icons/AppForm/Left_Arrow.svg";
+
+  ///App Login
+  final String egyptFlagSVG = "assets/icons/Login/Egypt_Flag.svg";
+  final String corssedEyeSVG = "assets/icons/Login/Crossed_Eye.svg";
+  final String faceBookSVG = "assets/icons/Login/FaceBook.svg";
+  final String googleSVG = "assets/icons/Login/Google.svg";
+  final String appleSVG = "assets/icons/Login/Apple.svg";
+
+  ///App AppBar
+  final String leftBackArrowBlackSVG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.svg";
+  final String leftArrowGreykSVG = "assets/icons/ForgetPassword/Left_Arrow_Grey.svg";
+
+  ///App Rest Password
+  final String securityLockSVG = "assets/icons/RestPassword/SecurityLock.svg";
+
+  ///App Countries
+  final String searchFlagSVG = "assets/icons/Countries/Search.svg";
+  final String egFlagSVG = "assets/icons/Countries/Egypt.svg";
+  final String saFlagSVG = "assets/icons/Countries/Saudi_Arabia.svg";
+  final String uaeFlagSVG = "assets/icons/Countries/United_Arab_Emirates.svg";
+  final String kuwaitFlagSVG = "assets/icons/Countries/Kuwait.svg";
+  final String moroccoFlagSVG = "assets/icons/Countries/Morocco.svg";
+  final String syriaFlagSVG = "assets/icons/Countries/Syrian_Arabic_Republic.svg";
 }
 
 
@@ -76,13 +102,8 @@ class _AppIconsSVG
 class _AppPNGIMGs
 {
   _AppPNGIMGs._();
-
-  ///App Form
 }
 class _AppSVGIMGs
 {
   _AppSVGIMGs._();
-
-  ///App Form
-  //final String cloudRobotPNG = "assets/icons/AppHeader/App_Logo_Cloud.svg";
 }

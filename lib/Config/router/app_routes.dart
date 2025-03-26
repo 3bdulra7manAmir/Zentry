@@ -31,4 +31,7 @@ abstract class AppRoutes
 
   //APP Themes View
   static const kThemesView = '/kThemesListView';
+
+  //APP Test View
+  static const kTestView = '/kTestListView';
 }
