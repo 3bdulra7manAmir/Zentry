@@ -20,7 +20,7 @@ class ThemesView extends StatelessWidget
     String? selectedValue = 'Option 1'; // Default selected option
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.kWhite,
+        //backgroundColor: AppColors.kWhite,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:

@@ -20,7 +20,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
-      backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:

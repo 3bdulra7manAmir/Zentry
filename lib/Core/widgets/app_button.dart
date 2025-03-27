@@ -5,21 +5,21 @@ import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 
-class CustomButton extends StatelessWidget
-{
-  const CustomButton({super.key,
-  this.buttonWidth,
-  this.buttonHeight,
-  this.buttonBorderRadius,
-  this.buttonBorderColor,
-  this.buttonBorderWidth,
-  this.buttonBackgroundColor,
-  required this.buttonText,
-  this.buttonTextStyle,
-  required this.isSocialButton,
-  this.platformLogo,
-  this.isLogoSpace,
-  this.spaceAmount,
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    super.key,
+    this.buttonWidth,
+    this.buttonHeight,
+    this.buttonBorderRadius,
+    this.buttonBorderColor,
+    this.buttonBorderWidth,
+    this.buttonBackgroundColor,
+    required this.buttonText,
+    this.buttonTextStyle,
+    required this.isSocialButton,
+    this.platformLogo,
+    this.isLogoSpace,
+    this.spaceAmount,
   });
 
   final double? buttonWidth;
@@ -36,36 +36,31 @@ class CustomButton extends StatelessWidget
   final double? spaceAmount;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return SizedBox(
-      width: buttonWidth ?? double.infinity, //358.w
-      height: buttonHeight ?? 48.h,
+      width: buttonWidth ?? double.infinity, // Default width
+      height: buttonHeight ?? 48.h, // Default height
       child: ElevatedButton(
         style: ButtonStyle(
-          shape: WidgetStatePropertyAll(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-            side: BorderSide(color: buttonBorderColor ?? AppColors.kSocailButtonBorderColor, width: buttonBorderWidth ?? 1.w)
+              side: BorderSide(color: buttonBorderColor ?? AppColors.kTransparent, width: buttonBorderWidth ?? 1.w,),
             ),
           ),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.kPrimaryBlue,),
           alignment: Alignment.center,
-          //padding: WidgetStatePropertyAll<EdgeInsetsGeometry>(AppPadding.kAll10),
-          backgroundColor: WidgetStatePropertyAll(buttonBackgroundColor ?? AppColors.kPrimaryBlue,),
         ),
-        onPressed: (){},
-        child: !isSocialButton ? Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14()) :
-        Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:
-          [
-            Image.asset(platformLogo ?? AppAssets.iconsPNG.corssedEyePNG),
-            
-            (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
-            
-            Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14()),
-          ],
-        )
-        ,
+        onPressed: () {},
+        child: isSocialButton
+            ? Row(
+                children:
+                [
+                  Image.asset(platformLogo ?? AppAssets.iconsPNG.corssedEyePNG),
+                  (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
+                  Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+                ],
+              )
+            : Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
       ),
     );
   }

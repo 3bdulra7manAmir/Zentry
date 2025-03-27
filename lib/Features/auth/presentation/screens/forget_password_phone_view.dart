@@ -21,7 +21,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
-      backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:
@@ -51,7 +51,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
         
                   AppSizes.size9.verticalSpace,
                   
-                  CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode,),
+                  CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG), fieldText: AppStrings.countryCode,),
         
                   AppSizes.size28.verticalSpace,
         

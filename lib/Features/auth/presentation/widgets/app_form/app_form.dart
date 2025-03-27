@@ -22,7 +22,7 @@ class AppForm extends StatelessWidget
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: AppBorders.formBorder,
-        color: AppColors.kWhite,
+        color: Theme.of(context).cardColor,
       ),
 
       //Full Form Column
@@ -49,19 +49,19 @@ class AppForm extends StatelessWidget
 
           // First Text Form Field
           GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.languagePNG, fieldText: AppStrings.language,)
+            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppStrings.language, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
           ),
 
           AppSizes.size16.verticalSpace,
 
           GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.countryPNG, fieldText: AppStrings.country)
+            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countryPNG), fieldText: AppStrings.country, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
           ),
 
           AppSizes.size16.verticalSpace,
 
           GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.modePNG, fieldText: AppStrings.mode)
+            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppStrings.mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
           ),
 
           AppSizes.size27.verticalSpace,

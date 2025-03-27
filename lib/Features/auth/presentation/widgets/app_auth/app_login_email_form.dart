@@ -52,7 +52,7 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size8.verticalSpace,
       
-            CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: AppAssets.iconsPNG.corssedEyePNG,),
+            CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
       
             AppSizes.size16.verticalSpace,
       

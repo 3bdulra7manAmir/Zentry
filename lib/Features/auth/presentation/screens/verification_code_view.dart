@@ -37,7 +37,7 @@ class VerificationCodeView extends StatelessWidget
         ],
       ),
       
-      backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:

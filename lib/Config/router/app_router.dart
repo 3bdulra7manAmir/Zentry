@@ -17,7 +17,8 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kCountriesView,
+    //initialLocation: AppRoutes.kAppFormView,
+    initialLocation: AppRoutes.kAppFormView,
     //errorBuilder: (context, state) => ,
     //navigatorKey: ,
     //debugLogDiagnostics: true,

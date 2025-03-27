@@ -44,7 +44,7 @@ class LoginFormWithPhone extends StatelessWidget
       
             AppSizes.size8.verticalSpace,
       
-            CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.egyptFlagPNG, fieldText: AppStrings.countryCode),
+            CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG), fieldText: AppStrings.countryCode),
       
             AppSizes.size24.verticalSpace,
       
@@ -52,7 +52,7 @@ class LoginFormWithPhone extends StatelessWidget
       
             AppSizes.size8.verticalSpace,
       
-            CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: AppAssets.iconsPNG.corssedEyePNG,),
+            CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
       
             AppSizes.size16.verticalSpace,
       

@@ -12,7 +12,8 @@ class AppTheme
     return ThemeData(
       //brightness: 
 
-      //scaffoldBackgroundColor: AppColors.kWhite,
+      scaffoldBackgroundColor: AppColors.kWhite,
+      cardColor: AppColors.kWhite,
 
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
@@ -44,6 +45,9 @@ class AppTheme
       //brightness: ,
 
       scaffoldBackgroundColor: AppColors.kDarkScaffoldBGColor,
+      cardColor: AppColors.kDarkScaffoldBGColor,
+      //primaryColorLight: AppColors.kDarkScaffoldBGColor,
+      
 
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
@@ -61,11 +65,28 @@ class AppTheme
       ),
 
 
-      // buttonTheme: ButtonThemeData(
-      //   shape: RoundedRectangleBorder(
-          
-      //   )
-      // )
+      // elevatedButtonTheme: ElevatedButtonThemeData(
+      //   style: ElevatedButton.styleFrom(
+      //     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10,),
+      //     side: BorderSide(color: AppColors.kDarkScaffoldBGColor, width: 1.w,),
+      //     //backgroundColor: AppColors.kPrimaryBlue,
+      //   ),
+      // ),
+
+      // appBarTheme: AppBarTheme(
+      //   elevation: 0,
+      //   centerTitle: true,
+      //   scrolledUnderElevation: 0,
+      //   backgroundColor: AppColors.,
+      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
+      //   iconTheme: IconThemeData(color: AppColors.),
+      //   titleTextStyle: StylesManager.extraBold(
+      //     fontSize: AppSizes.size,
+      //     color: AppColors.,
+      //   ),
+      // ),
+
+      
     );
   }
 }

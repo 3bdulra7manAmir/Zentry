@@ -101,19 +101,19 @@ class TestView extends StatelessWidget
             
                   // First Text Form Field
                   GestureDetector(
-                    child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.languagePNG, fieldText: AppStrings.language,)
+                    child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppStrings.language,)
                   ),
             
                   AppSizes.size16.verticalSpace,
             
                   GestureDetector(
-                    child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.countryPNG, fieldText: AppStrings.country)
+                    child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countryPNG), fieldText: AppStrings.country)
                   ),
             
                   AppSizes.size16.verticalSpace,
             
                   GestureDetector(
-                    child: CustomTextFormField(fieldPrefixIcon: AppAssets.iconsPNG.modePNG, fieldText: AppStrings.mode)
+                    child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppStrings.mode)
                   ),
             
                   AppSizes.size27.verticalSpace,
