@@ -21,6 +21,7 @@ class LoginFormWithPhone extends StatelessWidget
       padding: AppPadding.kFormPadding,
       width: double.infinity,
       color: AppColors.kWhite,
+      //color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

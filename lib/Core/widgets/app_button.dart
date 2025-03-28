@@ -5,7 +5,8 @@ import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatelessWidget
+{
   const CustomButton({
     super.key,
     this.buttonWidth,
@@ -36,10 +37,11 @@ class CustomButton extends StatelessWidget {
   final double? spaceAmount;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return SizedBox(
-      width: buttonWidth ?? double.infinity, // Default width
-      height: buttonHeight ?? 48.h, // Default height
+      width: buttonWidth ?? double.infinity,
+      height: buttonHeight ?? 48.h,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -49,8 +51,8 @@ class CustomButton extends StatelessWidget {
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.kPrimaryBlue,),
           alignment: Alignment.center,
-        ),
-        onPressed: () {},
+        ),      
+          
         child: isSocialButton
             ? Row(
                 children:
@@ -61,6 +63,8 @@ class CustomButton extends StatelessWidget {
                 ],
               )
             : Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+            
+        onPressed: () {},
       ),
     );
   }

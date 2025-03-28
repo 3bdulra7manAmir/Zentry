@@ -30,6 +30,8 @@ class AppColors
   static Color kTextFormFieldBorder = const Color(0xffEEEEEE);
   /// [HexColor_F8F8F8]
   static Color kTextFormFieldFill = const Color(0xffF8F8F8);
+  /// [HexColor_272626]
+  static Color kTextFormFieldFillDark = const Color(0xff272626);
   
   ///App Login
   

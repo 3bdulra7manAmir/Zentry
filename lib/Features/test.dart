@@ -124,8 +124,6 @@ class TestView extends StatelessWidget
             
                  CustomButton(buttonText: AppStrings.signUp, isSocialButton: false,
                  buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.kPrimaryBlue),
-                 buttonBackgroundColor: AppColors.kWhite,
-                 buttonBorderColor: AppColors.kPrimaryBlue,
                  ),
                 ],
               ),

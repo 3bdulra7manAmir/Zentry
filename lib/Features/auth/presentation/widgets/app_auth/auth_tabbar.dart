@@ -25,7 +25,7 @@ class AuthTabs extends StatelessWidget
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: AppBorders.formBorder,
-              color: AppColors.kWhite,
+              color: Theme.of(context).cardColor,
             ),
 
             child: TabBar(
