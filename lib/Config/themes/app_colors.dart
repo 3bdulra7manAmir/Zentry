@@ -76,4 +76,9 @@ class AppColors
   /// [HexColor_1B1B1B]
   static Color kDarkScaffoldBGColor = const Color(0xff1B1B1B);
 
+  static Color kReversedColor3 = const Color(0xffD7D7D7);
+  static Color kReversedColor4 = const Color(0xff676767);
+
+
+
 }

@@ -9,7 +9,6 @@ import 'package:test_app/features/auth/presentation/screens/verification_code_vi
 import 'package:test_app/features/auth/presentation/widgets/app_form/app_counties_listview.dart';
 import 'package:test_app/features/auth/presentation/widgets/app_form/app_themes_listview.dart';
 import 'package:test_app/features/splash/presentation/screens/splash_view.dart';
-import 'package:test_app/features/test.dart';
 
 
 abstract class AppRouter
@@ -94,12 +93,12 @@ abstract class AppRouter
         builder: (context, state) => const ThemesView(),
       ),
 
-      // App Test View
-      GoRoute(
-        path: AppRoutes.kTestView,
-        name: AppRoutes.kTestView,
-        builder: (context, state) => const TestView(),
-      ),
+      // // App Test View
+      // GoRoute(
+      //   path: AppRoutes.kTestView,
+      //   name: AppRoutes.kTestView,
+      //   builder: (context, state) => const TestView(),
+      // ),
     ] 
   );
 }

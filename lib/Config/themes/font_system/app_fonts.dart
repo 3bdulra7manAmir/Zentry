@@ -1,6 +1,6 @@
 abstract class FontFamilies
 {
-  static final String roboto = 'Roboto';
-  static final String somar = 'Somar';
-  static final String cairo = 'Cairo';
+  static const String roboto = 'Roboto';
+  static const String somar = 'Somar';
+  static const String cairo = 'Cairo';
 }

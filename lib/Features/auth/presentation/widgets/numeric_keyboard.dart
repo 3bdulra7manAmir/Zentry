@@ -28,7 +28,7 @@ class NumericKeyboard extends StatelessWidget
       itemCount: 12,
       shrinkWrap: true,
 
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,

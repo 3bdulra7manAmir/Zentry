@@ -44,7 +44,7 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size8.verticalSpace,
       
-            CustomTextFormField(fieldText: AppStrings.enterEmaill),
+            const CustomTextFormField(fieldText: AppStrings.enterEmaill),
       
             AppSizes.size24.verticalSpace,
       

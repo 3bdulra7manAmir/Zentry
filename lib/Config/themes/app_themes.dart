@@ -91,7 +91,7 @@ class AppTheme
         //overlayColor: WidgetStateProperty.resolveWith<Color>(),
         labelColor: AppColors.kAuthTab,
         unselectedLabelColor: AppColors.kSecondaryText,
-        labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.w600, textColor: AppColors.kAuthTab),
+        labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.w600, textColor: AppColors.kAuthTab,),
       ),
 
       // appBarTheme: AppBarTheme(

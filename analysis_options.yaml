@@ -4,9 +4,10 @@ analyzer:
   errors:
     deprecated_member_use: ignore
     avoid_print: ignore
+    deprecated_member_use_from_same_package: ignore
 
-# linter:
-#   rules:
-#     prefer_const_constructors: true
-#     prefer_const_declarations: true
-#     prefer_const_literals_to_create_immutables: true
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true

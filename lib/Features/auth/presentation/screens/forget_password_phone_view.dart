@@ -20,7 +20,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
+      appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
       //backgroundColor: AppColors.kWhite,
       body: SingleChildScrollView(
         child: Column(
@@ -72,7 +72,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: "Verify", isSocialButton: false),
+                  const CustomButton(buttonText: "Verify", isSocialButton: false),
                 ],
               ),
             ),
@@ -80,7 +80,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
             AppSizes.size60.verticalSpace,
             //Spacer(),
         
-            NumericKeyboard(),
+            const NumericKeyboard(),
             
             AppSizes.size14.verticalSpace,
           ],

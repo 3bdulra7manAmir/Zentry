@@ -19,7 +19,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
+      appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
       //backgroundColor: AppColors.kWhite,
       body: SingleChildScrollView(
         child: Column(
@@ -50,7 +50,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
         
                   AppSizes.size9.verticalSpace,
                   
-                  CustomTextFormField(fieldText: AppStrings.emailAddress,),
+                  const CustomTextFormField(fieldText: AppStrings.emailAddress,),
         
                   AppSizes.size28.verticalSpace,
         
@@ -71,7 +71,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: "Verify", isSocialButton: false),
+                  const CustomButton(buttonText: "Verify", isSocialButton: false),
                 ],
               ),
             ),
@@ -79,7 +79,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
             AppSizes.size60.verticalSpace,
             //Spacer(),
         
-            NumericKeyboard(),
+            const NumericKeyboard(),
             
             AppSizes.size14.verticalSpace,
           ],

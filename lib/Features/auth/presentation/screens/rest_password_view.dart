@@ -19,7 +19,7 @@ class RestPasswordView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: AppStrings.resetPassword,),
+      appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
       //backgroundColor: AppColors.kWhite,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,7 +54,7 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size24.verticalSpace,
 
-                CustomButton(buttonText: "Rest Password", isSocialButton: false,),
+                const CustomButton(buttonText: "Rest Password", isSocialButton: false,),
               ],
             ),
           ),
