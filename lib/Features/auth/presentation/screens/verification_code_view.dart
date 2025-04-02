@@ -6,7 +6,8 @@ import 'package:test_app/Core/constants/app_images.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_button.dart';
 import 'package:test_app/config/themes/font_system/app_font_weight.dart';
-import 'package:test_app/config/themes/font_system/app_sizes.dart';
+import 'package:test_app/config/themes/app_sizes.dart';
+
 import 'package:test_app/core/constants/app_borders.dart';
 import 'package:test_app/core/constants/app_padding.dart';
 import 'package:test_app/core/constants/app_strings.dart';

@@ -5,7 +5,7 @@ import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/font_system/app_font_weight.dart';
-import 'package:test_app/config/themes/font_system/app_sizes.dart';
+import 'package:test_app/config/themes/app_sizes.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_button.dart';
@@ -20,8 +20,8 @@ class LoginFormWithPhone extends StatelessWidget
     return Container(
       padding: AppPadding.kFormPadding,
       width: double.infinity,
-      color: AppColors.kWhite,
-      //color: Theme.of(context).cardColor,
+      //color: AppColors.kWhite,
+      color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +32,7 @@ class LoginFormWithPhone extends StatelessWidget
             Row(
               children:
               [
-                Text(AppStrings.phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.kTertiaryText,),),
+                Text(AppStrings.phoneNumber, style: Theme.of(context).textTheme.bodyLarge,), //textColor: AppColors.kTertiaryText,
                 const Spacer(),
 
                 Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.kSecondaryText,),),

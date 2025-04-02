@@ -1,37 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
+import 'package:test_app/config/themes/app_sizes.dart';
 import 'package:test_app/config/themes/font_system/app_font_weight.dart';
-import 'package:test_app/config/themes/font_system/app_sizes.dart';
-import 'package:test_app/config/themes/text_color_controller.dart';
+
 
 abstract class AppStyles
 {
   AppStyles._();
 
-  /// Global text colors
-  static late Color primaryTextColor;
-  static late Color secondaryTextColor;
-  static late Color tertiaryTextColor;
-  static late Color quaternaryTextColor;
-
-  /// Initialize text colors globally
-  static void initializeTextColors(WidgetRef ref)
-  {
-    final textColors = ref.watch(textColorsNotifierProvider);
-    
-    primaryTextColor = textColors.primaryReversed;
-    secondaryTextColor = textColors.secondaryReversed;
-    tertiaryTextColor = textColors.tertiaryReversed;
-    quaternaryTextColor = textColors.quaternaryReversed;
-
-    // 🔹 Debugging: Print color values
-    debugPrint("Primary Text Color: $primaryTextColor");
-    debugPrint("Secondary Text Color: $secondaryTextColor");
-    }
-
-
+  
   /// FontWeight = [AppFontWeights.w700] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
   static TextStyle textStyle20({
     FontWeight? fontWeight,
@@ -49,7 +27,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: primaryTextColor,
+      color: textColor ?? AppColors.kPrimaryText,
     );
   }
 
@@ -71,7 +49,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: primaryTextColor,
+      color: textColor ?? AppColors.kWhite,
     );
   }
 
@@ -93,7 +71,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: secondaryTextColor,
+      color: textColor ?? AppColors.kPrimaryText,
     );
   }
   /// FontWeight = [AppFontWeights.w400] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
@@ -113,7 +91,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: secondaryTextColor,
+      color: textColor ?? AppColors.kPrimaryText,
     );
   }
 
@@ -201,7 +179,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kSecondaryText,
+      //color: textColor ?? AppColors.kSecondaryText,
 
     );
   }

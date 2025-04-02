@@ -12,9 +12,11 @@ class AppTheme
   static ThemeData lightTheme()
   {
     return ThemeData(
-      //brightness: 
-
+      useMaterial3: true,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.kWhite,
+      //textTheme: buildTextTheme(Colors.black),
+
       cardColor: AppColors.kWhite,
 
       inputDecorationTheme: InputDecorationTheme(
@@ -31,22 +33,17 @@ class AppTheme
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
-
-
-      // buttonTheme: ButtonThemeData(
-      //   shape: RoundedRectangleBorder(
-          
-      //   )
-      // )
     );
   }
 
   static ThemeData darkTheme()
   {
     return ThemeData(
-      //brightness: ,
-
+      useMaterial3: true,
+      brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.kDarkScaffoldBGColor,
+      //textTheme: buildTextTheme(Colors.white),
+      
       cardColor: AppColors.kDarkScaffoldBGColor,
       //primaryColorLight: AppColors.kDarkScaffoldBGColor,
       
@@ -106,8 +103,51 @@ class AppTheme
       //     color: AppColors.,
       //   ),
       // ),
-
-      
     );
   }
+
+  static TextStyle textStyle({Color? textColor, FontWeight? textFontWeight, String? textFontFamily, double? textFontSize})
+  {
+    return TextStyle(
+      fontWeight: textFontWeight,
+      fontFamily: textFontFamily ?? 'Roboto',
+      fontSize: textFontSize,
+      color: textColor,
+      overflow: TextOverflow.ellipsis,
+      decoration: TextDecoration.none,
+    );
+  }
+
+  static TextTheme buildTextTheme({Color? textColor, FontWeight? fontWeight, String? fontFamily, double? fontSize})
+  {
+    return TextTheme(
+      /// FS = [24], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
+      headlineSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      
+      /// FS = [22], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
+      titleLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      
+      /// FS = [16], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
+      titleMedium: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [14], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
+      titleSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [16], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
+      bodyLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [12], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
+      bodySmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [14], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
+      labelLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [12], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
+      labelMedium: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+
+      /// FS = [11], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
+      labelSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+    );
+  }
+
 }

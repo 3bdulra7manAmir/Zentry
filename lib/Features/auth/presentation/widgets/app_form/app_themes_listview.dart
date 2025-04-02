@@ -4,7 +4,8 @@ import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/font_system/app_fonts.dart';
-import 'package:test_app/config/themes/font_system/app_sizes.dart';
+import 'package:test_app/config/themes/app_sizes.dart';
+
 import 'package:test_app/core/constants/app_borders.dart';
 import 'package:test_app/core/constants/app_padding.dart';
 import 'package:test_app/core/data/app_theme_list.dart';
