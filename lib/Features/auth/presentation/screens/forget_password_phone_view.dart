@@ -32,11 +32,11 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
+            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondary,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondaryText, fontWeight: AppFontWeights.w400),),
+            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.w400),),
         
             AppSizes.size46.verticalSpace,
         
@@ -63,8 +63,8 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                       AppSizes.size14.horizontalSpace,
         
                       Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
-                          textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline,
-                          textDecorationColor: AppColors.kForgetPasswordColor,
+                          textColor: AppColors.kForgetPassword, textDecoration: TextDecoration.underline,
+                          textDecorationColor: AppColors.kForgetPassword,
                         ),
                       ),
                     ],

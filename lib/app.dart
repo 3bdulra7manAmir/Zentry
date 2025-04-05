@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/config/router/app_router.dart';
-import 'package:test_app/config/themes/app_themes.dart';
+import 'config/themes/app_themes.dart';
 
 class TestApp extends StatelessWidget
 {

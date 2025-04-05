@@ -52,8 +52,8 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kSenaryText, fontFamily: FontFamilies.cairo),),
-                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kQuinaryText, fontFamily: FontFamilies.cairo),),
+                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kSenaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
                     ],
                   ),
 

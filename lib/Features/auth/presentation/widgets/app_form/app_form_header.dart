@@ -57,7 +57,7 @@ class FormHeader extends StatelessWidget
               bottom: 0,
             ),
             width: double.infinity,
-            color: AppColors.kPrimaryBlue,
+            color: AppColors.kPrimarBlue,
             child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),
           ),
 
@@ -69,7 +69,7 @@ class FormHeader extends StatelessWidget
             child: Row(
               children:
               [
-                Text(upperRightText ?? "Yet", style: AppStyles.textStyle13(textColor: AppColors.kSkip, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.kSkip),),
+                Text(upperRightText ?? "Yet", style: AppStyles.textStyle13(textColor: AppColors.kSemiWhite1, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.kSemiWhite1),),
                 Image.asset(AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),

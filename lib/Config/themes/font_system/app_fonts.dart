@@ -1,4 +1,4 @@
-abstract class FontFamilies
+abstract class AppFontFamilies
 {
   static const String roboto = 'Roboto';
   static const String somar = 'Somar';

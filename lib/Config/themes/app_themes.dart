@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/config/themes/app_colors.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
+import 'package:test_app/config/themes/font_system/app_font_sizes.dart';
+import 'package:test_app/config/themes/font_system/app_font_weights.dart';
+import 'package:test_app/config/themes/font_system/app_fonts.dart';
 import 'package:test_app/core/constants/app_borders.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 
@@ -22,14 +24,14 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w,),
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorderColor, width: 1.w),
+          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -70,7 +72,7 @@ class AppTheme
 
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryBlue),
+          backgroundColor: MaterialStateProperty.all<Color>(AppColors.kPrimarBlue),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: AppBorders.buttonBorder10,
@@ -87,8 +89,8 @@ class AppTheme
         //indicator: ,
         //overlayColor: WidgetStateProperty.resolveWith<Color>(),
         labelColor: AppColors.kAuthTab,
-        unselectedLabelColor: AppColors.kSecondaryText,
-        labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.w600, textColor: AppColors.kAuthTab,),
+        unselectedLabelColor: AppColors.kSecondary,
+        //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.kAuthTab,),
       ),
 
       // appBarTheme: AppBarTheme(
@@ -106,48 +108,134 @@ class AppTheme
     );
   }
 
-  static TextStyle textStyle({Color? textColor, FontWeight? textFontWeight, String? textFontFamily, double? textFontSize})
+  static TextStyle fontStyle({
+    double? fontSize,
+    FontWeight? fontWeight,
+    String? fontFamily, 
+    Color? fontColor,
+    TextOverflow? overflow, 
+    TextDecoration? decoration,
+  })
   {
     return TextStyle(
-      fontWeight: textFontWeight,
-      fontFamily: textFontFamily ?? 'Roboto',
-      fontSize: textFontSize,
-      color: textColor,
-      overflow: TextOverflow.ellipsis,
-      decoration: TextDecoration.none,
+      fontSize: fontSize ?? AppFontSizes.medium,
+      fontWeight: fontWeight ?? AppFontWeights.blackWeight,
+      fontFamily: fontFamily ?? AppFontFamilies.roboto,
+      color: fontColor ?? AppColors.kPrimarBlue,
+      overflow: overflow ?? TextOverflow.ellipsis,
+      decoration: decoration ?? TextDecoration.none,
     );
   }
 
-  static TextTheme buildTextTheme({Color? textColor, FontWeight? fontWeight, String? fontFamily, double? fontSize})
+  static TextTheme textTheme({
+  double? fontSize,
+  FontWeight? fontWeight,
+  String? fontFamily, 
+  Color? textColor, 
+  TextOverflow? overflow, 
+  TextDecoration? decoration,
+  })
   {
     return TextTheme(
-      /// FS = [24], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
-      headlineSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
-      
-      /// FS = [22], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
-      titleLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
-      
-      /// FS = [16], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
-      titleMedium: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
 
-      /// FS = [14], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
-      titleSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      // /// FS = [24], FW = [w700], FC = [Color_000000], FF = [Roboto]
+      // titleLarge: fontStyle(
+      //   fontSize: fontSize ?? AppFontSizes.xXXXLarge,
+      //   fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+      //   fontFamily: fontFamily ?? AppFontFamilies.roboto,
+      //   fontColor: textColor ?? AppColors.korLoginWithColor,
+      //   overflow: overflow ?? TextOverflow.ellipsis,
+      //   decoration: decoration ?? TextDecoration.none,
+      // ),
 
-      /// FS = [16], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
-      bodyLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      /// FS = [22], FW = [w700], FC = [], FF = []
+      titleMedium: fontStyle(
+        fontSize: fontSize ?? AppFontSizes.xXXLarge,
+        fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.somar,
+        fontColor: textColor ?? AppColors.kWhite,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
 
-      /// FS = [12], FW = [w400], FC = [Color_5D5D5D], FF = [Roboto]
-      bodySmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      /// FS = [20], FW = [w700], FC = [000000], FF = [Roboto]
+      titleSmall: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.xXLarge,
+        fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.korLoginWithColor,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
 
-      /// FS = [14], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
-      labelLarge: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      //----------------------------------------------------------------//
 
-      /// FS = [12], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
-      labelMedium: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      /// FS = [18], FW = [w600], FC = [FFFFFF], FF = [Roboto]
+      bodyLarge: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.xLarge,
+        fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.kWhite,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
 
-      /// FS = [11], FW = [w500], FC = [Color_5D5D5D], FF = [Roboto]
-      labelSmall: textStyle(textColor: textColor, textFontWeight: fontWeight, textFontFamily: fontFamily, textFontSize: fontSize),
+      /// FS = [16], FW = [w600], FC = [9E9E9E], FF = [Roboto]
+      bodyMedium: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.large,
+        fontWeight: fontWeight ?? AppFontWeights.regularWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.kSecondary,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
+
+      /// FS = [14], FW = [w700], FC = [FFFFFF], FF = [Roboto]
+      bodySmall: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.medium,
+        fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.kWhite,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
+
+      //----------------------------------------------------------------//
+
+      /// FS = [13], FW = [w700], FC = [2E2E2E], FF = [Roboto]
+      labelLarge: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.semiSmall,
+        fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.kQuaternaryText,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
+
+      /// FS = [12], FW = [w700], FC = [9E9E9E], FF = [Roboto]
+      labelMedium: fontStyle( //DONE
+        fontSize: fontSize ?? AppFontSizes.small,
+        fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+        fontFamily: fontFamily ?? AppFontFamilies.roboto,
+        fontColor: textColor ?? AppColors.kSecondary,
+        overflow: overflow ?? TextOverflow.ellipsis,
+        decoration: decoration ?? TextDecoration.none,
+      ),
+
+      // /// FS = [10], FW = [w600], FC = [000000], FF = [Roboto]
+      // labelSmall: fontStyle(
+      //   fontSize: fontSize ?? AppFontSizes.xXSmall,
+      //   fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+      //   fontFamily: fontFamily ?? AppFontFamilies.roboto,
+      //   fontColor: textColor ?? AppColors.korLoginWithColor,
+      //   overflow: overflow ?? TextOverflow.ellipsis,
+      //   decoration: decoration ?? TextDecoration.none,
+      // ),
     );
+
+    //----------------------------------------------------------------//
   }
+
+
 
 }
