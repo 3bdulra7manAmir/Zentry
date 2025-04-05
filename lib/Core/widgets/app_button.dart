@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_borders.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/core/constants/app_images.dart';
-import 'package:test_app/core/constants/app_styles.dart';
 
 class CustomButton extends StatelessWidget
 {
@@ -59,10 +58,10 @@ class CustomButton extends StatelessWidget
                 [
                   Image.asset(platformLogo ?? AppAssets.iconsPNG.corssedEyePNG),
                   (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
-                  Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+                  Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle14()
                 ],
               )
-            : Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+            : Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle14()
             
         onPressed: () {},
       ),

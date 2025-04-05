@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/font_system/app_fonts.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
 
 import 'package:test_app/core/constants/app_borders.dart';
 import 'package:test_app/core/constants/app_padding.dart';
 import 'package:test_app/core/data/app_theme_list.dart';
+
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_styles.dart';
 
 
 class ThemesView extends StatelessWidget
@@ -35,7 +36,7 @@ class ThemesView extends StatelessWidget
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
-                color: AppColors.kSecondaryText,
+                color: AppColors.kSecondary,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
@@ -52,8 +53,8 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kSenaryText, fontFamily: AppFontFamilies.cairo),),
-                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.w400, textColor: AppColors.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.kSenaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
                     ],
                   ),
 

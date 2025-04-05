@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_images.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/config/themes/app_colors.dart';
+
+import '../../../../../core/constants/app_styles.dart';
 
 
 class FormHeader extends StatelessWidget
@@ -57,7 +58,7 @@ class FormHeader extends StatelessWidget
               bottom: 0,
             ),
             width: double.infinity,
-            color: AppColors.kPrimarBlue,
+            color: AppColors.kPrimaryBlue,
             child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),
           ),
 

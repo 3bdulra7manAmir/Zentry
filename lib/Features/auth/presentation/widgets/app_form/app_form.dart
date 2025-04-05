@@ -4,12 +4,13 @@ import 'package:test_app/Core/constants/app_borders.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_images.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
 
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_button.dart';
+
+import '../../../../../core/constants/app_styles.dart';
 
 class AppForm extends StatelessWidget
 {
@@ -36,7 +37,7 @@ class AppForm extends StatelessWidget
             width: 73.w,
             height: 3.h,
             decoration: BoxDecoration(
-              color: AppColors.kSecondaryText,
+              color: AppColors.kSecondary,
               borderRadius: AppBorders.dividerBorder,
             ),
           ),
@@ -44,7 +45,7 @@ class AppForm extends StatelessWidget
           AppSizes.size12.verticalSpace,
 
           // Welcome TEXT
-          Text(AppStrings.welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.kPrimaryText)),
+          Text(AppStrings.welcomeBack, style: ThemeData.dark().textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle18(textColor: AppColors.kPrimaryText)
 
           AppSizes.size28.verticalSpace,
 

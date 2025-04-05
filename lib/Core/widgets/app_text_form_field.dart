@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
+
 
 class CustomTextFormField extends StatelessWidget
 {
@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget
       //controller: TextEditingController(text: fieldText),
       decoration: InputDecoration(
         hintText: fieldText,
-        hintStyle: fieldhintStyle ?? AppStyles.textStyle12(),
+        hintStyle: fieldhintStyle ?? Theme.of(context).textTheme.labelMedium, //AppStyles.textStyle12()
         prefixIcon: fieldPrefixIcon,
         suffixIcon: fieldsuffixIcon,
       ),

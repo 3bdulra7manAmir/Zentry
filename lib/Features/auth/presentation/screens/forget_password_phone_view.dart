@@ -4,13 +4,14 @@ import 'package:test_app/Core/constants/app_images.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/app_colors.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 import 'package:test_app/core/widgets/app_button.dart';
 import 'package:test_app/core/widgets/app_appbar.dart';
 import 'package:test_app/features/auth/presentation/widgets/numeric_keyboard.dart';
+
+import '../../../../config/themes/font_system/app_font_weights.dart';
 
 class ForgetPasswordWithPhoneView extends StatelessWidget
 {
@@ -36,7 +37,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.w400),),
+            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size46.verticalSpace,
         
@@ -47,7 +48,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText,)),
+                  Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText,)),
         
                   AppSizes.size9.verticalSpace,
                   
@@ -58,11 +59,11 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
+                      Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
         
                       AppSizes.size14.horizontalSpace,
         
-                      Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
+                      Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
                           textColor: AppColors.kForgetPassword, textDecoration: TextDecoration.underline,
                           textDecorationColor: AppColors.kForgetPassword,
                         ),

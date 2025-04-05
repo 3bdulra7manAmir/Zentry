@@ -4,12 +4,13 @@ import 'package:test_app/Core/constants/app_padding.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
 import 'package:test_app/config/themes/app_colors.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 import 'package:test_app/core/widgets/app_button.dart';
 import 'package:test_app/core/widgets/app_appbar.dart';
 import 'package:test_app/features/auth/presentation/widgets/numeric_keyboard.dart';
+
+import '../../../../config/themes/font_system/app_font_weights.dart';
 
 
 class ForgetPasswordWithEmailView extends StatelessWidget
@@ -28,15 +29,15 @@ class ForgetPasswordWithEmailView extends StatelessWidget
           [
             AppSizes.size46.verticalSpace,
         
-            Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
+            Text(AppStrings.forgotPassword, style: Theme.of(context).textTheme.titleSmall), //AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,)
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondary,),),
+            Text(AppStrings.enterPhoneNumberAssociated, style: Theme.of(context).textTheme.bodyMedium), //AppStyles.textStyle16(textColor: AppColors.kSecondary,)
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.w400),),
+            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size46.verticalSpace,
         
@@ -47,7 +48,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppStrings.emailAddress, style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText,)),
+                  Text(AppStrings.emailAddress, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText,)),
         
                   AppSizes.size9.verticalSpace,
                   
@@ -58,11 +59,11 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppStrings.dontHaveEmail, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
+                      Text(AppStrings.dontHaveEmail, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
         
                       AppSizes.size14.horizontalSpace,
         
-                      Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
+                      Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
                           textColor: AppColors.kForgetPassword, textDecoration: TextDecoration.underline,
                           textDecorationColor: AppColors.kForgetPassword,
                         ),

@@ -13,7 +13,7 @@ class TestApp extends StatelessWidget
   {
   
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(390, 844),
       builder: (context, child)
       {
         return DevicePreview(
@@ -24,7 +24,7 @@ class TestApp extends StatelessWidget
             routerConfig: AppRouter.router,
         
             debugShowCheckedModeBanner: false,
-            theme: AppTheme.darkTheme(),
+            theme: AppTheme.lightTheme(),
 
             useInheritedMediaQuery: true,
           ),

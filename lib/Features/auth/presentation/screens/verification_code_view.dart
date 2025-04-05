@@ -3,9 +3,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_images.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_button.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
 
 import 'package:test_app/core/constants/app_borders.dart';
@@ -13,6 +11,9 @@ import 'package:test_app/core/constants/app_padding.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_appbar.dart';
 import 'package:test_app/features/auth/presentation/widgets/numeric_keyboard.dart';
+
+import '../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../core/constants/app_styles.dart';
 
 class VerificationCodeView extends StatelessWidget
 {
@@ -29,7 +30,7 @@ class VerificationCodeView extends StatelessWidget
           Row(
             children:
             [
-              Text(AppStrings.verifyLater, style: AppStyles.textStyle12(fontWeight: AppFontWeights.w600, textColor: AppColors.kRememberColor),),
+              Text(AppStrings.verifyLater, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.kRemember),),
               AppSizes.size4.horizontalSpace,
               Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),
               AppSizes.size14.horizontalSpace,
@@ -49,11 +50,11 @@ class VerificationCodeView extends StatelessWidget
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppStrings.pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.kSecondaryText,),),
+            Text(AppStrings.pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.kSecondary,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.kSecondaryText, fontWeight: AppFontWeights.w400),),
+            Text(AppStrings.appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size51.verticalSpace,
         
@@ -64,7 +65,7 @@ class VerificationCodeView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text("Enter your Code", style: AppStyles.textStyle13(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
+                  Text("Enter your Code", style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
         
                   AppSizes.size10.verticalSpace,
         
@@ -89,14 +90,14 @@ class VerificationCodeView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text("Don't Receiving a code?", style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500, textColor: AppColors.kQuaternaryText),),
+                      Text("Don't Receiving a code?", style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
         
                       AppSizes.size6.horizontalSpace,
         
-                      Text("Request phone call", style: AppStyles.textStyle14(fontWeight: AppFontWeights.w500,
-                        textColor: AppColors.kVerificationUnderLink,
+                      Text("Request phone call", style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.kVerificationUnderLine,
                         textDecoration: TextDecoration.underline,
-                        textDecorationColor: AppColors.kVerificationUnderLink,
+                        textDecorationColor: AppColors.kVerificationUnderLine,
                         ),
                       ),
                     ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors
+abstract class AppColors
 {
   AppColors._();
 
@@ -8,9 +8,9 @@ class AppColors
   static Color kTransparent =  Colors.transparent;
 
   /// [_003082]
-  static Color kPrimarBlue = const Color(0xff003082);
+  static Color kPrimaryBlue = const Color(0xff003082);
   /// [_233973]
-  static Color kVerificationUnderLink = const Color(0xff233973);
+  static Color kVerificationUnderLine = const Color(0xff233973);
   /// [_3E6FCF]  
   static Color kForgetPassword = const Color(0xff3E6FCF);
 

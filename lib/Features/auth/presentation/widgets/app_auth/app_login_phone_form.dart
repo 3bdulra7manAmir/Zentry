@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
 import 'package:test_app/Core/widgets/app_text_form_field.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
 import 'package:test_app/core/constants/app_images.dart';
 import 'package:test_app/core/constants/app_strings.dart';
 import 'package:test_app/core/widgets/app_button.dart';
+
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_styles.dart';
 
 class LoginFormWithPhone extends StatelessWidget
 {
@@ -35,11 +36,11 @@ class LoginFormWithPhone extends StatelessWidget
                 Text(AppStrings.phoneNumber, style: Theme.of(context).textTheme.bodyLarge,), //textColor: AppColors.kTertiaryText,
                 const Spacer(),
 
-                Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.kSecondaryText,),),
+                Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.kSecondary,),),
                 
                 AppSizes.size4.horizontalSpace,
 
-                Text(AppStrings.email, style: AppStyles.textStyle12(fontWeight: AppFontWeights.w700, textDecoration: TextDecoration.underline),),
+                Text(AppStrings.email, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textDecoration: TextDecoration.underline),),
               ],
             ),
       
@@ -62,11 +63,11 @@ class LoginFormWithPhone extends StatelessWidget
               [
                 Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: 2.w, color: AppColors.kTextFormFieldBorder,),),
 
-                Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.kRememberColor),),
+                Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.kRemember),),
 
                 const Spacer(),
 
-                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(textColor: AppColors.kForgetPasswordColor, textDecoration: TextDecoration.underline, ),),
+                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(textColor: AppColors.kForgetPassword, textDecoration: TextDecoration.underline, ),),
               ],
             ),
       
@@ -78,7 +79,7 @@ class LoginFormWithPhone extends StatelessWidget
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.w700, textColor: AppColors.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
             ),
       
             AppSizes.size20.verticalSpace,

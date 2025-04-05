@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Config/themes/app_colors.dart';
 import 'package:test_app/Core/constants/app_images.dart';
-import 'package:test_app/Core/constants/app_styles.dart';
-import 'package:test_app/config/themes/font_system/app_font_weight.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
 {
@@ -18,12 +16,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   Widget build(BuildContext context)
   {
     return AppBar(
-      backgroundColor: AppColors.kAppBarBGColor,
+      backgroundColor: AppColors.kAppBarBG,
       leading: barLeading ?? Image.asset(AppAssets.iconsPNG.leftBackArrowBlackPNG),
       leadingWidth: 65.w,
       
 
-      title: Text(barTitle ?? "NULL TEXT", style: AppStyles.textStyle14(fontWeight: AppFontWeights.w600, textColor: AppColors.korLoginWithColor),),
+      title: Text(barTitle ?? "NULL TEXT", style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.korLoginWithColor)), //AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.korLoginWithColor),
       centerTitle: isTitleCenterd ?? true,
 
       actions: barActions,
