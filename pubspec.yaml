@@ -7,16 +7,29 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  device_preview: ^1.2.0
-
   flutter:
     sdk: flutter
-  
+
+  # APP Responsiveness Test METHOD
+  device_preview: ^1.2.0
+
+  # APP Launcher Logo (plugin only, config is below)
+  flutter_launcher_icons: ^0.13.1
+
+  # APP Custom UI
   flutter_otp_text_field: ^1.5.1+1
+
+  # APP Controller
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  
+  # APP Responsiveness
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.17
 
+  # APP NAVIGATION
   go_router: ^14.8.1
+  riverpod_annotation: ^2.6.1
 
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
@@ -67,3 +80,11 @@ flutter:
     - assets/icons/Verification/
     - assets/icons/Countries/
     - assets/images/
+
+# flutter_launcher_icons config
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true 
+  image_path: "assets/icons/AppIcon/App_Icon.png"
+  min_sdk_android: 21
