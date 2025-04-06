@@ -29,11 +29,6 @@ dependencies:
 
   # APP NAVIGATION
   go_router: ^14.8.1
-  riverpod_annotation: ^2.6.1
-
-  flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
-
 
 dev_dependencies:
   
