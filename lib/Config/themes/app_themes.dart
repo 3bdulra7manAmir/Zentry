@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/constants/app_borders.dart';
-import 'app_colors.dart';
+import 'app_colors/app_colors_.dart';
 import 'app_sizes.dart';
 import 'app_text_theme.dart';
 

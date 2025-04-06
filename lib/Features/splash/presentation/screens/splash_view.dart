@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
-import '../../../../config/themes/app_colors.dart';
+import '../../../../config/themes/app_colors/app_colors_.dart';
 import '../../../../core/constants/app_images.dart';
 
 
