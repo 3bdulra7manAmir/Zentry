@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../config/themes/app_sizes.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_images.dart';
@@ -22,7 +22,7 @@ class RestPasswordView extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
-      //backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.color.kWhite,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:
@@ -40,7 +40,7 @@ class RestPasswordView extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
+                Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 
@@ -48,7 +48,7 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size24.verticalSpace,
 
-                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
+                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 

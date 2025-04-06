@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../Config/themes/app_colors.dart';
 import '../../../../../Core/widgets/app_text_form_field.dart';
+import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/data/app_countries_list.dart';
-
 import '../../../../../core/constants/app_styles.dart';
 
 
@@ -22,7 +20,7 @@ class CountiesView extends StatelessWidget
   {
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: AppColors.kWhite,
+        //backgroundColor: AppColors.color.kWhite,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:
@@ -36,7 +34,7 @@ class CountiesView extends StatelessWidget
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
-                color: AppColors.kSecondary,
+                color: AppColors.color.kSecondary,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),

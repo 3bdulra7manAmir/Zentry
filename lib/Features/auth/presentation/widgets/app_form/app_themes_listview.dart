@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../Config/themes/app_colors.dart';
+import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/font_system/app_fonts.dart';
 import '../../../../../config/themes/app_sizes.dart';
 
@@ -22,7 +22,7 @@ class ThemesView extends StatelessWidget
     String? selectedValue = 'Option 1'; // Default selected option
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: AppColors.kWhite,
+        //backgroundColor: AppColors.color.kWhite,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:
@@ -36,7 +36,7 @@ class ThemesView extends StatelessWidget
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
-                color: AppColors.kSecondary,
+                color: AppColors.color.kSecondary,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
@@ -53,8 +53,8 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.kSenaryText, fontFamily: AppFontFamilies.cairo),),
-                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kSenaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
                     ],
                   ),
 

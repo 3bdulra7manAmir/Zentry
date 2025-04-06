@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../widgets/app_auth/auth_tabbar.dart';
 import '../widgets/app_form/app_form_header.dart';
 
@@ -13,7 +12,7 @@ class AuthView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: AppColors.kPrimaryBlue,
+      backgroundColor: AppColors.color.kPrimaryBlue,
       body: const Column(
         children:
         [

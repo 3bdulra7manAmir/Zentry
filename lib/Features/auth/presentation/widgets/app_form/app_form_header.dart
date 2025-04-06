@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/constants/app_images.dart';
-import '../../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../../config/themes/app_colors/app_colors.dart';
 
 import '../../../../../core/constants/app_styles.dart';
 
@@ -58,7 +58,7 @@ class FormHeader extends StatelessWidget
               bottom: 0,
             ),
             width: double.infinity,
-            color: AppColors.kPrimaryBlue,
+            color: AppColors.color.kPrimaryBlue,
             child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),
           ),
 
@@ -70,7 +70,7 @@ class FormHeader extends StatelessWidget
             child: Row(
               children:
               [
-                Text(upperRightText ?? "Yet", style: AppStyles.textStyle13(textColor: AppColors.kSemiWhite1, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.kSemiWhite1),),
+                Text(upperRightText ?? "Yet", style: AppStyles.textStyle13(textColor: AppColors.color.kSemiWhite1, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kSemiWhite1),),
                 Image.asset(AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),

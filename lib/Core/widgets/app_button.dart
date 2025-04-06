@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../config/themes/app_colors/app_colors_.dart';
+import '../../config/themes/app_colors/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_images.dart';
 
@@ -47,10 +47,10 @@ class CustomButton extends StatelessWidget
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-              side: BorderSide(color: buttonBorderColor ?? AppColors.kTransparent, width: buttonBorderWidth ?? 1.w,),
+              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? 1.w,),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.kPrimaryBlue,),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
           alignment: Alignment.center,
         ),      
           
@@ -60,10 +60,10 @@ class CustomButton extends StatelessWidget
                 [
                   Image.asset(platformLogo ?? AppAssets.iconsPNG.corssedEyePNG),
                   (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
-                  Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle14()
+                  Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.color.kTertiaryText),), //AppStyles.textStyle14()
                 ],
               )
-            : Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle14()
+            : Text(buttonText, style: buttonTextStyle ?? Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.color.kTertiaryText),), //AppStyles.textStyle14()
             
         onPressed: () {},
       ),

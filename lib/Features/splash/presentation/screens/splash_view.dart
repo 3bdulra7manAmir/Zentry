@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../core/constants/app_images.dart';
 
 
@@ -27,7 +27,7 @@ class _SplashViewState extends State<SplashView>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: AppColors.kPrimaryBlue,
+      backgroundColor: AppColors.color.kPrimaryBlue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

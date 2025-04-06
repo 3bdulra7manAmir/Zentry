@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../config/themes/app_sizes.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_images.dart';
@@ -23,22 +23,22 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
-      //backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.color.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:
           [
             AppSizes.size46.verticalSpace,
         
-            Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
+            Text(AppStrings.forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.color.korLoginWithColor,),),
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.kSecondary,),),
+            Text(AppStrings.enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondary,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.regularWeight),),
+            Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size46.verticalSpace,
         
@@ -49,7 +49,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText,)),
+                  Text(AppStrings.phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText,)),
         
                   AppSizes.size9.verticalSpace,
                   
@@ -60,13 +60,13 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
+                      Text(AppStrings.dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
         
                       AppSizes.size14.horizontalSpace,
         
                       Text(AppStrings.tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                          textColor: AppColors.kForgetPassword, textDecoration: TextDecoration.underline,
-                          textDecorationColor: AppColors.kForgetPassword,
+                          textColor: AppColors.color.kForgetPassword, textDecoration: TextDecoration.underline,
+                          textDecorationColor: AppColors.color.kForgetPassword,
                         ),
                       ),
                     ],

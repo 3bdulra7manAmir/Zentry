@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../config/themes/app_sizes.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
@@ -30,7 +30,7 @@ class VerificationCodeView extends StatelessWidget
           Row(
             children:
             [
-              Text(AppStrings.verifyLater, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.kRemember),),
+              Text(AppStrings.verifyLater, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kRemember),),
               AppSizes.size4.horizontalSpace,
               Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),
               AppSizes.size14.horizontalSpace,
@@ -39,22 +39,22 @@ class VerificationCodeView extends StatelessWidget
         ],
       ),
       
-      //backgroundColor: AppColors.kWhite,
+      //backgroundColor: AppColors.color.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:
           [
             AppSizes.size46.verticalSpace,
         
-            Text(AppStrings.verificationCode, style: AppStyles.textStyle20(textColor: AppColors.korLoginWithColor,),),
+            Text(AppStrings.verificationCode, style: AppStyles.textStyle20(textColor: AppColors.color.korLoginWithColor,),),
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppStrings.pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.kSecondary,),),
+            Text(AppStrings.pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondary,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppStrings.appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.kSecondary, fontWeight: AppFontWeights.regularWeight),),
+            Text(AppStrings.appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size51.verticalSpace,
         
@@ -65,16 +65,16 @@ class VerificationCodeView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text("Enter your Code", style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
+                  Text("Enter your Code", style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
         
                   AppSizes.size10.verticalSpace,
         
                   OtpTextField(
                     numberOfFields: 5,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    fillColor: AppColors.kTextFormFieldFill,
+                    fillColor: AppColors.color.kTextFormFieldFill,
                     filled: true,
-                    borderColor: AppColors.kTextFormFieldBorder,
+                    borderColor: AppColors.color.kTextFormFieldBorder,
                     borderWidth: AppSizes.size1.w,
                     borderRadius: AppBorders.buttonBorder10,
                     fieldWidth: AppSizes.size51.w,
@@ -90,14 +90,14 @@ class VerificationCodeView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text("Don't Receiving a code?", style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.kQuaternaryText),),
+                      Text("Don't Receiving a code?", style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
         
                       AppSizes.size6.horizontalSpace,
         
                       Text("Request phone call", style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                        textColor: AppColors.kVerificationUnderLine,
+                        textColor: AppColors.color.kVerificationUnderLine,
                         textDecoration: TextDecoration.underline,
-                        textDecorationColor: AppColors.kVerificationUnderLine,
+                        textDecorationColor: AppColors.color.kVerificationUnderLine,
                         ),
                       ),
                     ],
@@ -105,7 +105,7 @@ class VerificationCodeView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: "Resend in 60s", isSocialButton: false, buttonBackgroundColor: AppColors.kPrimaryBlue,),
+                  CustomButton(buttonText: "Resend in 60s", isSocialButton: false, buttonBackgroundColor: AppColors.color.kPrimaryBlue,),
                 ],
               ),
             ),

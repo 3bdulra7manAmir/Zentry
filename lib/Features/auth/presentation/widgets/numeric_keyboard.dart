@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -43,9 +43,9 @@ class NumericKeyboard extends StatelessWidget
         return InkWell(
           //onTap: () => onKeyTap(keys[index]),
           child: Container(
-            decoration: BoxDecoration(color: AppColors.kNumericButtonBG, borderRadius: AppBorders.buttonBorder10,),
+            decoration: BoxDecoration(color: AppColors.color.kNumericButtonBG, borderRadius: AppBorders.buttonBorder10,),
             alignment: Alignment.center,
-            child: Text(keys[index], style: AppStyles.textStyle18(textColor: AppColors.kQuaternaryText)),
+            child: Text(keys[index], style: AppStyles.textStyle18(textColor: AppColors.color.kQuaternaryText)),
           ),
         );
       },

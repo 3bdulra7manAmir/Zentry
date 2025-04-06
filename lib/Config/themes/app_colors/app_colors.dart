@@ -19,16 +19,22 @@ class AppColors
     return i._colors;
   }
 
-  String _themeMode = 'light';  // Can be light or dark,
+  String _themeMode = 'light';  // Default theme is light.
 
-  set themeMode(String mode) => _themeMode = mode;
+  // Dynamically set the theme mode based on the active theme in MaterialApp.
+  set themeMode(String mode)
+  {
+    _themeMode = mode;
+  }
 
   ColorManagerBase get _colors
   {
     if (_themeMode == 'dark')
     {
       return DarkColorScheme();
-    } else {
+    }
+    else
+    {
       return LightColorScheme();
     }
   }

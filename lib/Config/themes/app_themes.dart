@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../core/constants/app_borders.dart';
-import 'app_colors/app_colors_.dart';
+import 'app_colors/app_colors.dart';
 import 'app_sizes.dart';
-import 'app_text_theme.dart';
 
 class AppTheme
 {
@@ -15,22 +13,21 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.kWhite,
-      textTheme:  AppTextTheme.lightTextTheme(),
+      scaffoldBackgroundColor: AppColors.color.kWhite,
 
-      cardColor: AppColors.kWhite,
+      cardColor: AppColors.color.kWhite,
 
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w,),
+          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kSocailButtonBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -42,35 +39,34 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.kDarkScaffoldBGColor,
-      textTheme: AppTextTheme.darkTextTheme(),
+      scaffoldBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
       
-      cardColor: AppColors.kDarkScaffoldBGColor,
-      //primaryColorLight: AppColors.kDarkScaffoldBGColor,
+      cardColor: AppColors.color.kDarkScaffoldBGColor,
+      //primaryColorLight: AppColors.color.kDarkScaffoldBGColor,
       
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.kTextFormFieldFillDark,
+        fillColor: AppColors.color.kTextFormFieldFillDark,
         //hintStyle: AppStyles.textStyle12(),
 
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w,),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryBlue),
+          backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: AppBorders.buttonBorder10,
@@ -86,21 +82,21 @@ class AppTheme
         //unselectedLabelStyle: ,
         //indicator: ,
         //overlayColor: WidgetStateProperty.resolveWith<Color>(),
-        labelColor: AppColors.kAuthTab,
-        unselectedLabelColor: AppColors.kSecondary,
-        //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.kAuthTab,),
+        labelColor: AppColors.color.kAuthTab,
+        unselectedLabelColor: AppColors.color.kSecondary,
+        //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab,),
       ),
 
       // appBarTheme: AppBarTheme(
       //   elevation: 0,
       //   centerTitle: true,
       //   scrolledUnderElevation: 0,
-      //   backgroundColor: AppColors.,
+      //   backgroundColor: AppColors.color.,
       //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      //   iconTheme: IconThemeData(color: AppColors.),
+      //   iconTheme: IconThemeData(color: AppColors.color.),
       //   titleTextStyle: StylesManager.extraBold(
       //     fontSize: AppSizes.size,
-      //     color: AppColors.,
+      //     color: AppColors.color.,
       //   ),
       // ),
     );

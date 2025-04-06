@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../config/themes/app_colors/app_colors.dart';
 import '../widgets/app_form/app_form.dart';
 import '../widgets/app_form/app_form_header.dart';
 
@@ -14,7 +14,7 @@ class FormView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: AppColors.kPrimaryBlue,
+      backgroundColor: AppColors.color.kPrimaryBlue,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:

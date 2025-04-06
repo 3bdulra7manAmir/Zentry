@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../config/themes/app_colors/app_colors_.dart';
+import '../../config/themes/app_colors/app_colors.dart';
 import '../../config/themes/app_sizes.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 
@@ -27,7 +27,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kPrimaryText,
+      color: textColor ?? AppColors.color.kPrimaryText,
     );
   }
 
@@ -49,7 +49,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kWhite,
+      color: textColor ?? AppColors.color.kWhite,
     );
   }
 
@@ -71,7 +71,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kPrimaryText,
+      color: textColor ?? AppColors.color.kPrimaryText,
     );
   }
   /// FontWeight = [AppFontWeights.regularWeight] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
@@ -91,7 +91,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kPrimaryText,
+      color: textColor ?? AppColors.color.kPrimaryText,
     );
   }
 
@@ -113,7 +113,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kWhite,
+      color: textColor ?? AppColors.color.kWhite,
     );
   }
 
@@ -135,7 +135,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kPrimaryText,
+      color: textColor ?? AppColors.color.kPrimaryText,
     );
   }
 
@@ -157,7 +157,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.kSecondary,
+      color: textColor ?? AppColors.color.kSecondary,
 
     );
   }
@@ -179,7 +179,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      //color: textColor ?? AppColors.kSecondary,
+      //color: textColor ?? AppColors.color.kSecondary,
 
     );
   }

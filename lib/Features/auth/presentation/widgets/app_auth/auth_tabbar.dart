@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../config/themes/app_colors/app_colors_.dart';
+import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -32,12 +32,12 @@ class AuthTabs extends StatelessWidget
 
             child: TabBar(
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: AppColors.kAuthTab,
+              labelColor: AppColors.color.kAuthTab,
               padding: AppPadding.kTabBarPadding,
-              labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.kAuthTab),
+              labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab),
               indicatorWeight: AppSizes.size4,
-              unselectedLabelColor: AppColors.kSecondary,
-              indicatorColor: AppColors.kAuthTab,
+              unselectedLabelColor: AppColors.color.kSecondary,
+              indicatorColor: AppColors.color.kAuthTab,
               tabs: const [Tab(text: AppStrings.login,), Tab(text: AppStrings.signUp),],
             ),
           ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/constants/app_borders.dart';
-import '../../../../../Config/themes/app_colors.dart';
 import '../../../../../Core/constants/app_images.dart';
 import '../../../../../Core/constants/app_padding.dart';
 import '../../../../../Core/widgets/app_text_form_field.dart';
+import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 
 import '../../../../../core/constants/app_strings.dart';
@@ -37,7 +37,7 @@ class AppForm extends StatelessWidget
             width: 73.w,
             height: 3.h,
             decoration: BoxDecoration(
-              color: AppColors.kSecondary,
+              color: AppColors.color.kSecondary,
               borderRadius: AppBorders.dividerBorder,
             ),
           ),
@@ -45,7 +45,7 @@ class AppForm extends StatelessWidget
           AppSizes.size12.verticalSpace,
 
           // Welcome TEXT
-          Text(AppStrings.welcomeBack, style: ThemeData.dark().textTheme.bodySmall?.copyWith(color: AppColors.kTertiaryText),), //AppStyles.textStyle18(textColor: AppColors.kPrimaryText)
+          Text(AppStrings.welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryText),), 
 
           AppSizes.size28.verticalSpace,
 
@@ -73,9 +73,9 @@ class AppForm extends StatelessWidget
           AppSizes.size16.verticalSpace,
 
          CustomButton(buttonText: AppStrings.signUp, isSocialButton: false,
-         buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.kPrimaryBlue),
-         buttonBackgroundColor: AppColors.kWhite,
-         buttonBorderColor: AppColors.kPrimaryBlue,
+         buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.color.kPrimaryBlue),
+         buttonBackgroundColor: AppColors.color.kWhite,
+         buttonBorderColor: AppColors.color.kPrimaryBlue,
          ),
         ],
       ),
