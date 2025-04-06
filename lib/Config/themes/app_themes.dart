@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/constants/app_borders.dart';
 import 'app_colors.dart';
+import 'app_sizes.dart';
 import 'app_text_theme.dart';
 
 class AppTheme
@@ -55,14 +56,14 @@ class AppTheme
 
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: 1.w,),
+          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: 1.w),
+          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: 1.w),
+          borderSide: BorderSide(color: AppColors.kTextFormFieldFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -73,7 +74,7 @@ class AppTheme
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: AppBorders.buttonBorder10,
-              side: BorderSide(width: 1.w),
+              side: BorderSide(width: AppSizes.size1.w),
             ),
           ),
         ),

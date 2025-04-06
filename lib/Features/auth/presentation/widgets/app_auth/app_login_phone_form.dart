@@ -33,7 +33,7 @@ class LoginFormWithPhone extends StatelessWidget
             Row(
               children:
               [
-                Text(AppStrings.phoneNumber, style: Theme.of(context).textTheme.bodyLarge,), //textColor: AppColors.kTertiaryText,
+                Text(AppStrings.phoneNumber, style: Theme.of(context).textTheme.bodyLarge?.copyWith(),), //textColor: AppColors.kTertiaryText,
                 const Spacer(),
 
                 Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.kSecondary,),),

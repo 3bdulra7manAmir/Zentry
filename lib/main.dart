@@ -8,5 +8,3 @@ void main()
   
   runApp(const ProviderScope(child: TestApp()),);
 }
-
-
