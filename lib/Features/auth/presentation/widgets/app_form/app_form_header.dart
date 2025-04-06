@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/Core/constants/app_images.dart';
-import 'package:test_app/config/themes/app_colors.dart';
+import '../../../../../Core/constants/app_images.dart';
+import '../../../../../config/themes/app_colors.dart';
 
 import '../../../../../core/constants/app_styles.dart';
 

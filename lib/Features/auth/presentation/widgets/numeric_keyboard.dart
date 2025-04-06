@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Core/constants/app_padding.dart';
-import 'package:test_app/config/themes/app_colors.dart';
-import 'package:test_app/core/constants/app_borders.dart';
-import 'package:test_app/core/constants/app_styles.dart';
+
+import '../../../../config/themes/app_colors.dart';
+import '../../../../core/constants/app_borders.dart';
+import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_styles.dart';
+
 
 class NumericKeyboard extends StatelessWidget
 {

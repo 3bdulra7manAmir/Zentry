@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Config/router/app_router.dart';
-import 'package:test_app/Config/router/app_routes.dart';
-import 'package:test_app/Config/themes/app_colors.dart';
-import 'package:test_app/Core/constants/app_images.dart';
+
+import '../../../../config/router/app_router.dart';
+import '../../../../config/router/app_routes.dart';
+import '../../../../config/themes/app_colors.dart';
+import '../../../../core/constants/app_images.dart';
+
 
 class SplashView extends StatefulWidget
 {

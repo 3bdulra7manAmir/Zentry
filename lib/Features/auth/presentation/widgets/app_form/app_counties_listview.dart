@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/Config/themes/app_colors.dart';
-import 'package:test_app/Core/widgets/app_text_form_field.dart';
-import 'package:test_app/config/themes/app_sizes.dart';
+import '../../../../../Config/themes/app_colors.dart';
+import '../../../../../Core/widgets/app_text_form_field.dart';
+import '../../../../../config/themes/app_sizes.dart';
 
-import 'package:test_app/core/constants/app_borders.dart';
-import 'package:test_app/core/constants/app_images.dart';
-import 'package:test_app/core/constants/app_padding.dart';
-import 'package:test_app/core/constants/app_strings.dart';
-import 'package:test_app/core/data/app_countries_list.dart';
+import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/constants/app_strings.dart';
+import '../../../../../core/data/app_countries_list.dart';
 
 import '../../../../../core/constants/app_styles.dart';
 

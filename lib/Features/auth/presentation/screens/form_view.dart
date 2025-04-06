@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Config/themes/app_colors.dart';
-import 'package:test_app/features/auth/presentation/widgets/app_form/app_form.dart';
 
+
+import '../../../../config/themes/app_colors.dart';
+import '../widgets/app_form/app_form.dart';
 import '../widgets/app_form/app_form_header.dart';
 
 
