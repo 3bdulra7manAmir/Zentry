@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/app_sizes.dart';
-
 import '../../config/themes/app_colors/app_colors.dart';
+import '../../config/themes/app_sizes.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
@@ -44,7 +43,7 @@ class CustomButton extends StatelessWidget
             ),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
-          alignment: Alignment.center,
+          //alignment: Alignment.center,
         ),      
           
         child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),

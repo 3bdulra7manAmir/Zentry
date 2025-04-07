@@ -19,17 +19,16 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kTextFormFieldFill,
-
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w,),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -66,17 +65,26 @@ class AppTheme
         ),
       ),
 
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: AppBorders.buttonBorder10,
-              side: BorderSide(width: AppSizes.size1.w),
-            ),
-          ),
-        ),
-      ),
+      // elevatedButtonTheme: ElevatedButtonThemeData(
+      //   style: ButtonStyle(
+      //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      //       RoundedRectangleBorder(
+      //         borderRadius: AppBorders.buttonBorder10,
+      //         side: BorderSide(
+      //           color: AppColors.color.kTransparent,
+      //           width: AppBorderWidths.width1,
+      //         ),
+      //       ),
+      //     ),
+      //     backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
+      //     overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      //     splashFactory: NoSplash.splashFactory,
+      //     shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      //     elevation: MaterialStateProperty.all(0),
+      //     alignment: Alignment.center,
+      //   ),
+      // ),
+
 
       tabBarTheme: TabBarTheme(
         //dividerHeight: ,

@@ -5,8 +5,9 @@ class DarkColorScheme extends ColorManagerBase
 {
   @override
   Color get kWhite => const Color(0xffFFFFFF);
-  @override
-  Color get kPrimaryText => kWhite;
+
+  @override //REVERSED
+  Color get kPrimaryText => const Color(0xffFFFFFF);
 
   @override
   Color get kTransparent => Colors.transparent;
@@ -21,22 +22,25 @@ class DarkColorScheme extends ColorManagerBase
   Color get kForgetPassword => const Color(0xff3E6FCF);
 
   @override
+  Color get kForgetPasswordUnderLine  => const Color(0xff1B1B1B);
+
+  @override
   Color get kSemiWhite1 => const Color(0xffF4F4F4);
 
-  @override
-  Color get kTextFormFieldBorder => const Color(0xffEEEEEE);
+  @override //REVERSED
+  Color get kTextFormFieldBorder => const Color(0xff434343);
 
-  @override
-  Color get kTextFormFieldFill => const Color(0xffF8F8F8);
+  @override //REVERSED
+  Color get kTextFormFieldFill => const Color(0xff434343);
 
   @override
   Color get kSocailButtonBorder => const Color(0xffE5E5E5);
 
-  @override
-  Color get kAppBarBG => const Color(0xffFBFBFB);
+  @override //REVERSED
+  Color get kAppBarBG => const Color(0xff1B1B1B);
 
-  @override
-  Color get kNumericButtonBG => const Color(0xffFAFAFA);
+  @override //REVERSED
+  Color get kNumericButtonBG => const Color(0xff1B1B1B);
 
   @override
   Color get kQuinaryText => const Color(0xff717171);
@@ -47,14 +51,14 @@ class DarkColorScheme extends ColorManagerBase
   @override
   Color get kRemember => const Color(0xffB4B4B4);
 
-  @override
-  Color get kTertiaryText => const Color(0xff232633);
+  @override //REVERSED
+  Color get kTertiaryText => const Color(0xffD7D7D7);
 
-  @override
-  Color get korLoginWithColor => const Color(0xff000000);
+  @override //REVERSED
+  Color get korLoginWithColor => const Color(0xffFFFFFF);
 
-  @override
-  Color get kQuaternaryText => const Color(0xff2E2E2E);
+  @override //REVERSED
+  Color get kQuaternaryText => const Color(0xffD7D7D7);
 
   @override
   Color get kSenaryText => const Color(0xff1F1F1F);
@@ -67,4 +71,6 @@ class DarkColorScheme extends ColorManagerBase
 
   @override
   Color get kDarkScaffoldBGColor => const Color(0xff1B1B1B);
+
+
 }

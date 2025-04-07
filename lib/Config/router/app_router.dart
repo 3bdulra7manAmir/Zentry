@@ -15,7 +15,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kForgetPasswordEmailView,
+    initialLocation: AppRoutes.kThemesView,
     routes:
     [
 
@@ -88,12 +88,6 @@ abstract class AppRouter
         builder: (context, state) => const ThemesView(),
       ),
 
-      // // App Test View
-      // GoRoute(
-      //   path: AppRoutes.kTestView,
-      //   name: AppRoutes.kTestView,
-      //   builder: (context, state) => const TestView(),
-      // ),
     ] 
   );
 }

@@ -20,7 +20,6 @@ class CountiesView extends StatelessWidget
   {
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: AppColors.color.kWhite,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:
@@ -46,7 +45,7 @@ class CountiesView extends StatelessWidget
               child: Column(
                 children:
                 [
-                  CustomTextFormField(fieldText: AppStrings.search, fieldhintStyle: AppStyles.textStyle10(),fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchFlagPNG),),
+                  CustomTextFormField(fieldText: AppStrings.search, fieldhintStyle: AppStyles.textStyle10(), fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchFlagPNG),),
               
                   AppSizes.size16.verticalSpace,
               

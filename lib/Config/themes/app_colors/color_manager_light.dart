@@ -19,6 +19,9 @@ class LightColorScheme extends ColorManagerBase
   Color get kForgetPassword => const Color(0xff3E6FCF);
 
   @override
+  Color get kForgetPasswordUnderLine  => const Color(0xff3E6FCF);
+
+  @override
   Color get kWhite => const Color(0xffFFFFFF);
 
   @override
@@ -38,9 +41,6 @@ class LightColorScheme extends ColorManagerBase
 
   @override
   Color get kNumericButtonBG => const Color(0xffFAFAFA);
-
-
-  //Color get kPrimaryText => Colors.red;
 
   @override
   Color get kQuinaryText => const Color(0xff717171);
@@ -71,4 +71,5 @@ class LightColorScheme extends ColorManagerBase
 
   @override
   Color get kDarkScaffoldBGColor => const Color(0xff1B1B1B);
+
 }

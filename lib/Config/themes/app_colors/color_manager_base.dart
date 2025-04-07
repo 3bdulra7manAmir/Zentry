@@ -13,6 +13,9 @@ abstract class ColorManagerBase {
   /// 3E6FCF
   Color get kForgetPassword;
 
+  /// 3E6FCF
+  Color get kForgetPasswordUnderLine;
+
   /// FFFFFF
   Color get kWhite;
 
@@ -66,4 +69,6 @@ abstract class ColorManagerBase {
 
   /// 1B1B1B
   Color get kDarkScaffoldBGColor;
+
+
 }

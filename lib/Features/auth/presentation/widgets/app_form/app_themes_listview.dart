@@ -6,6 +6,7 @@ import '../../../../../config/themes/app_sizes.dart';
 
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/data/app_theme_list.dart';
 
 import '../../../../../config/themes/font_system/app_font_weights.dart';
@@ -22,14 +23,12 @@ class ThemesView extends StatelessWidget
     String? selectedValue = 'Option 1'; // Default selected option
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: AppColors.color.kWhite,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:
           [
             AppSizes.size8.verticalSpace,
 
-            //Divider
             Container(
               margin: AppPadding.kFormPadding,
               alignment: Alignment.center,
@@ -53,8 +52,18 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text("default", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kSenaryText, fontFamily: AppFontFamilies.cairo),),
-                      Text("Selected", style: AppStyles.textStyle17(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kQuinaryText, fontFamily: AppFontFamilies.cairo),),
+                      Text(AppStrings.default_, style: AppStyles.textStyle17(
+                        fontWeight: AppFontWeights.regularWeight,
+                        textColor: AppColors.color.kSenaryText,
+                        fontFamily: AppFontFamilies.cairo
+                        ),
+                      ),
+                      Text(AppStrings.selected, style: AppStyles.textStyle17(
+                        fontWeight: AppFontWeights.regularWeight,
+                        textColor: AppColors.color.kQuinaryText,
+                         fontFamily: AppFontFamilies.cairo
+                        ),
+                      ),
                     ],
                   ),
 

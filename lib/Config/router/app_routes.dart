@@ -10,9 +10,9 @@ abstract class AppRoutes
   //APP FORM
   static const kAppFormView = '/kAppFormView';
 
-  //APP Login
+  //APP Login withPhone
   static const kLoginPhoneView = '/kLoginPhoneView';
-  //APP Login
+  //APP Login withEmail
   static const kLoginEmailView = '/kLoginEmailView';
 
   //APP Forget Password Phone

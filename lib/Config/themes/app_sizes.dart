@@ -20,6 +20,7 @@ abstract class AppSizes
   static const double size26 = 26.0;
   static const double size27 = 27.0;
   static const double size28 = 28.0;
+  static const double size30 = 30.0;
   static const double size35 = 35.0;
   static const double size46 = 46.0;
   static const double size48 = 48.0;

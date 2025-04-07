@@ -11,7 +11,7 @@ class TestApp extends StatelessWidget
   const TestApp({super.key});
 
   // To keep track of the theme mode (light or dark)
-  final ThemeMode _themeMode = ThemeMode.light;
+  final ThemeMode _themeMode = ThemeMode.dark;
 
   @override
   Widget build(BuildContext context)
@@ -24,7 +24,7 @@ class TestApp extends StatelessWidget
       builder: (context, child)
       {
         return DevicePreview(
-          enabled: true,
+          enabled: false,
           builder: (context) => MaterialApp.router(
             builder: DevicePreview.appBuilder,
             locale: DevicePreview.locale(context),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../config/themes/app_sizes.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
@@ -13,7 +12,6 @@ import '../../../../core/widgets/app_text_form_field.dart';
 import '../widgets/numeric_keyboard.dart';
 
 
-
 class ForgetPasswordWithEmailView extends StatelessWidget
 {
   const ForgetPasswordWithEmailView({super.key});
@@ -23,7 +21,6 @@ class ForgetPasswordWithEmailView extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
-      //backgroundColor: AppColors.color.kWhite,
       body: SingleChildScrollView(
         child: Column(
           children:

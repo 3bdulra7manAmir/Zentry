@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:test_app/Core/constants/app_borders.dart';
 import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
@@ -62,13 +62,18 @@ class LoginFormWithEmail extends StatelessWidget
             Row(
               children:
               [
-                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: 2.w, color: AppColors.color.kTextFormFieldBorder,),),
+                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kTextFormFieldBorder,),),
 
                 Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
 
                 const Spacer(),
 
-                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(textColor: AppColors.color.kForgetPassword, textDecoration: TextDecoration.underline, ),),
+                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(
+                  textColor: AppColors.color.kForgetPassword,
+                  textDecoration: TextDecoration.underline,
+                  textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                  ),
+                ),
               ],
             ),
       
@@ -101,7 +106,7 @@ class LoginFormWithEmail extends StatelessWidget
                     Expanded(
                       child: CustomSocialButton(buttonText: AppStrings.google, platformLogo: AppAssets.iconsPNG.googlePNG,
                       buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
-                      spaceAmount: 30,),
+                      spaceAmount: AppSizes.size30,),
                     ),
                   ],
                 ),
@@ -110,7 +115,7 @@ class LoginFormWithEmail extends StatelessWidget
       
                 CustomSocialButton(buttonText: AppStrings.apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
                 isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
-                spaceAmount: 30,),
+                spaceAmount: AppSizes.size30,),
               ],
             ),
 

@@ -92,8 +92,24 @@ abstract class AppStrings
   static const pleaseEnter5DigitalCodeSendTo = "Please Enter 5 digital code send to";
   ///[App_gmail.com_]
   static const appgmailcom = "APP@gmail.com";
+  ///[Enter_Your_Code]
+  static const enterYourCode = "Enter your Code";
+  ///[dont_Receive_A_Code]
+  static const dontReceiveACode = "Don't Receive a code?";
+  ///[Request_Phone_Call]
+  static const requestPhoneCall = "Request phone call";
+  ///[Resend_In_60s]
+  static const resendIn60s = "Resend in 60s";
 
   ///App Countries List
+  
   ///[Search]
-   static const search = "Search"; 
+  static const search = "Search"; 
+
+  ///App Themes List
+  
+  ///[Default]
+  static const default_ = "default"; 
+  ///[Selected]
+   static const selected = "Selected"; 
 }

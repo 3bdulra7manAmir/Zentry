@@ -70,7 +70,12 @@ class LoginFormWithPhone extends StatelessWidget
 
                 const Spacer(),
 
-                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(textColor: AppColors.color.kForgetPassword, textDecoration: TextDecoration.underline, ),),
+                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(
+                  textColor: AppColors.color.kForgetPassword,
+                  textDecoration: TextDecoration.underline,
+                  textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                  ),
+                ),
               ],
             ),
       
