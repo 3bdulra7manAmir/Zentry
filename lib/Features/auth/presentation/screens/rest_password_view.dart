@@ -56,7 +56,7 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size24.verticalSpace,
 
-                const CustomButton(buttonText: "Rest Password", isSocialButton: false,),
+                const CustomButton(buttonText: "Rest Password"),
               ],
             ),
           ),

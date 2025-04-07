@@ -4,6 +4,11 @@ import 'color_manager_base.dart';
 class DarkColorScheme extends ColorManagerBase
 {
   @override
+  Color get kWhite => const Color(0xffFFFFFF);
+  @override
+  Color get kPrimaryText => kWhite;
+
+  @override
   Color get kTransparent => Colors.transparent;
 
   @override
@@ -14,9 +19,6 @@ class DarkColorScheme extends ColorManagerBase
 
   @override
   Color get kForgetPassword => const Color(0xff3E6FCF);
-
-  @override
-  Color get kWhite => const Color(0xffFFFFFF);
 
   @override
   Color get kSemiWhite1 => const Color(0xffF4F4F4);
@@ -36,9 +38,7 @@ class DarkColorScheme extends ColorManagerBase
   @override
   Color get kNumericButtonBG => const Color(0xffFAFAFA);
 
-  @override
-  Color get kPrimaryText => const Color(0xff5D5D5D);
-  //Color get kPrimaryText => Colors.red;
+
 
   @override
   Color get kQuinaryText => const Color(0xff717171);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/constants/app_borders.dart';
 
 import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
@@ -9,6 +10,7 @@ import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
+import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 
 
@@ -22,19 +24,19 @@ class LoginFormWithPhone extends StatelessWidget
     return Container(
       padding: AppPadding.kFormPadding,
       width: double.infinity,
-      //color: AppColors.color.kWhite,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            AppSizes.size13.verticalSpace,
+            AppSizes.size28.verticalSpace,
             
             Row(
               children:
               [
-                Text(AppStrings.phoneNumber, style: Theme.of(context).textTheme.bodyLarge?.copyWith(),), //textColor: AppColors.color.kTertiaryText,
+                Text(AppStrings.phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+                
                 const Spacer(),
 
                 Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondary,),),
@@ -62,7 +64,7 @@ class LoginFormWithPhone extends StatelessWidget
             Row(
               children:
               [
-                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: 2.w, color: AppColors.color.kTextFormFieldBorder,),),
+                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kTextFormFieldBorder,),),
 
                 Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
 
@@ -74,13 +76,13 @@ class LoginFormWithPhone extends StatelessWidget
       
             AppSizes.size16.verticalSpace,
       
-            const CustomButton(buttonText: AppStrings.login, isSocialButton: false,),
+            const CustomButton(buttonText: AppStrings.login,),
       
             AppSizes.size20.verticalSpace,
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),)
             ),
       
             AppSizes.size20.verticalSpace,
@@ -92,29 +94,30 @@ class LoginFormWithPhone extends StatelessWidget
                   children:
                   [
                     Expanded(
-                      child: CustomButton(buttonText: AppStrings.facebook, isSocialButton: true, platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText)),
+                      child: CustomSocialButton(buttonText: AppStrings.facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                      buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),                  
+                      ),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
-                      child: CustomButton(buttonText: AppStrings.google, isSocialButton: true, platformLogo: AppAssets.iconsPNG.googlePNG,
+                      child: CustomSocialButton(buttonText: AppStrings.google, platformLogo: AppAssets.iconsPNG.googlePNG,
                       buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
-                      spaceAmount: 30,),
+                      ),
                     ),
                   ],
                 ),
       
                 AppSizes.size12.verticalSpace,
       
-                CustomButton(buttonText: AppStrings.apple, isSocialButton: true, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
+                CustomSocialButton(buttonText: AppStrings.apple, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
                 isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
-                spaceAmount: 30,),
+                ),
               ],
             ),
 
-            AppSizes.size12.verticalSpace,
+            AppSizes.size20.verticalSpace,
           ],
         ),
       ),

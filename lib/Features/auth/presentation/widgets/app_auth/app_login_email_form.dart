@@ -9,6 +9,7 @@ import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
+import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 
 
@@ -73,7 +74,7 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size16.verticalSpace,
       
-            const CustomButton(buttonText: AppStrings.login, isSocialButton: false,),
+            const CustomButton(buttonText: AppStrings.login),
       
             AppSizes.size20.verticalSpace,
       
@@ -91,14 +92,14 @@ class LoginFormWithEmail extends StatelessWidget
                   children:
                   [
                     Expanded(
-                      child: CustomButton(buttonText: AppStrings.facebook, isSocialButton: true, platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                      child: CustomSocialButton(buttonText: AppStrings.facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
                       buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText)),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
-                      child: CustomButton(buttonText: AppStrings.google, isSocialButton: true, platformLogo: AppAssets.iconsPNG.googlePNG,
+                      child: CustomSocialButton(buttonText: AppStrings.google, platformLogo: AppAssets.iconsPNG.googlePNG,
                       buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                       spaceAmount: 30,),
                     ),
@@ -107,7 +108,7 @@ class LoginFormWithEmail extends StatelessWidget
       
                 AppSizes.size12.verticalSpace,
       
-                CustomButton(buttonText: AppStrings.apple, isSocialButton: true, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
+                CustomSocialButton(buttonText: AppStrings.apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
                 isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                 spaceAmount: 30,),
               ],

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/app_sizes.dart';
-
 import '../../config/themes/app_colors/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
 
-class CustomButton extends StatelessWidget
+class CustomSocialButton extends StatelessWidget
 {
-  const CustomButton({
+  const CustomSocialButton({
     super.key,
     this.buttonWidth,
     this.buttonHeight,
@@ -19,6 +17,9 @@ class CustomButton extends StatelessWidget
     this.buttonBackgroundColor,
     required this.buttonText,
     this.buttonTextStyle,
+    required this.platformLogo,
+    this.isLogoSpace,
+    this.spaceAmount,
   });
 
   final double? buttonWidth;
@@ -29,6 +30,9 @@ class CustomButton extends StatelessWidget
   final Color? buttonBackgroundColor;
   final String buttonText;
   final TextStyle? buttonTextStyle;
+  final String platformLogo;
+  final bool? isLogoSpace;
+  final double? spaceAmount;
 
   @override
   Widget build(BuildContext context)
@@ -39,15 +43,37 @@ class CustomButton extends StatelessWidget
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppSizes.size1,),
+            RoundedRectangleBorder(
+              borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
+              side: BorderSide(
+                color: buttonBorderColor ?? AppColors.color.kSocailButtonBorder,
+                width: buttonBorderWidth ?? AppBorderWidths.width1,
+              ),
             ),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
+          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+          splashFactory: NoSplash.splashFactory,
+          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+          elevation: MaterialStateProperty.all(0),
           alignment: Alignment.center,
-        ),      
+        ),
+
           
-        child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+        child: Row(
+                children:
+                [
+                  Expanded(
+                    flex: 1,
+                    child: Image.asset(platformLogo)),
+
+                  (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
+
+                  Expanded(
+                    flex: 2,
+                    child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),)),
+                ],
+              ),
         onPressed: () {},
       ),
     );

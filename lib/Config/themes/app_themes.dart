@@ -14,20 +14,22 @@ class AppTheme
       useMaterial3: true,
       brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.color.kWhite,
-
       cardColor: AppColors.color.kWhite,
 
       inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.color.kTextFormFieldFill,
+
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w,),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kSocailButtonBorder, width: 1.w),
+          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: 1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),

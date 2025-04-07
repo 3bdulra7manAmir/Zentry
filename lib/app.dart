@@ -11,7 +11,7 @@ class TestApp extends StatelessWidget
   const TestApp({super.key});
 
   // To keep track of the theme mode (light or dark)
-  final ThemeMode _themeMode = ThemeMode.dark;
+  final ThemeMode _themeMode = ThemeMode.light;
 
   @override
   Widget build(BuildContext context)

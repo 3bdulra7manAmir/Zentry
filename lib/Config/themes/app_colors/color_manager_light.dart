@@ -4,6 +4,9 @@ import 'color_manager_base.dart';
 class LightColorScheme extends ColorManagerBase
 {
   @override
+  Color get kPrimaryText => const Color(0xff5D5D5D);
+
+  @override
   Color get kTransparent => Colors.transparent;
 
   @override
@@ -36,8 +39,7 @@ class LightColorScheme extends ColorManagerBase
   @override
   Color get kNumericButtonBG => const Color(0xffFAFAFA);
 
-  @override
-  Color get kPrimaryText => const Color(0xff5D5D5D);
+
   //Color get kPrimaryText => Colors.red;
 
   @override

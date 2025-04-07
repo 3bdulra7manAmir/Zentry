@@ -105,7 +105,7 @@ class VerificationCodeView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: "Resend in 60s", isSocialButton: false, buttonBackgroundColor: AppColors.color.kPrimaryBlue,),
+                  CustomButton(buttonText: "Resend in 60s", buttonBackgroundColor: AppColors.color.kPrimaryBlue,),
                 ],
               ),
             ),

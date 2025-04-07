@@ -21,3 +21,11 @@ abstract class AppBorders
   static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
 
 }
+
+abstract class AppBorderWidths
+{
+  AppBorderWidths._();
+
+  static double width1 = (1.0).w;
+  static double width2 = (2.0).w;
+}

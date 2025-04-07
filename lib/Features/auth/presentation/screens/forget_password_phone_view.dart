@@ -74,7 +74,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  const CustomButton(buttonText: "Verify", isSocialButton: false),
+                  const CustomButton(buttonText: "Verify"),
                 ],
               ),
             ),

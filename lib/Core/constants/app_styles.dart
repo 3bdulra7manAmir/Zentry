@@ -10,7 +10,7 @@ abstract class AppStyles
   AppStyles._();
 
   
-  /// FontWeight = [AppFontWeights.boldWeight] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  /// FontWeight = [w700], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle20({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -32,7 +32,7 @@ abstract class AppStyles
   }
 
 
-  /// FontWeight = [AppFontWeights.semiBoldWeight] ,, FontColor = [Color_FFFFFF] ,, FontFamily = [Roboto]
+  /// FontWeight = [w600], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle18({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -54,7 +54,7 @@ abstract class AppStyles
   }
 
 
-  /// FontWeight = [AppFontWeights.regularWeight] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  /// FontWeight = [w400], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle17({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -74,7 +74,7 @@ abstract class AppStyles
       color: textColor ?? AppColors.color.kPrimaryText,
     );
   }
-  /// FontWeight = [AppFontWeights.regularWeight] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  /// FontWeight = [w400], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle16({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -96,7 +96,7 @@ abstract class AppStyles
   }
 
 
-  /// FontWeight = [AppFontWeights.boldWeight] ,, FontColor = [Color_FFFFFF] ,, FontFamily = [Roboto]
+  /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle14({
   FontWeight? fontWeight,
   String? fontFamily,
@@ -118,7 +118,7 @@ abstract class AppStyles
   }
 
 
-  /// FontWeight = [AppFontWeights.boldWeight] ,, FontColor = [Color_5D5D5D] ,, FontFamily = [Roboto]
+  /// FontWeight = [w700], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle13({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -140,7 +140,7 @@ abstract class AppStyles
   }
 
 
-  /// FontWeight = [AppFontWeights.mediumWeight] ,, FontColor = [Color_9E9E9E] ,, FontFamily = [Roboto]
+  /// FontWeight = [w500], FontColor = [_9E9E9E], FontFamily = [Roboto]
   static TextStyle textStyle12({
     FontWeight? fontWeight,
     String? fontFamily,
@@ -162,7 +162,7 @@ abstract class AppStyles
     );
   }
 
-  /// FontWeight = [AppFontWeights.regularWeight] ,, FontColor = [Color_9E9E9E] ,, FontFamily = [Roboto]
+  /// FontWeight = [w400], FontColor = [_9E9E9E], FontFamily = [Roboto]
   static TextStyle textStyle10({
     FontWeight? fontWeight,
     String? fontFamily,

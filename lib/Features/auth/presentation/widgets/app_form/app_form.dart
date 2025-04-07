@@ -6,11 +6,10 @@ import '../../../../../Core/constants/app_padding.dart';
 import '../../../../../Core/widgets/app_text_form_field.dart';
 import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/widgets/app_button.dart';
-
 import '../../../../../core/constants/app_styles.dart';
+
 
 class AppForm extends StatelessWidget
 {
@@ -27,13 +26,13 @@ class AppForm extends StatelessWidget
         color: Theme.of(context).cardColor,
       ),
 
-      //Full Form Column
       child: Column(
         children:
-        [
-          //Divider
+        [ 
+
+          AppSizes.size12.verticalSpace,
+
           Container(
-            margin: AppPadding.kDividerPadding,
             width: 73.w,
             height: 3.h,
             decoration: BoxDecoration(
@@ -42,14 +41,12 @@ class AppForm extends StatelessWidget
             ),
           ),
 
-          AppSizes.size12.verticalSpace,
+          AppSizes.size24.verticalSpace,
 
-          // Welcome TEXT
           Text(AppStrings.welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryText),), 
 
           AppSizes.size28.verticalSpace,
 
-          // First Text Form Field
           GestureDetector(
             child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppStrings.language, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
           ),
@@ -68,11 +65,11 @@ class AppForm extends StatelessWidget
 
           AppSizes.size27.verticalSpace,
 
-          const CustomButton(buttonText: AppStrings.login, isSocialButton: false,),
+          const CustomButton(buttonText: AppStrings.login,),
 
           AppSizes.size16.verticalSpace,
 
-         CustomButton(buttonText: AppStrings.signUp, isSocialButton: false,
+         CustomButton(buttonText: AppStrings.signUp,
          buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.color.kPrimaryBlue),
          buttonBackgroundColor: AppColors.color.kWhite,
          buttonBorderColor: AppColors.color.kPrimaryBlue,
