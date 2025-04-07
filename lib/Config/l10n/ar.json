@@ -1,0 +1,51 @@
+{
+    "skip": "تخطي",
+    "welcomeBack": "مرحبًا بعودتك",
+  
+    "language": "اللغة",
+    "country": "الدولة",
+    "mode": "الوضع",
+    "login": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+  
+    "phoneNumber": "رقم الهاتف",
+    "or": "أو",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "countryCode": "+20  |  رقم الهاتف",
+    "enterEmaill": "أدخل البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "remember": "تذكرني",
+    "forgetPassword": "نسيت كلمة المرور؟",
+    "orLoginWith": "أو سجل الدخول عبر",
+    "facebook": "فيسبوك",
+    "google": "جوجل",
+    "apple": "آبل",
+  
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "enterPhoneNumberAssociated": "أدخل رقم الهاتف المرتبط",
+    "withYourAccount": "بحسابك",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "dontHavePhone": "لا تملك رقم هاتف؟",
+    "dontHaveEmail": "لا تملك بريدًا إلكترونيًا؟",
+    "tryAnotherWay": "جرّب طريقة أخرى",
+    "verify": "تحقق",
+  
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+  
+    "verifyLater": "تحقق لاحقًا",
+    "verificationCode": "رمز التحقق",
+    "pleaseEnter5DigitalCodeSendTo": "يرجى إدخال الرمز المكون من 5 أرقام المرسل إلى",
+    "appgmailcom": "APP@gmail.com",
+    "enterYourCode": "أدخل الرمز الخاص بك",
+    "dontReceiveACode": "لم يصلك رمز؟",
+    "requestPhoneCall": "طلب مكالمة هاتفية",
+    "resendIn60s": "إعادة الإرسال خلال 60 ثانية",
+  
+    "search": "بحث",
+  
+    "default": "الافتراضي",
+    "selected": "المحدد"
+  }  

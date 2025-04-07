@@ -1,32 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../config/themes/app_colors/app_colors.dart';
-import '../../../../../config/themes/font_system/app_fonts.dart';
-import '../../../../../config/themes/app_sizes.dart';
 
+import '../../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../../config/themes/app_sizes.dart';
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../config/themes/font_system/app_fonts.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
+import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/data/app_theme_list.dart';
 
-import '../../../../../config/themes/font_system/app_font_weights.dart';
-import '../../../../../core/constants/app_styles.dart';
-
-
-class ThemesView extends StatelessWidget
+class ThemesView extends StatefulWidget
 {
   const ThemesView({super.key});
 
   @override
+  State<ThemesView> createState() => _ThemesViewState();
+}
+
+class _ThemesViewState extends State<ThemesView>
+{
+  String? selectedValue = 'Option 1'; // Default selected option
+
+  @override
   Widget build(BuildContext context)
   {
-    String? selectedValue = 'Option 1'; // Default selected option
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+    return Material(
+      color: Colors.black54,
+      child: Stack(
           children:
           [
+            //POP UP Background
+          GestureDetector(
+            onTap: (){Navigator.pop(context);},
+            child: Container(
+              color: Colors.transparent,
+              width: double.infinity,
+              height: double.infinity,
+            ),
+          ),
+
+
             AppSizes.size8.verticalSpace,
 
             Container(
@@ -52,18 +67,16 @@ class ThemesView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text(AppStrings.default_, style: AppStyles.textStyle17(
-                        fontWeight: AppFontWeights.regularWeight,
-                        textColor: AppColors.color.kSenaryText,
-                        fontFamily: AppFontFamilies.cairo
-                        ),
-                      ),
-                      Text(AppStrings.selected, style: AppStyles.textStyle17(
-                        fontWeight: AppFontWeights.regularWeight,
-                        textColor: AppColors.color.kQuinaryText,
-                         fontFamily: AppFontFamilies.cairo
-                        ),
-                      ),
+                      Text(AppStrings.default_,
+                          style: AppStyles.textStyle17(
+                              fontWeight: AppFontWeights.regularWeight,
+                              textColor: AppColors.color.kSenaryText,
+                              fontFamily: AppFonts.font.fontName)),
+                      Text(AppStrings.selected,
+                          style: AppStyles.textStyle17(
+                              fontWeight: AppFontWeights.regularWeight,
+                              textColor: AppColors.color.kQuinaryText,
+                              fontFamily: AppFonts.font.fontName)),
                     ],
                   ),
 
@@ -71,38 +84,32 @@ class ThemesView extends StatelessWidget
 
                   ListView.separated(
                     shrinkWrap: true,
-                    itemBuilder: (context, index) =>
-                    Row(
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: themesList.length,
+                    itemBuilder: (context, index) => Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:
                       [
-                        
                         Text(themesList[index]),
                         Radio<String>(
-                          value: themesList[index],  // Dynamic value
+                          value: themesList[index],
                           groupValue: selectedValue,
-                          onChanged: (value)
-                          {
-                            // setState(()
-                            // {
-                            //   selectedValue = value;
-                            // });
+                          onChanged: (value) {
+                            setState(() {
+                              selectedValue = value;
+                            });
                           },
                         ),
                       ],
                     ),
-
-                    separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-
-                    itemCount: themesList.length,
+                    separatorBuilder: (context, index) =>
+                        AppSizes.size17.verticalSpace,
                   ),
                 ],
               ),
             ),
-            
           ],
         ),
-      ),
-    );
+      );
   }
 }

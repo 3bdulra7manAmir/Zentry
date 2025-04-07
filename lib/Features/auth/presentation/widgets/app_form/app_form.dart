@@ -59,9 +59,7 @@ class AppForm extends StatelessWidget
 
           AppSizes.size16.verticalSpace,
 
-          GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppStrings.mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
-          ),
+          CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppStrings.mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
 
           AppSizes.size27.verticalSpace,
 

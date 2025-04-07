@@ -42,8 +42,8 @@ class DarkColorScheme extends ColorManagerBase
   @override //REVERSED
   Color get kNumericButtonBG => const Color(0xff1B1B1B);
 
-  @override
-  Color get kQuinaryText => const Color(0xff717171);
+  @override //REVERSED
+  Color get kQuinaryText => const Color(0xffE5E5E5);
 
   @override
   Color get kSecondary => const Color(0xff9E9E9E);
@@ -60,8 +60,8 @@ class DarkColorScheme extends ColorManagerBase
   @override //REVERSED
   Color get kQuaternaryText => const Color(0xffD7D7D7);
 
-  @override
-  Color get kSenaryText => const Color(0xff1F1F1F);
+  @override //REVERSED
+  Color get kSenaryText => const Color(0xffD7D7D7);
 
   @override
   Color get kAuthTab => const Color(0xffFF7D00);

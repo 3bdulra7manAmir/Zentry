@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/screens/auth_view.dart';
 import '../../features/auth/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/presentation/screens/forget_password_phone_view.dart';
-import '../../features/auth/presentation/screens/form_view.dart';
+import '../../features/auth/presentation/screens/app_form_view.dart';
 import '../../features/auth/presentation/screens/rest_password_view.dart';
 import '../../features/auth/presentation/screens/verification_code_view.dart';
 import '../../features/auth/presentation/widgets/app_form/app_counties_listview.dart';
@@ -15,7 +15,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kThemesView,
+    initialLocation: AppRoutes.kAppFormView,
     routes:
     [
 
