@@ -11,6 +11,27 @@ abstract class AppStyles
   AppStyles._();
 
   
+  /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
+  static TextStyle textStyle22({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  })
+  {
+    return TextStyle(
+      fontSize: AppFontSizes.xXXLarge.sp,
+      fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+      fontFamily: fontFamily ?? 'Roboto',
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.color.kWhite,
+    );
+  }
+
   /// FontWeight = [w700], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle20({
     FontWeight? fontWeight,
@@ -86,7 +107,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: AppSizes.size16.sp,
+      fontSize: AppFontSizes.large.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -108,7 +129,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: AppSizes.size14.sp,
+      fontSize: AppFontSizes.medium.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -130,7 +151,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: AppSizes.size13.sp,
+      fontSize: AppFontSizes.semiSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -152,7 +173,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: AppSizes.size12.sp,
+      fontSize: AppFontSizes.small.sp,
       fontWeight: fontWeight ?? AppFontWeights.mediumWeight,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,
@@ -174,7 +195,7 @@ abstract class AppStyles
   })
   {
     return TextStyle(
-      fontSize: AppSizes.size10.sp,
+      fontSize: AppFontSizes.xSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
       fontFamily: fontFamily ?? 'Roboto',
       decoration: textDecoration ?? TextDecoration.none,

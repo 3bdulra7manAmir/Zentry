@@ -38,8 +38,6 @@ class DarkColorScheme extends ColorManagerBase
   @override
   Color get kNumericButtonBG => const Color(0xffFAFAFA);
 
-
-
   @override
   Color get kQuinaryText => const Color(0xff717171);
 

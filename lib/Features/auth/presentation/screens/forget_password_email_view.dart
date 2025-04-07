@@ -40,7 +40,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
             
             Text(AppStrings.withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondary, fontWeight: AppFontWeights.regularWeight),),
         
-            AppSizes.size46.verticalSpace,
+            AppSizes.size48.verticalSpace,
         
             Container(
               alignment: Alignment.center,
@@ -49,13 +49,13 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppStrings.emailAddress, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText,)),
+                  Text(AppStrings.emailAddress, style: AppStyles.textStyle12(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kTertiaryText,)),
         
-                  AppSizes.size9.verticalSpace,
+                  AppSizes.size8.verticalSpace,
                   
                   const CustomTextFormField(fieldText: AppStrings.emailAddress,),
         
-                  AppSizes.size28.verticalSpace,
+                  AppSizes.size27.verticalSpace,
         
                   Row(
                     children:
@@ -74,17 +74,17 @@ class ForgetPasswordWithEmailView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  const CustomButton(buttonText: "Verify"),
+                  CustomButton(buttonText: AppStrings.verify, buttonTextStyle: AppStyles.textStyle22()),
                 ],
               ),
             ),
             
-            AppSizes.size60.verticalSpace,
+            AppSizes.size60.verticalSpace, //104
             //Spacer(),
         
             const NumericKeyboard(),
             
-            AppSizes.size14.verticalSpace,
+            AppSizes.size20.verticalSpace,
           ],
         ),
       ),

@@ -2,13 +2,15 @@ abstract class AppStrings
 {
   AppStrings._();
 
-  //AppHeader
+  ///AppHeader
+
   ///[Skip]
   static const skip = "Skip";
   ///[Welcome_Back]
   static const welcomeBack = "Welcome Back";
 
-  //AppForm
+  ///AppForm
+  
   ///[Language]
   static const language = "Langauage";
   ///[Country]
@@ -20,7 +22,8 @@ abstract class AppStrings
   ///[SignUp]
   static const signUp = "Sign up";
   
-  //LoginForm
+  ///LoginForm
+
   ///[Phone_Number]
   static const phoneNumber = "Phone Number";
   ///[Or]
@@ -52,6 +55,7 @@ abstract class AppStrings
 
 
   ///App ForgetPassword
+  
   ///[Reset_Password]
   static const resetPassword = "Reset Password";
   ///[Forgot_Password]
@@ -68,14 +72,18 @@ abstract class AppStrings
   static const dontHaveEmail = "Don't Have Email ?";
   ///[Try_Another_Way]
   static const tryAnotherWay = "Try another way";
+  ///[Verify]
+  static const verify = "Verify";
 
   ///App NewPassword
+  
   ///[New_Password]
   static const newPassword = "New Password";
   ///[Confirm_Password]
   static const confirmPassword = "Confirm Password";
 
   ///App Verification Code
+  
   ///[New_Password]
   static const verifyLater  = "Verify Later";
   ///[Verification_Code]

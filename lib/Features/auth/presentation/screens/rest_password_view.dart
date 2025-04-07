@@ -22,7 +22,6 @@ class RestPasswordView extends StatelessWidget
   {
     return Scaffold(
       appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
-      //backgroundColor: AppColors.color.kWhite,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:
@@ -44,7 +43,7 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size9.verticalSpace,
 
-                CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomTextFormField(fieldText: AppStrings.password, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 
@@ -52,11 +51,11 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size9.verticalSpace,
 
-                CustomTextFormField(fieldText: AppStrings.confirmPassword, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomTextFormField(fieldText: AppStrings.confirmPassword, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 
-                const CustomButton(buttonText: "Rest Password"),
+                CustomButton(buttonText: AppStrings.resetPassword, buttonTextStyle: AppStyles.textStyle22(),),
               ],
             ),
           ),
