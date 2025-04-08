@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../config/themes/app_colors/app_colors.dart';
+import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
 
@@ -39,23 +41,23 @@ class CustomSocialButton extends StatelessWidget
       width: buttonWidth ?? double.infinity,
       height: buttonHeight ?? 48.h,
       child: ElevatedButton(
-        // style: ButtonStyle(
-        //   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        //     RoundedRectangleBorder(
-        //       borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-        //       side: BorderSide(
-        //         color: buttonBorderColor ?? AppColors.color.kSocailButtonBorder,
-        //         width: buttonBorderWidth ?? AppBorderWidths.width1,
-        //       ),
-        //     ),
-        //   ),
-        //   backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
-        //   overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        //   splashFactory: NoSplash.splashFactory,
-        //   shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-        //   elevation: MaterialStateProperty.all(0),
-        //   alignment: Alignment.center,
-        // ),
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
+              side: BorderSide(
+                color: buttonBorderColor ?? AppColors.color.kSocailButtonBorder,
+                width: buttonBorderWidth ?? AppBorderWidths.width1,
+              ),
+            ),
+          ),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
+          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+          splashFactory: NoSplash.splashFactory,
+          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+          elevation: MaterialStateProperty.all(0),
+          alignment: Alignment.center,
+        ),
 
         child: Row(
                 children:

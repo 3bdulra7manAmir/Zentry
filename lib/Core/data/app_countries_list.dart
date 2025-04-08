@@ -13,5 +13,6 @@ List<List<String>> getCountriesList(BuildContext context)
     [AppAssets.iconsPNG.kuwaitFlagPNG, AppLocalizations.of(context).kuwait],
     [AppAssets.iconsPNG.moroccoFlagPNG, AppLocalizations.of(context).morocco],
     [AppAssets.iconsPNG.syriaFlagPNG, AppLocalizations.of(context).syrianArab],
+    [AppAssets.iconsPNG.egFlagPNG, AppLocalizations.of(context).egypt],
   ];
 }

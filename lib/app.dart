@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/core/services/localization/localization_controller.dart';
 import 'config/l10n/generated/app_localizations.dart';
 import 'config/router/app_router.dart';
-import 'config/themes/app_colors/app_colors.dart';
+// import 'config/themes/app_colors/app_colors.dart';
+//import 'config/themes/app_colors/theme_controller.dart';
 import 'config/themes/app_colors/theme_controller.dart';
 import 'config/themes/app_themes.dart';
 
@@ -17,7 +18,6 @@ class TestApp extends ConsumerWidget
   {
     final themeMode = ref.watch(themeControllerProvider);
     final locale = ref.watch(localizationProvider);
-    AppColors.i.themeMode = themeMode == ThemeMode.dark ? 'dark' : 'light';
 
     return ScreenUtilInit(
       designSize: const Size(390, 844),

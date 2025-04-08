@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../../config/themes/app_colors/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../config/themes/font_system/app_fonts.dart';
@@ -10,6 +12,7 @@ import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/data/app_theme_list.dart';
+import '../../../../../config/themes/app_colors/theme_string_converter.dart';
 
 void showThemesDialog(BuildContext context)
 {
@@ -22,7 +25,6 @@ void showThemesDialog(BuildContext context)
         builder: (context, setState)
         {
           final List<String> themesList = getThemesList(context);
-          String? selectedValue = 'Option 1'; // Default selected option
           return Dialog(
             backgroundColor: Theme.of(context).cardColor,
             insetPadding: AppPadding.kFormPadding,
@@ -76,25 +78,51 @@ void showThemesDialog(BuildContext context)
 
                         AppSizes.size16.verticalSpace,
 
-                        ListView.separated(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: themesList.length,
-                          itemBuilder: (context, index) => Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(themesList[index]),
-                              Radio<String>(
-                                value: themesList[index],
-                                groupValue: selectedValue,
-                                onChanged: (value)
-                                {
-                                  setState(() {selectedValue = value;});
-                                },
-                              ),
-                            ],
-                          ),
-                          separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
+                        Consumer(
+                          builder: (context, ref, _)
+                          {
+                            final themeController = ref.read(themeControllerProvider.notifier);
+                            final selectedValue = ref.watch(selectedThemeLabelProvider);
+
+                            return ListView.separated(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: themesList.length,
+                              separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
+                              itemBuilder: (context, index)
+                              {
+                                final themeLabel = themesList[index];
+                                final themeMode = stringToThemeMode(themeLabel);
+
+                                return InkWell(
+                                  onTap: ()
+                                  {
+                                    themeController.setTheme(themeMode);
+                                    ref.read(selectedThemeLabelProvider.notifier).state = themeLabel;
+                                  },
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children:
+                                    [
+                                      Text(themeLabel),
+                                      Radio<String>(
+                                        value: themeLabel,
+                                        groupValue: selectedValue,
+                                        onChanged: (value)
+                                        {
+                                          if (value != null)
+                                          {
+                                            themeController.setTheme(stringToThemeMode(value));
+                                            ref.read(selectedThemeLabelProvider.notifier).state = value;
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
+                          },
                         ),
                       ],
                     ),
