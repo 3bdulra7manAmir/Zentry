@@ -50,7 +50,7 @@ class _AppIconsPNG
   final String uaeFlagPNG = "assets/icons/Countries/United_Arab_Emirates.png";
   final String kuwaitFlagPNG = "assets/icons/Countries/Kuwait.png";
   final String moroccoFlagPNG = "assets/icons/Countries/Morocco.png";
-  final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arabic_Republic.png";
+  final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arab_Republic.png";
 }
 class _AppIconsSVG
 {

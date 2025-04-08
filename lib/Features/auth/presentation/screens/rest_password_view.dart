@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../config/themes/app_sizes.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_padding.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/app_button.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
+import '../../../../core/widgets/app_form_container.dart';
 
 
 class RestPasswordView extends StatelessWidget
@@ -20,7 +20,7 @@ class RestPasswordView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: const CustomAppBar(barTitle: AppStrings.resetPassword,),
+      appBar: CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:
@@ -38,23 +38,23 @@ class RestPasswordView extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text(AppStrings.newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 
-                CustomTextFormField(fieldText: AppStrings.password, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomContainer(fieldText: AppLocalizations.of(context).password, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 
-                Text(AppStrings.confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
 
                 AppSizes.size9.verticalSpace,
 
-                CustomTextFormField(fieldText: AppStrings.confirmPassword, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomContainer(fieldText: AppLocalizations.of(context).confirmPassword, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 
-                CustomButton(buttonText: AppStrings.resetPassword, buttonTextStyle: AppStyles.textStyle22(),),
+                CustomButton(buttonText: AppLocalizations.of(context).resetPassword, buttonTextStyle: AppStyles.textStyle22(),),
               ],
             ),
           ),

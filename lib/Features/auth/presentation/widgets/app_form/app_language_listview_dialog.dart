@@ -7,17 +7,17 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/data/app_countries_list.dart';
+import '../../../../../core/data/app_languages_list.dart';
 import '../../../../../core/widgets/app_form_container.dart';
 
-void showCountiesDialog(BuildContext context)
+void showLanguageDialog(BuildContext context)
 {
   showDialog(
     context: context,
-    barrierDismissible: true, 
+    barrierDismissible: true,
     builder: (BuildContext context)
     {
-      final List<List<String>> countriesList = getCountriesList(context);
+      final List<List<String>> languagesList = getLanguagesList(context);
       return Dialog(
         backgroundColor: Theme.of(context).cardColor,
         insetPadding: AppPadding.kFormPadding,
@@ -30,7 +30,6 @@ void showCountiesDialog(BuildContext context)
             [
               AppSizes.size8.verticalSpace,
           
-              // Divider
               Container(
                 margin: AppPadding.kFormPadding,
                 alignment: Alignment.center,
@@ -49,23 +48,23 @@ void showCountiesDialog(BuildContext context)
                 fieldhintStyle: AppStyles.textStyle10(),
                 fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchFlagPNG),
               ),
-          
+              
               AppSizes.size16.verticalSpace,
-          
+              
               ListView.separated(
                 shrinkWrap: true,
                 itemBuilder: (context, index) => Row(
                   children:
                   [
-                    Image.asset(countriesList[index][0]),
-          
+                    Image.asset(languagesList[index][0]),
+              
                     AppSizes.size12.horizontalSpace,
-                    
-                    Text(countriesList[index][1]),
+              
+                    Text(languagesList[index][1]),
                   ],
                 ),
                 separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-                itemCount: countriesList.length,
+                itemCount: languagesList.length,
               ),
 
               AppSizes.size13.verticalSpace,

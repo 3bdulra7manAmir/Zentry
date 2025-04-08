@@ -5,8 +5,6 @@ import '../../features/auth/presentation/screens/forget_password_phone_view.dart
 import '../../features/auth/presentation/screens/app_form_view.dart';
 import '../../features/auth/presentation/screens/rest_password_view.dart';
 import '../../features/auth/presentation/screens/verification_code_view.dart';
-import '../../features/auth/presentation/widgets/app_form/app_counties_listview.dart';
-import '../../features/auth/presentation/widgets/app_form/app_themes_listview.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
 import 'app_routes.dart';
 
@@ -75,19 +73,6 @@ abstract class AppRouter
       ),
 
       // App Countries View
-      GoRoute(
-        path: AppRoutes.kCountriesView,
-        name: AppRoutes.kCountriesView,
-        builder: (context, state) => const CountiesView(),
-      ),
-
-      // App Themes View
-      GoRoute(
-        path: AppRoutes.kThemesView,
-        name: AppRoutes.kThemesView,
-        builder: (context, state) => const ThemesView(),
-      ),
-
     ] 
   );
 }

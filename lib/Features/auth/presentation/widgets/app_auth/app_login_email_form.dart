@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_borders.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
-import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
-import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../core/widgets/app_form_container.dart';
 
 
 class LoginFormWithEmail extends StatelessWidget
@@ -34,28 +34,28 @@ class LoginFormWithEmail extends StatelessWidget
             Row(
               children:
               [
-                Text(AppStrings.email, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+                Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
                 const Spacer(),
 
-                Text(AppStrings.or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondary,),),
+                Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondary,),),
                 
                 AppSizes.size4.horizontalSpace,
 
-                Text(AppStrings.phone, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textDecoration: TextDecoration.underline),),
+                Text(AppLocalizations.of(context).phone, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textDecoration: TextDecoration.underline),),
               ],
             ),
       
             AppSizes.size8.verticalSpace,
       
-            const CustomTextFormField(fieldText: AppStrings.enterEmaill),
+            CustomContainer(fieldText: AppLocalizations.of(context).enterEmaill),
       
             AppSizes.size24.verticalSpace,
       
-            Text(AppStrings.password, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+            Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
       
             AppSizes.size8.verticalSpace,
       
-            CustomTextFormField(fieldText: AppStrings.password, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+            CustomContainer(fieldText: AppLocalizations.of(context).password, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
       
             AppSizes.size16.verticalSpace,
       
@@ -64,11 +64,11 @@ class LoginFormWithEmail extends StatelessWidget
               [
                 Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kTextFormFieldBorder,),),
 
-                Text(AppStrings.remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
+                Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
 
                 const Spacer(),
 
-                Text(AppStrings.forgetPassword, style: AppStyles.textStyle12(
+                Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
                   textColor: AppColors.color.kForgetPassword,
                   textDecoration: TextDecoration.underline,
                   textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
@@ -79,13 +79,13 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size16.verticalSpace,
       
-            const CustomButton(buttonText: AppStrings.login),
+            CustomButton(buttonText: AppLocalizations.of(context).login),
       
             AppSizes.size20.verticalSpace,
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppStrings.orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
             ),
       
             AppSizes.size20.verticalSpace,
@@ -97,14 +97,14 @@ class LoginFormWithEmail extends StatelessWidget
                   children:
                   [
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppStrings.facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
                       buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText)),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppStrings.google, platformLogo: AppAssets.iconsPNG.googlePNG,
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).google, platformLogo: AppAssets.iconsPNG.googlePNG,
                       buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                       spaceAmount: AppSizes.size30,),
                     ),
@@ -113,7 +113,7 @@ class LoginFormWithEmail extends StatelessWidget
       
                 AppSizes.size12.verticalSpace,
       
-                CustomSocialButton(buttonText: AppStrings.apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
+                CustomSocialButton(buttonText: AppLocalizations.of(context).apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
                 isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                 spaceAmount: AppSizes.size30,),
               ],

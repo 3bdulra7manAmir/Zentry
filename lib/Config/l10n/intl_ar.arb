@@ -1,4 +1,5 @@
 {
+    "@@locale": "ar",
     "skip": "تخطي",
     "welcomeBack": "مرحبًا بعودتك",
   
@@ -16,36 +17,50 @@
     "enterEmaill": "أدخل البريد الإلكتروني",
     "password": "كلمة المرور",
     "remember": "تذكرني",
-    "forgetPassword": "نسيت كلمة المرور؟",
-    "orLoginWith": "أو سجل الدخول عبر",
+    "forgetPassword": "نسيت كلمة المرور",
+    "orLoginWith": "أو سجل الدخول باستخدام",
     "facebook": "فيسبوك",
     "google": "جوجل",
-    "apple": "آبل",
+    "apple": "أبل",
   
     "resetPassword": "إعادة تعيين كلمة المرور",
     "forgotPassword": "هل نسيت كلمة المرور؟",
     "enterPhoneNumberAssociated": "أدخل رقم الهاتف المرتبط",
     "withYourAccount": "بحسابك",
     "emailAddress": "عنوان البريد الإلكتروني",
-    "dontHavePhone": "لا تملك رقم هاتف؟",
-    "dontHaveEmail": "لا تملك بريدًا إلكترونيًا؟",
+    "dontHavePhone": "ليس لديك رقم هاتف؟",
+    "dontHaveEmail": "ليس لديك بريد إلكتروني؟",
     "tryAnotherWay": "جرّب طريقة أخرى",
     "verify": "تحقق",
   
-    "newPassword": "كلمة المرور الجديدة",
+    "newPassword": "كلمة مرور جديدة",
     "confirmPassword": "تأكيد كلمة المرور",
   
     "verifyLater": "تحقق لاحقًا",
     "verificationCode": "رمز التحقق",
-    "pleaseEnter5DigitalCodeSendTo": "يرجى إدخال الرمز المكون من 5 أرقام المرسل إلى",
+    "pleaseEnter5DigitalCodeSendTo": "يرجى إدخال رمز مكون من 5 أرقام تم إرساله إلى",
     "appgmailcom": "APP@gmail.com",
     "enterYourCode": "أدخل الرمز الخاص بك",
-    "dontReceiveACode": "لم يصلك رمز؟",
+    "dontReceiveACode": "لم تستلم الرمز؟",
     "requestPhoneCall": "طلب مكالمة هاتفية",
     "resendIn60s": "إعادة الإرسال خلال 60 ثانية",
   
     "search": "بحث",
   
-    "default": "الافتراضي",
-    "selected": "المحدد"
-  }  
+    "default_": "افتراضي",
+    "selected": "محدد",
+
+    "light": "فاتح",
+    "dark": "داكن",
+
+    "morocco": "المغرب",
+    "kuwait": "الكويت",
+    "egypt": "مصر",
+    "syrianArab": "سوريا",
+    "unitedArabEmirates": "الامارات",
+    "saudiArabia": "السعودية",
+    "arabic": "العربية"
+
+
+  }
+  

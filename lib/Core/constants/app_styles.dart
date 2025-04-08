@@ -24,7 +24,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.xXXLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -45,7 +45,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.xXLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -67,7 +67,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.xLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -89,7 +89,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppSizes.size17.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -109,7 +109,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.large.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -131,7 +131,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.medium.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -153,7 +153,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.semiSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -175,7 +175,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.small.sp,
       fontWeight: fontWeight ?? AppFontWeights.mediumWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
@@ -197,7 +197,7 @@ abstract class AppStyles
     return TextStyle(
       fontSize: AppFontSizes.xSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
-      fontFamily: fontFamily ?? 'Roboto',
+      fontFamily: fontFamily,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,

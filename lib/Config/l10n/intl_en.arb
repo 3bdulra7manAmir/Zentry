@@ -1,0 +1,63 @@
+{
+  "@@locale": "en",
+  "skip": "Skip",
+  "welcomeBack": "Welcome Back",
+
+  "language": "Langauage",
+  "country": "Country",
+  "mode": "Mode",
+  "login": "Login",
+  "signUp": "Sign up",
+
+  "phoneNumber": "Phone Number",
+  "or": "Or",
+  "email": "Email",
+  "phone": "Phone",
+  "countryCode": "+20  |  Phone number",
+  "enterEmaill": "Enter Email",
+  "password": "Password",
+  "remember": "Remember",
+  "forgetPassword": "Forget Password",
+  "orLoginWith": "or login with",
+  "facebook": "Facebook",
+  "google": "Google",
+  "apple": "Apple",
+
+  "resetPassword": "Reset Password",
+  "forgotPassword": "Forgot password ?",
+  "enterPhoneNumberAssociated": "Enter the phone number associated",
+  "withYourAccount": "with your account",
+  "emailAddress": "Email Address",
+  "dontHavePhone": "Don't Have phone ?",
+  "dontHaveEmail": "Don't Have Email ?",
+  "tryAnotherWay": "Try another way",
+  "verify": "Verify",
+
+  "newPassword": "New Password",
+  "confirmPassword": "Confirm Password",
+
+  "verifyLater": "Verify Later",
+  "verificationCode": "Verification Code",
+  "pleaseEnter5DigitalCodeSendTo": "Please Enter 5 digital code send to",
+  "appgmailcom": "APP@gmail.com",
+  "enterYourCode": "Enter your Code",
+  "dontReceiveACode": "Don't Receive a code?",
+  "requestPhoneCall": "Request phone call",
+  "resendIn60s": "Resend in 60s",
+
+  "search": "Search",
+
+  "default_": "default",
+  "selected": "Selected",
+
+  "light": "Light",
+  "dark": "Dark",
+
+  "morocco": "Morocco",
+  "kuwait": "Kuwait",
+  "egypt": "Egypt",
+  "syrianArab": "Syrian Arab",
+  "unitedArabEmirates": "United Arab Emirates",
+  "saudiArabia": "Saudi Arabia (SA)",
+  "arabic": "Arabic"
+}

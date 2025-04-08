@@ -104,7 +104,26 @@ abstract class AppStrings
   ///App Countries List
   
   ///[Search]
-  static const search = "Search"; 
+  static const search = "Search";
+  
+  ///[Arabic]
+  static const arabic = "Arabic";
+  ///[Egypt]
+  static const egypt = "Egypt";
+  ///[Saudi_Arabia_]
+  static const saudiArabia = "Saudi Arabia (SA)";
+  ///[United_Arab_Emirates]
+  static const unitedArabEmirates = "United Arab Emirates";
+  ///[Kuwait]
+  static const kuwait = "Kuwait";
+  ///[Morocco]
+  static const morocco = "Morocco";
+  ///[Syrian_Arab]
+  static const syrianArab = "Syrian Arab";
+  ///[Dark]
+  static const dark = "Dark";
+  ///[Light]
+  static const light = "Light";
 
   ///App Themes List
   

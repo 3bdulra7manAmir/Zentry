@@ -3,12 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/constants/app_borders.dart';
 import '../../../../../Core/constants/app_images.dart';
 import '../../../../../Core/constants/app_padding.dart';
-import '../../../../../Core/widgets/app_text_form_field.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/app_colors/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/app_form_container.dart';
+import 'app_counties_listview.dart';
+import 'app_language_listview_dialog.dart';
+import 'app_themes_listview.dart';
 
 
 class AppForm extends StatelessWidget
@@ -43,31 +46,35 @@ class AppForm extends StatelessWidget
 
           AppSizes.size24.verticalSpace,
 
-          Text(AppStrings.welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryText),), 
+          Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryText),), 
 
           AppSizes.size28.verticalSpace,
 
           GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppStrings.language, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
+            onTap: () => showLanguageDialog(context),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppLocalizations.of(context).language, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
           ),
 
           AppSizes.size16.verticalSpace,
 
           GestureDetector(
-            child: CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countryPNG), fieldText: AppStrings.country, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
+            onTap: () => showCountiesDialog(context),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countryPNG), fieldText: AppLocalizations.of(context).country, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
           ),
 
           AppSizes.size16.verticalSpace,
 
-          CustomTextFormField(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppStrings.mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
+          GestureDetector(
+            onTap: () => showThemesDialog(context),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppLocalizations.of(context).mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)),
 
           AppSizes.size27.verticalSpace,
 
-          const CustomButton(buttonText: AppStrings.login,),
+          CustomButton(buttonText: AppLocalizations.of(context).login,),
 
           AppSizes.size16.verticalSpace,
 
-         CustomButton(buttonText: AppStrings.signUp,
+         CustomButton(buttonText: AppLocalizations.of(context).signUp,
          buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.color.kPrimaryBlue),
          buttonBackgroundColor: AppColors.color.kWhite,
          buttonBorderColor: AppColors.color.kPrimaryBlue,
