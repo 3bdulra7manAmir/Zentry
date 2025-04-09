@@ -1,9 +1,11 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/core/constants/app_borders.dart';
 
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../../config/themes/app_colors/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
@@ -14,13 +16,15 @@ import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_form_container.dart';
 
 
-class LoginFormWithPhone extends StatelessWidget
+class LoginFormWithPhone extends ConsumerWidget
 {
   const LoginFormWithPhone({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final themeMode = ref.watch(themeControllerProvider);
+    final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
     return Container(
       padding: AppPadding.kFormPadding,
       width: double.infinity,
@@ -99,25 +103,35 @@ class LoginFormWithPhone extends StatelessWidget
                   children:
                   [
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),                  
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook,
+                      platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                      buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),                  
                       ),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).google, platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
+                      platformLogo: AppAssets.iconsPNG.googlePNG,
+                      buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                       ),
                     ),
                   ],
                 ),
       
                 AppSizes.size12.verticalSpace,
-      
-                CustomSocialButton(buttonText: AppLocalizations.of(context).apple, platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
-                isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+
+                
+                
+                CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
+                platformLogo: platformLogo,
+                buttonWidth: 174.w,
+                isLogoSpace: false,
+                buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
+                buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
                 ),
               ],
             ),

@@ -70,5 +70,8 @@ abstract class ColorManagerBase {
   /// 1B1B1B
   Color get kDarkScaffoldBGColor;
 
+  /// 313131
+  Color get kSocailButtonBorderColor;
+
 
 }

@@ -72,5 +72,8 @@ class DarkColorScheme extends ColorManagerBase
   @override
   Color get kDarkScaffoldBGColor => const Color(0xff1B1B1B);
 
+  @override
+  Color get kSocailButtonBorderColor => const Color(0xff313131);
+
 
 }

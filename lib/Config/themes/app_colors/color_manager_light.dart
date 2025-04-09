@@ -69,7 +69,10 @@ class LightColorScheme extends ColorManagerBase
   @override
   Color get kTextFormFieldFillDark => const Color(0xff272626);
 
-  @override
-  Color get kDarkScaffoldBGColor => const Color(0xff1B1B1B);
+  @override // REVERSED
+  Color get kDarkScaffoldBGColor => const Color(0xffFFFFFF);
+
+  @override //REVERSED
+  Color get kSocailButtonBorderColor => const Color(0xffE5E5E5);
 
 }

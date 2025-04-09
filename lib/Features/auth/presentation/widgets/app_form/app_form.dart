@@ -9,9 +9,9 @@ import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_form_container.dart';
-import 'app_counties_listview_dialog.dart';
-import 'app_language_listview_dialog.dart';
-import 'app_themes_listview_dialog.dart';
+import 'countries_list_dialog.dart';
+import 'language_list_dialog.dart';
+import 'themes_list_dialog.dart';
 
 
 class AppForm extends StatelessWidget

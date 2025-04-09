@@ -8,7 +8,7 @@ final localizationProvider = StateNotifierProvider<LocaleController, Locale>((re
 
 class LocaleController extends StateNotifier<Locale>
 {
-  LocaleController() : super(const Locale('ar'));
+  LocaleController() : super(const Locale('en'));
 
   void toggleLocale()
   {

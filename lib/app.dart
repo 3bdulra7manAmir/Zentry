@@ -7,7 +7,7 @@ import 'config/l10n/generated/app_localizations.dart';
 import 'config/router/app_router.dart';
 // import 'config/themes/app_colors/app_colors.dart';
 //import 'config/themes/app_colors/theme_controller.dart';
-import 'config/themes/app_colors/theme_controller.dart';
+import 'config/themes/app_colors/controller/theme_controller.dart';
 import 'config/themes/app_themes.dart';
 
 class TestApp extends ConsumerWidget

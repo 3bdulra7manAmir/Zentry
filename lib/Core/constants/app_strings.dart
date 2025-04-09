@@ -108,6 +108,9 @@ abstract class AppStrings
   
   ///[Arabic]
   static const arabic = "Arabic";
+  ///[English]
+  static const english = "English";
+
   ///[Egypt]
   static const egypt = "Egypt";
   ///[Saudi_Arabia_]

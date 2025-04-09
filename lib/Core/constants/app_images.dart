@@ -35,6 +35,7 @@ class _AppIconsPNG
   final String faceBookPNG = "assets/icons/Login/FaceBook.png";
   final String googlePNG = "assets/icons/Login/Google.png";
   final String applePNG = "assets/icons/Login/Apple.png";
+  final String appleDarkPNG = "assets/icons/Login/Apple_Dark.png";
 
   ///App AppBar
   final String leftBackArrowBlackPNG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
@@ -51,6 +52,7 @@ class _AppIconsPNG
   final String kuwaitFlagPNG = "assets/icons/Countries/Kuwait.png";
   final String moroccoFlagPNG = "assets/icons/Countries/Morocco.png";
   final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arab_Republic.png";
+  final String unitedStatesFlagPNG = "assets/icons/Countries/United_States.png";
 }
 class _AppIconsSVG
 {
