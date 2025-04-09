@@ -4,7 +4,7 @@ import '../../../../../Core/constants/app_borders.dart';
 import '../../../../../Core/constants/app_images.dart';
 import '../../../../../Core/constants/app_padding.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
-import '../../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../../config/themes/app_colors/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';

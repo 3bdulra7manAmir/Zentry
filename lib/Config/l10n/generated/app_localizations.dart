@@ -406,6 +406,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'English'**
   String get english;
+
+  /// No description provided for @num0.
+  ///
+  /// In en, this message translates to:
+  /// **'0'**
+  String get num0;
+
+  /// No description provided for @num1.
+  ///
+  /// In en, this message translates to:
+  /// **'1'**
+  String get num1;
+
+  /// No description provided for @num2.
+  ///
+  /// In en, this message translates to:
+  /// **'2'**
+  String get num2;
+
+  /// No description provided for @num3.
+  ///
+  /// In en, this message translates to:
+  /// **'3'**
+  String get num3;
+
+  /// No description provided for @num4.
+  ///
+  /// In en, this message translates to:
+  /// **'4'**
+  String get num4;
+
+  /// No description provided for @num5.
+  ///
+  /// In en, this message translates to:
+  /// **'5'**
+  String get num5;
+
+  /// No description provided for @num6.
+  ///
+  /// In en, this message translates to:
+  /// **'6'**
+  String get num6;
+
+  /// No description provided for @num7.
+  ///
+  /// In en, this message translates to:
+  /// **'7'**
+  String get num7;
+
+  /// No description provided for @num8.
+  ///
+  /// In en, this message translates to:
+  /// **'8'**
+  String get num8;
+
+  /// No description provided for @num9.
+  ///
+  /// In en, this message translates to:
+  /// **'9'**
+  String get num9;
+
+  /// No description provided for @astric.
+  ///
+  /// In en, this message translates to:
+  /// **'*'**
+  String get astric;
+
+  /// No description provided for @backSpace.
+  ///
+  /// In en, this message translates to:
+  /// **'⌫'**
+  String get backSpace;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

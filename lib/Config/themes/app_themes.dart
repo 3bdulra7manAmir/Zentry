@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/constants/app_borders.dart';
-import 'app_colors/app_colors.dart';
+import 'app_colors/colors_manager/app_colors.dart';
 import 'app_sizes.dart';
 
 class AppTheme

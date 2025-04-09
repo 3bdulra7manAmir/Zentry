@@ -1,12 +1,13 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../config/themes/app_colors/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/data/app_keyboard_numbers.dart';
 
 
-class NumericKeyboard extends StatelessWidget
+class NumericKeyboard extends ConsumerWidget
 {
   const NumericKeyboard({super.key});
 
@@ -21,10 +22,12 @@ class NumericKeyboard extends StatelessWidget
   //     }
   //   });
   // }
+  
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final List<String> keys = getNumbersList(context);
     return GridView.builder(
       padding: AppPadding.kFormPadding,
       itemCount: 12,
@@ -39,7 +42,7 @@ class NumericKeyboard extends StatelessWidget
     
       itemBuilder: (context, index)
       {
-        List<String> keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "⌫"];
+        
         return InkWell(
           //onTap: () => onKeyTap(keys[index]),
           child: Container(

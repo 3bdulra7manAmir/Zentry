@@ -60,7 +60,20 @@
     "unitedArabEmirates": "الامارات",
     "saudiArabia": "السعودية",
     "arabic": "العربية",
-    "english": "الانجليزية"
+    "english": "الانجليزية",
+
+    "num0": "٠",
+    "num1": "١",
+    "num2": "٢",
+    "num3": "٣",
+    "num4": "٤",
+    "num5": "٥",
+    "num6": "٦",
+    "num7": "٧",
+    "num8": "٨",
+    "num9": "٩",
+    "astric": "*",
+    "backSpace": "⌫"
 
 
   }

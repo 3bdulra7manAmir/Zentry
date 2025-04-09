@@ -13,7 +13,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kAppFormView,
+    initialLocation: AppRoutes.kVerificationCodeView,
     routes:
     [
 

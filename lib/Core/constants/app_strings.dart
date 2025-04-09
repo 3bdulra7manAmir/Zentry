@@ -101,6 +101,34 @@ abstract class AppStrings
   ///[Resend_In_60s]
   static const resendIn60s = "Resend in 60s";
 
+  ///App OTP Keyboard
+  
+  ///[_0]
+  static const num0 = "0";
+  ///[_1]
+  static const num1 = "1";
+  ///[_2]
+  static const num2 = "2";
+  ///[_3]
+  static const num3 = "3";
+  ///[_4]
+  static const num4 = "4";
+  ///[_5]
+  static const num5 = "5";
+  ///[_6]
+  static const num6 = "6";
+  ///[_7]
+  static const num7 = "7";
+  ///[_8]
+  static const num8 = "8";
+  ///[_9]
+  static const num9 = "9";
+  ///[*]
+  static const astric = "*";
+  ///[⌫]
+  static const backSpace = "⌫";
+
+
   ///App Countries List
   
   ///[Search]

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
-import '../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../config/themes/app_colors/colors_manager/app_colors.dart';
 import '../widgets/app_auth/auth_tabbar.dart';
 import '../widgets/app_form/app_form_header.dart';
 

@@ -163,4 +163,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get english => 'English';
+
+  @override
+  String get num0 => '0';
+
+  @override
+  String get num1 => '1';
+
+  @override
+  String get num2 => '2';
+
+  @override
+  String get num3 => '3';
+
+  @override
+  String get num4 => '4';
+
+  @override
+  String get num5 => '5';
+
+  @override
+  String get num6 => '6';
+
+  @override
+  String get num7 => '7';
+
+  @override
+  String get num8 => '8';
+
+  @override
+  String get num9 => '9';
+
+  @override
+  String get astric => '*';
+
+  @override
+  String get backSpace => '⌫';
 }

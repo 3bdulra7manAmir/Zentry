@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../config/themes/app_colors/app_colors.dart';
+import '../../../../../config/themes/app_colors/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_colors/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
-import '../../../../../config/themes/font_system/app_fonts.dart';
+import '../../../../../config/themes/font_system/font_manager/app_fonts.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';

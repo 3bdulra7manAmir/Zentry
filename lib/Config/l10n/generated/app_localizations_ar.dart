@@ -163,4 +163,40 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get english => 'الانجليزية';
+
+  @override
+  String get num0 => '٠';
+
+  @override
+  String get num1 => '١';
+
+  @override
+  String get num2 => '٢';
+
+  @override
+  String get num3 => '٣';
+
+  @override
+  String get num4 => '٤';
+
+  @override
+  String get num5 => '٥';
+
+  @override
+  String get num6 => '٦';
+
+  @override
+  String get num7 => '٧';
+
+  @override
+  String get num8 => '٨';
+
+  @override
+  String get num9 => '٩';
+
+  @override
+  String get astric => '*';
+
+  @override
+  String get backSpace => '⌫';
 }
