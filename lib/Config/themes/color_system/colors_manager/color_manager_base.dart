@@ -4,74 +4,77 @@ abstract class ColorManagerBase
 {
   Color get kTransparent;
 
-  /// 003082
+  /// [Primary__003082]
   Color get kPrimaryBlue;
 
   /// 233973
   Color get kVerificationUnderLine;
 
-  /// 3E6FCF
-  Color get kForgetPassword;
-
-  /// 3E6FCF
+  /// [Quinary__003082]
+  Color get kQuinarySemiBlueText;
   Color get kForgetPasswordUnderLine;
 
-  /// FFFFFF
-  Color get kWhite;
+  /// [Secondary__FFFFFF]
+  Color get kSecondaryWhite;
 
-  /// F4F4F4
-  Color get kSemiWhite1;
+  /// [Tertiary__F4F4F4]
+  Color get kTertiaryWhiteText;
 
-  /// EEEEEE
-  Color get kTextFormFieldBorder;
+  /// [Form_Buttons_Borders_Fill__EEEEEE]
+  Color get kFormButtonsBorders;
 
-  /// F8F8F8
-  Color get kTextFormFieldFill;
+  /// [Form_Buttons_Fill__F8F8F8]
+  Color get kFormButtonsFill;
 
-  /// E5E5E5
-  Color get kSocailButtonBorder;
+  /// [Border__E5E5E5] 
+  Color get kSocialBorder;
 
-  /// FBFBFB
+  /// FBFBFB //Yours
   Color get kAppBarBG;
 
   /// FAFAFA
   Color get kNumericButtonBG;
 
-  /// 5D5D5D
-  Color get kPrimaryText;
+  /// [Primary_Text__5D5D5D]
+  Color get kPrimaryGreyText;
 
-  /// 717171
-  Color get kQuinaryText;
+  /// [Nonary_Semi_Grey_Text__717171] //Yours
+  Color get kNonarySemiGreyText;
 
-  /// 9E9E9E
-  Color get kSecondary;
+  /// [Secondary__9E9E9E] 
+  Color get kSecondarySemiGreyText;
 
-  /// B4B4B4
-  Color get kRemember;
+  /// [Tertiary__B4B4B4]
+  Color get kTertiarySemiGrey;
 
-  /// 232633
-  Color get kTertiaryText;
+  /// [Quaternary_SemiBlack__232633]
+  Color get kQuaternarySemiBlackText;
 
-  /// 000000
-  Color get korLoginWithColor;
+  /// [Senary_TotalBlack__000000]
+  Color get kSenaryTotalBlackText;
 
-  /// 2E2E2E
-  Color get kQuaternaryText;
+  /// [Septenary_SemiGrey__2E2E2E]
+  Color get kSeptenarySemiGreyText;
 
-  /// 1F1F1F
-  Color get kSenaryText;
+  /// [Octonary_SemiBlack_Text__1F1F1F] //Yours
+  Color get kOctonarySemiBlackText;
 
-  /// FF7D00
-  Color get kAuthTab;
+  /// [TabBar__FF7D00] //Yours
+  Color get kTabBar;
 
-  /// 272626
-  Color get kTextFormFieldFillDark;
+  /// [Dark_Form_Buttons_Borders_Fill__272626] 
+  Color get kFormButtonsBordersFillDark;
 
-  /// 1B1B1B
-  Color get kDarkScaffoldBGColor;
+  /// [Dark_Background__1B1B1B]
+  Color get kPrimaryDark;
 
-  /// 313131
-  Color get kSocailButtonBorderColor;
+  /// [Dark_kQuaternarySemiBlackText__D7D7D7]
+  Color get kQuaternarySemiBlackTextDark;
 
+  /// [Dark_Secondary__676767]
+  Color get kSecondarySemiGreyTextDark;
+
+  /// [Dark_Border__313131]
+  Color get kSocialBorderDark;
 
 }

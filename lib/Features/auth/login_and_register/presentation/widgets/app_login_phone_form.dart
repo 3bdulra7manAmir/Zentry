@@ -39,11 +39,11 @@ class LoginFormWithPhone extends ConsumerWidget
             Row(
               children:
               [
-                Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+                Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
                 
                 const Spacer(),
 
-                Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondary,),),
+                Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondarySemiGreyText,),),
                 
                 AppSizes.size4.horizontalSpace,
 
@@ -57,7 +57,7 @@ class LoginFormWithPhone extends ConsumerWidget
       
             AppSizes.size24.verticalSpace,
       
-            Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+            Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
       
             AppSizes.size8.verticalSpace,
       
@@ -68,14 +68,14 @@ class LoginFormWithPhone extends ConsumerWidget
             Row(
               children:
               [
-                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kTextFormFieldBorder,),),
+                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),),
 
-                Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
+                Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey),),
 
                 const Spacer(),
 
                 Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kForgetPassword,
+                  textColor: AppColors.color.kQuinarySemiBlueText,
                   textDecoration: TextDecoration.underline,
                   textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
                   ),
@@ -91,7 +91,7 @@ class LoginFormWithPhone extends ConsumerWidget
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),)
+              child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSenaryTotalBlackText),)
             ),
       
             AppSizes.size20.verticalSpace,
@@ -105,8 +105,8 @@ class LoginFormWithPhone extends ConsumerWidget
                     Expanded(
                       child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook,
                       platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
-                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),                  
+                      buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),                  
                       ),
                     ),
                 
@@ -115,8 +115,8 @@ class LoginFormWithPhone extends ConsumerWidget
                     Expanded(
                       child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
                       platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
-                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+                      buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
                       ),
                     ),
                   ],
@@ -130,8 +130,8 @@ class LoginFormWithPhone extends ConsumerWidget
                 platformLogo: platformLogo,
                 buttonWidth: 174.w,
                 isLogoSpace: false,
-                buttonBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
-                buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+                buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
                 ),
               ],
             ),

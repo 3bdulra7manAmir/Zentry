@@ -32,12 +32,12 @@ class AuthTabs extends StatelessWidget
 
             child: TabBar(
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: AppColors.color.kAuthTab,
+              labelColor: AppColors.color.kTabBar,
               padding: AppPadding.kTabBarPadding,
-              labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab),
+              labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kTabBar),
               indicatorWeight: AppSizes.size4,
-              unselectedLabelColor: AppColors.color.kSecondary,
-              indicatorColor: AppColors.color.kAuthTab,
+              unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
+              indicatorColor: AppColors.color.kTabBar,
               tabs: [Tab(text: AppLocalizations.of(context).login,), Tab(text: AppLocalizations.of(context).signUp),],
             ),
           ),

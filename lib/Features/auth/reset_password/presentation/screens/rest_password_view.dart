@@ -38,19 +38,19 @@ class RestPasswordView extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
 
                 AppSizes.size9.verticalSpace,
 
-                CustomContainer(fieldText: AppLocalizations.of(context).password, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomContainer(fieldText: AppLocalizations.of(context).password, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kTertiarySemiGrey), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 
-                Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
 
                 AppSizes.size9.verticalSpace,
 
-                CustomContainer(fieldText: AppLocalizations.of(context).confirmPassword, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kRemember), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
+                CustomContainer(fieldText: AppLocalizations.of(context).confirmPassword, fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kTertiarySemiGrey), fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),),
 
                 AppSizes.size24.verticalSpace,
 

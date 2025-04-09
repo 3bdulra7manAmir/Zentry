@@ -48,7 +48,7 @@ class NumericKeyboard extends ConsumerWidget
           child: Container(
             decoration: BoxDecoration(color: AppColors.color.kNumericButtonBG, borderRadius: AppBorders.buttonBorder10,),
             alignment: Alignment.center,
-            child: Text(keys[index], style: AppStyles.textStyle18(textColor: AppColors.color.kQuaternaryText)),
+            child: Text(keys[index], style: AppStyles.textStyle18(textColor: AppColors.color.kSeptenarySemiGreyText)),
           ),
         );
       },

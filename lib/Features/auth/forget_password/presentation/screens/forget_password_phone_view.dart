@@ -28,15 +28,15 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
           [
             AppSizes.size46.verticalSpace,
         
-            Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.color.korLoginWithColor,),),
+            Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.color.kSenaryTotalBlackText,),),
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondary,),),
+            Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondarySemiGreyText,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondary, fontWeight: AppFontWeights.regularWeight),),
+            Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondarySemiGreyText, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size48.verticalSpace,
         
@@ -47,7 +47,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText,)),
+                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText,)),
         
                   AppSizes.size9.verticalSpace,
                   
@@ -58,13 +58,13 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppLocalizations.of(context).dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                      Text(AppLocalizations.of(context).dontHavePhone, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
         
                       AppSizes.size14.horizontalSpace,
         
                       Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                          textColor: AppColors.color.kForgetPassword, textDecoration: TextDecoration.underline,
-                          textDecorationColor: AppColors.color.kForgetPassword,
+                          textColor: AppColors.color.kQuinarySemiBlueText, textDecoration: TextDecoration.underline,
+                          textDecorationColor: AppColors.color.kQuinarySemiBlueText,
                         ),
                       ),
                     ],

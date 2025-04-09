@@ -46,7 +46,7 @@ class CustomSocialButton extends StatelessWidget
             RoundedRectangleBorder(
               borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
               side: BorderSide(
-                color: buttonBorderColor ?? AppColors.color.kSocailButtonBorderColor,
+                color: buttonBorderColor ?? AppColors.color.kSocialBorderDark,
                 width: buttonBorderWidth ?? AppBorderWidths.width1,
               ),
             ),

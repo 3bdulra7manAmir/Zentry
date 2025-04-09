@@ -31,9 +31,9 @@ class VerificationCodeView extends StatelessWidget
             [
               Text(AppLocalizations.of(context).verifyLater, style: AppStyles.textStyle12(
                 fontWeight: AppFontWeights.semiBoldWeight,
-                textColor: AppColors.color.kRemember,
+                textColor: AppColors.color.kTertiarySemiGrey,
                 textDecoration: TextDecoration.underline,
-                textDecorationColor: AppColors.color.kRemember,
+                textDecorationColor: AppColors.color.kTertiarySemiGrey,
                 ),
               ),
               AppSizes.size4.horizontalSpace,
@@ -50,15 +50,15 @@ class VerificationCodeView extends StatelessWidget
           [
             AppSizes.size46.verticalSpace,
         
-            Text(AppLocalizations.of(context).verificationCode, style: AppStyles.textStyle20(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.korLoginWithColor,),),
+            Text(AppLocalizations.of(context).verificationCode, style: AppStyles.textStyle20(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSenaryTotalBlackText,),),
             
             AppSizes.size13.verticalSpace,
             
-            Text(AppLocalizations.of(context).pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondary,),),
+            Text(AppLocalizations.of(context).pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondarySemiGreyText,),),
             
             AppSizes.size7.verticalSpace,
             
-            Text(AppLocalizations.of(context).appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondary, fontWeight: AppFontWeights.regularWeight),),
+            Text(AppLocalizations.of(context).appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondarySemiGreyText, fontWeight: AppFontWeights.regularWeight),),
         
             AppSizes.size51.verticalSpace,
         
@@ -69,16 +69,16 @@ class VerificationCodeView extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppLocalizations.of(context).enterYourCode, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                  Text(AppLocalizations.of(context).enterYourCode, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
         
                   AppSizes.size10.verticalSpace,
         
                   OtpTextField(
                     numberOfFields: 5,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    fillColor: AppColors.color.kTextFormFieldFill,
+                    fillColor: AppColors.color.kFormButtonsFill,
                     filled: true,
-                    borderColor: AppColors.color.kTextFormFieldBorder,
+                    borderColor: AppColors.color.kFormButtonsBorders,
                     borderWidth: AppSizes.size1.w,
                     borderRadius: AppBorders.buttonBorder10,
                     fieldWidth: AppSizes.size51.w,
@@ -92,7 +92,7 @@ class VerificationCodeView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppLocalizations.of(context).dontReceiveACode, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternaryText),),
+                      Text(AppLocalizations.of(context).dontReceiveACode, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
         
                       AppSizes.size6.horizontalSpace,
         
@@ -110,7 +110,7 @@ class VerificationCodeView extends StatelessWidget
         
                   CustomButton(buttonText: AppLocalizations.of(context).resendIn60s, buttonTextStyle: AppStyles.textStyle16(
                     fontWeight: AppFontWeights.semiBoldWeight,
-                    textColor: AppColors.color.kWhite,
+                    textColor: AppColors.color.kSecondaryWhite,
                     ),
                   ),
                 ],

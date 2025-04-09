@@ -23,7 +23,7 @@ class LoginFormWithEmail extends StatelessWidget
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
-      color: AppColors.color.kWhite,
+      color: AppColors.color.kSecondaryWhite,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,10 +34,10 @@ class LoginFormWithEmail extends StatelessWidget
             Row(
               children:
               [
-                Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+                Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
                 const Spacer(),
 
-                Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondary,),),
+                Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondarySemiGreyText,),),
                 
                 AppSizes.size4.horizontalSpace,
 
@@ -51,7 +51,7 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size24.verticalSpace,
       
-            Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText,),),
+            Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
       
             AppSizes.size8.verticalSpace,
       
@@ -62,14 +62,14 @@ class LoginFormWithEmail extends StatelessWidget
             Row(
               children:
               [
-                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kTextFormFieldBorder,),),
+                Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),),
 
-                Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kRemember),),
+                Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey),),
 
                 const Spacer(),
 
                 Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kForgetPassword,
+                  textColor: AppColors.color.kQuinarySemiBlueText,
                   textDecoration: TextDecoration.underline,
                   textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
                   ),
@@ -85,7 +85,7 @@ class LoginFormWithEmail extends StatelessWidget
       
             Align(
               alignment: Alignment.center,
-              child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.korLoginWithColor),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+              child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSenaryTotalBlackText),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
             ),
       
             AppSizes.size20.verticalSpace,
@@ -98,14 +98,14 @@ class LoginFormWithEmail extends StatelessWidget
                   [
                     Expanded(
                       child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText)),
+                      buttonBackgroundColor: AppColors.color.kSecondaryWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText)),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
                       child: CustomSocialButton(buttonText: AppLocalizations.of(context).google, platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.color.kWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+                      buttonBackgroundColor: AppColors.color.kSecondaryWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
                       spaceAmount: AppSizes.size30,),
                     ),
                   ],
@@ -114,7 +114,7 @@ class LoginFormWithEmail extends StatelessWidget
                 AppSizes.size12.verticalSpace,
       
                 CustomSocialButton(buttonText: AppLocalizations.of(context).apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
-                isLogoSpace: false, buttonBackgroundColor: AppColors.color.kWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kTertiaryText),
+                isLogoSpace: false, buttonBackgroundColor: AppColors.color.kSecondaryWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
                 spaceAmount: AppSizes.size30,),
               ],
             ),

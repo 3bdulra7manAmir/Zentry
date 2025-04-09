@@ -13,22 +13,22 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.color.kWhite,
-      cardColor: AppColors.color.kWhite,
+      scaffoldBackgroundColor: AppColors.color.kSecondaryWhite,
+      cardColor: AppColors.color.kSecondaryWhite,
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.color.kTextFormFieldFill,
+        fillColor: AppColors.color.kFormButtonsFill,
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1,),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldBorder, width: AppBorderWidths.width1),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -40,27 +40,27 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.color.kDarkScaffoldBGColor,
+      scaffoldBackgroundColor: AppColors.color.kPrimaryDark,
       
-      cardColor: AppColors.color.kDarkScaffoldBGColor,
+      cardColor: AppColors.color.kPrimaryDark,
       //primaryColorLight: AppColors.color.kDarkScaffoldBGColor,
       
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.color.kTextFormFieldFillDark,
+        fillColor: AppColors.color.kFormButtonsBordersFillDark,
         //hintStyle: AppStyles.textStyle12(),
 
         focusedBorder: OutlineInputBorder(
           borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w,),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w,),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kTextFormFieldFillDark, width: AppSizes.size1.w),
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
           borderRadius: AppBorders.buttonBorder10,
         ),
       ),
@@ -92,8 +92,8 @@ class AppTheme
         //unselectedLabelStyle: ,
         //indicator: ,
         //overlayColor: WidgetStateProperty.resolveWith<Color>(),
-        labelColor: AppColors.color.kAuthTab,
-        unselectedLabelColor: AppColors.color.kSecondary,
+        labelColor: AppColors.color.kTabBar,
+        unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
         //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab,),
       ),
 

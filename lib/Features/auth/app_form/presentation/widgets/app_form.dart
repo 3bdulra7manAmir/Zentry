@@ -39,14 +39,14 @@ class AppForm extends StatelessWidget
             width: 73.w,
             height: 3.h,
             decoration: BoxDecoration(
-              color: AppColors.color.kSecondary,
+              color: AppColors.color.kSecondarySemiGreyText,
               borderRadius: AppBorders.dividerBorder,
             ),
           ),
 
           AppSizes.size24.verticalSpace,
 
-          Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryText),), 
+          Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(textColor: AppColors.color.kPrimaryGreyText),), 
 
           AppSizes.size28.verticalSpace,
 
@@ -76,7 +76,7 @@ class AppForm extends StatelessWidget
 
          CustomButton(buttonText: AppLocalizations.of(context).signUp,
          buttonTextStyle: AppStyles.textStyle14(textColor: AppColors.color.kPrimaryBlue),
-         buttonBackgroundColor: AppColors.color.kWhite,
+         buttonBackgroundColor: AppColors.color.kSecondaryWhite,
          buttonBorderColor: AppColors.color.kPrimaryBlue,
          ),
         ],

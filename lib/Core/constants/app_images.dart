@@ -42,7 +42,7 @@ class _AppIconsPNG
   final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";
 
   ///App Countries
-  final String searchFlagPNG = "assets/icons/Countries/Search.png";
+  final String searchPNG = "assets/icons/Countries/Search.png";
   final String egFlagPNG = "assets/icons/Countries/Egypt.png";
   final String saFlagPNG = "assets/icons/Countries/Saudi_Arabia.png";
   final String uaeFlagPNG = "assets/icons/Countries/United_Arab_Emirates.png";
@@ -50,6 +50,14 @@ class _AppIconsPNG
   final String moroccoFlagPNG = "assets/icons/Countries/Morocco.png";
   final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arab_Republic.png";
   final String unitedStatesFlagPNG = "assets/icons/Countries/United_States.png";
+
+  final String egFlagSelectedPNG = "assets/icons/Countries/Egypt_Selected.png";
+  final String saFlagSelectedPNG = "assets/icons/Countries/Saudi_Arabia_Selected.png";
+  final String uaeFlagSelectedPNG = "assets/icons/Countries/United_Arab_Emirates_Selected.png";
+  final String kuwaitFlagSelectedPNG = "assets/icons/Countries/Kuwait_Selected.png";
+  final String moroccoFlagSelectedPNG = "assets/icons/Countries/Morocco_Selected.png";
+  final String syriaFlagSelectedPNG = "assets/icons/Countries/Syrian_Arab_Republic_Selected.png";
+  final String unitedStatesFlagSelectedPNG = "assets/icons/Countries/United_States_Selected.png";
 }
 
 

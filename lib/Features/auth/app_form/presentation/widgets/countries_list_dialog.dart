@@ -37,7 +37,7 @@ void showCountiesDialog(BuildContext context)
                 width: 44.w,
                 height: 4.h,
                 decoration: BoxDecoration(
-                  color: AppColors.color.kSecondary,
+                  color: AppColors.color.kSecondarySemiGreyText,
                   borderRadius: AppBorders.dividerBorder,
                 ),
               ),
@@ -47,7 +47,7 @@ void showCountiesDialog(BuildContext context)
               CustomContainer(
                 fieldText: AppLocalizations.of(context).search,
                 fieldhintStyle: AppStyles.textStyle10(),
-                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchFlagPNG),
+                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
               ),
           
               AppSizes.size16.verticalSpace,

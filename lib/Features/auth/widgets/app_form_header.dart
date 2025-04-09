@@ -42,7 +42,7 @@ class FormHeader extends StatelessWidget
             child: Row(
               children:
               [
-                Text(upperRightText ?? "", style: AppStyles.textStyle13(textColor: AppColors.color.kSemiWhite1, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kSemiWhite1),),
+                Text(upperRightText ?? "", style: AppStyles.textStyle13(textColor: AppColors.color.kTertiaryWhiteText, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kTertiaryWhiteText),),
                 Image.asset(AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),

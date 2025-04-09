@@ -43,7 +43,7 @@ void showThemesDialog(BuildContext context)
                     width: 44.w,
                     height: 4.h,
                     decoration: BoxDecoration(
-                      color: AppColors.color.kSecondary,
+                      color: AppColors.color.kSecondarySemiGreyText,
                       borderRadius: AppBorders.dividerBorder,
                     ),
                   ),
@@ -62,14 +62,14 @@ void showThemesDialog(BuildContext context)
                           [
                             Text(AppStrings.default_, style: AppStyles.textStyle17(
                               fontWeight: AppFontWeights.regularWeight,
-                              textColor: AppColors.color.kSenaryText,
+                              textColor: AppColors.color.kOctonarySemiBlackText,
                               fontFamily: AppFonts.font.fontName,
                               ),
                             ),
 
                             Text(AppStrings.selected, style: AppStyles.textStyle17(
                               fontWeight: AppFontWeights.regularWeight,
-                              textColor: AppColors.color.kQuinaryText,
+                              textColor: AppColors.color.kNonarySemiGreyText,
                               fontFamily: AppFonts.font.fontName,
                               ),
                             ),
