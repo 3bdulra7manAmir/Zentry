@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/config/themes/font_system/app_font_sizes.dart';
-import '../../config/themes/app_colors/colors_manager/app_colors.dart';
+import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../config/themes/app_sizes.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 

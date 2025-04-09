@@ -1,10 +1,10 @@
 import 'package:go_router/go_router.dart';
-import '../../features/auth/presentation/screens/auth_view.dart';
-import '../../features/auth/presentation/screens/forget_password_email_view.dart';
-import '../../features/auth/presentation/screens/forget_password_phone_view.dart';
-import '../../features/auth/presentation/screens/app_form_view.dart';
-import '../../features/auth/presentation/screens/rest_password_view.dart';
-import '../../features/auth/presentation/screens/verification_code_view.dart';
+import '../../features/auth/login_and_register/presentation/screens/auth_view.dart';
+import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
+import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
+import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
+import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
+import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
 import 'app_routes.dart';
 
@@ -13,7 +13,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kVerificationCodeView,
+    initialLocation: AppRoutes.kAppFormView,
     routes:
     [
 

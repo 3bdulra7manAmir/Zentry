@@ -11,7 +11,7 @@ abstract class AppPadding
   static EdgeInsets kCloudLogoPadding = const EdgeInsets.all(10);
 
   /// [Symmetric_16_H]
-  static EdgeInsets kFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
+  static EdgeInsets kAppFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
   
   /// [Symmetric_16_H_V]
   static EdgeInsets kTabBarPadding = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w);

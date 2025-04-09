@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../config/themes/app_colors/colors_manager/app_colors.dart';
+import 'package:test_app/config/router/app_router.dart';
+import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 import '../constants/app_images.dart';
 import '../constants/app_styles.dart';
@@ -21,7 +21,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   {
     return AppBar(
       backgroundColor: AppColors.color.kAppBarBG,
-      leading: barLeading ?? Image.asset(AppAssets.iconsPNG.leftBackArrowBlackPNG),
+      leading: GestureDetector(
+          onTap: () => AppRouter.router.pop(),
+          child: barLeading ?? Image.asset(AppAssets.iconsPNG.leftBackArrowBlackPNG),
+        ),
       leadingWidth: 65.w,
       
 

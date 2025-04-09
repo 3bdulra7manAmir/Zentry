@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_borders.dart';
 import 'package:test_app/Core/constants/app_padding.dart';
-import 'package:test_app/config/themes/app_colors/colors_manager/app_colors.dart';
+import 'package:test_app/config/themes/color_system/colors_manager/app_colors.dart';
 import 'package:test_app/config/themes/app_sizes.dart';
-
 import '../constants/app_styles.dart';
 
-class CustomContainer extends StatelessWidget {
+class CustomContainer extends StatelessWidget
+{
   const CustomContainer({
     super.key,
     this.fieldPrefixIcon,
@@ -27,7 +27,7 @@ class CustomContainer extends StatelessWidget {
     return Container(
       width: 358.w,
       height: 48.h,
-      padding: AppPadding.kFormPadding,
+      padding: AppPadding.kAppFormPadding,
       decoration: BoxDecoration(
         borderRadius: AppBorders.buttonBorder10,
         color: AppColors.color.kTextFormFieldFill,
