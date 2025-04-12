@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_borders.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/color_system/controller/theme_controller.dart';
@@ -82,10 +84,13 @@ class LoginFormWithEmail extends ConsumerWidget
 
                 const Spacer(),
 
-                Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kQuinarySemiBlueText,
-                  textDecoration: TextDecoration.underline,
-                  textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                InkWell(
+                  onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView),
+                  child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
+                    textColor: AppColors.color.kQuinarySemiBlueText,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                    ),
                   ),
                 ),
               ],

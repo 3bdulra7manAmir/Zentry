@@ -58,7 +58,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.kForgetPasswordPhoneView,
         name: AppRoutes.kForgetPasswordPhoneView,
-        builder: (context, state) => const ForgetPasswordWithPhoneView(),
+        builder: (context, state) => ForgetPasswordWithPhoneView(),
       ),
 
       // App Forget Password With Email View

@@ -7,15 +7,25 @@ import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
-import '../../../../../core/widgets/app_form_container.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../widgets/numeric_keyboard.dart';
 
 
 class ForgetPasswordWithPhoneView extends StatelessWidget
 {
-  const ForgetPasswordWithPhoneView({super.key});
+  ForgetPasswordWithPhoneView({super.key});
+
+  final TextEditingController phoneNumbrerController = TextEditingController();
+
+  // @override
+  // void dispose()
+  // {
+  //   phoneNumbrerController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context)
@@ -51,7 +61,16 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
         
                   AppSizes.size9.verticalSpace,
                   
-                  CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG), fieldText: AppLocalizations.of(context).countryCode,),
+                  CustomTextFormField(
+                    fieldValidator: (value)
+                    {
+                      return phoneNumberValid(value);
+                    },
+                    fieldController: phoneNumbrerController,
+                    fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
+                    fieldText: AppLocalizations.of(context).countryCode,
+
+                    ),
         
                   AppSizes.size28.verticalSpace,
         

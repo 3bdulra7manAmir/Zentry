@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/config/router/app_routes.dart';
 import 'package:test_app/core/extensions/string.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
@@ -12,6 +13,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
@@ -24,6 +26,14 @@ class LoginFormWithPhone extends ConsumerWidget
 
   final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  // @override
+  // void dispose()
+  // {
+  //   phoneNumbrerController.dispose();
+  //   passwordController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -74,22 +84,7 @@ class LoginFormWithPhone extends ConsumerWidget
               CustomTextFormField(
                 fieldValidator: (value)
                 {
-                  try
-                  {
-                    final cleanedValue = value?.convertNumbers;
-                    if (cleanedValue == null || cleanedValue.isEmpty)
-                    {
-                      return 'Phone number is required';
-                    }
-                    if (!cleanedValue.isPhoneNumber)
-                    {
-                      return 'Invalid phone number';
-                    }
-                    return null;
-                  } on Exception catch (e)
-                  {
-                    return e.toString();
-                  }
+                  return phoneNumberValid(value);
                 },
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
@@ -139,10 +134,13 @@ class LoginFormWithPhone extends ConsumerWidget
           
                   const Spacer(),
           
-                  Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                    textColor: AppColors.color.kQuinarySemiBlueText,
-                    textDecoration: TextDecoration.underline,
-                    textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                  InkWell(
+                    onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
+                    child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kQuinarySemiBlueText,
+                      textDecoration: TextDecoration.underline,
+                      textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                      ),
                     ),
                   ),
                 ],
