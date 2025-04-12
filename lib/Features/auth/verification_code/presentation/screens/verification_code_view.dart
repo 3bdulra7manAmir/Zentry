@@ -108,7 +108,10 @@ class VerificationCodeView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: AppLocalizations.of(context).resendIn60s, buttonTextStyle: AppStyles.textStyle16(
+                  CustomButton(
+                    buttonOnPressed: () {},
+                    buttonText: AppLocalizations.of(context).resendIn60s,
+                    buttonTextStyle: AppStyles.textStyle16(
                     fontWeight: AppFontWeights.semiBoldWeight,
                     textColor: AppColors.color.kSecondaryWhite,
                     ),

@@ -72,7 +72,10 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
         
                   AppSizes.size24.verticalSpace,
         
-                  CustomButton(buttonText: AppLocalizations.of(context).verify, buttonTextStyle: AppStyles.textStyle22(),),
+                  CustomButton(
+                    buttonText: AppLocalizations.of(context).verify,
+                    buttonTextStyle: AppStyles.textStyle22(), buttonOnPressed: () {},
+                  ),
                 ],
               ),
             ),

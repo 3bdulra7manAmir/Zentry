@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/core/services/localization/controller/localization_controller.dart';
@@ -21,12 +20,11 @@ class TestApp extends ConsumerWidget
       builder: (context, child)
       {
         return MaterialApp.router(
-          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.router,
           locale: locale,
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          routerConfig: AppRouter.router,
-          debugShowCheckedModeBanner: false,
           themeMode: themeMode,
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(), 

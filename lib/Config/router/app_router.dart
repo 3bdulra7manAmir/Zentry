@@ -1,8 +1,10 @@
 import 'package:go_router/go_router.dart';
-import '../../features/auth/login_and_register/presentation/screens/auth_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
+import '../../features/auth/login_and_register/presentation/screens/auth_view.dart';
+import '../../features/auth/login_and_register/presentation/widgets/app_login_email_form.dart';
+import '../../features/auth/login_and_register/presentation/widgets/app_login_phone_form.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
@@ -13,7 +15,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kAppFormView,
+    initialLocation: AppRoutes.kSplashView,
     routes:
     [
 
@@ -31,17 +33,25 @@ abstract class AppRouter
         builder: (context, state) => const FormView(),
       ),
 
+      // App Login or SignUp View
+      GoRoute(
+        path: AppRoutes.kAuthTabs,
+        name: AppRoutes.kAuthTabs,
+        builder: (context, state) => const AuthView(),
+      ),
+
+
       // App Login With Phone View
       GoRoute(
         path: AppRoutes.kLoginPhoneView,
         name: AppRoutes.kLoginPhoneView,
-        builder: (context, state) => const AuthView(),
+        builder: (context, state) => LoginFormWithPhone(),
       ),
       // App Login With Email View
       GoRoute(
         path: AppRoutes.kLoginEmailView,
         name: AppRoutes.kLoginEmailView,
-        builder: (context, state) => const AuthView(),
+        builder: (context, state) => const LoginFormWithEmail(),
       ),
 
       // App Forget Password With Phone View

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
@@ -7,17 +8,20 @@ import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../controllers/email_or_phone_provider.dart';
+import 'app_login_email_form.dart';
 import 'app_login_phone_form.dart';
 import 'app_signup_form.dart';
 
 
-class AuthTabs extends StatelessWidget
+class AuthTabs extends ConsumerWidget
 {
   const AuthTabs({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final loginType = ref.watch(loginTypeProvider); // Get current login type
     return DefaultTabController(
       length: 2,
       child: Column(
@@ -42,13 +46,15 @@ class AuthTabs extends StatelessWidget
             ),
           ),
 
-          const Expanded(            
-            child: TabBarView(
-              children:
-              [
-                LoginFormWithPhone(),
-                SignUpForm(),
-              ],
+          Expanded(            
+            child: Consumer(
+              builder: (context, ref, child) => TabBarView(
+                children:
+                [
+                  loginType == LoginType.phone ? LoginFormWithPhone() : const LoginFormWithEmail(),
+                  const SignUpForm(),
+                ],
+              ),
             ),
           ),
         ],

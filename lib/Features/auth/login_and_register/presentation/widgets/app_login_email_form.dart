@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/Core/constants/app_borders.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
+import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
@@ -11,15 +13,18 @@ import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_form_container.dart';
+import '../controllers/email_or_phone_provider.dart';
 
 
-class LoginFormWithEmail extends StatelessWidget
+class LoginFormWithEmail extends ConsumerWidget
 {
   const LoginFormWithEmail({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final themeMode = ref.watch(themeControllerProvider);
+    final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
@@ -41,7 +46,16 @@ class LoginFormWithEmail extends StatelessWidget
                 
                 AppSizes.size4.horizontalSpace,
 
-                Text(AppLocalizations.of(context).phone, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textDecoration: TextDecoration.underline),),
+                GestureDetector(
+                  onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
+                  child: Text(
+                    AppLocalizations.of(context).phone,
+                    style: AppStyles.textStyle12(
+                      fontWeight: AppFontWeights.boldWeight,
+                      textDecoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
               ],
             ),
       
@@ -79,7 +93,10 @@ class LoginFormWithEmail extends StatelessWidget
       
             AppSizes.size16.verticalSpace,
       
-            CustomButton(buttonText: AppLocalizations.of(context).login),
+            CustomButton(
+              buttonText: AppLocalizations.of(context).login,
+              buttonOnPressed: () {},
+            ),
       
             AppSizes.size20.verticalSpace,
       
@@ -97,29 +114,38 @@ class LoginFormWithEmail extends StatelessWidget
                   children:
                   [
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook, platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                      buttonBackgroundColor: AppColors.color.kSecondaryWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText)),
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook,
+                      platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                      buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),                  
+                      ),
                     ),
                 
                     AppSizes.size12.horizontalSpace,
                 
                     Expanded(
-                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).google, platformLogo: AppAssets.iconsPNG.googlePNG,
-                      buttonBackgroundColor: AppColors.color.kSecondaryWhite,buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
-                      spaceAmount: AppSizes.size30,),
+                      child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
+                      platformLogo: AppAssets.iconsPNG.googlePNG,
+                      buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                      buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
+                      ),
                     ),
                   ],
                 ),
       
                 AppSizes.size12.verticalSpace,
-      
-                CustomSocialButton(buttonText: AppLocalizations.of(context).apple,  platformLogo: AppAssets.iconsPNG.applePNG, buttonWidth: 174.w,
-                isLogoSpace: false, buttonBackgroundColor: AppColors.color.kSecondaryWhite, buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
-                spaceAmount: AppSizes.size30,),
+
+                CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
+                platformLogo: platformLogo,
+                buttonWidth: 174.w,
+                isLogoSpace: false,
+                buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
+                ),
               ],
             ),
 
-            AppSizes.size12.verticalSpace,
+            AppSizes.size20.verticalSpace,
           ],
         ),
       ),

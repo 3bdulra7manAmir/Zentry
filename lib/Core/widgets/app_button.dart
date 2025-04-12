@@ -18,6 +18,7 @@ class CustomButton extends StatelessWidget
     this.buttonBackgroundColor,
     required this.buttonText,
     this.buttonTextStyle,
+    required this.buttonOnPressed,
   });
 
   final double? buttonWidth;
@@ -28,6 +29,7 @@ class CustomButton extends StatelessWidget
   final Color? buttonBackgroundColor;
   final String buttonText;
   final TextStyle? buttonTextStyle;
+  final void Function()? buttonOnPressed;
 
   @override
   Widget build(BuildContext context)
@@ -43,10 +45,10 @@ class CustomButton extends StatelessWidget
             ),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
-        ),      
+        ),
+        onPressed: buttonOnPressed,      
           
         child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
-        onPressed: () {},
       ),
     );
   }

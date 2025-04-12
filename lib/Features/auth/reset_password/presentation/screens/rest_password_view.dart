@@ -54,7 +54,11 @@ class RestPasswordView extends StatelessWidget
 
                 AppSizes.size24.verticalSpace,
 
-                CustomButton(buttonText: AppLocalizations.of(context).resetPassword, buttonTextStyle: AppStyles.textStyle22(),),
+                CustomButton(
+                  buttonText: AppLocalizations.of(context).resetPassword,
+                  buttonTextStyle: AppStyles.textStyle22(),
+                  buttonOnPressed: () {},
+                ),
               ],
             ),
           ),
