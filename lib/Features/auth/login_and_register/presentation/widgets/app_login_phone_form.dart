@@ -1,10 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/router/app_routes.dart';
-import 'package:test_app/core/extensions/string.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
@@ -13,6 +12,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/services/validation/password_valid.dart';
 import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
@@ -82,10 +82,7 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size8.verticalSpace,
                 
               CustomTextFormField(
-                fieldValidator: (value)
-                {
-                  return phoneNumberValid(value);
-                },
+                fieldValidator: phoneNumberValidation,
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
                 fieldText: AppLocalizations.of(context).countryCode
@@ -98,25 +95,7 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size8.verticalSpace,
                 
               CustomTextFormField(
-                fieldValidator: (value)
-                {
-                  try
-                  {
-                    
-                    if (value == null || value.isEmpty)
-                    {
-                      return 'Password is required';
-                    }
-                    if (!value.hasValidPassword)
-                    {
-                      return 'Invalid Password';
-                    }
-                    return null;
-                  } on Exception catch (e)
-                  {
-                    return e.toString();
-                  }
-                },
+                fieldValidator: passwordValidation,
                 fieldController: passwordController,
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),

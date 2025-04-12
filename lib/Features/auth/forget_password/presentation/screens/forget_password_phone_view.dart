@@ -62,10 +62,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                   AppSizes.size9.verticalSpace,
                   
                   CustomTextFormField(
-                    fieldValidator: (value)
-                    {
-                      return phoneNumberValid(value);
-                    },
+                    fieldValidator: phoneNumberValidation,
                     fieldController: phoneNumbrerController,
                     fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
                     fieldText: AppLocalizations.of(context).countryCode,

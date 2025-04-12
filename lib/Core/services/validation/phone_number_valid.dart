@@ -1,4 +1,6 @@
-String phoneNumberValid(value)
+import 'package:test_app/core/extensions/string.dart';
+
+String phoneNumberValidation(String? value)
 {
   try
   {
@@ -11,9 +13,8 @@ String phoneNumberValid(value)
     {
       return 'Invalid phone number';
     }
-    return ""; //IF NO ERRORS
-  }
-  on Exception catch (e)
+    return ""; // No errors
+  } on Exception catch (e)
   {
     return e.toString();
   }
