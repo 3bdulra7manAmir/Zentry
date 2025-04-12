@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
@@ -97,6 +98,7 @@ void showThemesDialog(BuildContext context)
                                   {
                                     themeController.setTheme(themeMode);
                                     ref.read(selectedThemeLabelProvider.notifier).state = themeLabel;
+                                    AppRouter.router.pop();
                                   },
                                   child: Row(children: [Text(themeLabel),],),
                                 );
