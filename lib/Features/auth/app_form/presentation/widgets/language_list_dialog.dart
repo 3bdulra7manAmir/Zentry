@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/data/app_languages_list.dart';
+import '../../data/form_data/app_languages_list.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';
 import '../../../../../core/widgets/app_form_container.dart';
 
@@ -56,8 +57,7 @@ void showLanguageDialog(BuildContext context)
               Consumer(
                 builder: (context, ref, _)
                 {
-                  final localeController = ref.read(localizationProvider.notifier);
-
+                  final localeController = ref.read(localizationControllerProvider.notifier);
                   return ListView.separated(
                     shrinkWrap: true,
                     itemCount: languagesList.length,
@@ -68,7 +68,8 @@ void showLanguageDialog(BuildContext context)
                       return InkWell(
                         onTap: ()
                         {
-                          localeController.setLocale(language[2] as Locale);
+                          localeController.setLocale(language[2] as Locale, index);
+                          AppRouter.router.pop();
                         },
                         child: Row(
                           children:

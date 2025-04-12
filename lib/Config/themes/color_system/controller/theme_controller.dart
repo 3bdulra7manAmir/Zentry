@@ -24,22 +24,6 @@ class ThemeController extends _$ThemeController
     }
   }
 
-  void toggleTheme()
-  {
-    try
-    {
-      final isCurrentlyDark = state == ThemeMode.dark;
-      state = isCurrentlyDark ? ThemeMode.light : ThemeMode.dark;
-      AppColors.i.themeMode = state == ThemeMode.dark ? 'dark' : 'light';
-      //print('[ThemeController] Theme toggled to: ${state.name}');
-    }
-
-    catch (e)
-    {
-      //print('[ThemeController] Error toggling theme: $e');
-    }
-  }
-
   void setTheme(ThemeMode mode)
   {
     try

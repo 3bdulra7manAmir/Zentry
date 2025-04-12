@@ -15,7 +15,7 @@ class TestApp extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final themeMode = ref.watch(themeControllerProvider);
-    final locale = ref.watch(localizationProvider);
+    final locale = ref.watch(localizationControllerProvider);
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       builder: (context, child)

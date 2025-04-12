@@ -1,60 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final localizationProvider = StateNotifierProvider<LocaleController, Locale>((ref)
-{
-  return LocaleController();
-});
+part 'localization_controller.g.dart';
 
-class LocaleController extends StateNotifier<Locale>
+@riverpod
+class LocalizationController extends _$LocalizationController
 {
-  LocaleController() : super(const Locale('en'))
+  int? selectedLanguageIndex;
+
+  @override
+  Locale build()
   {
-    //print('[LocaleController] Initialized with locale: ${state.languageCode}');
+    //debugPrint('[LocalizationController] Initialized with default locale: en');
+    return const Locale('en');
   }
 
-  void toggleLocale()
+  void setLocale(Locale locale, [int? index])
   {
     try
     {
-      //print('[toggleLocale] Current locale: ${state.languageCode}');
-      if (state.languageCode == 'en')
-      {
-        state = const Locale('ar');
-        //print('[toggleLocale] Locale changed to Arabic');
-      }
-      else
-      {
-        state = const Locale('en');
-        //print('[toggleLocale] Locale changed to English');
-      }
-    }
+      //debugPrint('[setLocale] Requested: ${locale.languageCode}, index: $index');
 
-    catch (e)
-    {
-      //print('[toggleLocale] Error occurred while toggling locale: $e');
-    }
-  }
-
-  void setLocale(Locale locale)
-  {
-    try
-    {
-      //print('[setLocale] Requested locale: ${locale.languageCode}');
       if (locale.languageCode == 'en' || locale.languageCode == 'ar')
       {
         state = locale;
-        //print('[setLocale] Locale successfully set to: ${state.languageCode}');
+        selectedLanguageIndex = index;
+        //debugPrint('[setLocale] Locale successfully set to: ${state.languageCode}');
       }
       else
       {
-        //print('[setLocale] Unsupported locale: ${locale.languageCode}');
+        //debugPrint('[setLocale] Unsupported locale: ${locale.languageCode}');
       }
-    }
 
-    catch (e)
+    }
+    
+    catch (e, stack)
     {
-      //print('[setLocale] Error occurred while setting locale: $e');
+      //debugPrint('[setLocale] Error: $e');
+      //debugPrint('[setLocale] Stack trace: $stack');
     }
   }
 }

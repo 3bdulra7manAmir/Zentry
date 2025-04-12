@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../config/l10n/generated/app_localizations.dart';
-import '../constants/app_images.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../core/constants/app_images.dart';
 
 
 List<List<String>> getCountriesList(BuildContext context)

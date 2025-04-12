@@ -1,27 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'theme_controller.dart';
+part of 'localization_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$themeControllerHash() => r'54289532e2a365e0819cdc77eaf52350db5c4e62';
+String _$localizationControllerHash() =>
+    r'b122c16375fbf9469a735605ebac0af9c73f068e';
 
-/// See also [ThemeController].
-@ProviderFor(ThemeController)
-final themeControllerProvider =
-    AutoDisposeNotifierProvider<ThemeController, ThemeMode>.internal(
-      ThemeController.new,
-      name: r'themeControllerProvider',
+/// See also [LocalizationController].
+@ProviderFor(LocalizationController)
+final localizationControllerProvider =
+    AutoDisposeNotifierProvider<LocalizationController, Locale>.internal(
+      LocalizationController.new,
+      name: r'localizationControllerProvider',
       debugGetCreateSourceHash:
           const bool.fromEnvironment('dart.vm.product')
               ? null
-              : _$themeControllerHash,
+              : _$localizationControllerHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$ThemeController = AutoDisposeNotifier<ThemeMode>;
+typedef _$LocalizationController = AutoDisposeNotifier<Locale>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

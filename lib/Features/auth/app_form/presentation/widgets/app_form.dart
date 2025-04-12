@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/constants/app_borders.dart';
@@ -9,18 +10,29 @@ import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_form_container.dart';
+import '../controllers/countries_icon_update_provider.dart';
+import '../controllers/theme_mode_text_provide.dart';
 import 'countries_list_dialog.dart';
+import '../controllers/language_icon_update_provider.dart';
 import 'language_list_dialog.dart';
 import 'themes_list_dialog.dart';
 
 
-class AppForm extends StatelessWidget
+class AppForm extends ConsumerWidget
 {
   const AppForm({super.key});
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final selectedLanguageFlag = getSelectedLanguageImage(ref);
+    final selectedLanguageLabel = getSelectedLanguageLabel(ref, context);
+
+    final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
+    final selectedCountryName = getSelectedCountryName(ref, context);
+    
+    final themeLabel = getSelectedThemeLabel(ref, context);
+    
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
@@ -52,21 +64,21 @@ class AppForm extends StatelessWidget
 
           GestureDetector(
             onTap: () => showLanguageDialog(context),
-            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.languagePNG), fieldText: AppLocalizations.of(context).language, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(selectedLanguageFlag,), fieldText: selectedLanguageLabel, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
           ),
 
           AppSizes.size16.verticalSpace,
 
           GestureDetector(
-            onTap: () => showCountiesDialog(context),
-            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countryPNG), fieldText: AppLocalizations.of(context).country, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
+            onTap: () => showCountriesDialog(context),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(selectedCountryFlagPath), fieldText: selectedCountryName, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
           ),
 
           AppSizes.size16.verticalSpace,
 
           GestureDetector(
             onTap: () => showThemesDialog(context),
-            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: AppLocalizations.of(context).mode, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)),
+            child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: themeLabel, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)),
 
           AppSizes.size27.verticalSpace,
 

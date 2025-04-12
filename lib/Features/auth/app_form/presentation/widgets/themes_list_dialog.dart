@@ -11,8 +11,9 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/data/app_theme_list.dart';
 import '../../../../../config/themes/color_system/controller/theme_string_converter.dart';
+import '../../data/form_data/app_theme_list.dart';
+import '../controllers/theme_mode_text_provide.dart';
 
 void showThemesDialog(BuildContext context)
 {
