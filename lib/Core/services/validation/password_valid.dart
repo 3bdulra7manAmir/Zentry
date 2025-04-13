@@ -1,16 +1,19 @@
+import 'package:flutter/material.dart';
 import 'package:test_app/core/extensions/string.dart';
 
-String passwordValidation(String? value)
+import '../../../config/l10n/generated/app_localizations.dart';
+
+String passwordValidation(String? value, BuildContext context)
 {
   try
   {
     if (value == null || value.isEmpty)
     {
-      return 'Password is required';
+      return AppLocalizations.of(context).passwordIsRequired;
     }
     if (!value.hasValidPassword)
     {
-      return 'Invalid Password';
+      return AppLocalizations.of(context).invalidPassword;
     }
     return ""; // No errors
   } on Exception catch (e)

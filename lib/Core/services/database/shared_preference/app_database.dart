@@ -18,17 +18,17 @@ class UserPreferences
 
       if (isSaved)
       {
-        print("Language saved: $languageCode");
+        //print("Language saved: $languageCode");
       }
       else
       {
-        print("Failed to save language");
+        //print("Failed to save language");
       }
     }
     
     catch (e)
     {
-      print("Error saving language: $e");
+      //print("Error saving language: $e");
     }
   }
 
@@ -39,13 +39,13 @@ class UserPreferences
     {
       final prefs = await SharedPreferences.getInstance();
       String? languageCode = prefs.getString('language') ?? 'en'; // Default to 'en'
-      print("Fetched language: $languageCode");
+      //print("Fetched language: $languageCode");
       return languageCode;
     }
     
     catch (e)
     {
-      print("Error fetching language: $e");
+      //print("Error fetching language: $e");
       return 'en'; // Default value
     }
   }
@@ -59,17 +59,17 @@ class UserPreferences
       bool isSaved = await prefs.setString('country', countryCode);
       if (isSaved)
       {
-        print("Country saved: $countryCode");
+        //print("Country saved: $countryCode");
       }
       else
       {
-        print("Failed to save country");
+        //print("Failed to save country");
       }
     }
     
     catch (e)
     {
-      print("Error saving country: $e");
+      //print("Error saving country: $e");
     }
   }
 
@@ -80,13 +80,13 @@ class UserPreferences
     {
       final prefs = await SharedPreferences.getInstance();
       String? countryCode = prefs.getString('country') ?? 'US'; // Default to 'US'
-      print("Fetched country: $countryCode");
+      //print("Fetched country: $countryCode");
       return countryCode;
     }
     
     catch (e)
     {
-      print("Error fetching country: $e");
+      //print("Error fetching country: $e");
       return 'US'; // Default value
     }
   }
@@ -100,17 +100,17 @@ class UserPreferences
       bool isSaved = await prefs.setBool('theme', isDarkMode);
       if (isSaved)
       {
-        print("Theme saved: ${isDarkMode ? 'Dark' : 'Light'}");
+        //print("Theme saved: ${isDarkMode ? 'Dark' : 'Light'}");
       }
       else
       {
-        print("Failed to save theme");
+        //print("Failed to save theme");
       }
     }
     
     catch (e)
     {
-      print("Error saving theme: $e");
+      //print("Error saving theme: $e");
     }
   }
 
@@ -123,7 +123,7 @@ class UserPreferences
       bool? isDarkMode = prefs.getBool('theme');
       if (isDarkMode != null)
       {
-        print("Fetched theme: ${isDarkMode ? 'Dark' : 'Light'}");
+        //print("Fetched theme: ${isDarkMode ? 'Dark' : 'Light'}");
         return isDarkMode;
       }
       else
@@ -131,14 +131,14 @@ class UserPreferences
         // If theme is not set, fallback to system theme
         Brightness systemBrightness = WidgetsBinding.instance.window.platformBrightness;
         bool isSystemDarkMode = systemBrightness == Brightness.dark;
-        print("Fetched system theme: ${isSystemDarkMode ? 'Dark' : 'Light'}");
+        //print("Fetched system theme: ${isSystemDarkMode ? 'Dark' : 'Light'}");
         return isSystemDarkMode;
       }
     }
     
     catch (e) // If error occurs, fallback to system theme
     {
-      print("Error fetching theme: $e");
+      //print("Error fetching theme: $e");
       Brightness systemBrightness = WidgetsBinding.instance.window.platformBrightness; 
       bool isSystemDarkMode = systemBrightness == Brightness.dark;
       return isSystemDarkMode;

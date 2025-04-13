@@ -1,8 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/services/validation/language_valid.dart';
-import 'package:test_app/core/widgets/app_text_form_field.dart';
 import '../../../../../Core/constants/app_borders.dart';
 import '../../../../../Core/constants/app_images.dart';
 import '../../../../../Core/constants/app_padding.dart';
@@ -71,10 +69,7 @@ class AppForm extends ConsumerWidget
         
             GestureDetector(
               onTap: () => showLanguageDialog(context),
-              child: CustomTextFormField(      
-                fieldValidator: languageValidation,
-                fieldKeyboardType: TextInputType.none,
-                fieldIsEnabled: false,
+              child: CustomContainer(
                 fieldPrefixIcon: Image.asset(selectedLanguageFlag,),
                 fieldText: selectedLanguageLabel,
                 fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),

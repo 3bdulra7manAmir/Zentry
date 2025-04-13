@@ -18,6 +18,7 @@ class _AppIconsPNG
   final String cloudPNG = "assets/icons/AppHeader/App_Cloud.png";
   final String fullHeaderPNG = "assets/icons/AppHeader/App_Logo_Cloud.png";
   final String leftWhiteArrowPNG = "assets/icons/AppHeader/Left_White_Arrow.png";
+  final String rightWhiteArrowPNG = "assets/icons/AppHeader/Right_White_Arrow.png";
 
 
   ///App Form
@@ -25,6 +26,7 @@ class _AppIconsPNG
   final String languagePNG = "assets/icons/AppForm/Language.png";
   final String modePNG = "assets/icons/AppForm/Mode.png";
   final String leftBlackArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
+  final String rightBlackArrowPNG = "assets/icons/AppForm/Right_Arrow.png";
 
   ///App Login
   final String egyptFlagPNG = "assets/icons/Login/Egypt_Flag.png";
@@ -37,7 +39,7 @@ class _AppIconsPNG
 
   ///App AppBar
   final String leftBackArrowBlackPNG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
-  final String leftArrowGreykPNG = "assets/icons/ForgetPassword/Left_Arrow_Grey.png";
+  final String rightBackArrowBlackPNG = "assets/icons/ForgetPassword/Right_Back_Arrow_Black.png";
 
   ///App Rest Password
   final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";

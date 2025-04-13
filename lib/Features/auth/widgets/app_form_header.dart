@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/constants/app_images.dart';
 import '../../../config/themes/color_system/colors_manager/app_colors.dart';
-
 import '../../../../core/constants/app_styles.dart';
 
 
 class FormHeader extends StatelessWidget
 {
-  const FormHeader({super.key, this.isText, this.downleftText, this.upperRightText,});
+  const FormHeader({super.key, this.isText, this.downleftText, this.upperRightText, this.upperRightTextOnTap,});
 
   final bool? isText;
   final String? downleftText;
   final String? upperRightText;
+  final void Function()? upperRightTextOnTap;
 
   @override
   Widget build(BuildContext context)
@@ -42,7 +42,15 @@ class FormHeader extends StatelessWidget
             child: Row(
               children:
               [
-                Text(upperRightText ?? "", style: AppStyles.textStyle13(textColor: AppColors.color.kTertiaryWhiteText, textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kTertiaryWhiteText),),
+                GestureDetector(
+                  onTap: upperRightTextOnTap,
+                  child: Text(upperRightText ?? "",
+                  style: AppStyles.textStyle13(
+                    textColor: AppColors.color.kTertiaryWhiteText,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationColor: AppColors.color.kTertiaryWhiteText),
+                    ),
+                  ),
                 Image.asset(AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),

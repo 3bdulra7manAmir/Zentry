@@ -199,4 +199,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backSpace => '⌫';
+
+  @override
+  String get emailIsRequired => 'Email is required';
+
+  @override
+  String get invalidEmail => 'Invalid Email';
+
+  @override
+  String get passwordIsRequired => 'Password is required';
+
+  @override
+  String get invalidPassword => 'Invalid Password';
+
+  @override
+  String get phoneNumberIsRequired => 'Phone number is required';
+
+  @override
+  String get invalidPhoneNumber => 'Invalid phone number';
 }

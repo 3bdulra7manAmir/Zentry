@@ -87,7 +87,7 @@ class LoginFormWithPhone extends ConsumerWidget
                 
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.phone,
-                fieldValidator: phoneNumberValidation,
+                fieldValidator: (value) => phoneNumberValidation(value, context),
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
                 fieldText: AppLocalizations.of(context).countryCode
@@ -100,7 +100,7 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size8.verticalSpace,
                 
               CustomTextFormField(
-                fieldValidator: passwordValidation,
+                fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: obscureText,
                 fieldKeyboardType: TextInputType.text,

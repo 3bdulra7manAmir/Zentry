@@ -478,6 +478,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'⌫'**
   String get backSpace;
+
+  /// No description provided for @emailIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get emailIsRequired;
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Email'**
+  String get invalidEmail;
+
+  /// No description provided for @passwordIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required'**
+  String get passwordIsRequired;
+
+  /// No description provided for @invalidPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Password'**
+  String get invalidPassword;
+
+  /// No description provided for @phoneNumberIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number is required'**
+  String get phoneNumberIsRequired;
+
+  /// No description provided for @invalidPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid phone number'**
+  String get invalidPhoneNumber;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

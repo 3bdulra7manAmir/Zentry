@@ -161,5 +161,15 @@ abstract class AppStrings
   ///[Default]
   static const default_ = "default"; 
   ///[Selected]
-   static const selected = "Selected"; 
+  static const selected = "Selected"; 
+
+  ///App Validation
+  
+  static const emailIsRequired = "Email is required";
+  static const invalidEmail = "Invalid Email";
+  static const passwordIsRequired = "Password is required";
+  static const invalidPassword = "Invalid Password";
+  static const phoneNumberIsRequired = "Phone number is required";
+  static const invalidPhoneNumber = "Invalid phone number";
+
 }

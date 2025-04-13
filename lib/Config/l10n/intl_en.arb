@@ -73,5 +73,15 @@
   "num8": "8",
   "num9": "9",
   "astric": "*",
-  "backSpace": "⌫"
+  "backSpace": "⌫",
+
+  "emailIsRequired": "Email is required",
+  "invalidEmail": "Invalid Email",
+
+  "passwordIsRequired": "Password is required",
+  "invalidPassword": "Invalid Password",
+
+  "phoneNumberIsRequired": "Phone number is required",
+  "invalidPhoneNumber": "Invalid phone number"
+
 }

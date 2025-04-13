@@ -80,7 +80,7 @@ class LoginFormWithEmail extends ConsumerWidget
                 
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.emailAddress,
-                fieldValidator: emailValidation,
+                fieldValidator: (value) => emailValidation(value, context),
                 fieldController: emailController,
                 fieldhintStyle: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight),
                 fieldText: AppLocalizations.of(context).enterEmaill,
@@ -94,7 +94,7 @@ class LoginFormWithEmail extends ConsumerWidget
                 
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
-                fieldValidator: passwordValidation,
+                fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: obscureText,
                 fieldText: AppLocalizations.of(context).password,
@@ -102,7 +102,6 @@ class LoginFormWithEmail extends ConsumerWidget
                     onTap: ()
                     {
                       ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
-                      
                     },
                     child: Image.asset(obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
                   ),

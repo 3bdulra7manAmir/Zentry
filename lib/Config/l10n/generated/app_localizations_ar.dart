@@ -199,4 +199,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backSpace => '⌫';
+
+  @override
+  String get emailIsRequired => 'ادخل البريد الالكتروني';
+
+  @override
+  String get invalidEmail => 'بريد الكتروني غير صالح';
+
+  @override
+  String get passwordIsRequired => 'ادخل كلمة المرور';
+
+  @override
+  String get invalidPassword => 'كلمة مرور غير صالحه';
+
+  @override
+  String get phoneNumberIsRequired => 'ادخل رقم الهاتف';
+
+  @override
+  String get invalidPhoneNumber => 'رقم هاتف غير صالح';
 }

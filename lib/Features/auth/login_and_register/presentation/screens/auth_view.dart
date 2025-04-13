@@ -23,6 +23,7 @@ class AuthView extends StatelessWidget
             isText: true,
             downleftText: AppLocalizations.of(context).welcomeBack,
             upperRightText: AppLocalizations.of(context).skip,
+            //upperRightTextOnTap: () => AppRouter.router.pushNamed(name),
             ),
           ),
 

@@ -73,10 +73,17 @@
     "num8": "٨",
     "num9": "٩",
     "astric": "*",
-    "backSpace": "⌫"
+    "backSpace": "⌫",
 
 
-    
+    "emailIsRequired": "ادخل البريد الالكتروني",
+    "invalidEmail": "بريد الكتروني غير صالح",
+  
+    "passwordIsRequired": "ادخل كلمة المرور",
+    "invalidPassword": "كلمة مرور غير صالحه",
+
+    "phoneNumberIsRequired": "ادخل رقم الهاتف",
+    "invalidPhoneNumber": "رقم هاتف غير صالح"
 
   }
   
