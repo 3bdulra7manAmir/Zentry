@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../l10n/generated/app_localizations.dart';
+//import '../../../l10n/generated/app_localizations.dart';
 
 ThemeMode stringToThemeMode(String value)
 {
@@ -15,23 +15,4 @@ ThemeMode stringToThemeMode(String value)
   {
     return ThemeMode.light;
   }
-}
-
-String themeModeToLocalizedLabel(ThemeMode mode, BuildContext context)
-{
-  try
-  {
-    final loc = AppLocalizations.of(context);
-    return mode == ThemeMode.dark ? loc.dark : loc.light;
-  }
-
-  catch (_)
-  {
-    return mode == ThemeMode.dark ? 'Dark' : 'Light';
-  }
-}
-
-String themeModeToStringKey(ThemeMode mode)
-{
-  return mode == ThemeMode.dark ? 'dark' : 'light';
 }

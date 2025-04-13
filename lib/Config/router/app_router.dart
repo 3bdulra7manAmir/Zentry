@@ -18,7 +18,6 @@ abstract class AppRouter
     initialLocation: AppRoutes.kSplashView,
     routes:
     [
-
       //App Splash View
       GoRoute(
         path: AppRoutes.kSplashView,

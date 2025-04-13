@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:test_app/config/themes/color_system/colors_manager/app_colors.dart';
 
+import '../../../../core/services/database/shared_preference/app_database.dart';
+
 part 'theme_controller.g.dart';
 
 @riverpod
@@ -10,29 +12,46 @@ class ThemeController extends _$ThemeController
   @override
   ThemeMode build()
   {
+    // Set default theme
+    AppColors.i.themeMode = 'light';
+    
+    // Load saved theme asynchronously
+    _loadSavedTheme();
+    
+    return ThemeMode.light;
+  }
+  
+  Future<void> _loadSavedTheme() async
+  {
     try
     {
-      AppColors.i.themeMode = 'light'; // Default on app start
-      //print('[ThemeController] Initialized with ThemeMode.dark');
-      return ThemeMode.light;
+      // Get theme preference using UserPreferences
+      bool isDarkMode = await UserPreferences.instance.getTheme();
+      
+      if (isDarkMode)
+      {
+        state = ThemeMode.dark; // Update state and colors if dark mode is saved
+        AppColors.i.themeMode = 'dark';
+      }
+      //print('[ThemeController] Loaded saved theme: ${isDarkMode ? 'dark' : 'light'}');
     }
-
+    
     catch (e)
     {
-      //print('[ThemeController] Error during initialization: $e');
-      return ThemeMode.light; // Fallback
+      //print('[ThemeController] Error loading saved theme: $e');
     }
   }
-
-  void setTheme(ThemeMode mode)
+  
+  Future<void> setTheme(ThemeMode mode) async
   {
     try
     {
       if (mode != ThemeMode.system)
       {
-        state = mode;
-        AppColors.i.themeMode = mode == ThemeMode.dark ? 'dark' : 'light';
-        //print('[ThemeController] Theme explicitly set to: ${state.name}');
+        bool isDarkMode = mode == ThemeMode.dark;
+        await UserPreferences.instance.saveTheme(isDarkMode);
+        state = mode; // Update the state with the new theme mode
+        AppColors.i.themeMode = isDarkMode ? 'dark' : 'light';
       }
       else
       {

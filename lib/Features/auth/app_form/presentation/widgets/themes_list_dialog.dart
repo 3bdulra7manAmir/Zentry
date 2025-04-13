@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/color_system/controller/theme_controller.dart';
@@ -12,9 +13,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../config/themes/color_system/controller/theme_string_converter.dart';
 import '../../data/form_data/app_theme_list.dart';
-import '../controllers/theme_mode_text_provide.dart';
 
 void showThemesDialog(BuildContext context)
 {
@@ -26,7 +25,6 @@ void showThemesDialog(BuildContext context)
       return StatefulBuilder(
         builder: (context, setState)
         {
-          final List<String> themesList = getThemesList(context);
           return Dialog(
             backgroundColor: Theme.of(context).cardColor,
             insetPadding: AppPadding.kAppFormPadding,
@@ -84,6 +82,8 @@ void showThemesDialog(BuildContext context)
                           builder: (context, ref, _)
                           {
                             final themeController = ref.read(themeControllerProvider.notifier);
+                            final themesList = getThemesList(context);
+                            
                             return ListView.separated(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -92,15 +92,15 @@ void showThemesDialog(BuildContext context)
                               itemBuilder: (context, index)
                               {
                                 final themeLabel = themesList[index];
-                                final themeMode = stringToThemeMode(themeLabel);
+                                final themeMode = themeLabel.toLowerCase() == AppLocalizations.of(context).dark.toLowerCase() ? ThemeMode.dark : ThemeMode.light;
                                 return InkWell(
                                   onTap: ()
                                   {
                                     themeController.setTheme(themeMode);
-                                    ref.read(selectedThemeLabelProvider.notifier).state = themeLabel;
                                     AppRouter.router.pop();
                                   },
-                                  child: Row(children: [Text(themeLabel),],),
+                                  child: Row(children: [Text(themeLabel),],
+                                  ),
                                 );
                               },
                             );

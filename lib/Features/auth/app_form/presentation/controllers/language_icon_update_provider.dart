@@ -4,34 +4,33 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';
 
+final selectedLanguageProvider = Provider<String>((ref)
+{
+  final locale = ref.watch(localizationControllerProvider);
+  return locale.languageCode;
+});
+
+// Update the existing functions to use this provider
 String getSelectedLanguageImage(WidgetRef ref)
 {
-  final localeController = ref.watch(localizationControllerProvider.notifier);
-  final selectedIndex = localeController.selectedLanguageIndex;
+  final languageCode = ref.watch(selectedLanguageProvider);
 
-  if (selectedIndex == null)
+  return switch (languageCode)
   {
-    return AppAssets.iconsPNG.languagePNG; // fallback
-  }
-
-  return switch (selectedIndex)
-  {
-    0 => AppAssets.iconsPNG.egFlagSelectedPNG,
-    1 => AppAssets.iconsPNG.unitedStatesFlagSelectedPNG,
-    _ => AppAssets.iconsPNG.languagePNG, //Default Case
+    'ar' => AppAssets.iconsPNG.egFlagSelectedPNG,
+    'en' => AppAssets.iconsPNG.unitedStatesFlagSelectedPNG,
+    _ => AppAssets.iconsPNG.languagePNG, // fallback
   };
 }
 
 String getSelectedLanguageLabel(WidgetRef ref, BuildContext context)
 {
-  final localeController = ref.watch(localizationControllerProvider.notifier);
-  final selectedIndex = localeController.selectedLanguageIndex;
+  final languageCode = ref.watch(selectedLanguageProvider);
 
-  // Optional: localize the labels if needed using AppLocalizations.of(context)
-  return switch (selectedIndex)
+  return switch (languageCode)
   {
-    0 => AppLocalizations.of(context).arabic,
-    1 => AppLocalizations.of(context).english,
-    _ => AppLocalizations.of(context).language, // fallback to "Language"
+    'ar' => AppLocalizations.of(context).arabic,
+    'en' => AppLocalizations.of(context).english,
+    _ => AppLocalizations.of(context).language, // fallback
   };
 }

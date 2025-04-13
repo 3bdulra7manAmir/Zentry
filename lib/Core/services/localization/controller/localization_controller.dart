@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../database/shared_preference/app_database.dart';
+
 part 'localization_controller.g.dart';
 
 @riverpod
@@ -11,33 +13,35 @@ class LocalizationController extends _$LocalizationController
   @override
   Locale build()
   {
-    //debugPrint('[LocalizationController] Initialized with default locale: en');
-    return const Locale('en');
+    _loadLocale();
+    return const Locale('en'); // default
   }
 
-  void setLocale(Locale locale, [int? index])
+  Future<void> _loadLocale() async
   {
     try
     {
-      //debugPrint('[setLocale] Requested: ${locale.languageCode}, index: $index');
+      final languageCode = await UserPreferences.instance.getLanguage();
+      state = Locale(languageCode ?? 'en');
+    } on Exception catch (e)
+    {
+      print("Localization Loading Error: ${e.toString()}");
+    }
+  }
 
+  void setLocale(Locale locale, [int? index]) async
+  {
+    try
+    {
       if (locale.languageCode == 'en' || locale.languageCode == 'ar')
       {
         state = locale;
         selectedLanguageIndex = index;
-        //debugPrint('[setLocale] Locale successfully set to: ${state.languageCode}');
+        await UserPreferences.instance.saveLanguage(locale.languageCode);
       }
-      else
-      {
-        //debugPrint('[setLocale] Unsupported locale: ${locale.languageCode}');
-      }
-
-    }
-    
-    catch (e, stack)
+    } on Exception catch (e)
     {
-      //debugPrint('[setLocale] Error: $e');
-      //debugPrint('[setLocale] Stack trace: $stack');
+      print("Localization setting Error: ${e.toString()}");
     }
   }
 }

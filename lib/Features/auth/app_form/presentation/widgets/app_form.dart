@@ -32,7 +32,7 @@ class AppForm extends ConsumerWidget
 
     final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
     final selectedCountryName = getSelectedCountryName(ref, context);
-    
+
     final themeLabel = getSelectedThemeLabel(ref, context);
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
 
