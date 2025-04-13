@@ -51,7 +51,7 @@ class AuthTabs extends ConsumerWidget
               builder: (context, ref, child) => TabBarView(
                 children:
                 [
-                  loginType == LoginType.phone ? LoginFormWithPhone() : const LoginFormWithEmail(),
+                  loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
                   const SignUpForm(),
                 ],
               ),

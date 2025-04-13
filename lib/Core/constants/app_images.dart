@@ -29,6 +29,7 @@ class _AppIconsPNG
   ///App Login
   final String egyptFlagPNG = "assets/icons/Login/Egypt_Flag.png";
   final String corssedEyePNG = "assets/icons/Login/Crossed_Eye.png";
+  final String eyePNG = "assets/icons/Login/eyes.png";
   final String faceBookPNG = "assets/icons/Login/FaceBook.png";
   final String googlePNG = "assets/icons/Login/Google.png";
   final String applePNG = "assets/icons/Login/Apple.png";

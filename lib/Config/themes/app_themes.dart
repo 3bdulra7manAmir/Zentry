@@ -31,6 +31,10 @@ class AppTheme
           borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
           borderRadius: AppBorders.buttonBorder10,
         ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
+          borderRadius: AppBorders.buttonBorder10,
+        ),
       ),
     );
   }

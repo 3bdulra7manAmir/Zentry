@@ -51,7 +51,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.kLoginEmailView,
         name: AppRoutes.kLoginEmailView,
-        builder: (context, state) => const LoginFormWithEmail(),
+        builder: (context, state) => LoginFormWithEmail(),
       ),
 
       // App Forget Password With Phone View

@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView>
   void initState()
   {
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () => AppRouter.router.pushNamed(AppRoutes.kAppFormView),);
+    Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacementNamed(AppRoutes.kAppFormView),);
   }
 
   @override

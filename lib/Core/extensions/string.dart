@@ -1,5 +1,21 @@
 extension GetStringUtils on String?
 {
+  bool get isLanguage => this != null && RegExp(r'^(?!.*\b(English|Arabic|الانجليزية|العربية)\b)([a-zA-Z]+|[\u0600-\u06FF]+)$',
+  caseSensitive: false,)
+  .hasMatch(this!);
+
+  bool get isCountry
+  {
+    final regex = RegExp(r'^(Egypt|Morocco|Kuwait|Syrian Arab|United Arab Emirates|Saudi Arabia (SA)|مصر|السعودية|المغرب|الكويت|سوريا|الامارات)$',
+    caseSensitive: false,);
+    return this != null && regex.hasMatch(this!);
+  }
+
+  bool get isMode => this != null && RegExp(r'^(?!.*\b(Light|Dark|فاتح|داكن)\b)([a-zA-Z]+|[\u0600-\u06FF]+)$',
+  caseSensitive: false,)
+  .hasMatch(this!);
+
+
   bool get isEmail => RegExp(
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
     .hasMatch(this ?? '');

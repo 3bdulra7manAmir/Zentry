@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/services/validation/language_valid.dart';
+import 'package:test_app/core/widgets/app_text_form_field.dart';
 import '../../../../../Core/constants/app_borders.dart';
 import '../../../../../Core/constants/app_images.dart';
 import '../../../../../Core/constants/app_padding.dart';
@@ -69,7 +71,14 @@ class AppForm extends ConsumerWidget
         
             GestureDetector(
               onTap: () => showLanguageDialog(context),
-              child: CustomContainer(fieldPrefixIcon: Image.asset(selectedLanguageFlag,), fieldText: selectedLanguageLabel, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),),
+              child: CustomTextFormField(      
+                fieldValidator: languageValidation,
+                fieldKeyboardType: TextInputType.none,
+                fieldIsEnabled: false,
+                fieldPrefixIcon: Image.asset(selectedLanguageFlag,),
+                fieldText: selectedLanguageLabel,
+                fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),
+              ),
             ),
         
             AppSizes.size16.verticalSpace,
@@ -91,14 +100,7 @@ class AppForm extends ConsumerWidget
               buttonText: AppLocalizations.of(context).login,
               buttonOnPressed: ()
               {
-                try
-                {
-                  AppRouter.router.pushReplacementNamed(AppRoutes.kAuthTabs);
-                }
-                catch (err)
-                {
-                  print("\n$err\n");
-                }
+                AppRouter.router.pushReplacementNamed(AppRoutes.kAuthTabs);
               },
             ),
         

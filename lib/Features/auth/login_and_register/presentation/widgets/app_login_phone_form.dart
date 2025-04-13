@@ -17,7 +17,9 @@ import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
+import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
+import '../controllers/obsecure_text_provider.dart';
 
 
 class LoginFormWithPhone extends ConsumerWidget
@@ -40,7 +42,9 @@ class LoginFormWithPhone extends ConsumerWidget
   {
     final themeMode = ref.watch(themeControllerProvider);
     final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
-    final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+    final isChecked = ref.watch(checkboxValueProvider);
+    final obscureText = ref.watch(obscurePasswordProvider);
+    final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
 
     return Container(
       padding: AppPadding.kAppFormPadding,
@@ -48,7 +52,7 @@ class LoginFormWithPhone extends ConsumerWidget
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Form(
-          key: loginFormKey,
+          key: loginPhoneFormKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -82,6 +86,7 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size8.verticalSpace,
                 
               CustomTextFormField(
+                fieldKeyboardType: TextInputType.phone,
                 fieldValidator: phoneNumberValidation,
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
@@ -97,8 +102,17 @@ class LoginFormWithPhone extends ConsumerWidget
               CustomTextFormField(
                 fieldValidator: passwordValidation,
                 fieldController: passwordController,
+                fieldObscureText: obscureText,
+                fieldKeyboardType: TextInputType.text,
                 fieldText: AppLocalizations.of(context).password,
-                fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),
+                
+                fieldsuffixIcon: GestureDetector(
+                  onTap: ()
+                  {
+                    ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
+                  },
+                  child: Image.asset(obscureText ? AppAssets.iconsPNG.corssedEyePNG: AppAssets.iconsPNG.eyePNG,),
+                ),
 
               ),
                 
@@ -107,7 +121,15 @@ class LoginFormWithPhone extends ConsumerWidget
               Row(
                 children:
                 [
-                  Checkbox(value: false, onChanged: (value) {}, side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),),
+                  Checkbox(value: isChecked, onChanged: (value)
+                {
+                  if (value != null)
+                  {
+                    ref.read(checkboxValueProvider.notifier).state = value;
+                  }
+                },
+                side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),
+                ),
           
                   Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey),),
           
@@ -131,7 +153,7 @@ class LoginFormWithPhone extends ConsumerWidget
                 buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: ()
                 {
-                  if (loginFormKey.currentState!.validate())
+                  if (loginPhoneFormKey.currentState!.validate())
                   {
                     //AppRouter.router.
                   }
