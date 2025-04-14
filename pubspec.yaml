@@ -30,6 +30,9 @@ dependencies:
   flutter_svg: ^2.0.17
   flutter_otp_text_field: ^1.5.1+1
 
+  # App Icon
+  flutter_launcher_icons: ^0.14.3
+
   # Device Preview (for testing UI)
   device_preview: ^1.2.0
 
