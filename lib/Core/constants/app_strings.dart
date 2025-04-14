@@ -33,7 +33,8 @@ abstract class AppStrings
   ///[phone]
   static const phone = "Phone";
   ///[country_Code]
-  static const countryCode = "+20  |  Phone number";
+  static const egyptCountryCode = "+20  |  Phone number";
+  static const saudiArabiaCountryCode = "+966  |  Phone number";
   ///[Enter_Email]
   static const enterEmaill = "Enter Email";
   ///[Password]

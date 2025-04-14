@@ -6,10 +6,8 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
-import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
-import '../../../../../core/constants/app_styles.dart';
 
 void showThemesBottomSheet(BuildContext context)
 {
@@ -57,15 +55,6 @@ void showThemesBottomSheet(BuildContext context)
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:
                       [
-                        Text(
-                          AppLocalizations.of(context).selected,
-                          style: AppStyles.textStyle17(
-                            fontWeight: AppFontWeights.mediumWeight,
-                            textColor: AppColors.color.kOctonarySemiBlackText,
-                          ),
-                        ),
-
-                        AppSizes.size16.verticalSpace,
 
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.light,

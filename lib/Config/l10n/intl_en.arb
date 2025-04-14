@@ -13,7 +13,10 @@
   "or": "Or",
   "email": "Email",
   "phone": "Phone",
-  "countryCode": "+20  |  Phone number",
+  
+  "egyptCountryCode": "+20  |  Phone number",
+  "saudiArabiaCountryCode": "+966  |  Phone number",
+
   "enterEmaill": "Enter Email",
   "password": "Password",
   "remember": "Remember",

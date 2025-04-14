@@ -11,13 +11,28 @@ String emailValidation(String? value, BuildContext context)
     {
       return AppLocalizations.of(context).emailIsRequired;
     }
+
+    if (!value.contains('@'))
+    {
+      return "Email must contain '@' symbol.";
+    }
+
+    if (!value.emailEndsWithDomain)
+    {
+      return "Email must end with a valid domain (e.g., .com, .org).";
+    }
+
     if (!value.isEmail)
     {
       return AppLocalizations.of(context).invalidEmail;
     }
+
     return ""; // No errors
-  } on Exception catch (e)
+  }
+  
+  catch (e)
   {
-    return e.toString();
+    return "Error validating email: ${e.toString()}";
   }
 }
+

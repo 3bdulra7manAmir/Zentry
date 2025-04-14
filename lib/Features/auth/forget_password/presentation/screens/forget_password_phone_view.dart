@@ -72,7 +72,7 @@ class ForgetPasswordWithPhoneView extends StatelessWidget
                       fieldValidator: (value) => phoneNumberValidation(value, context),
                       fieldController: phoneNumbrerController,
                       fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
-                      fieldText: AppLocalizations.of(context).countryCode,
+                      fieldText: AppLocalizations.of(context).egyptCountryCode,
           
                       ),
           

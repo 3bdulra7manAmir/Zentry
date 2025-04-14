@@ -42,7 +42,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get phone => 'Phone';
 
   @override
-  String get countryCode => '+20  |  Phone number';
+  String get egyptCountryCode => '+20  |  Phone number';
+
+  @override
+  String get saudiArabiaCountryCode => '+966  |  Phone number';
 
   @override
   String get enterEmaill => 'Enter Email';

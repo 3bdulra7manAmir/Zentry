@@ -161,11 +161,17 @@ abstract class AppLocalizations {
   /// **'Phone'**
   String get phone;
 
-  /// No description provided for @countryCode.
+  /// No description provided for @egyptCountryCode.
   ///
   /// In en, this message translates to:
   /// **'+20  |  Phone number'**
-  String get countryCode;
+  String get egyptCountryCode;
+
+  /// No description provided for @saudiArabiaCountryCode.
+  ///
+  /// In en, this message translates to:
+  /// **'+966  |  Phone number'**
+  String get saudiArabiaCountryCode;
 
   /// No description provided for @enterEmaill.
   ///

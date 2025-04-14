@@ -48,6 +48,7 @@ class LoginFormWithPhone extends ConsumerWidget
     final obscureText = ref.watch(obscurePasswordProvider);
 
     final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
+    final phoneNumberHolder = ref.watch(countryControllerProvider);
     final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
 
     return Container(
@@ -96,7 +97,7 @@ class LoginFormWithPhone extends ConsumerWidget
                 fieldPrefixIcon: InkWell( //HERE
                   onTap: () => showCountriesPhoneNumberBottomSheet(context),
                   child: Image.asset(selectedCountryFlagPath)),
-                fieldText: AppLocalizations.of(context).countryCode,
+                fieldText: phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
                 
               AppSizes.size24.verticalSpace,
