@@ -9,7 +9,6 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -38,7 +37,7 @@ class AppForm extends ConsumerWidget
     final themeLabel = getSelectedThemeLabel(ref, context);
     
     final localeController = ref.read(localizationControllerProvider.notifier);
-    final arrow = localeController.selectedLanguageIndex == 1 ? AppAssets.iconsPNG.leftBlackArrowPNG : AppAssets.iconsPNG.rightBlackArrowPNG;
+    final arrow = localeController.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG;
 
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
 
