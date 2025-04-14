@@ -207,7 +207,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get emailIsRequired => 'Email is required';
 
   @override
-  String get invalidEmail => 'Invalid Email';
+  String get invalidEmailSymbol => 'Email must contain \'@\' symbol.';
+
+  @override
+  String get invalidEmailDomain => 'Email must end with a valid domain (e.g., .com, .org).';
+
+  @override
+  String get validateFailurEmail => 'Error validating email: ';
+
+  @override
+  String get phoneNumberIsRequired => 'Phone number is required';
+
+  @override
+  String get invalidPhoneNumber => 'Invalid phone number';
 
   @override
   String get passwordIsRequired => 'Password is required';
@@ -216,8 +228,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get invalidPassword => 'Invalid Password';
 
   @override
-  String get phoneNumberIsRequired => 'Phone number is required';
+  String get validateFailurPassword => 'Error validating password:';
 
   @override
-  String get invalidPhoneNumber => 'Invalid phone number';
+  String get passwordLength8Character => 'Password must be at least 8 characters long.';
+
+  @override
+  String get passwordOneUpperCase => 'Password must contain at least one uppercase letter.';
+
+  @override
+  String get passwordOneLowerCase => 'Password must contain at least one lowercase letter.';
+
+  @override
+  String get passwordOneNumber => 'Password must contain at least one number.';
+
+  @override
+  String get passwordOneSpecialCharacter => 'Password must contain at least one special character.';
 }

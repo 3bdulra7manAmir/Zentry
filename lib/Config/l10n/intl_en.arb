@@ -78,13 +78,22 @@
   "astric": "*",
   "backSpace": "⌫",
 
+  
   "emailIsRequired": "Email is required",
-  "invalidEmail": "Invalid Email",
+  "invalidEmailSymbol": "Email must contain '@' symbol.",
+  "invalidEmailDomain": "Email must end with a valid domain (e.g., .com, .org).",
+  "validateFailurEmail": "Error validating email: ",
+
+  "phoneNumberIsRequired": "Phone number is required",
+  "invalidPhoneNumber": "Invalid phone number",
 
   "passwordIsRequired": "Password is required",
   "invalidPassword": "Invalid Password",
-
-  "phoneNumberIsRequired": "Phone number is required",
-  "invalidPhoneNumber": "Invalid phone number"
-
+  "validateFailurPassword": "Error validating password:",
+  "passwordLength8Character": "Password must be at least 8 characters long.",
+  "passwordOneUpperCase": "Password must contain at least one uppercase letter.",
+  "passwordOneLowerCase": "Password must contain at least one lowercase letter.",
+  "passwordOneNumber": "Password must contain at least one number.",
+  "passwordOneSpecialCharacter": "Password must contain at least one special character."
+  
 }

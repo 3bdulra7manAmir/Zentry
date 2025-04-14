@@ -14,17 +14,17 @@ String emailValidation(String? value, BuildContext context)
 
     if (!value.contains('@'))
     {
-      return "Email must contain '@' symbol.";
+      return AppLocalizations.of(context).invalidEmailSymbol;
     }
 
     if (!value.emailEndsWithDomain)
     {
-      return "Email must end with a valid domain (e.g., .com, .org).";
+      return AppLocalizations.of(context).invalidEmailDomain;
     }
 
     if (!value.isEmail)
     {
-      return AppLocalizations.of(context).invalidEmail;
+      return AppLocalizations.of(context).enterEmaill;
     }
 
     return ""; // No errors
@@ -32,7 +32,7 @@ String emailValidation(String? value, BuildContext context)
   
   catch (e)
   {
-    return "Error validating email: ${e.toString()}";
+    return "${AppLocalizations.of(context).validateFailurEmail} ${e.toString()}";
   }
 }
 

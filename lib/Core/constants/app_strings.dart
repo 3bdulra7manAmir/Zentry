@@ -167,10 +167,19 @@ abstract class AppStrings
   ///App Validation
   
   static const emailIsRequired = "Email is required";
-  static const invalidEmail = "Invalid Email";
-  static const passwordIsRequired = "Password is required";
-  static const invalidPassword = "Invalid Password";
+  static const invalidEmailSymbol = "Email must contain '@' symbol.";
+  static const invalidEmailDomain = "Email must end with a valid domain (e.g., .com, .org).";
+  static const validateFailurEmail = "Error validating email: ";
+
   static const phoneNumberIsRequired = "Phone number is required";
   static const invalidPhoneNumber = "Invalid phone number";
 
+  static const passwordIsRequired = "Password is required";
+  static const invalidPassword = "Invalid Password";
+  static const validateFailurPassword = "Error validating password:";
+  static const passwordLength8Character = "Password must be at least 8 characters long.";
+  static const passwordOneUpperCase = "Password must contain at least one uppercase letter.";
+  static const passwordOneLowerCase = "Password must contain at least one lowercase letter.";
+  static const passwordOneNumber = "Password must contain at least one number.";
+  static const passwordOneSpecialCharacter = "Password must contain at least one special character.";
 }

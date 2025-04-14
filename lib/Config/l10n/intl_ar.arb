@@ -76,15 +76,23 @@
     "astric": "*",
     "backSpace": "⌫",
 
-
-    "emailIsRequired": "ادخل البريد الالكتروني",
-    "invalidEmail": "بريد الكتروني غير صالح",
+    
+    "emailIsRequired": "البريد الإلكتروني مطلوب",
+    "invalidEmailSymbol": "يجب أن يحتوي البريد الإلكتروني على رمز '@'.",
+    "invalidEmailDomain": "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثال: .com، .org).",
+    "validateFailurEmail": "حدث خطأ أثناء التحقق من البريد الإلكتروني:",
   
-    "passwordIsRequired": "ادخل كلمة المرور",
-    "invalidPassword": "كلمة مرور غير صالحه",
-
-    "phoneNumberIsRequired": "ادخل رقم الهاتف",
-    "invalidPhoneNumber": "رقم هاتف غير صالح"
+    "phoneNumberIsRequired": "رقم الهاتف مطلوب",
+    "invalidPhoneNumber": "رقم الهاتف غير صالح",
+  
+    "passwordIsRequired": "كلمة المرور مطلوبة",
+    "invalidPassword": "كلمة المرور غير صالحة",
+    "validateFailurPassword": "حدث خطأ أثناء التحقق من كلمة المرور:",
+    "passwordLength8Character": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+    "passwordOneUpperCase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
+    "passwordOneLowerCase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
+    "passwordOneNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
+    "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل."
 
   }
   

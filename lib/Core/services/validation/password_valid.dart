@@ -15,23 +15,23 @@ String passwordValidation(String? value, BuildContext context)
 
     if (!password.passwordIsLongEnough)
     {
-      return "Password must be at least 8 characters long.";
+      return AppLocalizations.of(context).passwordLength8Character;
     }
     if (!password.passwordHasUpperCase)
     {
-      return "Password must contain at least one uppercase letter.";
+      return AppLocalizations.of(context).passwordOneUpperCase;
     }
     if (!password.passwordHasLowerCase)
     {
-      return "Password must contain at least one lowercase letter.";
+      return AppLocalizations.of(context).passwordOneLowerCase;
     }
     if (!password.passwordHasDigit)
     {
-      return "Password must contain at least one number.";
+      return AppLocalizations.of(context).passwordOneNumber;
     }
     if (!password.passwordHasSpecialChar)
     {
-      return "Password must contain at least one special character.";
+      return AppLocalizations.of(context).passwordOneSpecialCharacter;
     }
 
     if (!password.hasValidPassword)
@@ -44,6 +44,6 @@ String passwordValidation(String? value, BuildContext context)
   
   catch (e)
   {
-    return "Error validating password: ${e.toString()}";
+    return "${AppLocalizations.of(context).validateFailurPassword} ${e.toString()}";
   }
 }

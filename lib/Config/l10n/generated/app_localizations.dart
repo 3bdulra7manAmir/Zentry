@@ -491,11 +491,35 @@ abstract class AppLocalizations {
   /// **'Email is required'**
   String get emailIsRequired;
 
-  /// No description provided for @invalidEmail.
+  /// No description provided for @invalidEmailSymbol.
   ///
   /// In en, this message translates to:
-  /// **'Invalid Email'**
-  String get invalidEmail;
+  /// **'Email must contain \'@\' symbol.'**
+  String get invalidEmailSymbol;
+
+  /// No description provided for @invalidEmailDomain.
+  ///
+  /// In en, this message translates to:
+  /// **'Email must end with a valid domain (e.g., .com, .org).'**
+  String get invalidEmailDomain;
+
+  /// No description provided for @validateFailurEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Error validating email: '**
+  String get validateFailurEmail;
+
+  /// No description provided for @phoneNumberIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number is required'**
+  String get phoneNumberIsRequired;
+
+  /// No description provided for @invalidPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid phone number'**
+  String get invalidPhoneNumber;
 
   /// No description provided for @passwordIsRequired.
   ///
@@ -509,17 +533,41 @@ abstract class AppLocalizations {
   /// **'Invalid Password'**
   String get invalidPassword;
 
-  /// No description provided for @phoneNumberIsRequired.
+  /// No description provided for @validateFailurPassword.
   ///
   /// In en, this message translates to:
-  /// **'Phone number is required'**
-  String get phoneNumberIsRequired;
+  /// **'Error validating password:'**
+  String get validateFailurPassword;
 
-  /// No description provided for @invalidPhoneNumber.
+  /// No description provided for @passwordLength8Character.
   ///
   /// In en, this message translates to:
-  /// **'Invalid phone number'**
-  String get invalidPhoneNumber;
+  /// **'Password must be at least 8 characters long.'**
+  String get passwordLength8Character;
+
+  /// No description provided for @passwordOneUpperCase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one uppercase letter.'**
+  String get passwordOneUpperCase;
+
+  /// No description provided for @passwordOneLowerCase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one lowercase letter.'**
+  String get passwordOneLowerCase;
+
+  /// No description provided for @passwordOneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one number.'**
+  String get passwordOneNumber;
+
+  /// No description provided for @passwordOneSpecialCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one special character.'**
+  String get passwordOneSpecialCharacter;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

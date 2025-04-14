@@ -204,20 +204,44 @@ class AppLocalizationsAr extends AppLocalizations {
   String get backSpace => '⌫';
 
   @override
-  String get emailIsRequired => 'ادخل البريد الالكتروني';
+  String get emailIsRequired => 'البريد الإلكتروني مطلوب';
 
   @override
-  String get invalidEmail => 'بريد الكتروني غير صالح';
+  String get invalidEmailSymbol => 'يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.';
 
   @override
-  String get passwordIsRequired => 'ادخل كلمة المرور';
+  String get invalidEmailDomain => 'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثال: .com، .org).';
 
   @override
-  String get invalidPassword => 'كلمة مرور غير صالحه';
+  String get validateFailurEmail => 'حدث خطأ أثناء التحقق من البريد الإلكتروني:';
 
   @override
-  String get phoneNumberIsRequired => 'ادخل رقم الهاتف';
+  String get phoneNumberIsRequired => 'رقم الهاتف مطلوب';
 
   @override
-  String get invalidPhoneNumber => 'رقم هاتف غير صالح';
+  String get invalidPhoneNumber => 'رقم الهاتف غير صالح';
+
+  @override
+  String get passwordIsRequired => 'كلمة المرور مطلوبة';
+
+  @override
+  String get invalidPassword => 'كلمة المرور غير صالحة';
+
+  @override
+  String get validateFailurPassword => 'حدث خطأ أثناء التحقق من كلمة المرور:';
+
+  @override
+  String get passwordLength8Character => 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.';
+
+  @override
+  String get passwordOneUpperCase => 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
+
+  @override
+  String get passwordOneLowerCase => 'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.';
+
+  @override
+  String get passwordOneNumber => 'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.';
+
+  @override
+  String get passwordOneSpecialCharacter => 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
 }
