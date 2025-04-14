@@ -38,7 +38,6 @@ class AppForm extends ConsumerWidget
     
     final localeController = ref.read(localizationControllerProvider.notifier);
     final arrow = localeController.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG;
-
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
 
     return Container(

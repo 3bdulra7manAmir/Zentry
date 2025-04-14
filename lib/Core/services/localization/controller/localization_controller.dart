@@ -8,7 +8,7 @@ part 'localization_controller.g.dart';
 @riverpod
 class LocalizationController extends _$LocalizationController
 {
-  int selectedLanguageIndex = 0;
+  int selectedLanguageIndex = 1;
 
   @override
   Locale build()
