@@ -71,7 +71,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.kResetPasswordView,
         name: AppRoutes.kResetPasswordView,
-        builder: (context, state) => const RestPasswordView(),
+        builder: (context, state) => RestPasswordView(),
       ),
 
       // App Verification Code View

@@ -13,54 +13,55 @@ import '../../data/form_data/app_countries_list.dart';
 import '../../../../../core/widgets/app_form_container.dart';
 import '../controllers/countries_icon_update_provider.dart';
 
-void showCountriesDialog(BuildContext context)
+void showCountriesBottomSheet(BuildContext context)
 {
-  showDialog(
+  showModalBottomSheet(
     context: context,
-    barrierDismissible: true,
+    backgroundColor: Theme.of(context).cardColor,
+    isDismissible: true,
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
     builder: (BuildContext context)
     {
       final List<List<String>> countriesList = getCountriesList(context);
-      return Dialog(
-        backgroundColor: Theme.of(context).cardColor,
-        insetPadding: AppPadding.kAppFormPadding,
-        shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
+      return Padding(
+        padding: AppPadding.kAppFormPadding,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children:
+          [
+            AppSizes.size8.verticalSpace,
 
-        child: Padding(
-          padding: AppPadding.kAppFormPadding,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children:
-            [
-              AppSizes.size8.verticalSpace,
-
-              Container(
-                margin: AppPadding.kAppFormPadding,
-                alignment: Alignment.center,
-                width: 44.w,
-                height: 4.h,
-                decoration: BoxDecoration(
-                  color: AppColors.color.kSecondarySemiGreyText,
-                  borderRadius: AppBorders.dividerBorder,
-                ),
+            Container(
+              margin: AppPadding.kAppFormPadding,
+              alignment: Alignment.center,
+              width: 44.w,
+              height: 4.h,
+              decoration: BoxDecoration(
+                color: AppColors.color.kSecondarySemiGreyText,
+                borderRadius: AppBorders.dividerBorder,
               ),
+            ),
 
-              AppSizes.size18.verticalSpace,
+            AppSizes.size18.verticalSpace,
 
-              CustomContainer(
-                fieldText: AppLocalizations.of(context).search,
-                fieldhintStyle: AppStyles.textStyle10(),
-                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
-              ),
+            CustomContainer(
+              fieldText: AppLocalizations.of(context).search,
+              fieldhintStyle: AppStyles.textStyle10(),
+              fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
+            ),
 
-              AppSizes.size16.verticalSpace,
+            AppSizes.size16.verticalSpace,
 
-              Consumer(
-                builder: (context, ref, _)
-                {
-                  return ListView.separated(
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) => InkWell(
+            Consumer(
+              builder: (context, ref, _)
+              {
+                return ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: countriesList.length,
+                  separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
+                  itemBuilder: (context, index)
+                  {
+                    return InkWell(
                       onTap: ()
                       {
                         ref.read(countryControllerProvider.notifier).setSelectedIndex(index);
@@ -74,18 +75,17 @@ void showCountriesDialog(BuildContext context)
                           Text(countriesList[index][1]),
                         ],
                       ),
-                    ),
-                    separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-                    itemCount: countriesList.length,
-                  );
-                },
-              ),
+                    );
+                  },
+                );
+              },
+            ),
 
-              AppSizes.size13.verticalSpace,
-            ],
-          ),
+            AppSizes.size13.verticalSpace,
+          ],
         ),
       );
     },
   );
 }
+

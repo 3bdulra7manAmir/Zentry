@@ -13,7 +13,7 @@ class CustomTextFormField extends StatelessWidget
   required this.fieldText,
   this.fieldhintStyle,
   this.fieldsuffixIcon,
-  this.fieldKeyboardAppearance,
+  //this.fieldKeyboardAppearance,
   this.fieldObscureText,
   this.fieldIsEnabled,
   });
@@ -25,7 +25,7 @@ class CustomTextFormField extends StatelessWidget
   final String? Function(String?)? fieldValidator;
   final TextEditingController? fieldController;
   final TextInputType fieldKeyboardType;
-  final Brightness? fieldKeyboardAppearance;
+  //final Brightness? fieldKeyboardAppearance;
   final bool? fieldObscureText;
   final bool? fieldIsEnabled;
 
@@ -35,7 +35,7 @@ class CustomTextFormField extends StatelessWidget
     return TextFormField(
       enabled: fieldIsEnabled ?? true,
       keyboardType: fieldKeyboardType,
-      keyboardAppearance: fieldKeyboardAppearance,
+      //keyboardAppearance: fieldKeyboardAppearance,
       obscureText: fieldObscureText ?? false,
       controller: fieldController,
       validator: fieldValidator,

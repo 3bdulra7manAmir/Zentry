@@ -43,7 +43,7 @@ class LoginFormWithEmail extends ConsumerWidget
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
-      color: AppColors.color.kSecondaryWhite,
+      color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Form(
           key: loginEmailFormKey,

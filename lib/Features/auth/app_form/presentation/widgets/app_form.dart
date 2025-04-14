@@ -68,7 +68,7 @@ class AppForm extends ConsumerWidget
             AppSizes.size28.verticalSpace,
         
             GestureDetector(
-              onTap: () => showLanguageDialog(context),
+              onTap: () => showLanguageBottomSheet(context),
               child: CustomContainer(
                 fieldPrefixIcon: Image.asset(selectedLanguageFlag,),
                 fieldText: selectedLanguageLabel,
@@ -79,14 +79,14 @@ class AppForm extends ConsumerWidget
             AppSizes.size16.verticalSpace,
         
             GestureDetector(
-              onTap: () => showCountriesDialog(context),
+              onTap: () => showCountriesBottomSheet(context),
               child: CustomContainer(fieldPrefixIcon: Image.asset(selectedCountryFlagPath), fieldText: selectedCountryName, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
             ),
         
             AppSizes.size16.verticalSpace,
         
             GestureDetector(
-              onTap: () => showThemesDialog(context),
+              onTap: () => showThemesBottomSheet(context),
               child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: themeLabel, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)),
         
             AppSizes.size27.verticalSpace,
