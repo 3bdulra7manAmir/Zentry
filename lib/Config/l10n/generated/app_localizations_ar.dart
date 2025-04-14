@@ -42,10 +42,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get phone => 'الهاتف';
 
   @override
-  String get egyptCountryCode => '+20  |  رقم الهاتف';
+  String get egyptCountryCode => '+٢٠  |  رقم الهاتف';
 
   @override
-  String get saudiArabiaCountryCode => '+966  |  رقم الجوال';
+  String get saudiArabiaCountryCode => '+٩٦٦  |  رقم الجوال';
 
   @override
   String get enterEmaill => 'أدخل البريد الإلكتروني';
@@ -111,7 +111,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get verificationCode => 'رمز التحقق';
 
   @override
-  String get pleaseEnter5DigitalCodeSendTo => 'يرجى إدخال رمز مكون من 5 أرقام تم إرساله إلى';
+  String get pleaseEnter5DigitalCodeSendTo => 'يرجى إدخال رمز مكون من ٥ أرقام تم إرساله إلى';
 
   @override
   String get appgmailcom => 'APP@gmail.com';
@@ -126,7 +126,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get requestPhoneCall => 'طلب مكالمة هاتفية';
 
   @override
-  String get resendIn60s => 'إعادة الإرسال خلال 60 ثانية';
+  String get resendIn60s => 'إعادة الإرسال خلال ٦٠ ثانية';
 
   @override
   String get search => 'بحث';
@@ -231,7 +231,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get validateFailurPassword => 'حدث خطأ أثناء التحقق من كلمة المرور:';
 
   @override
-  String get passwordLength8Character => 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.';
+  String get passwordLength8Character => 'يجب أن تتكون كلمة المرور من ٨ أحرف على الأقل.';
 
   @override
   String get passwordOneUpperCase => 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
