@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/features/auth/login_and_register/presentation/widgets/phone_number_dialog.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
@@ -17,6 +18,7 @@ import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
 import '../controllers/obsecure_text_provider.dart';
@@ -44,6 +46,8 @@ class LoginFormWithPhone extends ConsumerWidget
     final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
     final isChecked = ref.watch(checkboxValueProvider);
     final obscureText = ref.watch(obscurePasswordProvider);
+
+    final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
     final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
 
     return Container(
@@ -89,8 +93,10 @@ class LoginFormWithPhone extends ConsumerWidget
                 fieldKeyboardType: TextInputType.phone,
                 fieldValidator: (value) => phoneNumberValidation(value, context),
                 fieldController: phoneNumberController,
-                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.egyptFlagPNG),
-                fieldText: AppLocalizations.of(context).countryCode
+                fieldPrefixIcon: InkWell( //HERE
+                  onTap: () => showCountriesPhoneNumberBottomSheet(context),
+                  child: Image.asset(selectedCountryFlagPath)),
+                fieldText: AppLocalizations.of(context).countryCode,
               ),
                 
               AppSizes.size24.verticalSpace,

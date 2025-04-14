@@ -6,10 +6,10 @@ import '../../../../../config/themes/color_system/colors_manager/app_colors.dart
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
-import '../../data/form_data/app_languages_list.dart';
-import '../../../../../core/services/localization/controller/localization_controller.dart';
+import '../../../app_form/data/form_data/app_countries_list.dart';
+import '../../../app_form/presentation/controllers/countries_icon_update_provider.dart';
 
-void showLanguageBottomSheet(BuildContext context)
+void showCountriesPhoneNumberBottomSheet(BuildContext context)
 {
   showModalBottomSheet(
     context: context,
@@ -18,7 +18,7 @@ void showLanguageBottomSheet(BuildContext context)
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
     builder: (BuildContext context)
     {
-      final List<dynamic> languagesList = getLanguagesList(context);
+      final List<List<String>> countriesList = getCountriesList(context);
       return Padding(
         padding: AppPadding.kAppFormPadding,
         child: Column(
@@ -43,26 +43,24 @@ void showLanguageBottomSheet(BuildContext context)
             Consumer(
               builder: (context, ref, _)
               {
-                final localeController = ref.read(localizationControllerProvider.notifier);
                 return ListView.separated(
                   shrinkWrap: true,
-                  itemCount: languagesList.length,
+                  itemCount: 2,
                   separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
                   itemBuilder: (context, index)
                   {
-                    final language = languagesList[index];
                     return InkWell(
                       onTap: ()
                       {
-                        localeController.setLocale(language[2] as Locale, index);
+                        ref.read(countryControllerProvider.notifier).setSelectedIndex(index);
                         AppRouter.router.pop();
                       },
                       child: Row(
                         children:
                         [
-                          Image.asset(language[0] as String),
+                          Image.asset(countriesList[index][0]),
                           AppSizes.size12.horizontalSpace,
-                          Text(language[1] as String),
+                          Text(countriesList[index][1]),
                         ],
                       ),
                     );
@@ -78,3 +76,4 @@ void showLanguageBottomSheet(BuildContext context)
     },
   );
 }
+
