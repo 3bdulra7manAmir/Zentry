@@ -1,12 +1,12 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../config/themes/app_sizes.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
 
-class CustomButton extends StatelessWidget
+class CustomButton extends ConsumerWidget
 {
   const CustomButton({
     super.key,
@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget
   final void Function()? buttonOnPressed;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
@@ -41,7 +41,7 @@ class CustomButton extends StatelessWidget
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppSizes.size1,),
+              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.width1,),
             ),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),

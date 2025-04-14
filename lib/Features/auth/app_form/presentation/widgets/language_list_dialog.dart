@@ -44,15 +44,6 @@ void showLanguageBottomSheet(BuildContext context)
 
             AppSizes.size18.verticalSpace,
 
-            // Search Field
-            CustomContainer(
-              fieldText: AppLocalizations.of(context).search,
-              fieldhintStyle: AppStyles.textStyle10(),
-              fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
-            ),
-
-            AppSizes.size16.verticalSpace,
-
             Consumer(
               builder: (context, ref, _)
               {

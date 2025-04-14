@@ -30,7 +30,6 @@ class LoginFormWithEmail extends ConsumerWidget
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {

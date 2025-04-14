@@ -9,6 +9,8 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
+import '../../../../../config/themes/color_system/controller/theme_controller.dart';
+import '../../../../../core/services/localization/controller/localization_controller.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_form_container.dart';
@@ -34,6 +36,10 @@ class AppForm extends ConsumerWidget
     final selectedCountryName = getSelectedCountryName(ref, context);
 
     final themeLabel = getSelectedThemeLabel(ref, context);
+    
+    final localeController = ref.read(localizationControllerProvider.notifier);
+    final arrow = localeController.selectedLanguageIndex == 1 ? AppAssets.iconsPNG.leftBlackArrowPNG : AppAssets.iconsPNG.rightBlackArrowPNG;
+
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
 
     return Container(
@@ -72,7 +78,7 @@ class AppForm extends ConsumerWidget
               child: CustomContainer(
                 fieldPrefixIcon: Image.asset(selectedLanguageFlag,),
                 fieldText: selectedLanguageLabel,
-                fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),
+                fieldsuffixIcon: Image.asset(arrow),
               ),
             ),
         
@@ -80,14 +86,14 @@ class AppForm extends ConsumerWidget
         
             GestureDetector(
               onTap: () => showCountriesBottomSheet(context),
-              child: CustomContainer(fieldPrefixIcon: Image.asset(selectedCountryFlagPath), fieldText: selectedCountryName, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)
+              child: CustomContainer(fieldPrefixIcon: Image.asset(selectedCountryFlagPath), fieldText: selectedCountryName, fieldsuffixIcon: Image.asset(arrow),)
             ),
         
             AppSizes.size16.verticalSpace,
         
             GestureDetector(
               onTap: () => showThemesBottomSheet(context),
-              child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: themeLabel, fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.leftBlackArrowPNG),)),
+              child: CustomContainer(fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG), fieldText: themeLabel, fieldsuffixIcon: Image.asset(arrow),)),
         
             AppSizes.size27.verticalSpace,
         
