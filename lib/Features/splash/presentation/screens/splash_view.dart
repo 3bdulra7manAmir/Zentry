@@ -34,7 +34,6 @@ class _SplashViewState extends State<SplashView>
           children:
           [
             Image.asset(AppAssets.iconsPNG.appLogoPNG),
-            //SvgPicture.asset(AppAssets.iconsSVG.robotIconSVG),
           ],
         ),
       ),

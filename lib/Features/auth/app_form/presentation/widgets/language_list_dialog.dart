@@ -6,8 +6,8 @@ import '../../../../../config/themes/color_system/colors_manager/app_colors.dart
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/database/static/form_data/app_languages_list.dart';
-import '../../../../../core/services/localization/controller/localization_controller.dart';
 
 void showLanguageBottomSheet(BuildContext context)
 {
@@ -43,26 +43,25 @@ void showLanguageBottomSheet(BuildContext context)
             Consumer(
               builder: (context, ref, _)
               {
-                final localeController = ref.read(localizationControllerProvider.notifier);
+                final provider = AppProvidersProvider(ref, context);
                 return ListView.separated(
                   shrinkWrap: true,
                   itemCount: languagesList.length,
                   separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
                   itemBuilder: (context, index)
                   {
-                    final language = languagesList[index];
                     return InkWell(
                       onTap: ()
                       {
-                        localeController.setLocale(language[2] as Locale, index);
+                        provider.localeState.setLocale(languagesList[index][2] as Locale, index);
                         AppRouter.router.pop();
                       },
                       child: Row(
                         children:
                         [
-                          Image.asset(language[0] as String),
+                          Image.asset(languagesList[index][0]),
                           AppSizes.size12.horizontalSpace,
-                          Text(language[1] as String),
+                          Text(languagesList[index][1]),
                         ],
                       ),
                     );

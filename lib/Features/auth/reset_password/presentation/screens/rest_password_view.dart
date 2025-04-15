@@ -10,6 +10,7 @@ import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../login_and_register/presentation/controllers/obsecure_text_provider.dart';
@@ -25,8 +26,9 @@ class RestPasswordView extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final obscureText = ref.watch(obscurePasswordProvider);
+    final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> resetPasswordFormKey = GlobalKey<FormState>();
+
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
       body: Form(
@@ -54,7 +56,7 @@ class RestPasswordView extends ConsumerWidget
                     AppSizes.size9.verticalSpace,
           
                     CustomTextFormField(
-                      fieldObscureText: obscureText,
+                      fieldObscureText: provider.obscureText,
                       fieldKeyboardType: TextInputType.text,
                       fieldValidator: (value) => passwordValidation(value, context),
                       fieldController: passwordController,                  
@@ -71,7 +73,7 @@ class RestPasswordView extends ConsumerWidget
                     AppSizes.size9.verticalSpace,
           
                     CustomTextFormField(
-                      fieldObscureText: obscureText,
+                      fieldObscureText: provider.obscureText,
                       fieldValidator: (value) => passwordValidation(value, context),
                       fieldController: confirmPasswordController,
                       fieldKeyboardType: TextInputType.text,
@@ -83,7 +85,7 @@ class RestPasswordView extends ConsumerWidget
                         {
                           ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
                         },
-                        child: Image.asset(obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                        child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
                       ),
                     
                       ),
@@ -95,7 +97,7 @@ class RestPasswordView extends ConsumerWidget
                       buttonTextStyle: AppStyles.textStyle22(),
                       buttonOnPressed: ()
                       {
-          
+                        //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
                       },
                     ),
                   ],

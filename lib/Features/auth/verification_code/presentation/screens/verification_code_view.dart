@@ -92,7 +92,10 @@ class VerificationCodeView extends StatelessWidget
                   Row(
                     children:
                     [
-                      Text(AppLocalizations.of(context).dontReceiveACode, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+                      Text(AppLocalizations.of(context).dontReceiveACode, style: AppStyles.textStyle14(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kSeptenarySemiGreyText),
+                      ),
         
                       AppSizes.size6.horizontalSpace,
         
@@ -109,7 +112,10 @@ class VerificationCodeView extends StatelessWidget
                   AppSizes.size24.verticalSpace,
         
                   CustomButton(
-                    buttonOnPressed: () {},
+                    buttonOnPressed: ()
+                    {
+                      //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                    },
                     buttonText: AppLocalizations.of(context).resendIn60s,
                     buttonTextStyle: AppStyles.textStyle16(
                     fontWeight: AppFontWeights.semiBoldWeight,
@@ -121,7 +127,6 @@ class VerificationCodeView extends StatelessWidget
             ),
         
             AppSizes.size60.verticalSpace,
-            //Spacer(),
         
             const NumericKeyboard(),
         

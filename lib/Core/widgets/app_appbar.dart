@@ -7,7 +7,7 @@ import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 import '../constants/app_images.dart';
 import '../constants/app_styles.dart';
-import '../helpers/app_providers_accessor.dart';
+import '../helpers/app_providers.dart';
 
 class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
 {

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/constants/app_images.dart';
 import '../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../core/helpers/app_providers_accessor.dart';
+import '../../../core/helpers/app_providers.dart';
 
 
 class FormHeader extends ConsumerWidget
@@ -38,8 +38,8 @@ class FormHeader extends ConsumerWidget
 
           (isText ?? false) ? Positioned(
             top: 100.h,
-            left: provider.locale.selectedLanguageIndex == 1 ? 17.w : 0.w,
-            right: provider.locale.selectedLanguageIndex == 1 ? 0.w : 17.w,
+            left: provider.localeState.selectedLanguageIndex == 1 ? 17.w : 0.w,
+            right: provider.localeState.selectedLanguageIndex == 1 ? 0.w : 17.w,
             child: Text(downleftText ?? "", style: AppStyles.textStyle18(),)) : const SizedBox.shrink(),
 
           (isText ?? false) ? Positioned(top: 44.h, right: 17.w,
@@ -54,7 +54,7 @@ class FormHeader extends ConsumerWidget
                       textDecorationColor: AppColors.color.kTertiaryWhiteText),
                     ),
                   ),
-                Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG)
+                Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),
           ) : const SizedBox.shrink(),

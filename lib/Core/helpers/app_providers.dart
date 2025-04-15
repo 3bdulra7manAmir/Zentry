@@ -25,9 +25,11 @@ class AppProvidersProvider
   AppProvidersProvider(this.ref, this.context);
 
   // Localization
-  LocalizationController get locale => ref.read(localizationControllerProvider.notifier);
+  LocalizationController get localeState => ref.read(localizationControllerProvider.notifier);
+  Locale get locale => ref.watch(localizationControllerProvider);
 
   // Theme Mode
+  ThemeController get themeController => ref.read(themeControllerProvider.notifier);
   ThemeMode get themeMode => ref.watch(themeControllerProvider);
   // Theme Label
   String get themeLabel => getSelectedThemeLabel(ref, context);

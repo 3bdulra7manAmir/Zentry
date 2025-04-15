@@ -9,7 +9,7 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-import '../../../../../core/helpers/app_providers_accessor.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_container.dart';
@@ -54,7 +54,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.languageFlag),
               fieldText: provider.languageLabel,
-              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -63,7 +63,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.countryFlag),
               fieldText: provider.countryLabel,
-              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -72,7 +72,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG),
               fieldText: provider.themeLabel,
-              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size27.verticalSpace,

@@ -14,7 +14,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/helpers/app_providers_accessor.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
@@ -114,7 +114,9 @@ class LoginFormWithEmail extends ConsumerWidget
                   side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),
                   ),
           
-                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey),),
+                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
+                    textColor: AppColors.color.kTertiarySemiGrey),
+                  ),
           
                   const Spacer(),
           

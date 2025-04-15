@@ -70,13 +70,17 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                     Row(
                       children:
                       [
-                        Text(AppLocalizations.of(context).dontHaveEmail, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+                        Text(AppLocalizations.of(context).dontHaveEmail, style: AppStyles.textStyle14(
+                          fontWeight: AppFontWeights.mediumWeight,
+                          textColor: AppColors.color.kSeptenarySemiGreyText),
+                        ),
           
                         AppSizes.size14.horizontalSpace,
           
                         GestureDetector(
                           onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
-                          child: Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
+                          child: Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(
+                              fontWeight: AppFontWeights.mediumWeight,
                               textColor: AppColors.color.kQuinarySemiBlueText, textDecoration: TextDecoration.underline,
                               textDecorationColor: AppColors.color.kQuinarySemiBlueText,
                             ),
@@ -91,9 +95,9 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                       buttonOnPressed: ()
                       {
                         if (emailFormKey.currentState!.validate())
-                          {
-                            //AppRouter.router.
-                          }
+                        {
+                          AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                        }
                       },
                       buttonText: AppLocalizations.of(context).verify,
                       buttonTextStyle: AppStyles.textStyle22(),

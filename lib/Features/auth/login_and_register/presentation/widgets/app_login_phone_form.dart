@@ -12,7 +12,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/helpers/app_providers_accessor.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/password_valid.dart';
 import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
@@ -51,11 +51,15 @@ class LoginFormWithPhone extends ConsumerWidget
               Row(
                 children:
                 [
-                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
+                    textColor: AppColors.color.kQuaternarySemiBlackText,),
+                  ),
                   
                   const Spacer(),
           
-                  Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondarySemiGreyText,),),
+                  Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(
+                    textColor: AppColors.color.kSecondarySemiGreyText,),
+                  ),
                   
                   AppSizes.size4.horizontalSpace,
           
@@ -84,7 +88,9 @@ class LoginFormWithPhone extends ConsumerWidget
                 
               AppSizes.size24.verticalSpace,
                 
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(
+                textColor: AppColors.color.kQuaternarySemiBlackText,),
+              ),
                 
               AppSizes.size8.verticalSpace,
                 
@@ -117,7 +123,9 @@ class LoginFormWithPhone extends ConsumerWidget
                 side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),
                 ),
           
-                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey),),
+                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
+                    textColor: AppColors.color.kTertiarySemiGrey),
+                  ),
           
                   const Spacer(),
           
@@ -150,7 +158,10 @@ class LoginFormWithPhone extends ConsumerWidget
                 
               Align(
                 alignment: Alignment.center,
-                child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSenaryTotalBlackText),)
+                child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(
+                  fontWeight: AppFontWeights.boldWeight,
+                  textColor: AppColors.color.kSenaryTotalBlackText),
+                ),
               ),
                 
               AppSizes.size20.verticalSpace,

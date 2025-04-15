@@ -3,11 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/helpers/app_providers.dart';
 
 void showThemesBottomSheet(BuildContext context)
 {
@@ -22,13 +23,10 @@ void showThemesBottomSheet(BuildContext context)
       return Consumer(
         builder: (context, ref, _)
         {
-          final themeController = ref.read(themeControllerProvider.notifier);
-          final currentThemeMode = ref.watch(themeControllerProvider);
-
+          final provider = AppProvidersProvider(ref, context);
           return StatefulBuilder(
             builder: (context, setState)
             {
-              ThemeMode selectedMode = currentThemeMode;
 
               return Padding(
                 padding: AppPadding.kAppFormPadding,
@@ -58,14 +56,14 @@ void showThemesBottomSheet(BuildContext context)
 
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.light,
-                          groupValue: selectedMode,
+                          groupValue: provider.themeMode,
                           onChanged: (value)
                           {
                             if (value != null)
                             {
-                              setState(() => selectedMode = value);
-                              themeController.setTheme(value);
-                              Navigator.pop(context);
+                              setState(() => provider.themeMode);
+                              provider.themeController.setTheme(value);
+                              AppRouter.router.pop();
                             }
                           },
                           title: Text(AppLocalizations.of(context).light),
@@ -74,13 +72,13 @@ void showThemesBottomSheet(BuildContext context)
 
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.dark,
-                          groupValue: selectedMode,
+                          groupValue: provider.themeMode,
                           onChanged: (value)
                           {
                             if (value != null)
                             {
-                              setState(() => selectedMode = value);
-                              themeController.setTheme(value);
+                              setState(() => provider.themeMode);
+                              provider.themeController.setTheme(value);
                               Navigator.pop(context);
                             }
                           },

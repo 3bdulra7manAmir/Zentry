@@ -12,7 +12,7 @@ class UserPreferences
   static const String _themeKey = 'theme';
 
   static const String _defaultLanguage = 'en';
-  static const String _defaultCountry = 'US';
+  static const String _defaultCountry = 'Egypt';
 
   SharedPreferences? _prefs;
 
@@ -39,7 +39,6 @@ class UserPreferences
     return prefs.getString(_languageKey) ?? _defaultLanguage;
   }
 
-  // Country
   Future<void> saveCountry(String code) async
   {
     final prefs = await _preferences;
@@ -74,5 +73,11 @@ class UserPreferences
 
     final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
     return brightness == Brightness.dark;
+  }
+
+  Future<void> clearAll() async
+  {
+    final prefs = await _preferences;
+    await prefs.clear();
   }
 }

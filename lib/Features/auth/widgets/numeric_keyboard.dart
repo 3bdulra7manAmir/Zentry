@@ -4,7 +4,7 @@ import '../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_styles.dart';
-import '../../../../core/data/app_keyboard_numbers.dart';
+import '../../../core/services/database/static/app_keyboard_numbers.dart';
 
 
 class NumericKeyboard extends ConsumerWidget
