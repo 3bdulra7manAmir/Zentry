@@ -8,6 +8,7 @@ import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers_accessor.dart';
 import '../controllers/email_or_phone_provider.dart';
 import 'app_login_email_form.dart';
 import 'app_login_phone_form.dart';
@@ -21,7 +22,7 @@ class AuthTabs extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final loginType = ref.watch(loginTypeProvider); // Get current login type
+    final provider = AppProvidersProvider(ref, context);
     return DefaultTabController(
       length: 2,
       child: Column(
@@ -47,14 +48,12 @@ class AuthTabs extends ConsumerWidget
           ),
 
           Expanded(            
-            child: Consumer(
-              builder: (context, ref, child) => TabBarView(
-                children:
-                [
-                  loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
-                  const SignUpForm(),
-                ],
-              ),
+            child: TabBarView(
+              children:
+              [
+                provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
+                const SignUpForm(),
+              ],
             ),
           ),
         ],

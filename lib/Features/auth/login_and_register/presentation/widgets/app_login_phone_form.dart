@@ -6,22 +6,20 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers_accessor.dart';
 import '../../../../../core/services/validation/password_valid.dart';
 import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
-import '../controllers/obsecure_text_provider.dart';
 
 
 class LoginFormWithPhone extends ConsumerWidget
@@ -31,24 +29,10 @@ class LoginFormWithPhone extends ConsumerWidget
   final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  // @override
-  // void dispose()
-  // {
-  //   phoneNumbrerController.dispose();
-  //   passwordController.dispose();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final themeMode = ref.watch(themeControllerProvider);
-    final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
-    final isChecked = ref.watch(checkboxValueProvider);
-    final obscureText = ref.watch(obscurePasswordProvider);
-
-    final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
-    final phoneNumberHolder = ref.watch(countryControllerProvider);
+    final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
 
     return Container(
@@ -77,9 +61,7 @@ class LoginFormWithPhone extends ConsumerWidget
           
                   GestureDetector(
                     onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
-                    child: Text(
-                      AppLocalizations.of(context).email,
-                      style: AppStyles.textStyle12(
+                    child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                         fontWeight: AppFontWeights.boldWeight,
                         textDecoration: TextDecoration.underline,
                       ),
@@ -94,10 +76,10 @@ class LoginFormWithPhone extends ConsumerWidget
                 fieldKeyboardType: TextInputType.phone,
                 fieldValidator: (value) => phoneNumberValidation(value, context),
                 fieldController: phoneNumberController,
-                fieldPrefixIcon: InkWell( //HERE
+                fieldPrefixIcon: InkWell(
                   onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                  child: Image.asset(selectedCountryFlagPath)),
-                fieldText: phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
+                  child: Image.asset(provider.countryFlag)),
+                  fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
                 
               AppSizes.size24.verticalSpace,
@@ -109,16 +91,13 @@ class LoginFormWithPhone extends ConsumerWidget
               CustomTextFormField(
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
-                fieldObscureText: obscureText,
+                fieldObscureText: provider.obscureText,
                 fieldKeyboardType: TextInputType.text,
                 fieldText: AppLocalizations.of(context).password,
                 
                 fieldsuffixIcon: GestureDetector(
-                  onTap: ()
-                  {
-                    ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
-                  },
-                  child: Image.asset(obscureText ? AppAssets.iconsPNG.corssedEyePNG: AppAssets.iconsPNG.eyePNG,),
+                  onTap: () => provider.obscureTextState,
+                  child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG: AppAssets.iconsPNG.eyePNG,),
                 ),
 
               ),
@@ -128,7 +107,7 @@ class LoginFormWithPhone extends ConsumerWidget
               Row(
                 children:
                 [
-                  Checkbox(value: isChecked, onChanged: (value)
+                  Checkbox(value: provider.isChecked, onChanged: (value)
                 {
                   if (value != null)
                   {
@@ -205,7 +184,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
           
                   CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
-                  platformLogo: platformLogo,
+                  platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
                   buttonWidth: 174.w,
                   isLogoSpace: false,
                   buttonBackgroundColor: AppColors.color.kPrimaryDark,

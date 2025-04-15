@@ -22,7 +22,6 @@ class ForgetPasswordWithEmailView extends StatelessWidget
   final TextEditingController emailController = TextEditingController();
   final GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
 
-
   @override
   Widget build(BuildContext context)
   {
@@ -103,8 +102,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                 ),
               ),
               
-              AppSizes.size60.verticalSpace, //104
-              //Spacer(),
+              AppSizes.size60.verticalSpace,
           
               const NumericKeyboard(),
               

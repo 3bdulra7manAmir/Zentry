@@ -6,6 +6,9 @@ import '../../config/themes/color_system/controller/theme_controller.dart';
 import '../../features/auth/app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../../features/auth/app_form/presentation/controllers/language_icon_update_provider.dart';
 import '../../features/auth/app_form/presentation/controllers/theme_mode_text_provide.dart';
+import '../../features/auth/login_and_register/presentation/controllers/checkboc_provider.dart';
+import '../../features/auth/login_and_register/presentation/controllers/email_or_phone_provider.dart';
+import '../../features/auth/login_and_register/presentation/controllers/obsecure_text_provider.dart';
 
 
 // Localized helpers
@@ -36,4 +39,12 @@ class AppProvidersProvider
   // Country
   String get countryLabel => getSelectedCountryName(ref, context);
   String get countryFlag => getSelectedCountryImage(ref, context);
+
+  bool get obscureText => ref.watch(obscurePasswordProvider);
+  bool get obscureTextState => ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
+
+  bool get isChecked => ref.watch(checkboxValueProvider);
+  int? get phoneNumberHolder => ref.watch(countryControllerProvider);
+
+  LoginType get loginType => ref.watch(loginTypeProvider);
 }

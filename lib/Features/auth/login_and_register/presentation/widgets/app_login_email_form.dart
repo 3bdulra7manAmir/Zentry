@@ -9,18 +9,17 @@ import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/app_sizes.dart';
-import '../../../../../config/themes/color_system/controller/theme_controller.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers_accessor.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
-import '../controllers/obsecure_text_provider.dart';
 
 
 class LoginFormWithEmail extends ConsumerWidget
@@ -33,10 +32,7 @@ class LoginFormWithEmail extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final themeMode = ref.watch(themeControllerProvider);
-    final platformLogo = themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG;
-    final isChecked = ref.watch(checkboxValueProvider);
-    final obscureText = ref.watch(obscurePasswordProvider);
+    final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
     
     return Container(
@@ -95,14 +91,11 @@ class LoginFormWithEmail extends ConsumerWidget
                 fieldKeyboardType: TextInputType.text,
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
-                fieldObscureText: obscureText,
+                fieldObscureText: provider.obscureText,
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: GestureDetector(
-                    onTap: ()
-                    {
-                      ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
-                    },
-                    child: Image.asset(obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                    onTap: () => provider.obscureTextState,
+                    child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
                   ),
                 ),
                 
@@ -111,7 +104,7 @@ class LoginFormWithEmail extends ConsumerWidget
               Row(
                 children:
                 [
-                  Checkbox(value: isChecked, onChanged: (value)
+                  Checkbox(value: provider.isChecked, onChanged: (value)
                   {
                     if (value != null)
                     {
@@ -188,7 +181,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
           
                   CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
-                  platformLogo: platformLogo,
+                  platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
                   buttonWidth: 174.w,
                   isLogoSpace: false,
                   buttonBackgroundColor: AppColors.color.kPrimaryDark,

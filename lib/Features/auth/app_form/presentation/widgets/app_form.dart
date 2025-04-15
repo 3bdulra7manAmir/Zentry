@@ -12,7 +12,7 @@ import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/helpers/app_providers_accessor.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/app_form_container.dart';
+import '../../../../../core/widgets/app_container.dart';
 import 'countries_list_dialog.dart';
 import 'language_list_dialog.dart';
 import 'themes_list_dialog.dart';
@@ -26,7 +26,6 @@ class AppForm extends ConsumerWidget
 Widget build(BuildContext context, WidgetRef ref)
 {
   final provider = AppProvidersProvider(ref, context);
-  final arrow = provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG;
   final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
 
   return Container(
@@ -55,7 +54,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.languageFlag),
               fieldText: provider.languageLabel,
-              fieldsuffixIcon: Image.asset(arrow),
+              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -64,7 +63,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.countryFlag),
               fieldText: provider.countryLabel,
-              fieldsuffixIcon: Image.asset(arrow),
+              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -73,7 +72,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG),
               fieldText: provider.themeLabel,
-              fieldsuffixIcon: Image.asset(arrow),
+              fieldsuffixIcon: Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
             ),
           ),
           AppSizes.size27.verticalSpace,

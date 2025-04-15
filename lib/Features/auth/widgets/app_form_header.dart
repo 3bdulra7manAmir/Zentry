@@ -1,11 +1,13 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/constants/app_images.dart';
 import '../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../core/helpers/app_providers_accessor.dart';
 
 
-class FormHeader extends StatelessWidget
+class FormHeader extends ConsumerWidget
 {
   const FormHeader({super.key, this.isText, this.downleftText, this.upperRightText, this.upperRightTextOnTap,});
 
@@ -15,10 +17,10 @@ class FormHeader extends StatelessWidget
   final void Function()? upperRightTextOnTap;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    return
-      Stack(
+    final provider = AppProvidersProvider(ref, context);
+    return Stack(
         children:
         [
           Container(
@@ -35,7 +37,9 @@ class FormHeader extends StatelessWidget
           ),
 
           (isText ?? false) ? Positioned(
-            top: 100.h, left: 17.w, right: 0,
+            top: 100.h,
+            left: provider.locale.selectedLanguageIndex == 1 ? 17.w : 0.w,
+            right: provider.locale.selectedLanguageIndex == 1 ? 0.w : 17.w,
             child: Text(downleftText ?? "", style: AppStyles.textStyle18(),)) : const SizedBox.shrink(),
 
           (isText ?? false) ? Positioned(top: 44.h, right: 17.w,
@@ -44,14 +48,13 @@ class FormHeader extends StatelessWidget
               [
                 GestureDetector(
                   onTap: upperRightTextOnTap,
-                  child: Text(upperRightText ?? "",
-                  style: AppStyles.textStyle13(
-                    textColor: AppColors.color.kTertiaryWhiteText,
-                    textDecoration: TextDecoration.underline,
-                    textDecorationColor: AppColors.color.kTertiaryWhiteText),
+                  child: Text(upperRightText ?? "", style: AppStyles.textStyle13(
+                      textColor: AppColors.color.kTertiaryWhiteText,
+                      textDecoration: TextDecoration.underline,
+                      textDecorationColor: AppColors.color.kTertiaryWhiteText),
                     ),
                   ),
-                Image.asset(AppAssets.iconsPNG.leftWhiteArrowPNG)
+                Image.asset(provider.locale.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG)
               ],
             ),
           ) : const SizedBox.shrink(),

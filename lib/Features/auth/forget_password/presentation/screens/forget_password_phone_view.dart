@@ -25,14 +25,6 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
   final TextEditingController phoneNumbrerController = TextEditingController();
   final GlobalKey<FormState> phoneNumberFormKey = GlobalKey<FormState>();
 
-
-  // @override
-  // void dispose()
-  // {
-  //   phoneNumbrerController.dispose();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
@@ -118,8 +110,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                 ),
               ),
           
-              AppSizes.size60.verticalSpace, //104
-              //Spacer(),
+              AppSizes.size60.verticalSpace,
           
               const NumericKeyboard(),
               
