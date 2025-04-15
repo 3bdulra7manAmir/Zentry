@@ -18,7 +18,7 @@ class CustomButton extends ConsumerWidget
     this.buttonBackgroundColor,
     required this.buttonText,
     this.buttonTextStyle,
-    required this.buttonOnPressed,
+    this.buttonOnPressed,
   });
 
   final double? buttonWidth;

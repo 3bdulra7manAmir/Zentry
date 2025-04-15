@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../data/form_data/app_countries_list.dart';
+import '../../../../../core/services/database/static/form_data/app_countries_list.dart';
 import '../../../../../core/widgets/app_form_container.dart';
 import '../controllers/countries_icon_update_provider.dart';
 
@@ -22,7 +22,7 @@ void showCountriesBottomSheet(BuildContext context)
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
     builder: (BuildContext context)
     {
-      final List<List<String>> countriesList = getCountriesList(context);
+      final countriesList = CountryUtils.getCountryImageAndName(context);
       return Padding(
         padding: AppPadding.kAppFormPadding,
         child: Column(

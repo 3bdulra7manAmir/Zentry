@@ -7,7 +7,7 @@ part of 'localization_controller.dart';
 // **************************************************************************
 
 String _$localizationControllerHash() =>
-    r'95cad59a97b4c3dbb78f32d9df2a65c93378f76d';
+    r'b9125e57d45108c5ffd93207600590bc4d888fdd';
 
 /// See also [LocalizationController].
 @ProviderFor(LocalizationController)

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
-import '../../data/form_data/app_countries_list.dart';
-import '../../data/form_data/app_countries_selected.dart';
+import '../../../../../core/services/database/static/form_data/app_countries_list.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'countries_icon_update_provider.g.dart';
@@ -14,7 +13,6 @@ class CountryController extends _$CountryController
   @override
   int? build()
   {
-    //debugPrint('[CountryController] Initialized with null index');
     return null;
   }
 
@@ -22,7 +20,6 @@ class CountryController extends _$CountryController
   {
     try
     {
-      //debugPrint('[setSelectedIndex] Setting selected index to: $index');
       state = index;
     }
 
@@ -38,27 +35,25 @@ class CountryController extends _$CountryController
 String getSelectedCountryImage(WidgetRef ref, BuildContext context)
 {
   final selectedIndex = ref.watch(countryControllerProvider);
-  final selectedCountriesList = getSelectedCountriesList(context);
+  final selectedCountriesList = CountryUtils.getRoundedCountryImage();
 
   if (selectedIndex != null && selectedIndex < selectedCountriesList.length)
   {
-    //debugPrint('[getSelectedCountryImage] Selected index: $selectedIndex');
     return selectedCountriesList[selectedIndex];
   }
 
-  //debugPrint('[getSelectedCountryImage] No valid index. Returning fallback.');
-  return AppAssets.iconsPNG.countryPNG;
+  return AppAssets.iconsPNG.countryPNG; // fallback flag
 }
 
 String getSelectedCountryName(WidgetRef ref, BuildContext context)
 {
   final selectedIndex = ref.watch(countryControllerProvider);
-  final selectedCountriesList = getCountriesList(context); // returns List<List<String>>
+  final countries = CountryUtils.getCountryImageAndName(context);
 
-  if (selectedIndex != null && selectedIndex < selectedCountriesList.length)
+  if (selectedIndex != null && selectedIndex < countries.length)
   {
-    return selectedCountriesList[selectedIndex][1]; // 0 = flag, 1 = name
+    return countries[selectedIndex][1]; // [flag, name]
   }
 
-  return AppLocalizations.of(context).country; // fallback
+  return AppLocalizations.of(context).country; // fallback name
 }

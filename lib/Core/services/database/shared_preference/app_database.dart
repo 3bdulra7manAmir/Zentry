@@ -5,143 +5,74 @@ class UserPreferences
 {
   UserPreferences._();
 
-  static final UserPreferences _instance = UserPreferences._();
-  static UserPreferences get instance => _instance;
+  static final UserPreferences instance = UserPreferences._();
 
-  // Save Language
-  Future<void> saveLanguage(String languageCode) async
+  static const String _languageKey = 'language';
+  static const String _countryKey = 'country';
+  static const String _themeKey = 'theme';
+
+  static const String _defaultLanguage = 'en';
+  static const String _defaultCountry = 'US';
+
+  SharedPreferences? _prefs;
+
+  Future<void> init() async
   {
-    try
-    {
-      final prefs = await SharedPreferences.getInstance();
-      bool isSaved = await prefs.setString('language', languageCode);
-
-      if (isSaved)
-      {
-        //print("Language saved: $languageCode");
-      }
-      else
-      {
-        //print("Failed to save language");
-      }
-    }
-    
-    catch (e)
-    {
-      //print("Error saving language: $e");
-    }
+    _prefs ??= await SharedPreferences.getInstance();
   }
 
-  // Get Language
-  Future<String?> getLanguage() async
+  Future<SharedPreferences> get _preferences async
   {
-    try
-    {
-      final prefs = await SharedPreferences.getInstance();
-      String? languageCode = prefs.getString('language') ?? 'en'; // Default to 'en'
-      //print("Fetched language: $languageCode");
-      return languageCode;
-    }
-    
-    catch (e)
-    {
-      //print("Error fetching language: $e");
-      return 'en'; // Default value
-    }
+    _prefs ??= await SharedPreferences.getInstance();
+    return _prefs!;
   }
 
-  // Save Country
-  Future<void> saveCountry(String countryCode) async
+  Future<void> saveLanguage(String code) async
   {
-    try
-    {
-      final prefs = await SharedPreferences.getInstance();
-      bool isSaved = await prefs.setString('country', countryCode);
-      if (isSaved)
-      {
-        //print("Country saved: $countryCode");
-      }
-      else
-      {
-        //print("Failed to save country");
-      }
-    }
-    
-    catch (e)
-    {
-      //print("Error saving country: $e");
-    }
+    final prefs = await _preferences;
+    await prefs.setString(_languageKey, code);
   }
 
-  // Get Country
-  Future<String?> getCountry() async
+  Future<String> getLanguage() async
   {
-    try
-    {
-      final prefs = await SharedPreferences.getInstance();
-      String? countryCode = prefs.getString('country') ?? 'US'; // Default to 'US'
-      //print("Fetched country: $countryCode");
-      return countryCode;
-    }
-    
-    catch (e)
-    {
-      //print("Error fetching country: $e");
-      return 'US'; // Default value
-    }
+    final prefs = await _preferences;
+    return prefs.getString(_languageKey) ?? _defaultLanguage;
   }
 
-  // Save Theme
-  Future<void> saveTheme(bool isDarkMode) async
+  // Country
+  Future<void> saveCountry(String code) async
   {
-    try
-    {
-      final prefs = await SharedPreferences.getInstance();
-      bool isSaved = await prefs.setBool('theme', isDarkMode);
-      if (isSaved)
-      {
-        //print("Theme saved: ${isDarkMode ? 'Dark' : 'Light'}");
-      }
-      else
-      {
-        //print("Failed to save theme");
-      }
-    }
-    
-    catch (e)
-    {
-      //print("Error saving theme: $e");
-    }
+    final prefs = await _preferences;
+    await prefs.setString(_countryKey, code);
   }
 
-  // Get Theme
+  Future<String> getCountry() async
+  {
+    final prefs = await _preferences;
+    return prefs.getString(_countryKey) ?? _defaultCountry;
+  }
+
+  Future<void> saveTheme(bool isDark) async
+  {
+    final prefs = await _preferences;
+    await prefs.setBool(_themeKey, isDark);
+  }
+
   Future<bool> getTheme() async
   {
     try
     {
-      final prefs = await SharedPreferences.getInstance();
-      bool? isDarkMode = prefs.getBool('theme');
-      if (isDarkMode != null)
-      {
-        //print("Fetched theme: ${isDarkMode ? 'Dark' : 'Light'}");
-        return isDarkMode;
-      }
-      else
-      {
-        // If theme is not set, fallback to system theme
-        Brightness systemBrightness = WidgetsBinding.instance.window.platformBrightness;
-        bool isSystemDarkMode = systemBrightness == Brightness.dark;
-        //print("Fetched system theme: ${isSystemDarkMode ? 'Dark' : 'Light'}");
-        return isSystemDarkMode;
-      }
+      final prefs = await _preferences;
+      final theme = prefs.getBool(_themeKey);
+      if (theme != null) return theme;
     }
-    
-    catch (e) // If error occurs, fallback to system theme
+
+    catch (_)
     {
-      //print("Error fetching theme: $e");
-      Brightness systemBrightness = WidgetsBinding.instance.window.platformBrightness; 
-      bool isSystemDarkMode = systemBrightness == Brightness.dark;
-      return isSystemDarkMode;
+      // Fall through to system preference
     }
+
+    final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
+    return brightness == Brightness.dark;
   }
 }

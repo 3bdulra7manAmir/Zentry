@@ -6,7 +6,7 @@ import '../../../../../config/themes/color_system/colors_manager/app_colors.dart
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
-import '../../data/form_data/app_languages_list.dart';
+import '../../../../../core/services/database/static/form_data/app_languages_list.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';
 
 void showLanguageBottomSheet(BuildContext context)
