@@ -11,7 +11,9 @@ import '../verification_code/presentation/controllers/otp_input_controller.dart'
 
 class NumericKeyboard extends ConsumerWidget
 {
-  const NumericKeyboard({super.key});
+  const NumericKeyboard( {super.key, required this.maxLength,});
+
+  final int maxLength;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -40,7 +42,7 @@ class NumericKeyboard extends ConsumerWidget
             }
             else
             {
-              ref.read(otpInputProvider.notifier).addDigit(value);
+              ref.read(otpInputProvider.notifier).addDigit(value, maxLength: maxLength);
             }
           },
           child: Container(

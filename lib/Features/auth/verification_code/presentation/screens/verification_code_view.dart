@@ -142,7 +142,7 @@ class VerificationCodeView extends StatelessWidget
         
             AppSizes.size60.verticalSpace,
         
-            const NumericKeyboard(),
+            const NumericKeyboard(maxLength: 5,),
         
             AppSizes.size20.verticalSpace,
           ],

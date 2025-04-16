@@ -27,21 +27,16 @@ class AppProvidersProvider
 
   AppProvidersProvider(this.ref, this.context);
 
-  // Localization
   LocalizationController get localeState => ref.read(localizationControllerProvider.notifier);
   Locale get locale => ref.watch(localizationControllerProvider);
 
-  // Theme Mode
   ThemeController get themeController => ref.read(themeControllerProvider.notifier);
   ThemeMode get themeMode => ref.watch(themeControllerProvider);
-  // Theme Label
   String get themeLabel => getSelectedThemeLabel(ref, context);
 
-  // Language
   String get languageLabel => getSelectedLanguageLabel(ref, context);
   String get languageFlag => getSelectedLanguageImage(ref);
 
-  // Country
   String get countryLabel => getSelectedCountryName(ref, context);
   String get countryFlag => getSelectedCountryImage(ref, context);
 

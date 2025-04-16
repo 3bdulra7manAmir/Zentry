@@ -24,15 +24,21 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
 
   final TextEditingController phoneNumbrerController = TextEditingController();
   final GlobalKey<FormState> phoneNumberFormKey = GlobalKey<FormState>();
-
+  
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
+    final int? maxLength;
+    if (provider.phoneNumberHolder != null && provider.phoneNumberHolder == 1){maxLength = 12;}
+    else{maxLength = 11;}
+
     if (phoneNumbrerController.text != provider.otpProvider)
     {
       phoneNumbrerController.text = provider.otpProvider;
-      phoneNumbrerController.selection = TextSelection.fromPosition(TextPosition(offset: phoneNumbrerController.text.length),);
+      phoneNumbrerController.selection = TextSelection.fromPosition(
+        TextPosition(offset: phoneNumbrerController.text.length),
+      );
     }
 
     return Scaffold(
@@ -128,7 +134,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
           
               AppSizes.size60.verticalSpace,
           
-              const NumericKeyboard(),
+              NumericKeyboard(maxLength: maxLength,),
               
               AppSizes.size14.verticalSpace,
             ],

@@ -6,9 +6,9 @@ class OtpInputNotifier extends StateNotifier<String>
 {
   OtpInputNotifier() : super('');
 
-  void addDigit(String digit)
+  void addDigit(String digit, {required int maxLength})
   {
-    if (state.length < 5)
+    if (state.length < maxLength)
     {
       state += digit;
     }
