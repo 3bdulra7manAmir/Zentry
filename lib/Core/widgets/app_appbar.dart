@@ -15,13 +15,11 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
     super.key,
     this.barLeading,
     this.barTitle = '',
-    this.isTitleCenterd = true,
     this.barActions,
   });
 
   final Widget? barLeading;
   final String barTitle;
-  final bool isTitleCenterd;
   final List<Widget>? barActions;
 
   @override
@@ -31,7 +29,6 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
     final arrow = provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.leftBackArrowBlackPNG : AppAssets.iconsPNG.rightWhiteArrowPNG;
 
     return AppBar(
-      backgroundColor: AppColors.color.kAppBarBG,
       leading: GestureDetector(
         onTap: () => AppRouter.router.pop(),
         child: barLeading ?? Image.asset(arrow),
@@ -39,7 +36,6 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
       leadingWidth: 65.w,
       title: Text(barTitle, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSenaryTotalBlackText,),
       ),
-      centerTitle: isTitleCenterd,
       actions: barActions,
     );
   }

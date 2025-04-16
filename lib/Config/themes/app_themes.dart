@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/constants/app_borders.dart';
+import '../../core/constants/app_styles.dart';
 import 'color_system/colors_manager/app_colors.dart';
 import 'app_sizes.dart';
+import 'font_system/app_font_weights.dart';
 
 class AppTheme
 {
@@ -26,10 +28,11 @@ class AppTheme
       ),
 
       elevatedButtonTheme: elevatedButtonTheme,
+      tabBarTheme: tabBarTheme,
+      appBarTheme: AppBarTheme(backgroundColor: AppColors.color.kAppBarBG, centerTitle: true),
     );
 
   }
-
 
   static ThemeData darkTheme()
   {
@@ -49,42 +52,17 @@ class AppTheme
       ),
 
       elevatedButtonTheme: elevatedButtonTheme,
-
-
-      tabBarTheme: TabBarTheme(
-        //dividerHeight: ,
-        //dividerColor: ,
-        //unselectedLabelStyle: ,
-        //indicator: ,
-        //overlayColor: WidgetStateProperty.resolveWith<Color>(),
-        labelColor: AppColors.color.kTabBar,
-        unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
-        //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab,),
-      ),
-
-      // appBarTheme: AppBarTheme(
-      //   elevation: 0,
-      //   centerTitle: true,
-      //   scrolledUnderElevation: 0,
-      //   backgroundColor: AppColors.color.,
-      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      //   iconTheme: IconThemeData(color: AppColors.color.),
-      //   titleTextStyle: StylesManager.extraBold(
-      //     fontSize: AppSizes.size,
-      //     color: AppColors.color.,
-      //   ),
-      // ),
+      tabBarTheme: tabBarTheme,
+      appBarTheme: AppBarTheme(backgroundColor: AppColors.color.kAppBarBG, centerTitle: true),
     );
   }
 
 }
 
-
 InputBorder? inputBorderLight = OutlineInputBorder(
   borderRadius: AppBorders.buttonBorder10,
   borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
 );
-
 
 InputBorder? inputBorderDark = OutlineInputBorder(
   borderRadius: AppBorders.buttonBorder10,
@@ -109,4 +87,12 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
     elevation: MaterialStateProperty.all(0),
     alignment: Alignment.center,
   ),
+);
+
+Object? tabBarTheme = TabBarTheme(
+  indicatorSize: TabBarIndicatorSize.tab,
+  labelColor: AppColors.color.kTabBar,
+  labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kTabBar),
+  unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
+  indicatorColor: AppColors.color.kTabBar,
 );
