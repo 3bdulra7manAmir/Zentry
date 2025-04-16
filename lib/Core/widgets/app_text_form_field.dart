@@ -16,6 +16,7 @@ class CustomTextFormField extends StatelessWidget
   //this.fieldKeyboardAppearance,
   this.fieldObscureText,
   this.fieldIsEnabled,
+  this.fieldReadOnly,
   });
 
   final Widget? fieldPrefixIcon;
@@ -28,6 +29,7 @@ class CustomTextFormField extends StatelessWidget
   //final Brightness? fieldKeyboardAppearance;
   final bool? fieldObscureText;
   final bool? fieldIsEnabled;
+  final bool? fieldReadOnly;
 
   @override
   Widget build(BuildContext context)
@@ -35,6 +37,7 @@ class CustomTextFormField extends StatelessWidget
     return TextFormField(
       enabled: fieldIsEnabled ?? true,
       keyboardType: fieldKeyboardType,
+      readOnly: fieldReadOnly ?? false,
       //keyboardAppearance: fieldKeyboardAppearance,
       obscureText: fieldObscureText ?? false,
       controller: fieldController,

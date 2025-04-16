@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
@@ -9,6 +9,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../widgets/numeric_keyboard.dart';
@@ -73,20 +74,33 @@ class VerificationCodeView extends StatelessWidget
         
                   AppSizes.size10.verticalSpace,
         
-                  OtpTextField(
-                    numberOfFields: 5,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    fillColor: AppColors.color.kFormButtonsFill,
-                    filled: true,
-                    borderColor: AppColors.color.kFormButtonsBorders,
-                    borderWidth: AppSizes.size1.w,
-                    borderRadius: AppBorders.buttonBorder10,
-                    fieldWidth: AppSizes.size51.w,
-                    alignment: Alignment.center,
-                    contentPadding: AppPadding.kZeroPadding,
-                    keyboardType: TextInputType.number,
+                  Consumer(
+                    builder: (context, ref, _)
+                    {
+                      final provider = AppProvidersProvider(ref, context);
+
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: List.generate(5, (index)
+                        {
+                          return Container(
+                            width: AppSizes.size60.w,
+                            height: AppSizes.size48.h,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: AppColors.color.kFormButtonsFill,
+                              border: Border.all(color: AppColors.color.kFormButtonsBorders, width: AppSizes.size1.w,),
+                              borderRadius: AppBorders.buttonBorder10,
+                            ),
+                            child: Text(index < provider.otpProvider.length ? provider.otpProvider[index] : '',
+                              style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondaryWhite,),
+                            ),
+                          );
+                        }),
+                      );
+                    },
                   ),
-        
+
                   AppSizes.size26.verticalSpace,
         
                   Row(

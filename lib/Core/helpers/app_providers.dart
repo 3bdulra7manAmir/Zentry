@@ -9,6 +9,7 @@ import '../../features/auth/app_form/presentation/controllers/theme_mode_text_pr
 import '../../features/auth/login_and_register/presentation/controllers/checkboc_provider.dart';
 import '../../features/auth/login_and_register/presentation/controllers/email_or_phone_provider.dart';
 import '../../features/auth/login_and_register/presentation/controllers/obsecure_text_provider.dart';
+import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../services/localization/controller/localization_controller.dart';
 
 
@@ -51,4 +52,6 @@ class AppProvidersProvider
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);
 
   LoginType get loginType => ref.watch(loginTypeProvider);
+
+  String get otpProvider => ref.watch(otpInputProvider);
 }

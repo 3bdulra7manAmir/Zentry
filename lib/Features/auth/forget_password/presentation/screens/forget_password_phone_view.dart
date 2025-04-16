@@ -9,11 +9,11 @@ import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../../../login_and_register/presentation/widgets/phone_number_dialog.dart';
 import '../../../widgets/numeric_keyboard.dart';
 
@@ -28,8 +28,13 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final selectedCountryFlagPath = getSelectedCountryImage(ref, context);
-    final phoneNumberHolder = ref.watch(countryControllerProvider);
+    final provider = AppProvidersProvider(ref, context);
+    if (phoneNumbrerController.text != provider.otpProvider)
+    {
+      phoneNumbrerController.text = provider.otpProvider;
+      phoneNumbrerController.selection = TextSelection.fromPosition(TextPosition(offset: phoneNumbrerController.text.length),);
+    }
+
     return Scaffold(
       appBar:  CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
       body: SingleChildScrollView(
@@ -71,13 +76,14 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                     AppSizes.size9.verticalSpace,
                     
                     CustomTextFormField(
-                      fieldKeyboardType: TextInputType.phone,
+                      fieldKeyboardType: TextInputType.none,
+                      fieldReadOnly: true,
                       fieldValidator: (value) => phoneNumberValidation(value, context),
                       fieldController: phoneNumbrerController,
-                      fieldPrefixIcon: InkWell( //HERE
+                      fieldPrefixIcon: InkWell(
                       onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                      child: Image.asset(selectedCountryFlagPath)),
-                    fieldText: phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
+                      child: Image.asset(provider.countryFlag)),
+                    fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
                   ),
           
                     AppSizes.size28.verticalSpace,

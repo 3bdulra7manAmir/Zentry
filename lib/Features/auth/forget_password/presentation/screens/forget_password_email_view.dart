@@ -12,7 +12,7 @@ import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../widgets/numeric_keyboard.dart';
+//import '../../../widgets/numeric_keyboard.dart';
 
 
 class ForgetPasswordWithEmailView extends StatelessWidget
@@ -108,7 +108,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
               
               AppSizes.size60.verticalSpace,
           
-              const NumericKeyboard(),
+              //const NumericKeyboard(),
               
               AppSizes.size20.verticalSpace,
             ],

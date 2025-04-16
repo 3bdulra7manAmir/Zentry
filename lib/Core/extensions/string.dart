@@ -39,11 +39,21 @@ extension GetStringUtils on String?
 
 
 
+   bool get isEgyptianPhone
+   {
+    if (this == null) return false;
+    return RegExp(r'^(?:\+20|0)?1[0125]\d{8}$').hasMatch(this!);
+  }
+
+  bool get isSaudiPhone
+  {
+    if (this == null) return false;
+    return RegExp(r'^(?:\+966|0)?5\d{8}$').hasMatch(this!);
+  }
+
   bool get isPhoneNumber
   {
-    if (this == null || this!.length > 16 || this!.length < 7) return false;
-    return RegExp(r'^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')
-        .hasMatch(this ?? '');
+    return isEgyptianPhone || isSaudiPhone;
   }
 
   String? get convertNumbers
