@@ -19,25 +19,17 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kFormButtonsFill,
-        focusedBorder: OutlineInputBorder(
-          borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
+        focusedBorder: inputBorderLight,
+        enabledBorder: inputBorderLight,
+        errorBorder: inputBorderLight,
+        disabledBorder: inputBorderLight,
       ),
+
+      elevatedButtonTheme: elevatedButtonTheme,
     );
+
   }
+
 
   static ThemeData darkTheme()
   {
@@ -45,49 +37,18 @@ class AppTheme
       useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.color.kPrimaryDark,
-      
       cardColor: AppColors.color.kPrimaryDark,
-      //primaryColorLight: AppColors.color.kDarkScaffoldBGColor,
       
-
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kFormButtonsBordersFillDark,
-        //hintStyle: AppStyles.textStyle12(),
-
-        focusedBorder: OutlineInputBorder(
-          borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w,),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
+        focusedBorder: inputBorderDark,
+        enabledBorder: inputBorderDark,
+        errorBorder: inputBorderDark,
+        disabledBorder: inputBorderDark,
       ),
 
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: AppBorders.buttonBorder10,
-              side: BorderSide(
-                color: AppColors.color.kTransparent,
-                width: AppBorderWidths.width1,
-              ),
-            ),
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          splashFactory: NoSplash.splashFactory,
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          elevation: MaterialStateProperty.all(0),
-          alignment: Alignment.center,
-        ),
-      ),
+      elevatedButtonTheme: elevatedButtonTheme,
 
 
       tabBarTheme: TabBarTheme(
@@ -117,3 +78,35 @@ class AppTheme
   }
 
 }
+
+
+InputBorder? inputBorderLight = OutlineInputBorder(
+  borderRadius: AppBorders.buttonBorder10,
+  borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
+);
+
+
+InputBorder? inputBorderDark = OutlineInputBorder(
+  borderRadius: AppBorders.buttonBorder10,
+  borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w,),
+);
+
+ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
+  style: ButtonStyle(
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: AppBorders.buttonBorder10,
+        side: BorderSide(
+          color: AppColors.color.kTransparent,
+          width: AppBorderWidths.width1,
+        ),
+      ),
+    ),
+    backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
+    overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+    splashFactory: NoSplash.splashFactory,
+    shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
+    elevation: MaterialStateProperty.all(0),
+    alignment: Alignment.center,
+  ),
+);

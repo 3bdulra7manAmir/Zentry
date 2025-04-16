@@ -6,6 +6,7 @@ analyzer:
     avoid_print: ignore
     deprecated_member_use_from_same_package: ignore
     unused_catch_stack: ignore
+    unrelated_type_equality_checks: ignore
 
 linter:
   rules:

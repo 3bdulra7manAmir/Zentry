@@ -27,6 +27,12 @@ Widget build(BuildContext context, WidgetRef ref)
 {
   final provider = AppProvidersProvider(ref, context);
   final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
+  var arrowImage = Image.asset(
+    provider.localeState.selectedLanguageIndex == 0 && Theme.of(context).brightness == Brightness.dark
+    ? AppAssets.iconsPNG.rightWhiteArrowPNG : provider.localeState.selectedLanguageIndex == 0 && Theme.of(context).brightness == Brightness.light
+    ? AppAssets.iconsPNG.leftBlackArrowPNG : provider.localeState.selectedLanguageIndex == 1 && Theme.of(context).brightness == Brightness.dark
+    ? AppAssets.iconsPNG.leftWhiteArrowPNG : AppAssets.iconsPNG.rightBlackArrowPNG,
+  );
 
   return Container(
     padding: AppPadding.kAppFormPadding,
@@ -54,7 +60,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.languageFlag),
               fieldText: provider.languageLabel,
-              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: arrowImage,
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -63,7 +69,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(provider.countryFlag),
               fieldText: provider.countryLabel,
-              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: arrowImage,
             ),
           ),
           AppSizes.size16.verticalSpace,
@@ -72,7 +78,7 @@ Widget build(BuildContext context, WidgetRef ref)
             child: CustomContainer(
               fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG),
               fieldText: provider.themeLabel,
-              fieldsuffixIcon: Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG),
+              fieldsuffixIcon: arrowImage,
             ),
           ),
           AppSizes.size27.verticalSpace,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../config/l10n/generated/app_localizations.dart';
-import '../../../core/services/localization/controller/localization_controller.dart';
+
+import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/controller/theme_controller.dart';
 import '../../features/auth/app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../../features/auth/app_form/presentation/controllers/language_icon_update_provider.dart';
@@ -9,6 +9,8 @@ import '../../features/auth/app_form/presentation/controllers/theme_mode_text_pr
 import '../../features/auth/login_and_register/presentation/controllers/checkboc_provider.dart';
 import '../../features/auth/login_and_register/presentation/controllers/email_or_phone_provider.dart';
 import '../../features/auth/login_and_register/presentation/controllers/obsecure_text_provider.dart';
+import '../services/localization/controller/localization_controller.dart';
+
 
 
 // Localized helpers
