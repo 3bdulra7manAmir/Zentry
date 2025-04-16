@@ -25,6 +25,8 @@ class _AppIconsPNG
   final String countryPNG = "assets/icons/AppForm/Country.png";
   final String languagePNG = "assets/icons/AppForm/Language.png";
   final String modePNG = "assets/icons/AppForm/Mode.png";
+  final String darkPNG = "assets/icons/AppForm/Dark_Mode.png";
+  final String lightPNG = "assets/icons/AppForm/Light_Mode.png";
   final String leftBlackArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
   final String rightBlackArrowPNG = "assets/icons/AppForm/Right_Arrow.png";
 

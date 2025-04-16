@@ -25,9 +25,13 @@ class CountryController extends _$CountryController
 
     catch (e, stack)
     {
-      //debugPrint('[setSelectedIndex] Error: $e');
-      //debugPrint('[setSelectedIndex] Stack trace: $stack');
+      
     }
+  }
+
+  int? getSelectedIndex()
+  {
+    return state;
   }
 }
 
@@ -42,7 +46,7 @@ String getSelectedCountryImage(WidgetRef ref, BuildContext context)
     return selectedCountriesList[selectedIndex];
   }
 
-  return AppAssets.iconsPNG.countryPNG; // fallback flag
+  return AppAssets.iconsPNG.countryPNG;
 }
 
 String getSelectedCountryName(WidgetRef ref, BuildContext context)
@@ -52,8 +56,8 @@ String getSelectedCountryName(WidgetRef ref, BuildContext context)
 
   if (selectedIndex != null && selectedIndex < countries.length)
   {
-    return countries[selectedIndex][1]; // [flag, name]
+    return countries[selectedIndex][1];
   }
 
-  return AppLocalizations.of(context).country; // fallback name
+  return AppLocalizations.of(context).country;
 }

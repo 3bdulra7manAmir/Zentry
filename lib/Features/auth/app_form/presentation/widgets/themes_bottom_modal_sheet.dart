@@ -53,7 +53,6 @@ void showThemesBottomSheet(BuildContext context)
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:
                       [
-
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.light,
                           groupValue: provider.themeMode,
@@ -79,7 +78,7 @@ void showThemesBottomSheet(BuildContext context)
                             {
                               setState(() => provider.themeMode);
                               provider.themeController.setTheme(value);
-                              Navigator.pop(context);
+                              AppRouter.router.pop();
                             }
                           },
                           title: Text(AppLocalizations.of(context).dark),

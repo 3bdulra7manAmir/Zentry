@@ -13,9 +13,9 @@ import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_container.dart';
-import 'countries_list_dialog.dart';
-import 'language_list_dialog.dart';
-import 'themes_list_dialog.dart';
+import 'countries_bottom_modal_sheet.dart';
+import 'language_bottom_modal_sheet.dart';
+import 'themes_bottom_modal_sheet.dart';
 
 
 class AppForm extends ConsumerWidget
@@ -27,10 +27,10 @@ Widget build(BuildContext context, WidgetRef ref)
 {
   final provider = AppProvidersProvider(ref, context);
   final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
-  var arrowImage = Image.asset(
-    provider.localeState.selectedLanguageIndex == 0 && Theme.of(context).brightness == Brightness.dark
-    ? AppAssets.iconsPNG.rightWhiteArrowPNG : provider.localeState.selectedLanguageIndex == 0 && Theme.of(context).brightness == Brightness.light
-    ? AppAssets.iconsPNG.leftBlackArrowPNG : provider.localeState.selectedLanguageIndex == 1 && Theme.of(context).brightness == Brightness.dark
+  Image arrowImage = Image.asset(
+    provider.localeState.selectedLanguageIndex == 0 && provider.themeMode == Brightness.dark
+    ? AppAssets.iconsPNG.rightWhiteArrowPNG : provider.localeState.selectedLanguageIndex == 0 && provider.themeMode == Brightness.light
+    ? AppAssets.iconsPNG.leftBlackArrowPNG : provider.localeState.selectedLanguageIndex == 1 && provider.themeMode == Brightness.dark
     ? AppAssets.iconsPNG.leftWhiteArrowPNG : AppAssets.iconsPNG.rightBlackArrowPNG,
   );
 
@@ -76,7 +76,7 @@ Widget build(BuildContext context, WidgetRef ref)
           GestureDetector(
             onTap: () => showThemesBottomSheet(context),
             child: CustomContainer(
-              fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.modePNG),
+              fieldPrefixIcon: Image.asset(provider.themeMode == Brightness.dark ? AppAssets.iconsPNG.darkPNG : AppAssets.iconsPNG.lightPNG),
               fieldText: provider.themeLabel,
               fieldsuffixIcon: arrowImage,
             ),

@@ -16,7 +16,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kForgetPasswordPhoneView,
+    initialLocation: AppRoutes.kSplashView,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive())),
     routes:
     [
