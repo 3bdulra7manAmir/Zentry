@@ -23,45 +23,37 @@ class AppFonts
     
     catch (e, stackTrace)
     {
-      //print('[AppFonts.font] Error getting fonts: $e\n$stackTrace');
       return FontManagerRoboto(); // Safe fallback
     }
   }
 
   String _langCode = 'en'; // Default language
 
-  /// Sets language code for choosing fonts dynamically
   set langCode(String code)
   {
     if (code.isEmpty)
     {
-      //print('[AppFonts.langCode] Empty language code provided. Ignored.');
       return;
     }
-    //print('[AppFonts.langCode] Language set to: "$code"');
     _langCode = code.toLowerCase();
   }
 
-  /// Returns the appropriate font based on current language
   FontManagerBase get _fonts
   {
     try
     {
       if (_langCode == "ar")
       {
-        //print('[AppFonts._fonts] Using Cairo for Arabic.');
         return FontManagerCairo();
       }
       else
       {
-        //print('[AppFonts._fonts] Using Roboto for non-Arabic.');
         return FontManagerRoboto();
       }
     }
     
     catch (e, stackTrace)
     {
-      //print('[AppFonts._fonts] Error determining font: $e\n$stackTrace');
       return FontManagerRoboto(); // Fallback
     }
   }

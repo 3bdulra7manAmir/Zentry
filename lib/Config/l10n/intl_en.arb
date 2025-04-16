@@ -26,6 +26,8 @@
   "google": "Google",
   "apple": "Apple",
 
+  "signUpPage": "Sign Up Form Goes Here",
+
   "resetPassword": "Reset Password",
   "forgotPassword": "Forgot password ?",
   "enterPhoneNumberAssociated": "Enter the phone number associated",

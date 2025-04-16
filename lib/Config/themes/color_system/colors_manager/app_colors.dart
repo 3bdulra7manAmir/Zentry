@@ -24,7 +24,6 @@ class AppColors
     {
       _themeMode = mode;
     }
-    // Else ignore invalid mode silently
   }
 
   ColorManagerBase get _colors

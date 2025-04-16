@@ -34,7 +34,6 @@ class LoginFormWithPhone extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
-
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
@@ -47,22 +46,17 @@ class LoginFormWithPhone extends ConsumerWidget
             children:
             [
               AppSizes.size28.verticalSpace,
-              
               Row(
                 children:
                 [
                   Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
                     textColor: AppColors.color.kQuaternarySemiBlackText,),
                   ),
-                  
                   const Spacer(),
-          
                   Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(
                     textColor: AppColors.color.kSecondarySemiGreyText,),
                   ),
-                  
                   AppSizes.size4.horizontalSpace,
-          
                   GestureDetector(
                     onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
                     child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
@@ -73,9 +67,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   ),
                 ],
               ),
-                
               AppSizes.size8.verticalSpace,
-                
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.phone,
                 fieldValidator: (value) => phoneNumberValidation(value, context),
@@ -85,31 +77,23 @@ class LoginFormWithPhone extends ConsumerWidget
                   child: Image.asset(provider.countryFlag)),
                   fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
-                
               AppSizes.size24.verticalSpace,
-                
               Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(
                 textColor: AppColors.color.kQuaternarySemiBlackText,),
               ),
-                
               AppSizes.size8.verticalSpace,
-                
               CustomTextFormField(
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
                 fieldKeyboardType: TextInputType.text,
                 fieldText: AppLocalizations.of(context).password,
-                
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState,
                   child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG: AppAssets.iconsPNG.eyePNG,),
                 ),
-
               ),
-                
               AppSizes.size16.verticalSpace,
-                
               Row(
                 children:
                 [
@@ -126,9 +110,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
                     textColor: AppColors.color.kTertiarySemiGrey),
                   ),
-          
                   const Spacer(),
-          
                   InkWell(
                     onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
                     child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
@@ -140,9 +122,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   ),
                 ],
               ),
-                
               AppSizes.size16.verticalSpace,
-                
               CustomButton(
                 buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: ()
@@ -153,9 +133,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   }
                 },
               ),
-                
               AppSizes.size20.verticalSpace,
-                
               Align(
                 alignment: Alignment.center,
                 child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(
@@ -163,9 +141,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   textColor: AppColors.color.kSenaryTotalBlackText),
                 ),
               ),
-                
               AppSizes.size20.verticalSpace,
-                
               Column(
                 children:
                 [
@@ -179,9 +155,7 @@ class LoginFormWithPhone extends ConsumerWidget
                         buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),                  
                         ),
                       ),
-                  
                       AppSizes.size12.horizontalSpace,
-                  
                       Expanded(
                         child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
                         platformLogo: AppAssets.iconsPNG.googlePNG,
@@ -191,9 +165,7 @@ class LoginFormWithPhone extends ConsumerWidget
                       ),
                     ],
                   ),
-                
                   AppSizes.size12.verticalSpace,
-          
                   CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
                   platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
                   buttonWidth: 174.w,
@@ -203,7 +175,6 @@ class LoginFormWithPhone extends ConsumerWidget
                   ),
                 ],
               ),
-          
               AppSizes.size20.verticalSpace,
             ],
           ),

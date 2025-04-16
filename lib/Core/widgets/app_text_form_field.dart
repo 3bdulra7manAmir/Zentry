@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constants/app_styles.dart';
 
 
@@ -26,7 +25,6 @@ class CustomTextFormField extends StatelessWidget
   final String? Function(String?)? fieldValidator;
   final TextEditingController? fieldController;
   final TextInputType fieldKeyboardType;
-  //final Brightness? fieldKeyboardAppearance;
   final bool? fieldObscureText;
   final bool? fieldIsEnabled;
   final bool? fieldReadOnly;
@@ -38,7 +36,6 @@ class CustomTextFormField extends StatelessWidget
       enabled: fieldIsEnabled ?? true,
       keyboardType: fieldKeyboardType,
       readOnly: fieldReadOnly ?? false,
-      //keyboardAppearance: fieldKeyboardAppearance,
       obscureText: fieldObscureText ?? false,
       controller: fieldController,
       validator: fieldValidator,

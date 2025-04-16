@@ -1,4 +1,5 @@
-abstract class AppRoutes {
+abstract class AppRoutes
+{
   AppRoutes._();
 
   // APP Splash

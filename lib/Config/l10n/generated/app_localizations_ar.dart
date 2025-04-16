@@ -72,6 +72,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get apple => 'أبل';
 
   @override
+  String get signUpPage => 'تسجيل';
+
+  @override
   String get resetPassword => 'إعادة تعيين كلمة المرور';
 
   @override

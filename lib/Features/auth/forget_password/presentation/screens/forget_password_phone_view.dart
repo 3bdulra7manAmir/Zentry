@@ -50,26 +50,19 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
             children:
             [
               AppSizes.size46.verticalSpace,
-          
               Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(
                 textColor: AppColors.color.kSenaryTotalBlackText,),
               ),
-              
               AppSizes.size13.verticalSpace,
-              
               Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(
                 textColor: AppColors.color.kSecondarySemiGreyText,),
               ),
-              
               AppSizes.size7.verticalSpace,
-              
               Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(
                 textColor: AppColors.color.kSecondarySemiGreyText,
                 fontWeight: AppFontWeights.regularWeight),
               ),
-          
               AppSizes.size48.verticalSpace,
-          
               Container(
                 alignment: Alignment.center,
                 margin: AppPadding.kAppFormPadding,
@@ -78,9 +71,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                   children:
                   [
                     Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText,)),
-          
                     AppSizes.size9.verticalSpace,
-                    
                     CustomTextFormField(
                       fieldKeyboardType: TextInputType.none,
                       fieldReadOnly: true,
@@ -91,9 +82,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                       child: Image.asset(provider.countryFlag)),
                     fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
                   ),
-          
                     AppSizes.size28.verticalSpace,
-          
                     Row(
                       children:
                       [
@@ -101,9 +90,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                           fontWeight: AppFontWeights.mediumWeight,
                           textColor: AppColors.color.kSeptenarySemiGreyText),
                         ),
-          
                         AppSizes.size14.horizontalSpace,
-          
                         GestureDetector(
                           onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView),
                           child: Text(AppLocalizations.of(context).tryAnotherWay,
@@ -115,9 +102,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                         ),
                       ],
                     ),
-          
                     AppSizes.size24.verticalSpace,
-          
                     CustomButton(
                       buttonText: AppLocalizations.of(context).verify,
                       buttonTextStyle: AppStyles.textStyle22(), buttonOnPressed: ()
@@ -131,11 +116,8 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                   ],
                 ),
               ),
-          
               AppSizes.size60.verticalSpace,
-          
               NumericKeyboard(maxLength: maxLength,),
-              
               AppSizes.size14.verticalSpace,
             ],
           ),

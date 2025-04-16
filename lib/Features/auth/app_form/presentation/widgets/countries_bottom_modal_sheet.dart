@@ -30,7 +30,6 @@ void showCountriesBottomSheet(BuildContext context)
           children:
           [
             AppSizes.size8.verticalSpace,
-
             Container(
               margin: AppPadding.kAppFormPadding,
               alignment: Alignment.center,
@@ -41,17 +40,13 @@ void showCountriesBottomSheet(BuildContext context)
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
-
             AppSizes.size18.verticalSpace,
-
             CustomContainer(
               fieldText: AppLocalizations.of(context).search,
               fieldhintStyle: AppStyles.textStyle10(),
               fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
             ),
-
             AppSizes.size16.verticalSpace,
-
             Consumer(
               builder: (context, ref, _)
               {
@@ -84,7 +79,6 @@ void showCountriesBottomSheet(BuildContext context)
                 );
               },
             ),
-
             AppSizes.size13.verticalSpace,
           ],
         ),

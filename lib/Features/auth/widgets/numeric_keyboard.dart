@@ -14,12 +14,10 @@ class NumericKeyboard extends ConsumerWidget
   const NumericKeyboard( {super.key, required this.maxLength,});
 
   final int maxLength;
-
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final List<String> keys = getNumbersList(context);
-
     return GridView.builder(
       padding: AppPadding.kAppFormPadding,
       itemCount: 12,

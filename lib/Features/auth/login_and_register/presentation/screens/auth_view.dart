@@ -26,7 +26,6 @@ class AuthView extends StatelessWidget
             //upperRightTextOnTap: () => AppRouter.router.pushNamed(name),
             ),
           ),
-
           const Expanded(
             flex: 3,
             child: AuthTabs()

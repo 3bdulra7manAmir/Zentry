@@ -23,6 +23,8 @@
     "facebook": "فيسبوك",
     "google": "جوجل",
     "apple": "أبل",
+
+    "signUpPage": "تسجيل",
   
     "resetPassword": "إعادة تعيين كلمة المرور",
     "forgotPassword": "هل نسيت كلمة المرور؟",

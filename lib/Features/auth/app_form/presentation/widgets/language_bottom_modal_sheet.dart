@@ -26,7 +26,6 @@ void showLanguageBottomSheet(BuildContext context)
           children:
           [
             AppSizes.size8.verticalSpace,
-
             Container(
               margin: AppPadding.kAppFormPadding,
               alignment: Alignment.center,
@@ -37,9 +36,7 @@ void showLanguageBottomSheet(BuildContext context)
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
-
             AppSizes.size18.verticalSpace,
-
             Consumer(
               builder: (context, ref, _)
               {
@@ -73,7 +70,6 @@ void showLanguageBottomSheet(BuildContext context)
                 );
               },
             ),
-
             AppSizes.size13.verticalSpace,
           ],
         ),

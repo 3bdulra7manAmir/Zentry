@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../config/router/app_router.dart';
 import '../../../../config/router/app_routes.dart';
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
@@ -31,10 +30,7 @@ class _SplashViewState extends State<SplashView>
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:
-          [
-            Image.asset(AppAssets.iconsPNG.appLogoPNG),
-          ],
+          children: [Image.asset(AppAssets.iconsPNG.appLogoPNG),],
         ),
       ),
     );

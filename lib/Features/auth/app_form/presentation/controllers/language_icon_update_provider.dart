@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';

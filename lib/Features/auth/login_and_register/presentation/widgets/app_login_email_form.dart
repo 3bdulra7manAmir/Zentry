@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/core/services/validation/email_valid.dart';
 import 'package:test_app/core/services/validation/password_valid.dart';
-
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
@@ -34,7 +33,6 @@ class LoginFormWithEmail extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
-    
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
@@ -47,17 +45,13 @@ class LoginFormWithEmail extends ConsumerWidget
             children:
             [
               AppSizes.size13.verticalSpace,
-              
               Row(
                 children:
                 [
                   Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
                   const Spacer(),
-          
                   Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondarySemiGreyText,),),
-                  
                   AppSizes.size4.horizontalSpace,
-          
                   GestureDetector(
                     onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
                     child: Text(
@@ -70,9 +64,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   ),
                 ],
               ),
-                
               AppSizes.size8.verticalSpace,
-                
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.emailAddress,
                 fieldValidator: (value) => emailValidation(value, context),
@@ -80,13 +72,9 @@ class LoginFormWithEmail extends ConsumerWidget
                 fieldhintStyle: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight),
                 fieldText: AppLocalizations.of(context).enterEmaill,
                 ),
-                
               AppSizes.size24.verticalSpace,
-              
               Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
-                
               AppSizes.size8.verticalSpace,
-                
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
                 fieldValidator: (value) => passwordValidation(value, context),
@@ -98,9 +86,7 @@ class LoginFormWithEmail extends ConsumerWidget
                     child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
                   ),
                 ),
-                
               AppSizes.size16.verticalSpace,
-                
               Row(
                 children:
                 [
@@ -117,9 +103,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
                     textColor: AppColors.color.kTertiarySemiGrey),
                   ),
-          
                   const Spacer(),
-          
                   InkWell(
                     onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView),
                     child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
@@ -131,9 +115,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   ),
                 ],
               ),
-                
               AppSizes.size16.verticalSpace,
-                
               CustomButton(
                 buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: ()
@@ -144,16 +126,12 @@ class LoginFormWithEmail extends ConsumerWidget
                   }
                 },
               ),
-                
               AppSizes.size20.verticalSpace,
-                
               Align(
                 alignment: Alignment.center,
                 child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSenaryTotalBlackText),) // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
               ),
-                
               AppSizes.size20.verticalSpace,
-                
               Column(
                 children:
                 [
@@ -167,9 +145,7 @@ class LoginFormWithEmail extends ConsumerWidget
                         buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),                  
                         ),
                       ),
-                  
                       AppSizes.size12.horizontalSpace,
-                  
                       Expanded(
                         child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
                         platformLogo: AppAssets.iconsPNG.googlePNG,
@@ -179,9 +155,7 @@ class LoginFormWithEmail extends ConsumerWidget
                       ),
                     ],
                   ),
-                
                   AppSizes.size12.verticalSpace,
-          
                   CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
                   platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
                   buttonWidth: 174.w,
@@ -191,7 +165,6 @@ class LoginFormWithEmail extends ConsumerWidget
                   ),
                 ],
               ),
-          
               AppSizes.size20.verticalSpace,
             ],
           ),

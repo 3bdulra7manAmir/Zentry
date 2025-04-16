@@ -47,7 +47,8 @@ class LocalizationController extends _$LocalizationController
     
     catch (_)
     {
-      // If saving fails, do nothing critical – keep app running
+      state = locale;
+      selectedLanguageIndex = 1;
     }
   }
 }

@@ -5,7 +5,6 @@ final otpInputProvider = StateNotifierProvider<OtpInputNotifier, String>((ref) =
 class OtpInputNotifier extends StateNotifier<String>
 {
   OtpInputNotifier() : super('');
-
   void addDigit(String digit, {required int maxLength})
   {
     if (state.length < maxLength)
@@ -13,7 +12,6 @@ class OtpInputNotifier extends StateNotifier<String>
       state += digit;
     }
   }
-
   void removeDigit()
   {
     if (state.isNotEmpty)
@@ -21,6 +19,5 @@ class OtpInputNotifier extends StateNotifier<String>
       state = state.substring(0, state.length - 1);
     }
   }
-
   void clear() => state = '';
 }

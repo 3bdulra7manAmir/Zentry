@@ -221,6 +221,12 @@ abstract class AppLocalizations {
   /// **'Apple'**
   String get apple;
 
+  /// No description provided for @signUpPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up Form Goes Here'**
+  String get signUpPage;
+
   /// No description provided for @resetPassword.
   ///
   /// In en, this message translates to:

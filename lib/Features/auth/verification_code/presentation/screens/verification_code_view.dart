@@ -44,25 +44,17 @@ class VerificationCodeView extends StatelessWidget
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children:
           [
             AppSizes.size46.verticalSpace,
-        
             Text(AppLocalizations.of(context).verificationCode, style: AppStyles.textStyle20(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSenaryTotalBlackText,),),
-            
             AppSizes.size13.verticalSpace,
-            
             Text(AppLocalizations.of(context).pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondarySemiGreyText,),),
-            
             AppSizes.size7.verticalSpace,
-            
             Text(AppLocalizations.of(context).appgmailcom, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondarySemiGreyText, fontWeight: AppFontWeights.regularWeight),),
-        
             AppSizes.size51.verticalSpace,
-        
             Container(
               margin: AppPadding.kAppFormPadding,
               width: double.infinity,
@@ -71,14 +63,11 @@ class VerificationCodeView extends StatelessWidget
                 children:
                 [
                   Text(AppLocalizations.of(context).enterYourCode, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
-        
                   AppSizes.size10.verticalSpace,
-        
                   Consumer(
                     builder: (context, ref, _)
                     {
                       final provider = AppProvidersProvider(ref, context);
-
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: List.generate(5, (index)
@@ -100,9 +89,7 @@ class VerificationCodeView extends StatelessWidget
                       );
                     },
                   ),
-
                   AppSizes.size26.verticalSpace,
-        
                   Row(
                     children:
                     [
@@ -110,9 +97,7 @@ class VerificationCodeView extends StatelessWidget
                         fontWeight: AppFontWeights.mediumWeight,
                         textColor: AppColors.color.kSeptenarySemiGreyText),
                       ),
-        
                       AppSizes.size6.horizontalSpace,
-        
                       Text(AppLocalizations.of(context).requestPhoneCall, style: AppStyles.textStyle14(
                         fontWeight: AppFontWeights.mediumWeight,
                         textColor: AppColors.color.kVerificationUnderLine,
@@ -122,9 +107,7 @@ class VerificationCodeView extends StatelessWidget
                       ),
                     ],
                   ),
-        
                   AppSizes.size24.verticalSpace,
-        
                   CustomButton(
                     buttonOnPressed: ()
                     {
@@ -139,11 +122,8 @@ class VerificationCodeView extends StatelessWidget
                 ],
               ),
             ),
-        
             AppSizes.size60.verticalSpace,
-        
             const NumericKeyboard(maxLength: 5,),
-        
             AppSizes.size20.verticalSpace,
           ],
         ),

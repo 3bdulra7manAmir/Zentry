@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
 
 class SignUpForm extends StatelessWidget
 {
@@ -7,6 +8,6 @@ class SignUpForm extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return const Center(child: Text("Sign Up Form Goes Here"));
+    return Center(child: Text(AppLocalizations.of(context).signUpPage));
   }
 }

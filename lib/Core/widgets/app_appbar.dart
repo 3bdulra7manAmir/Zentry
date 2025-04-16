@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../config/router/app_router.dart';
 import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
@@ -27,7 +26,6 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
   {
     final provider = AppProvidersProvider(ref, context);
     final arrow = provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.leftBackArrowBlackPNG : AppAssets.iconsPNG.rightWhiteArrowPNG;
-
     return AppBar(
       leading: GestureDetector(
         onTap: () => AppRouter.router.pop(),

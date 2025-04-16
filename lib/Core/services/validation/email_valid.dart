@@ -27,7 +27,7 @@ String emailValidation(String? value, BuildContext context)
       return AppLocalizations.of(context).enterEmaill;
     }
 
-    return ""; // No errors
+    return "";
   }
   
   catch (e)

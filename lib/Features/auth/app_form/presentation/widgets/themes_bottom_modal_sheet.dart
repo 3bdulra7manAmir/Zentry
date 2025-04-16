@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
@@ -46,9 +45,7 @@ void showThemesBottomSheet(BuildContext context)
                         borderRadius: AppBorders.dividerBorder,
                       ),
                     ),
-
                     AppSizes.size30.verticalSpace,
-
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:
@@ -68,7 +65,6 @@ void showThemesBottomSheet(BuildContext context)
                           title: Text(AppLocalizations.of(context).light),
                           activeColor: AppColors.color.kPrimaryGreyText,
                         ),
-
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.dark,
                           groupValue: provider.themeMode,
@@ -86,7 +82,6 @@ void showThemesBottomSheet(BuildContext context)
                         ),
                       ],
                     ),
-
                     AppSizes.size30.verticalSpace,
                   ],
                 ),

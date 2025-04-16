@@ -25,7 +25,8 @@ class CountryController extends _$CountryController
 
     catch (e, stack)
     {
-      
+      state = 0;
+      return;
     }
   }
 

@@ -28,7 +28,6 @@ class RestPasswordView extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> resetPasswordFormKey = GlobalKey<FormState>();
-
     return Scaffold(
       appBar: CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
       body: Form(
@@ -39,11 +38,8 @@ class RestPasswordView extends ConsumerWidget
             children:
             [
               AppSizes.size35.verticalSpace,
-          
               Image.asset(AppAssets.iconsPNG.securityLockPNG, alignment: Alignment.center,),
-          
               AppSizes.size24.verticalSpace,
-          
               Container(
                 margin: AppPadding.kAppFormPadding,
                 width: double.infinity,
@@ -52,9 +48,7 @@ class RestPasswordView extends ConsumerWidget
                   children:
                   [
                     Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
-          
                     AppSizes.size9.verticalSpace,
-          
                     CustomTextFormField(
                       fieldObscureText: provider.obscureText,
                       fieldKeyboardType: TextInputType.text,
@@ -65,13 +59,9 @@ class RestPasswordView extends ConsumerWidget
                       textColor: AppColors.color.kTertiarySemiGrey),
                       fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),
                       ),
-          
                     AppSizes.size24.verticalSpace,
-          
                     Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
-          
                     AppSizes.size9.verticalSpace,
-          
                     CustomTextFormField(
                       fieldObscureText: provider.obscureText,
                       fieldValidator: (value) => passwordValidation(value, context),
@@ -87,11 +77,8 @@ class RestPasswordView extends ConsumerWidget
                         },
                         child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
                       ),
-                    
-                      ),
-          
+                    ),
                     AppSizes.size24.verticalSpace,
-          
                     CustomButton(
                       buttonText: AppLocalizations.of(context).resetPassword,
                       buttonTextStyle: AppStyles.textStyle22(),

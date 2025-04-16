@@ -37,9 +37,7 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
-
             AppSizes.size18.verticalSpace,
-
             Consumer(
               builder: (context, ref, _)
               {
@@ -68,7 +66,6 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
                 );
               },
             ),
-
             AppSizes.size13.verticalSpace,
           ],
         ),

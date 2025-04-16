@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -31,14 +30,12 @@ class AuthTabs extends ConsumerWidget
               borderRadius: AppBorders.formBorder,
               color: Theme.of(context).cardColor,
             ),
-
             child: TabBar(
               padding: AppPadding.kTabBarPadding,
               indicatorWeight: AppSizes.size4,
               tabs: [Tab(text: AppLocalizations.of(context).login,), Tab(text: AppLocalizations.of(context).signUp),],
             ),
           ),
-
           Expanded(            
             child: TabBarView(
               children:

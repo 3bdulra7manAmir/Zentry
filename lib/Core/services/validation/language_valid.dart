@@ -12,7 +12,7 @@ String languageValidation(String? value)
     {
       return 'Invalid Language';
     }
-    return ""; // No errors
+    return "";
   } on Exception catch (e)
   {
     return e.toString();

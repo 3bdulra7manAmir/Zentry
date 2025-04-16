@@ -68,7 +68,7 @@ class UserPreferences
 
     catch (_)
     {
-      // Fall through to system preference
+      
     }
 
     final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;

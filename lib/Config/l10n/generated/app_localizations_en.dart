@@ -72,6 +72,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get apple => 'Apple';
 
   @override
+  String get signUpPage => 'Sign Up Form Goes Here';
+
+  @override
   String get resetPassword => 'Reset Password';
 
   @override

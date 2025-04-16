@@ -34,19 +34,12 @@ class ForgetPasswordWithEmailView extends StatelessWidget
             children:
             [
               AppSizes.size46.verticalSpace,
-          
               Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.color.kSenaryTotalBlackText,)),
-              
               AppSizes.size13.verticalSpace,
-              
               Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondarySemiGreyText,)),
-              
               AppSizes.size7.verticalSpace,
-              
               Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondarySemiGreyText, fontWeight: AppFontWeights.regularWeight),),
-          
               AppSizes.size48.verticalSpace,
-          
               Container(
                 alignment: Alignment.center,
                 margin: AppPadding.kAppFormPadding,
@@ -55,18 +48,14 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                   children:
                   [
                     Text(AppLocalizations.of(context).emailAddress, style: AppStyles.textStyle12(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternarySemiBlackText,)),
-          
                     AppSizes.size8.verticalSpace,
-                    
                     CustomTextFormField(
                       fieldValidator: (value) => emailValidation(value, context),
                       fieldKeyboardType: TextInputType.emailAddress,
                       fieldController: emailController,
                       fieldText: AppLocalizations.of(context).emailAddress,
                       ),
-          
                     AppSizes.size27.verticalSpace,
-          
                     Row(
                       children:
                       [
@@ -74,9 +63,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                           fontWeight: AppFontWeights.mediumWeight,
                           textColor: AppColors.color.kSeptenarySemiGreyText),
                         ),
-          
                         AppSizes.size14.horizontalSpace,
-          
                         GestureDetector(
                           onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
                           child: Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(
@@ -88,9 +75,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                         ),
                       ],
                     ),
-          
                     AppSizes.size24.verticalSpace,
-          
                     CustomButton(
                       buttonOnPressed: ()
                       {
@@ -105,11 +90,8 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                   ],
                 ),
               ),
-              
               AppSizes.size60.verticalSpace,
-          
               //const NumericKeyboard(),
-              
               AppSizes.size20.verticalSpace,
             ],
           ),

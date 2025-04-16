@@ -53,7 +53,7 @@ abstract class AppStrings
   static const apple = "Apple";
 
   //SignupForm
-
+  static const signUpPage = "Sign Up Form Goes Here";
 
   ///App ForgetPassword
   
@@ -182,4 +182,5 @@ abstract class AppStrings
   static const passwordOneLowerCase = "Password must contain at least one lowercase letter.";
   static const passwordOneNumber = "Password must contain at least one number.";
   static const passwordOneSpecialCharacter = "Password must contain at least one special character.";
+  
 }

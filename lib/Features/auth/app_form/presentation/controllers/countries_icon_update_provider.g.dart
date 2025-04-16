@@ -6,7 +6,7 @@ part of 'countries_icon_update_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$countryControllerHash() => r'8076fe0867fb9b7b39225b507bfc4937233ac12f';
+String _$countryControllerHash() => r'3f9edef5f5c736f81a0a677698017200687ccf47';
 
 /// See also [CountryController].
 @ProviderFor(CountryController)
