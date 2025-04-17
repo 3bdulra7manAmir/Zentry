@@ -28,10 +28,13 @@ Widget build(BuildContext context, WidgetRef ref)
   final provider = AppProvidersProvider(ref, context);
   final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
   Image arrowImage = Image.asset(
-    provider.localeState.selectedLanguageIndex == 0 && provider.themeMode == Brightness.dark
-    ? AppAssets.iconsPNG.rightWhiteArrowPNG : provider.localeState.selectedLanguageIndex == 0 && provider.themeMode == Brightness.light
-    ? AppAssets.iconsPNG.leftBlackArrowPNG : provider.localeState.selectedLanguageIndex == 1 && provider.themeMode == Brightness.dark
-    ? AppAssets.iconsPNG.leftWhiteArrowPNG : AppAssets.iconsPNG.rightBlackArrowPNG,
+  provider.localeState.selectedLanguageIndex == 0
+      ? (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.leftWhiteArrowPNG
+          : AppAssets.iconsPNG.leftBlackArrowPNG)
+      : (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.rightWhiteArrowPNG
+          : AppAssets.iconsPNG.rightBlackArrowPNG)
   );
 
   return Container(
@@ -84,7 +87,7 @@ Widget build(BuildContext context, WidgetRef ref)
           AppSizes.size27.verticalSpace,
           CustomButton(
             buttonText: AppLocalizations.of(context).login,
-            buttonOnPressed: () => AppRouter.router.pushReplacementNamed(AppRoutes.kAuthTabs),
+            buttonOnPressed: () => AppRouter.router.push(AppRoutes.kAuthTabs),
           ),
           AppSizes.size16.verticalSpace,
           CustomButton(

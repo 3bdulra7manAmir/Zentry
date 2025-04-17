@@ -54,7 +54,7 @@ class FormHeader extends ConsumerWidget
                       textDecorationColor: AppColors.color.kTertiaryWhiteText),
                     ),
                   ),
-                Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.rightWhiteArrowPNG : AppAssets.iconsPNG.leftWhiteArrowPNG)
+                Image.asset(provider.localeState.selectedLanguageIndex == 0 ? AppAssets.iconsPNG.leftWhiteArrowPNG : AppAssets.iconsPNG.rightWhiteArrowPNG)
               ],
             ),
           ) : const SizedBox.shrink(),

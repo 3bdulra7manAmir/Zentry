@@ -25,7 +25,13 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final arrow = provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.leftBackArrowBlackPNG : AppAssets.iconsPNG.rightWhiteArrowPNG;
+    final arrow = provider.localeState.selectedLanguageIndex == 0
+    ? (provider.themeMode == ThemeMode.dark
+        ? AppAssets.iconsPNG.rightWhiteArrowPNG
+        : AppAssets.iconsPNG.rightBackArrowBlackPNG)
+    : (provider.themeMode == ThemeMode.dark
+        ? AppAssets.iconsPNG.leftWhiteArrowPNG
+        : AppAssets.iconsPNG.leftBackArrowBlackPNG);
     return AppBar(
       leading: GestureDetector(
         onTap: () => AppRouter.router.pop(),
