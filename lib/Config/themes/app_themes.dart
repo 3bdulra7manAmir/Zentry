@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/constants/app_borders.dart';
 import '../../core/constants/app_styles.dart';
 import 'color_system/colors_manager/app_colors.dart';
-import 'app_sizes.dart';
+import '../../core/constants/app_sizes.dart';
 import 'font_system/app_font_weights.dart';
 
 class AppTheme

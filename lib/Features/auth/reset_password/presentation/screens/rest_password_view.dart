@@ -5,7 +5,7 @@ import 'package:test_app/core/services/validation/password_valid.dart';
 import 'package:test_app/core/widgets/app_text_form_field.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../../../../config/themes/app_sizes.dart';
+import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';

@@ -13,6 +13,8 @@ class UserPreferences
 
   static const String _defaultLanguage = 'en';
   static const String _defaultCountry = 'Egypt';
+  static const String _countryIndexKey = 'country_index';
+  static const int _defaultCountryIndex = 0;
 
   SharedPreferences? _prefs;
 
@@ -49,6 +51,18 @@ class UserPreferences
   {
     final prefs = await _preferences;
     return prefs.getString(_countryKey) ?? _defaultCountry;
+  }
+
+  Future<void> saveCountryIndex(int index) async
+  {
+    final prefs = await _preferences;
+    await prefs.setInt(_countryIndexKey, index);
+  }
+
+  Future<int> getCountryIndex() async
+  {
+    final prefs = await _preferences;
+    return prefs.getInt(_countryIndexKey) ?? _defaultCountryIndex;
   }
 
   Future<void> saveTheme(bool isDark) async
