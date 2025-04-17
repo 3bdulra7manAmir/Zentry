@@ -57,19 +57,6 @@ class RestPasswordView extends ConsumerWidget
                       fieldText: AppLocalizations.of(context).password,
                       fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
                       textColor: AppColors.color.kTertiarySemiGrey),
-                      fieldsuffixIcon: Image.asset(AppAssets.iconsPNG.corssedEyePNG),
-                      ),
-                    AppSizes.size24.verticalSpace,
-                    Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
-                    AppSizes.size9.verticalSpace,
-                    CustomTextFormField(
-                      fieldObscureText: provider.obscureText,
-                      fieldValidator: (value) => passwordValidation(value, context),
-                      fieldController: confirmPasswordController,
-                      fieldKeyboardType: TextInputType.text,
-                      fieldText: AppLocalizations.of(context).confirmPassword,
-                      fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                      textColor: AppColors.color.kTertiarySemiGrey),
                       fieldsuffixIcon: GestureDetector(
                         onTap: ()
                         {
@@ -79,12 +66,34 @@ class RestPasswordView extends ConsumerWidget
                       ),
                     ),
                     AppSizes.size24.verticalSpace,
+                    Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+                    AppSizes.size9.verticalSpace,
+                    CustomTextFormField(
+                      fieldObscureText: provider.obscureText2,
+                      fieldValidator: (value) => passwordValidation(value, context),
+                      fieldController: confirmPasswordController,
+                      fieldKeyboardType: TextInputType.text,
+                      fieldText: AppLocalizations.of(context).confirmPassword,
+                      fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
+                      textColor: AppColors.color.kTertiarySemiGrey),
+                      fieldsuffixIcon: GestureDetector(
+                        onTap: ()
+                        {
+                          ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
+                        },
+                        child: Image.asset(provider.obscureText2 ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                      ),
+                    ),
+                    AppSizes.size24.verticalSpace,
                     CustomButton(
                       buttonText: AppLocalizations.of(context).resetPassword,
                       buttonTextStyle: AppStyles.textStyle22(),
                       buttonOnPressed: ()
                       {
-                        //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                        if (resetPasswordFormKey.currentState!.validate())
+                        {
+                          //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                        }
                       },
                     ),
                   ],

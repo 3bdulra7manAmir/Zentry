@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,19 +17,16 @@ class TestApp extends ConsumerWidget
       designSize: const Size(390, 844),
       builder: (context, child)
       {
-        return DevicePreview(
-          enabled: true,
-          builder: (context) => MaterialApp.router(
-            debugShowCheckedModeBanner: false,
-            routerConfig: AppRouter.router,
-            locale: provider.locale,
-            supportedLocales: AppLocalizations.supportedLocales,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            themeMode: provider.themeMode,
-            theme: AppTheme.lightTheme(),
-            darkTheme: AppTheme.darkTheme(), 
-            useInheritedMediaQuery: true,
-          ),
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.router,
+          locale: provider.locale,
+          supportedLocales: AppLocalizations.supportedLocales,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          themeMode: provider.themeMode,
+          theme: AppTheme.lightTheme(),
+          darkTheme: AppTheme.darkTheme(), 
+          useInheritedMediaQuery: true,
         );
       },
     );

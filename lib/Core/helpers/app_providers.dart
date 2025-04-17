@@ -38,6 +38,7 @@ class AppProvidersProvider
   String get countryFlag => getSelectedCountryImage(ref, context);
 
   bool get obscureText => ref.watch(obscurePasswordProvider);
+  bool get obscureText2 => ref.watch(obscurePasswordProvider2);
   bool get obscureTextState => ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
 
   bool get isChecked => ref.watch(checkboxValueProvider);

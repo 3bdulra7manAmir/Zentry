@@ -79,10 +79,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                     CustomButton(
                       buttonOnPressed: ()
                       {
-                        if (emailFormKey.currentState!.validate())
-                        {
-                          AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
-                        }
+                        AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
                       },
                       buttonText: AppLocalizations.of(context).verify,
                       buttonTextStyle: AppStyles.textStyle22(),
