@@ -7,36 +7,68 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  device_preview: ^1.2.0
+  # Flutter SDK
   flutter:
     sdk: flutter
-  flutter_launcher_icons: ^0.14.3
+
+  # Flutter Localization support
   flutter_localizations:
     sdk: flutter
-  flutter_otp_text_field: ^1.5.1+1
+
+  # Riverpod (State Management)
   flutter_riverpod: ^2.6.1
-  flutter_screenutil: ^5.9.3
-  flutter_svg: ^2.0.17
-  go_router: ^14.8.1
-  intl: ^0.19.0
-  rename_app: ^1.6.2
   riverpod_annotation: ^2.6.1
+
+  # Routing
+  go_router: ^14.8.1
+
+  # Device Preview (for responsive testing)
+  device_preview: ^1.2.0
+
+  # Shared Preferences (local storage)
   shared_preferences: ^2.5.3
 
+  # Internationalization
+  intl: ^0.19.0
+
+  # Screen Util (responsive UI)
+  flutter_screenutil: ^5.9.3
+
+  # SVG rendering
+  flutter_svg: ^2.0.17
+
+  # OTP Text Field UI
+  flutter_otp_text_field: ^1.5.1+1
+
+  # Flutter Launcher Icons (for app icons)
+  flutter_launcher_icons: ^0.14.3
+
+  # Rename App (for changing app name/package)
+  rename_app: ^1.6.2
+
+  # Comparing and Hashing
+  equatable: ^2.0.7
+
 dev_dependencies:
+  # Riverpod Code Generation
   build_runner: ^2.4.15
+  riverpod_generator: ^2.6.4
+
+  # Riverpod Lints
+  riverpod_lint: any
+
+  # Flutter Lints
   flutter_lints: ^5.0.0
+
+  # Flutter Test
   flutter_test:
     sdk: flutter
-
-  # Riverpod Code Generation
-  riverpod_generator: ^2.6.4
-  riverpod_lint: any
 
 flutter:
   uses-material-design: true
   generate: true
 
+  # Fonts Configuration
   fonts:
     # Roboto Fonts
     - family: Roboto
@@ -61,6 +93,7 @@ flutter:
         - asset: assets/fonts/cairo/Cairo-Regular.ttf
         - asset: assets/fonts/cairo/Cairo-SemiBold.ttf
 
+  # Asset Paths
   assets:
     - assets/icons/Splash/
     - assets/icons/AppForm/
@@ -72,6 +105,7 @@ flutter:
     - assets/icons/Countries/
     - assets/images/
 
+# Flutter Intl Configuration
 flutter_intl:
   enabled: true
   arb_dir: lib/config/i18n/l10n
