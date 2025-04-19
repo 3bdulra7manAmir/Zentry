@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../domain/entity/app_login_entity.dart';
 
-class AppLoginModel extends Equatable implements AppLoginEntity
+class AppLoginModel extends Equatable implements LoginEntity
 {
   final String? email;
   final String? phoneNumber;
