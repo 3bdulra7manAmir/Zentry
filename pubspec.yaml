@@ -49,6 +49,9 @@ dependencies:
   # Comparing and Hashing
   equatable: ^2.0.7
 
+  # Either Class
+  dartz: ^0.10.1
+
 dev_dependencies:
   # Riverpod Code Generation
   build_runner: ^2.4.15
