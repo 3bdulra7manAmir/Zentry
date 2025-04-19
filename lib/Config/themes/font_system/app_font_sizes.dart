@@ -1,7 +1,6 @@
-abstract class AppFontSizes
-{
+abstract class AppFontSizes {
   AppFontSizes._();
-  
+
   /// 8.0
   static double get xXSmall => 8.0;
 

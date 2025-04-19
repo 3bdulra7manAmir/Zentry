@@ -8,8 +8,7 @@ import '../constants/app_images.dart';
 import '../constants/app_styles.dart';
 import '../helpers/app_providers.dart';
 
-class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
-{
+class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
     this.barLeading,
@@ -22,23 +21,28 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
   final List<Widget>? barActions;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
-    final arrow = provider.localeState.selectedLanguageIndex == 0
-    ? (provider.themeMode == ThemeMode.dark
-        ? AppAssets.iconsPNG.rightWhiteArrowPNG
-        : AppAssets.iconsPNG.rightBackArrowBlackPNG)
-    : (provider.themeMode == ThemeMode.dark
-        ? AppAssets.iconsPNG.leftWhiteArrowPNG
-        : AppAssets.iconsPNG.leftBackArrowBlackPNG);
+    final arrow =
+        provider.localeState.selectedLanguageIndex == 0
+            ? (provider.themeMode == ThemeMode.dark
+                ? AppAssets.iconsPNG.rightWhiteArrowPNG
+                : AppAssets.iconsPNG.rightBackArrowBlackPNG)
+            : (provider.themeMode == ThemeMode.dark
+                ? AppAssets.iconsPNG.leftWhiteArrowPNG
+                : AppAssets.iconsPNG.leftBackArrowBlackPNG);
     return AppBar(
       leading: GestureDetector(
         onTap: () => AppRouter.router.pop(),
         child: barLeading ?? Image.asset(arrow),
       ),
       leadingWidth: 65.w,
-      title: Text(barTitle, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSenaryTotalBlackText,),
+      title: Text(
+        barTitle,
+        style: AppStyles.textStyle14(
+          fontWeight: AppFontWeights.semiBoldWeight,
+          textColor: AppColors.color.kSenaryTotalBlackText,
+        ),
       ),
       actions: barActions,
     );

@@ -9,22 +9,19 @@ import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/database/static/app_form_data/app_languages_list.dart';
 
-void showLanguageBottomSheet(BuildContext context)
-{
+void showLanguageBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
-    builder: (BuildContext context)
-    {
+    builder: (BuildContext context) {
       final List<dynamic> languagesList = getLanguagesList(context);
       return Padding(
         padding: AppPadding.kAppFormPadding,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children:
-          [
+          children: [
             AppSizes.size8.verticalSpace,
             Container(
               margin: AppPadding.kAppFormPadding,
@@ -38,30 +35,35 @@ void showLanguageBottomSheet(BuildContext context)
             ),
             AppSizes.size18.verticalSpace,
             Consumer(
-              builder: (context, ref, _)
-              {
+              builder: (context, ref, _) {
                 final provider = AppProvidersProvider(ref, context);
                 return ListView.separated(
                   shrinkWrap: true,
                   itemCount: languagesList.length,
-                  separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-                  itemBuilder: (context, index)
-                  {
+                  separatorBuilder:
+                      (context, index) => AppSizes.size17.verticalSpace,
+                  itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: ()
-                      {
-                        provider.localeState.setLocale(languagesList[index][2] as Locale, index);
+                      onTap: () {
+                        provider.localeState.setLocale(
+                          languagesList[index][2] as Locale,
+                          index,
+                        );
                         AppRouter.router.pop();
                       },
                       child: Row(
-                        children:
-                        [
+                        children: [
                           Image.asset(languagesList[index][0]),
                           AppSizes.size12.horizontalSpace,
                           Text(languagesList[index][1]),
                           const Spacer(),
-                          if (index == provider.localeState.selectedLanguageIndex)
-                          Icon(Icons.check_circle, size: AppSizes.size20, color: AppColors.color.kNonarySemiGreyText,),
+                          if (index ==
+                              provider.localeState.selectedLanguageIndex)
+                            Icon(
+                              Icons.check_circle,
+                              size: AppSizes.size20,
+                              color: AppColors.color.kNonarySemiGreyText,
+                            ),
                           AppSizes.size10.horizontalSpace,
                         ],
                       ),

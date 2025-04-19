@@ -17,24 +17,23 @@ import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../login_and_register/presentation/widgets/phone_number_dialog.dart';
 import '../../../widgets/numeric_keyboard.dart';
 
-
-class ForgetPasswordWithPhoneView extends ConsumerWidget
-{
+class ForgetPasswordWithPhoneView extends ConsumerWidget {
   ForgetPasswordWithPhoneView({super.key});
 
   final TextEditingController phoneNumbrerController = TextEditingController();
   final GlobalKey<FormState> phoneNumberFormKey = GlobalKey<FormState>();
-  
+
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
     final int? maxLength;
-    if (provider.phoneNumberHolder != null && provider.phoneNumberHolder == 1){maxLength = 12;}
-    else{maxLength = 11;}
+    if (provider.phoneNumberHolder != null && provider.phoneNumberHolder == 1) {
+      maxLength = 12;
+    } else {
+      maxLength = 11;
+    }
 
-    if (phoneNumbrerController.text != provider.otpProvider)
-    {
+    if (phoneNumbrerController.text != provider.otpProvider) {
       phoneNumbrerController.text = provider.otpProvider;
       phoneNumbrerController.selection = TextSelection.fromPosition(
         TextPosition(offset: phoneNumbrerController.text.length),
@@ -42,25 +41,35 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
     }
 
     return Scaffold(
-      appBar:  CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
+      appBar: CustomAppBar(
+        barTitle: AppLocalizations.of(context).resetPassword,
+      ),
       body: SingleChildScrollView(
         child: Form(
           key: phoneNumberFormKey,
           child: Column(
-            children:
-            [
+            children: [
               AppSizes.size46.verticalSpace,
-              Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(
-                textColor: AppColors.color.kSenaryTotalBlackText,),
+              Text(
+                AppLocalizations.of(context).forgotPassword,
+                style: AppStyles.textStyle20(
+                  textColor: AppColors.color.kSenaryTotalBlackText,
+                ),
               ),
               AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(
-                textColor: AppColors.color.kSecondarySemiGreyText,),
+              Text(
+                AppLocalizations.of(context).enterPhoneNumberAssociated,
+                style: AppStyles.textStyle16(
+                  textColor: AppColors.color.kSecondarySemiGreyText,
+                ),
               ),
               AppSizes.size7.verticalSpace,
-              Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(
-                textColor: AppColors.color.kSecondarySemiGreyText,
-                fontWeight: AppFontWeights.regularWeight),
+              Text(
+                AppLocalizations.of(context).withYourAccount,
+                style: AppStyles.textStyle14(
+                  textColor: AppColors.color.kSecondarySemiGreyText,
+                  fontWeight: AppFontWeights.regularWeight,
+                ),
               ),
               AppSizes.size48.verticalSpace,
               Container(
@@ -68,35 +77,57 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                 margin: AppPadding.kAppFormPadding,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText,)),
+                  children: [
+                    Text(
+                      AppLocalizations.of(context).phoneNumber,
+                      style: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kSeptenarySemiGreyText,
+                      ),
+                    ),
                     AppSizes.size9.verticalSpace,
                     CustomTextFormField(
                       fieldKeyboardType: TextInputType.none,
                       fieldReadOnly: true,
-                      fieldValidator: (value) => phoneNumberValidation(value, context),
+                      fieldValidator:
+                          (value) => phoneNumberValidation(value, context),
                       fieldController: phoneNumbrerController,
                       fieldPrefixIcon: InkWell(
-                      onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                      child: Image.asset(provider.countryFlag)),
-                    fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
-                  ),
+                        onTap:
+                            () => showCountriesPhoneNumberBottomSheet(context),
+                        child: Image.asset(provider.countryFlag),
+                      ),
+                      fieldText:
+                          provider.phoneNumberHolder == 0
+                              ? AppLocalizations.of(context).egyptCountryCode
+                              : AppLocalizations.of(
+                                context,
+                              ).saudiArabiaCountryCode,
+                    ),
                     AppSizes.size28.verticalSpace,
                     Row(
-                      children:
-                      [
-                        Text(AppLocalizations.of(context).dontHavePhone, style: AppStyles.textStyle14(
-                          fontWeight: AppFontWeights.mediumWeight,
-                          textColor: AppColors.color.kSeptenarySemiGreyText),
+                      children: [
+                        Text(
+                          AppLocalizations.of(context).dontHavePhone,
+                          style: AppStyles.textStyle14(
+                            fontWeight: AppFontWeights.mediumWeight,
+                            textColor: AppColors.color.kSeptenarySemiGreyText,
+                          ),
                         ),
                         AppSizes.size14.horizontalSpace,
                         GestureDetector(
-                          onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView),
-                          child: Text(AppLocalizations.of(context).tryAnotherWay,
-                              style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                              textColor: AppColors.color.kQuinarySemiBlueText, textDecoration: TextDecoration.underline,
-                              textDecorationColor: AppColors.color.kQuinarySemiBlueText,
+                          onTap:
+                              () => AppRouter.router.pushNamed(
+                                AppRoutes.kForgetPasswordEmailView,
+                              ),
+                          child: Text(
+                            AppLocalizations.of(context).tryAnotherWay,
+                            style: AppStyles.textStyle14(
+                              fontWeight: AppFontWeights.mediumWeight,
+                              textColor: AppColors.color.kQuinarySemiBlueText,
+                              textDecoration: TextDecoration.underline,
+                              textDecorationColor:
+                                  AppColors.color.kQuinarySemiBlueText,
                             ),
                           ),
                         ),
@@ -105,11 +136,12 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                     AppSizes.size24.verticalSpace,
                     CustomButton(
                       buttonText: AppLocalizations.of(context).verify,
-                      buttonTextStyle: AppStyles.textStyle22(), buttonOnPressed: ()
-                      {
-                        if (phoneNumberFormKey.currentState!.validate())
-                        {
-                          AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                      buttonTextStyle: AppStyles.textStyle22(),
+                      buttonOnPressed: () {
+                        if (phoneNumberFormKey.currentState!.validate()) {
+                          AppRouter.router.pushNamed(
+                            AppRoutes.kVerificationCodeView,
+                          );
                         }
                       },
                     ),
@@ -117,7 +149,7 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
                 ),
               ),
               AppSizes.size60.verticalSpace,
-              NumericKeyboard(maxLength: maxLength,),
+              NumericKeyboard(maxLength: maxLength),
               AppSizes.size14.verticalSpace,
             ],
           ),

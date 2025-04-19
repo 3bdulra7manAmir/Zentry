@@ -15,83 +15,110 @@ import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../login_and_register/presentation/controllers/obsecure_text_provider.dart';
 
-
-class RestPasswordView extends ConsumerWidget
-{
+class RestPasswordView extends ConsumerWidget {
   RestPasswordView({super.key});
 
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> resetPasswordFormKey = GlobalKey<FormState>();
     return Scaffold(
-      appBar: CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
+      appBar: CustomAppBar(
+        barTitle: AppLocalizations.of(context).resetPassword,
+      ),
       body: Form(
         key: resetPasswordFormKey,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children:
-            [
+            children: [
               AppSizes.size35.verticalSpace,
-              Image.asset(AppAssets.iconsPNG.securityLockPNG, alignment: Alignment.center,),
+              Image.asset(
+                AppAssets.iconsPNG.securityLockPNG,
+                alignment: Alignment.center,
+              ),
               AppSizes.size24.verticalSpace,
               Container(
                 margin: AppPadding.kAppFormPadding,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+                  children: [
+                    Text(
+                      AppLocalizations.of(context).newPassword,
+                      style: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kSeptenarySemiGreyText,
+                      ),
+                    ),
                     AppSizes.size9.verticalSpace,
                     CustomTextFormField(
                       fieldObscureText: provider.obscureText,
                       fieldKeyboardType: TextInputType.text,
-                      fieldValidator: (value) => passwordValidation(value, context),
-                      fieldController: passwordController,                  
+                      fieldValidator:
+                          (value) => passwordValidation(value, context),
+                      fieldController: passwordController,
                       fieldText: AppLocalizations.of(context).password,
-                      fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                      textColor: AppColors.color.kTertiarySemiGrey),
+                      fieldhintStyle: AppStyles.textStyle14(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kTertiarySemiGrey,
+                      ),
                       fieldsuffixIcon: GestureDetector(
-                        onTap: ()
-                        {
-                          ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
+                        onTap: () {
+                          ref.read(obscurePasswordProvider.notifier).state =
+                              !ref.read(obscurePasswordProvider.notifier).state;
                         },
-                        child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                        child: Image.asset(
+                          provider.obscureText
+                              ? AppAssets.iconsPNG.corssedEyePNG
+                              : AppAssets.iconsPNG.eyePNG,
+                        ),
                       ),
                     ),
                     AppSizes.size24.verticalSpace,
-                    Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+                    Text(
+                      AppLocalizations.of(context).confirmPassword,
+                      style: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kSeptenarySemiGreyText,
+                      ),
+                    ),
                     AppSizes.size9.verticalSpace,
                     CustomTextFormField(
                       fieldObscureText: provider.obscureText2,
-                      fieldValidator: (value) => passwordValidation(value, context),
+                      fieldValidator:
+                          (value) => passwordValidation(value, context),
                       fieldController: confirmPasswordController,
                       fieldKeyboardType: TextInputType.text,
                       fieldText: AppLocalizations.of(context).confirmPassword,
-                      fieldhintStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-                      textColor: AppColors.color.kTertiarySemiGrey),
+                      fieldhintStyle: AppStyles.textStyle14(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kTertiarySemiGrey,
+                      ),
                       fieldsuffixIcon: GestureDetector(
-                        onTap: ()
-                        {
-                          ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
+                        onTap: () {
+                          ref.read(obscurePasswordProvider2.notifier).state =
+                              !ref
+                                  .read(obscurePasswordProvider2.notifier)
+                                  .state;
                         },
-                        child: Image.asset(provider.obscureText2 ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                        child: Image.asset(
+                          provider.obscureText2
+                              ? AppAssets.iconsPNG.corssedEyePNG
+                              : AppAssets.iconsPNG.eyePNG,
+                        ),
                       ),
                     ),
                     AppSizes.size24.verticalSpace,
                     CustomButton(
                       buttonText: AppLocalizations.of(context).resetPassword,
                       buttonTextStyle: AppStyles.textStyle22(),
-                      buttonOnPressed: ()
-                      {
-                        if (resetPasswordFormKey.currentState!.validate())
-                        {
+                      buttonOnPressed: () {
+                        if (resetPasswordFormKey.currentState!.validate()) {
                           //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
                         }
                       },

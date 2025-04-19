@@ -14,22 +14,19 @@ import '../../../../../core/services/database/static/app_form_data/app_countries
 import '../../../../../core/widgets/app_container.dart';
 import '../controllers/countries_icon_update_provider.dart';
 
-void showCountriesBottomSheet(BuildContext context)
-{
+void showCountriesBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
-    builder: (BuildContext context)
-    {
+    builder: (BuildContext context) {
       final countriesList = CountryUtils.getCountryImageAndName(context);
       return Padding(
         padding: AppPadding.kAppFormPadding,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children:
-          [
+          children: [
             AppSizes.size8.verticalSpace,
             Container(
               margin: AppPadding.kAppFormPadding,
@@ -49,30 +46,36 @@ void showCountriesBottomSheet(BuildContext context)
             ),
             AppSizes.size16.verticalSpace,
             Consumer(
-              builder: (context, ref, _)
-              {
+              builder: (context, ref, _) {
                 return ListView.separated(
                   shrinkWrap: true,
                   itemCount: countriesList.length,
-                  separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-                  itemBuilder: (context, index)
-                  {
+                  separatorBuilder:
+                      (context, index) => AppSizes.size17.verticalSpace,
+                  itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: () async
-                      {
-                        ref.read(countryControllerProvider.notifier).setSelectedIndex(index);
+                      onTap: () async {
+                        ref
+                            .read(countryControllerProvider.notifier)
+                            .setSelectedIndex(index);
                         await UserPreferences.instance.saveCountryIndex(index);
                         AppRouter.router.pop();
                       },
                       child: Row(
-                        children:
-                        [
+                        children: [
                           Image.asset(countriesList[index][0]),
                           AppSizes.size12.horizontalSpace,
                           Text(countriesList[index][1]),
                           const Spacer(),
-                          if (index == ref.read(countryControllerProvider.notifier).getSelectedIndex())
-                          Icon(Icons.check_circle, size: AppSizes.size20, color: AppColors.color.kNonarySemiGreyText,),
+                          if (index ==
+                              ref
+                                  .read(countryControllerProvider.notifier)
+                                  .getSelectedIndex())
+                            Icon(
+                              Icons.check_circle,
+                              size: AppSizes.size20,
+                              color: AppColors.color.kNonarySemiGreyText,
+                            ),
                           AppSizes.size10.horizontalSpace,
                         ],
                       ),
@@ -88,4 +91,3 @@ void showCountriesBottomSheet(BuildContext context)
     },
   );
 }
-

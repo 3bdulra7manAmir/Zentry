@@ -5,6 +5,7 @@ import '../repo/app_login_repo.dart';
 
 class AppLoginUsecase extends AppUsecase
 {
+
   final AppLoginRepo appLoginRepo;
   AppLoginUsecase(this.appLoginRepo);
 
@@ -13,5 +14,4 @@ class AppLoginUsecase extends AppUsecase
   {
     return appLoginRepo.fetchUserLoginData();
   }
-
 }

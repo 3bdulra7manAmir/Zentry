@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-
-abstract class AppFontWeights
-{
+abstract class AppFontWeights {
   AppFontWeights._();
 
   ///FontWeight.w200

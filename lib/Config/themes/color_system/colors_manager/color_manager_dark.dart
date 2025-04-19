@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'color_manager_base.dart';
 
-class DarkColorScheme extends ColorManagerBase
-{
+class DarkColorScheme extends ColorManagerBase {
   @override
   Color get kSecondaryWhite => const Color(0xffFFFFFF);
 
@@ -22,7 +21,7 @@ class DarkColorScheme extends ColorManagerBase
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
 
   @override
-  Color get kForgetPasswordUnderLine  => const Color(0xff1B1B1B);
+  Color get kForgetPasswordUnderLine => const Color(0xff1B1B1B);
 
   @override
   Color get kTertiaryWhiteText => const Color(0xffF4F4F4);

@@ -3,47 +3,36 @@ import 'package:test_app/core/extensions/string.dart';
 
 import '../../../config/l10n/generated/app_localizations.dart';
 
-String passwordValidation(String? value, BuildContext context)
-{
+String passwordValidation(String? value, BuildContext context) {
   try {
     final password = value ?? "";
 
-    if (password.isEmpty)
-    {
+    if (password.isEmpty) {
       return AppLocalizations.of(context).passwordIsRequired;
     }
 
-    if (!password.passwordIsLongEnough)
-    {
+    if (!password.passwordIsLongEnough) {
       return AppLocalizations.of(context).passwordLength8Character;
     }
-    if (!password.passwordHasUpperCase)
-    {
+    if (!password.passwordHasUpperCase) {
       return AppLocalizations.of(context).passwordOneUpperCase;
     }
-    if (!password.passwordHasLowerCase)
-    {
+    if (!password.passwordHasLowerCase) {
       return AppLocalizations.of(context).passwordOneLowerCase;
     }
-    if (!password.passwordHasDigit)
-    {
+    if (!password.passwordHasDigit) {
       return AppLocalizations.of(context).passwordOneNumber;
     }
-    if (!password.passwordHasSpecialChar)
-    {
+    if (!password.passwordHasSpecialChar) {
       return AppLocalizations.of(context).passwordOneSpecialCharacter;
     }
 
-    if (!password.hasValidPassword)
-    {
+    if (!password.hasValidPassword) {
       return AppLocalizations.of(context).invalidPassword;
     }
 
     return "";
-  }
-  
-  catch (e)
-  {
+  } catch (e) {
     return "${AppLocalizations.of(context).validateFailurPassword} ${e.toString()}";
   }
 }

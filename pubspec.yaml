@@ -52,6 +52,9 @@ dependencies:
   # Either Class
   dartz: ^0.10.1
 
+  # Remote Requests
+  dio: ^5.8.0+1
+
 dev_dependencies:
   # Riverpod Code Generation
   build_runner: ^2.4.15

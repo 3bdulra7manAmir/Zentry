@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class ColorManagerBase
-{
+abstract class ColorManagerBase {
   Color get kTransparent;
 
   /// [Primary__003082]
@@ -26,7 +25,7 @@ abstract class ColorManagerBase
   /// [Form_Buttons_Fill__F8F8F8]
   Color get kFormButtonsFill;
 
-  /// [Border__E5E5E5] 
+  /// [Border__E5E5E5]
   Color get kSocialBorder;
 
   /// FBFBFB //Yours
@@ -41,7 +40,7 @@ abstract class ColorManagerBase
   /// [Nonary_Semi_Grey_Text__717171] //Yours
   Color get kNonarySemiGreyText;
 
-  /// [Secondary__9E9E9E] 
+  /// [Secondary__9E9E9E]
   Color get kSecondarySemiGreyText;
 
   /// [Tertiary__B4B4B4]
@@ -62,7 +61,7 @@ abstract class ColorManagerBase
   /// [TabBar__FF7D00] //Yours
   Color get kTabBar;
 
-  /// [Dark_Form_Buttons_Borders_Fill__272626] 
+  /// [Dark_Form_Buttons_Borders_Fill__272626]
   Color get kFormButtonsBordersFillDark;
 
   /// [Dark_Background__1B1B1B]
@@ -76,5 +75,4 @@ abstract class ColorManagerBase
 
   /// [Dark_Border__313131]
   Color get kSocialBorderDark;
-
 }

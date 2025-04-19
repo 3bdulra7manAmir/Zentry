@@ -9,68 +9,52 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'countries_icon_update_provider.g.dart';
 
 @riverpod
-class CountryController extends _$CountryController
-{
+class CountryController extends _$CountryController {
   @override
-  int? build()
-  {
+  int? build() {
     _loadSavedCountryIndex();
     return 0;
   }
 
-  Future<void> _loadSavedCountryIndex() async
-  {
-    try
-    {
+  Future<void> _loadSavedCountryIndex() async {
+    try {
       final savedIndex = await UserPreferences.instance.getCountryIndex();
       state = savedIndex;
-    }
-    
-    catch (e)
-    {
+    } catch (e) {
       state = 0;
     }
   }
 
-  void setSelectedIndex(int index)
-  {
-    try
-    {
+  void setSelectedIndex(int index) {
+    try {
       state = index;
       UserPreferences.instance.saveCountryIndex(index);
-    }
-    catch (e)
-    {
+    } catch (e) {
       state = 0;
     }
   }
 
-  int getSelectedIndex()
-  {
+  int getSelectedIndex() {
     return state ?? 0;
   }
 }
 
-String getSelectedCountryImage(WidgetRef ref, BuildContext context)
-{
+String getSelectedCountryImage(WidgetRef ref, BuildContext context) {
   final selectedIndex = ref.watch(countryControllerProvider) ?? 0;
   final selectedCountriesList = CountryUtils.getRoundedCountryImage();
 
-  if (selectedIndex < selectedCountriesList.length)
-  {
+  if (selectedIndex < selectedCountriesList.length) {
     return selectedCountriesList[selectedIndex];
   }
 
   return AppAssets.iconsPNG.countryPNG;
 }
 
-String getSelectedCountryName(WidgetRef ref, BuildContext context)
-{
+String getSelectedCountryName(WidgetRef ref, BuildContext context) {
   final selectedIndex = ref.watch(countryControllerProvider) ?? 0;
   final countries = CountryUtils.getCountryImageAndName(context);
 
-  if (selectedIndex < countries.length)
-  {
+  if (selectedIndex < countries.length) {
     return countries[selectedIndex][1];
   }
 

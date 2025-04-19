@@ -9,30 +9,24 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
 
-void showThemesBottomSheet(BuildContext context)
-{
+void showThemesBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     isDismissible: true,
     isScrollControlled: true,
     backgroundColor: Theme.of(context).cardColor,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
-    builder: (BuildContext context)
-    {
+    builder: (BuildContext context) {
       return Consumer(
-        builder: (context, ref, _)
-        {
+        builder: (context, ref, _) {
           final provider = AppProvidersProvider(ref, context);
           return StatefulBuilder(
-            builder: (context, setState)
-            {
-
+            builder: (context, setState) {
               return Padding(
                 padding: AppPadding.kAppFormPadding,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  children:
-                  [
+                  children: [
                     AppSizes.size8.verticalSpace,
 
                     Container(
@@ -48,15 +42,12 @@ void showThemesBottomSheet(BuildContext context)
                     AppSizes.size30.verticalSpace,
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:
-                      [
+                      children: [
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.light,
                           groupValue: provider.themeMode,
-                          onChanged: (value)
-                          {
-                            if (value != null)
-                            {
+                          onChanged: (value) {
+                            if (value != null) {
                               setState(() => provider.themeMode);
                               provider.themeController.setTheme(value);
                               AppRouter.router.pop();
@@ -68,10 +59,8 @@ void showThemesBottomSheet(BuildContext context)
                         RadioListTile<ThemeMode>(
                           value: ThemeMode.dark,
                           groupValue: provider.themeMode,
-                          onChanged: (value)
-                          {
-                            if (value != null)
-                            {
+                          onChanged: (value) {
+                            if (value != null) {
                               setState(() => provider.themeMode);
                               provider.themeController.setTheme(value);
                               AppRouter.router.pop();

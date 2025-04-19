@@ -21,17 +21,14 @@ import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
 
-
-class LoginFormWithPhone extends ConsumerWidget
-{
+class LoginFormWithPhone extends ConsumerWidget {
   LoginFormWithPhone({super.key});
 
   final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginPhoneFormKey = GlobalKey<FormState>();
     return Container(
@@ -43,23 +40,33 @@ class LoginFormWithPhone extends ConsumerWidget
           key: loginPhoneFormKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-            [
+            children: [
               AppSizes.size28.verticalSpace,
               Row(
-                children:
-                [
-                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
-                    textColor: AppColors.color.kQuaternarySemiBlackText,),
+                children: [
+                  Text(
+                    AppLocalizations.of(context).phoneNumber,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                    ),
                   ),
                   const Spacer(),
-                  Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(
-                    textColor: AppColors.color.kSecondarySemiGreyText,),
+                  Text(
+                    AppLocalizations.of(context).or,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kSecondarySemiGreyText,
+                    ),
                   ),
                   AppSizes.size4.horizontalSpace,
                   GestureDetector(
-                    onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
-                    child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
+                    onTap:
+                        () =>
+                            ref
+                                .read(loginTypeProvider.notifier)
+                                .toggleLoginType(),
+                    child: Text(
+                      AppLocalizations.of(context).email,
+                      style: AppStyles.textStyle12(
                         fontWeight: AppFontWeights.boldWeight,
                         textDecoration: TextDecoration.underline,
                       ),
@@ -70,16 +77,24 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.phone,
-                fieldValidator: (value) => phoneNumberValidation(value, context),
+                fieldValidator:
+                    (value) => phoneNumberValidation(value, context),
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: InkWell(
                   onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                  child: Image.asset(provider.countryFlag)),
-                  fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
+                  child: Image.asset(provider.countryFlag),
+                ),
+                fieldText:
+                    provider.phoneNumberHolder == 0
+                        ? AppLocalizations.of(context).egyptCountryCode
+                        : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(
-                textColor: AppColors.color.kQuaternarySemiBlackText,),
+              Text(
+                AppLocalizations.of(context).password,
+                style: AppStyles.textStyle12(
+                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                ),
               ),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
@@ -90,33 +105,48 @@ class LoginFormWithPhone extends ConsumerWidget
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState,
-                  child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.corssedEyePNG: AppAssets.iconsPNG.eyePNG,),
+                  child: Image.asset(
+                    provider.obscureText
+                        ? AppAssets.iconsPNG.corssedEyePNG
+                        : AppAssets.iconsPNG.eyePNG,
+                  ),
                 ),
               ),
               AppSizes.size16.verticalSpace,
               Row(
-                children:
-                [
-                  Checkbox(value: provider.isChecked, onChanged: (value)
-                {
-                  if (value != null)
-                  {
-                    ref.read(checkboxValueProvider.notifier).state = value;
-                  }
-                },
-                side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),
-                ),
-          
-                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
-                    textColor: AppColors.color.kTertiarySemiGrey),
+                children: [
+                  Checkbox(
+                    value: provider.isChecked,
+                    onChanged: (value) {
+                      if (value != null) {
+                        ref.read(checkboxValueProvider.notifier).state = value;
+                      }
+                    },
+                    side: BorderSide(
+                      width: AppBorderWidths.width2,
+                      color: AppColors.color.kFormButtonsBorders,
+                    ),
+                  ),
+
+                  Text(
+                    AppLocalizations.of(context).remember,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kTertiarySemiGrey,
+                    ),
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
-                    child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuinarySemiBlueText,
-                      textDecoration: TextDecoration.underline,
-                      textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                    onTap:
+                        () => AppRouter.router.pushNamed(
+                          AppRoutes.kForgetPasswordPhoneView,
+                        ),
+                    child: Text(
+                      AppLocalizations.of(context).forgetPassword,
+                      style: AppStyles.textStyle12(
+                        textColor: AppColors.color.kQuinarySemiBlueText,
+                        textDecoration: TextDecoration.underline,
+                        textDecorationColor:
+                            AppColors.color.kForgetPasswordUnderLine,
                       ),
                     ),
                   ),
@@ -125,10 +155,8 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size16.verticalSpace,
               CustomButton(
                 buttonText: AppLocalizations.of(context).login,
-                buttonOnPressed: ()
-                {
-                  if (loginPhoneFormKey.currentState!.validate())
-                  {
+                buttonOnPressed: () {
+                  if (loginPhoneFormKey.currentState!.validate()) {
                     //AppRouter.router.
                   }
                 },
@@ -136,42 +164,55 @@ class LoginFormWithPhone extends ConsumerWidget
               AppSizes.size20.verticalSpace,
               Align(
                 alignment: Alignment.center,
-                child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(
-                  fontWeight: AppFontWeights.boldWeight,
-                  textColor: AppColors.color.kSenaryTotalBlackText),
+                child: Text(
+                  AppLocalizations.of(context).orLoginWith,
+                  style: AppStyles.textStyle12(
+                    fontWeight: AppFontWeights.boldWeight,
+                    textColor: AppColors.color.kSenaryTotalBlackText,
+                  ),
                 ),
               ),
               AppSizes.size20.verticalSpace,
               Column(
-                children:
-                [
+                children: [
                   Row(
-                    children:
-                    [
+                    children: [
                       Expanded(
-                        child: CustomSocialButton(buttonText: AppLocalizations.of(context).facebook,
-                        platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                        buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                        buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),                  
+                        child: CustomSocialButton(
+                          buttonText: AppLocalizations.of(context).facebook,
+                          platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                          buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                          buttonTextStyle: AppStyles.textStyle12(
+                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                          ),
                         ),
                       ),
                       AppSizes.size12.horizontalSpace,
                       Expanded(
-                        child: CustomSocialButton(buttonText: AppLocalizations.of(context).google,
-                        platformLogo: AppAssets.iconsPNG.googlePNG,
-                        buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                        buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
+                        child: CustomSocialButton(
+                          buttonText: AppLocalizations.of(context).google,
+                          platformLogo: AppAssets.iconsPNG.googlePNG,
+                          buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                          buttonTextStyle: AppStyles.textStyle12(
+                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                          ),
                         ),
                       ),
                     ],
                   ),
                   AppSizes.size12.verticalSpace,
-                  CustomSocialButton(buttonText: AppLocalizations.of(context).apple,
-                  platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
-                  buttonWidth: 174.w,
-                  isLogoSpace: false,
-                  buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                  buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText),
+                  CustomSocialButton(
+                    buttonText: AppLocalizations.of(context).apple,
+                    platformLogo:
+                        provider.themeMode == ThemeMode.light
+                            ? AppAssets.iconsPNG.applePNG
+                            : AppAssets.iconsPNG.appleDarkPNG,
+                    buttonWidth: 174.w,
+                    isLogoSpace: false,
+                    buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                    buttonTextStyle: AppStyles.textStyle12(
+                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                    ),
                   ),
                 ],
               ),

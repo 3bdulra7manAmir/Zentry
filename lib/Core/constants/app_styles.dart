@@ -5,12 +5,9 @@ import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import 'app_sizes.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 
-
-abstract class AppStyles
-{
+abstract class AppStyles {
   AppStyles._();
 
-  
   /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle22({
     FontWeight? fontWeight,
@@ -19,8 +16,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.xXXLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
@@ -40,8 +36,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.xXLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
@@ -53,7 +48,6 @@ abstract class AppStyles
     );
   }
 
-
   /// FontWeight = [w600], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle18({
     FontWeight? fontWeight,
@@ -62,8 +56,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.xLarge.sp,
       fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
@@ -75,7 +68,6 @@ abstract class AppStyles
     );
   }
 
-
   /// FontWeight = [w400], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle17({
     FontWeight? fontWeight,
@@ -84,8 +76,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppSizes.size17.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
@@ -96,6 +87,7 @@ abstract class AppStyles
       color: textColor ?? AppColors.color.kPrimaryGreyText,
     );
   }
+
   /// FontWeight = [w400], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle16({
     FontWeight? fontWeight,
@@ -104,8 +96,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.large.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
@@ -117,17 +108,15 @@ abstract class AppStyles
     );
   }
 
-
   /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle14({
-  FontWeight? fontWeight,
-  String? fontFamily,
-  TextDecoration? textDecoration,
-  TextOverflow? textOverflow,
-  Color? textDecorationColor,
-  Color? textColor,
-  })
-  {
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.medium.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
@@ -139,7 +128,6 @@ abstract class AppStyles
     );
   }
 
-
   /// FontWeight = [w700], FontColor = [_5D5D5D], FontFamily = [Roboto]
   static TextStyle textStyle13({
     FontWeight? fontWeight,
@@ -148,8 +136,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.semiSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.boldWeight,
@@ -161,7 +148,6 @@ abstract class AppStyles
     );
   }
 
-
   /// FontWeight = [w500], FontColor = [_9E9E9E], FontFamily = [Roboto]
   static TextStyle textStyle12({
     FontWeight? fontWeight,
@@ -170,8 +156,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.small.sp,
       fontWeight: fontWeight ?? AppFontWeights.mediumWeight,
@@ -180,7 +165,6 @@ abstract class AppStyles
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
       color: textColor ?? AppColors.color.kSecondarySemiGreyText,
-
     );
   }
 
@@ -192,8 +176,7 @@ abstract class AppStyles
     TextOverflow? textOverflow,
     Color? textDecorationColor,
     Color? textColor,
-  })
-  {
+  }) {
     return TextStyle(
       fontSize: AppFontSizes.xSmall.sp,
       fontWeight: fontWeight ?? AppFontWeights.regularWeight,
@@ -201,9 +184,8 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      //color: textColor ?? AppColors.color.kSecondary,
 
+      //color: textColor ?? AppColors.color.kSecondary,
     );
   }
-
 }

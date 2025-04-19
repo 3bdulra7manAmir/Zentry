@@ -1,4 +1,3 @@
-abstract class FontManagerBase
-{
+abstract class FontManagerBase {
   String get fontName;
 }

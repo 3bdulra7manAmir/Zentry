@@ -6,8 +6,7 @@ import 'package:test_app/config/themes/color_system/colors_manager/app_colors.da
 import 'package:test_app/core/constants/app_sizes.dart';
 import '../constants/app_styles.dart';
 
-class CustomContainer extends StatelessWidget
-{
+class CustomContainer extends StatelessWidget {
   const CustomContainer({
     super.key,
     this.fieldPrefixIcon,
@@ -22,8 +21,7 @@ class CustomContainer extends StatelessWidget
   final TextStyle? fieldhintStyle;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Container(
       width: 358.w,
       height: 48.h,
@@ -33,10 +31,8 @@ class CustomContainer extends StatelessWidget
         color: AppColors.color.kFormButtonsFill,
       ),
       child: Row(
-        children:
-        [
-          if (fieldPrefixIcon != null) ...
-          [
+        children: [
+          if (fieldPrefixIcon != null) ...[
             fieldPrefixIcon!,
             AppSizes.size10.horizontalSpace,
           ],
@@ -46,8 +42,7 @@ class CustomContainer extends StatelessWidget
               style: fieldhintStyle ?? AppStyles.textStyle12(),
             ),
           ),
-          if (fieldsuffixIcon != null) ...
-          [
+          if (fieldsuffixIcon != null) ...[
             AppSizes.size10.horizontalSpace,
             fieldsuffixIcon!,
           ],

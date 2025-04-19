@@ -9,22 +9,19 @@ import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/services/database/static/app_form_data/app_countries_list.dart';
 import '../../../app_form/presentation/controllers/countries_icon_update_provider.dart';
 
-void showCountriesPhoneNumberBottomSheet(BuildContext context)
-{
+void showCountriesPhoneNumberBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
-    builder: (BuildContext context)
-    {
+    builder: (BuildContext context) {
       final countriesList = CountryUtils.getCountryImageAndName(context);
       return Padding(
         padding: AppPadding.kAppFormPadding,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children:
-          [
+          children: [
             AppSizes.size8.verticalSpace,
 
             Container(
@@ -39,23 +36,22 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
             ),
             AppSizes.size18.verticalSpace,
             Consumer(
-              builder: (context, ref, _)
-              {
+              builder: (context, ref, _) {
                 return ListView.separated(
                   shrinkWrap: true,
                   itemCount: 2,
-                  separatorBuilder: (context, index) => AppSizes.size17.verticalSpace,
-                  itemBuilder: (context, index)
-                  {
+                  separatorBuilder:
+                      (context, index) => AppSizes.size17.verticalSpace,
+                  itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: ()
-                      {
-                        ref.read(countryControllerProvider.notifier).setSelectedIndex(index);
+                      onTap: () {
+                        ref
+                            .read(countryControllerProvider.notifier)
+                            .setSelectedIndex(index);
                         AppRouter.router.pop();
                       },
                       child: Row(
-                        children:
-                        [
+                        children: [
                           Image.asset(countriesList[index][0]),
                           AppSizes.size12.horizontalSpace,
                           Text(countriesList[index][1]),
@@ -73,4 +69,3 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
     },
   );
 }
-

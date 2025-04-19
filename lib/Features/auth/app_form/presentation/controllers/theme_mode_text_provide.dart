@@ -7,15 +7,15 @@ import '../../../../../config/themes/color_system/controller/theme_controller.da
 part 'theme_mode_text_provide.g.dart';
 
 @riverpod
-String selectedThemeLabel(SelectedThemeLabelRef ref)
-{
+String selectedThemeLabel(SelectedThemeLabelRef ref) {
   final themeMode = ref.watch(themeControllerProvider);
   return themeMode == ThemeMode.dark ? 'dark' : 'light';
 }
 
-String getSelectedThemeLabel(WidgetRef ref, BuildContext context)
-{
+String getSelectedThemeLabel(WidgetRef ref, BuildContext context) {
   final themeLabel = ref.watch(selectedThemeLabelProvider).toLowerCase();
 
-  return (themeLabel == 'dark' || themeLabel == 'داكن') ? AppLocalizations.of(context).dark : AppLocalizations.of(context).light;
+  return (themeLabel == 'dark' || themeLabel == 'داكن')
+      ? AppLocalizations.of(context).dark
+      : AppLocalizations.of(context).light;
 }

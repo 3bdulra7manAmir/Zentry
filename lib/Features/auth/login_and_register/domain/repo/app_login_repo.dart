@@ -4,5 +4,7 @@ import '../entity/app_login_entity.dart';
 
 abstract class AppLoginRepo
 {
-  Future < Either<ApiFetchFailure, List<AppLoginEntity>> > fetchUserLoginData();
+  AppLoginRepo._();
+  
+  Future<Either<ApiFetchFailure, List<AppLoginEntity>>> fetchUserLoginData();
 }

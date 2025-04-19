@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import '../constants/app_styles.dart';
 
-
-class CustomTextFormField extends StatelessWidget
-{
-  const CustomTextFormField({super.key,
-  required this.fieldValidator,
-  this.fieldController,
-  required this.fieldKeyboardType,
-  this.fieldPrefixIcon,
-  required this.fieldText,
-  this.fieldhintStyle,
-  this.fieldsuffixIcon,
-  //this.fieldKeyboardAppearance,
-  this.fieldObscureText,
-  this.fieldIsEnabled,
-  this.fieldReadOnly,
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
+    super.key,
+    required this.fieldValidator,
+    this.fieldController,
+    required this.fieldKeyboardType,
+    this.fieldPrefixIcon,
+    required this.fieldText,
+    this.fieldhintStyle,
+    this.fieldsuffixIcon,
+    //this.fieldKeyboardAppearance,
+    this.fieldObscureText,
+    this.fieldIsEnabled,
+    this.fieldReadOnly,
   });
 
   final Widget? fieldPrefixIcon;
@@ -30,8 +29,7 @@ class CustomTextFormField extends StatelessWidget
   final bool? fieldReadOnly;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return TextFormField(
       enabled: fieldIsEnabled ?? true,
       keyboardType: fieldKeyboardType,

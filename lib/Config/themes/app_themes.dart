@@ -6,12 +6,10 @@ import 'color_system/colors_manager/app_colors.dart';
 import '../../core/constants/app_sizes.dart';
 import 'font_system/app_font_weights.dart';
 
-class AppTheme
-{
+class AppTheme {
   AppTheme._();
-  
-  static ThemeData lightTheme()
-  {
+
+  static ThemeData lightTheme() {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
@@ -29,19 +27,20 @@ class AppTheme
 
       elevatedButtonTheme: elevatedButtonTheme,
       tabBarTheme: tabBarTheme,
-      appBarTheme: AppBarTheme(backgroundColor: AppColors.color.kAppBarBG, centerTitle: true),
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColors.color.kAppBarBG,
+        centerTitle: true,
+      ),
     );
-
   }
 
-  static ThemeData darkTheme()
-  {
+  static ThemeData darkTheme() {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.color.kPrimaryDark,
       cardColor: AppColors.color.kPrimaryDark,
-      
+
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kFormButtonsBordersFillDark,
@@ -53,20 +52,28 @@ class AppTheme
 
       elevatedButtonTheme: elevatedButtonTheme,
       tabBarTheme: tabBarTheme,
-      appBarTheme: AppBarTheme(backgroundColor: AppColors.color.kAppBarBG, centerTitle: true),
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColors.color.kAppBarBG,
+        centerTitle: true,
+      ),
     );
   }
-
 }
 
 InputBorder? inputBorderLight = OutlineInputBorder(
   borderRadius: AppBorders.buttonBorder10,
-  borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
+  borderSide: BorderSide(
+    color: AppColors.color.kFormButtonsBorders,
+    width: AppBorderWidths.width1,
+  ),
 );
 
 InputBorder? inputBorderDark = OutlineInputBorder(
   borderRadius: AppBorders.buttonBorder10,
-  borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w,),
+  borderSide: BorderSide(
+    color: AppColors.color.kFormButtonsBordersFillDark,
+    width: AppSizes.size1.w,
+  ),
 );
 
 ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
@@ -80,7 +87,9 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
         ),
       ),
     ),
-    backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
+    backgroundColor: MaterialStateProperty.all<Color>(
+      AppColors.color.kPrimaryBlue,
+    ),
     overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
     splashFactory: NoSplash.splashFactory,
     shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
@@ -92,7 +101,10 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
 Object? tabBarTheme = TabBarTheme(
   indicatorSize: TabBarIndicatorSize.tab,
   labelColor: AppColors.color.kTabBar,
-  labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kTabBar),
+  labelStyle: AppStyles.textStyle14(
+    fontWeight: AppFontWeights.semiBoldWeight,
+    textColor: AppColors.color.kTabBar,
+  ),
   unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
   indicatorColor: AppColors.color.kTabBar,
 );

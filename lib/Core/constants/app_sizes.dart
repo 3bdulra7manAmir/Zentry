@@ -1,7 +1,6 @@
-abstract class AppSizes
-{
+abstract class AppSizes {
   AppSizes._();
-  
+
   static const double size1 = 1.0;
   static const double size4 = 4.0;
   static const double size6 = 6.0;

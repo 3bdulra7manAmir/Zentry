@@ -8,15 +8,12 @@ import '../../../../core/constants/app_styles.dart';
 import '../../../core/services/database/static/app_keyboard_numbers.dart';
 import '../verification_code/presentation/controllers/otp_input_controller.dart';
 
-
-class NumericKeyboard extends ConsumerWidget
-{
-  const NumericKeyboard( {super.key, required this.maxLength,});
+class NumericKeyboard extends ConsumerWidget {
+  const NumericKeyboard({super.key, required this.maxLength});
 
   final int maxLength;
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final List<String> keys = getNumbersList(context);
     return GridView.builder(
       padding: AppPadding.kAppFormPadding,
@@ -28,19 +25,16 @@ class NumericKeyboard extends ConsumerWidget
         crossAxisSpacing: 10,
         childAspectRatio: 2,
       ),
-      itemBuilder: (context, index)
-      {
+      itemBuilder: (context, index) {
         return InkWell(
-          onTap: ()
-          {
+          onTap: () {
             final value = keys[index];
-            if (value == AppLocalizations.of(context).backSpace)
-            {
+            if (value == AppLocalizations.of(context).backSpace) {
               ref.read(otpInputProvider.notifier).removeDigit();
-            }
-            else
-            {
-              ref.read(otpInputProvider.notifier).addDigit(value, maxLength: maxLength);
+            } else {
+              ref
+                  .read(otpInputProvider.notifier)
+                  .addDigit(value, maxLength: maxLength);
             }
           },
           child: Container(
@@ -49,7 +43,11 @@ class NumericKeyboard extends ConsumerWidget
               borderRadius: AppBorders.buttonBorder10,
             ),
             alignment: Alignment.center,
-            child: Text(keys[index], style: AppStyles.textStyle18(textColor: AppColors.color.kSeptenarySemiGreyText,),
+            child: Text(
+              keys[index],
+              style: AppStyles.textStyle18(
+                textColor: AppColors.color.kSeptenarySemiGreyText,
+              ),
             ),
           ),
         );

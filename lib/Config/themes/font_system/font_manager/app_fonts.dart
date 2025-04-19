@@ -2,58 +2,41 @@ import 'font_manager_base.dart';
 import 'font_manager_roboto.dart';
 import 'font_manager_cairo.dart';
 
-class AppFonts
-{
+class AppFonts {
   static AppFonts? _instance;
 
   AppFonts._();
 
-  static AppFonts get i
-  {
+  static AppFonts get i {
     _instance ??= AppFonts._();
     return _instance!;
   }
 
-  static FontManagerBase get font
-  {
-    try
-    {
+  static FontManagerBase get font {
+    try {
       return i._fonts;
-    }
-    
-    catch (e, stackTrace)
-    {
+    } catch (e, stackTrace) {
       return FontManagerRoboto(); // Safe fallback
     }
   }
 
   String _langCode = 'en'; // Default language
 
-  set langCode(String code)
-  {
-    if (code.isEmpty)
-    {
+  set langCode(String code) {
+    if (code.isEmpty) {
       return;
     }
     _langCode = code.toLowerCase();
   }
 
-  FontManagerBase get _fonts
-  {
-    try
-    {
-      if (_langCode == "ar")
-      {
+  FontManagerBase get _fonts {
+    try {
+      if (_langCode == "ar") {
         return FontManagerCairo();
-      }
-      else
-      {
+      } else {
         return FontManagerRoboto();
       }
-    }
-    
-    catch (e, stackTrace)
-    {
+    } catch (e, stackTrace) {
       return FontManagerRoboto(); // Fallback
     }
   }

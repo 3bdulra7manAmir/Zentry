@@ -2,15 +2,12 @@ import 'package:flutter/material.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../constants/app_images.dart';
 
-class CountryUtils
-{
+class CountryUtils {
   CountryUtils._();
 
-  static List<List<String>> getCountryImageAndName(BuildContext context)
-  {
+  static List<List<String>> getCountryImageAndName(BuildContext context) {
     final locale = AppLocalizations.of(context);
-    return
-    [
+    return [
       [AppAssets.iconsPNG.egFlagPNG, locale.egypt],
       [AppAssets.iconsPNG.saFlagPNG, locale.saudiArabia],
       [AppAssets.iconsPNG.uaeFlagPNG, locale.unitedArabEmirates],
@@ -20,10 +17,8 @@ class CountryUtils
     ];
   }
 
-  static List<String> getRoundedCountryImage()
-  {
-    return
-    [
+  static List<String> getRoundedCountryImage() {
+    return [
       AppAssets.iconsPNG.egFlagSelectedPNG,
       AppAssets.iconsPNG.saFlagSelectedPNG,
       AppAssets.iconsPNG.uaeFlagSelectedPNG,

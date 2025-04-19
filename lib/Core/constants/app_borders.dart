@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-abstract class AppBorders
-{
+abstract class AppBorders {
   AppBorders._();
 
   //Form Border
   /// [TopLeft_20.TopRight_20]
-  static BorderRadiusGeometry formBorder = BorderRadius.only(topLeft: Radius.circular(20.r), topRight: Radius.circular(20.r));
+  static BorderRadiusGeometry formBorder = BorderRadius.only(
+    topLeft: Radius.circular(20.r),
+    topRight: Radius.circular(20.r),
+  );
 
   /// [TopLeft_12.TopRight_12]
-  static BorderRadiusGeometry indicatorBorder = BorderRadius.only(topLeft: Radius.circular(12.r), topRight: Radius.circular(12.r));
+  static BorderRadiusGeometry indicatorBorder = BorderRadius.only(
+    topLeft: Radius.circular(12.r),
+    topRight: Radius.circular(12.r),
+  );
 
   //Divider
   /// [Circular_4]
@@ -19,11 +24,9 @@ abstract class AppBorders
   //Text Form Field
   /// [Circular_10]
   static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
-
 }
 
-abstract class AppBorderWidths
-{
+abstract class AppBorderWidths {
   AppBorderWidths._();
 
   static double width1 = (1.0).w;

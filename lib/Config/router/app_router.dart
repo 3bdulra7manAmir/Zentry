@@ -11,15 +11,16 @@ import '../../features/auth/verification_code/presentation/screens/verification_
 import '../../features/splash/presentation/screens/splash_view.dart';
 import 'app_routes.dart';
 
-abstract class AppRouter
-{
+abstract class AppRouter {
   AppRouter._();
 
   static final router = GoRouter(
     initialLocation: AppRoutes.kSplashView,
-    errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive())),
-    routes:
-    [
+    errorBuilder:
+        (_, _) => const Scaffold(
+          body: Center(child: CircularProgressIndicator.adaptive()),
+        ),
+    routes: [
       //App Splash View
       GoRoute(
         path: AppRoutes.kSplashView,
@@ -40,7 +41,6 @@ abstract class AppRouter
         name: AppRoutes.kAuthTabs,
         builder: (context, state) => const AuthView(),
       ),
-
 
       // App Login With Phone View
       GoRoute(
@@ -84,6 +84,6 @@ abstract class AppRouter
       ),
 
       // App Countries View
-    ] 
+    ],
   );
 }

@@ -8,26 +8,22 @@ import '../../../../../core/services/localization/controller/localization_contro
 part 'language_icon_update_provider.g.dart';
 
 @riverpod
-String selectedLanguage(SelectedLanguageRef ref)
-{
+String selectedLanguage(SelectedLanguageRef ref) {
   final locale = ref.watch(localizationControllerProvider);
   return locale.languageCode;
 }
 
-String getSelectedLanguageImage(WidgetRef ref)
-{
+String getSelectedLanguageImage(WidgetRef ref) {
   final languageCode = ref.watch(selectedLanguageProvider);
 
-  return switch (languageCode)
-  {
+  return switch (languageCode) {
     'ar' => AppAssets.iconsPNG.egFlagSelectedPNG,
     'en' => AppAssets.iconsPNG.unitedStatesFlagSelectedPNG,
     _ => AppAssets.iconsPNG.languagePNG,
   };
 }
 
-String getSelectedLanguageLabel(WidgetRef ref, BuildContext context)
-{
+String getSelectedLanguageLabel(WidgetRef ref, BuildContext context) {
   final languageCode = ref.watch(selectedLanguageProvider);
 
   return switch (languageCode) {

@@ -14,62 +14,91 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 //import '../../../widgets/numeric_keyboard.dart';
 
-
-class ForgetPasswordWithEmailView extends StatelessWidget
-{
+class ForgetPasswordWithEmailView extends StatelessWidget {
   ForgetPasswordWithEmailView({super.key});
 
   final TextEditingController emailController = TextEditingController();
   final GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(barTitle: AppLocalizations.of(context).resetPassword,),
+      appBar: CustomAppBar(
+        barTitle: AppLocalizations.of(context).resetPassword,
+      ),
       body: SingleChildScrollView(
         child: Form(
           key: emailFormKey,
           child: Column(
-            children:
-            [
+            children: [
               AppSizes.size46.verticalSpace,
-              Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(textColor: AppColors.color.kSenaryTotalBlackText,)),
+              Text(
+                AppLocalizations.of(context).forgotPassword,
+                style: AppStyles.textStyle20(
+                  textColor: AppColors.color.kSenaryTotalBlackText,
+                ),
+              ),
               AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(textColor: AppColors.color.kSecondarySemiGreyText,)),
+              Text(
+                AppLocalizations.of(context).enterPhoneNumberAssociated,
+                style: AppStyles.textStyle16(
+                  textColor: AppColors.color.kSecondarySemiGreyText,
+                ),
+              ),
               AppSizes.size7.verticalSpace,
-              Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondarySemiGreyText, fontWeight: AppFontWeights.regularWeight),),
+              Text(
+                AppLocalizations.of(context).withYourAccount,
+                style: AppStyles.textStyle14(
+                  textColor: AppColors.color.kSecondarySemiGreyText,
+                  fontWeight: AppFontWeights.regularWeight,
+                ),
+              ),
               AppSizes.size48.verticalSpace,
               Container(
                 alignment: Alignment.center,
                 margin: AppPadding.kAppFormPadding,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    Text(AppLocalizations.of(context).emailAddress, style: AppStyles.textStyle12(fontWeight: AppFontWeights.mediumWeight, textColor: AppColors.color.kQuaternarySemiBlackText,)),
+                  children: [
+                    Text(
+                      AppLocalizations.of(context).emailAddress,
+                      style: AppStyles.textStyle12(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        textColor: AppColors.color.kQuaternarySemiBlackText,
+                      ),
+                    ),
                     AppSizes.size8.verticalSpace,
                     CustomTextFormField(
-                      fieldValidator: (value) => emailValidation(value, context),
+                      fieldValidator:
+                          (value) => emailValidation(value, context),
                       fieldKeyboardType: TextInputType.emailAddress,
                       fieldController: emailController,
                       fieldText: AppLocalizations.of(context).emailAddress,
-                      ),
+                    ),
                     AppSizes.size27.verticalSpace,
                     Row(
-                      children:
-                      [
-                        Text(AppLocalizations.of(context).dontHaveEmail, style: AppStyles.textStyle14(
-                          fontWeight: AppFontWeights.mediumWeight,
-                          textColor: AppColors.color.kSeptenarySemiGreyText),
+                      children: [
+                        Text(
+                          AppLocalizations.of(context).dontHaveEmail,
+                          style: AppStyles.textStyle14(
+                            fontWeight: AppFontWeights.mediumWeight,
+                            textColor: AppColors.color.kSeptenarySemiGreyText,
+                          ),
                         ),
                         AppSizes.size14.horizontalSpace,
                         GestureDetector(
-                          onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView),
-                          child: Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(
+                          onTap:
+                              () => AppRouter.router.pushNamed(
+                                AppRoutes.kForgetPasswordPhoneView,
+                              ),
+                          child: Text(
+                            AppLocalizations.of(context).tryAnotherWay,
+                            style: AppStyles.textStyle14(
                               fontWeight: AppFontWeights.mediumWeight,
-                              textColor: AppColors.color.kQuinarySemiBlueText, textDecoration: TextDecoration.underline,
-                              textDecorationColor: AppColors.color.kQuinarySemiBlueText,
+                              textColor: AppColors.color.kQuinarySemiBlueText,
+                              textDecoration: TextDecoration.underline,
+                              textDecorationColor:
+                                  AppColors.color.kQuinarySemiBlueText,
                             ),
                           ),
                         ),
@@ -77,9 +106,10 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                     ),
                     AppSizes.size24.verticalSpace,
                     CustomButton(
-                      buttonOnPressed: ()
-                      {
-                        AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                      buttonOnPressed: () {
+                        AppRouter.router.pushNamed(
+                          AppRoutes.kVerificationCodeView,
+                        );
                       },
                       buttonText: AppLocalizations.of(context).verify,
                       buttonTextStyle: AppStyles.textStyle22(),

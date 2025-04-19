@@ -10,20 +10,16 @@ import 'app_login_email_form.dart';
 import 'app_login_phone_form.dart';
 import 'app_signup_form.dart';
 
-
-class AuthTabs extends ConsumerWidget
-{
+class AuthTabs extends ConsumerWidget {
   const AuthTabs({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
     return DefaultTabController(
       length: 2,
       child: Column(
-        children:
-        [
+        children: [
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
@@ -33,14 +29,18 @@ class AuthTabs extends ConsumerWidget
             child: TabBar(
               padding: AppPadding.kTabBarPadding,
               indicatorWeight: AppSizes.size4,
-              tabs: [Tab(text: AppLocalizations.of(context).login,), Tab(text: AppLocalizations.of(context).signUp),],
+              tabs: [
+                Tab(text: AppLocalizations.of(context).login),
+                Tab(text: AppLocalizations.of(context).signUp),
+              ],
             ),
           ),
-          Expanded(            
+          Expanded(
             child: TabBarView(
-              children:
-              [
-                provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
+              children: [
+                provider.loginType == LoginType.phone
+                    ? LoginFormWithPhone()
+                    : LoginFormWithEmail(),
                 const SignUpForm(),
               ],
             ),

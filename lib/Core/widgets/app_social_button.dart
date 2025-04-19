@@ -4,9 +4,7 @@ import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
-
-class CustomSocialButton extends StatelessWidget
-{
+class CustomSocialButton extends StatelessWidget {
   const CustomSocialButton({
     super.key,
     this.buttonWidth,
@@ -35,8 +33,7 @@ class CustomSocialButton extends StatelessWidget
   final double? spaceAmount;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
       height: buttonHeight ?? 48.h,
@@ -51,7 +48,9 @@ class CustomSocialButton extends StatelessWidget
               ),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
+          backgroundColor: MaterialStateProperty.all<Color>(
+            buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,
+          ),
           overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
           splashFactory: NoSplash.splashFactory,
           shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
@@ -60,19 +59,22 @@ class CustomSocialButton extends StatelessWidget
         ),
 
         child: Row(
-                children:
-                [
-                  Expanded(
-                    flex: 1,
-                    child: Image.asset(platformLogo)),
+          children: [
+            Expanded(flex: 1, child: Image.asset(platformLogo)),
 
-                  (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
+            (isLogoSpace ?? false)
+                ? const Spacer()
+                : (spaceAmount ?? 20).horizontalSpace,
 
-                  Expanded(
-                    flex: 2,
-                    child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),)),
-                ],
+            Expanded(
+              flex: 2,
+              child: Text(
+                buttonText,
+                style: buttonTextStyle ?? AppStyles.textStyle14(),
               ),
+            ),
+          ],
+        ),
         onPressed: () {},
       ),
     );

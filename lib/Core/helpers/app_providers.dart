@@ -11,23 +11,25 @@ import '../../features/auth/login_and_register/presentation/controllers/obsecure
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../services/localization/controller/localization_controller.dart';
 
-
-String getAppText(BuildContext context, String Function(AppLocalizations) selector)
-{
+String getAppText(
+  BuildContext context,
+  String Function(AppLocalizations) selector,
+) {
   return selector(AppLocalizations.of(context));
 }
 
-class AppProvidersProvider
-{
+class AppProvidersProvider {
   final WidgetRef ref;
   final BuildContext context;
 
   AppProvidersProvider(this.ref, this.context);
 
-  LocalizationController get localeState => ref.read(localizationControllerProvider.notifier);
+  LocalizationController get localeState =>
+      ref.read(localizationControllerProvider.notifier);
   Locale get locale => ref.watch(localizationControllerProvider);
 
-  ThemeController get themeController => ref.read(themeControllerProvider.notifier);
+  ThemeController get themeController =>
+      ref.read(themeControllerProvider.notifier);
   ThemeMode get themeMode => ref.watch(themeControllerProvider);
   String get themeLabel => getSelectedThemeLabel(ref, context);
 
@@ -39,7 +41,9 @@ class AppProvidersProvider
 
   bool get obscureText => ref.watch(obscurePasswordProvider);
   bool get obscureText2 => ref.watch(obscurePasswordProvider2);
-  bool get obscureTextState => ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
+  bool get obscureTextState =>
+      ref.read(obscurePasswordProvider.notifier).state =
+          !ref.read(obscurePasswordProvider.notifier).state;
 
   bool get isChecked => ref.watch(checkboxValueProvider);
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);

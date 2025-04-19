@@ -5,9 +5,7 @@ import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
-
-class CustomButton extends ConsumerWidget
-{
+class CustomButton extends ConsumerWidget {
   const CustomButton({
     super.key,
     this.buttonWidth,
@@ -32,23 +30,31 @@ class CustomButton extends ConsumerWidget
   final void Function()? buttonOnPressed;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
       height: buttonHeight ?? 48.h,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.width1,),
+            RoundedRectangleBorder(
+              borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
+              side: BorderSide(
+                color: buttonBorderColor ?? AppColors.color.kTransparent,
+                width: buttonBorderWidth ?? AppBorderWidths.width1,
+              ),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
+          backgroundColor: MaterialStateProperty.all<Color>(
+            buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,
+          ),
         ),
-        onPressed: buttonOnPressed,      
-          
-        child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+        onPressed: buttonOnPressed,
+
+        child: Text(
+          buttonText,
+          style: buttonTextStyle ?? AppStyles.textStyle14(),
+        ),
       ),
     );
   }
