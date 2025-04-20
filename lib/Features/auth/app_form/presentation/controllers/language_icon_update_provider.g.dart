@@ -13,10 +13,9 @@ String _$selectedLanguageHash() => r'ac9098aeae11d8c4f79bd6d3979ad49f60ae1925';
 final selectedLanguageProvider = AutoDisposeProvider<String>.internal(
   selectedLanguage,
   name: r'selectedLanguageProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$selectedLanguageHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$selectedLanguageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

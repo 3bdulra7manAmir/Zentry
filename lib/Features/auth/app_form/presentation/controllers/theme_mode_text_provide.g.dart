@@ -14,10 +14,9 @@ String _$selectedThemeLabelHash() =>
 final selectedThemeLabelProvider = AutoDisposeProvider<String>.internal(
   selectedThemeLabel,
   name: r'selectedThemeLabelProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product')
-          ? null
-          : _$selectedThemeLabelHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$selectedThemeLabelHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
