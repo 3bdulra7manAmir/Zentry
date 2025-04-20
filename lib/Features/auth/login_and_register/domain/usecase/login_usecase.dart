@@ -1,17 +1,17 @@
 import 'package:dartz/dartz.dart';
 import '../../../../../core/utils/app_usecase.dart';
 import '../../../../../core/utils/errors/api_fetch_failure.dart';
-import '../../domain/repo/app_login_repo.dart';
+import '../repo/login_repo.dart';
 
-class DataLoginUsecase extends AppUsecase
+class DomainLoginUsecase extends AppUsecase
 {
-  final DomainLoginRepo domainLoginRepo;
-  DataLoginUsecase(this.domainLoginRepo);
+
+  final DomainLoginRepo appLoginRepo;
+  DomainLoginUsecase(this.appLoginRepo);
 
   @override
   Future<Either<ApiFetchFailure, dynamic>> call([param])
   {
-    return domainLoginRepo.fetchUserLoginData();
+    return appLoginRepo.fetchUserLoginData();
   }
-
 }

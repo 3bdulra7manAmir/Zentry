@@ -22,7 +22,7 @@ class AppApiService
   static Dio get dio => _instance._dio;
 
   static AppApiService get instance => _instance;
-  Future<Map<String, dynamic>> get({required String endPoint}) async
+  Future<List<dynamic>> get({required String endPoint}) async
   {
     final response = await _dio.get(endPoint);
     return response.data;
