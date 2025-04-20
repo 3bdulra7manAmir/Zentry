@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/database/shared_preference/app_database.dart';
-import '../../../../../core/services/database/static/app_form_data/app_countries_list.dart';
+import '../../../../../core/data/static/app_form_data/app_countries_list.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'countries_icon_update_provider.g.dart';

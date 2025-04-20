@@ -7,7 +7,7 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
-import '../../../../../core/services/database/static/app_form_data/app_languages_list.dart';
+import '../../../../../core/data/static/app_form_data/app_languages_list.dart';
 
 void showLanguageBottomSheet(BuildContext context) {
   showModalBottomSheet(

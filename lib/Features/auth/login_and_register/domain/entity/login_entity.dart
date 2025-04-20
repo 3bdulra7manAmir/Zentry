@@ -1,9 +1,10 @@
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
+import '../../../../../core/services/database/hive/hive_adaptors_names.dart';
 
 part 'login_entity.g.dart';
 
-@HiveType(typeId: 0, adapterName: 'LoginDataAdaptor')
+@HiveType(typeId: 0, adapterName: HiveAdaptorsNames.loginDataAdaptor)
 class LoginEntity extends Equatable
 {
   @HiveField(0)
