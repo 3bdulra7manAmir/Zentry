@@ -6,23 +6,28 @@ import 'config/l10n/generated/app_localizations.dart';
 import 'config/router/app_router.dart';
 import 'config/themes/app_themes.dart';
 
-class TestApp extends ConsumerWidget {
+class TestApp extends ConsumerWidget
+{
   const TestApp({super.key});
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     final provider = AppProvidersProvider(ref, context);
     return ScreenUtilInit(
       designSize: const Size(390, 844),
-      builder: (context, child) {
+      builder: (context, child)
+      {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.router,
           locale: provider.locale,
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
+
           themeMode: provider.themeMode,
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
+          
           useInheritedMediaQuery: true,
         );
       },

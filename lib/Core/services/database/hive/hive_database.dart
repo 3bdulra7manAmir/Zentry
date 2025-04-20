@@ -3,11 +3,11 @@ import '../../../../features/auth/app_form/domain/entity/app_form_entity.dart';
 import '../../../../features/auth/login_and_register/domain/entity/login_entity.dart';
 import 'hive_boxes_names.dart';
 
-class HiveLocalDatabase
+class HiveLocalSourceDatabase
 {
-  HiveLocalDatabase._internal();
-  static final HiveLocalDatabase _instance = HiveLocalDatabase._internal();
-  factory HiveLocalDatabase() => _instance;
+  HiveLocalSourceDatabase._();
+  static HiveLocalSourceDatabase? _instance;
+  static HiveLocalSourceDatabase get instance => _instance!;
 
   late Box<LoginEntity> _loginDataDb;
   late Box<AppFormEntity> _appFormDb;
