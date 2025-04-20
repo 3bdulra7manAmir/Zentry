@@ -1,5 +1,5 @@
 import '../../../../../core/services/network/api_service.dart';
-import '../../../../../core/services/network/app_endpoints.dart';
+import '../../../../../core/services/network/api_endpoints.dart';
 import '../../domain/entity/login_entity.dart';
 import '../model/login_model.dart';
 
