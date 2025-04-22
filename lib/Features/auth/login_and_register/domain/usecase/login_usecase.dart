@@ -6,12 +6,12 @@ import '../repo/login_repo.dart';
 class DomainLoginUsecase extends AppUsecase
 {
 
-  final DomainLoginRepo appLoginRepo;
-  DomainLoginUsecase(this.appLoginRepo);
+  final DomainLoginRepo domainLoginRepo;
+  DomainLoginUsecase(this.domainLoginRepo);
 
   @override
   Future<Either<ApiFetchFailure, dynamic>> call([param])
   {
-    return appLoginRepo.fetchUserLoginData();
+    return domainLoginRepo.fetchUserLoginData();
   }
 }

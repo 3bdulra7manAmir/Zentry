@@ -117,8 +117,10 @@ class LoginFormWithPhone extends ConsumerWidget {
                 children: [
                   Checkbox(
                     value: provider.isChecked,
-                    onChanged: (value) {
-                      if (value != null) {
+                    onChanged: (value)
+                    {
+                      if (value != null)
+                      {
                         ref.read(checkboxValueProvider.notifier).state = value;
                       }
                     },
@@ -129,17 +131,12 @@ class LoginFormWithPhone extends ConsumerWidget {
                   ),
 
                   Text(
-                    AppLocalizations.of(context).remember,
-                    style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kTertiarySemiGrey,
-                    ),
+                    AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey,),
                   ),
                   const Spacer(),
                   InkWell(
                     onTap:
-                        () => AppRouter.router.pushNamed(
-                          AppRoutes.kForgetPasswordPhoneView,
-                        ),
+                        () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView,),
                     child: Text(
                       AppLocalizations.of(context).forgetPassword,
                       style: AppStyles.textStyle12(
@@ -157,6 +154,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                 buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: () {
                   if (loginPhoneFormKey.currentState!.validate()) {
+                    print("object");
                     //AppRouter.router.
                   }
                 },

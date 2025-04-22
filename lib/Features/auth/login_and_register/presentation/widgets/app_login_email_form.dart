@@ -19,15 +19,18 @@ import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkboc_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
+import '../controllers/login_data_provider.dart';
 
-class LoginFormWithEmail extends ConsumerWidget {
+class LoginFormWithEmail extends ConsumerWidget
+{
   LoginFormWithEmail({super.key});
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
     return Container(
@@ -149,11 +152,27 @@ class LoginFormWithEmail extends ConsumerWidget {
               AppSizes.size16.verticalSpace,
               CustomButton(
                 buttonText: AppLocalizations.of(context).login,
-                buttonOnPressed: () {
-                  if (loginEmailFormKey.currentState!.validate()) {
-                    //AppRouter.router.
+                buttonOnPressed: () async
+                {
+                  print("\nobjectSTart1\n");
+                  if (loginEmailFormKey.currentState!.validate())
+                  {
+                    print("\nobjectSTart2\n");
+                    final loginInput = (email: emailController.text.trim(), password: passwordController.text.trim(),);
+                    final result = await ref.read(loginCheckProvider(loginInput).future);
+                    if (result)
+                    {
+                      print("\nobjectRESUlt\n");
+                      AppRouter.router.pushNamed(AppRoutes.kSplashView);
+                    }
+                    else
+                    {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).welcomeBack)),);
+                      print("\nobjectNothoing\n");
+                    }
                   }
                 },
+
               ),
               AppSizes.size20.verticalSpace,
               Align(
@@ -164,7 +183,7 @@ class LoginFormWithEmail extends ConsumerWidget {
                     fontWeight: AppFontWeights.boldWeight,
                     textColor: AppColors.color.kSenaryTotalBlackText,
                   ),
-                ), // textAlign: TextAlign.center, //Not Working Due to => crossAxisAlignment: CrossAxisAlignment.start,
+                ),
               ),
               AppSizes.size20.verticalSpace,
               Column(

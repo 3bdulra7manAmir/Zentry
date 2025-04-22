@@ -6,8 +6,9 @@ import 'hive_boxes_names.dart';
 class HiveLocalSourceDatabase
 {
   HiveLocalSourceDatabase._();
-  static HiveLocalSourceDatabase? _instance;
-  static HiveLocalSourceDatabase get instance => _instance!;
+
+  static final HiveLocalSourceDatabase _instance = HiveLocalSourceDatabase._();
+  static HiveLocalSourceDatabase get instance => _instance;
 
   late Box<LoginEntity> _loginDataDb;
   late Box<AppFormEntity> _appFormDb;
@@ -19,18 +20,15 @@ class HiveLocalSourceDatabase
   {
     await Hive.initFlutter();
 
-    /// Registering Hive Adapters
     Hive.registerAdapter(LoginDataAdaptor());
     //Hive.registerAdapter(AppFormDataAdaptor());
 
-    /// Hive Boxes Opening
-    await Hive.openBox<LoginDataAdaptor>(HiveBoxesNames.loginDataBox);
-    //await Hive.openBox<AppFormEntity>('AppFormData');
+    await Hive.openBox<LoginEntity>(HiveBoxesNames.loginDataBox);
+    //await Hive.openBox<AppFormEntity>(HiveBoxesNames.appFormBox);
 
-    /// Hive Database
-    _loginDataDb = Hive.box(HiveBoxesNames.loginDataBox);
-   // _appFormDb = Hive.box(HiveBoxesNames.appFormBox);
+    _loginDataDb = Hive.box<LoginEntity>(HiveBoxesNames.loginDataBox);
+    //_appFormDb = Hive.box<AppFormEntity>(HiveBoxesNames.appFormBox);
   }
 
-  get close async => await Hive.close();
+  Future<void> close() async => await Hive.close();
 }
