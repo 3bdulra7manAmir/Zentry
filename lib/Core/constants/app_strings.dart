@@ -58,6 +58,8 @@ abstract class AppStrings {
 
   ///[or_login_with]
   static const orLoginWith = "or login with";
+  ///[or_SignUp_with]
+  static const orSignUpWith = "or SignUp with";
 
   ///[Facebook]
   static const facebook = "Facebook";

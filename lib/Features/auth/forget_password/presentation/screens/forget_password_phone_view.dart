@@ -14,7 +14,7 @@ import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../login_and_register/presentation/widgets/phone_number_dialog.dart';
+import '../../../login/presentation/widgets/phone_number_dialog.dart';
 import '../../../widgets/numeric_keyboard.dart';
 
 class ForgetPasswordWithPhoneView extends ConsumerWidget {

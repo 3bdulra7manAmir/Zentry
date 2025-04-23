@@ -95,7 +95,7 @@ class AppForm extends ConsumerWidget {
             AppSizes.size27.verticalSpace,
             CustomButton(
               buttonText: AppLocalizations.of(context).login,
-              buttonOnPressed: () => AppRouter.router.push(AppRoutes.kAuthTabs),
+              buttonOnPressed: () => AppRouter.router.push(AppRoutes.kAuthView),
             ),
             AppSizes.size16.verticalSpace,
             CustomButton(

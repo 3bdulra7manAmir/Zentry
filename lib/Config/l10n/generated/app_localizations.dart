@@ -203,6 +203,12 @@ abstract class AppLocalizations {
   /// **'or login with'**
   String get orLoginWith;
 
+  /// No description provided for @orSignUpWith.
+  ///
+  /// In en, this message translates to:
+  /// **'or SignUp with'**
+  String get orSignUpWith;
+
   /// No description provided for @facebook.
   ///
   /// In en, this message translates to:

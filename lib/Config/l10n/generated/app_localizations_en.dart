@@ -63,6 +63,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orLoginWith => 'or login with';
 
   @override
+  String get orSignUpWith => 'or SignUp with';
+
+  @override
   String get facebook => 'Facebook';
 
   @override

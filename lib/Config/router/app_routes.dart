@@ -10,7 +10,7 @@ abstract class AppRoutes {
   static const kAppFormView = '/kAppFormView';
 
   // APP Login (Auth Tabs) View
-  static const kAuthTabs = '/kAuthTabs'; // Fixed the route name here
+  static const kAuthView = '/kAuthView'; // Fixed the route name here
 
   // APP Login with Phone
   static const kLoginPhoneView = '/kLoginPhone';

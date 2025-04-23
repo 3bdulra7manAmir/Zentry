@@ -63,6 +63,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get orLoginWith => 'أو سجل الدخول باستخدام';
 
   @override
+  String get orSignUpWith => 'أو سجل باستخدام';
+
+  @override
   String get facebook => 'فيسبوك';
 
   @override

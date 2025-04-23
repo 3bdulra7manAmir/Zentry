@@ -3,24 +3,23 @@ import 'package:go_router/go_router.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
-import '../../features/auth/login_and_register/presentation/screens/auth_view.dart';
-import '../../features/auth/login_and_register/presentation/widgets/app_login_email_form.dart';
-import '../../features/auth/login_and_register/presentation/widgets/app_login_phone_form.dart';
+import '../../features/auth/login/presentation/screens/auth_view.dart';
+import '../../features/auth/login/presentation/widgets/login_email_form.dart';
+import '../../features/auth/login/presentation/widgets/login_phone_form.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
 import 'app_routes.dart';
 
-abstract class AppRouter {
+abstract class AppRouter
+{
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kSplashView,
-    errorBuilder:
-        (_, _) => const Scaffold(
-          body: Center(child: CircularProgressIndicator.adaptive()),
-        ),
-    routes: [
+    initialLocation: AppRoutes.kAuthView,
+    errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
+    routes:
+    [
       //App Splash View
       GoRoute(
         path: AppRoutes.kSplashView,
@@ -37,8 +36,8 @@ abstract class AppRouter {
 
       // App Login or SignUp View
       GoRoute(
-        path: AppRoutes.kAuthTabs,
-        name: AppRoutes.kAuthTabs,
+        path: AppRoutes.kAuthView,
+        name: AppRoutes.kAuthView,
         builder: (context, state) => const AuthView(),
       ),
 

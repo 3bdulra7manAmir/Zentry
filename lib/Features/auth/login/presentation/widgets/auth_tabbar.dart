@@ -6,9 +6,9 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../controllers/email_or_phone_provider.dart';
-import 'app_login_email_form.dart';
-import 'app_login_phone_form.dart';
-import 'app_signup_form.dart';
+import 'login_email_form.dart';
+import 'login_phone_form.dart';
+import '../../../register/presentation/screens/signup_form.dart';
 
 class AuthTabs extends ConsumerWidget {
   const AuthTabs({super.key});
@@ -37,11 +37,10 @@ class AuthTabs extends ConsumerWidget {
           ),
           Expanded(
             child: TabBarView(
-              children: [
-                provider.loginType == LoginType.phone
-                    ? LoginFormWithPhone()
-                    : LoginFormWithEmail(),
-                const SignUpForm(),
+              children:
+              [
+                provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
+                SignUpForm(),
               ],
             ),
           ),

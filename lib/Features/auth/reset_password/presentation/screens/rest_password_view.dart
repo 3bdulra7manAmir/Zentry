@@ -13,7 +13,7 @@ import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
-import '../../../login_and_register/presentation/controllers/obsecure_text_provider.dart';
+import '../../../login/presentation/controllers/obsecure_text_provider.dart';
 
 class RestPasswordView extends ConsumerWidget {
   RestPasswordView({super.key});

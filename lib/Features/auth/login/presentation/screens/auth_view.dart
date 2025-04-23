@@ -4,15 +4,18 @@ import '../../../../../config/themes/color_system/colors_manager/app_colors.dart
 import '../../../widgets/app_form_header.dart';
 import '../widgets/auth_tabbar.dart';
 
-class AuthView extends StatelessWidget {
+class AuthView extends StatelessWidget
+{
   const AuthView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Scaffold(
       backgroundColor: AppColors.color.kPrimaryBlue,
       body: Column(
-        children: [
+        children:
+        [
           Expanded(
             flex: 1,
             child: FormHeader(

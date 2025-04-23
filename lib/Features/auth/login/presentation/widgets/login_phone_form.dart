@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/features/auth/login_and_register/presentation/widgets/phone_number_dialog.dart';
+import 'package:test_app/features/auth/login/presentation/widgets/phone_number_dialog.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
@@ -59,11 +59,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                   ),
                   AppSizes.size4.horizontalSpace,
                   GestureDetector(
-                    onTap:
-                        () =>
-                            ref
-                                .read(loginTypeProvider.notifier)
-                                .toggleLoginType(),
+                    onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
                     child: Text(
                       AppLocalizations.of(context).email,
                       style: AppStyles.textStyle12(
@@ -117,10 +113,8 @@ class LoginFormWithPhone extends ConsumerWidget {
                 children: [
                   Checkbox(
                     value: provider.isChecked,
-                    onChanged: (value)
-                    {
-                      if (value != null)
-                      {
+                    onChanged: (value) {
+                      if (value != null) {
                         ref.read(checkboxValueProvider.notifier).state = value;
                       }
                     },
@@ -131,12 +125,17 @@ class LoginFormWithPhone extends ConsumerWidget {
                   ),
 
                   Text(
-                    AppLocalizations.of(context).remember, style: AppStyles.textStyle12(textColor: AppColors.color.kTertiarySemiGrey,),
+                    AppLocalizations.of(context).remember,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kTertiarySemiGrey,
+                    ),
                   ),
                   const Spacer(),
                   InkWell(
                     onTap:
-                        () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView,),
+                        () => AppRouter.router.pushNamed(
+                          AppRoutes.kForgetPasswordPhoneView,
+                        ),
                     child: Text(
                       AppLocalizations.of(context).forgetPassword,
                       style: AppStyles.textStyle12(
@@ -154,7 +153,6 @@ class LoginFormWithPhone extends ConsumerWidget {
                 buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: () {
                   if (loginPhoneFormKey.currentState!.validate()) {
-                    print("object");
                     //AppRouter.router.
                   }
                 },
