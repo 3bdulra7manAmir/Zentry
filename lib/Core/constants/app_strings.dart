@@ -71,6 +71,12 @@ abstract class AppStrings {
   static const apple = "Apple";
 
   //SignupForm
+  static const fullName = "Full Name";
+  static const date = "Date";
+  static const gender = "Gender";
+  static const male = "Male";
+  static const female = "Female";
+
   static const signUpPage = "Sign Up Form Goes Here";
 
   ///App ForgetPassword
@@ -219,11 +225,9 @@ abstract class AppStrings {
   static const selected = "Selected";
 
   ///App Validation
-
   static const emailIsRequired = "Email is required";
   static const invalidEmailSymbol = "Email must contain '@' symbol.";
-  static const invalidEmailDomain =
-      "Email must end with a valid domain (e.g., .com, .org).";
+  static const invalidEmailDomain = "Email must end with a valid domain (e.g., .com, .org).";
   static const validateFailurEmail = "Error validating email: ";
 
   static const phoneNumberIsRequired = "Phone number is required";
@@ -232,13 +236,14 @@ abstract class AppStrings {
   static const passwordIsRequired = "Password is required";
   static const invalidPassword = "Invalid Password";
   static const validateFailurPassword = "Error validating password:";
-  static const passwordLength8Character =
-      "Password must be at least 8 characters long.";
-  static const passwordOneUpperCase =
-      "Password must contain at least one uppercase letter.";
-  static const passwordOneLowerCase =
-      "Password must contain at least one lowercase letter.";
+  static const passwordLength8Character = "Password must be at least 8 characters long.";
+  static const passwordOneUpperCase = "Password must contain at least one uppercase letter.";
+  static const passwordOneLowerCase = "Password must contain at least one lowercase letter.";
   static const passwordOneNumber = "Password must contain at least one number.";
-  static const passwordOneSpecialCharacter =
-      "Password must contain at least one special character.";
+  static const passwordOneSpecialCharacter = "Password must contain at least one special character.";
+
+  // App SignUp Register
+  static const fullNameIsRequired = "Full name is required.";
+  static const invalidFullName = "Please enter a valid full name.";
+  static const validateFailureFullName = "Validation failed for full name:";
 }

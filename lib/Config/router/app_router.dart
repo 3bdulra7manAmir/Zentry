@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test_app/features/auth/register/presentation/screens/signup_form_fullname.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
-import '../../features/auth/login/presentation/widgets/login_email_form.dart';
-import '../../features/auth/login/presentation/widgets/login_phone_form.dart';
+import '../../features/auth/login/presentation/widgets/login_form_email.dart';
+import '../../features/auth/login/presentation/widgets/login_form_phone.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
@@ -80,6 +81,20 @@ abstract class AppRouter
         path: AppRoutes.kVerificationCodeView,
         name: AppRoutes.kVerificationCodeView,
         builder: (context, state) => const VerificationCodeView(),
+      ),
+
+      // App SignUp Phone Number
+      GoRoute(
+        path: AppRoutes.kSignUpFullNameView,
+        name: AppRoutes.kSignUpFullNameView,
+        builder: (context, state) =>  SignUpFormFullName(),
+      ),
+
+      // App SignUp Phone Number
+      GoRoute(
+        path: AppRoutes.kSignUpPhoneNumberView,
+        name: AppRoutes.kSignUpPhoneNumberView,
+        builder: (context, state) =>  SignUpFormFullName(),
       ),
 
       // App Countries View

@@ -114,6 +114,8 @@ flutter:
     - assets/icons/RestPassword/
     - assets/icons/Verification/
     - assets/icons/Countries/
+    - assets/icons/Register/
+    - assets/icons/Register_FullName/
     - assets/images/
 
 # Flutter Intl Configuration

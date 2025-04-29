@@ -9,86 +9,153 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
-import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../login/presentation/controllers/login_data_provider.dart';
-import '../../../login/presentation/widgets/phone_number_dialog.dart';
+import '../controllers/checkbox_provider.dart';
+import '../controllers/email_or_phone_provider.dart';
+import '../controllers/login_data_provider.dart';
 
-
-class SignUpForm extends ConsumerWidget
+class LoginFormWithEmail extends ConsumerWidget
 {
-  SignUpForm({super.key});
+  LoginFormWithEmail({super.key});
 
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final GlobalKey<FormState> signUpEmailFormKey = GlobalKey<FormState>();
+    final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Form(
-          key: signUpEmailFormKey,
+          key: loginEmailFormKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:
-            [
+            children: [
               AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Row(
+                children: [
+                  Text(
+                    AppLocalizations.of(context).email,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                    ),
+                  ),
+                  const Spacer(),
+                  Text(
+                    AppLocalizations.of(context).or,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kSecondarySemiGreyText,
+                    ),
+                  ),
+                  AppSizes.size4.horizontalSpace,
+                  GestureDetector(
+                    onTap:
+                        () =>
+                            ref
+                                .read(loginTypeProvider.notifier)
+                                .toggleLoginType(),
+                    child: Text(
+                      AppLocalizations.of(context).phone,
+                      style: AppStyles.textStyle12(
+                        fontWeight: AppFontWeights.boldWeight,
+                        textDecoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.emailAddress,
                 fieldValidator: (value) => emailValidation(value, context),
                 fieldController: emailController,
-                fieldhintStyle: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight,),
+                fieldhintStyle: AppStyles.textStyle12(
+                  fontWeight: AppFontWeights.regularWeight,
+                ),
                 fieldText: AppLocalizations.of(context).enterEmaill,
               ),
-              AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).phoneNumber,style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
-              AppSizes.size8.verticalSpace,
-              CustomTextFormField(
-                fieldKeyboardType: TextInputType.phone,
-                fieldValidator: (value) => phoneNumberValidation(value, context),
-                fieldController: phoneNumberController,
-                fieldPrefixIcon: InkWell(
-                  onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                  child: Image.asset(provider.countryFlag),
-                ),
-                fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
-              ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(
+                AppLocalizations.of(context).password,
+                style: AppStyles.textStyle12(
+                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                ),
+              ),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
-                fieldObscureText: provider.obscureText3,
+                fieldObscureText: provider.obscureText,
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: GestureDetector(
-                  onTap: () => provider.obscureTextState3,
-                  child: Image.asset(provider.obscureText3 ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                  onTap: () => provider.obscureTextState,
+                  child: Image.asset(
+                    provider.obscureText
+                        ? AppAssets.iconsPNG.corssedEyePNG
+                        : AppAssets.iconsPNG.eyePNG,
+                  ),
                 ),
               ),
               AppSizes.size16.verticalSpace,
+              Row(
+                children: [
+                  Checkbox(
+                    value: provider.isChecked,
+                    onChanged: (value) {
+                      if (value != null) {
+                        ref.read(checkboxValueProvider.notifier).state = value;
+                      }
+                    },
+                    side: BorderSide(
+                      width: AppBorderWidths.width2,
+                      color: AppColors.color.kFormButtonsBorders,
+                    ),
+                  ),
+
+                  Text(
+                    AppLocalizations.of(context).remember,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kTertiarySemiGrey,
+                    ),
+                  ),
+                  const Spacer(),
+                  InkWell(
+                    onTap:
+                        () => AppRouter.router.pushNamed(
+                          AppRoutes.kForgetPasswordEmailView,
+                        ),
+                    child: Text(
+                      AppLocalizations.of(context).forgetPassword,
+                      style: AppStyles.textStyle12(
+                        textColor: AppColors.color.kQuinarySemiBlueText,
+                        textDecoration: TextDecoration.underline,
+                        textDecorationColor:
+                            AppColors.color.kForgetPasswordUnderLine,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              AppSizes.size16.verticalSpace,
               CustomButton(
-                buttonText: AppLocalizations.of(context).signUp,
+                buttonText: AppLocalizations.of(context).login,
                 buttonOnPressed: () async
                 {
                   print("\nobjectSTart1\n");
-                  if (signUpEmailFormKey.currentState!.validate())
+                  if (loginEmailFormKey.currentState!.validate())
                   {
                     print("\nobjectSTart2\n");
                     final loginInput = (email: emailController.text.trim(), password: passwordController.text.trim(),);
@@ -111,7 +178,7 @@ class SignUpForm extends ConsumerWidget
               Align(
                 alignment: Alignment.center,
                 child: Text(
-                  AppLocalizations.of(context).orSignUpWith,
+                  AppLocalizations.of(context).orLoginWith,
                   style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
                     textColor: AppColors.color.kSenaryTotalBlackText,
@@ -149,7 +216,10 @@ class SignUpForm extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
                   CustomSocialButton(
                     buttonText: AppLocalizations.of(context).apple,
-                    platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
+                    platformLogo:
+                        provider.themeMode == ThemeMode.light
+                            ? AppAssets.iconsPNG.applePNG
+                            : AppAssets.iconsPNG.appleDarkPNG,
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kPrimaryDark,

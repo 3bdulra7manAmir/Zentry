@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/constants/app_borders.dart';
@@ -6,10 +7,12 @@ import 'color_system/colors_manager/app_colors.dart';
 import '../../core/constants/app_sizes.dart';
 import 'font_system/app_font_weights.dart';
 
-class AppTheme {
+class AppTheme
+{
   AppTheme._();
 
-  static ThemeData lightTheme() {
+  static ThemeData lightTheme()
+  {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
@@ -31,10 +34,18 @@ class AppTheme {
         backgroundColor: AppColors.color.kAppBarBG,
         centerTitle: true,
       ),
+
+      cupertinoOverrideTheme:  CupertinoThemeData(
+        textTheme: CupertinoTextThemeData(
+          //dateTimePickerTextStyle: TextStyle(color: Colors.blue, fontSize: 16),
+          pickerTextStyle: AppStyles.textStyle26(),
+        ),
+      ),
     );
   }
 
-  static ThemeData darkTheme() {
+  static ThemeData darkTheme()
+  {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
@@ -55,6 +66,13 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.color.kAppBarBG,
         centerTitle: true,
+      ),
+
+      cupertinoOverrideTheme:  CupertinoThemeData(
+        textTheme: CupertinoTextThemeData(
+          //dateTimePickerTextStyle: TextStyle(color: Colors.blue, fontSize: 16),
+          pickerTextStyle: AppStyles.textStyle26(),
+        ),
       ),
     );
   }

@@ -18,6 +18,12 @@ abstract class AppRoutes {
   // APP Login with Email
   static const kLoginEmailView = '/kLoginEmail';
 
+  // APP SignUp Full Name
+  static const kSignUpFullNameView = '/kSignUpFullName';
+
+  // APP SignUp Phone Number
+  static const kSignUpPhoneNumberView = '/kSignUpPhoneNumber';
+
   // APP Forget Password Phone
   static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
 

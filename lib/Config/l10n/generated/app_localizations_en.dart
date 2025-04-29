@@ -78,6 +78,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signUpPage => 'Sign Up Form Goes Here';
 
   @override
+  String get fullName => 'Full Name';
+
+  @override
+  String get date => 'Date';
+
+  @override
+  String get gender => 'Gender';
+
+  @override
+  String get male => 'Male';
+
+  @override
+  String get female => 'Female';
+
+  @override
   String get resetPassword => 'Reset Password';
 
   @override
@@ -250,4 +265,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get passwordOneSpecialCharacter => 'Password must contain at least one special character.';
+
+  @override
+  String get fullNameIsRequired => 'Full name is required.';
+
+  @override
+  String get invalidFullName => 'Please enter a valid full name.';
+
+  @override
+  String get validateFailureFullName => 'Validation failed for full name:';
 }

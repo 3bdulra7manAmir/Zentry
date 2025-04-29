@@ -233,6 +233,36 @@ abstract class AppLocalizations {
   /// **'Sign Up Form Goes Here'**
   String get signUpPage;
 
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullName;
+
+  /// No description provided for @date.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get date;
+
+  /// No description provided for @gender.
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get gender;
+
+  /// No description provided for @male.
+  ///
+  /// In en, this message translates to:
+  /// **'Male'**
+  String get male;
+
+  /// No description provided for @female.
+  ///
+  /// In en, this message translates to:
+  /// **'Female'**
+  String get female;
+
   /// No description provided for @resetPassword.
   ///
   /// In en, this message translates to:
@@ -580,6 +610,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password must contain at least one special character.'**
   String get passwordOneSpecialCharacter;
+
+  /// No description provided for @fullNameIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name is required.'**
+  String get fullNameIsRequired;
+
+  /// No description provided for @invalidFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid full name.'**
+  String get invalidFullName;
+
+  /// No description provided for @validateFailureFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Validation failed for full name:'**
+  String get validateFailureFullName;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

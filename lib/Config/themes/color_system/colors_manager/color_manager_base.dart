@@ -60,6 +60,7 @@ abstract class ColorManagerBase {
 
   /// [TabBar__FF7D00] //Yours
   Color get kTabBar;
+  Color get kDatePicker;
 
   /// [Dark_Form_Buttons_Borders_Fill__272626]
   Color get kFormButtonsBordersFillDark;

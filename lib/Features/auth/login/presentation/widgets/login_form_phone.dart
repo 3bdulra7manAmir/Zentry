@@ -18,7 +18,7 @@ import '../../../../../core/services/validation/phone_number_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../controllers/checkboc_provider.dart';
+import '../controllers/checkbox_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
 
 class LoginFormWithPhone extends ConsumerWidget {

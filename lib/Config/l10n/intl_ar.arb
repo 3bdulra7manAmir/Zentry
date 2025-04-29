@@ -26,6 +26,11 @@
     "apple": "أبل",
 
     "signUpPage": "تسجيل",
+    "fullName": "الاسم كامل",
+    "male": "ذكر",
+    "female": "انثي",
+    "date": "التاريخ",
+    "gender": "النوع",
   
     "resetPassword": "إعادة تعيين كلمة المرور",
     "forgotPassword": "هل نسيت كلمة المرور؟",
@@ -95,7 +100,12 @@
     "passwordOneUpperCase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
     "passwordOneLowerCase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
     "passwordOneNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
-    "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل."
+    "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.",
+
+    "fullNameIsRequired": "الاسم الكامل مطلوب.",
+    "invalidFullName": "يرجى إدخال اسم كامل صحيح.",
+    "validateFailureFullName": "فشل التحقق من صحة الاسم الكامل:"
+    
 
   }
   

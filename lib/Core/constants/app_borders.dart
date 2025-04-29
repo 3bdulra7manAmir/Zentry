@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-abstract class AppBorders {
+abstract class AppBorders
+{
   AppBorders._();
 
   //Form Border
@@ -24,9 +25,15 @@ abstract class AppBorders {
   //Text Form Field
   /// [Circular_10]
   static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
+
+  //Text Form Field
+  /// [Circular_1]
+  static BorderRadius datePicker1 = BorderRadius.circular(1.r);
 }
 
-abstract class AppBorderWidths {
+
+abstract class AppBorderWidths
+{
   AppBorderWidths._();
 
   static double width1 = (1.0).w;

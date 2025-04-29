@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:test_app/features/auth/register/presentation/screens/signup_form_fullname.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
+import '../../../register/presentation/screens/signup_form_phone.dart';
 import '../controllers/email_or_phone_provider.dart';
-import 'login_email_form.dart';
-import 'login_phone_form.dart';
-import '../../../register/presentation/screens/signup_form.dart';
+import 'login_form_email.dart';
+import 'login_form_phone.dart';
 
-class AuthTabs extends ConsumerWidget {
+class AuthTabs extends ConsumerWidget
+{
   const AuthTabs({super.key});
 
   @override
@@ -40,7 +42,7 @@ class AuthTabs extends ConsumerWidget {
               children:
               [
                 provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
-                SignUpForm(),
+                SignUpFormPhoneNumber(),
               ],
             ),
           ),

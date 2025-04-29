@@ -28,6 +28,11 @@
   "apple": "Apple",
 
   "signUpPage": "Sign Up Form Goes Here",
+  "fullName" : "Full Name",
+  "date" : "Date",
+  "gender" : "Gender",
+  "male" : "Male",
+  "female" : "Female",
 
   "resetPassword": "Reset Password",
   "forgotPassword": "Forgot password ?",
@@ -97,6 +102,11 @@
   "passwordOneUpperCase": "Password must contain at least one uppercase letter.",
   "passwordOneLowerCase": "Password must contain at least one lowercase letter.",
   "passwordOneNumber": "Password must contain at least one number.",
-  "passwordOneSpecialCharacter": "Password must contain at least one special character."
+  "passwordOneSpecialCharacter": "Password must contain at least one special character.",
+
+  "fullNameIsRequired": "Full name is required.",
+  "invalidFullName": "Please enter a valid full name.",
+  "validateFailureFullName": "Validation failed for full name:"
+  
   
 }

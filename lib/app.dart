@@ -23,7 +23,7 @@ class TestApp extends ConsumerWidget
           locale: provider.locale,
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-
+    
           themeMode: provider.themeMode,
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),

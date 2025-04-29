@@ -5,9 +5,29 @@ import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import 'app_sizes.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 
-abstract class AppStyles {
+abstract class AppStyles
+{
   AppStyles._();
 
+  /// FontWeight = [w500], FontColor = [_EE7D19], FontFamily = [Roboto]
+  static TextStyle textStyle26({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  }) {
+    return TextStyle(
+      fontSize: AppFontSizes.xXXXXXLarge.sp,
+      fontWeight: fontWeight ?? AppFontWeights.mediumWeight,
+      fontFamily: fontFamily,
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.color.kDatePicker,
+    );
+  }
   /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
   static TextStyle textStyle22({
     FontWeight? fontWeight,

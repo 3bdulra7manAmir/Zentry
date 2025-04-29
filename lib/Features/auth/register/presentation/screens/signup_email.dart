@@ -1,0 +1,147 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
+import '../../../../../core/services/validation/email_valid.dart';
+import '../../../../../core/services/validation/password_valid.dart';
+import '../../../../../core/widgets/app_button.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../login/presentation/controllers/email_or_phone_provider.dart';
+
+
+class SignUpFormEmail extends ConsumerWidget
+{
+  SignUpFormEmail({super.key});
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref)
+  {
+    final provider = AppProvidersProvider(ref, context);
+    final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
+    return Container(
+      padding: AppPadding.kAppFormPadding,
+      width: double.infinity,
+      color: Theme.of(context).cardColor,
+      child: SingleChildScrollView(
+        child: Form(
+          key: loginEmailFormKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AppSizes.size13.verticalSpace,
+              Row(
+                children: [
+                  Text(
+                    AppLocalizations.of(context).emailAddress,
+                    style: AppStyles.textStyle12(
+                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                    ),
+                  ),
+                  const Spacer(),
+                  AppSizes.size4.horizontalSpace,
+                  GestureDetector(
+                    onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
+                    child: Text(
+                      AppLocalizations.of(context).phoneNumber,
+                      style: AppStyles.textStyle12(
+                        fontWeight: AppFontWeights.boldWeight,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              AppSizes.size8.verticalSpace,
+              CustomTextFormField(
+                fieldKeyboardType: TextInputType.emailAddress,
+                fieldValidator: (value) => emailValidation(value, context),
+                fieldController: emailController,
+                fieldhintStyle: AppStyles.textStyle12(
+                  fontWeight: AppFontWeights.regularWeight,
+                ),
+                fieldText: AppLocalizations.of(context).emailAddress,
+              ),
+              AppSizes.size24.verticalSpace,
+              Text(
+                AppLocalizations.of(context).password,
+                style: AppStyles.textStyle12(
+                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                ),
+              ),
+              AppSizes.size8.verticalSpace,
+              CustomTextFormField(
+                fieldKeyboardType: TextInputType.text,
+                fieldValidator: (value) => passwordValidation(value, context),
+                fieldController: passwordController,
+                fieldObscureText: provider.obscureText,
+                fieldText: AppLocalizations.of(context).password,
+                fieldsuffixIcon: GestureDetector(
+                  onTap: () => provider.obscureTextState,
+                  child: Image.asset(
+                    provider.obscureText
+                        ? AppAssets.iconsPNG.corssedEyePNG
+                        : AppAssets.iconsPNG.eyePNG,
+                  ),
+                ),
+              ),
+
+              AppSizes.size24.verticalSpace,
+
+              Text("Invitation Code", style: AppStyles.textStyle13(
+                fontWeight: AppFontWeights.mediumWeight,
+                textColor: AppColors.color.kQuinarySemiBlueText,
+                ),
+              ),
+
+              AppSizes.size8.verticalSpace,
+
+              CustomTextFormField(
+                fieldKeyboardType: TextInputType.text,
+                fieldValidator: (value) => passwordValidation(value, context),
+                fieldController: passwordController,
+                fieldObscureText: provider.obscureText,
+                fieldText: "Ex: #Alsuisy123",
+                fieldsuffixIcon: Text("Paste", style: AppStyles.textStyle12(), ),
+              ),
+
+              AppSizes.size32.verticalSpace,
+
+              CustomButton(
+                buttonText: AppLocalizations.of(context).signUp,
+                buttonOnPressed: () async
+                {
+                  // print("\nobjectSTart1\n");
+                  // if (signUpEmailFormKey.currentState!.validate())
+                  // {
+                  //   print("\nobjectSTart2\n");
+                  //   final loginInput = (email: emailController.text.trim(), password: passwordController.text.trim(),);
+                  //   final result = await ref.read(loginCheckProvider(loginInput).future);
+                  //   if (result)
+                  //   {
+                  //     print("\nobjectRESUlt\n");
+                  //     AppRouter.router.pushNamed(AppRoutes.kSplashView);
+                  //   }
+                  //   else
+                  //   {
+                  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).welcomeBack)),);
+                  //     print("\nobjectNothoing\n");
+                  //   }
+                  // }
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

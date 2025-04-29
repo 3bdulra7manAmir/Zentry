@@ -5,9 +5,10 @@ import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/controller/theme_controller.dart';
 import '../../features/auth/app_form/presentation/controllers/countries_icon_update_provider.dart';
 import '../../features/auth/app_form/presentation/controllers/theme_mode_text_provide.dart';
-import '../../features/auth/login/presentation/controllers/checkboc_provider.dart';
+import '../../features/auth/login/presentation/controllers/checkbox_provider.dart';
 import '../../features/auth/login/presentation/controllers/email_or_phone_provider.dart';
 import '../../features/auth/login/presentation/controllers/obsecure_text_provider.dart';
+import '../../features/auth/register/presentation/controllers/email_or_phone_provider.dart';
 import '../../features/auth/register/presentation/controllers/obsecure_text_provider.dart';
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../services/localization/controller/localization_controller.dart';
@@ -19,18 +20,17 @@ String getAppText(
   return selector(AppLocalizations.of(context));
 }
 
-class AppProvidersProvider {
+class AppProvidersProvider
+{
   final WidgetRef ref;
   final BuildContext context;
 
   AppProvidersProvider(this.ref, this.context);
 
-  LocalizationController get localeState =>
-      ref.read(localizationControllerProvider.notifier);
+  LocalizationController get localeState => ref.read(localizationControllerProvider.notifier);
   Locale get locale => ref.watch(localizationControllerProvider);
 
-  ThemeController get themeController =>
-      ref.read(themeControllerProvider.notifier);
+  ThemeController get themeController => ref.read(themeControllerProvider.notifier);
   ThemeMode get themeMode => ref.watch(themeControllerProvider);
   String get themeLabel => getSelectedThemeLabel(ref, context);
 
@@ -51,6 +51,7 @@ class AppProvidersProvider {
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);
 
   LoginType get loginType => ref.watch(loginTypeProvider);
+  SignUpType get signUpType => ref.watch(signUpTypeProvider);
 
   String get otpProvider => ref.watch(otpInputProvider);
 }

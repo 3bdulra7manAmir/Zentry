@@ -64,6 +64,8 @@ class DarkColorScheme extends ColorManagerBase {
 
   @override
   Color get kTabBar => const Color(0xffFF7D00);
+  @override
+  Color get kDatePicker => const Color(0xffEE7D19);
 
   @override
   Color get kFormButtonsBordersFillDark => const Color(0xff272626);

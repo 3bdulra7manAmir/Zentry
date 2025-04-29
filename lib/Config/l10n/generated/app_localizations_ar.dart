@@ -78,6 +78,21 @@ class AppLocalizationsAr extends AppLocalizations {
   String get signUpPage => 'تسجيل';
 
   @override
+  String get fullName => 'الاسم كامل';
+
+  @override
+  String get date => 'التاريخ';
+
+  @override
+  String get gender => 'النوع';
+
+  @override
+  String get male => 'ذكر';
+
+  @override
+  String get female => 'انثي';
+
+  @override
   String get resetPassword => 'إعادة تعيين كلمة المرور';
 
   @override
@@ -250,4 +265,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get passwordOneSpecialCharacter => 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
+
+  @override
+  String get fullNameIsRequired => 'الاسم الكامل مطلوب.';
+
+  @override
+  String get invalidFullName => 'يرجى إدخال اسم كامل صحيح.';
+
+  @override
+  String get validateFailureFullName => 'فشل التحقق من صحة الاسم الكامل:';
 }

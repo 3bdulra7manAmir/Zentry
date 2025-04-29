@@ -1,4 +1,5 @@
-class AppAssets {
+class AppAssets
+{
   AppAssets._();
 
   static final iconsPNG = _AppIconsPNG._();
@@ -6,7 +7,8 @@ class AppAssets {
 }
 
 ///-----------------------------------------------------------------//
-class _AppIconsPNG {
+class _AppIconsPNG
+{
   _AppIconsPNG._();
 
   ///App Splash
@@ -15,10 +17,8 @@ class _AppIconsPNG {
   ///AppHeader
   final String cloudPNG = "assets/icons/AppHeader/App_Cloud.png";
   final String fullHeaderPNG = "assets/icons/AppHeader/App_Logo_Cloud.png";
-  final String leftWhiteArrowPNG =
-      "assets/icons/AppHeader/Left_White_Arrow.png";
-  final String rightWhiteArrowPNG =
-      "assets/icons/AppHeader/Right_White_Arrow.png";
+  final String leftWhiteArrowPNG = "assets/icons/AppHeader/Left_White_Arrow.png";
+  final String rightWhiteArrowPNG = "assets/icons/AppHeader/Right_White_Arrow.png";
 
   ///App Form
   final String countryPNG = "assets/icons/AppForm/Country.png";
@@ -39,10 +39,8 @@ class _AppIconsPNG {
   final String appleDarkPNG = "assets/icons/Login/Apple_Dark.png";
 
   ///App AppBar
-  final String leftBackArrowBlackPNG =
-      "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
-  final String rightBackArrowBlackPNG =
-      "assets/icons/ForgetPassword/Right_Back_Arrow_Black.png";
+  final String leftBackArrowBlackPNG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
+  final String rightBackArrowBlackPNG = "assets/icons/ForgetPassword/Right_Back_Arrow_Black.png";
 
   ///App Rest Password
   final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";
@@ -58,21 +56,20 @@ class _AppIconsPNG {
   final String unitedStatesFlagPNG = "assets/icons/Countries/United_States.png";
 
   final String egFlagSelectedPNG = "assets/icons/Countries/Egypt_Selected.png";
-  final String saFlagSelectedPNG =
-      "assets/icons/Countries/Saudi_Arabia_Selected.png";
-  final String uaeFlagSelectedPNG =
-      "assets/icons/Countries/United_Arab_Emirates_Selected.png";
-  final String kuwaitFlagSelectedPNG =
-      "assets/icons/Countries/Kuwait_Selected.png";
-  final String moroccoFlagSelectedPNG =
-      "assets/icons/Countries/Morocco_Selected.png";
-  final String syriaFlagSelectedPNG =
-      "assets/icons/Countries/Syrian_Arab_Republic_Selected.png";
-  final String unitedStatesFlagSelectedPNG =
-      "assets/icons/Countries/United_States_Selected.png";
+  final String saFlagSelectedPNG = "assets/icons/Countries/Saudi_Arabia_Selected.png";
+  final String uaeFlagSelectedPNG = "assets/icons/Countries/United_Arab_Emirates_Selected.png";
+  final String kuwaitFlagSelectedPNG = "assets/icons/Countries/Kuwait_Selected.png";
+  final String moroccoFlagSelectedPNG = "assets/icons/Countries/Morocco_Selected.png";
+  final String syriaFlagSelectedPNG = "assets/icons/Countries/Syrian_Arab_Republic_Selected.png";
+  final String unitedStatesFlagSelectedPNG = "assets/icons/Countries/United_States_Selected.png";
+
+  ///APP Register Or SignUp
+  final String femalePNG = "assets/icons/Register_FullName/Female.png";
+  final String malePNG = "assets/icons/Register_FullName/Male.png";
 }
 
 ///-----------------------------------------------------------------//
-class _AppPNGIMGs {
+class _AppPNGIMGs
+{
   _AppPNGIMGs._();
 }

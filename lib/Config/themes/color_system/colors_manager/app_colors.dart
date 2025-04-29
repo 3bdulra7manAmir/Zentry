@@ -17,12 +17,14 @@ class AppColors {
   String _themeMode = 'light'; // Default theme
 
   set themeMode(String mode) {
-    if (mode == 'light' || mode == 'dark') {
+    if (mode == 'light' || mode == 'dark')
+    {
       _themeMode = mode;
     }
   }
 
-  ColorManagerBase get _colors {
+  ColorManagerBase get _colors
+  {
     return _themeMode == 'dark' ? DarkColorScheme() : LightColorScheme();
   }
 }
