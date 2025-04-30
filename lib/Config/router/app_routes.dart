@@ -8,21 +8,8 @@ abstract class AppRoutes {
 
   // APP FORM
   static const kAppFormView = '/kAppFormView';
-
   // APP Login (Auth Tabs) View
   static const kAuthView = '/kAuthView'; // Fixed the route name here
-
-  // APP Login with Phone
-  static const kLoginPhoneView = '/kLoginPhone';
-
-  // APP Login with Email
-  static const kLoginEmailView = '/kLoginEmail';
-
-  // APP SignUp Full Name
-  static const kSignUpFullNameView = '/kSignUpFullName';
-
-  // APP SignUp Phone Number
-  static const kSignUpPhoneNumberView = '/kSignUpPhoneNumber';
 
   // APP Forget Password Phone
   static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
@@ -36,12 +23,7 @@ abstract class AppRoutes {
   // APP Verification Code View
   static const kVerificationCodeView = '/kVerificationCodeView';
 
-  // APP Countries View
-  static const kCountriesView = '/kCountriesView';
+  // APP Verification Code View
+  static const kNotificationsView = '/kNotificationsView';
 
-  // APP Themes View
-  static const kThemesView = '/kThemesListView';
-
-  // APP Test View
-  static const kTestView = '/kTestListView';
 }

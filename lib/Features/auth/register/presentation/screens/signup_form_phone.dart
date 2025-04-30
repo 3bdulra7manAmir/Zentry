@@ -27,7 +27,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final signUpType = ref.watch(signUpTypeProvider);
+    //final signUpType = ref.watch(signUpTypeProvider);
     final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.kAppFormPadding,

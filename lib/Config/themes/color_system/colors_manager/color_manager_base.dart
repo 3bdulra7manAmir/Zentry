@@ -9,7 +9,7 @@ abstract class ColorManagerBase {
   /// 233973
   Color get kVerificationUnderLine;
 
-  /// [Quinary__003082]
+  /// [Quinary__003082_3E6FCF]
   Color get kQuinarySemiBlueText;
   Color get kForgetPasswordUnderLine;
 
@@ -36,44 +36,38 @@ abstract class ColorManagerBase {
 
   /// [Primary_Text__5D5D5D]
   Color get kPrimaryGreyText;
-
-  /// [Nonary_Semi_Grey_Text__717171] //Yours
-  Color get kNonarySemiGreyText;
-
   /// [Secondary__9E9E9E]
   Color get kSecondarySemiGreyText;
-
+  /// [Nonary_Semi_Grey_Text__717171]
+  Color get kNonarySemiGreyText;
   /// [Tertiary__B4B4B4]
   Color get kTertiarySemiGrey;
-
-  /// [Quaternary_SemiBlack__232633]
-  Color get kQuaternarySemiBlackText;
+  /// [Septenary_SemiGrey__2E2E2E]
+  Color get kSeptenarySemiGreyText;
+  /// [Septenary_SemiGrey__B6B6B6]
+  Color get kSemiGreyText;
+  /// [Septenary_SemiGrey__F3F3F3]
+  Color get kSemiGrey;
 
   /// [Senary_TotalBlack__000000]
   Color get kSenaryTotalBlackText;
-
-  /// [Septenary_SemiGrey__2E2E2E]
-  Color get kSeptenarySemiGreyText;
-
-  /// [Octonary_SemiBlack_Text__1F1F1F] //Yours
+  /// [Quaternary_SemiBlack__232633]
+  Color get kQuaternarySemiBlackText;
+  /// [Octonary_SemiBlack_Text__1F1F1F]
   Color get kOctonarySemiBlackText;
+  /// [Dark_kQuaternarySemiBlackText__D7D7D7]
+  Color get kQuaternarySemiBlackTextDark;
 
-  /// [TabBar__FF7D00] //Yours
+  /// [TabBar__FF7D00] //Yellow
   Color get kTabBar;
   Color get kDatePicker;
 
   /// [Dark_Form_Buttons_Borders_Fill__272626]
   Color get kFormButtonsBordersFillDark;
-
   /// [Dark_Background__1B1B1B]
   Color get kPrimaryDark;
-
-  /// [Dark_kQuaternarySemiBlackText__D7D7D7]
-  Color get kQuaternarySemiBlackTextDark;
-
   /// [Dark_Secondary__676767]
   Color get kSecondarySemiGreyTextDark;
-
   /// [Dark_Border__313131]
   Color get kSocialBorderDark;
 }

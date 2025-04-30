@@ -66,6 +66,9 @@ class _AppIconsPNG
   ///APP Register Or SignUp
   final String femalePNG = "assets/icons/Register_FullName/Female.png";
   final String malePNG = "assets/icons/Register_FullName/Male.png";
+
+  ///APP Notifications View
+  final String searchDarkPNG = "assets/icons/Notifications/Search.png";
 }
 
 ///-----------------------------------------------------------------//

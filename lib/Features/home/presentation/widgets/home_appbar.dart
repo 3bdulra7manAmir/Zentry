@@ -1,32 +1,29 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../config/router/app_router.dart';
-import '../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../config/themes/font_system/app_font_weights.dart';
-import '../constants/app_images.dart';
-import '../constants/app_styles.dart';
-import '../helpers/app_providers.dart';
 
-class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
-  const CustomAppBar({
+import '../../../../config/router/app_router.dart';
+import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_styles.dart';
+import '../../../../core/helpers/app_providers.dart';
+
+
+class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget {
+  const CustomHomeAppBar({
     super.key,
     this.barLeading,
     this.barTitle = '',
-    this.titleStyle,
     this.barActions,
-    this.barActionsPadding,
   });
 
   final Widget? barLeading;
   final String barTitle;
-  final TextStyle? titleStyle;
   final List<Widget>? barActions;
-  final EdgeInsetsGeometry? barActionsPadding;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
     final arrow =
         provider.localeState.selectedLanguageIndex == 0
@@ -42,13 +39,14 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
         child: barLeading ?? Image.asset(arrow),
       ),
       leadingWidth: 65.w,
-      title: Text(barTitle, style: titleStyle ?? AppStyles.textStyle14(
+      title: Text(
+        barTitle,
+        style: AppStyles.textStyle14(
           fontWeight: AppFontWeights.semiBoldWeight,
           textColor: AppColors.color.kSenaryTotalBlackText,
         ),
       ),
       actions: barActions,
-      actionsPadding: barActionsPadding,
     );
   }
 

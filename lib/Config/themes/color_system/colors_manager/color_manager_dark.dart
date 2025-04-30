@@ -24,6 +24,11 @@ class DarkColorScheme extends ColorManagerBase {
   Color get kForgetPasswordUnderLine => const Color(0xff1B1B1B);
 
   @override
+  Color get kSemiGreyText => const Color(0xffB6B6B6);
+  @override
+  Color get kSemiGrey => const Color(0xffF3F3F3);
+
+  @override
   Color get kTertiaryWhiteText => const Color(0xffF4F4F4);
 
   @override //REVERSED

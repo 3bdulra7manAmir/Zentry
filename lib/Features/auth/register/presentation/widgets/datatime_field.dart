@@ -8,11 +8,13 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../controllers/date_provider.dart';
 
-class DataTimePicker extends ConsumerWidget {
+class DataTimePicker extends ConsumerWidget
+{
   const DataTimePicker({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     final selectedDate = ref.watch(selectedDateProvider);
 
     final displayDate = selectedDate != null

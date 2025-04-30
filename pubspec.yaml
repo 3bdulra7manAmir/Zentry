@@ -22,6 +22,9 @@ dependencies:
   # Routing
   go_router: ^14.8.1
 
+  # Cached NetWork IMG
+  cached_network_image: ^3.4.1
+
   # Device Preview (for responsive testing)
   device_preview: ^1.2.0
 
@@ -116,6 +119,7 @@ flutter:
     - assets/icons/Countries/
     - assets/icons/Register/
     - assets/icons/Register_FullName/
+    - assets/icons/Notifications/
     - assets/images/
 
 # Flutter Intl Configuration

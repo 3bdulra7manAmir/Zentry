@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:test_app/features/auth/register/presentation/screens/signup_form_fullname.dart';
+import 'package:test_app/features/notifications/presentation/screens/notifications_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
-import '../../features/auth/login/presentation/widgets/login_form_email.dart';
-import '../../features/auth/login/presentation/widgets/login_form_phone.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/splash/presentation/screens/splash_view.dart';
@@ -17,7 +15,7 @@ abstract class AppRouter
   AppRouter._();
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kAuthView,
+    initialLocation: AppRoutes.kNotificationsView,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
     routes:
     [
@@ -35,24 +33,11 @@ abstract class AppRouter
         builder: (context, state) => const FormView(),
       ),
 
-      // App Login or SignUp View
+      // App Login or SignUp Form View
       GoRoute(
         path: AppRoutes.kAuthView,
         name: AppRoutes.kAuthView,
         builder: (context, state) => const AuthView(),
-      ),
-
-      // App Login With Phone View
-      GoRoute(
-        path: AppRoutes.kLoginPhoneView,
-        name: AppRoutes.kLoginPhoneView,
-        builder: (context, state) => LoginFormWithPhone(),
-      ),
-      // App Login With Email View
-      GoRoute(
-        path: AppRoutes.kLoginEmailView,
-        name: AppRoutes.kLoginEmailView,
-        builder: (context, state) => LoginFormWithEmail(),
       ),
 
       // App Forget Password With Phone View
@@ -83,21 +68,14 @@ abstract class AppRouter
         builder: (context, state) => const VerificationCodeView(),
       ),
 
-      // App SignUp Phone Number
+      // App Notifications View
       GoRoute(
-        path: AppRoutes.kSignUpFullNameView,
-        name: AppRoutes.kSignUpFullNameView,
-        builder: (context, state) =>  SignUpFormFullName(),
+        path: AppRoutes.kNotificationsView,
+        name: AppRoutes.kNotificationsView,
+        builder: (context, state) => const NotificationsView(),
       ),
 
-      // App SignUp Phone Number
-      GoRoute(
-        path: AppRoutes.kSignUpPhoneNumberView,
-        name: AppRoutes.kSignUpPhoneNumberView,
-        builder: (context, state) =>  SignUpFormFullName(),
-      ),
 
-      // App Countries View
     ],
   );
 }
