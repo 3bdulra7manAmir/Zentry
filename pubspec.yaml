@@ -120,6 +120,7 @@ flutter:
     - assets/icons/Register/
     - assets/icons/Register_FullName/
     - assets/icons/Notifications/
+    - assets/icons/Home/
     - assets/images/
 
 # Flutter Intl Configuration

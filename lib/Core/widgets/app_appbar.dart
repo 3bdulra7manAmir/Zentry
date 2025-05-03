@@ -2,27 +2,24 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/router/app_router.dart';
-import '../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../config/themes/font_system/app_font_weights.dart';
 import '../constants/app_images.dart';
-import '../constants/app_styles.dart';
 import '../helpers/app_providers.dart';
 
 class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
     this.barLeading,
-    this.barTitle = '',
-    this.titleStyle,
+    this.barTitle,
     this.barActions,
     this.barActionsPadding,
+    this.barLeadingWidth,
   });
 
   final Widget? barLeading;
-  final String barTitle;
-  final TextStyle? titleStyle;
+  final Widget? barTitle;
   final List<Widget>? barActions;
   final EdgeInsetsGeometry? barActionsPadding;
+  final double? barLeadingWidth;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -37,21 +34,13 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
                 ? AppAssets.iconsPNG.leftWhiteArrowPNG
                 : AppAssets.iconsPNG.leftBackArrowBlackPNG);
     return AppBar(
-      leading: GestureDetector(
-        onTap: () => AppRouter.router.pop(),
-        child: barLeading ?? Image.asset(arrow),
-      ),
-      leadingWidth: 65.w,
-      title: Text(barTitle, style: titleStyle ?? AppStyles.textStyle14(
-          fontWeight: AppFontWeights.semiBoldWeight,
-          textColor: AppColors.color.kSenaryTotalBlackText,
-        ),
-      ),
+      leading: GestureDetector(onTap: () => AppRouter.router.pop(), child: barLeading ?? Image.asset(arrow),),
+      leadingWidth: barLeadingWidth ?? 65.w,
+      title: barTitle,
       actions: barActions,
       actionsPadding: barActionsPadding,
     );
   }
-
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

@@ -82,33 +82,38 @@ class FriendRequestCard extends StatelessWidget
               children:
               [
                 AppSizes.size12.horizontalSpace,
-                Row(
-                  children:
-                  [
-                    CustomButton(
-                      buttonText: "Accept",
-                      buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondaryWhite),
-                      buttonWidth: 114.w,
-                      buttonHeight: 33.h,
-                      buttonBorderRadius: AppBorders.buttonBorder5,
-                      buttonBackgroundColor: AppColors.color.kQuinarySemiBlueText,
-                    ),
-                    AppSizes.size8.horizontalSpace,
-                    CustomButton(
-                      buttonText: "Rejection",
-                      buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondarySemiGreyTextDark),
-                      buttonWidth: 114.w,
-                      buttonHeight: 33.h,
-                      buttonBorderRadius: AppBorders.buttonBorder5,
-                      buttonBackgroundColor: AppColors.color.kSemiGrey,
-                    ),
-                  ],
+                Expanded(
+                  flex: 2,
+                  child: CustomButton(
+                    buttonText: "Accept",
+                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondaryWhite),
+                    buttonWidth: 114.w,
+                    buttonHeight: 33.h,
+                    buttonBorderRadius: AppBorders.buttonBorder5,
+                    buttonBackgroundColor: AppColors.color.kQuinarySemiBlueText,
+                  ),
                 ),
-                const Spacer(),
-                Text("1 Day Ago", style: AppStyles.textStyle12(
-                  fontWeight: AppFontWeights.semiBoldWeight,
-                  textColor: AppColors.color.kSemiGreyText,
-                ),),
+                AppSizes.size8.horizontalSpace,
+                Expanded(
+                  flex: 2,
+                  child: CustomButton(
+                    buttonText: "Reject",
+                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondarySemiGreyTextDark),
+                    buttonWidth: 114.w,
+                    buttonHeight: 33.h,
+                    buttonBorderRadius: AppBorders.buttonBorder5,
+                    buttonBackgroundColor: AppColors.color.kSemiGrey,
+                  ),
+                ),
+                AppSizes.size35.horizontalSpace,
+                Expanded(
+                  flex: 1,
+                  child: Text("1 Day Ago", style: AppStyles.textStyle12(
+                    fontWeight: AppFontWeights.semiBoldWeight,
+                    textColor: AppColors.color.kSemiGreyText,
+                  ),),
+                ),
+                AppSizes.size10.horizontalSpace
               ],
             ),
           ],

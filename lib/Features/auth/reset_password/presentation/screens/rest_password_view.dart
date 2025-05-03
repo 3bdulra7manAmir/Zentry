@@ -28,7 +28,10 @@ class RestPasswordView extends ConsumerWidget {
     final GlobalKey<FormState> resetPasswordFormKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: CustomAppBar(
-        barTitle: AppLocalizations.of(context).resetPassword,
+        barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
+          fontWeight: AppFontWeights.semiBoldWeight,
+          textColor: AppColors.color.kSenaryTotalBlackText,
+        ),),
       ),
       body: Form(
         key: resetPasswordFormKey,

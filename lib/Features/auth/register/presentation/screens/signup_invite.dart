@@ -27,14 +27,14 @@ class SignUpFormInvite extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final provider = AppProvidersProvider(ref, context);
-    final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
+    final GlobalKey<FormState> inviteFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Form(
-          key: loginEmailFormKey,
+          key: inviteFormKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -118,22 +118,10 @@ class SignUpFormInvite extends ConsumerWidget
                 buttonOnPressed: () async
                 {
                   // print("\nobjectSTart1\n");
-                  // if (signUpEmailFormKey.currentState!.validate())
-                  // {
-                  //   print("\nobjectSTart2\n");
-                  //   final loginInput = (email: emailController.text.trim(), password: passwordController.text.trim(),);
-                  //   final result = await ref.read(loginCheckProvider(loginInput).future);
-                  //   if (result)
-                  //   {
-                  //     print("\nobjectRESUlt\n");
-                  //     AppRouter.router.pushNamed(AppRoutes.kSplashView);
-                  //   }
-                  //   else
-                  //   {
-                  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).welcomeBack)),);
-                  //     print("\nobjectNothoing\n");
-                  //   }
-                  // }
+                  if (inviteFormKey.currentState!.validate())
+                  {
+
+                  }
                 },
               ),
             ],

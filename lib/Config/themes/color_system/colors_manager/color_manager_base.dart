@@ -48,6 +48,8 @@ abstract class ColorManagerBase {
   Color get kSemiGreyText;
   /// [Septenary_SemiGrey__F3F3F3]
   Color get kSemiGrey;
+  /// [Septenary_SemiGreyAgain__9A9A9A]
+  Color get kSemiGreyAgain;
 
   /// [Senary_TotalBlack__000000]
   Color get kSenaryTotalBlackText;
@@ -61,6 +63,9 @@ abstract class ColorManagerBase {
   /// [TabBar__FF7D00] //Yellow
   Color get kTabBar;
   Color get kDatePicker;
+
+  /// [Product_Item_BG_Color]
+  Color get kProductItemBackground;
 
   /// [Dark_Form_Buttons_Borders_Fill__272626]
   Color get kFormButtonsBordersFillDark;

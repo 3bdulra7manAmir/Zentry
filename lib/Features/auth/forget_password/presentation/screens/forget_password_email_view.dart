@@ -14,17 +14,22 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 //import '../../../widgets/numeric_keyboard.dart';
 
-class ForgetPasswordWithEmailView extends StatelessWidget {
+class ForgetPasswordWithEmailView extends StatelessWidget
+{
   ForgetPasswordWithEmailView({super.key});
 
   final TextEditingController emailController = TextEditingController();
   final GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Scaffold(
       appBar: CustomAppBar(
-        barTitle: AppLocalizations.of(context).resetPassword,
+        barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
+          fontWeight: AppFontWeights.semiBoldWeight,
+          textColor: AppColors.color.kSenaryTotalBlackText,
+        ),),
       ),
       body: SingleChildScrollView(
         child: Form(

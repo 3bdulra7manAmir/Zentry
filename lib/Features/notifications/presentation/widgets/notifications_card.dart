@@ -69,17 +69,19 @@ class DefaultNotificationCard extends StatelessWidget
                       ),
                       AppSizes.size8.verticalSpace,
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:
                         [
                           Text("iPhone 14 pro max", style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               textColor: AppColors.color.kSemiGreyText,
-                            ),),
+                          ),),
+                          const Spacer(),
                           Text("1 Day Ago", style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               textColor: AppColors.color.kSemiGreyText,
-                            ),),
+                          ),),
+                          AppSizes.size10.horizontalSpace
                         ],
                       ),
                     ],

@@ -20,10 +20,7 @@ class NotificationsView extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(
-        barTitle: "Notification", titleStyle: AppStyles.textStyle18(
-          textColor: AppColors.color.kOctonarySemiBlackText,
-          fontWeight: AppFontWeights.regularWeight
-        ),
+        barTitle: Text("Notification", style: AppStyles.textStyle18(textColor: AppColors.color.kOctonarySemiBlackText, fontWeight: AppFontWeights.regularWeight,),),
         barActions: [Image.asset(AppAssets.iconsPNG.searchDarkPNG)],
         barActionsPadding: AppPadding.kSearchIconPadding,
       ),
@@ -32,8 +29,9 @@ class NotificationsView extends StatelessWidget
         children:
         [
           AppSizes.size10.verticalSpace,
-          //const FriendRequestCard(),
-          //const DefaultNotificationCard(),
+          const FriendRequestCard(),
+          AppSizes.size14.verticalSpace,
+          const DefaultNotificationCard(),
           // AppListviewBuilder(
           //   itemBuilder: itemBuilder,
           //   itemCount: itemCount,

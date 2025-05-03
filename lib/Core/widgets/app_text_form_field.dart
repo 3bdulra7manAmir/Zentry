@@ -4,7 +4,7 @@ import '../constants/app_styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.fieldValidator,
+    this.fieldValidator,
     this.fieldController,
     required this.fieldKeyboardType,
     this.fieldPrefixIcon,
@@ -15,6 +15,10 @@ class CustomTextFormField extends StatelessWidget {
     this.fieldObscureText,
     this.fieldIsEnabled,
     this.fieldReadOnly,
+    this.fieldFillColor,
+    this.fieldFocusedColor,
+    this.fieldBorderRadius,
+    this.fieldSuffixStyle,
   });
 
   final Widget? fieldPrefixIcon;
@@ -27,9 +31,14 @@ class CustomTextFormField extends StatelessWidget {
   final bool? fieldObscureText;
   final bool? fieldIsEnabled;
   final bool? fieldReadOnly;
+  final Color? fieldFillColor;
+  final Color? fieldFocusedColor;
+  final BorderRadius? fieldBorderRadius;
+  final TextStyle? fieldSuffixStyle;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return TextFormField(
       enabled: fieldIsEnabled ?? true,
       keyboardType: fieldKeyboardType,
@@ -42,6 +51,10 @@ class CustomTextFormField extends StatelessWidget {
         hintStyle: fieldhintStyle ?? AppStyles.textStyle12(),
         prefixIcon: fieldPrefixIcon,
         suffixIcon: fieldsuffixIcon,
+        suffixStyle: fieldSuffixStyle,
+        fillColor: fieldFillColor,
+        focusColor: fieldFocusedColor,
+        border: fieldBorderRadius != null ? OutlineInputBorder(borderRadius: fieldBorderRadius!,): null,
       ),
     );
   }

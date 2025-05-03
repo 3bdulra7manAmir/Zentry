@@ -21,6 +21,9 @@ class LightColorScheme extends ColorManagerBase {
   Color get kForgetPasswordUnderLine => const Color(0xff3E6FCF);
 
   @override
+  Color get kProductItemBackground => const Color(0xff87D1E5);
+
+  @override
   Color get kSecondaryWhite => const Color(0xffFFFFFF);
 
   @override
@@ -43,6 +46,8 @@ class LightColorScheme extends ColorManagerBase {
 
   @override
   Color get kNonarySemiGreyText => const Color(0xff717171);
+  @override //REVERSED
+  Color get kSemiGreyAgain => const Color(0xff9A9A9A);
 
   @override
   Color get kSecondarySemiGreyText => const Color(0xff9E9E9E);

@@ -27,14 +27,14 @@ class SignUpFormEmail extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
+    final GlobalKey<FormState> signUpEmailFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.kAppFormPadding,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
         child: Form(
-          key: loginEmailFormKey,
+          key: signUpEmailFormKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -83,7 +83,7 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
-                fieldText: AppLocalizations.of(context).password,
+                fieldText: "**************",
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState,
                   child: Image.asset(
@@ -110,7 +110,16 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
                 fieldText: "Ex: #Alsuisy123",
-                fieldsuffixIcon: Text("Paste", style: AppStyles.textStyle12(), ),
+                fieldsuffixIcon: Padding( //HERE //FIX //Temp
+                  padding: const EdgeInsets.only(right: 15),
+                  child: SizedBox(
+                    width: 60,
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text("Paste", style: AppStyles.textStyle12(),),
+                    ),
+                  ),
+                ),
               ),
 
               AppSizes.size32.verticalSpace,
@@ -120,22 +129,11 @@ class SignUpFormEmail extends ConsumerWidget
                 buttonOnPressed: () async
                 {
                   // print("\nobjectSTart1\n");
-                  // if (signUpEmailFormKey.currentState!.validate())
-                  // {
-                  //   print("\nobjectSTart2\n");
-                  //   final loginInput = (email: emailController.text.trim(), password: passwordController.text.trim(),);
-                  //   final result = await ref.read(loginCheckProvider(loginInput).future);
-                  //   if (result)
-                  //   {
-                  //     print("\nobjectRESUlt\n");
-                  //     AppRouter.router.pushNamed(AppRoutes.kSplashView);
-                  //   }
-                  //   else
-                  //   {
-                  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).welcomeBack)),);
-                  //     print("\nobjectNothoing\n");
-                  //   }
-                  // }
+                  if (signUpEmailFormKey.currentState!.validate())
+                  {
+                    
+                  }
+                  
                 },
               ),
             ],
