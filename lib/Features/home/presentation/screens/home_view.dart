@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/features/home/presentation/widgets/products_item.dart';
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widgets/home_appbar.dart';
+import '../widgets/products_item.dart';
 
 class HomeView extends StatelessWidget
 {
@@ -29,7 +29,7 @@ class HomeView extends StatelessWidget
               itemBuilder: (context, index) => const ProductsItem(),
               separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,
               itemCount: 7,
-              ),
+            ),
           ),
         ],
       ),

@@ -86,6 +86,15 @@ class _AppIconsPNG
   final String carFrog = "assets/icons/Search_Result/Car_Frog.png";
   final String locationPNG = "assets/icons/Notifications/Location.png";
 
+  //App Search Related Results
+  final String catPNG = "assets/icons/Search_Related_Results/Cat.png";
+  final String wrongPNG = "assets/icons/Search_Related_Results/Wrong.png";
+
+  //App Home View
+  final String robotBodySUIIZ = "assets/icons/Home/Robot_Boy_SUIIZ.png";
+  final String searchWithBg = "assets/icons/Home/Search_With_Bg.png";
+  final String messagesWithBg = "assets/icons/Home/Messages_With_Bg.png";
+
 }
 
 ///-----------------------------------------------------------------//

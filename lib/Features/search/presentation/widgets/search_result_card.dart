@@ -20,7 +20,6 @@ class SearchResultCard extends StatelessWidget
     return Container(
       width: 359.w,
       height: 140.h,
-      margin: AppPadding.kSearchResultsCardPadding,
       decoration: BoxDecoration(
         borderRadius: AppBorders.buttonBorder5,
         //color: Colors.red

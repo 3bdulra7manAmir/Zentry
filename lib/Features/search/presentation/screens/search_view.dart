@@ -5,7 +5,9 @@ import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
+import '../widgets/search_related_result_card.dart';
 
 class SearchView extends StatelessWidget
 {
@@ -18,23 +20,32 @@ class SearchView extends StatelessWidget
       appBar: const CustomSearchAppBar(locationIcon: true,),
       body:
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-                AppSizes.size27.verticalSpace,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:
-                  [
-                    Text(AppLocalizations.of(context).products, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSenaryTotalBlackText),),
-                    Text(AppLocalizations.of(context).services, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSemiGreyAgain),),
-                  ],
-                ),
-                Text(AppLocalizations.of(context).services, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, textColor: AppColors.color.kSemiGreyAgain),),
-                AppSizes.size14.verticalSpace,
-              ],
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:
+                [
+                  AppSizes.size10.verticalSpace,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:
+                    [
+                      Text(AppLocalizations.of(context).categories, style: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAgainTextDark),),
+                      Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kForgetPasswordUnderLine),),
+                    ],
+                  ),
+                  AppSizes.size3.verticalSpace,
+                  Text(AppLocalizations.of(context).relatedResults, style: AppStyles.textStyle12(textColor: AppColors.color.kSecondarySemiGreyText),),
+                  AppSizes.size16.verticalSpace,
+                  //const SearchRelatedResultCard(),
+                  AppListviewBuilder(
+                    itemBuilder: (context, index) => const SearchRelatedResultCard(),
+                    itemCount: 10,
+                    separatorBuilder: (context, index) => AppSizes.size15.verticalSpace,
+                  ),
+                ],
+              ),
             ),
           ),
       );

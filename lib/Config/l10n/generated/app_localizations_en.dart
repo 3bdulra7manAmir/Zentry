@@ -379,4 +379,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bmw320Model2019 => 'Bmw 320 model 2019';
+
+  @override
+  String get categories => 'Categories';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get relatedResults => 'Related results';
+
+  @override
+  String get pets => 'Pets';
 }

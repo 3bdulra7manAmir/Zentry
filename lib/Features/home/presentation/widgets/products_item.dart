@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/constants/app_sizes.dart';
-
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
+import '../../../../core/constants/app_sizes.dart';
 
 class ProductsItem extends StatelessWidget
 {

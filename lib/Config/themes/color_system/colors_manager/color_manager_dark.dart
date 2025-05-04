@@ -91,4 +91,7 @@ class DarkColorScheme extends ColorManagerBase {
 
   @override
   Color get kQuaternarySemiBlackTextDark => const Color(0xffD7D7D7);
+
+  @override //REVERSED
+  Color get kAgainTextDark => const Color(0xffD7D7D7);
 }

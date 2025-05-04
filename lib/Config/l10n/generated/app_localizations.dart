@@ -838,6 +838,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Bmw 320 model 2019'**
   String get bmw320Model2019;
+
+  /// No description provided for @categories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get categories;
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// No description provided for @relatedResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Related results'**
+  String get relatedResults;
+
+  /// No description provided for @pets.
+  ///
+  /// In en, this message translates to:
+  /// **'Pets'**
+  String get pets;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

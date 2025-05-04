@@ -379,4 +379,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get bmw320Model2019 => 'بي إم دبليو 320 موديل 2019';
+
+  @override
+  String get categories => 'الفئات';
+
+  @override
+  String get clear => 'مسح';
+
+  @override
+  String get relatedResults => 'نتائج ذات صلة';
+
+  @override
+  String get pets => 'الحيوانات الأليفة';
 }

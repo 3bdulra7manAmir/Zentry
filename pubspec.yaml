@@ -121,6 +121,7 @@ flutter:
     - assets/icons/Register_FullName/
     - assets/icons/Notifications/
     - assets/icons/Search_Result/
+    - assets/icons/Search_Related_Results/
     - assets/icons/Home/
     - assets/images/
 

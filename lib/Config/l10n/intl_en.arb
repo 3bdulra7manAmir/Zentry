@@ -147,7 +147,12 @@
   "k800000": "800,000",
   "negotiation": "Negotiation",
   "cairoEgypt": "Cairo, Egypt",
-  "bmw320Model2019" : "Bmw 320 model 2019"
+  "bmw320Model2019" : "Bmw 320 model 2019",
+  
+  "categories": "Categories",
+  "clear": "Clear",
+  "relatedResults": "Related results",
+  "pets": "Pets"
 
   
   

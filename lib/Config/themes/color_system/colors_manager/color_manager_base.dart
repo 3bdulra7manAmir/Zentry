@@ -59,6 +59,8 @@ abstract class ColorManagerBase {
   Color get kOctonarySemiBlackText;
   /// [Dark_kQuaternarySemiBlackText__D7D7D7]
   Color get kQuaternarySemiBlackTextDark;
+  /// [Dark_kAgainBlackText__121212]
+  Color get kAgainTextDark;
 
   /// [TabBar__FF7D00] //Yellow
   Color get kTabBar;

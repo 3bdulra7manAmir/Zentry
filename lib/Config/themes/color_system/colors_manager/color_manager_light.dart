@@ -59,6 +59,9 @@ class LightColorScheme extends ColorManagerBase {
   Color get kQuaternarySemiBlackText => const Color(0xff232633);
 
   @override
+  Color get kAgainTextDark => const Color(0xff121212);
+
+  @override
   Color get kSenaryTotalBlackText => const Color(0xff000000);
 
   @override

@@ -289,4 +289,9 @@ abstract class AppStrings {
   static const k800000 = "800,000";
   static const negotiation = "Negotiation";
   static const cairoEgypt = "Cairo,Egypt";
+
+  static const categories = "categories";
+  static const clear = "Clear";
+  static const relatedResults = "Related results";
+  static const pets = "Pets";
 }
