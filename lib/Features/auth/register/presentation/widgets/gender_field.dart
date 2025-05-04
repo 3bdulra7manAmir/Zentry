@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/config/l10n/generated/app_localizations.dart';
+import 'package:test_app/core/constants/app_images.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -17,14 +19,14 @@ class GenderPicker extends ConsumerWidget
     final selectedGender = ref.watch(selectedGenderProvider);
 
     final displayGender = (selectedGender?.isNotEmpty ?? false)
-        ? (selectedGender == "male" ? "Male" : "Female")
-        : "Male";
+        ? (selectedGender == AppLocalizations.of(context).male ? AppLocalizations.of(context).male : AppLocalizations.of(context).female)
+        : AppLocalizations.of(context).male;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Gender",
+          AppLocalizations.of(context).gender,
           style: AppStyles.textStyle12(
             textColor: AppColors.color.kSeptenarySemiGreyText,
           ),
@@ -50,7 +52,7 @@ class GenderPicker extends ConsumerWidget
                   ),
                 ),
                 const Spacer(),
-                Image.asset("assets/icons/Register/down_Arrow.png"),
+                Image.asset(AppAssets.iconsPNG.downArrowPNG),
                 AppSizes.size20.horizontalSpace,
               ],
             ),

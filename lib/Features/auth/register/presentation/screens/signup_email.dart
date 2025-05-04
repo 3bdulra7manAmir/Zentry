@@ -7,6 +7,7 @@ import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/email_valid.dart';
@@ -96,7 +97,7 @@ class SignUpFormEmail extends ConsumerWidget
 
               AppSizes.size24.verticalSpace,
 
-              Text("Invitation Code", style: AppStyles.textStyle13(
+              Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                 fontWeight: AppFontWeights.mediumWeight,
                 textColor: AppColors.color.kQuinarySemiBlueText,
                 ),
@@ -109,14 +110,14 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
-                fieldText: "Ex: #Alsuisy123",
+                fieldText: AppLocalizations.of(context).invitationCodeExample,
                 fieldsuffixIcon: Padding( //HERE //FIX //Temp
                   padding: const EdgeInsets.only(right: 15),
                   child: SizedBox(
                     width: 60,
                     child: Align(
                       alignment: Alignment.centerRight,
-                      child: Text("Paste", style: AppStyles.textStyle12(),),
+                      child: Text(AppLocalizations.of(context).paste, style: AppStyles.textStyle12(),),
                     ),
                   ),
                 ),
@@ -128,7 +129,6 @@ class SignUpFormEmail extends ConsumerWidget
                 buttonText: AppLocalizations.of(context).signUp,
                 buttonOnPressed: () async
                 {
-                  // print("\nobjectSTart1\n");
                   if (signUpEmailFormKey.currentState!.validate())
                   {
                     

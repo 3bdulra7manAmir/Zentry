@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart'; // Make sure this is imported
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/constants/app_styles.dart';
-import 'package:test_app/core/widgets/app_button.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/widgets/app_button.dart';
 import '../controllers/date_provider.dart';
 
 void showDateTimeBottomSheet(BuildContext context)
@@ -51,13 +53,14 @@ void showDateTimeBottomSheet(BuildContext context)
                       ),
                     ),
                     AppSizes.size35.verticalSpace,
-                    Text('Select Birth date', style: AppStyles.textStyle12(textColor: AppColors.color.kSeptenarySemiGreyText,),),
+                    Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(textColor: AppColors.color.kSeptenarySemiGreyText,),),
                     AppSizes.size35.verticalSpace,
                     Row(
-                      children: [
-                        Expanded(child: Center(child: Text('Year', style: AppStyles.textStyle12()))),
-                        Expanded(child: Center(child: Text('Month', style: AppStyles.textStyle12()))),
-                        Expanded(child: Center(child: Text('Day', style: AppStyles.textStyle12()))),
+                      children:
+                      [
+                        Expanded(child: Center(child: Text(AppLocalizations.of(context).year, style: AppStyles.textStyle12()))),
+                        Expanded(child: Center(child: Text(AppLocalizations.of(context).month, style: AppStyles.textStyle12()))),
+                        Expanded(child: Center(child: Text(AppLocalizations.of(context).day, style: AppStyles.textStyle12()))),
                       ],
                     ),
                     AppSizes.size16.verticalSpace,
@@ -116,13 +119,13 @@ void showDateTimeBottomSheet(BuildContext context)
                     ),
                     AppSizes.size16.verticalSpace,
                     CustomButton(
-                      buttonText: "Confirm",
+                      buttonText: AppLocalizations.of(context).confirm,
                       buttonHeight: 40.h,
                       buttonWidth: 250.h,
                       buttonOnPressed: () {
                         final pickedDate = DateTime(selectedYear, selectedMonth, selectedDay);
                         ref.read(selectedDateProvider.notifier).updateDate(pickedDate);
-                        Navigator.pop(context);
+                        AppRouter.router.pop();
                       },
                     ),
                     AppSizes.size16.verticalSpace,

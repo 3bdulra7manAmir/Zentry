@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../controllers/date_provider.dart';
@@ -19,13 +20,13 @@ class DataTimePicker extends ConsumerWidget
 
     final displayDate = selectedDate != null
         ? "${selectedDate.year} / ${selectedDate.month.toString().padLeft(2, '0')} / ${selectedDate.day.toString().padLeft(2, '0')}"
-        : "Select Date";
+        : AppLocalizations.of(context).selectDate;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Date",
+          AppLocalizations.of(context).date,
           style: AppStyles.textStyle12(
             textColor: AppColors.color.kSeptenarySemiGreyText,
           ),
@@ -48,7 +49,7 @@ class DataTimePicker extends ConsumerWidget
                 ),
               ),
               const Spacer(),
-              Image.asset("assets/icons/Register/down_Arrow.png"),
+              Image.asset(AppAssets.iconsPNG.downArrowPNG),
               AppSizes.size20.horizontalSpace,
             ],
           ),

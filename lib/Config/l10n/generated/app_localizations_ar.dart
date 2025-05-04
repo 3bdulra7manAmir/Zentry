@@ -274,4 +274,109 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get validateFailureFullName => 'فشل التحقق من صحة الاسم الكامل:';
+
+  @override
+  String get invitationCode => 'رمز الدعوة';
+
+  @override
+  String get invitationCodeExample => 'مثال: #Alsuisy123';
+
+  @override
+  String get paste => 'لصق';
+
+  @override
+  String get exElSuisy => 'مثال السويّسي';
+
+  @override
+  String get selectDate => 'اختر التاريخ';
+
+  @override
+  String get selectBirthDate => 'اختر تاريخ الميلاد';
+
+  @override
+  String get year => 'السنة';
+
+  @override
+  String get month => 'الشهر';
+
+  @override
+  String get day => 'اليوم';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get notification => 'الإشعارات';
+
+  @override
+  String get adham => 'أدهم';
+
+  @override
+  String get sentYouAnInvitationToJoin => 'أرسل لك دعوة للانضمام';
+
+  @override
+  String get yourContacts => 'جهات اتصالك';
+
+  @override
+  String get accept => 'قبول';
+
+  @override
+  String get reject => 'رفض';
+
+  @override
+  String get dayAgo1 => 'منذ يوم';
+
+  @override
+  String get products => 'المنتجات';
+
+  @override
+  String get services => 'الخدمات';
+
+  @override
+  String get posts => 'المنشورات';
+
+  @override
+  String get reels => 'ريلز';
+
+  @override
+  String get users => 'المستخدمين';
+
+  @override
+  String get pages => 'الصفحات';
+
+  @override
+  String get groups => 'المجموعات';
+
+  @override
+  String get threeHundred => '٣,٠٠٠,٠٠٠';
+
+  @override
+  String get le => 'ج.م';
+
+  @override
+  String get cash => 'نقدًا';
+
+  @override
+  String get audiRs7Quattro => 'أودي Rs7 كواترو';
+
+  @override
+  String get k5k10 => '5 آلاف - 10 آلاف';
+
+  @override
+  String get k2023 => '٢٠٢٣';
+
+  @override
+  String get used => 'مستعمل';
+
+  @override
+  String get k800000 => '٨٠٠,٠٠٠';
+
+  @override
+  String get negotiation => 'قابل للتفاوض';
+
+  @override
+  String get cairoEgypt => 'القاهرة، مصر';
+
+  @override
+  String get bmw320Model2019 => 'بي إم دبليو 320 موديل 2019';
 }

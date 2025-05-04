@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/constants/app_images.dart';
-import 'package:test_app/core/constants/app_padding.dart';
-import 'package:test_app/core/constants/app_styles.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_styles.dart';
 import '../controllers/gender_provider.dart';
 
 void showGenderPickerBottomSheet(BuildContext context) {
@@ -41,8 +42,8 @@ void showGenderPickerBottomSheet(BuildContext context) {
                       children: [
                         _GenderOption(
                           image: AppAssets.iconsPNG.femalePNG,
-                          label: 'Female',
-                          value: 'female',
+                          label: AppLocalizations.of(context).female,
+                          value: AppLocalizations.of(context).female,
                           groupValue: selectedGender,
                           onChanged: (value) {
                             setState(() => selectedGender = value);
@@ -53,8 +54,8 @@ void showGenderPickerBottomSheet(BuildContext context) {
                         AppSizes.size10.verticalSpace,
                         _GenderOption(
                           image: AppAssets.iconsPNG.malePNG,
-                          label: 'Male',
-                          value: 'male',
+                          label: AppLocalizations.of(context).male,
+                          value: AppLocalizations.of(context).male,
                           groupValue: selectedGender,
                           onChanged: (value) {
                             setState(() => selectedGender = value);

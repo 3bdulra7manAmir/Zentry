@@ -246,4 +246,47 @@ abstract class AppStrings {
   static const fullNameIsRequired = "Full name is required.";
   static const invalidFullName = "Please enter a valid full name.";
   static const validateFailureFullName = "Validation failed for full name:";
+
+  //App SignUp Email
+  static const invitationCode = "Invitation Code";
+  static const invitationCodeExample = "Ex: #Alsuisy123";
+  static const paste = "Paste";
+  static const exElSuisy = "Ex el suisy";
+  static const selectDate = "Select Date";
+  static const selectBirthDate = "Select Birth date";
+  static const year = "Year";
+  static const month = "Month";
+  static const day = "Day";
+  static const confirm = "Confirm";
+
+  //App Notification
+  static const notification = "Notification";
+  static const adham = "Adham";
+  static const sentYouAnInvitationToJoin = "Sent you an invitation to join";
+  static const yourContacts = "your contacts";
+  static const accept = "Accept";
+  static const reject = "Reject";
+  static const dayAgo1 = "1 Day Ago";
+
+  static const products = "Products";
+  static const services = "Services";
+  static const posts = "Posts";
+  static const reels = "Reels";
+  static const users = "users";
+  static const pages = "Pages";
+  static const groups = "Groups";
+
+  static const threeHundred = "3,000,000";
+  static const le = "L.E";
+  static const cash = "Cash";
+
+  static const audiRs7Quattro = "Audi Rs7 Quattro";
+  static const bmw320Model2019 = "Bmw 320 model 2019";
+  static const k5k10 = "5k-10k";
+  static const k2023 = "2023";
+  static const used = "Used";
+
+  static const k800000 = "800,000";
+  static const negotiation = "Negotiation";
+  static const cairoEgypt = "Cairo,Egypt";
 }

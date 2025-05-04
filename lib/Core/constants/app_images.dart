@@ -66,9 +66,26 @@ class _AppIconsPNG
   ///APP Register Or SignUp
   final String femalePNG = "assets/icons/Register_FullName/Female.png";
   final String malePNG = "assets/icons/Register_FullName/Male.png";
+  final String downArrowPNG = "assets/icons/Register/down_Arrow.png";
+
 
   ///APP Notifications View
   final String searchDarkPNG = "assets/icons/Notifications/Search.png";
+  final String adhamPNG = "assets/icons/Notifications/Adham.png";
+  final String horzintal3BlackDots = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
+
+  final String carAudiPNG = "assets/icons/Search_Result/Car_Audi.png";
+  final String scanPNG = "assets/icons/Search_Result/Scan.png";
+  final String heartPNG = "assets/icons/Search_Result/Heart.png";
+  final String speedmeterPNG = "assets/icons/Search_Result/speedmeter.png";
+  final String calendarPNG = "assets/icons/Search_Result/Calendar.png";
+  final String unlockPNG = "assets/icons/Search_Result/Unlock.png";
+  final String wheelAudiPNG = "assets/icons/Search_Result/Wheel_Audi.png";
+  final String driverSidePNG = "assets/icons/Search_Result/Driver_Side.png";
+  final String moverPNG = "assets/icons/Search_Result/Mover.png";
+  final String carFrog = "assets/icons/Search_Result/Car_Frog.png";
+  final String locationPNG = "assets/icons/Notifications/Location.png";
+
 }
 
 ///-----------------------------------------------------------------//

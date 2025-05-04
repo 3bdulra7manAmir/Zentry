@@ -628,6 +628,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Validation failed for full name:'**
   String get validateFailureFullName;
+
+  /// No description provided for @invitationCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Invitation Code'**
+  String get invitationCode;
+
+  /// No description provided for @invitationCodeExample.
+  ///
+  /// In en, this message translates to:
+  /// **'Ex: #Alsuisy123'**
+  String get invitationCodeExample;
+
+  /// No description provided for @paste.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste'**
+  String get paste;
+
+  /// No description provided for @exElSuisy.
+  ///
+  /// In en, this message translates to:
+  /// **'Ex el suisy'**
+  String get exElSuisy;
+
+  /// No description provided for @selectDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Date'**
+  String get selectDate;
+
+  /// No description provided for @selectBirthDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Birth date'**
+  String get selectBirthDate;
+
+  /// No description provided for @year.
+  ///
+  /// In en, this message translates to:
+  /// **'Year'**
+  String get year;
+
+  /// No description provided for @month.
+  ///
+  /// In en, this message translates to:
+  /// **'Month'**
+  String get month;
+
+  /// No description provided for @day.
+  ///
+  /// In en, this message translates to:
+  /// **'Day'**
+  String get day;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @notification.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification'**
+  String get notification;
+
+  /// No description provided for @adham.
+  ///
+  /// In en, this message translates to:
+  /// **'Adham'**
+  String get adham;
+
+  /// No description provided for @sentYouAnInvitationToJoin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent you an invitation to join'**
+  String get sentYouAnInvitationToJoin;
+
+  /// No description provided for @yourContacts.
+  ///
+  /// In en, this message translates to:
+  /// **'your contacts'**
+  String get yourContacts;
+
+  /// No description provided for @accept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get accept;
+
+  /// No description provided for @reject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get reject;
+
+  /// No description provided for @dayAgo1.
+  ///
+  /// In en, this message translates to:
+  /// **'1 Day Ago'**
+  String get dayAgo1;
+
+  /// No description provided for @products.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get products;
+
+  /// No description provided for @services.
+  ///
+  /// In en, this message translates to:
+  /// **'Services'**
+  String get services;
+
+  /// No description provided for @posts.
+  ///
+  /// In en, this message translates to:
+  /// **'Posts'**
+  String get posts;
+
+  /// No description provided for @reels.
+  ///
+  /// In en, this message translates to:
+  /// **'Reels'**
+  String get reels;
+
+  /// No description provided for @users.
+  ///
+  /// In en, this message translates to:
+  /// **'users'**
+  String get users;
+
+  /// No description provided for @pages.
+  ///
+  /// In en, this message translates to:
+  /// **'Pages'**
+  String get pages;
+
+  /// No description provided for @groups.
+  ///
+  /// In en, this message translates to:
+  /// **'Groups'**
+  String get groups;
+
+  /// No description provided for @threeHundred.
+  ///
+  /// In en, this message translates to:
+  /// **'3,000,000'**
+  String get threeHundred;
+
+  /// No description provided for @le.
+  ///
+  /// In en, this message translates to:
+  /// **'L.E'**
+  String get le;
+
+  /// No description provided for @cash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get cash;
+
+  /// No description provided for @audiRs7Quattro.
+  ///
+  /// In en, this message translates to:
+  /// **'Audi Rs7 Quattro'**
+  String get audiRs7Quattro;
+
+  /// No description provided for @k5k10.
+  ///
+  /// In en, this message translates to:
+  /// **'5k-10k'**
+  String get k5k10;
+
+  /// No description provided for @k2023.
+  ///
+  /// In en, this message translates to:
+  /// **'2023'**
+  String get k2023;
+
+  /// No description provided for @used.
+  ///
+  /// In en, this message translates to:
+  /// **'Used'**
+  String get used;
+
+  /// No description provided for @k800000.
+  ///
+  /// In en, this message translates to:
+  /// **'800,000'**
+  String get k800000;
+
+  /// No description provided for @negotiation.
+  ///
+  /// In en, this message translates to:
+  /// **'Negotiation'**
+  String get negotiation;
+
+  /// No description provided for @cairoEgypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Cairo, Egypt'**
+  String get cairoEgypt;
+
+  /// No description provided for @bmw320Model2019.
+  ///
+  /// In en, this message translates to:
+  /// **'Bmw 320 model 2019'**
+  String get bmw320Model2019;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

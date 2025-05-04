@@ -104,7 +104,48 @@
 
     "fullNameIsRequired": "الاسم الكامل مطلوب.",
     "invalidFullName": "يرجى إدخال اسم كامل صحيح.",
-    "validateFailureFullName": "فشل التحقق من صحة الاسم الكامل:"
+    "validateFailureFullName": "فشل التحقق من صحة الاسم الكامل:",
+
+    "invitationCode": "رمز الدعوة",
+    "invitationCodeExample": "مثال: #Alsuisy123",
+    "paste": "لصق",
+    "exElSuisy": "مثال السويّسي",
+    "selectDate": "اختر التاريخ",
+    "selectBirthDate": "اختر تاريخ الميلاد",
+    "year": "السنة",
+    "month": "الشهر",
+    "day": "اليوم",
+    "confirm": "تأكيد",
+
+    "notification": "الإشعارات",
+    "adham": "أدهم",
+    "sentYouAnInvitationToJoin": "أرسل لك دعوة للانضمام",
+    "yourContacts": "جهات اتصالك",
+    "accept": "قبول",
+    "reject": "رفض",
+    "dayAgo1": "منذ يوم",
+
+    "products": "المنتجات",
+    "services": "الخدمات",
+    "posts": "المنشورات",
+    "reels": "ريلز",
+    "users": "المستخدمين",
+    "pages": "الصفحات",
+    "groups": "المجموعات",
+
+    "threeHundred": "٣,٠٠٠,٠٠٠",
+    "le": "ج.م",
+    "cash": "نقدًا",
+
+    "audiRs7Quattro": "أودي Rs7 كواترو",
+    "k5k10": "5 آلاف - 10 آلاف",
+    "k2023": "٢٠٢٣",
+    "used": "مستعمل",
+
+    "k800000": "٨٠٠,٠٠٠",
+    "negotiation": "قابل للتفاوض",
+    "cairoEgypt": "القاهرة، مصر",
+    "bmw320Model2019": "بي إم دبليو 320 موديل 2019"
     
 
   }

@@ -17,16 +17,16 @@ abstract class AppPadding
   static EdgeInsets kAppFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
 
   /// [Symmetric_16_H_V]
-  static EdgeInsets kTabBarPadding = EdgeInsets.symmetric(
-    horizontal: 16.w,
-    vertical: 16.w,
-  );
+  static EdgeInsets kTabBarPadding = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w,);
 
   /// [Symmetric_12_V]
   static EdgeInsets kDividerPadding = EdgeInsets.symmetric(vertical: 12.w);
 
-  /// [Padding_20_END]
+  /// [Directional_20_END]
   static EdgeInsetsDirectional kSearchIconPadding = EdgeInsetsDirectional.only(end: 20.w);
+
+  /// [Symmetric_10_H]
+  static EdgeInsets kSearchResultsCardPadding = EdgeInsets.symmetric(horizontal: 10.w);
 
   /// [Zero]
   static EdgeInsets kZeroPadding = EdgeInsets.zero;

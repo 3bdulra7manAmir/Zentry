@@ -204,8 +204,27 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.color.kSecondarySemiGreyText,
+    );
+  }
 
-      //color: textColor ?? AppColors.color.kSecondary,
+  /// FontWeight = [w500], FontColor = [_3E6FCF], FontFamily = [Roboto]
+  static TextStyle textStyle8({
+    FontWeight? fontWeight,
+    String? fontFamily,
+    TextDecoration? textDecoration,
+    TextOverflow? textOverflow,
+    Color? textDecorationColor,
+    Color? textColor,
+  }) {
+    return TextStyle(
+      fontSize: AppFontSizes.xXSmall.sp,
+      fontWeight: fontWeight ?? AppFontWeights.mediumWeight,
+      fontFamily: fontFamily,
+      decoration: textDecoration ?? TextDecoration.none,
+      decorationColor: textDecorationColor,
+      overflow: textOverflow ?? TextOverflow.ellipsis,
+      color: textColor ?? AppColors.color.kQuinarySemiBlueText,
     );
   }
 }

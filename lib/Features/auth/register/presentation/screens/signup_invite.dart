@@ -57,8 +57,7 @@ class SignUpFormInvite extends ConsumerWidget
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.phone,
-                fieldValidator:
-                    (value) => phoneNumberValidation(value, context),
+                fieldValidator: (value) => phoneNumberValidation(value, context),
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: InkWell(
                   onTap: () => showCountriesPhoneNumberBottomSheet(context),
@@ -70,12 +69,7 @@ class SignUpFormInvite extends ConsumerWidget
                         : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
               AppSizes.size24.verticalSpace,
-              Text(
-                AppLocalizations.of(context).password,
-                style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kQuaternarySemiBlackText,
-                ),
-              ),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
@@ -95,7 +89,7 @@ class SignUpFormInvite extends ConsumerWidget
 
               AppSizes.size24.verticalSpace,
 
-              Text("Invitation Code", style: AppStyles.textStyle13(
+              Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                 fontWeight: AppFontWeights.mediumWeight,
                 textColor: AppColors.color.kQuinarySemiBlueText,
                 ),
@@ -108,7 +102,7 @@ class SignUpFormInvite extends ConsumerWidget
                 fieldValidator: (value) => passwordValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
-                fieldText: "Ex el suisy ",
+                fieldText: AppLocalizations.of(context).exElSuisy,
               ),
 
               AppSizes.size32.verticalSpace,
@@ -117,7 +111,6 @@ class SignUpFormInvite extends ConsumerWidget
                 buttonText: AppLocalizations.of(context).signUp,
                 buttonOnPressed: () async
                 {
-                  // print("\nobjectSTart1\n");
                   if (inviteFormKey.currentState!.validate())
                   {
 
