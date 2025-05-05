@@ -25,6 +25,9 @@ abstract class AppBorders
   /// [Circular_10]
   static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
 
+  /// [Circular_8]
+  static BorderRadius postPriceCard8 = BorderRadius.circular(8.r);
+
   /// [Circular_6]
   static BorderRadius notificationsCard6 = BorderRadius.circular(6.r);
 

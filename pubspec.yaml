@@ -25,6 +25,9 @@ dependencies:
   # Cached NetWork IMG
   cached_network_image: ^3.4.1
 
+  # Add readmore text in the end
+  readmore: ^3.0.0
+
   # Device Preview (for responsive testing)
   device_preview: ^1.2.0
 

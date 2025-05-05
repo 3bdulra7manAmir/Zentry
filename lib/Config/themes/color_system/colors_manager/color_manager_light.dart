@@ -17,6 +17,9 @@ class LightColorScheme extends ColorManagerBase {
   @override
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
 
+    @override
+  Color get kReadMoreTextColor => const Color(0xff1963D6);
+
   @override
   Color get kForgetPasswordUnderLine => const Color(0xff3E6FCF);
 

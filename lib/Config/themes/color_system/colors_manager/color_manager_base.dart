@@ -12,6 +12,7 @@ abstract class ColorManagerBase {
   /// [Quinary__003082_3E6FCF]
   Color get kQuinarySemiBlueText;
   Color get kForgetPasswordUnderLine;
+  Color get kReadMoreTextColor;
 
   /// [Secondary__FFFFFF]
   Color get kSecondaryWhite;

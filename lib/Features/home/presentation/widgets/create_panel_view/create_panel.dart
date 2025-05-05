@@ -40,10 +40,9 @@ class CreatePanel extends StatelessWidget
                   iconPath: "assets/icons/Home/Service.png",
                 ),
               ),
-
             ],
           ),
-          AppSizes.size10.verticalSpace,
+          AppSizes.size16.verticalSpace,
           Row(
             children:
             [
