@@ -20,7 +20,7 @@ class SearchResultCardDetailed extends StatelessWidget
       width: 370.w,
       height: 163.h,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.buttonBorder6,
+        borderRadius: AppBorders.buttonBorder5,
         //color: Colors.red
         //boxShadow: 
       ),

@@ -18,6 +18,7 @@ class CustomSocialButton extends StatelessWidget {
     required this.platformLogo,
     this.isLogoSpace,
     this.spaceAmount,
+    this.buttonOnPressed,
   });
 
   final double? buttonWidth;
@@ -31,9 +32,11 @@ class CustomSocialButton extends StatelessWidget {
   final String platformLogo;
   final bool? isLogoSpace;
   final double? spaceAmount;
+  final void Function()? buttonOnPressed;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
       height: buttonHeight ?? 48.h,
@@ -48,24 +51,19 @@ class CustomSocialButton extends StatelessWidget {
               ),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,
-          ),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
           overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
           splashFactory: NoSplash.splashFactory,
           shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
           elevation: MaterialStateProperty.all(0),
           alignment: Alignment.center,
         ),
-
+        onPressed: buttonOnPressed,
         child: Row(
-          children: [
+          children:
+          [
             Expanded(flex: 1, child: Image.asset(platformLogo)),
-
-            (isLogoSpace ?? false)
-                ? const Spacer()
-                : (spaceAmount ?? 20).horizontalSpace,
-
+            (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
             Expanded(
               flex: 2,
               child: Text(
@@ -75,7 +73,6 @@ class CustomSocialButton extends StatelessWidget {
             ),
           ],
         ),
-        onPressed: () {},
       ),
     );
   }

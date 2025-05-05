@@ -26,10 +26,10 @@ abstract class AppBorders
   static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
 
   /// [Circular_6]
-  static BorderRadius notificationsCard = BorderRadius.circular(6.r);
+  static BorderRadius notificationsCard6 = BorderRadius.circular(6.r);
 
   /// [Circular_5]
-  static BorderRadius buttonBorder6 = BorderRadius.circular(5.r);
+  static BorderRadius buttonBorder5 = BorderRadius.circular(5.r);
 
   //Text Form Field
   /// [Circular_50]

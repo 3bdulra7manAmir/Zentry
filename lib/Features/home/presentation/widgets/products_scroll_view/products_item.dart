@@ -8,6 +8,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
+
 class ProductsItem extends StatelessWidget
 {
   const ProductsItem({super.key});
@@ -27,19 +28,21 @@ class ProductsItem extends StatelessWidget
             borderRadius: AppBorders.kProductItemRadius,
           ),
         ),
-
-        // SizedBox(
-        //   height: 55.h,
-        //   width: 55.w,
-        //   child: CircleAvatar(
-        //     backgroundColor: AppColors.color.kProductItemBackground,
-        //     backgroundImage: const AssetImage("assets/icons/Home/Car_Blue.png"),
-        //   ),
-        // ),
-
         AppSizes.size8.verticalSpace,
-        Text(AppLocalizations.of(context).vehciles, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSeptenarySemiGreyText),),
+        Text(AppLocalizations.of(context).vehciles, style: AppStyles.textStyle10(
+          fontWeight: AppFontWeights.semiBoldWeight,
+          textColor: AppColors.color.kSeptenarySemiGreyText),
+        ),
       ],
     );
   }
 }
+
+// SizedBox(
+//   height: 55.h,
+//   width: 55.w,
+//   child: CircleAvatar(
+//     backgroundColor: AppColors.color.kProductItemBackground,
+//     backgroundImage: const AssetImage("assets/icons/Home/Car_Blue.png"),
+//   ),
+// ),

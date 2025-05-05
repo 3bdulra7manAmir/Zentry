@@ -65,6 +65,7 @@ abstract class ColorManagerBase {
   /// [TabBar__FF7D00] //Yellow
   Color get kTabBar;
   Color get kDatePicker;
+  Color get kRobotBoyRadiusColor;
 
   /// [Product_Item_BG_Color]
   Color get kProductItemBackground;

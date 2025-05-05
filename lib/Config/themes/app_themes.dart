@@ -99,15 +99,10 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
       RoundedRectangleBorder(
         borderRadius: AppBorders.buttonBorder10,
-        side: BorderSide(
-          color: AppColors.color.kTransparent,
-          width: AppBorderWidths.width1,
-        ),
+        side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.width1,),
       ),
     ),
-    backgroundColor: MaterialStateProperty.all<Color>(
-      AppColors.color.kPrimaryBlue,
-    ),
+    backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
     overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
     splashFactory: NoSplash.splashFactory,
     shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
@@ -119,10 +114,7 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
 Object? tabBarTheme = TabBarTheme(
   indicatorSize: TabBarIndicatorSize.tab,
   labelColor: AppColors.color.kTabBar,
-  labelStyle: AppStyles.textStyle14(
-    fontWeight: AppFontWeights.semiBoldWeight,
-    textColor: AppColors.color.kTabBar,
-  ),
+  labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kTabBar,),
   unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
   indicatorColor: AppColors.color.kTabBar,
 );

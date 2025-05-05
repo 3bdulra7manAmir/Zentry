@@ -17,7 +17,7 @@ class ProductsItemList extends StatelessWidget
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) => const ProductsItem(),
       separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,
-      itemCount: 7,
+      itemCount: 9,
     );
   }
 }

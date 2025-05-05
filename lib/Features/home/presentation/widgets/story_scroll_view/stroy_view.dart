@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/widgets/app_listview_builder.dart';
 import 'create_story.dart';
-import 'users_story.dart';
+import 'story_list.dart';
 
 
 class StroyList extends StatelessWidget
@@ -20,12 +19,7 @@ class StroyList extends StatelessWidget
         [
           const CreateStory(),
           AppSizes.size9.horizontalSpace,
-          AppListviewBuilder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) => const UsersStory(),
-            separatorBuilder: (context, index) => AppSizes.size9.horizontalSpace,
-            itemCount: 8,
-          ),
+          const StoryListBuilder(),
         ],
       ),
     );
