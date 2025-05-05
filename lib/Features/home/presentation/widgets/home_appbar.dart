@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 
 class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
@@ -11,26 +12,27 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     return AppBar(
+      leadingWidth: 65.w,
       backgroundColor: Theme.of(context).cardColor,
       leading: GestureDetector(
         onTap: () {},
-        child: Image.asset("assets/icons/Home/Robot_Boy_SUIIZ.png"),
+        child: Image.asset(AppAssets.iconsPNG.robotBodySUIIZPNG),
       ),
       actions:
       [
         GestureDetector(
           onTap: () {},
-          child: Image.asset("assets/icons/Home/Search_With_Bg.png"),
+          child: Image.asset(AppAssets.iconsPNG.searchWithBgPNG),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset("assets/icons/Home/Messages_With_Bg.png"),
+          child: Image.asset(AppAssets.iconsPNG.messagesWithBgPNG),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset("assets/icons/Home/Messages_With_Bg.png"),
+          child: Image.asset(AppAssets.iconsPNG.searchWithBgPNG),
         ),
         AppSizes.size8.horizontalSpace,
       ],

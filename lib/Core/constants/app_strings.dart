@@ -294,4 +294,6 @@ abstract class AppStrings {
   static const clear = "Clear";
   static const relatedResults = "Related results";
   static const pets = "Pets";
+
+  static const vehciles = "Vehciles";
 }

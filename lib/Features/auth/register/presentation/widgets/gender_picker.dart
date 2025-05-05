@@ -25,7 +25,7 @@ void showGenderPickerBottomSheet(BuildContext context) {
           return StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
               return Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                padding: AppPadding.kTabBarPadding,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [

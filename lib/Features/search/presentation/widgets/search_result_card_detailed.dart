@@ -5,6 +5,7 @@ import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 
@@ -19,7 +20,7 @@ class SearchResultCardDetailed extends StatelessWidget
       width: 370.w,
       height: 163.h,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.buttonBorder5,
+        borderRadius: AppBorders.buttonBorder6,
         //color: Colors.red
         //boxShadow: 
       ),
@@ -28,7 +29,7 @@ class SearchResultCardDetailed extends StatelessWidget
         [
           Image.asset(AppAssets.iconsPNG.carAudiPNG, width: 163.w, height: 163.h, fit: BoxFit.fill,),
           Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: AppPadding.kSearchResultCardPadding,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children:

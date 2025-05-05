@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/features/auth/login/presentation/widgets/phone_number_dialog.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
@@ -20,6 +19,7 @@ import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkbox_provider.dart';
 import '../controllers/email_or_phone_provider.dart';
+import 'phone_number_dialog.dart';
 
 class LoginFormWithPhone extends ConsumerWidget {
   LoginFormWithPhone({super.key});

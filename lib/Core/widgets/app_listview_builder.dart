@@ -24,14 +24,14 @@ class AppListviewBuilder extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ListView.separated(
+      scrollDirection: scrollDirection ?? Axis.vertical,
       separatorBuilder: separatorBuilder,
       itemBuilder: itemBuilder,
       itemCount: itemCount,
       padding: padding,
       reverse: reverse ?? false,
-      physics: physics,
       shrinkWrap: true,
-      scrollDirection: scrollDirection ?? Axis.vertical,
+      physics: physics,
     );
   }
 }

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/app_listview_builder.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 import '../widgets/search_result_card.dart';
 import '../widgets/search_result_card_detailed.dart';
@@ -20,7 +21,7 @@ class SearchResultsView extends StatelessWidget
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true,),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        padding: AppPadding.kAppFormPadding,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

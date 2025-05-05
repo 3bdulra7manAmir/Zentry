@@ -21,16 +21,16 @@ class SearchResultCard extends StatelessWidget
       width: 359.w,
       height: 140.h,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.buttonBorder5,
+        borderRadius: AppBorders.buttonBorder6,
         //color: Colors.red
         //boxShadow: 
       ),
       child: Row(
         children:
         [
-          Image.asset(AppAssets.iconsPNG.carFrog, width: 163.w, height: 140.h, fit: BoxFit.fill,),
+          Image.asset(AppAssets.iconsPNG.carFrogPNG, width: 163.w, height: 140.h, fit: BoxFit.fill,),
           Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: AppPadding.kSearchResultCardPadding,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children:

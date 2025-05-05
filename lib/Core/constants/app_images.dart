@@ -72,7 +72,7 @@ class _AppIconsPNG
   ///APP Notifications View
   final String searchDarkPNG = "assets/icons/Notifications/Search.png";
   final String adhamPNG = "assets/icons/Notifications/Adham.png";
-  final String horzintal3BlackDots = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
+  final String horzintal3BlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
 
   final String carAudiPNG = "assets/icons/Search_Result/Car_Audi.png";
   final String scanPNG = "assets/icons/Search_Result/Scan.png";
@@ -83,7 +83,7 @@ class _AppIconsPNG
   final String wheelAudiPNG = "assets/icons/Search_Result/Wheel_Audi.png";
   final String driverSidePNG = "assets/icons/Search_Result/Driver_Side.png";
   final String moverPNG = "assets/icons/Search_Result/Mover.png";
-  final String carFrog = "assets/icons/Search_Result/Car_Frog.png";
+  final String carFrogPNG = "assets/icons/Search_Result/Car_Frog.png";
   final String locationPNG = "assets/icons/Notifications/Location.png";
 
   //App Search Related Results
@@ -91,9 +91,11 @@ class _AppIconsPNG
   final String wrongPNG = "assets/icons/Search_Related_Results/Wrong.png";
 
   //App Home View
-  final String robotBodySUIIZ = "assets/icons/Home/Robot_Boy_SUIIZ.png";
-  final String searchWithBg = "assets/icons/Home/Search_With_Bg.png";
-  final String messagesWithBg = "assets/icons/Home/Messages_With_Bg.png";
+  final String robotBodySUIIZPNG = "assets/icons/Home/Robot_Boy_SUIIZ.png";
+  final String searchWithBgPNG = "assets/icons/Home/Search_With_Bg.png";
+  final String messagesWithBgPNG = "assets/icons/Home/Messages_With_Bg.png";
+  final String carBluePNG = "assets/icons/Home/Car_Blue.png";
+  final String storyRobotPNG = "assets/icons/Home/Story_Robot.png";
 
 }
 

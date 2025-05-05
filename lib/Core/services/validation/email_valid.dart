@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/core/extensions/string.dart';
-
 import '../../../config/l10n/generated/app_localizations.dart';
 
 String emailValidation(String? value, BuildContext context) {

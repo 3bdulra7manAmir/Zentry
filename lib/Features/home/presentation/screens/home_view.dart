@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widgets/home_appbar.dart';
-import '../widgets/products_item.dart';
+import '../widgets/products_scroll_bar/products_item_list.dart';
+import '../widgets/story_bar/stroy_list.dart';
 
 class HomeView extends StatelessWidget
 {
@@ -18,19 +19,13 @@ class HomeView extends StatelessWidget
         crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          AppSizes.size14.verticalSpace,
-          Divider(height: AppSizes.size1, color: AppColors.color.kFormButtonsBorders,),
-          AppSizes.size10.verticalSpace,
-          Expanded(
-            child: ListView.separated(
-              padding: EdgeInsets.symmetric(horizontal: 12.w,),
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => const ProductsItem(),
-              separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,
-              itemCount: 7,
-            ),
-          ),
+          AppSizes.size27.verticalSpace,
+          Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders,),
+          SizedBox(height: 79.h, child: const ProductsItemList(),),
+          AppSizes.size23.verticalSpace,
+          Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders,),
+          AppSizes.size12.verticalSpace,
+          SizedBox(height: 148.h, child: const StroyList()),
         ],
       ),
     );

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/font_system/app_font_weights.dart';
-import 'package:test_app/core/constants/app_borders.dart';
-import 'package:test_app/core/constants/app_styles.dart';
-
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/constants/app_styles.dart';
 
 class DefaultNotificationCard extends StatelessWidget
 {

@@ -862,6 +862,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Pets'**
   String get pets;
+
+  /// No description provided for @vehciles.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehciles'**
+  String get vehciles;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

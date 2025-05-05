@@ -391,4 +391,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pets => 'Pets';
+
+  @override
+  String get vehciles => 'Vehciles';
 }

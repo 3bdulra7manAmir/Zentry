@@ -391,4 +391,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get pets => 'الحيوانات الأليفة';
+
+  @override
+  String get vehciles => 'مركبات';
 }

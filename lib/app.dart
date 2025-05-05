@@ -2,10 +2,10 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/helpers/app_providers.dart';
 import 'config/l10n/generated/app_localizations.dart';
 import 'config/router/app_router.dart';
 import 'config/themes/app_themes.dart';
+import 'core/helpers/app_providers.dart';
 
 
 class TestApp extends ConsumerWidget

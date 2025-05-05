@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/config/l10n/generated/app_localizations.dart';
+import '../../../config/l10n/generated/app_localizations.dart';
 
 List<String> getNumbersList(BuildContext context) {
   return [

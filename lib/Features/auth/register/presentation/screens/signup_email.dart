@@ -111,7 +111,7 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldObscureText: provider.obscureText,
                 fieldText: AppLocalizations.of(context).invitationCodeExample,
                 fieldsuffixIcon: Padding( //HERE //FIX //Temp
-                  padding: const EdgeInsets.only(right: 15),
+                  padding: AppPadding.kPastePadding,
                   child: SizedBox(
                     width: 60,
                     child: Align(

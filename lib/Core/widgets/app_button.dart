@@ -17,6 +17,7 @@ class CustomButton extends ConsumerWidget {
     required this.buttonText,
     this.buttonTextStyle,
     this.buttonOnPressed,
+    this.buttonPadding,
   });
 
   final double? buttonWidth;
@@ -28,33 +29,27 @@ class CustomButton extends ConsumerWidget {
   final String buttonText;
   final TextStyle? buttonTextStyle;
   final void Function()? buttonOnPressed;
+  final EdgeInsetsGeometry? buttonPadding;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     return SizedBox(
       width: buttonWidth ?? double.infinity,
       height: buttonHeight ?? 48.h,
       child: ElevatedButton(
         style: ButtonStyle(
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(buttonPadding),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
-              side: BorderSide(
-                color: buttonBorderColor ?? AppColors.color.kTransparent,
-                width: buttonBorderWidth ?? AppBorderWidths.width1,
-              ),
+              side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.width1,),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,
-          ),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
         ),
         onPressed: buttonOnPressed,
-
-        child: Text(
-          buttonText,
-          style: buttonTextStyle ?? AppStyles.textStyle14(),
-        ),
+        child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
       ),
     );
   }

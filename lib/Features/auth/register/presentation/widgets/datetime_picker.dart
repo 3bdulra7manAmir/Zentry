@@ -6,6 +6,7 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
@@ -38,9 +39,10 @@ void showDateTimeBottomSheet(BuildContext context)
           List<int> days = getDaysInMonth(selectedYear, selectedMonth);
 
           return StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState) {
+            builder: (BuildContext context, StateSetter setState)
+            {
               return Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                padding: AppPadding.kTabBarPadding,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [

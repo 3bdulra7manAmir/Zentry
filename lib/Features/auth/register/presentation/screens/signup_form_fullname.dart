@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/services/validation/fullname_valid.dart';
-import 'package:test_app/features/auth/register/presentation/widgets/datatime_field.dart';
-import 'package:test_app/features/auth/register/presentation/widgets/gender_field.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -12,10 +9,13 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
+import '../../../../../core/services/validation/fullname_valid.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
+import '../widgets/datatime_field.dart';
 import '../widgets/datetime_picker.dart';
+import '../widgets/gender_field.dart';
 import '../widgets/gender_picker.dart';
 
 
