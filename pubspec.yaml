@@ -28,6 +28,9 @@ dependencies:
   # Add readmore text in the end
   readmore: ^3.0.0
 
+  # Add readmore text in the end
+  animated_bottom_navigation_bar: ^1.4.0
+
   # Device Preview (for responsive testing)
   device_preview: ^1.2.0
 
@@ -126,6 +129,7 @@ flutter:
     - assets/icons/Search_Result/
     - assets/icons/Search_Related_Results/
     - assets/icons/Home/
+    - assets/icons/Bottom_Nav_Bar/
     - assets/images/
 
 # Flutter Intl Configuration

@@ -6,6 +6,7 @@ import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
+import '../../features/bottom_nav_bar/presentation/screens/bottom_nav_bar.dart';
 import '../../features/home/presentation/screens/home_view.dart';
 import '../../features/notifications/presentation/screens/notifications_search_view.dart';
 import '../../features/notifications/presentation/screens/notifications_view.dart';
@@ -18,10 +19,17 @@ abstract class AppRouter
 {
   AppRouter._();
   static final router = GoRouter(
-    initialLocation: AppRoutes.kHomeView,
+    initialLocation: AppRoutes.kTestView,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
     routes:
     [
+      //App Splash View
+      GoRoute(
+        path: AppRoutes.kTestView,
+        name: AppRoutes.kTestView,
+        builder: (context, state) => const MyHomePage(),
+      ),
+      
       //App Splash View
       GoRoute(
         path: AppRoutes.kSplashView,

@@ -28,4 +28,6 @@ abstract class AppRoutes
   // APP Verification Code View
   static const kHomeView = '/kHomeView';
 
+  static const kTestView = '/kTestView';
+
 }
