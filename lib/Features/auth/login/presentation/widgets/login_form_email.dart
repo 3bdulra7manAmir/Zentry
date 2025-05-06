@@ -50,14 +50,14 @@ class LoginFormWithEmail extends ConsumerWidget
                   Text(
                     AppLocalizations.of(context).email,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                   const Spacer(),
                   Text(
                     AppLocalizations.of(context).or,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kSecondarySemiGreyText,
+                      fontColor: AppColors.color.kSecondarySemiGreyText,
                     ),
                   ),
                   AppSizes.size4.horizontalSpace,
@@ -91,7 +91,7 @@ class LoginFormWithEmail extends ConsumerWidget
               Text(
                 AppLocalizations.of(context).password,
                 style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                  fontColor: AppColors.color.kQuaternarySemiBlackText,
                 ),
               ),
               AppSizes.size8.verticalSpace,
@@ -129,7 +129,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   Text(
                     AppLocalizations.of(context).remember,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kTertiarySemiGrey,
+                      fontColor: AppColors.color.kTertiarySemiGrey,
                     ),
                   ),
                   const Spacer(),
@@ -141,7 +141,7 @@ class LoginFormWithEmail extends ConsumerWidget
                     child: Text(
                       AppLocalizations.of(context).forgetPassword,
                       style: AppStyles.textStyle12(
-                        textColor: AppColors.color.kQuinarySemiBlueText,
+                        fontColor: AppColors.color.kQuinarySemiBlueText,
                         textDecoration: TextDecoration.underline,
                         textDecorationColor:
                             AppColors.color.kForgetPasswordUnderLine,
@@ -182,7 +182,7 @@ class LoginFormWithEmail extends ConsumerWidget
                   AppLocalizations.of(context).orLoginWith,
                   style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
-                    textColor: AppColors.color.kSenaryTotalBlackText,
+                    fontColor: AppColors.color.kSenaryTotalBlackText,
                   ),
                 ),
               ),
@@ -197,7 +197,7 @@ class LoginFormWithEmail extends ConsumerWidget
                           platformLogo: AppAssets.iconsPNG.faceBookPNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
                           buttonTextStyle: AppStyles.textStyle12(
-                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kQuaternarySemiBlackText,
                           ),
                         ),
                       ),
@@ -208,7 +208,7 @@ class LoginFormWithEmail extends ConsumerWidget
                           platformLogo: AppAssets.iconsPNG.googlePNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
                           buttonTextStyle: AppStyles.textStyle12(
-                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kQuaternarySemiBlackText,
                           ),
                         ),
                       ),
@@ -225,7 +225,7 @@ class LoginFormWithEmail extends ConsumerWidget
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kPrimaryDark,
                     buttonTextStyle: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                 ],

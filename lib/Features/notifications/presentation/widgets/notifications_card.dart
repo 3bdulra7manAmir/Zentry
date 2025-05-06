@@ -73,12 +73,12 @@ class DefaultNotificationCard extends StatelessWidget
                         [
                           Text("iPhone 14 pro max", style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
-                              textColor: AppColors.color.kSemiGreyText,
+                              fontColor: AppColors.color.kSemiGreyText,
                           ),),
                           const Spacer(),
                           Text("1 Day Ago", style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
-                              textColor: AppColors.color.kSemiGreyText,
+                              fontColor: AppColors.color.kSemiGreyText,
                           ),),
                           AppSizes.size10.horizontalSpace
                         ],

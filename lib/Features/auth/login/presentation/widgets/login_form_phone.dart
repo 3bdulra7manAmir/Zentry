@@ -47,14 +47,14 @@ class LoginFormWithPhone extends ConsumerWidget {
                   Text(
                     AppLocalizations.of(context).phoneNumber,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                   const Spacer(),
                   Text(
                     AppLocalizations.of(context).or,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kSecondarySemiGreyText,
+                      fontColor: AppColors.color.kSecondarySemiGreyText,
                     ),
                   ),
                   AppSizes.size4.horizontalSpace,
@@ -89,7 +89,7 @@ class LoginFormWithPhone extends ConsumerWidget {
               Text(
                 AppLocalizations.of(context).password,
                 style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                  fontColor: AppColors.color.kQuaternarySemiBlackText,
                 ),
               ),
               AppSizes.size8.verticalSpace,
@@ -127,7 +127,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                   Text(
                     AppLocalizations.of(context).remember,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kTertiarySemiGrey,
+                      fontColor: AppColors.color.kTertiarySemiGrey,
                     ),
                   ),
                   const Spacer(),
@@ -139,7 +139,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                     child: Text(
                       AppLocalizations.of(context).forgetPassword,
                       style: AppStyles.textStyle12(
-                        textColor: AppColors.color.kQuinarySemiBlueText,
+                        fontColor: AppColors.color.kQuinarySemiBlueText,
                         textDecoration: TextDecoration.underline,
                         textDecorationColor:
                             AppColors.color.kForgetPasswordUnderLine,
@@ -164,7 +164,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                   AppLocalizations.of(context).orLoginWith,
                   style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
-                    textColor: AppColors.color.kSenaryTotalBlackText,
+                    fontColor: AppColors.color.kSenaryTotalBlackText,
                   ),
                 ),
               ),
@@ -179,7 +179,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                           platformLogo: AppAssets.iconsPNG.faceBookPNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
                           buttonTextStyle: AppStyles.textStyle12(
-                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kQuaternarySemiBlackText,
                           ),
                         ),
                       ),
@@ -190,7 +190,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                           platformLogo: AppAssets.iconsPNG.googlePNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
                           buttonTextStyle: AppStyles.textStyle12(
-                            textColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kQuaternarySemiBlackText,
                           ),
                         ),
                       ),
@@ -207,7 +207,7 @@ class LoginFormWithPhone extends ConsumerWidget {
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kPrimaryDark,
                     buttonTextStyle: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                 ],

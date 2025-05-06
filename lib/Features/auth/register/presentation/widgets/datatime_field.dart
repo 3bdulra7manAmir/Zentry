@@ -30,7 +30,7 @@ class DataTimePicker extends ConsumerWidget
         Text(
           AppLocalizations.of(context).date,
           style: AppStyles.textStyle12(
-            textColor: AppColors.color.kSeptenarySemiGreyText,
+            fontColor: AppColors.color.kSeptenarySemiGreyText,
           ),
         ),
         AppSizes.size8.verticalSpace,

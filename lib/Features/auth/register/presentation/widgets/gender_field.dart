@@ -28,7 +28,7 @@ class GenderPicker extends ConsumerWidget
         Text(
           AppLocalizations.of(context).gender,
           style: AppStyles.textStyle12(
-            textColor: AppColors.color.kSeptenarySemiGreyText,
+            fontColor: AppColors.color.kSeptenarySemiGreyText,
           ),
         ),
         AppSizes.size8.verticalSpace,

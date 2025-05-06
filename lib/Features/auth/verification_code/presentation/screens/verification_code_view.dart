@@ -35,7 +35,7 @@ class VerificationCodeView extends ConsumerWidget {
                 AppLocalizations.of(context).verifyLater,
                 style: AppStyles.textStyle12(
                   fontWeight: AppFontWeights.semiBoldWeight,
-                  textColor: AppColors.color.kTertiarySemiGrey,
+                  fontColor: AppColors.color.kTertiarySemiGrey,
                   textDecoration: TextDecoration.underline,
                   textDecorationColor: AppColors.color.kTertiarySemiGrey,
                 ),
@@ -119,7 +119,7 @@ class VerificationCodeView extends ConsumerWidget {
                                   : '',
                               style: AppStyles.textStyle12(
                                 fontWeight: AppFontWeights.semiBoldWeight,
-                                textColor: AppColors.color.kSecondaryWhite,
+                                fontColor: AppColors.color.kSecondaryWhite,
                               ),
                             ),
                           );

@@ -53,11 +53,11 @@ class PostBio extends StatelessWidget
           style: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight),
           moreStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            textColor: AppColors.color.kReadMoreTextColor,
+            fontColor: AppColors.color.kReadMoreTextColor,
           ),
           lessStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            textColor: AppColors.color.kReadMoreTextColor,
+            fontColor: AppColors.color.kReadMoreTextColor,
           ),
         ),
       ],

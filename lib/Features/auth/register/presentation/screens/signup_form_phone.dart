@@ -44,7 +44,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
               Row(
                 children:
                 [
-                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
                   const Spacer(),
                   GestureDetector(
                     onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(), //HERE //Needs Fix
@@ -64,7 +64,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                 fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
               AppSizes.size26.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,

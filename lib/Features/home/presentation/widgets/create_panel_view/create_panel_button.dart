@@ -39,7 +39,7 @@ class CreatePanelButton extends StatelessWidget
           shape: RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder5),
         ),
         icon: Image.asset(iconPath),
-        label: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle12(textColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+        label: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
         onPressed: buttonOnPressed,
       ),
     );

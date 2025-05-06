@@ -33,6 +33,9 @@ class DarkColorScheme extends ColorManagerBase {
   Color get kSemiGreyText => const Color(0xffB6B6B6);
   @override
   Color get kSemiGrey => const Color(0xffF3F3F3);
+  @override
+  Color get kSemiGrey2 => const Color(0xffECECEC);
+  
 
   @override
   Color get kTertiaryWhiteText => const Color(0xffF4F4F4);

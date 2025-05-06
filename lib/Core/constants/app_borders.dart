@@ -12,6 +12,12 @@ abstract class AppBorders
     topRight: Radius.circular(20.r),
   );
 
+  /// [TopLeft_16.TopRight_16]
+  static BorderRadiusGeometry smallCardsBorder = BorderRadius.only(
+    topLeft: Radius.circular(16.r),
+    topRight: Radius.circular(16.r),
+  );
+
   /// [TopLeft_12.TopRight_12]
   static BorderRadiusGeometry indicatorBorder = BorderRadius.only(
     topLeft: Radius.circular(12.r),

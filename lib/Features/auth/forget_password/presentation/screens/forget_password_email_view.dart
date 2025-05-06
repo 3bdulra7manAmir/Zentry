@@ -69,7 +69,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                       AppLocalizations.of(context).emailAddress,
                       style: AppStyles.textStyle12(
                         fontWeight: AppFontWeights.mediumWeight,
-                        textColor: AppColors.color.kQuaternarySemiBlackText,
+                        fontColor: AppColors.color.kQuaternarySemiBlackText,
                       ),
                     ),
                     AppSizes.size8.verticalSpace,

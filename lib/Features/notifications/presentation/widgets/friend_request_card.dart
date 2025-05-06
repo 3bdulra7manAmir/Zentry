@@ -69,7 +69,7 @@ class FriendRequestCard extends StatelessWidget
                       ),
                       Text(AppLocalizations.of(context).yourContacts, style: AppStyles.textStyle12(
                           fontWeight: AppFontWeights.semiBoldWeight,
-                          textColor: AppColors.color.kSemiGreyText,
+                          fontColor: AppColors.color.kSemiGreyText,
                         ),
                       ),
                     ],
@@ -110,7 +110,7 @@ class FriendRequestCard extends StatelessWidget
                   flex: 1,
                   child: Text(AppLocalizations.of(context).dayAgo1, style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.semiBoldWeight,
-                    textColor: AppColors.color.kSemiGreyText,
+                    fontColor: AppColors.color.kSemiGreyText,
                   ),),
                 ),
                 AppSizes.size10.horizontalSpace

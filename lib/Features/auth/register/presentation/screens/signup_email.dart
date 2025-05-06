@@ -44,7 +44,7 @@ class SignUpFormEmail extends ConsumerWidget
                   Text(
                     AppLocalizations.of(context).emailAddress,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                   const Spacer(),
@@ -74,7 +74,7 @@ class SignUpFormEmail extends ConsumerWidget
               Text(
                 AppLocalizations.of(context).password,
                 style: AppStyles.textStyle12(
-                  textColor: AppColors.color.kQuaternarySemiBlackText,
+                  fontColor: AppColors.color.kQuaternarySemiBlackText,
                 ),
               ),
               AppSizes.size8.verticalSpace,

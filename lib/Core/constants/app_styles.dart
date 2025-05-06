@@ -175,7 +175,7 @@ abstract class AppStyles
     TextDecoration? textDecoration,
     TextOverflow? textOverflow,
     Color? textDecorationColor,
-    Color? textColor,
+    Color? fontColor,
   }) {
     return TextStyle(
       fontSize: AppFontSizes.small.sp,
@@ -184,7 +184,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: textColor ?? AppColors.color.kSecondarySemiGreyText,
+      color: fontColor ?? AppColors.color.kSecondarySemiGreyText,
     );
   }
 

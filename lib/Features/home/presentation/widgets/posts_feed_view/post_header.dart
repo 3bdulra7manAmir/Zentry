@@ -5,6 +5,7 @@ import 'package:test_app/config/themes/font_system/app_font_weights.dart';
 import 'package:test_app/core/constants/app_styles.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../cards/post_card.dart';
 
 class PostHeader extends StatelessWidget
 {
@@ -23,7 +24,7 @@ class PostHeader extends StatelessWidget
           children:
           [
             Text("REUEAL & Staging", style: AppStyles.textStyle12(
-              textColor: AppColors.color.kQuaternarySemiBlackText,
+              fontColor: AppColors.color.kQuaternarySemiBlackText,
               fontWeight: AppFontWeights.semiBoldWeight),
             ),
             AppSizes.size4.verticalSpace,
@@ -34,7 +35,10 @@ class PostHeader extends StatelessWidget
           ],
         ),
         const Spacer(),
-        Image.asset("assets/icons/Home/3Grey_Dots.png"),
+        InkWell(
+          onTap: () => showPostOptionsBottomSheet(context),
+          child: Image.asset("assets/icons/Home/3Grey_Dots.png")
+        ),
       ],
     );
   }

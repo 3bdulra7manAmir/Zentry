@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
@@ -6,6 +8,9 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../register/presentation/screens/signup_email.dart';
+import '../../../register/presentation/screens/signup_form_fullname.dart';
+import '../../../register/presentation/screens/signup_form_phone.dart';
+import '../../../register/presentation/screens/signup_invite.dart';
 import '../controllers/email_or_phone_provider.dart';
 import 'login_form_email.dart';
 import 'login_form_phone.dart';

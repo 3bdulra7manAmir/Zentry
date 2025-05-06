@@ -27,7 +27,7 @@ class SearchResultCardDetailed extends StatelessWidget
       child: Row(
         children:
         [
-          Image.asset(AppAssets.iconsPNG.carAudiPNG, width: 163.w, height: 163.h, fit: BoxFit.fill,),
+          Image.asset(AppAssets.iconsPNG.carAudiPNG, width: 163.w, height: 163.h, fit: BoxFit.cover,),
           Padding(
             padding: AppPadding.kSearchResultCardPadding,
             child: Column(
@@ -72,9 +72,9 @@ class SearchResultCardDetailed extends StatelessWidget
                   children:
                   [
                     Image.asset(AppAssets.iconsPNG.wheelAudiPNG),
-                    AppSizes.size6.horizontalSpace,
+                    AppSizes.size3.horizontalSpace,
                     Image.asset(AppAssets.iconsPNG.driverSidePNG),
-                    AppSizes.size6.horizontalSpace,
+                    AppSizes.size3.horizontalSpace,
                     Image.asset(AppAssets.iconsPNG.moverPNG),
                   ],
                 ),

@@ -45,7 +45,7 @@ class SignUpFormInvite extends ConsumerWidget
                   Text(
                     AppLocalizations.of(context).phoneNumber,
                     style: AppStyles.textStyle12(
-                      textColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kQuaternarySemiBlackText,
                     ),
                   ),
                   const Spacer(),
@@ -69,7 +69,7 @@ class SignUpFormInvite extends ConsumerWidget
                         : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,

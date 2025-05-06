@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-abstract class ColorManagerBase {
+abstract class ColorManagerBase
+{
   Color get kTransparent;
 
   /// [Primary__003082]
@@ -51,6 +52,8 @@ abstract class ColorManagerBase {
   Color get kSemiGrey;
   /// [Septenary_SemiGreyAgain__9A9A9A]
   Color get kSemiGreyAgain;
+  /// [Septenary_kSemiGrey2__ECECEC]
+  Color get kSemiGrey2;
 
   /// [Senary_TotalBlack__000000]
   Color get kSenaryTotalBlackText;

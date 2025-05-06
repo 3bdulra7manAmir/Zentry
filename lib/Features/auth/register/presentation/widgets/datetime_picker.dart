@@ -55,7 +55,7 @@ void showDateTimeBottomSheet(BuildContext context)
                       ),
                     ),
                     AppSizes.size35.verticalSpace,
-                    Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(textColor: AppColors.color.kSeptenarySemiGreyText,),),
+                    Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kSeptenarySemiGreyText,),),
                     AppSizes.size35.verticalSpace,
                     Row(
                       children:

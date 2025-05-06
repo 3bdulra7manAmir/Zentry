@@ -41,7 +41,7 @@ class SignUpFormFullName extends ConsumerWidget
             children:
             [
               AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).fullName, style: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).fullName, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.name,
@@ -85,7 +85,7 @@ class SignUpFormFullName extends ConsumerWidget
                 alignment: Alignment.center,
                 child: Text(AppLocalizations.of(context).orLoginWith, style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
-                    textColor: AppColors.color.kSenaryTotalBlackText,
+                    fontColor: AppColors.color.kSenaryTotalBlackText,
                   ),
                 ),
               ),
@@ -101,7 +101,7 @@ class SignUpFormFullName extends ConsumerWidget
                           buttonText: AppLocalizations.of(context).facebook,
                           platformLogo: AppAssets.iconsPNG.faceBookPNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                          buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),
+                          buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),
                         ),
                       ),
                       AppSizes.size12.horizontalSpace,
@@ -110,7 +110,7 @@ class SignUpFormFullName extends ConsumerWidget
                           buttonText: AppLocalizations.of(context).google,
                           platformLogo: AppAssets.iconsPNG.googlePNG,
                           buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                          buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),
+                          buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),
                         ),
                       ),
                     ],
@@ -122,7 +122,7 @@ class SignUpFormFullName extends ConsumerWidget
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kPrimaryDark,
-                    buttonTextStyle: AppStyles.textStyle12(textColor: AppColors.color.kQuaternarySemiBlackText,),
+                    buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),
                   ),
                 ],
               ),
