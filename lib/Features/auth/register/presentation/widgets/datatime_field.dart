@@ -47,7 +47,7 @@ class DataTimePicker extends ConsumerWidget
               Text(
                 displayDate,
                 style: AppStyles.textStyle13(
-                  textColor: AppColors.color.kSecondarySemiGreyText,
+                  fontColor: AppColors.color.kSecondarySemiGreyText,
                 ),
               ),
               const Spacer(),

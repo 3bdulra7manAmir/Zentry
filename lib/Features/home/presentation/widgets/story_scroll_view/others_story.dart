@@ -34,7 +34,7 @@ class UsersStory extends StatelessWidget
               ),
               child: Image.asset("assets/icons/Home/Robot_Boy_SUIIZ.png")),
             const Spacer(),
-            Text("El Hawi Motors", style: AppStyles.textStyle10(textColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.extraBoldWeight),),
+            Text("El Hawi Motors", style: AppStyles.textStyle10(fontColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.extraBoldWeight),),
             AppSizes.size10.verticalSpace,
           ],
         ),

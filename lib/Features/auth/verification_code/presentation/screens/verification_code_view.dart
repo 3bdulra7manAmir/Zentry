@@ -26,7 +26,7 @@ class VerificationCodeView extends ConsumerWidget {
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
           fontWeight: AppFontWeights.semiBoldWeight,
-          textColor: AppColors.color.kSenaryTotalBlackText,
+          fontColor: AppColors.color.kSenaryTotalBlackText,
         ),),
         barActions: [
           Row(
@@ -63,21 +63,21 @@ class VerificationCodeView extends ConsumerWidget {
               AppLocalizations.of(context).verificationCode,
               style: AppStyles.textStyle20(
                 fontWeight: AppFontWeights.semiBoldWeight,
-                textColor: AppColors.color.kSenaryTotalBlackText,
+                fontColor: AppColors.color.kSenaryTotalBlackText,
               ),
             ),
             AppSizes.size13.verticalSpace,
             Text(
               AppLocalizations.of(context).pleaseEnter5DigitalCodeSendTo,
               style: AppStyles.textStyle16(
-                textColor: AppColors.color.kSecondarySemiGreyText,
+                fontColor: AppColors.color.kSecondarySemiGreyText,
               ),
             ),
             AppSizes.size7.verticalSpace,
             Text(
               AppLocalizations.of(context).appgmailcom,
               style: AppStyles.textStyle14(
-                textColor: AppColors.color.kSecondarySemiGreyText,
+                fontColor: AppColors.color.kSecondarySemiGreyText,
                 fontWeight: AppFontWeights.regularWeight,
               ),
             ),
@@ -92,7 +92,7 @@ class VerificationCodeView extends ConsumerWidget {
                     AppLocalizations.of(context).enterYourCode,
                     style: AppStyles.textStyle13(
                       fontWeight: AppFontWeights.mediumWeight,
-                      textColor: AppColors.color.kSeptenarySemiGreyText,
+                      fontColor: AppColors.color.kSeptenarySemiGreyText,
                     ),
                   ),
                   AppSizes.size10.verticalSpace,
@@ -134,7 +134,7 @@ class VerificationCodeView extends ConsumerWidget {
                         AppLocalizations.of(context).dontReceiveACode,
                         style: AppStyles.textStyle14(
                           fontWeight: AppFontWeights.mediumWeight,
-                          textColor: AppColors.color.kSeptenarySemiGreyText,
+                          fontColor: AppColors.color.kSeptenarySemiGreyText,
                         ),
                       ),
                       AppSizes.size6.horizontalSpace,
@@ -147,7 +147,7 @@ class VerificationCodeView extends ConsumerWidget {
                           AppLocalizations.of(context).requestPhoneCall,
                           style: AppStyles.textStyle14(
                             fontWeight: AppFontWeights.mediumWeight,
-                            textColor: AppColors.color.kVerificationUnderLine,
+                            fontColor: AppColors.color.kVerificationUnderLine,
                             textDecoration: TextDecoration.underline,
                             textDecorationColor:
                                 AppColors.color.kVerificationUnderLine,
@@ -164,7 +164,7 @@ class VerificationCodeView extends ConsumerWidget {
                     buttonText: AppLocalizations.of(context).resendIn60s,
                     buttonTextStyle: AppStyles.textStyle16(
                       fontWeight: AppFontWeights.semiBoldWeight,
-                      textColor: AppColors.color.kSecondaryWhite,
+                      fontColor: AppColors.color.kSecondaryWhite,
                     ),
                   ),
                 ],

@@ -48,7 +48,7 @@ class GenderPicker extends ConsumerWidget
                 Text(
                   displayGender,
                   style: AppStyles.textStyle13(
-                    textColor: AppColors.color.kSecondarySemiGreyText,
+                    fontColor: AppColors.color.kSecondarySemiGreyText,
                   ),
                 ),
                 const Spacer(),

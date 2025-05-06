@@ -58,7 +58,7 @@ class AppForm extends ConsumerWidget {
             Text(
               AppLocalizations.of(context).welcomeBack,
               style: AppStyles.textStyle18(
-                textColor: AppColors.color.kPrimaryGreyText,
+                fontColor: AppColors.color.kPrimaryGreyText,
               ),
             ),
             AppSizes.size28.verticalSpace,
@@ -101,7 +101,7 @@ class AppForm extends ConsumerWidget {
             CustomButton(
               buttonText: AppLocalizations.of(context).signUp,
               buttonTextStyle: AppStyles.textStyle14(
-                textColor: AppColors.color.kPrimaryBlue,
+                fontColor: AppColors.color.kPrimaryBlue,
               ),
               buttonBackgroundColor: AppColors.color.kSecondaryWhite,
               buttonBorderColor: AppColors.color.kPrimaryBlue,

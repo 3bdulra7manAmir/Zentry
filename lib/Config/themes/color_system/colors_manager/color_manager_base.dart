@@ -13,7 +13,7 @@ abstract class ColorManagerBase
   /// [Quinary__003082_3E6FCF]
   Color get kQuinarySemiBlueText;
   Color get kForgetPasswordUnderLine;
-  Color get kReadMoreTextColor;
+  Color get kReadMorefontColor;
 
   /// [Secondary__FFFFFF]
   Color get kSecondaryWhite;
@@ -54,6 +54,10 @@ abstract class ColorManagerBase
   Color get kSemiGreyAgain;
   /// [Septenary_kSemiGrey2__ECECEC]
   Color get kSemiGrey2;
+  /// [Septenary_kSemiGrey3__E4E4E4]
+  Color get kSemiGrey3;
+  /// [Septenary_kSemiGrey4__8C8C8C]
+  Color get kSemiGrey4;
 
   /// [Senary_TotalBlack__000000]
   Color get kSenaryTotalBlackText;

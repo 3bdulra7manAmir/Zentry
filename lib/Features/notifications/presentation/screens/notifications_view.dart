@@ -21,7 +21,7 @@ class NotificationsView extends StatelessWidget
   {
     return Scaffold(
       appBar: CustomAppBar(
-        barTitle: Text(AppLocalizations.of(context).notification, style: AppStyles.textStyle18(textColor: AppColors.color.kOctonarySemiBlackText, fontWeight: AppFontWeights.regularWeight,),),
+        barTitle: Text(AppLocalizations.of(context).notification, style: AppStyles.textStyle18(fontColor: AppColors.color.kOctonarySemiBlackText, fontWeight: AppFontWeights.regularWeight,),),
         barActions: [Image.asset(AppAssets.iconsPNG.searchDarkPNG)],
         barActionsPadding: AppPadding.kSearchIconPadding,
       ),

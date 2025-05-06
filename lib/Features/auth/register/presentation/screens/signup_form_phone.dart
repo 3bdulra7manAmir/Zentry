@@ -80,7 +80,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
               AppSizes.size24.verticalSpace,
               Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                   fontWeight: AppFontWeights.mediumWeight,
-                  textColor: AppColors.color.kQuinarySemiBlueText,
+                  fontColor: AppColors.color.kQuinarySemiBlueText,
                   textDecoration: TextDecoration.underline,
                   textDecorationColor: AppColors.color.kQuinarySemiBlueText,
                 ),

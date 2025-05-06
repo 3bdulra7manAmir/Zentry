@@ -28,7 +28,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
           fontWeight: AppFontWeights.semiBoldWeight,
-          textColor: AppColors.color.kSenaryTotalBlackText,
+          fontColor: AppColors.color.kSenaryTotalBlackText,
         ),),
       ),
       body: SingleChildScrollView(
@@ -40,21 +40,21 @@ class ForgetPasswordWithEmailView extends StatelessWidget
               Text(
                 AppLocalizations.of(context).forgotPassword,
                 style: AppStyles.textStyle20(
-                  textColor: AppColors.color.kSenaryTotalBlackText,
+                  fontColor: AppColors.color.kSenaryTotalBlackText,
                 ),
               ),
               AppSizes.size13.verticalSpace,
               Text(
                 AppLocalizations.of(context).enterPhoneNumberAssociated,
                 style: AppStyles.textStyle16(
-                  textColor: AppColors.color.kSecondarySemiGreyText,
+                  fontColor: AppColors.color.kSecondarySemiGreyText,
                 ),
               ),
               AppSizes.size7.verticalSpace,
               Text(
                 AppLocalizations.of(context).withYourAccount,
                 style: AppStyles.textStyle14(
-                  textColor: AppColors.color.kSecondarySemiGreyText,
+                  fontColor: AppColors.color.kSecondarySemiGreyText,
                   fontWeight: AppFontWeights.regularWeight,
                 ),
               ),
@@ -87,7 +87,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                           AppLocalizations.of(context).dontHaveEmail,
                           style: AppStyles.textStyle14(
                             fontWeight: AppFontWeights.mediumWeight,
-                            textColor: AppColors.color.kSeptenarySemiGreyText,
+                            fontColor: AppColors.color.kSeptenarySemiGreyText,
                           ),
                         ),
                         AppSizes.size14.horizontalSpace,
@@ -100,7 +100,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                             AppLocalizations.of(context).tryAnotherWay,
                             style: AppStyles.textStyle14(
                               fontWeight: AppFontWeights.mediumWeight,
-                              textColor: AppColors.color.kQuinarySemiBlueText,
+                              fontColor: AppColors.color.kQuinarySemiBlueText,
                               textDecoration: TextDecoration.underline,
                               textDecorationColor:
                                   AppColors.color.kQuinarySemiBlueText,

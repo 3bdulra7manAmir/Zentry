@@ -114,7 +114,7 @@ ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
 Object? tabBarTheme = TabBarTheme(
   indicatorSize: TabBarIndicatorSize.tab,
   labelColor: AppColors.color.kTabBar,
-  labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kTabBar,),
+  labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kTabBar,),
   unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
   indicatorColor: AppColors.color.kTabBar,
 );

@@ -60,7 +60,7 @@ class FormHeader extends ConsumerWidget {
                     child: Text(
                       upperRightText ?? "",
                       style: AppStyles.textStyle13(
-                        textColor: AppColors.color.kTertiaryWhiteText,
+                        fontColor: AppColors.color.kTertiaryWhiteText,
                         textDecoration: TextDecoration.underline,
                         textDecorationColor: AppColors.color.kTertiaryWhiteText,
                       ),

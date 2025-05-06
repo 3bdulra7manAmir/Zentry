@@ -49,7 +49,7 @@ class DefaultNotificationCard extends StatelessWidget
                                 Text(
                                   "Ibrahim", style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
-                                    textColor: AppColors.color.kQuinarySemiBlueText,
+                                    fontColor: AppColors.color.kQuinarySemiBlueText,
                                   ),
                                 ),
                                 AppSizes.size3.horizontalSpace,

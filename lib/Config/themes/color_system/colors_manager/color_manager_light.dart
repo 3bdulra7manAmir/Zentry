@@ -18,7 +18,7 @@ class LightColorScheme extends ColorManagerBase {
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
 
     @override
-  Color get kReadMoreTextColor => const Color(0xff1963D6);
+  Color get kReadMorefontColor => const Color(0xff1963D6);
 
   @override
   Color get kForgetPasswordUnderLine => const Color(0xff3E6FCF);
@@ -51,11 +51,15 @@ class LightColorScheme extends ColorManagerBase {
   Color get kNonarySemiGreyText => const Color(0xff717171);
   @override //REVERSED
   Color get kSemiGreyAgain => const Color(0xff9A9A9A);
+  @override
+  Color get kSemiGrey4 => const Color(0xff8C8C8C);
 
   @override
   Color get kSecondarySemiGreyText => const Color(0xff9E9E9E);
   @override
   Color get kSemiGrey2 => const Color(0xffECECEC);
+  @override
+  Color get kSemiGrey3 => const Color(0xffE4E4E4);
 
   @override
   Color get kTertiarySemiGrey => const Color(0xffB4B4B4);

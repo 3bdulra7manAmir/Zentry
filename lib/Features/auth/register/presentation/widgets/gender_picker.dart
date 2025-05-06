@@ -111,7 +111,7 @@ class _GenderOption extends StatelessWidget
               children:
               [
                 Image.asset(image),
-                Text(label, style: AppStyles.textStyle17(textColor: AppColors.color.kOctonarySemiBlackText),),
+                Text(label, style: AppStyles.textStyle17(fontColor: AppColors.color.kOctonarySemiBlackText),),
               ],
             ),
             Radio<String>(

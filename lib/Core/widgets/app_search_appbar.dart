@@ -31,7 +31,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
             [
               Image.asset("assets/icons/Notifications/Location.png"),
               AppSizes.size6.horizontalSpace,
-              Text("Cairo,Egypt", style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondarySemiGreyText,),),
+              Text("Cairo,Egypt", style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
               AppSizes.size16.horizontalSpace,
             ],
           ),

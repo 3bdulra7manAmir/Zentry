@@ -31,7 +31,7 @@ class ProductsItem extends StatelessWidget
         AppSizes.size8.verticalSpace,
         Text(AppLocalizations.of(context).vehciles, style: AppStyles.textStyle10(
           fontWeight: AppFontWeights.semiBoldWeight,
-          textColor: AppColors.color.kSeptenarySemiGreyText),
+          fontColor: AppColors.color.kSeptenarySemiGreyText),
         ),
       ],
     );

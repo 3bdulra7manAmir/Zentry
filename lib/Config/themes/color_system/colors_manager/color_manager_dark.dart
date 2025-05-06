@@ -21,7 +21,7 @@ class DarkColorScheme extends ColorManagerBase {
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
 
   @override
-  Color get kReadMoreTextColor => const Color(0xff1963D6);
+  Color get kReadMorefontColor => const Color(0xff1963D6);
   
   @override
   Color get kProductItemBackground => const Color(0xff87D1E5);
@@ -35,6 +35,10 @@ class DarkColorScheme extends ColorManagerBase {
   Color get kSemiGrey => const Color(0xffF3F3F3);
   @override
   Color get kSemiGrey2 => const Color(0xffECECEC);
+  @override
+  Color get kSemiGrey3 => const Color(0xffE4E4E4);
+  @override
+  Color get kSemiGrey4 => const Color(0xff8C8C8C);
   
 
   @override

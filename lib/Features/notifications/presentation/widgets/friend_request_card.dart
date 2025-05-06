@@ -50,7 +50,7 @@ class FriendRequestCard extends StatelessWidget
                               [
                                 Text(AppLocalizations.of(context).adham, style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
-                                    textColor: AppColors.color.kQuinarySemiBlueText,
+                                    fontColor: AppColors.color.kQuinarySemiBlueText,
                                   ),
                                 ),
                                 AppSizes.size3.horizontalSpace,
@@ -86,7 +86,7 @@ class FriendRequestCard extends StatelessWidget
                   flex: 2,
                   child: CustomButton(
                     buttonText: AppLocalizations.of(context).accept,
-                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondaryWhite),
+                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondaryWhite),
                     buttonWidth: 114.w,
                     buttonHeight: 33.h,
                     buttonBorderRadius: AppBorders.buttonBorder5,
@@ -98,7 +98,7 @@ class FriendRequestCard extends StatelessWidget
                   flex: 2,
                   child: CustomButton(
                     buttonText: AppLocalizations.of(context).reject,
-                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondarySemiGreyTextDark),
+                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyTextDark),
                     buttonWidth: 114.w,
                     buttonHeight: 33.h,
                     buttonBorderRadius: AppBorders.buttonBorder5,

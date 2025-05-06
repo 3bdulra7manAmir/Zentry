@@ -38,11 +38,11 @@ class SearchResultCard extends StatelessWidget
                 Row(
                   children:
                   [
-                    Text(AppLocalizations.of(context).k800000, style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                    Text(AppLocalizations.of(context).k800000, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                     AppSizes.size2.horizontalSpace,
-                    Text(AppLocalizations.of(context).le, style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                    Text(AppLocalizations.of(context).le, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                     AppSizes.size6.horizontalSpace,
-                    Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(textColor: AppColors.color.kQuinarySemiBlueText),),
+                    Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),),
                     AppSizes.size14.horizontalSpace,
                     Image.asset(AppAssets.iconsPNG.scanPNG),
                     AppSizes.size6.horizontalSpace,
@@ -50,7 +50,7 @@ class SearchResultCard extends StatelessWidget
                   ],
                 ),
                 AppSizes.size12.verticalSpace,
-                Text(AppLocalizations.of(context).bmw320Model2019, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppLocalizations.of(context).bmw320Model2019, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
                 AppSizes.size18.verticalSpace,
                 Row(
                   children:
@@ -74,7 +74,7 @@ class SearchResultCard extends StatelessWidget
                   [
                     Image.asset(AppAssets.iconsPNG.locationPNG),
                     AppSizes.size6.horizontalSpace,
-                    Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSecondarySemiGreyText,),),
+                    Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
                     AppSizes.size16.horizontalSpace,
                   ],
                 ),

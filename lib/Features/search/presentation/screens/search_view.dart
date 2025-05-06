@@ -32,8 +32,8 @@ class SearchView extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:
                     [
-                      Text(AppLocalizations.of(context).categories, style: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAgainTextDark),),
-                      Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kForgetPasswordUnderLine),),
+                      Text(AppLocalizations.of(context).categories, style: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kAgainTextDark),),
+                      Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kForgetPasswordUnderLine),),
                     ],
                   ),
                   AppSizes.size3.verticalSpace,

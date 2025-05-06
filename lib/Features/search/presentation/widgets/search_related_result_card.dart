@@ -20,14 +20,14 @@ class SearchRelatedResultCard extends StatelessWidget
       [
         Image.asset(AppAssets.iconsPNG.catPNG),
         AppSizes.size16.horizontalSpace,
-        Text(AppLocalizations.of(context).pets, style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText, fontWeight: AppFontWeights.semiBoldWeight),),
+        Text(AppLocalizations.of(context).pets, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText, fontWeight: AppFontWeights.semiBoldWeight),),
         AppSizes.size8.horizontalSpace,
         Container(
           height: 20.h,
           width: 20.w,
           alignment: Alignment.center,
           decoration: BoxDecoration(borderRadius: AppBorders.kProductItemRadius, color: AppColors.color.kQuinarySemiBlueText),
-          child: Text(AppLocalizations.of(context).num1, style: AppStyles.textStyle14(textColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.semiBoldWeight),),
+          child: Text(AppLocalizations.of(context).num1, style: AppStyles.textStyle14(fontColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.semiBoldWeight),),
         ),
         const Spacer(),
         Image.asset(AppAssets.iconsPNG.wrongPNG),

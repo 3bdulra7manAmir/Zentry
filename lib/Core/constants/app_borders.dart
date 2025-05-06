@@ -13,7 +13,7 @@ abstract class AppBorders
   );
 
   /// [TopLeft_16.TopRight_16]
-  static BorderRadiusGeometry smallCardsBorder = BorderRadius.only(
+  static BorderRadiusGeometry smallCardActionsBorder = BorderRadius.only(
     topLeft: Radius.circular(16.r),
     topRight: Radius.circular(16.r),
   );
@@ -22,6 +22,12 @@ abstract class AppBorders
   static BorderRadiusGeometry indicatorBorder = BorderRadius.only(
     topLeft: Radius.circular(12.r),
     topRight: Radius.circular(12.r),
+  );
+
+  /// [TopLeft_10.TopRight_10]
+  static BorderRadiusGeometry followBusinessPageBorder = BorderRadius.only(
+    topLeft: Radius.circular(10.r),
+    topRight: Radius.circular(10.r),
   );
 
   //Divider

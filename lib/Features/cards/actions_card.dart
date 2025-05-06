@@ -11,7 +11,7 @@ void showActionsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.smallCardsBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.followBusinessPageBorder),
     builder: (BuildContext context)
     {
       return Padding(
@@ -37,7 +37,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Actions/Eye.png"),
                 AppSizes.size16.horizontalSpace,
-                Text("View", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("View", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
               ],
@@ -48,7 +48,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Actions/Replay.png"),
                 AppSizes.size16.horizontalSpace,
-                Text("Replay", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Replay", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
               ],
@@ -60,7 +60,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Actions/Block.png"),
                 AppSizes.size16.horizontalSpace,
-                Text("Block", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Block", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
               ],
@@ -72,7 +72,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Actions/Favourite.png"),
                 AppSizes.size16.horizontalSpace,
-                Text("Favourite", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Favourite", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
               ],

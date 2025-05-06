@@ -37,11 +37,11 @@ class SearchResultCardDetailed extends StatelessWidget
                 Row(
                   children:
                   [
-                    Text(AppLocalizations.of(context).threeHundred, style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                    Text(AppLocalizations.of(context).threeHundred, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                     AppSizes.size2.horizontalSpace,
-                    Text(AppLocalizations.of(context).le, style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                    Text(AppLocalizations.of(context).le, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                     AppSizes.size6.horizontalSpace,
-                    Text(AppLocalizations.of(context).cash, style: AppStyles.textStyle8(textColor: AppColors.color.kQuinarySemiBlueText),),
+                    Text(AppLocalizations.of(context).cash, style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),),
                     AppSizes.size22.horizontalSpace,
                     Image.asset(AppAssets.iconsPNG.scanPNG),
                     AppSizes.size6.horizontalSpace,
@@ -49,7 +49,7 @@ class SearchResultCardDetailed extends StatelessWidget
                   ],
                 ),
                 AppSizes.size10.verticalSpace,
-                Text(AppLocalizations.of(context).audiRs7Quattro, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppLocalizations.of(context).audiRs7Quattro, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
                 AppSizes.size14.verticalSpace,
                 Row(
                   children:

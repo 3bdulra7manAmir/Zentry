@@ -12,7 +12,7 @@ void showPostOptionsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.smallCardsBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.smallCardActionsBorder),
     builder: (BuildContext context)
     {
       return Padding(
@@ -28,7 +28,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Home/Save.png"),
                 AppSizes.size12.horizontalSpace,
-                Text("Save", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Save", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Text("See All", style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
               ],
@@ -47,7 +47,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Home/Copy.png"),
                 AppSizes.size12.horizontalSpace,
-                Text("Copy Links", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Copy Links", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -64,7 +64,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Home/Bill.png"),
                 AppSizes.size12.horizontalSpace,
-                Text("Turn on Notification", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Turn on Notification", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
                 Text("See All", style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
               ],
@@ -83,7 +83,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset("assets/icons/Home/Report.png"),
                 AppSizes.size12.horizontalSpace,
-                Text("Report", style: AppStyles.textStyle14(textColor: AppColors.color.kSenaryTotalBlackText),),
+                Text("Report", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
               ],
             ),
             AppSizes.size32.verticalSpace,

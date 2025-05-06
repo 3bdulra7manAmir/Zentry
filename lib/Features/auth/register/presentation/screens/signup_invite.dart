@@ -91,7 +91,7 @@ class SignUpFormInvite extends ConsumerWidget
 
               Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                 fontWeight: AppFontWeights.mediumWeight,
-                textColor: AppColors.color.kQuinarySemiBlueText,
+                fontColor: AppColors.color.kQuinarySemiBlueText,
                 ),
               ),
 

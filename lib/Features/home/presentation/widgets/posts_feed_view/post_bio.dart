@@ -24,7 +24,7 @@ class PostBio extends StatelessWidget
           children:
           [
             Text("Mercedes AMG G63", style: AppStyles.textStyle14(
-              textColor: AppColors.color.kSeptenarySemiGreyText,
+              fontColor: AppColors.color.kSeptenarySemiGreyText,
               fontWeight: AppFontWeights.semiBoldWeight),
             ),
             Container(
@@ -37,7 +37,7 @@ class PostBio extends StatelessWidget
               child: Center(
                 child: Text("3,000,000 EGP", style: AppStyles.textStyle14(
                   fontWeight: AppFontWeights.semiBoldWeight, 
-                  textColor: AppColors.color.kSeptenarySemiGreyText),
+                  fontColor: AppColors.color.kSeptenarySemiGreyText),
                 ),
               ),
             ),
@@ -53,11 +53,11 @@ class PostBio extends StatelessWidget
           style: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight),
           moreStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            fontColor: AppColors.color.kReadMoreTextColor,
+            fontColor: AppColors.color.kReadMorefontColor,
           ),
           lessStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            fontColor: AppColors.color.kReadMoreTextColor,
+            fontColor: AppColors.color.kReadMorefontColor,
           ),
         ),
       ],

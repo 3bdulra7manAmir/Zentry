@@ -46,7 +46,7 @@ class NumericKeyboard extends ConsumerWidget {
             child: Text(
               keys[index],
               style: AppStyles.textStyle18(
-                textColor: AppColors.color.kSeptenarySemiGreyText,
+                fontColor: AppColors.color.kSeptenarySemiGreyText,
               ),
             ),
           ),

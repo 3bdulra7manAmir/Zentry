@@ -18,6 +18,9 @@ abstract class AppPadding
   static EdgeInsets kAppFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
   /// [Symmetric_18_H]
   static EdgeInsets kCreatePanelPadding = EdgeInsets.symmetric(horizontal: 18.w);
+
+  /// [Symmetric_21_H]  
+  static EdgeInsets kFollowingBusinessPagePadding = EdgeInsets.symmetric(horizontal: 21.w);
   /// [Symmetric_15_H]
   static EdgeInsets kApp15Padding = EdgeInsets.symmetric(horizontal: 15.w);
   /// [Symmetric_10_H]
