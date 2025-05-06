@@ -1,5 +1,8 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test_app/features/cards/watch_tutorial.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
@@ -19,7 +22,7 @@ abstract class AppRouter
 {
   AppRouter._();
   static final router = GoRouter(
-    initialLocation: AppRoutes.kHomeView, //kSearchResultsView //kSearchView //kHomeView //kTestView
+    initialLocation: AppRoutes.kTestView, //kSearchResultsView //kSearchView //kHomeView //kTestView
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
     routes:
     [
@@ -27,7 +30,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.kTestView,
         name: AppRoutes.kTestView,
-        builder: (context, state) => const MyHomePage(),
+        builder: (context, state) => const WatchTutorial(),
       ),
       
       //App Splash View

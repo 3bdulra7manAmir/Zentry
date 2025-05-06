@@ -22,10 +22,12 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
         children:
         [
           const FollowBusinessCardHeader(),
-          AppListviewBuilder(
-            itemBuilder: (context, index) => const FollowBusinessCard(), 
-            separatorBuilder: (context, index) => AppSizes.size16.verticalSpace,
-            itemCount: 12, 
+          Expanded(
+            child: AppListviewBuilder(
+              itemBuilder: (context, index) => const FollowBusinessCard(), 
+              separatorBuilder: (context, index) => AppSizes.size16.verticalSpace,
+              itemCount: 12, 
+            ),
           ),
         ],
       );
