@@ -45,6 +45,10 @@ abstract class AppBorders
   static BorderRadius kProductItemRadius = BorderRadius.circular(50.r);
 
   //Text Form Field
+  /// [Circular_100]
+  static BorderRadius kCardRadius100 = BorderRadius.circular(100.r);
+
+  //Text Form Field
   /// [Circular_1]
   static BorderRadius datePicker1 = BorderRadius.circular(1.r);
 }

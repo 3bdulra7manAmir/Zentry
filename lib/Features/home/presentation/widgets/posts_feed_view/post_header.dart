@@ -6,6 +6,7 @@ import 'package:test_app/core/constants/app_styles.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../cards/post_card.dart';
+import '../../../../cards/actions_card.dart';
 
 class PostHeader extends StatelessWidget
 {
@@ -36,7 +37,8 @@ class PostHeader extends StatelessWidget
         ),
         const Spacer(),
         InkWell(
-          onTap: () => showPostOptionsBottomSheet(context),
+          //onTap: () => showPostOptionsBottomSheet(context),
+          onTap: () => showActionsBottomSheet(context),
           child: Image.asset("assets/icons/Home/3Grey_Dots.png")
         ),
       ],

@@ -129,6 +129,7 @@ flutter:
     - assets/icons/Search_Result/
     - assets/icons/Search_Related_Results/
     - assets/icons/Home/
+    - assets/icons/Actions/
     - assets/icons/Bottom_Nav_Bar/
     - assets/images/
 
