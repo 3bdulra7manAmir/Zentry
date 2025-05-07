@@ -14,6 +14,7 @@ void showPostOptionsBottomSheet(BuildContext context)
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
+    //isScrollControlled: true,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.smallCardActionsBorder),
     builder: (BuildContext context)

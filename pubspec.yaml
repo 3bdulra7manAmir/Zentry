@@ -132,6 +132,8 @@ flutter:
     - assets/icons/Actions/
     - assets/icons/Follow_Business_Page/
     - assets/icons/WatchTutorial/
+    - assets/icons/Join_Groups/
+    - assets/icons/Money_From_Interests/
     - assets/icons/Bottom_Nav_Bar/
     - assets/images/
 

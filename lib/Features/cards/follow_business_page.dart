@@ -18,6 +18,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
+    //isScrollControlled: true,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
     builder: (BuildContext context)
@@ -25,7 +26,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
       return Column(
         children:
         [
-          const FollowBusinessCardHeader(),
+          const FollowBusinessCardHeader(headerText: AppStrings.followBusinessPage,),
           Expanded(
             child: AppListviewBuilder(
               itemBuilder: (context, index) => const FollowBusinessCard(), 
@@ -42,7 +43,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
               color: AppColors.color.kFormButtonsFill,
             ),
             child: const CustomButton(buttonText: AppStrings.next,),
-          )
+          ),
         ],
       );
     },
@@ -51,7 +52,10 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
 
 class FollowBusinessCardHeader extends StatelessWidget
 {
-  const FollowBusinessCardHeader({super.key,});
+  const FollowBusinessCardHeader({super.key, required this.headerText, this.actionsIcon,});
+
+  final String headerText;
+  final Widget? actionsIcon;
 
   @override
   Widget build(BuildContext context)
@@ -68,9 +72,9 @@ class FollowBusinessCardHeader extends StatelessWidget
             AppSizes.size10.horizontalSpace,
             Image.asset(AppAssets.iconsPNG.closePNG),
             const Spacer(),
-            Text(AppStrings.followBusinessPage, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
+            Text(headerText, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
             const Spacer(),
-            Image.asset(AppAssets.iconsPNG.vaultPNG),
+            actionsIcon ?? Image.asset(AppAssets.iconsPNG.vaultPNG),
             AppSizes.size16.horizontalSpace,
           ],
         ),

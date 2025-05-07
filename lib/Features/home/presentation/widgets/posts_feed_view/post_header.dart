@@ -8,6 +8,8 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../cards/follow_business_page.dart';
+import '../../../../cards/join_groups.dart';
+import '../../../../cards/moeny_from_interests.dart';
 import '../../../../cards/post_card.dart';
 import '../../../../cards/actions_card.dart';
 
@@ -42,7 +44,9 @@ class PostHeader extends StatelessWidget
         InkWell(
           //onTap: () => showPostOptionsBottomSheet(context),
           //onTap: () => showActionsBottomSheet(context),
-          onTap: () => showFollowBusinessPageBottomSheet(context),
+          //onTap: () => showFollowBusinessPageBottomSheet(context),
+          //onTap: () => showJoinGroupsBottomSheet(context),
+          onTap: () => showMoenyFromInterestsBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
         ),
       ],

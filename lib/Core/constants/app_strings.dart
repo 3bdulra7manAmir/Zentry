@@ -320,11 +320,18 @@ abstract class AppStrings {
   static const turnOnNotification = "Turn on Notification";
   static const report = "Report";
 
+  //App Join Groups Card
+  static const joinGroups = "Join Groups";
+
+  //App Moeny From Interests Card
+  static const moenyFromInterests = "Moeny From Interests";
+
+
   //App Watch Tutorial
   static const watchTutorial = "Watch Tutorial";
 
   ///App Home View
-  static const vehciles = "Vehciles";
+  static const vehicles = "Vehicles";
 
   //Post Bio
   static const mercedesAMGG63 = "Mercedes AMG G63";
