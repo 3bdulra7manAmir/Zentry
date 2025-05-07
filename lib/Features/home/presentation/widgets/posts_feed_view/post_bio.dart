@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:readmore/readmore.dart';
-import 'package:test_app/Core/constants/app_borders.dart';
-import 'package:test_app/config/themes/color_system/colors_manager/app_colors.dart';
-import 'package:test_app/config/themes/font_system/app_font_weights.dart';
-import 'package:test_app/core/constants/app_sizes.dart';
-import 'package:test_app/core/constants/app_styles.dart';
+
+import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_strings.dart';
+import '../../../../../core/constants/app_styles.dart';
+
 
 class PostBio extends StatelessWidget
 {
@@ -20,10 +23,9 @@ class PostBio extends StatelessWidget
       [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Text("Mercedes AMG G63", style: AppStyles.textStyle14(
+            Text(AppStrings.mercedesAMGG63, style: AppStyles.textStyle14(
               fontColor: AppColors.color.kSeptenarySemiGreyText,
               fontWeight: AppFontWeights.semiBoldWeight),
             ),
@@ -35,7 +37,7 @@ class PostBio extends StatelessWidget
                 border: Border.all(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width2),
               ),
               child: Center(
-                child: Text("3,000,000 EGP", style: AppStyles.textStyle14(
+                child: Text(AppStrings.threeHundredEGP, style: AppStyles.textStyle14(
                   fontWeight: AppFontWeights.semiBoldWeight, 
                   fontColor: AppColors.color.kSeptenarySemiGreyText),
                 ),

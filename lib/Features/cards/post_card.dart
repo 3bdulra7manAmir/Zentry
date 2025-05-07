@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/font_system/app_font_weights.dart';
-import 'package:test_app/core/constants/app_styles.dart';
 import '../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../config/themes/font_system/app_font_weights.dart';
 import '../../core/constants/app_borders.dart';
+import '../../core/constants/app_images.dart';
+import '../../core/constants/app_padding.dart';
 import '../../core/constants/app_sizes.dart';
+import '../../core/constants/app_strings.dart';
+import '../../core/constants/app_styles.dart';
 
 void showPostOptionsBottomSheet(BuildContext context)
 {
@@ -16,7 +19,7 @@ void showPostOptionsBottomSheet(BuildContext context)
     builder: (BuildContext context)
     {
       return Padding(
-        padding: EdgeInsetsDirectional.only(start: 25.w, end: 36.w),
+        padding: AppPadding.kPostOptionsPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -26,11 +29,11 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Home/Save.png"),
+                Image.asset(AppAssets.iconsPNG.savePNG),
                 AppSizes.size12.horizontalSpace,
-                Text("Save", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.save, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
-                Text("See All", style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
+                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -45,9 +48,9 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Home/Copy.png"),
+                Image.asset(AppAssets.iconsPNG.copyPNG),
                 AppSizes.size12.horizontalSpace,
-                Text("Copy Links", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -62,11 +65,11 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Home/Bill.png"),
+                Image.asset(AppAssets.iconsPNG.billPNG),
                 AppSizes.size12.horizontalSpace,
-                Text("Turn on Notification", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
-                Text("See All", style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
+                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -81,9 +84,9 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Home/Report.png"),
+                Image.asset(AppAssets.iconsPNG.reportPNG),
                 AppSizes.size12.horizontalSpace,
-                Text("Report", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.report, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
               ],
             ),
             AppSizes.size32.verticalSpace,

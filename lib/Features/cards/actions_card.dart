@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/constants/app_styles.dart';
 import '../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../core/constants/app_borders.dart';
+import '../../core/constants/app_images.dart';
+import '../../core/constants/app_padding.dart';
 import '../../core/constants/app_sizes.dart';
+import '../../core/constants/app_strings.dart';
+import '../../core/constants/app_styles.dart';
 
 void showActionsBottomSheet(BuildContext context)
 {
@@ -15,7 +18,7 @@ void showActionsBottomSheet(BuildContext context)
     builder: (BuildContext context)
     {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 22.w),
+        padding: AppPadding.kActionsCardPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
@@ -35,34 +38,22 @@ void showActionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Actions/Eye.png"),
+                Image.asset(AppAssets.iconsPNG.actionEyeCardPNG),
                 AppSizes.size16.horizontalSpace,
-                Text("View", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.view, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
-                Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
+                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
               ],
             ),
             AppSizes.size50.verticalSpace,
             Row(
               children:
               [
-                Image.asset("assets/icons/Actions/Replay.png"),
+                Image.asset(AppAssets.iconsPNG.actionsReplayPNG),
                 AppSizes.size16.horizontalSpace,
-                Text("Replay", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
-                Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
-              ],
-            ),
-
-            AppSizes.size50.verticalSpace,
-            Row(
-              children:
-              [
-                Image.asset("assets/icons/Actions/Block.png"),
-                AppSizes.size16.horizontalSpace,
-                Text("Block", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
-                const Spacer(),
-                Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
+                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
               ],
             ),
 
@@ -70,11 +61,23 @@ void showActionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset("assets/icons/Actions/Favourite.png"),
+                Image.asset(AppAssets.iconsPNG.actionsBlockPNG),
                 AppSizes.size16.horizontalSpace,
-                Text("Favourite", style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.block, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                 const Spacer(),
-                Image.asset("assets/icons/Actions/Left_Black_Arrow.png"),
+                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
+              ],
+            ),
+
+            AppSizes.size50.verticalSpace,
+            Row(
+              children:
+              [
+                Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
+                AppSizes.size16.horizontalSpace,
+                Text(AppStrings.favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                const Spacer(),
+                Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
               ],
             ),
             AppSizes.size45.verticalSpace,

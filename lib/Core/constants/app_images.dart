@@ -73,6 +73,8 @@ class _AppIconsPNG
   final String searchDarkPNG = "assets/icons/Notifications/Search.png";
   final String adhamPNG = "assets/icons/Notifications/Adham.png";
   final String horzintal3BlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
+  final String ibrahimPNG = "assets/icons/Notifications/Ibrahim.png";
+  final String threeHorzintalBlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
 
   final String carAudiPNG = "assets/icons/Search_Result/Car_Audi.png";
   final String scanPNG = "assets/icons/Search_Result/Scan.png";
@@ -96,7 +98,35 @@ class _AppIconsPNG
   final String messagesWithBgPNG = "assets/icons/Home/Messages_With_Bg.png";
   final String carBluePNG = "assets/icons/Home/Car_Blue.png";
   final String storyRobotPNG = "assets/icons/Home/Story_Robot.png";
+  final String postUserIcon = "assets/icons/Home/Post_User_Icon.png";
+  final String threeGreyDotsPNG = "assets/icons/Home/3Grey_Dots.png";
+  final String carMercPNG = "assets/icons/Home/Car_Merc.png";
+  final String storyCreate = "assets/icons/Home/Story_Create.png";
+  final String camera = "assets/icons/Home/Camera.png";
+  final String robotBoySUIIZ = "assets/icons/Home/Robot_Boy_SUIIZ.png";
 
+  //App Actions Card
+  final String actionEyeCardPNG = "assets/icons/Actions/Eye.png";
+  final String actionsLeftBlackArrowPNG = "assets/icons/Actions/Left_Black_Arrow.png";
+  final String actionsReplayPNG = "assets/icons/Actions/Replay.png";
+  final String actionsBlockPNG = "assets/icons/Actions/Block.png";
+  final String actionsFavouritePNG = "assets/icons/Actions/Favourite.png";
+
+  //App Follow Business Page
+  final String vaultPNG = "assets/icons/Follow_Business_Page/Vault.png";
+  final String closePNG = "assets/icons/Follow_Business_Page/Close.png";
+  final String bmwPNG = "assets/icons/Follow_Business_Page/BMW_Logo.png";
+
+  //App Post Card
+  final String savePNG = "assets/icons/Home/Save.png";
+  final String copyPNG = "assets/icons/Home/Copy.png";
+  final String billPNG = "assets/icons/Home/Bill.png";
+  final String reportPNG = "assets/icons/Home/Report.png";
+
+  //App Watch Tutorial
+  final String exitPNG = "assets/icons/WatchTutorial/Exit.png";
+  final String playCirclePNG = "assets/icons/WatchTutorial/Play_Circle.png";
+  
 }
 
 ///-----------------------------------------------------------------//

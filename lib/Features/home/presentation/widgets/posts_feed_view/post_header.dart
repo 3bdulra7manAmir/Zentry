@@ -1,12 +1,12 @@
 // ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/color_system/colors_manager/app_colors.dart';
-import 'package:test_app/config/themes/font_system/app_font_weights.dart';
-import 'package:test_app/core/constants/app_styles.dart';
-
+import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_strings.dart';
+import '../../../../../core/constants/app_styles.dart';
 import '../../../../cards/follow_business_page.dart';
 import '../../../../cards/post_card.dart';
 import '../../../../cards/actions_card.dart';
@@ -21,18 +21,18 @@ class PostHeader extends StatelessWidget
     return Row(
       children:
       [
-        Image.asset("assets/icons/Home/Post_User_Icon.png"),
+        Image.asset(AppAssets.iconsPNG.postUserIcon),
         AppSizes.size8.horizontalSpace,
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            Text("REUEAL & Staging", style: AppStyles.textStyle12(
+            Text(AppStrings.reuealAndStaging, style: AppStyles.textStyle12(
               fontColor: AppColors.color.kQuaternarySemiBlackText,
               fontWeight: AppFontWeights.semiBoldWeight),
             ),
             AppSizes.size4.verticalSpace,
-            Text("Just Now", style: AppStyles.textStyle10(
+            Text(AppStrings.justNow, style: AppStyles.textStyle10(
               fontColor: AppColors.color.kTertiarySemiGrey,
               fontWeight: AppFontWeights.mediumWeight),
             ),
@@ -43,7 +43,7 @@ class PostHeader extends StatelessWidget
           //onTap: () => showPostOptionsBottomSheet(context),
           //onTap: () => showActionsBottomSheet(context),
           onTap: () => showFollowBusinessPageBottomSheet(context),
-          child: Image.asset("assets/icons/Home/3Grey_Dots.png")
+          child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
         ),
       ],
     );

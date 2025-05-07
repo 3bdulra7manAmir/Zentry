@@ -294,6 +294,49 @@ abstract class AppStrings {
   static const clear = "Clear";
   static const relatedResults = "Related results";
   static const pets = "Pets";
+  static const ibrahim = "Ibrahim";
+  static const commentOnYourProduct = "Comment on your product";
+  static const iPhone14promax = "iPhone 14 pro max";
+  static const oneDayAgo = "1 Day Ago";
 
+  
+
+  //App Actions Card
+  static const view = "View";
+  static const replay = "Replay";
+  static const block = "Block";
+  static const favourite = "Favourite";
+
+  //App Follow Business Page Card
+  static const followBusinessPage = "Follow Business page";
+  static const next = "Next";
+  static const elSayadMotor = "El Sayad Motor";
+  static const carServices = "Car Services";
+
+  //App Show Options Card
+  static const save = "Save";
+  static const seeAll = "See All";
+  static const copyLinks = "Copy Links";
+  static const turnOnNotification = "Turn on Notification";
+  static const report = "Report";
+
+  //App Watch Tutorial
+  static const watchTutorial = "Watch Tutorial";
+
+  ///App Home View
   static const vehciles = "Vehciles";
+
+  //Post Bio
+  static const mercedesAMGG63 = "Mercedes AMG G63";
+  static const threeHundredEGP = "3,000,000 EGP";
+  static const reuealAndStaging = "REUEAL & Staging";
+  static const justNow = "Just Now";
+
+  //Create Story
+  static const createStory = "Create Story";
+
+  //User Strory
+  static const elHawiMotors = "El Hawi Motors";
+  
+
 }

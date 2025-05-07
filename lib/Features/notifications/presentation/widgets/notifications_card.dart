@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
+import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 
 class DefaultNotificationCard extends StatelessWidget
@@ -30,7 +32,7 @@ class DefaultNotificationCard extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Image.asset("assets/icons/Notifications/Ibrahim.png"),
+                Image.asset(AppAssets.iconsPNG.ibrahimPNG),
                 AppSizes.size13.horizontalSpace,
                 Expanded(
                   child: Column(
@@ -46,37 +48,34 @@ class DefaultNotificationCard extends StatelessWidget
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children:
                               [
-                                Text(
-                                  "Ibrahim", style: AppStyles.textStyle14(
+                                Text(AppStrings.ibrahim, style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
                                     fontColor: AppColors.color.kQuinarySemiBlueText,
                                   ),
                                 ),
                                 AppSizes.size3.horizontalSpace,
                                 Flexible(
-                                  child: Text(
-                                    "Comment on your product", style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight,),
+                                  child: Text(AppStrings.commentOnYourProduct, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight,),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          Image.asset("assets/icons/Notifications/3Horzintal_Black_Dots.png"),
+                          Image.asset(AppAssets.iconsPNG.threeHorzintalBlackDotsPNG),
                           AppSizes.size16.horizontalSpace,
                         ],
                       ),
                       AppSizes.size8.verticalSpace,
                       Row(
-                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children:
                         [
-                          Text("iPhone 14 pro max", style: AppStyles.textStyle12(
+                          Text(AppStrings.iPhone14promax, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kSemiGreyText,
                           ),),
                           const Spacer(),
-                          Text("1 Day Ago", style: AppStyles.textStyle12(
+                          Text(AppStrings.oneDayAgo, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kSemiGreyText,
                           ),),

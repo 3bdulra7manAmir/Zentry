@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/Core/constants/app_padding.dart';
-import 'package:test_app/config/themes/font_system/app_font_weights.dart';
-import 'package:test_app/core/constants/app_styles.dart';
-import 'package:test_app/core/widgets/app_listview_builder.dart';
+
 import '../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../config/themes/font_system/app_font_weights.dart';
 import '../../core/constants/app_borders.dart';
+import '../../core/constants/app_images.dart';
+import '../../core/constants/app_padding.dart';
 import '../../core/constants/app_sizes.dart';
+import '../../core/constants/app_strings.dart';
+import '../../core/constants/app_styles.dart';
+import '../../core/widgets/app_button.dart';
 import '../../core/widgets/app_follow_button.dart';
+import '../../core/widgets/app_listview_builder.dart';
 
 void showFollowBusinessPageBottomSheet(BuildContext context)
 {
@@ -26,9 +30,19 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
             child: AppListviewBuilder(
               itemBuilder: (context, index) => const FollowBusinessCard(), 
               separatorBuilder: (context, index) => AppSizes.size16.verticalSpace,
-              itemCount: 12, 
+              itemCount: 22, 
             ),
           ),
+          
+          Container(
+            width: double.infinity,
+            height: 79.h,
+            padding: AppPadding.kNextButtonPadding,
+            decoration: BoxDecoration(
+              color: AppColors.color.kFormButtonsFill,
+            ),
+            child: const CustomButton(buttonText: AppStrings.next,),
+          )
         ],
       );
     },
@@ -52,11 +66,11 @@ class FollowBusinessCardHeader extends StatelessWidget
           children:
           [
             AppSizes.size10.horizontalSpace,
-            Image.asset("assets/icons/Follow_Business_Page/Close.png"),
+            Image.asset(AppAssets.iconsPNG.closePNG),
             const Spacer(),
-            Text("Follow Business page", style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
+            Text(AppStrings.followBusinessPage, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
             const Spacer(),
-            Image.asset("assets/icons/Follow_Business_Page/Vault.png"),
+            Image.asset(AppAssets.iconsPNG.vaultPNG),
             AppSizes.size16.horizontalSpace,
           ],
         ),
@@ -80,17 +94,17 @@ class FollowBusinessCard extends StatelessWidget
       child: Row(
         children:
         [
-          Image.asset("assets/icons/Follow_Business_Page/BMW_Logo.png"),
+          Image.asset(AppAssets.iconsPNG.bmwPNG),
           AppSizes.size12.horizontalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              Text("El Sayad Motor", style: AppStyles.textStyle12(
+              Text(AppStrings.elSayadMotor, style: AppStyles.textStyle12(
                 fontColor: AppColors.color.kSenaryTotalBlackText,
                 fontWeight: AppFontWeights.semiBoldWeight),
               ),
-              Text("Car Services", style: AppStyles.textStyle12(
+              Text(AppStrings.carServices, style: AppStyles.textStyle12(
                 fontColor: AppColors.color.kSemiGrey4,
                 fontWeight: AppFontWeights.semiBoldWeight),
               ),

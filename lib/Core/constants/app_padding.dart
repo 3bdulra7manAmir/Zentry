@@ -21,6 +21,8 @@ abstract class AppPadding
 
   /// [Symmetric_21_H]  
   static EdgeInsets kFollowingBusinessPagePadding = EdgeInsets.symmetric(horizontal: 21.w);
+  /// [Symmetric_22_H]  
+  static EdgeInsets kActionsCardPadding = EdgeInsets.symmetric(horizontal: 22.w);
   /// [Symmetric_15_H]
   static EdgeInsets kApp15Padding = EdgeInsets.symmetric(horizontal: 15.w);
   /// [Symmetric_10_H]
@@ -32,13 +34,16 @@ abstract class AppPadding
   static EdgeInsets kTabBarPadding = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w,);
 
 
-  /// [Directional_20_END]
+  /// [Direct_20_END]
   static EdgeInsetsDirectional kSearchIconPadding = EdgeInsetsDirectional.only(end: 20.w);
-  /// [Directional_15_END]
+  /// [Direct_15_END]
   static EdgeInsetsDirectional kPastePadding = EdgeInsetsDirectional.only(end: 15.w);
-  /// [Directional_start_12_H]
+  /// [Direct_start_12_H]
   static EdgeInsetsDirectional kHomeListViewPadding = EdgeInsetsDirectional.only(start: 12.w);
+  /// [Directional_S_16_E_16_T_11_B_20]
+  static EdgeInsetsDirectional kNextButtonPadding = EdgeInsetsDirectional.only(start: 16.w, end: 16.w, top: 11.h, bottom: 20.h);
 
+  static EdgeInsetsDirectional kPostOptionsPadding =  EdgeInsetsDirectional.only(start: 25.w, end: 36.w);
 
   /// [Zero]
   static EdgeInsets kZeroPadding = EdgeInsets.zero;

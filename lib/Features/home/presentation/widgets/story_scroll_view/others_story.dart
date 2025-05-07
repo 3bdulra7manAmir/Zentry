@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 
 class UsersStory extends StatelessWidget
@@ -19,7 +21,7 @@ class UsersStory extends StatelessWidget
       width: 112.w,
       decoration:  BoxDecoration(
         borderRadius: AppBorders.buttonBorder5,
-        image: const DecorationImage(image: AssetImage("assets/icons/Home/Camera.png"), fit: BoxFit.cover),),
+        image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.camera), fit: BoxFit.cover),),
       child: Padding(
         padding: AppPadding.kHomeListViewPadding,
         child: Column(
@@ -32,9 +34,9 @@ class UsersStory extends StatelessWidget
                 borderRadius: AppBorders.kProductItemRadius,
                 border: Border.all(color: AppColors.color.kRobotBoyRadiusColor, width: 2.w),
               ),
-              child: Image.asset("assets/icons/Home/Robot_Boy_SUIIZ.png")),
+              child: Image.asset(AppAssets.iconsPNG.robotBoySUIIZ)),
             const Spacer(),
-            Text("El Hawi Motors", style: AppStyles.textStyle10(fontColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.extraBoldWeight),),
+            Text(AppStrings.elHawiMotors, style: AppStyles.textStyle10(fontColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.extraBoldWeight),),
             AppSizes.size10.verticalSpace,
           ],
         ),

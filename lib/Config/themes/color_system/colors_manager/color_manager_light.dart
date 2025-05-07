@@ -13,6 +13,9 @@ class LightColorScheme extends ColorManagerBase {
 
   @override
   Color get kVerificationUnderLine => const Color(0xff233973);
+  
+  @override
+  Color get kWatchTutorialBGColor => const Color(0xff244d93);
 
   @override
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);

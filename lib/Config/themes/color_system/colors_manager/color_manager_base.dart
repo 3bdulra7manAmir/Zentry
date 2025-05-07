@@ -14,6 +14,7 @@ abstract class ColorManagerBase
   Color get kQuinarySemiBlueText;
   Color get kForgetPasswordUnderLine;
   Color get kReadMorefontColor;
+  Color get kWatchTutorialBGColor;
 
   /// [Secondary__FFFFFF]
   Color get kSecondaryWhite;
