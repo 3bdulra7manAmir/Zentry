@@ -11,7 +11,7 @@ import '../../core/constants/app_strings.dart';
 import '../../core/widgets/app_button.dart';
 import 'follow_business_page.dart';
 
-void showMoenyFromInterestsBottomSheet(BuildContext context)
+void showMoenyFromInterestsListBottomSheet(BuildContext context)
 {
   showModalBottomSheet(
     context: context,
@@ -102,42 +102,3 @@ class MoenyFromInterestsCard extends StatelessWidget
     );
   }
 }
-
-// Example of how you might use it in your code:
-/*
-bool isItemSelected = false;
-
-InterestRow(
-  title: 'Vehicles',
-  count: '400,000',
-  subtitle: 'Other user',
-  icon: Icons.directions_car,
-  isSelected: isItemSelected,
-  onTap: () {
-    setState(() {
-      isItemSelected = !isItemSelected;
-    });
-  },
-)
-*/
-
-
-
-
-// Example of how you might use it in your code:
-/*
-bool isItemSelected = false;
-
-InterestRow(
-  title: 'Vehicles',
-  count: '400,000',
-  subtitle: 'Other user',
-  icon: Icons.directions_car,
-  isSelected: isItemSelected,
-  onTap: () {
-    setState(() {
-      isItemSelected = !isItemSelected;
-    });
-  },
-)
-*/

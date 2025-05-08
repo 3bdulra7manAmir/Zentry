@@ -11,7 +11,8 @@ import '../../../../cards/comment_section.dart';
 import '../../../../cards/complete_profile.dart';
 import '../../../../cards/follow_business_page.dart';
 import '../../../../cards/join_groups.dart';
-import '../../../../cards/moeny_from_interests.dart';
+import '../../../../cards/moeny_from_interests_list.dart';
+import '../../../../cards/moeny_from_interests_selected.dart';
 import '../../../../cards/money_from_invite.dart';
 import '../../../../cards/post_card.dart';
 import '../../../../cards/actions_card.dart';
@@ -52,7 +53,8 @@ class PostHeader extends StatelessWidget
           //onTap: () => showMoenyFromInterestsBottomSheet(context),
           //onTap: () => showMoenyFromInviteBottomSheet(context),
           //onTap: () => showCompleteProfileBottomSheet(context),
-          onTap: () => showCommentsBottomSheet(context),
+          //onTap: () => showCommentsBottomSheet(context),
+          onTap: () => showMoenyFromInterestsSelectedBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
         ),
       ],
