@@ -14,6 +14,8 @@ abstract class AppPadding
   /// [ALL6]  
   static EdgeInsets kSearchResultCardPadding = const EdgeInsets.all(6.0);
 
+  /// [Symmetric_10_H]
+  static EdgeInsets kApp10Padding = EdgeInsets.symmetric(horizontal: 10.w);
   /// [Symmetric_16_H]
   static EdgeInsets kAppFormPadding = EdgeInsets.symmetric(horizontal: 16.w);
   /// [Symmetric_18_H]

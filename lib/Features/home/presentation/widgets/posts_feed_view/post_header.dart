@@ -7,6 +7,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../cards/comment_section.dart';
 import '../../../../cards/complete_profile.dart';
 import '../../../../cards/follow_business_page.dart';
 import '../../../../cards/join_groups.dart';
@@ -50,7 +51,8 @@ class PostHeader extends StatelessWidget
           //onTap: () => showJoinGroupsBottomSheet(context),
           //onTap: () => showMoenyFromInterestsBottomSheet(context),
           //onTap: () => showMoenyFromInviteBottomSheet(context),
-          onTap: () => showCompleteProfileBottomSheet(context),
+          //onTap: () => showCompleteProfileBottomSheet(context),
+          onTap: () => showCommentsBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
         ),
       ],
