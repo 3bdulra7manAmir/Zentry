@@ -142,6 +142,8 @@ flutter:
     - assets/icons/Bottom_Nav_Bar/
     - assets/images/
 
+    - assets/json/
+
 # Flutter Intl Configuration
 flutter_intl:
   enabled: true

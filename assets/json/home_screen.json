@@ -1,85 +1,35 @@
 {
-  "categories": [
+  "categories":
+  [
     {
       "id": 1,
       "title": "Cars",
-      "icon": "car_icon.svg",
-      "color": "#3498db"
+      "image": "assets/icons/Home/Car_Blue.png",
+      "backgroundColor": "#87D1E5"
     },
     {
       "id": 2,
       "title": "Motorcycles",
-      "icon": "motorcycle_icon.svg",
-      "color": "#f39c12"
+      "image": "assets/icons/Home/LapTop.png",
+      "backgroundColor": "#FFB54F"
     },
     {
       "id": 3,
       "title": "Electronics",
-      "icon": "electronics_icon.svg",
-      "color": "#2ecc71"
+      "image": "assets/icons/Home/Home.png",
+      "backgroundColor": "#0F7B93"
     },
     {
       "id": 4,
       "title": "Furniture",
-      "icon": "furniture_icon.svg",
-      "color": "#e74c3c"
+      "image": "assets/icons/Home/Chair.png",
+      "backgroundColor": "#337F72"
     },
     {
       "id": 5,
       "title": "Properties",
-      "icon": "property_icon.svg",
-      "color": "#9b59b6"
+      "image": "assets/icons/Home/TShirt.png",
+      "backgroundColor": "#F65E5E"
     }
-  ],
-  "featuredListings": [
-    {
-      "id": 101,
-      "image": "car_listing1.jpg",
-      "title": "Modern Car",
-      "price": "$12,000",
-      "location": "New York"
-    },
-    {
-      "id": 102,
-      "image": "motorcycle_listing1.jpg",
-      "title": "Sports Motorcycle",
-      "price": "$8,500",
-      "location": "Los Angeles"
-    },
-    {
-      "id": 103,
-      "image": "electronics_listing1.jpg",
-      "title": "Smart TV",
-      "price": "$950",
-      "location": "Chicago"
-    }
-  ],
-  "recentSearches": [
-    {
-      "id": 201,
-      "query": "Toyota SUV",
-      "date": "2025-05-09T14:32:00Z"
-    },
-    {
-      "id": 202,
-      "query": "Gaming Laptop",
-      "date": "2025-05-08T09:15:00Z"
-    }
-  ],
-  "savedListings": [
-    {
-      "id": 301,
-      "image": "saved_item1.jpg",
-      "title": "Luxury Apartment",
-      "price": "$250,000",
-      "date": "2025-05-07T11:20:00Z"
-    }
-  ],
-  "promotion": {
-    "id": 401,
-    "image": "promo_image.jpg",
-    "title": "Premium Account",
-    "description": "Upgrade to Premium for exclusive features",
-    "buttonText": "Upgrade Now"
-  }
+  ]
 }
