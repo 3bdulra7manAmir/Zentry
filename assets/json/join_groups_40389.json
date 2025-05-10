@@ -1,0 +1,78 @@
+{
+  "title": "Join Groups",
+  "groups": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "membersCount": "118,000 Members",
+      "icon": "electronics_icon.svg",
+      "thumbnails": [
+        "electronics_thumb1.jpg",
+        "electronics_thumb2.jpg",
+        "electronics_thumb3.jpg",
+        "electronics_thumb4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vehicles",
+      "membersCount": "210,000 Members",
+      "icon": "vehicles_icon.svg",
+      "thumbnails": [
+        "vehicles_thumb1.jpg",
+        "vehicles_thumb2.jpg",
+        "vehicles_thumb3.jpg",
+        "vehicles_thumb4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Properties",
+      "membersCount": "98,000 Members",
+      "icon": "properties_icon.svg",
+      "thumbnails": [
+        "properties_thumb1.jpg",
+        "properties_thumb2.jpg",
+        "properties_thumb3.jpg",
+        "properties_thumb4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sports",
+      "membersCount": "78,000 Members",
+      "icon": "sports_icon.svg",
+      "thumbnails": [
+        "sports_thumb1.jpg",
+        "sports_thumb2.jpg",
+        "sports_thumb3.jpg",
+        "sports_thumb4.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pets",
+      "membersCount": "145,000 Members",
+      "icon": "pets_icon.svg",
+      "thumbnails": [
+        "pets_thumb1.jpg",
+        "pets_thumb2.jpg",
+        "pets_thumb3.jpg",
+        "pets_thumb4.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Furniture",
+      "membersCount": "112,000 Members",
+      "icon": "furniture_icon.svg",
+      "thumbnails": [
+        "furniture_thumb1.jpg",
+        "furniture_thumb2.jpg",
+        "furniture_thumb3.jpg",
+        "furniture_thumb4.jpg"
+      ]
+    }
+  ],
+  "nextEnabled": true
+}

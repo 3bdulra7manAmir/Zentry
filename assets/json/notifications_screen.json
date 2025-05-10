@@ -1,0 +1,76 @@
+{
+  "notifications": [
+    {
+      "id": 1001,
+      "userImage": "user1.jpg",
+      "username": "Michael",
+      "action": "commented on your listing",
+      "time": "5m",
+      "read": false,
+      "listingImage": "listing1.jpg"
+    },
+    {
+      "id": 1002,
+      "userImage": "user2.jpg",
+      "username": "Sophia",
+      "action": "liked your listing",
+      "time": "15m",
+      "read": false,
+      "listingImage": "listing2.jpg"
+    },
+    {
+      "id": 1003,
+      "userImage": "user3.jpg",
+      "username": "Daniel",
+      "action": "sent you a message",
+      "time": "30m",
+      "read": false,
+      "listingImage": null
+    },
+    {
+      "id": 1004,
+      "userImage": "user4.jpg",
+      "username": "Emma",
+      "action": "made an offer on your listing",
+      "time": "1h",
+      "read": true,
+      "listingImage": "listing3.jpg"
+    },
+    {
+      "id": 1005,
+      "userImage": "user5.jpg",
+      "username": "James",
+      "action": "shared your listing",
+      "time": "2h",
+      "read": true,
+      "listingImage": "listing4.jpg"
+    },
+    {
+      "id": 1006,
+      "userImage": "user6.jpg",
+      "username": "Olivia",
+      "action": "commented on your listing",
+      "time": "3h",
+      "read": true,
+      "listingImage": "listing5.jpg"
+    },
+    {
+      "id": 1007,
+      "userImage": "user7.jpg",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "5h",
+      "read": true,
+      "listingImage": null
+    },
+    {
+      "id": 1008,
+      "userImage": "user8.jpg",
+      "username": "Ava",
+      "action": "added your listing to favorites",
+      "time": "1d",
+      "read": true,
+      "listingImage": "listing6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "categories": [
+    {
+      "id": 101,
+      "name": "Cars",
+      "icon": "car_icon.svg",
+      "verified": true
+    },
+    {
+      "id": 102,
+      "name": "Properties",
+      "icon": "property_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 103,
+      "name": "Boats",
+      "icon": "boat_icon.svg",
+      "verified": true
+    },
+    {
+      "id": 104,
+      "name": "Art & DYI",
+      "icon": "art_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 105,
+      "name": "Vehicles",
+      "icon": "vehicle_icon.svg",
+      "verified": true
+    },
+    {
+      "id": 106,
+      "name": "Motorcycles",
+      "icon": "motorcycle_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 107,
+      "name": "Fashion",
+      "icon": "fashion_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 108,
+      "name": "Electronics",
+      "icon": "electronics_icon.svg",
+      "verified": true
+    },
+    {
+      "id": 109,
+      "name": "Sports",
+      "icon": "sports_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 110,
+      "name": "Home Decor",
+      "icon": "homedecor_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 111,
+      "name": "Garden Pool",
+      "icon": "garden_pool_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 112,
+      "name": "Toys & Games",
+      "icon": "toys_games_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 113,
+      "name": "Office Desk",
+      "icon": "office_desk_icon.svg",
+      "verified": false
+    },
+    {
+      "id": 114,
+      "name": "Other Items",
+      "icon": "other_items_icon.svg",
+      "verified": false
+    }
+  ],
+  "recentSearches": [
+    "Toyota Camry",
+    "iPhone 16",
+    "Mountain bike",
+    "Modern sofa",
+    "Apartment NYC"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "filters": [
+    {"name": "Vehicles", "active": true},
+    {"name": "Electronics", "active": false},
+    {"name": "Tools", "active": false},
+    {"name": "Homes", "active": false},
+    {"name": "Toys", "active": false}
+  ],
+  "results": [
+    {
+      "id": 2001,
+      "title": "BMW E-SERIES",
+      "subtitle": "2018 clean title",
+      "price": "$28,000",
+      "location": "Los Angeles, CA",
+      "distance": "5 miles away",
+      "images": [
+        "bmw_front.jpg",
+        "bmw_side.jpg",
+        "bmw_interior1.jpg",
+        "bmw_interior2.jpg"
+      ],
+      "rating": 4.8,
+      "reviewCount": 124
+    },
+    {
+      "id": 2002,
+      "title": "TESLA MODEL S",
+      "subtitle": "2022 like new",
+      "price": "$55,000",
+      "location": "San Francisco, CA",
+      "distance": "12 miles away",
+      "images": [
+        "tesla_front.jpg",
+        "tesla_side.jpg",
+        "tesla_interior.jpg",
+        "tesla_rear.jpg"
+      ],
+      "rating": 4.9,
+      "reviewCount": 87
+    },
+    {
+      "id": 2003,
+      "title": "MERCEDES E-CLASS",
+      "subtitle": "2020 premium package",
+      "price": "$42,500",
+      "location": "Seattle, WA",
+      "distance": "8 miles away",
+      "images": [
+        "mercedes_front.jpg",
+        "mercedes_side.jpg",
+        "mercedes_interior.jpg",
+        "mercedes_back.jpg"
+      ],
+      "rating": 4.7,
+      "reviewCount": 56
+    },
+    {
+      "id": 2004,
+      "title": "AUDI A6",
+      "subtitle": "2021 fully loaded",
+      "price": "$38,900",
+      "location": "Portland, OR",
+      "distance": "15 miles away",
+      "images": [
+        "audi_front.jpg",
+        "audi_side.jpg",
+        "audi_interior.jpg",
+        "audi_back.jpg"
+      ],
+      "rating": 4.6,
+      "reviewCount": 42
+    }
+  ]
+}

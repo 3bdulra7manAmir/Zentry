@@ -1,0 +1,48 @@
+{
+  "title": "Money From Interests",
+  "categories": [
+    {
+      "id": 1,
+      "name": "Vehicles",
+      "selected": true,
+      "activeUsers": "420,000+",
+      "isVerified": true
+    },
+    {
+      "id": 2,
+      "name": "Properties",
+      "selected": false,
+      "activeUsers": "380,000+", 
+      "isVerified": false
+    },
+    {
+      "id": 3,
+      "name": "Furniture",
+      "selected": false,
+      "activeUsers": "450,000+",
+      "isVerified": false
+    },
+    {
+      "id": 4,
+      "name": "Electronics",
+      "selected": false,
+      "activeUsers": "520,000+",
+      "isVerified": false
+    },
+    {
+      "id": 5,
+      "name": "Properties",
+      "selected": false,
+      "activeUsers": "380,000+",
+      "isVerified": false
+    },
+    {
+      "id": 6,
+      "name": "Furniture",
+      "selected": false,
+      "activeUsers": "450,000+",
+      "isVerified": false
+    }
+  ],
+  "nextEnabled": true
+}

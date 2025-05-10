@@ -1,0 +1,48 @@
+{
+  "title": "Follow Business page",
+  "businesses": [
+    {
+      "id": 1,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar1.jpg",
+      "verified": false,
+      "followStatus": false
+    },
+    {
+      "id": 2,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar2.jpg",
+      "verified": false,
+      "followStatus": false
+    },
+    {
+      "id": 3,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar3.jpg",
+      "verified": false,
+      "followStatus": false
+    },
+    {
+      "id": 4,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar4.jpg",
+      "verified": false,
+      "followStatus": false
+    },
+    {
+      "id": 5,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar5.jpg",
+      "verified": false,
+      "followStatus": false
+    },
+    {
+      "id": 6,
+      "name": "El Rapid Motor",
+      "avatar": "business_avatar6.jpg",
+      "verified": false,
+      "followStatus": false
+    }
+  ],
+  "nextEnabled": true
+}

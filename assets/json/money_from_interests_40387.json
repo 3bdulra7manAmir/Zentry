@@ -1,0 +1,74 @@
+{
+  "title": "Money From Interests",
+  "topCategories": [
+    {
+      "id": 1,
+      "name": "Cars",
+      "icon": "car_icon.svg"
+    },
+    {
+      "id": 2,
+      "name": "Motorcycle",
+      "icon": "motorcycle_icon.svg"
+    },
+    {
+      "id": 3,
+      "name": "Boat",
+      "icon": "boat_icon.svg"
+    },
+    {
+      "id": 4,
+      "name": "Trucks",
+      "icon": "truck_icon.svg"
+    }
+  ],
+  "secondRowCategories": [
+    {
+      "id": 5,
+      "name": "Planes",
+      "icon": "plane_icon.svg"
+    },
+    {
+      "id": 6,
+      "name": "Boats",
+      "icon": "boat_icon.svg"
+    },
+    {
+      "id": 7,
+      "name": "Bus",
+      "icon": "bus_icon.svg"
+    },
+    {
+      "id": 8,
+      "name": "Bike",
+      "icon": "bike_icon.svg"
+    }
+  ],
+  "selectedInterests": [
+    {
+      "id": 1,
+      "name": "Interested in Vehicles",
+      "activeUsers": "420,000+ other users",
+      "icon": "vehicle_icon.svg"
+    },
+    {
+      "id": 2,
+      "name": "Interested in Properties",
+      "activeUsers": "380,000+ other users",
+      "icon": "property_icon.svg"
+    },
+    {
+      "id": 3,
+      "name": "Interested in Furniture",
+      "activeUsers": "450,000+ other users",
+      "icon": "furniture_icon.svg"
+    },
+    {
+      "id": 4,
+      "name": "Interested in Electronics",
+      "activeUsers": "520,000+ other users",
+      "icon": "electronics_icon.svg"
+    }
+  ],
+  "nextEnabled": true
+}
