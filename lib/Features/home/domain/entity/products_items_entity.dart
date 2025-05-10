@@ -5,15 +5,20 @@ class ProductsItemsEntity
   final String? image;
   final String? backgroundColor;
 
-  ProductsItemsEntity(this.id, this.title, this.image, this.backgroundColor);
+  ProductsItemsEntity({
+    this.id,
+    this.title,
+    this.image,
+    this.backgroundColor,
+  });
 
   factory ProductsItemsEntity.fromJson(Map<String, dynamic> json)
   {
     return ProductsItemsEntity(
-      json['id'].toString(),
-      json['title'] as String?,
-      json['image'] as String?,
-      json['backgroundColor'] as String?,
+      id: json['id']?.toString(),
+      title: json['title'] as String,
+      image: json['image'] as String,
+      backgroundColor: json['backgroundColor'] as String,
     );
   }
 

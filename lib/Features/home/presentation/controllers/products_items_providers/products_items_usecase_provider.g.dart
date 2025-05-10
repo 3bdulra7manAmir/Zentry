@@ -7,7 +7,7 @@ part of 'products_items_usecase_provider.dart';
 // **************************************************************************
 
 String _$productsItemsUsecaseHash() =>
-    r'c835a1093674434f2f1aed21c96746103723a04c';
+    r'430a4551efbdffb11eeac7bc8aba0357f4d9667f';
 
 /// See also [productsItemsUsecase].
 @ProviderFor(productsItemsUsecase)

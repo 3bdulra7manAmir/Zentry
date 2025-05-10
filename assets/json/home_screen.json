@@ -31,5 +31,26 @@
       "image": "assets/icons/Home/TShirt.png",
       "backgroundColor": "#F65E5E"
     }
+  ],
+  "stories":
+  [
+    {
+      "id": 101,
+      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "backgroundImage": "assets/icons/Home/Camera.png",
+      "name": "El Hawi Motors"
+    },
+    {
+      "id": 102,
+      "userAvatar": "assets/icons/Home/Pepsi.png",
+      "backgroundImage": "assets/icons/Home/Milk.png",
+      "name": "Al Karsh"
+    },
+    {
+      "id": 103,
+      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "backgroundImage": "assets/icons/Home/Car_Merc.png",
+      "name": "Al Karsh"
+    }
   ]
 }

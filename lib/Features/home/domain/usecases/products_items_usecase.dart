@@ -2,11 +2,11 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/utils/app_usecase.dart';
 import '../../../../core/utils/errors/api_fetch_failure.dart';
 import '../entity/products_items_entity.dart';
-import '../repo/products_items_repo.dart';
+import '../repository/products_repository.dart';
 
 class ProductsItemsUsecase extends AppUsecase
 {
-  final ProductsItemsRepo productsItemsRepo;
+  final ProductsRepo productsItemsRepo;
   ProductsItemsUsecase(this.productsItemsRepo);
 
   @override
@@ -14,7 +14,7 @@ class ProductsItemsUsecase extends AppUsecase
   {
     try
     {
-      final result = await productsItemsRepo.getProductsItems();
+      final result = await productsItemsRepo.getProducts();
       return Right(result);
     }
     catch (e)

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/app_listview_builder.dart';
-import '../../controllers/products_items_provider.dart';
+import '../../controllers/products_items_providers/products_items_provider.dart';
 import 'products_item.dart';
 
 class ProductsItemList extends ConsumerWidget

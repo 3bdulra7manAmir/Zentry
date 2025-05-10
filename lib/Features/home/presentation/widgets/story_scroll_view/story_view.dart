@@ -19,7 +19,7 @@ class StroyList extends StatelessWidget
         [
           const CreateStory(),
           AppSizes.size9.horizontalSpace,
-          const StoryListBuilder(),
+          const StroyListBuilder(),
         ],
       ),
     );

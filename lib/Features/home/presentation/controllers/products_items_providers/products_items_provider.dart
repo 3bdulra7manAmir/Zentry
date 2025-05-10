@@ -1,5 +1,5 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../domain/entity/products_items_entity.dart';
+import '../../../domain/entity/products_items_entity.dart';
 import 'products_items_usecase_provider.dart';
 
 part 'products_items_provider.g.dart';

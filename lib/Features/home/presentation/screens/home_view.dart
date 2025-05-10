@@ -6,7 +6,7 @@ import '../widgets/create_panel_view/create_panel.dart';
 import '../widgets/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_card.dart';
 import '../widgets/products_scroll_view/products_item_list.dart';
-import '../widgets/story_scroll_view/stroy_view.dart';
+import '../widgets/story_scroll_view/story_view.dart';
 
 class HomeView extends StatelessWidget
 {
