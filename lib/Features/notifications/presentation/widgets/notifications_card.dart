@@ -8,14 +8,18 @@ import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../domain/entity/notification_entity.dart';
 
-class DefaultNotificationCard extends StatelessWidget
-{
-  const DefaultNotificationCard({super.key});
+class DefaultNotificationCard extends StatelessWidget {
+  final NotificationEntity notification;
+  
+  const DefaultNotificationCard({
+    super.key,
+    required this.notification,
+  });
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Card(
       color: AppColors.color.kSecondaryWhite,
       elevation: 1.0,
@@ -31,8 +35,8 @@ class DefaultNotificationCard extends StatelessWidget
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
-              [
-                Image.asset(AppAssets.iconsPNG.ibrahimPNG),
+              [  
+                Image.asset(notification.userImage),
                 AppSizes.size13.horizontalSpace,
                 Expanded(
                   child: Column(
@@ -48,14 +52,13 @@ class DefaultNotificationCard extends StatelessWidget
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children:
                               [
-                                Text(AppStrings.ibrahim, style: AppStyles.textStyle14(
+                                Text(notification.username, style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
                                     fontColor: AppColors.color.kQuinarySemiBlueText,
                                   ),
                                 ),
                                 AppSizes.size3.horizontalSpace,
-                                Flexible(
-                                  child: Text(AppStrings.commentOnYourProduct, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight,),
+                                Flexible(                                  child: Text(notification.action, style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight,),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
@@ -75,7 +78,7 @@ class DefaultNotificationCard extends StatelessWidget
                               fontColor: AppColors.color.kSemiGreyText,
                           ),),
                           const Spacer(),
-                          Text(AppStrings.oneDayAgo, style: AppStyles.textStyle12(
+                          Text(notification.time,style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kSemiGreyText,
                           ),),

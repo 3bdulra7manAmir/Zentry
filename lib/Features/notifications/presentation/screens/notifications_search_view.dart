@@ -16,19 +16,19 @@ class NotificationsSearchView extends StatelessWidget
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: false,),
       backgroundColor: Theme.of(context).cardColor,
-      body: Column(
-        children:
-        [
-          AppSizes.size10.verticalSpace,
-          const FriendRequestCard(),
-          AppSizes.size14.verticalSpace,
-          const DefaultNotificationCard(),
-          // AppListviewBuilder(
-          //   itemBuilder: itemBuilder,
-          //   itemCount: itemCount,
-          //   separatorBuilder: separatorBuilder
-          // ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children:
+          [
+            AppSizes.size14.verticalSpace,
+            //const DefaultNotificationCard(),
+            // AppListviewBuilder(
+            //   itemBuilder: itemBuilder,
+            //   itemCount: itemCount,
+            //   separatorBuilder: separatorBuilder
+            // ),
+          ],
+        ),
       ),
     );
   }

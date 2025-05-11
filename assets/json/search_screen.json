@@ -1,95 +1,89 @@
 {
-  "categories": [
+  "categories":
+  [
     {
       "id": 101,
-      "name": "Cars",
-      "icon": "car_icon.svg",
-      "verified": true
+      "image": "Cars",
+      "title": "car_title.svg",
+      "number": true
     },
     {
       "id": 102,
-      "name": "Properties",
-      "icon": "property_icon.svg",
-      "verified": false
+      "image": "Properties",
+      "title": "property_title.svg",
+      "number": true
     },
     {
       "id": 103,
-      "name": "Boats",
-      "icon": "boat_icon.svg",
-      "verified": true
+      "image": "Boats",
+      "title": "boat_title.svg",
+      "number": true
     },
     {
       "id": 104,
-      "name": "Art & DYI",
-      "icon": "art_icon.svg",
-      "verified": false
+      "image": "Art & DYI",
+      "title": "art_title.svg",
+      "number": false
     },
     {
       "id": 105,
-      "name": "Vehicles",
-      "icon": "vehicle_icon.svg",
-      "verified": true
+      "image": "Vehicles",
+      "title": "vehicle_title.svg",
+      "number": false
     },
     {
       "id": 106,
-      "name": "Motorcycles",
-      "icon": "motorcycle_icon.svg",
-      "verified": false
+      "image": "Motorcycles",
+      "title": "motorcycle_title.svg",
+      "number": false
     },
     {
       "id": 107,
-      "name": "Fashion",
-      "icon": "fashion_icon.svg",
-      "verified": false
+      "image": "Fashion",
+      "title": "fashion_title.svg",
+      "number": false
     },
     {
       "id": 108,
-      "name": "Electronics",
-      "icon": "electronics_icon.svg",
-      "verified": true
+      "image": "Electronics",
+      "title": "electronics_title.svg",
+      "number": false
     },
     {
       "id": 109,
-      "name": "Sports",
-      "icon": "sports_icon.svg",
-      "verified": false
+      "image": "Sports",
+      "title": "sports_title.svg",
+      "number": false
     },
     {
       "id": 110,
-      "name": "Home Decor",
-      "icon": "homedecor_icon.svg",
-      "verified": false
+      "image": "Home Decor",
+      "title": "homedecor_title.svg",
+      "number": false
     },
     {
       "id": 111,
-      "name": "Garden Pool",
-      "icon": "garden_pool_icon.svg",
-      "verified": false
+      "image": "Garden Pool",
+      "title": "garden_pool_title.svg",
+      "number": false
     },
     {
       "id": 112,
-      "name": "Toys & Games",
-      "icon": "toys_games_icon.svg",
-      "verified": false
+      "image": "Toys & Games",
+      "title": "toys_games_title.svg",
+      "number": false
     },
     {
       "id": 113,
-      "name": "Office Desk",
-      "icon": "office_desk_icon.svg",
-      "verified": false
+      "image": "Office Desk",
+      "title": "office_desk_title.svg",
+      "number": false
     },
     {
       "id": 114,
-      "name": "Other Items",
-      "icon": "other_items_icon.svg",
-      "verified": false
+      "image": "Other Items",
+      "title": "other_items_title.svg",
+      "number": false
     }
-  ],
-  "recentSearches": [
-    "Toyota Camry",
-    "iPhone 16",
-    "Mountain bike",
-    "Modern sofa",
-    "Apartment NYC"
   ]
 }

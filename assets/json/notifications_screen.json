@@ -2,75 +2,115 @@
   "notifications": [
     {
       "id": 1001,
-      "userImage": "user1.jpg",
-      "username": "Michael",
+      "userImage": "assets/icons/Notifications/Adham.png",
+      "username": "Adham",
       "action": "commented on your listing",
-      "time": "5m",
-      "read": false,
-      "listingImage": "listing1.jpg"
+      "time": "5m"
     },
     {
       "id": 1002,
-      "userImage": "user2.jpg",
-      "username": "Sophia",
+      "userImage": "assets/icons/Notifications/Ahmed.png",
+      "username": "Ahmed",
       "action": "liked your listing",
-      "time": "15m",
-      "read": false,
-      "listingImage": "listing2.jpg"
+      "time": "15m"
     },
     {
       "id": 1003,
-      "userImage": "user3.jpg",
+      "userImage": "assets/icons/Notifications/Ahmed2.png",
       "username": "Daniel",
       "action": "sent you a message",
-      "time": "30m",
-      "read": false,
-      "listingImage": null
+      "time": "30m"
     },
     {
       "id": 1004,
-      "userImage": "user4.jpg",
-      "username": "Emma",
+      "userImage": "assets/icons/Notifications/Ahmed3.png",
+      "username": "Adham",
       "action": "made an offer on your listing",
-      "time": "1h",
-      "read": true,
-      "listingImage": "listing3.jpg"
+      "time": "1h"
     },
     {
       "id": 1005,
-      "userImage": "user5.jpg",
+      "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "James",
       "action": "shared your listing",
-      "time": "2h",
-      "read": true,
-      "listingImage": "listing4.jpg"
+      "time": "2h"
     },
     {
       "id": 1006,
-      "userImage": "user6.jpg",
-      "username": "Olivia",
+      "userImage": "assets/icons/Notifications/Ahmed5.png",
+      "username": "Daniel",
       "action": "commented on your listing",
-      "time": "3h",
-      "read": true,
-      "listingImage": "listing5.jpg"
+      "time": "3h"
     },
     {
       "id": 1007,
-      "userImage": "user7.jpg",
+      "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "William",
       "action": "viewed your profile",
-      "time": "5h",
-      "read": true,
-      "listingImage": null
+      "time": "7h"
     },
     {
       "id": 1008,
-      "userImage": "user8.jpg",
-      "username": "Ava",
+      "userImage": "assets/icons/Notifications/Ahmed3.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "3h"
+    },
+    {
+      "id": 1009,
+      "userImage": "assets/icons/Notifications/Ahmed2.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "1h"
+    },
+    {
+      "id": 1010,
+      "userImage": "assets/icons/Notifications/Ahmed.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "5h"
+    },
+    {
+      "id": 1011,
+      "userImage": "assets/icons/Notifications/Ibrahim.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "5h"
+    },
+    {
+      "id": 1012,
+      "userImage": "assets/icons/Notifications/Ahmed4.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "30m"
+    },
+    {
+      "id": 1013,
+      "userImage": "assets/icons/Notifications/Ibrahim2.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "10m"
+    },
+    {
+      "id": 1014,
+      "userImage": "assets/icons/Notifications/Ibrahim.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "5h"
+    },
+    {
+      "id": 1015,
+      "userImage": "assets/icons/Notifications/Ahmed4.png",
+      "username": "William",
+      "action": "viewed your profile",
+      "time": "4m"
+    },
+    {
+      "id": 1016,
+      "userImage": "assets/icons/Notifications/Ibrahim2.png",
+      "username": "James",
       "action": "added your listing to favorites",
-      "time": "1d",
-      "read": true,
-      "listingImage": "listing6.jpg"
+      "time": "1d"
     }
   ]
 }
