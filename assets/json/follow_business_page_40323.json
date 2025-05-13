@@ -1,48 +1,71 @@
 {
-  "title": "Follow Business page",
-  "businesses": [
+  "businesses":
+  [
     {
       "id": 1,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar1.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/Gaguar.png",
+      "title": "El Rapid Motor",
+      "subtitle": "Car Services"
     },
     {
       "id": 2,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar2.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/BMW_Logo.png",
+      "title": "El Hamada Space Ships",
+      "subtitle": "Car Services"
     },
     {
       "id": 3,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar3.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El Akram Cars",
+      "subtitle": "Car Services"
     },
     {
       "id": 4,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar4.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/Porsche.png",
+      "title": "El Shadows Super Sonic",
+      "subtitle": "Car Services"
     },
     {
       "id": 5,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar5.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/Lambo2.png",
+      "title": "El Ghosts Sub Sonic",
+      "subtitle": "Car Services"
     },
     {
       "id": 6,
-      "name": "El Rapid Motor",
-      "avatar": "business_avatar6.jpg",
-      "verified": false,
-      "followStatus": false
+      "image": "assets/icons/Follow_Business_Page/BMW_Logo.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 7,
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El Shadows Super Sonic",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 8,
+      "image": "assets/icons/Follow_Business_Page/Porsche.png",
+      "title": "El Hamada Space Ships",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 9,
+      "image": "assets/icons/Follow_Business_Page/Lambo2.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 10,
+      "image": "assets/icons/Follow_Business_Page/Gaguar.png",
+      "title": "El Rapid Motor",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 11,
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
     }
-  ],
-  "nextEnabled": true
+  ]
 }

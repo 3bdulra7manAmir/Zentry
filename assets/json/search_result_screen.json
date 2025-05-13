@@ -1,12 +1,14 @@
 {
-  "filters": [
+  "filters":
+  [
     {"name": "Vehicles", "active": true},
     {"name": "Electronics", "active": false},
     {"name": "Tools", "active": false},
     {"name": "Homes", "active": false},
     {"name": "Toys", "active": false}
   ],
-  "results": [
+  "results":
+  [
     {
       "id": 2001,
       "title": "BMW E-SERIES",

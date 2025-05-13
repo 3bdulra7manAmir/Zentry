@@ -15,11 +15,13 @@ import '../widgets/friend_request_card.dart';
 import '../widgets/notifications_card.dart';
 
 
-class NotificationsView extends ConsumerWidget {
+class NotificationsView extends ConsumerWidget
+{
   const NotificationsView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).notification, style: AppStyles.textStyle18(fontColor: AppColors.color.kOctonarySemiBlackText, fontWeight: AppFontWeights.regularWeight,),),
@@ -40,16 +42,12 @@ class NotificationsView extends ConsumerWidget {
                 final notificationsAsyncValue = ref.watch(notificationsItemsProvider);
                 return notificationsAsyncValue.when(
                   data: (notifications) => AppListviewBuilder(
-                    itemBuilder: (context, index) => DefaultNotificationCard(
-                      notification: notifications[index],
-                    ),
+                    itemBuilder: (context, index) => DefaultNotificationCard(notification: notifications[index],),
                     itemCount: notifications.length,
                     separatorBuilder: (context, index) => AppSizes.size14.verticalSpace,
                   ),
                   loading: () => const Center(child: CircularProgressIndicator()),
-                  error: (error, stackTrace) => Center(
-                    child: Text('Error: $error'),
-                  ),
+                  error: (error, stackTrace) => Center(child: Text('Error: $error'),),
                 );
               },
             ),

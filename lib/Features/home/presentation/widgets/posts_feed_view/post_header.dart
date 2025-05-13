@@ -9,9 +9,9 @@ import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../cards/comment_section.dart';
 import '../../../../cards/complete_profile.dart';
-import '../../../../cards/follow_business_page.dart';
+import '../../../../cards/follow_business/follow_business_page.dart';
 import '../../../../cards/join_groups.dart';
-import '../../../../cards/moeny_from_interests_list.dart';
+import '../../../../cards/Frame40326/presentation/screens/moeny_from_interests_list.dart';
 import '../../../../cards/moeny_from_interests_selected.dart';
 import '../../../../cards/money_from_invite.dart';
 import '../../../../cards/post_card.dart';
@@ -48,13 +48,13 @@ class PostHeader extends StatelessWidget
         InkWell(
           //onTap: () => showPostOptionsBottomSheet(context),
           //onTap: () => showActionsBottomSheet(context),
-          //onTap: () => showFollowBusinessPageBottomSheet(context),
+          onTap: () => showFollowBusinessPageBottomSheet(context),
           //onTap: () => showJoinGroupsBottomSheet(context),
           //onTap: () => showMoenyFromInterestsBottomSheet(context),
           //onTap: () => showMoenyFromInviteBottomSheet(context),
           //onTap: () => showCompleteProfileBottomSheet(context),
           //onTap: () => showCommentsBottomSheet(context),
-          onTap: () => showMoenyFromInterestsSelectedBottomSheet(context),
+          //onTap: () => showMoenyFromInterestsSelectedBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
         ),
       ],

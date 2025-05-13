@@ -8,7 +8,7 @@ import '../../core/constants/app_sizes.dart';
 import '../../core/constants/app_strings.dart';
 import '../../core/constants/app_styles.dart';
 import '../../core/widgets/app_button.dart';
-import 'follow_business_page.dart';
+import 'follow_business/follow_business_page.dart';
 
 void showCompleteProfileBottomSheet(BuildContext context)
 {

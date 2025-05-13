@@ -3,87 +3,105 @@
   [
     {
       "id": 101,
-      "image": "Cars",
-      "title": "car_title.svg",
-      "number": true
+      "image": "assets/icons/Search_Related_Results/shoos.png",
+      "title": "Shoos men",
+      "number": "3"
     },
     {
       "id": 102,
-      "image": "Properties",
-      "title": "property_title.svg",
-      "number": true
+      "image": "assets/icons/Search_Related_Results/camera2.png",
+      "title": "Camera Row",
+      "number": "2"
     },
     {
       "id": 103,
-      "image": "Boats",
-      "title": "boat_title.svg",
-      "number": true
+      "image": "assets/icons/Search_Related_Results/shoos3.png",
+      "title": "Shoos men",
+      "number": "1"
     },
     {
       "id": 104,
-      "image": "Art & DYI",
-      "title": "art_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/camera1.png",
+      "title": "Camera store",
+      "number": ""
     },
     {
       "id": 105,
-      "image": "Vehicles",
-      "title": "vehicle_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/motor.png",
+      "title": "Motorcycle",
+      "number": ""
     },
     {
       "id": 106,
-      "image": "Motorcycles",
-      "title": "motorcycle_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Amr_El_Lethiy.png",
+      "title": "Amr el lethiy",
+      "number": ""
     },
     {
       "id": 107,
-      "image": "Fashion",
-      "title": "fashion_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
     },
     {
       "id": 108,
-      "image": "Electronics",
-      "title": "electronics_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Cat.png",
+      "title": "Pets",
+      "number": ""
     },
     {
       "id": 109,
-      "image": "Sports",
-      "title": "sports_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/blender.png",
+      "title": "Tennis store",
+      "number": ""
     },
     {
       "id": 110,
-      "image": "Home Decor",
-      "title": "homedecor_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
     },
     {
       "id": 111,
-      "image": "Garden Pool",
-      "title": "garden_pool_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Amr_El_Lethiy.png",
+      "title": "Amr el lethiy",
+      "number": ""
     },
     {
       "id": 112,
-      "image": "Toys & Games",
-      "title": "toys_games_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/shoos3.png",
+      "title": "Shoos men",
+      "number": ""
     },
     {
       "id": 113,
-      "image": "Office Desk",
-      "title": "office_desk_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/camera2.png",
+      "title": "office_desk_title.svg.png",
+      "number": ""
     },
     {
       "id": 114,
-      "image": "Other Items",
-      "title": "other_items_title.svg",
-      "number": false
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 115,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 116,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 117,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
     }
   ]
 }

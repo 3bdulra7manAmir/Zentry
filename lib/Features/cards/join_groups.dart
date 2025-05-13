@@ -8,7 +8,7 @@ import '../../core/constants/app_borders.dart';
 import '../../core/constants/app_padding.dart';
 import '../../core/constants/app_strings.dart';
 import '../../core/widgets/app_button.dart';
-import 'follow_business_page.dart';
+import 'follow_business/follow_business_page.dart';
 
 void showJoinGroupsBottomSheet(BuildContext context)
 {

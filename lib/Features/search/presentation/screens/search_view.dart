@@ -49,42 +49,36 @@ class SearchView extends ConsumerWidget
               AppSizes.size3.verticalSpace,
               Text(AppLocalizations.of(context).relatedResults, style: AppStyles.textStyle12(fontColor: AppColors.color.kSecondarySemiGreyText,),),
               AppSizes.size16.verticalSpace,
-              Expanded(
-                child: searchResults.when(
-                  data: (categories)
+              searchResults.when(
+                data: (categories)
+                {
+                  if (categories.isEmpty)
                   {
-                    if (categories.isEmpty)
-                    {
-                      return Center(
-                        child: Text(AppLocalizations.of(context).search, style: AppStyles.textStyle14(
-                            fontColor: AppColors.color.kSecondarySemiGreyText,
-                            fontWeight: AppFontWeights.regularWeight,
-                          ),
-                        ),
-                      );
-                    }
-                    return AppListviewBuilder(
-                      padding: AppPadding.kAppFormPadding,
-                      itemCount: categories.length,
-                      separatorBuilder: (context, index) => AppSizes.size12.verticalSpace,
-                      itemBuilder: (context, index)
-                      {
-                        final category = categories[index];
-                        return SearchRelatedResultCard(category: category);
-                      },
-                    );
-                  },
-                  loading: () => const Center(child: CircularProgressIndicator()),
-                  error:
-                      (error, stack) => Center(
-                        child: Text(
-                          'Error: $error',
-                          style: AppStyles.textStyle14(
-                            fontColor: AppColors.color.kSecondarySemiGreyText,
-                            fontWeight: AppFontWeights.regularWeight,
-                          ),
+                    return Center(
+                      child: Text(AppLocalizations.of(context).search, style: AppStyles.textStyle14(
+                          fontColor: AppColors.color.kSecondarySemiGreyText,
+                          fontWeight: AppFontWeights.regularWeight,
                         ),
                       ),
+                    );
+                  }
+                  return AppListviewBuilder(
+                    itemCount: categories.length,
+                    separatorBuilder: (context, index) => AppSizes.size12.verticalSpace,
+                    itemBuilder: (context, index)
+                    {
+                      final category = categories[index];
+                      return SearchRelatedResultCard(category: category);
+                    },
+                  );
+                },
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (error, stack) => Center(
+                  child: Text('Error: $error', style: AppStyles.textStyle14(
+                      fontColor: AppColors.color.kSecondarySemiGreyText,
+                      fontWeight: AppFontWeights.regularWeight,
+                    ),
+                  ),
                 ),
               ),
             ],

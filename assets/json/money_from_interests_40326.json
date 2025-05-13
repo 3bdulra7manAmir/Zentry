@@ -1,48 +1,59 @@
 {
-  "title": "Money From Interests",
-  "categories": [
+  "categories":
+  [
     {
       "id": 1,
+      "image": "assets/icons/Money_From_Interests/Car.png",
       "name": "Vehicles",
-      "selected": true,
-      "activeUsers": "420,000+",
-      "isVerified": true
+      "activeUsers": "420,000+"
     },
     {
       "id": 2,
+      "image": "assets/icons/Money_From_Interests/Home.png",
       "name": "Properties",
-      "selected": false,
-      "activeUsers": "380,000+", 
-      "isVerified": false
+      "activeUsers": "380,000+"
     },
     {
       "id": 3,
+      "image": "assets/icons/Money_From_Interests/Laptop.png",
       "name": "Furniture",
-      "selected": false,
-      "activeUsers": "450,000+",
-      "isVerified": false
+      "activeUsers": "450,000+"
     },
     {
       "id": 4,
+      "image": "assets/icons/Money_From_Interests/Chair.png",
       "name": "Electronics",
-      "selected": false,
-      "activeUsers": "520,000+",
-      "isVerified": false
+      "activeUsers": "520,000+"
     },
     {
       "id": 5,
+      "image": "assets/icons/Money_From_Interests/Laptop.png",
       "name": "Properties",
-      "selected": false,
-      "activeUsers": "380,000+",
-      "isVerified": false
+      "activeUsers": "380,000+"
     },
     {
       "id": 6,
+      "image": "assets/icons/Money_From_Interests/Chair.png",
       "name": "Furniture",
-      "selected": false,
-      "activeUsers": "450,000+",
-      "isVerified": false
+      "activeUsers": "450,000+"
+    },
+    {
+      "id": 7,
+      "image": "assets/icons/Money_From_Interests/Home.png",
+      "name": "Furniture",
+      "activeUsers": "450,000+"
+    },
+    {
+      "id": 8,
+      "image": "assets/icons/Money_From_Interests/Chair.png",
+      "name": "Furniture",
+      "activeUsers": "450,000+"
+    },
+    {
+      "id": 9,
+      "image": "assets/icons/Money_From_Interests/Laptop.png",
+      "name": "Furniture",
+      "activeUsers": "450,000+"
     }
-  ],
-  "nextEnabled": true
+  ]
 }
