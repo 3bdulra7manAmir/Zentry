@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../config/themes/color_system/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
 
-
-class CustomSocialButton extends StatelessWidget
-{
+class CustomSocialButton extends StatelessWidget {
   const CustomSocialButton({
     super.key,
     this.buttonWidth,
@@ -20,6 +18,7 @@ class CustomSocialButton extends StatelessWidget
     required this.platformLogo,
     this.isLogoSpace,
     this.spaceAmount,
+    this.buttonOnPressed,
   });
 
   final double? buttonWidth;
@@ -33,6 +32,7 @@ class CustomSocialButton extends StatelessWidget
   final String platformLogo;
   final bool? isLogoSpace;
   final double? spaceAmount;
+  final void Function()? buttonOnPressed;
 
   @override
   Widget build(BuildContext context)
@@ -58,22 +58,18 @@ class CustomSocialButton extends StatelessWidget
           elevation: MaterialStateProperty.all(0),
           alignment: Alignment.center,
         ),
-
+        onPressed: buttonOnPressed,
         child: Row(
-                children:
-                [
-                  Expanded(
-                    flex: 1,
-                    child: Image.asset(platformLogo)),
-
-                  (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
-
-                  Expanded(
-                    flex: 2,
-                    child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),)),
-                ],
-              ),
-        onPressed: () {},
+          children:
+          [
+            Expanded(flex: 1, child: Image.asset(platformLogo)),
+            (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
+            Expanded(
+              flex: 2,
+              child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+            ),
+          ],
+        ),
       ),
     );
   }

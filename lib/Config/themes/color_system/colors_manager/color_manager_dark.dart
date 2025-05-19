@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'color_manager_base.dart';
 
-class DarkColorScheme extends ColorManagerBase
-{
+class DarkColorScheme extends ColorManagerBase {
   @override
   Color get kSecondaryWhite => const Color(0xffFFFFFF);
 
@@ -19,10 +18,31 @@ class DarkColorScheme extends ColorManagerBase
   Color get kVerificationUnderLine => const Color(0xff233973);
 
   @override
+  Color get kWatchTutorialBGColor => const Color(0xff244d93);
+
+  @override
   Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
 
   @override
-  Color get kForgetPasswordUnderLine  => const Color(0xff1B1B1B);
+  Color get kReadMorefontColor => const Color(0xff1963D6);
+  
+  @override
+  Color get kProductItemBackground => const Color(0xff87D1E5);
+
+  @override
+  Color get kForgetPasswordUnderLine => const Color(0xff1B1B1B);
+
+  @override
+  Color get kSemiGreyText => const Color(0xffB6B6B6);
+  @override
+  Color get kSemiGrey => const Color(0xffF3F3F3);
+  @override
+  Color get kSemiGrey2 => const Color(0xffECECEC);
+  @override
+  Color get kSemiGrey3 => const Color(0xffE4E4E4);
+  @override
+  Color get kSemiGrey4 => const Color(0xff8C8C8C);
+  
 
   @override
   Color get kTertiaryWhiteText => const Color(0xffF4F4F4);
@@ -44,6 +64,8 @@ class DarkColorScheme extends ColorManagerBase
 
   @override //REVERSED
   Color get kNonarySemiGreyText => const Color(0xffE5E5E5);
+  @override //REVERSED
+  Color get kSemiGreyAgain => const Color(0xff9A9A9A);
 
   @override
   Color get kSecondarySemiGreyText => const Color(0xff9E9E9E);
@@ -65,6 +87,10 @@ class DarkColorScheme extends ColorManagerBase
 
   @override
   Color get kTabBar => const Color(0xffFF7D00);
+  @override
+  Color get kDatePicker => const Color(0xffEE7D19);
+  @override
+  Color get kRobotBoyRadiusColor => const Color(0xffF08A31);
 
   @override
   Color get kFormButtonsBordersFillDark => const Color(0xff272626);
@@ -80,4 +106,9 @@ class DarkColorScheme extends ColorManagerBase
 
   @override
   Color get kQuaternarySemiBlackTextDark => const Color(0xffD7D7D7);
+
+  @override //REVERSED
+  Color get kAgainTextDark => const Color(0xffD7D7D7);
+  
+
 }

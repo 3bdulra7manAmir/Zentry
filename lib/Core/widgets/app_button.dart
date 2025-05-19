@@ -1,10 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../config/themes/color_system/app_colors.dart';
 import '../constants/app_borders.dart';
 import '../constants/app_styles.dart';
-
 
 class CustomButton extends ConsumerWidget
 {
@@ -18,7 +17,8 @@ class CustomButton extends ConsumerWidget
     this.buttonBackgroundColor,
     required this.buttonText,
     this.buttonTextStyle,
-    required this.buttonOnPressed,
+    this.buttonOnPressed,
+    this.buttonPadding,
   });
 
   final double? buttonWidth;
@@ -30,6 +30,7 @@ class CustomButton extends ConsumerWidget
   final String buttonText;
   final TextStyle? buttonTextStyle;
   final void Function()? buttonOnPressed;
+  final EdgeInsetsGeometry? buttonPadding;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -39,15 +40,16 @@ class CustomButton extends ConsumerWidget
       height: buttonHeight ?? 48.h,
       child: ElevatedButton(
         style: ButtonStyle(
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(buttonPadding),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
+            RoundedRectangleBorder(
+              borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
               side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.width1,),
             ),
           ),
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
         ),
-        onPressed: buttonOnPressed,      
-          
+        onPressed: buttonOnPressed,
         child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
       ),
     );

@@ -7,21 +7,20 @@ part of 'localization_controller.dart';
 // **************************************************************************
 
 String _$localizationControllerHash() =>
-    r'95cad59a97b4c3dbb78f32d9df2a65c93378f76d';
+    r'c45d8d03d4c7335b05ee7c1679aeaa640f7136e1';
 
 /// See also [LocalizationController].
 @ProviderFor(LocalizationController)
 final localizationControllerProvider =
     AutoDisposeNotifierProvider<LocalizationController, Locale>.internal(
-      LocalizationController.new,
-      name: r'localizationControllerProvider',
-      debugGetCreateSourceHash:
-          const bool.fromEnvironment('dart.vm.product')
-              ? null
-              : _$localizationControllerHash,
-      dependencies: null,
-      allTransitiveDependencies: null,
-    );
+  LocalizationController.new,
+  name: r'localizationControllerProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$localizationControllerHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
 
 typedef _$LocalizationController = AutoDisposeNotifier<Locale>;
 // ignore_for_file: type=lint

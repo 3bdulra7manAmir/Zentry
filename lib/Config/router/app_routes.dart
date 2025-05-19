@@ -1,41 +1,40 @@
-abstract class AppRoutes {
+abstract class AppRoutes
+{
   AppRoutes._();
 
-  // APP Splash
+  ///App AUTH
+  // APP Splash View
   static const kSplashView = '/kSplashView';
-
-  /// APP AUTH
-
-  // APP FORM
+  // APP FORM View
   static const kAppFormView = '/kAppFormView';
-
   // APP Login (Auth Tabs) View
-  static const kAuthTabs = '/kAuthTabs';  // Fixed the route name here
-
-  // APP Login with Phone
-  static const kLoginPhoneView = '/kLoginPhone';
-
-  // APP Login with Email
-  static const kLoginEmailView = '/kLoginEmail';
-
-  // APP Forget Password Phone
+  static const kAuthView = '/kAuthView';
+  // APP Forget Password Phone View
   static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
-
-  // APP Forget Password Email
+  // APP Forget Password Email View
   static const kForgetPasswordEmailView = '/kForgetPasswordEmailView';
-
   // APP Reset Password View
   static const kResetPasswordView = '/kResetPasswordView';
-
   // APP Verification Code View
   static const kVerificationCodeView = '/kVerificationCodeView';
 
-  // APP Countries View
-  static const kCountriesView = '/kCountriesView';
 
-  // APP Themes View
-  static const kThemesView = '/kThemesListView';
+  ///App Notifications
+  // APP Notifications View
+  static const kNotificationsView = '/kNotificationsView';
+  // APP Notifications Details View
+  static const kNotificationsSearchView = '/kSearchNotificationsView';
 
-  // APP Test View
-  static const kTestView = '/kTestListView';
+  ///App Search
+  // APP Search View
+  static const kSearchView = '/kSearchView';
+  // APP Search Results View
+  static const kSearchResultsView = '/kSearchResultsView';
+
+
+  /// APP Home
+  //App Home View
+  static const kHomeView = '/kHomeView';
+  static const kTestView = '/kTestView';
+
 }

@@ -1,0 +1,71 @@
+{
+  "businesses":
+  [
+    {
+      "id": 1,
+      "image": "assets/icons/Follow_Business_Page/Gaguar.png",
+      "title": "El Rapid Motor",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 2,
+      "image": "assets/icons/Follow_Business_Page/BMW_Logo.png",
+      "title": "El Hamada Space Ships",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 3,
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El Akram Cars",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 4,
+      "image": "assets/icons/Follow_Business_Page/Porsche.png",
+      "title": "El Shadows Super Sonic",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 5,
+      "image": "assets/icons/Follow_Business_Page/Lambo2.png",
+      "title": "El Ghosts Sub Sonic",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 6,
+      "image": "assets/icons/Follow_Business_Page/BMW_Logo.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 7,
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El Shadows Super Sonic",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 8,
+      "image": "assets/icons/Follow_Business_Page/Porsche.png",
+      "title": "El Hamada Space Ships",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 9,
+      "image": "assets/icons/Follow_Business_Page/Lambo2.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 10,
+      "image": "assets/icons/Follow_Business_Page/Gaguar.png",
+      "title": "El Rapid Motor",
+      "subtitle": "Car Services"
+    },
+    {
+      "id": 11,
+      "image": "assets/icons/Follow_Business_Page/Merc.png",
+      "title": "El White Thunder",
+      "subtitle": "Car Services"
+    }
+  ]
+}

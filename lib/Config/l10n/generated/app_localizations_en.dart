@@ -63,6 +63,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orLoginWith => 'or login with';
 
   @override
+  String get orSignUpWith => 'or SignUp with';
+
+  @override
   String get facebook => 'Facebook';
 
   @override
@@ -70,6 +73,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get apple => 'Apple';
+
+  @override
+  String get signUpPage => 'Sign Up Form Goes Here';
+
+  @override
+  String get fullName => 'Full Name';
+
+  @override
+  String get date => 'Date';
+
+  @override
+  String get gender => 'Gender';
+
+  @override
+  String get male => 'Male';
+
+  @override
+  String get female => 'Female';
 
   @override
   String get resetPassword => 'Reset Password';
@@ -244,4 +265,148 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get passwordOneSpecialCharacter => 'Password must contain at least one special character.';
+
+  @override
+  String get fullNameIsRequired => 'Full name is required.';
+
+  @override
+  String get invalidFullName => 'Please enter a valid full name.';
+
+  @override
+  String get validateFailureFullName => 'Validation failed for full name:';
+
+  @override
+  String get invitationCode => 'Invitation Code';
+
+  @override
+  String get invitationCodeExample => 'Ex: #Alsuisy123';
+
+  @override
+  String get paste => 'Paste';
+
+  @override
+  String get exElSuisy => 'Ex el suisy';
+
+  @override
+  String get selectDate => 'Select Date';
+
+  @override
+  String get selectBirthDate => 'Select Birth date';
+
+  @override
+  String get year => 'Year';
+
+  @override
+  String get month => 'Month';
+
+  @override
+  String get day => 'Day';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get notification => 'Notification';
+
+  @override
+  String get adham => 'Adham';
+
+  @override
+  String get sentYouAnInvitationToJoin => 'Sent you an invitation to join';
+
+  @override
+  String get yourContacts => 'your contacts';
+
+  @override
+  String get accept => 'Accept';
+
+  @override
+  String get reject => 'Reject';
+
+  @override
+  String get dayAgo1 => '1 Day Ago';
+
+  @override
+  String get products => 'Products';
+
+  @override
+  String get services => 'Services';
+
+  @override
+  String get posts => 'Posts';
+
+  @override
+  String get reels => 'Reels';
+
+  @override
+  String get users => 'users';
+
+  @override
+  String get pages => 'Pages';
+
+  @override
+  String get groups => 'Groups';
+
+  @override
+  String get threeHundred => '3,000,000';
+
+  @override
+  String get le => 'L.E';
+
+  @override
+  String get cash => 'Cash';
+
+  @override
+  String get audiRs7Quattro => 'Audi Rs7 Quattro';
+
+  @override
+  String get k5k10 => '5k-10k';
+
+  @override
+  String get k2023 => '2023';
+
+  @override
+  String get used => 'Used';
+
+  @override
+  String get k800000 => '800,000';
+
+  @override
+  String get negotiation => 'Negotiation';
+
+  @override
+  String get cairoEgypt => 'Cairo, Egypt';
+
+  @override
+  String get bmw320Model2019 => 'Bmw 320 model 2019';
+
+  @override
+  String get categories => 'Categories';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get relatedResults => 'Related results';
+
+  @override
+  String get pets => 'Pets';
+
+  @override
+  String get vehciles => 'Vehciles';
+
+  @override
+  String get follow => 'Follow';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get menu => 'Menu';
 }

@@ -1,13 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/constants/app_borders.dart';
-import 'color_system/colors_manager/app_colors.dart';
-import 'app_sizes.dart';
+import '../../core/constants/app_styles.dart';
+import 'app_themes_styles.dart';
+import 'color_system/app_colors.dart';
 
 class AppTheme
 {
   AppTheme._();
-  
+
   static ThemeData lightTheme()
   {
     return ThemeData(
@@ -19,22 +19,22 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kFormButtonsFill,
-        focusedBorder: OutlineInputBorder(
-          borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
+        focusedBorder: AppThemesStyles.inputBorderLight,
+        enabledBorder: AppThemesStyles.inputBorderLight,
+        errorBorder: AppThemesStyles.inputBorderLight,
+        disabledBorder: AppThemesStyles.inputBorderLight,
+      ),
+
+      elevatedButtonTheme: AppThemesStyles.elevatedButtonTheme,
+      tabBarTheme: AppThemesStyles.tabBarTheme,
+      appBarTheme: AppBarTheme(
+        
+        backgroundColor: AppColors.color.kAppBarBG,
+        centerTitle: true,
+      ),
+
+      cupertinoOverrideTheme:  CupertinoThemeData(
+        textTheme: CupertinoTextThemeData(pickerTextStyle: AppStyles.textStyle26(),),
       ),
     );
   }
@@ -45,75 +45,28 @@ class AppTheme
       useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: AppColors.color.kPrimaryDark,
-      
       cardColor: AppColors.color.kPrimaryDark,
-      //primaryColorLight: AppColors.color.kDarkScaffoldBGColor,
-      
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kFormButtonsBordersFillDark,
-        //hintStyle: AppStyles.textStyle12(),
-
-        focusedBorder: OutlineInputBorder(
-          borderRadius: AppBorders.buttonBorder10,
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w,),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.color.kFormButtonsBordersFillDark, width: AppSizes.size1.w),
-          borderRadius: AppBorders.buttonBorder10,
-        ),
+        focusedBorder: AppThemesStyles.inputBorderDark,
+        enabledBorder: AppThemesStyles.inputBorderDark,
+        errorBorder: AppThemesStyles.inputBorderDark,
+        disabledBorder: AppThemesStyles.inputBorderDark,
       ),
 
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: AppBorders.buttonBorder10,
-              side: BorderSide(
-                color: AppColors.color.kTransparent,
-                width: AppBorderWidths.width1,
-              ),
-            ),
-          ),
-          backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          splashFactory: NoSplash.splashFactory,
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          elevation: MaterialStateProperty.all(0),
-          alignment: Alignment.center,
-        ),
+      elevatedButtonTheme: AppThemesStyles.elevatedButtonTheme,
+      tabBarTheme: AppThemesStyles.tabBarTheme,
+      appBarTheme: AppBarTheme(
+        backgroundColor: AppColors.color.kAppBarBG,
+        centerTitle: true,
       ),
 
-
-      tabBarTheme: TabBarTheme(
-        //dividerHeight: ,
-        //dividerColor: ,
-        //unselectedLabelStyle: ,
-        //indicator: ,
-        //overlayColor: WidgetStateProperty.resolveWith<Color>(),
-        labelColor: AppColors.color.kTabBar,
-        unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
-        //labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kAuthTab,),
+      cupertinoOverrideTheme:  CupertinoThemeData(
+        textTheme: CupertinoTextThemeData(pickerTextStyle: AppStyles.textStyle26(),),
       ),
-
-      // appBarTheme: AppBarTheme(
-      //   elevation: 0,
-      //   centerTitle: true,
-      //   scrolledUnderElevation: 0,
-      //   backgroundColor: AppColors.color.,
-      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      //   iconTheme: IconThemeData(color: AppColors.color.),
-      //   titleTextStyle: StylesManager.extraBold(
-      //     fontSize: AppSizes.size,
-      //     color: AppColors.color.,
-      //   ),
-      // ),
     );
   }
-
 }
+

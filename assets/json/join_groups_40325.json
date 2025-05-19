@@ -1,0 +1,71 @@
+{
+  "groups":
+  [
+    {
+      "id": 1,
+      "title": "Electronics",
+      "membersCount": "118,000 Members",
+      "image": "assets/icons/Join_Groups/Home.png"
+    },
+    {
+      "id": 2,
+      "title": "Vehicles",
+      "membersCount": "210,000 Members",
+      "image": "assets/icons/Join_Groups/Chair.png"
+    },
+    {
+      "id": 3,
+      "title": "Properties",
+      "membersCount": "98,000 Members",
+      "image": "assets/icons/Join_Groups/Pet.png"
+    },
+    {
+      "id": 4,
+      "title": "Sports",
+      "membersCount": "78,000 Members",
+      "image": "assets/icons/Join_Groups/Laptop.png"
+    },
+    {
+      "id": 5,
+      "title": "Pets",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Blender.png"
+    },
+    {
+      "id": 6,
+      "title": "Electronics",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Ferrari.png"
+    },
+    {
+      "id": 7,
+      "title": "Properties",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Laptop.png"
+    },
+    {
+      "id": 8,
+      "title": "Pets",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Blender.png"
+    },
+    {
+      "id": 9,
+      "title": "Electronics",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Ferrari.png"
+    },
+    {
+      "id": 10,
+      "title": "Sports",
+      "membersCount": "145,000 Members",
+      "image": "assets/icons/Join_Groups/Pet.png"
+    },
+    {
+      "id": 11,
+      "title": "Furniture",
+      "membersCount": "112,000 Members",
+      "image": "assets/icons/Join_Groups/Ferrari.png"
+    }
+  ]
+}

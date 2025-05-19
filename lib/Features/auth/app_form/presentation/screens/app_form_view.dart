@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../config/themes/color_system/colors_manager/app_colors.dart';
+import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../widgets/app_form_header.dart';
 import '../widgets/app_form.dart';
-
 
 class FormView extends StatelessWidget
 {
@@ -17,14 +16,8 @@ class FormView extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          Expanded(
-            flex: 1,
-            child: FormHeader()
-          ),
-          Expanded(
-            flex: 3,
-            child: AppForm()
-          ),
+          Expanded(flex: 1, child: FormHeader()),
+          Expanded(flex: 3, child: AppFormView()),
         ],
       ),
     );

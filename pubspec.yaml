@@ -7,46 +7,88 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  # Flutter SDK
   flutter:
     sdk: flutter
 
-  # Official Flutter Localization
+  # Flutter Localization support
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
 
-  # State Management
+  # Riverpod (State Management)
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
 
-  # Local Simple Sotrage
-  shared_preferences: ^2.5.3
-
-  # Navigation
+  # Routing
   go_router: ^14.8.1
 
-  # UI & Responsiveness
-  flutter_screenutil: ^5.9.3
-  flutter_svg: ^2.0.17
-  flutter_otp_text_field: ^1.5.1+1
+  # Cached NetWork IMG
+  cached_network_image: ^3.4.1
 
-  # Device Preview (for testing UI)
+  # Add readmore text in the end
+  readmore: ^3.0.0
+
+  # Add readmore text in the end
+  animated_bottom_navigation_bar: ^1.4.0
+
+  # Device Preview (for responsive testing)
   device_preview: ^1.2.0
 
+  # Hive (local DataBase)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Shared Preferences (local storage)
+  shared_preferences: ^2.5.3
+
+  # Internationalization
+  intl: ^0.19.0
+
+  # Screen Util (responsive UI)
+  flutter_screenutil: ^5.9.3
+
+  # SVG rendering
+  flutter_svg: ^2.0.17
+
+  # OTP Text Field UI
+  flutter_otp_text_field: ^1.5.1+1
+
+  # Flutter Launcher Icons (for app icons)
+  flutter_launcher_icons: ^0.14.3
+
+  # Rename App (for changing app name/package)
+  rename_app: ^1.6.2
+
+  # Comparing and Hashing
+  equatable: ^2.0.7
+
+  # Either Class
+  dartz: ^0.10.1
+
+  # Remote Requests
+  dio: ^5.8.0+1
+
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  # Code Generation & runner
+  build_runner: ^2.4.15
+  riverpod_generator: ^2.6.3
+  hive_generator: ^2.0.1
+
+  # Riverpod Lints
+  riverpod_lint: any
+
+  # Flutter Lints
   flutter_lints: ^5.0.0
 
-  # Riverpod Code Generation
-  riverpod_generator: ^2.6.4
-  build_runner: ^2.4.15
-  riverpod_lint: any
+  # Flutter Test
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
   generate: true
 
+  # Fonts Configuration
   fonts:
     # Roboto Fonts
     - family: Roboto
@@ -71,6 +113,7 @@ flutter:
         - asset: assets/fonts/cairo/Cairo-Regular.ttf
         - asset: assets/fonts/cairo/Cairo-SemiBold.ttf
 
+  # Asset Paths
   assets:
     - assets/icons/Splash/
     - assets/icons/AppForm/
@@ -80,8 +123,28 @@ flutter:
     - assets/icons/RestPassword/
     - assets/icons/Verification/
     - assets/icons/Countries/
+    - assets/icons/Register/
+    - assets/icons/Register_FullName/
+    - assets/icons/Notifications/
+    - assets/icons/Search_Result/
+    - assets/icons/Search_Related_Results/
+    - assets/icons/Home/
+    - assets/icons/Actions/
+    - assets/icons/Follow_Business_Page/
+    - assets/icons/WatchTutorial/
+    - assets/icons/Join_Groups/
+    - assets/icons/Money_From_Interests/
+    - assets/icons/Money_From_Invites/
+    - assets/icons/Complete_Profile/
+    - assets/icons/Commets_Card/
+    - assets/icons/Unkown_Card/
+    - assets/icons/Money_From_Interests_Selected/
+    - assets/icons/Bottom_Nav_Bar/
     - assets/images/
 
+    - assets/json/
+
+# Flutter Intl Configuration
 flutter_intl:
   enabled: true
   arb_dir: lib/config/i18n/l10n

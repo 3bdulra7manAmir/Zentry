@@ -1,0 +1,56 @@
+{
+  "categories":
+  [
+    {
+      "id": 1,
+      "title": "Cars",
+      "image": "assets/icons/Home/Car_Blue.png",
+      "backgroundColor": "#87D1E5"
+    },
+    {
+      "id": 2,
+      "title": "Motorcycles",
+      "image": "assets/icons/Home/LapTop.png",
+      "backgroundColor": "#FFB54F"
+    },
+    {
+      "id": 3,
+      "title": "Electronics",
+      "image": "assets/icons/Home/Home.png",
+      "backgroundColor": "#0F7B93"
+    },
+    {
+      "id": 4,
+      "title": "Furniture",
+      "image": "assets/icons/Home/Chair.png",
+      "backgroundColor": "#337F72"
+    },
+    {
+      "id": 5,
+      "title": "Properties",
+      "image": "assets/icons/Home/TShirt.png",
+      "backgroundColor": "#F65E5E"
+    }
+  ],
+  "stories":
+  [
+    {
+      "id": 101,
+      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "backgroundImage": "assets/icons/Home/Camera.png",
+      "name": "El Hawi Motors"
+    },
+    {
+      "id": 102,
+      "userAvatar": "assets/icons/Home/Pepsi.png",
+      "backgroundImage": "assets/icons/Home/Milk.png",
+      "name": "Al Karsh"
+    },
+    {
+      "id": 103,
+      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "backgroundImage": "assets/icons/Home/Car_Merc.png",
+      "name": "Al Karsh"
+    }
+  ]
+}

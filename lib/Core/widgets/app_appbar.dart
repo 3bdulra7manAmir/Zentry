@@ -1,40 +1,48 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/router/app_router.dart';
-import '../../config/themes/color_system/colors_manager/app_colors.dart';
-import '../../config/themes/font_system/app_font_weights.dart';
+import '../../config/router/app_router.dart';
 import '../constants/app_images.dart';
-import '../constants/app_styles.dart';
+import '../helpers/app_providers.dart';
 
-
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
+class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
 {
-  const CustomAppBar({super.key, this.barLeading, this.barTitle, this.isTitleCenterd, this.barActions});
+  const CustomAppBar({
+    super.key,
+    this.barLeading,
+    this.barTitle,
+    this.barActions,
+    this.barActionsPadding,
+    this.barLeadingWidth,
+  });
 
   final Widget? barLeading;
-  final String? barTitle;
-  final bool? isTitleCenterd;
+  final Widget? barTitle;
   final List<Widget>? barActions;
+  final EdgeInsetsGeometry? barActionsPadding;
+  final double? barLeadingWidth;
 
   @override
-  Widget build(BuildContext context)
+  Widget build(BuildContext context, WidgetRef ref)
   {
+    final provider = AppProvidersProvider(ref, context);
     return AppBar(
-      backgroundColor: AppColors.color.kAppBarBG,
       leading: GestureDetector(
-          onTap: () => AppRouter.router.pop(),
-          child: barLeading ?? Image.asset(AppAssets.iconsPNG.leftBackArrowBlackPNG),
-        ),
-      leadingWidth: 65.w,
-      
-
-      title: Text(barTitle ?? "NULL TEXT", style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, textColor: AppColors.color.kSenaryTotalBlackText),),
-      centerTitle: isTitleCenterd ?? true,
-
+        onTap: () => AppRouter.router.pop(),
+        child: barLeading ?? Image.asset(provider.localeState.selectedLanguageIndex == 0
+        ? (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.rightWhiteArrowPNG
+          : AppAssets.iconsPNG.rightBackArrowBlackPNG)
+        : (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.leftWhiteArrowPNG
+          : AppAssets.iconsPNG.leftBackArrowBlackPNG)),
+      ),
+      leadingWidth: barLeadingWidth ?? 65.w,
+      title: barTitle,
       actions: barActions,
+      actionsPadding: barActionsPadding,
     );
   }
-  
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

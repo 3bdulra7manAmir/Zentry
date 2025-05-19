@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 import '../../database/shared_preference/app_database.dart';
 
 part 'localization_controller.g.dart';
@@ -8,28 +7,31 @@ part 'localization_controller.g.dart';
 @riverpod
 class LocalizationController extends _$LocalizationController
 {
-  int selectedLanguageIndex = 0;
+  int selectedLanguageIndex = 1;
 
   @override
   Locale build()
   {
-    _loadLocale();
-    return const Locale('en'); // default
+    loadLocale();
+    return const Locale('en');
   }
 
-  Future<void> _loadLocale() async
+  Future<void> loadLocale() async
   {
     try
     {
       final languageCode = await UserPreferences.instance.getLanguage();
-      state = Locale(languageCode ?? 'en');
-    } on Exception catch (e)
+      state = Locale(languageCode);
+      selectedLanguageIndex = languageCode == 'ar' ? 0 : 1;
+    }
+    catch (_)
     {
-      print("Localization Loading Error: ${e.toString()}");
+      state = const Locale('en');
+      selectedLanguageIndex = 1;
     }
   }
 
-  void setLocale(Locale locale, int index) async
+  Future<void> setLocale(Locale locale, int index) async
   {
     try
     {
@@ -39,9 +41,11 @@ class LocalizationController extends _$LocalizationController
         selectedLanguageIndex = index;
         await UserPreferences.instance.saveLanguage(locale.languageCode);
       }
-    } on Exception catch (e)
+    }
+    catch (_)
     {
-      print("Localization setting Error: ${e.toString()}");
+      state = locale;
+      selectedLanguageIndex = 1;
     }
   }
 }

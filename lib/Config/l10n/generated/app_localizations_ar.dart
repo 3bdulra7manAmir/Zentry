@@ -63,6 +63,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get orLoginWith => 'أو سجل الدخول باستخدام';
 
   @override
+  String get orSignUpWith => 'أو سجل باستخدام';
+
+  @override
   String get facebook => 'فيسبوك';
 
   @override
@@ -70,6 +73,24 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get apple => 'أبل';
+
+  @override
+  String get signUpPage => 'تسجيل';
+
+  @override
+  String get fullName => 'الاسم كامل';
+
+  @override
+  String get date => 'التاريخ';
+
+  @override
+  String get gender => 'النوع';
+
+  @override
+  String get male => 'ذكر';
+
+  @override
+  String get female => 'انثي';
 
   @override
   String get resetPassword => 'إعادة تعيين كلمة المرور';
@@ -244,4 +265,148 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get passwordOneSpecialCharacter => 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
+
+  @override
+  String get fullNameIsRequired => 'الاسم الكامل مطلوب.';
+
+  @override
+  String get invalidFullName => 'يرجى إدخال اسم كامل صحيح.';
+
+  @override
+  String get validateFailureFullName => 'فشل التحقق من صحة الاسم الكامل:';
+
+  @override
+  String get invitationCode => 'رمز الدعوة';
+
+  @override
+  String get invitationCodeExample => 'مثال: #Alsuisy123';
+
+  @override
+  String get paste => 'لصق';
+
+  @override
+  String get exElSuisy => 'مثال السويّسي';
+
+  @override
+  String get selectDate => 'اختر التاريخ';
+
+  @override
+  String get selectBirthDate => 'اختر تاريخ الميلاد';
+
+  @override
+  String get year => 'السنة';
+
+  @override
+  String get month => 'الشهر';
+
+  @override
+  String get day => 'اليوم';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get notification => 'الإشعارات';
+
+  @override
+  String get adham => 'أدهم';
+
+  @override
+  String get sentYouAnInvitationToJoin => 'أرسل لك دعوة للانضمام';
+
+  @override
+  String get yourContacts => 'جهات اتصالك';
+
+  @override
+  String get accept => 'قبول';
+
+  @override
+  String get reject => 'رفض';
+
+  @override
+  String get dayAgo1 => 'منذ يوم';
+
+  @override
+  String get products => 'المنتجات';
+
+  @override
+  String get services => 'الخدمات';
+
+  @override
+  String get posts => 'المنشورات';
+
+  @override
+  String get reels => 'ريلز';
+
+  @override
+  String get users => 'المستخدمين';
+
+  @override
+  String get pages => 'الصفحات';
+
+  @override
+  String get groups => 'المجموعات';
+
+  @override
+  String get threeHundred => '٣,٠٠٠,٠٠٠';
+
+  @override
+  String get le => 'ج.م';
+
+  @override
+  String get cash => 'نقدًا';
+
+  @override
+  String get audiRs7Quattro => 'أودي Rs7 كواترو';
+
+  @override
+  String get k5k10 => '5 آلاف - 10 آلاف';
+
+  @override
+  String get k2023 => '٢٠٢٣';
+
+  @override
+  String get used => 'مستعمل';
+
+  @override
+  String get k800000 => '٨٠٠,٠٠٠';
+
+  @override
+  String get negotiation => 'قابل للتفاوض';
+
+  @override
+  String get cairoEgypt => 'القاهرة، مصر';
+
+  @override
+  String get bmw320Model2019 => 'بي إم دبليو 320 موديل 2019';
+
+  @override
+  String get categories => 'الفئات';
+
+  @override
+  String get clear => 'مسح';
+
+  @override
+  String get relatedResults => 'نتائج ذات صلة';
+
+  @override
+  String get pets => 'الحيوانات الأليفة';
+
+  @override
+  String get vehciles => 'مركبات';
+
+  @override
+  String get follow => 'متابعة';
+
+  @override
+  String get home => 'الرئيسية';
+
+  @override
+  String get category => 'التصنيفات';
+
+  @override
+  String get profile => 'الملف الشخصي';
+
+  @override
+  String get menu => 'القائمة';
 }

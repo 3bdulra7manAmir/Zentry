@@ -1,0 +1,13 @@
+{
+  "usersInfo":
+  [
+    {
+      "email": "user1@example.com",
+      "password": "@P_password123"
+    },
+    {
+      "email": "user2@example.com",
+      "password": "@P_securePass456"
+    }
+  ]
+}

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/services/localization/controller/localization_controller.dart';
 
-final selectedLanguageProvider = Provider<String>((ref)
+part 'language_icon_update_provider.g.dart';
+
+@riverpod
+String selectedLanguage(SelectedLanguageRef ref)
 {
   final locale = ref.watch(localizationControllerProvider);
   return locale.languageCode;
-});
+}
 
-// Update the existing functions to use this provider
 String getSelectedLanguageImage(WidgetRef ref)
 {
   final languageCode = ref.watch(selectedLanguageProvider);
@@ -19,7 +22,7 @@ String getSelectedLanguageImage(WidgetRef ref)
   {
     'ar' => AppAssets.iconsPNG.egFlagSelectedPNG,
     'en' => AppAssets.iconsPNG.unitedStatesFlagSelectedPNG,
-    _ => AppAssets.iconsPNG.languagePNG, // fallback
+    _ => AppAssets.iconsPNG.languagePNG,
   };
 }
 
@@ -31,6 +34,6 @@ String getSelectedLanguageLabel(WidgetRef ref, BuildContext context)
   {
     'ar' => AppLocalizations.of(context).arabic,
     'en' => AppLocalizations.of(context).english,
-    _ => AppLocalizations.of(context).language, // fallback
+    _ => AppLocalizations.of(context).language,
   };
 }

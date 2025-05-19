@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:test_app/config/themes/color_system/colors_manager/app_colors.dart';
-
 import '../../../../core/services/database/shared_preference/app_database.dart';
+import '../app_colors.dart';
 
 part 'theme_controller.g.dart';
 
@@ -12,56 +11,52 @@ class ThemeController extends _$ThemeController
   @override
   ThemeMode build()
   {
-    // Set default theme
     AppColors.i.themeMode = 'light';
-    
-    // Load saved theme asynchronously
-    _loadSavedTheme();
-    
+    loadSavedTheme();
     return ThemeMode.light;
   }
-  
-  Future<void> _loadSavedTheme() async
+
+  Future<void> loadSavedTheme() async
   {
     try
     {
-      // Get theme preference using UserPreferences
-      bool isDarkMode = await UserPreferences.instance.getTheme();
-      
-      if (isDarkMode)
-      {
-        state = ThemeMode.dark; // Update state and colors if dark mode is saved
-        AppColors.i.themeMode = 'dark';
-      }
-      //print('[ThemeController] Loaded saved theme: ${isDarkMode ? 'dark' : 'light'}');
+      final isDarkMode = await UserPreferences.instance.getTheme();
+      final loadedMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
+      state = loadedMode;
+      AppColors.i.themeMode = isDarkMode ? 'dark' : 'light';
     }
-    
     catch (e)
     {
-      //print('[ThemeController] Error loading saved theme: $e');
+      state = ThemeMode.light;
+      AppColors.i.themeMode = 'light';
     }
   }
-  
+
   Future<void> setTheme(ThemeMode mode) async
   {
+    if (mode == ThemeMode.system) 
+    {
+      return;
+    }
+
     try
     {
-      if (mode != ThemeMode.system)
-      {
-        bool isDarkMode = mode == ThemeMode.dark;
-        await UserPreferences.instance.saveTheme(isDarkMode);
-        state = mode; // Update the state with the new theme mode
-        AppColors.i.themeMode = isDarkMode ? 'dark' : 'light';
-      }
-      else
-      {
-        //print('[ThemeController] ThemeMode.system is not supported by AppColors yet.');
-      }
+      final isDarkMode = mode == ThemeMode.dark;
+      await UserPreferences.instance.saveTheme(isDarkMode);
+      state = mode;
+      AppColors.i.themeMode = isDarkMode ? 'dark' : 'light';
     }
-    
     catch (e)
     {
-      //print('[ThemeController] Error setting theme: $e');
+      state = ThemeMode.light;
+      AppColors.i.themeMode = 'light';
     }
+  }
+
+  void setThemeFromString(String value)
+  {
+    final lower = value.toLowerCase();
+    final themeMode = (lower == 'dark' || lower == 'داكن') ? ThemeMode.dark : ThemeMode.light;
+    setTheme(themeMode);
   }
 }

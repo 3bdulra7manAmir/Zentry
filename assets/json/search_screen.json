@@ -1,0 +1,107 @@
+{
+  "categories":
+  [
+    {
+      "id": 101,
+      "image": "assets/icons/Search_Related_Results/shoos.png",
+      "title": "Shoos men",
+      "number": "3"
+    },
+    {
+      "id": 102,
+      "image": "assets/icons/Search_Related_Results/camera2.png",
+      "title": "Camera Row",
+      "number": "2"
+    },
+    {
+      "id": 103,
+      "image": "assets/icons/Search_Related_Results/shoos3.png",
+      "title": "Shoos men",
+      "number": "1"
+    },
+    {
+      "id": 104,
+      "image": "assets/icons/Search_Related_Results/camera1.png",
+      "title": "Camera store",
+      "number": ""
+    },
+    {
+      "id": 105,
+      "image": "assets/icons/Search_Related_Results/motor.png",
+      "title": "Motorcycle",
+      "number": ""
+    },
+    {
+      "id": 106,
+      "image": "assets/icons/Search_Related_Results/Amr_El_Lethiy.png",
+      "title": "Amr el lethiy",
+      "number": ""
+    },
+    {
+      "id": 107,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 108,
+      "image": "assets/icons/Search_Related_Results/Cat.png",
+      "title": "Pets",
+      "number": ""
+    },
+    {
+      "id": 109,
+      "image": "assets/icons/Search_Related_Results/blender.png",
+      "title": "Tennis store",
+      "number": ""
+    },
+    {
+      "id": 110,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 111,
+      "image": "assets/icons/Search_Related_Results/Amr_El_Lethiy.png",
+      "title": "Amr el lethiy",
+      "number": ""
+    },
+    {
+      "id": 112,
+      "image": "assets/icons/Search_Related_Results/shoos3.png",
+      "title": "Shoos men",
+      "number": ""
+    },
+    {
+      "id": 113,
+      "image": "assets/icons/Search_Related_Results/camera2.png",
+      "title": "office_desk_title.svg.png",
+      "number": ""
+    },
+    {
+      "id": 114,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 115,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 116,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    },
+    {
+      "id": 117,
+      "image": "assets/icons/Search_Related_Results/Audi_Logo.png",
+      "title": "Audi Car",
+      "number": ""
+    }
+  ]
+}

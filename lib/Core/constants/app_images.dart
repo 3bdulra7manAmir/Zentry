@@ -20,11 +20,12 @@ class _AppIconsPNG
   final String leftWhiteArrowPNG = "assets/icons/AppHeader/Left_White_Arrow.png";
   final String rightWhiteArrowPNG = "assets/icons/AppHeader/Right_White_Arrow.png";
 
-
   ///App Form
   final String countryPNG = "assets/icons/AppForm/Country.png";
   final String languagePNG = "assets/icons/AppForm/Language.png";
   final String modePNG = "assets/icons/AppForm/Mode.png";
+  final String darkPNG = "assets/icons/AppForm/Dark_Mode.png";
+  final String lightPNG = "assets/icons/AppForm/Light_Mode.png";
   final String leftBlackArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
   final String rightBlackArrowPNG = "assets/icons/AppForm/Right_Arrow.png";
 
@@ -61,8 +62,87 @@ class _AppIconsPNG
   final String moroccoFlagSelectedPNG = "assets/icons/Countries/Morocco_Selected.png";
   final String syriaFlagSelectedPNG = "assets/icons/Countries/Syrian_Arab_Republic_Selected.png";
   final String unitedStatesFlagSelectedPNG = "assets/icons/Countries/United_States_Selected.png";
-}
 
+  ///APP Register Or SignUp
+  final String femalePNG = "assets/icons/Register_FullName/Female.png";
+  final String malePNG = "assets/icons/Register_FullName/Male.png";
+  final String downArrowPNG = "assets/icons/Register/down_Arrow.png";
+
+
+  ///APP Notifications View
+  final String searchDarkPNG = "assets/icons/Notifications/Search.png";
+  final String adhamPNG = "assets/icons/Notifications/Adham.png";
+  final String horzintal3BlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
+  final String ibrahimPNG = "assets/icons/Notifications/Ibrahim.png";
+  final String threeHorzintalBlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
+  final String locationGreyPNG = "assets/icons/Notifications/Location.png";
+  final String locationYellowPNG = "assets/icons/Notifications/Location_Yellow.png";
+
+  final String carAudiPNG = "assets/icons/Search_Result/Car_Audi.png";
+  final String scanPNG = "assets/icons/Search_Result/Scan.png";
+  final String heartPNG = "assets/icons/Search_Result/Heart.png";
+  final String speedmeterPNG = "assets/icons/Search_Result/speedmeter.png";
+  final String calendarPNG = "assets/icons/Search_Result/Calendar.png";
+  final String unlockPNG = "assets/icons/Search_Result/Unlock.png";
+  final String wheelAudiPNG = "assets/icons/Search_Result/Wheel_Audi.png";
+  final String driverSidePNG = "assets/icons/Search_Result/Driver_Side.png";
+  final String moverPNG = "assets/icons/Search_Result/Mover.png";
+  final String carFrogPNG = "assets/icons/Search_Result/Car_Frog.png";
+  final String locationPNG = "assets/icons/Notifications/Location.png";
+
+  //App Search Related Results
+  final String catPNG = "assets/icons/Search_Related_Results/Cat.png";
+  final String wrongPNG = "assets/icons/Search_Related_Results/Wrong.png";
+
+  //App Home View
+  final String robotBodySUIIZPNG = "assets/icons/Home/Robot_Boy_SUIIZ.png";
+  final String searchWithBgPNG = "assets/icons/Home/Search_With_Bg.png";
+  final String messagesWithBgPNG = "assets/icons/Home/Messages_With_Bg.png";
+  final String carBluePNG = "assets/icons/Home/Car_Blue.png";
+  final String storyRobotPNG = "assets/icons/Home/Story_Robot.png";
+  final String postUserIcon = "assets/icons/Home/Post_User_Icon.png";
+  final String threeGreyDotsPNG = "assets/icons/Home/3Grey_Dots.png";
+  final String carMercPNG = "assets/icons/Home/Car_Merc.png";
+  final String storyCreate = "assets/icons/Home/Story_Create.png";
+  final String camera = "assets/icons/Home/Camera.png";
+  final String robotBoySUIIZ = "assets/icons/Home/Robot_Boy_SUIIZ.png";
+
+  //App Actions Card
+  final String actionEyeCardPNG = "assets/icons/Actions/Eye.png";
+  final String actionsLeftBlackArrowPNG = "assets/icons/Actions/Left_Black_Arrow.png";
+  final String actionsReplayPNG = "assets/icons/Actions/Replay.png";
+  final String actionsBlockPNG = "assets/icons/Actions/Block.png";
+  final String actionsFavouritePNG = "assets/icons/Actions/Favourite.png";
+
+  //App Follow Business Page
+  final String vaultPNG = "assets/icons/Follow_Business_Page/Vault.png";
+  final String closePNG = "assets/icons/Follow_Business_Page/Close.png";
+  final String bmwPNG = "assets/icons/Follow_Business_Page/BMW_Logo.png";
+  final String addButtonPNG = "assets/icons/Follow_Business_Page/Add.png";
+
+  //App Post Card
+  final String savePNG = "assets/icons/Home/Save.png";
+  final String copyPNG = "assets/icons/Home/Copy.png";
+  final String billPNG = "assets/icons/Home/Bill.png";
+  final String reportPNG = "assets/icons/Home/Report.png";
+
+  //App Watch Tutorial
+  final String exitPNG = "assets/icons/WatchTutorial/Exit.png";
+  final String playCirclePNG = "assets/icons/WatchTutorial/Play_Circle.png";
+
+  //App Bottom Nav Bar
+  final String middlePNG = "assets/icons/Bottom_Nav_Bar/Middle.png";
+  final String homePNG = "assets/icons/Bottom_Nav_Bar/Home_Selected.png";
+  final String categoryPNG = "assets/icons/Bottom_Nav_Bar/Category.png";
+  final String profilePNG = "assets/icons/Bottom_Nav_Bar/Profile.png";
+  final String menuPNG = "assets/icons/Bottom_Nav_Bar/Menu.png";
+  final String homeSelectedPNG = "assets/icons/Bottom_Nav_Bar/Home_Selected.png";
+  final String categorySelectedPNG = "assets/icons/Bottom_Nav_Bar/Category.png";
+  final String profileSelectedPNG = "assets/icons/Bottom_Nav_Bar/Profile.png";
+  final String menuSelectedPNG = "assets/icons/Bottom_Nav_Bar/Menu.png";
+
+  
+}
 
 ///-----------------------------------------------------------------//
 class _AppPNGIMGs

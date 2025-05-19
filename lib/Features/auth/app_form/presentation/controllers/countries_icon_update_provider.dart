@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_images.dart';
-import '../../data/form_data/app_countries_list.dart';
-import '../../data/form_data/app_countries_selected.dart';
+import '../../../../../core/services/database/shared_preference/app_database.dart';
+import '../../../../../core/data/static/app_form_data/app_countries_list.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'countries_icon_update_provider.g.dart';
@@ -14,51 +14,64 @@ class CountryController extends _$CountryController
   @override
   int? build()
   {
-    //debugPrint('[CountryController] Initialized with null index');
-    return null;
+    loadSavedCountryIndex();
+    return 0;
+  }
+
+  Future<void> loadSavedCountryIndex() async
+  {
+    try
+    {
+      final savedIndex = await UserPreferences.instance.getCountryIndex();
+      state = savedIndex;
+    }
+    catch (e)
+    {
+      state = 0;
+    }
   }
 
   void setSelectedIndex(int index)
   {
     try
     {
-      //debugPrint('[setSelectedIndex] Setting selected index to: $index');
       state = index;
+      UserPreferences.instance.saveCountryIndex(index);
     }
-
-    catch (e, stack)
+    catch (e)
     {
-      //debugPrint('[setSelectedIndex] Error: $e');
-      //debugPrint('[setSelectedIndex] Stack trace: $stack');
+      state = 0;
     }
+  }
+
+  int getSelectedIndex()
+  {
+    return state ?? 0;
   }
 }
 
-
 String getSelectedCountryImage(WidgetRef ref, BuildContext context)
 {
-  final selectedIndex = ref.watch(countryControllerProvider);
-  final selectedCountriesList = getSelectedCountriesList(context);
+  final selectedIndex = ref.watch(countryControllerProvider) ?? 0;
+  final selectedCountriesList = CountryUtils.getRoundedCountryImage();
 
-  if (selectedIndex != null && selectedIndex < selectedCountriesList.length)
+  if (selectedIndex < selectedCountriesList.length)
   {
-    //debugPrint('[getSelectedCountryImage] Selected index: $selectedIndex');
     return selectedCountriesList[selectedIndex];
   }
 
-  //debugPrint('[getSelectedCountryImage] No valid index. Returning fallback.');
   return AppAssets.iconsPNG.countryPNG;
 }
 
 String getSelectedCountryName(WidgetRef ref, BuildContext context)
 {
-  final selectedIndex = ref.watch(countryControllerProvider);
-  final selectedCountriesList = getCountriesList(context); // returns List<List<String>>
+  final selectedIndex = ref.watch(countryControllerProvider) ?? 0;
+  final countries = CountryUtils.getCountryImageAndName(context);
 
-  if (selectedIndex != null && selectedIndex < selectedCountriesList.length)
+  if (selectedIndex < countries.length)
   {
-    return selectedCountriesList[selectedIndex][1]; // 0 = flag, 1 = name
+    return countries[selectedIndex][1];
   }
 
-  return AppLocalizations.of(context).country; // fallback
+  return AppLocalizations.of(context).country;
 }

@@ -20,9 +20,17 @@
     "remember": "تذكرني",
     "forgetPassword": "نسيت كلمة المرور",
     "orLoginWith": "أو سجل الدخول باستخدام",
+    "orSignUpWith": "أو سجل باستخدام",
     "facebook": "فيسبوك",
     "google": "جوجل",
     "apple": "أبل",
+
+    "signUpPage": "تسجيل",
+    "fullName": "الاسم كامل",
+    "male": "ذكر",
+    "female": "انثي",
+    "date": "التاريخ",
+    "gender": "النوع",
   
     "resetPassword": "إعادة تعيين كلمة المرور",
     "forgotPassword": "هل نسيت كلمة المرور؟",
@@ -92,7 +100,64 @@
     "passwordOneUpperCase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
     "passwordOneLowerCase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
     "passwordOneNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
-    "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل."
+    "passwordOneSpecialCharacter": "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.",
+
+    "fullNameIsRequired": "الاسم الكامل مطلوب.",
+    "invalidFullName": "يرجى إدخال اسم كامل صحيح.",
+    "validateFailureFullName": "فشل التحقق من صحة الاسم الكامل:",
+
+    "invitationCode": "رمز الدعوة",
+    "invitationCodeExample": "مثال: #Alsuisy123",
+    "paste": "لصق",
+    "exElSuisy": "مثال السويّسي",
+    "selectDate": "اختر التاريخ",
+    "selectBirthDate": "اختر تاريخ الميلاد",
+    "year": "السنة",
+    "month": "الشهر",
+    "day": "اليوم",
+    "confirm": "تأكيد",
+
+    "notification": "الإشعارات",
+    "adham": "أدهم",
+    "sentYouAnInvitationToJoin": "أرسل لك دعوة للانضمام",
+    "yourContacts": "جهات اتصالك",
+    "accept": "قبول",
+    "reject": "رفض",
+    "dayAgo1": "منذ يوم",
+
+    "products": "المنتجات",
+    "services": "الخدمات",
+    "posts": "المنشورات",
+    "reels": "ريلز",
+    "users": "المستخدمين",
+    "pages": "الصفحات",
+    "groups": "المجموعات",
+
+    "threeHundred": "٣,٠٠٠,٠٠٠",
+    "le": "ج.م",
+    "cash": "نقدًا",
+
+    "audiRs7Quattro": "أودي Rs7 كواترو",
+    "k5k10": "5 آلاف - 10 آلاف",
+    "k2023": "٢٠٢٣",
+    "used": "مستعمل",
+
+    "k800000": "٨٠٠,٠٠٠",
+    "negotiation": "قابل للتفاوض",
+    "cairoEgypt": "القاهرة، مصر",
+    "bmw320Model2019": "بي إم دبليو 320 موديل 2019",
+
+    "categories": "الفئات",
+    "clear": "مسح",
+    "relatedResults": "نتائج ذات صلة",
+    "pets": "الحيوانات الأليفة",
+    "vehciles": "مركبات",
+    "follow": "متابعة",
+
+    "home": "الرئيسية",
+    "category": "التصنيفات",
+    "profile": "الملف الشخصي",
+    "menu": "القائمة"
 
   }
   

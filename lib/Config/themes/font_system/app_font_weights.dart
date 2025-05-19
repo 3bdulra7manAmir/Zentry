@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 abstract class AppFontWeights
 {
   AppFontWeights._();

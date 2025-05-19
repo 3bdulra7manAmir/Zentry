@@ -22,9 +22,17 @@
   "remember": "Remember",
   "forgetPassword": "Forget Password",
   "orLoginWith": "or login with",
+  "orSignUpWith": "or SignUp with",
   "facebook": "Facebook",
   "google": "Google",
   "apple": "Apple",
+
+  "signUpPage": "Sign Up Form Goes Here",
+  "fullName" : "Full Name",
+  "date" : "Date",
+  "gender" : "Gender",
+  "male" : "Male",
+  "female" : "Female",
 
   "resetPassword": "Reset Password",
   "forgotPassword": "Forgot password ?",
@@ -94,6 +102,62 @@
   "passwordOneUpperCase": "Password must contain at least one uppercase letter.",
   "passwordOneLowerCase": "Password must contain at least one lowercase letter.",
   "passwordOneNumber": "Password must contain at least one number.",
-  "passwordOneSpecialCharacter": "Password must contain at least one special character."
+  "passwordOneSpecialCharacter": "Password must contain at least one special character.",
+
+  "fullNameIsRequired": "Full name is required.",
+  "invalidFullName": "Please enter a valid full name.",
+  "validateFailureFullName": "Validation failed for full name:",
+
+  "invitationCode": "Invitation Code",
+  "invitationCodeExample": "Ex: #Alsuisy123",
+  "paste": "Paste",
+  "exElSuisy": "Ex el suisy",
+  "selectDate": "Select Date",
+  "selectBirthDate": "Select Birth date",
+  "year": "Year",
+  "month": "Month",
+  "day": "Day",
+  "confirm": "Confirm",
+
+  "notification": "Notification",
+  "adham": "Adham",
+  "sentYouAnInvitationToJoin": "Sent you an invitation to join",
+  "yourContacts": "your contacts",
+  "accept": "Accept",
+  "reject": "Reject",
+  "dayAgo1": "1 Day Ago",
+
+  "products": "Products",
+  "services": "Services",
+  "posts": "Posts",
+  "reels": "Reels",
+  "users": "users",
+  "pages": "Pages",
+  "groups": "Groups",
+
+  "threeHundred": "3,000,000",
+  "le": "L.E",
+  "cash": "Cash",
+
+  "audiRs7Quattro": "Audi Rs7 Quattro",
+  "k5k10": "5k-10k",
+  "k2023": "2023",
+  "used": "Used",
+
+  "k800000": "800,000",
+  "negotiation": "Negotiation",
+  "cairoEgypt": "Cairo, Egypt",
+  "bmw320Model2019" : "Bmw 320 model 2019",
   
+  "categories": "Categories",
+  "clear": "Clear",
+  "relatedResults": "Related results",
+  "pets": "Pets",
+  "vehciles": "Vehciles",
+  "follow": "Follow",
+
+  "home": "Home",
+  "category": "Category",
+  "profile": "Profile",
+  "menu": "Menu"
 }
