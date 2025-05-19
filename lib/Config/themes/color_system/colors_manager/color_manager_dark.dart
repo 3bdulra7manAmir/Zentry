@@ -3,7 +3,7 @@ import 'color_manager_base.dart';
 
 class DarkColorScheme extends ColorManagerBase {
   @override
-  Color get kSecondaryWhite => const Color(0xffFFFFFF);
+  Color get kSecondaryWhite => const Color(0xff434343);
 
   @override //REVERSED
   Color get kPrimaryGreyText => const Color(0xffFFFFFF);

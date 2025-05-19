@@ -17,7 +17,7 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../controllers/checkbox_provider.dart';
+import '../controllers/checkbox_controller.dart';
 import '../controllers/email_phone_switcher.dart';
 import 'phone_number_bottom_model_sheet.dart';
 

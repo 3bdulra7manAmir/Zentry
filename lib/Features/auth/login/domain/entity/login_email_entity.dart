@@ -13,7 +13,7 @@ class LoginEmailEntity
   factory LoginEmailEntity.fromJson(Map<String, dynamic> json)
   {
     return LoginEmailEntity(
-      id: json['id'].toString(),
+      id: json['id']?.toString() ?? '',
       userEmail: json['email'] as String,
       userPassword: json['password'] as String,
     );

@@ -10,21 +10,25 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 
 
-class SearchResultCard extends StatelessWidget
-{
-  const SearchResultCard({super.key});
+import '../../domain/entities/search_result.dart';
+
+class SearchResultCard extends StatelessWidget {
+  final SearchResult result;
+  
+  const SearchResultCard({
+    super.key,
+    required this.result,
+  });
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Container(
       width: 359.w,
       height: 140.h,
       decoration: BoxDecoration(borderRadius: AppBorders.buttonBorder5,),
       child: Row(
-        children:
-        [
-          Image.asset(AppAssets.iconsPNG.carFrogPNG, width: 163.w, height: 140.h, fit: BoxFit.fill,),
+        children: [
+          Image.asset(result.car, width: 163.w, height: 140.h, fit: BoxFit.fill,),
           Padding(
             padding: AppPadding.kSearchResultCardPadding,
             child: Column(
@@ -34,11 +38,9 @@ class SearchResultCard extends StatelessWidget
                 Row(
                   children:
                   [
-                    Text(AppLocalizations.of(context).k800000, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
-                    AppSizes.size2.horizontalSpace,
-                    Text(AppLocalizations.of(context).le, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                    Text(result.price, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
                     AppSizes.size6.horizontalSpace,
-                    Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),),
+                    if (result.price != "Exchange") Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),),
                     AppSizes.size14.horizontalSpace,
                     Image.asset(AppAssets.iconsPNG.scanPNG),
                     AppSizes.size6.horizontalSpace,
@@ -46,32 +48,42 @@ class SearchResultCard extends StatelessWidget
                   ],
                 ),
                 AppSizes.size12.verticalSpace,
-                Text(AppLocalizations.of(context).bmw320Model2019, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(result.title, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
                 AppSizes.size18.verticalSpace,
                 Row(
-                  children:
-                  [
-                    Image.asset(AppAssets.iconsPNG.speedmeterPNG),
-                    AppSizes.size5.horizontalSpace,
-                    Text(AppLocalizations.of(context).k5k10, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
-                    AppSizes.size9.horizontalSpace,
-                    Image.asset(AppAssets.iconsPNG.calendarPNG),
-                    AppSizes.size7.horizontalSpace,
-                    Text(AppLocalizations.of(context).k2023, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
-                    AppSizes.size7.horizontalSpace,
-                    Image.asset(AppAssets.iconsPNG.unlockPNG),
-                    AppSizes.size5.horizontalSpace,
-                    Text(AppLocalizations.of(context).used, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
+                  children: [
+                    if (result.ratingMin.isNotEmpty) ...[
+                      Image.asset(AppAssets.iconsPNG.speedmeterPNG),
+                      AppSizes.size5.horizontalSpace,
+                      Text("${result.ratingMin}-${result.ratingMax}", style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
+                      AppSizes.size9.horizontalSpace,
+                    ],
+                    if (result.year.isNotEmpty) ...[
+                      Image.asset(AppAssets.iconsPNG.calendarPNG),
+                      AppSizes.size7.horizontalSpace,
+                      Text(result.year, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
+                      AppSizes.size7.horizontalSpace,
+                    ],
+                    if (result.status.isNotEmpty) ...[
+                      Image.asset(AppAssets.iconsPNG.unlockPNG),
+                      AppSizes.size5.horizontalSpace,
+                      Text(result.status, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
+                    ],
                   ],
                 ),
                 AppSizes.size14.verticalSpace,
                 Row(
                   children:
                   [
-                    Image.asset(AppAssets.iconsPNG.locationPNG),
-                    AppSizes.size6.horizontalSpace,
-                    Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
-                    AppSizes.size16.horizontalSpace,
+                    if (result.country.isNotEmpty) ...[
+                      Image.asset(AppAssets.iconsPNG.locationPNG),
+                      AppSizes.size6.horizontalSpace,
+                      Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                    ],
+                    if (result.month.isNotEmpty) ...[
+                      AppSizes.size16.horizontalSpace,
+                      Text(result.month, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                    ],
                   ],
                 ),
               ],

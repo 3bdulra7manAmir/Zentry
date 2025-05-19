@@ -16,8 +16,8 @@ class LoginEmailLocalDataSourceImpl implements LoginEmailLocalDataSource
     {
       final String jsonString = await rootBundle.loadString('assets/json/login_email.json');  // Load JSON file
       final Map<String, dynamic> jsonData = json.decode(jsonString);            // Decode JSON string
-      final List<dynamic> notificationsJson = jsonData['usersInfo'] ?? []; // Parse notifications array
-      return notificationsJson.map((notification) => LoginEmailEntity.fromJson(notification)).toList();  // Map JSON data to NotificationEntity objects
+      final List<dynamic> loginEmailJson = jsonData['usersInfo'] ?? []; // Parse notifications array
+      return loginEmailJson.map((usersInfo) => LoginEmailEntity.fromJson(usersInfo)).toList();  // Map JSON data to NotificationEntity objects
     }
     catch (e)
     {

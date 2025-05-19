@@ -22,7 +22,7 @@ abstract class AppRouter
 {
   AppRouter._();
   static final router = GoRouter(
-    initialLocation: AppRoutes.kSplashView,
+    initialLocation: AppRoutes.kSearchResultsView,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
     routes:
     [
