@@ -20,9 +20,10 @@ import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkbox_controller.dart';
 import '../controllers/email_phone_switcher.dart';
-import '../controllers/login_email_validation_controller.dart';
 
-class LoginFormWithEmail extends ConsumerWidget {
+
+class LoginFormWithEmail extends ConsumerWidget
+{
   LoginFormWithEmail({super.key});
 
   final TextEditingController emailController = TextEditingController();
@@ -117,51 +118,7 @@ class LoginFormWithEmail extends ConsumerWidget {
               AppSizes.size16.verticalSpace,
               CustomButton(
                 buttonText: AppLocalizations.of(context).login,
-                buttonOnPressed: () async {
-                  print('Starting login process...');
-                  try {
-                    if (loginEmailFormKey.currentState!.validate()) {
-                      final loginInput = (
-                        email: emailController.text.trim(),
-                        password: passwordController.text.trim()
-                      );
-                      print('Login credentials: ${loginInput.email}');
-                      final loginState = ref.read(loginEmailValidationProvider(loginInput));
-                      
-                      await loginState.when(
-                        data: (result) async {
-                          print('Login validation result: $result');
-                          if (result) {
-                            AppRouter.router.pushNamed(AppRoutes.kSplashView);
-                            return;
-                          } 
-                          if (context.mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Invalid email or password'))
-                            );
-                          }
-                        },
-                        error: (error, stack) {
-                          print('Login error: $error');
-                          if (context.mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Error during login: ${error.toString()}'))
-                            );
-                          }
-                        },
-                        loading: () {
-                          print('Login validation in progress...');
-                        }
-                      );
-                    }
-                  } catch (e) {
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("AppLocalizations.of(context).errorOccurred"))
-                      );
-                    }
-                  }
-                },
+                buttonOnPressed: () async {},
               ),
               AppSizes.size20.verticalSpace,
               Align(
