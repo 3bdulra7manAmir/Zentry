@@ -76,7 +76,7 @@ class SearchResultsView extends ConsumerWidget {
                     itemBuilder: (context, index)
                     {
                       final result = results[index];
-                      if (index < 7)
+                      if (index < results.length)
                       {
                         return SearchResultCardDetailed(result: result);
                       }

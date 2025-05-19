@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "userimage": "assets/images/profile/reueal.png",
+    "username": "REUEAL & Staging",
+    "time": "Just Now",
+    "carmodel": "Mercedes AMG G63",
+    "carprice": "3,000,000 EGP",
+    "carinfo": "Inside the wagon AMG, we don't know which is more\ncolor we don't know which is more\nsurprising Read more.....",
+    "postcarimage": "assets/images/cars/mercedes_g63.png",
+    "likesCount": "1262"
+  },
+  {
+    "id": 2,
+    "userimage": "assets/images/profile/autohub.png",
+    "username": "AutoHub Egypt",
+    "time": "2 hours ago",
+    "carmodel": "BMW X6 2022",
+    "carprice": "2,850,000 EGP",
+    "carinfo": "Fully loaded with M-package and luxury features\nAvailable now in limited stock only\nContact us for exclusive offers",
+    "postcarimage": "assets/images/cars/bmw_x6.png",
+    "likesCount": "123"
+  },
+  {
+    "id": 3,
+    "userimage": "assets/images/profile/luxdrive.png",
+    "username": "LuxDrive",
+    "time": "Yesterday",
+    "carmodel": "Range Rover Vogue",
+    "carprice": "5,100,000 EGP",
+    "carinfo": "Top-tier performance, unmatched comfort\nWhite exterior with black leather interior\nDelivery available across Egypt",
+    "postcarimage": "assets/images/cars/range_rover_vogue.png",
+    "likesCount": "141"
+  },
+  {
+    "id": 4,
+    "userimage": "assets/images/profile/citymotors.png",
+    "username": "City Motors",
+    "time": "3 days ago",
+    "carmodel": "Toyota Land Cruiser 2023",
+    "carprice": "4,600,000 EGP",
+    "carinfo": "Brand new shape, GCC specs with full options\nReady for off-road and luxury city driving\nFinancing and trade-in available",
+    "postcarimage": "assets/images/cars/land_cruiser_2023.png",
+    "likesCount": "6780"
+  },
+  {
+    "id": 4,
+    "userimage": "assets/images/profile/citymotors.png",
+    "username": "City Motors",
+    "time": "3 days ago",
+    "carmodel": "Toyota Land Cruiser 2023",
+    "carprice": "4,600,000 EGP",
+    "carinfo": "Brand new shape, GCC specs with full options\nReady for off-road and luxury city driving\nFinancing and trade-in available",
+    "postcarimage": "assets/images/cars/land_cruiser_2023.png",
+    "likesCount": "3278"
+  }
+]

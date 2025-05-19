@@ -136,10 +136,11 @@ flutter:
     - assets/icons/Money_From_Interests/
     - assets/icons/Money_From_Invites/
     - assets/icons/Complete_Profile/
-    - assets/icons/Commets_Card/
+    - assets/icons/Inside_Post/
     - assets/icons/Unkown_Card/
     - assets/icons/Money_From_Interests_Selected/
     - assets/icons/Bottom_Nav_Bar/
+    - assets/icons/Comments_Card/
     - assets/images/
 
     - assets/json/

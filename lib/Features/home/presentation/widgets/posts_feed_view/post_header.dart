@@ -7,13 +7,13 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../comment_section.dart';
+import '../post_from_inside.dart';
 import '../../../../complete_profile/presentation/screens/complete_profile.dart';
 import '../../../../join_groups/presentation/screens/join_groups.dart';
 import '../../../../moeny_from_interests/presentation/screens/moeny_from_interests_list.dart';
 import '../../../../moeny_from_interests/presentation/screens/moeny_from_interests_selected.dart';
 import '../../../../auth/register/presentation/widgets/money_from_invite.dart';
-import '../../../../post_card/presentation/screens/post_card.dart';
+import '../../../../post_options_card/presentation/screens/post_options_card.dart';
 import '../../../../post_actions/presentation/screens/actions_card.dart';
 
 class PostHeader extends StatelessWidget
