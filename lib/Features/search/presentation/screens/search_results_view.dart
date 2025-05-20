@@ -10,7 +10,6 @@ import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 import '../controllers/search_result_providers/search_result_providers.dart';
-import '../widgets/search_result_card.dart';
 import '../widgets/search_result_card_detailed.dart';
 
 class SearchResultsView extends ConsumerWidget {
@@ -76,22 +75,13 @@ class SearchResultsView extends ConsumerWidget {
                     itemBuilder: (context, index)
                     {
                       final result = results[index];
-                      if (index < results.length)
-                      {
-                        return SearchResultCardDetailed(result: result);
-                      }
-                      else
-                      {
-                        return SearchResultCard(result: result);
-                      }
+                      return SearchResultCardDetailed(result: result);
                     },
                   );
                 },
                 loading: () => const Center(child: CircularProgressIndicator()),
                 error: (error, stack) => Center(
-                  child: Text(
-                    'Error: $error',
-                    style: AppStyles.textStyle14(
+                  child: Text('Error: $error', style: AppStyles.textStyle14(
                       fontColor: AppColors.color.kSecondarySemiGreyText,
                       fontWeight: AppFontWeights.regularWeight,
                     ),
