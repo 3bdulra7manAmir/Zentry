@@ -21,9 +21,7 @@ import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkbox_controller.dart';
 import '../controllers/email_phone_switcher.dart';
 
-
-class LoginFormWithEmail extends ConsumerWidget
-{
+class LoginFormWithEmail extends ConsumerWidget {
   LoginFormWithEmail({super.key});
 
   final TextEditingController emailController = TextEditingController();

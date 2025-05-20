@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
-import '../../../../core/constants/app_padding.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../widgets/comment_card.dart';
 import '../widgets/create_panel_view/create_panel.dart';
 import '../widgets/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_card_view.dart';
@@ -38,8 +36,6 @@ class HomeView extends StatelessWidget
             Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders,),
             AppSizes.size20.verticalSpace,
             const PostsCard(),
-            AppSizes.size14.verticalSpace,
-            CommentCard(padding: AppPadding.kAppFormPadding,),
             AppSizes.size50.verticalSpace,
           ],
         ),

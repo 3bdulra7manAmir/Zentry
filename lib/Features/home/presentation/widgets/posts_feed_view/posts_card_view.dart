@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../comment_card.dart';
 import '../comments_reactions.dart';
 import 'post_bio.dart';
 import 'post_header.dart';
@@ -28,6 +29,8 @@ class PostsCard extends StatelessWidget
           Image.asset(AppAssets.iconsPNG.carMercPNG, fit: BoxFit.cover, width: 360.w,),
           AppSizes.size8.verticalSpace,
           const PostReactions(),
+          AppSizes.size14.verticalSpace,
+          CommentCard(padding: AppPadding.kZeroPadding,),
         ],
       ),
     );
