@@ -16,45 +16,48 @@ import '../../../../auth/register/presentation/widgets/money_from_invite.dart';
 import '../../../../post_options_card/presentation/screens/post_options_card.dart';
 import '../../../../post_actions/presentation/screens/actions_card.dart';
 
-class PostHeader extends StatelessWidget
-{
-  const PostHeader({super.key});
+class PostHeader extends StatelessWidget {
+  final String userImage;
+  final String username;
+  final String time;
+
+  const PostHeader({
+    super.key,
+    required this.userImage,
+    required this.username,
+    required this.time,
+  });
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Row(
-      children:
-      [
-        Image.asset(AppAssets.iconsPNG.postUserIcon),
+      children: [
+        Image.asset(userImage),
         AppSizes.size8.horizontalSpace,
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            Text(AppStrings.reuealAndStaging, style: AppStyles.textStyle12(
-              fontColor: AppColors.color.kQuaternarySemiBlackText,
-              fontWeight: AppFontWeights.semiBoldWeight),
+          children: [
+            Text(
+              username,
+              style: AppStyles.textStyle12(
+                fontColor: AppColors.color.kQuaternarySemiBlackText,
+                fontWeight: AppFontWeights.semiBoldWeight,
+              ),
             ),
             AppSizes.size4.verticalSpace,
-            Text(AppStrings.justNow, style: AppStyles.textStyle10(
-              fontColor: AppColors.color.kTertiarySemiGrey,
-              fontWeight: AppFontWeights.mediumWeight),
+            Text(
+              time,
+              style: AppStyles.textStyle10(
+                fontColor: AppColors.color.kTertiarySemiGrey,
+                fontWeight: AppFontWeights.mediumWeight,
+              ),
             ),
           ],
         ),
         const Spacer(),
         InkWell(
-          //onTap: () => showPostOptionsBottomSheet(context),
-          //onTap: () => showActionsBottomSheet(context),
-          //onTap: () => showFollowBusinessPageBottomSheet(context),
           onTap: () => showJoinGroupsBottomSheet(context),
-          //onTap: () => showMoenyFromInterestsBottomSheet(context),
-          //onTap: () => showMoenyFromInviteBottomSheet(context),
-          //onTap: () => showCompleteProfileBottomSheet(context),
-          //onTap: () => showCommentsBottomSheet(context),
-          //onTap: () => showMoenyFromInterestsSelectedBottomSheet(context),
-          child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG)
+          child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG),
         ),
       ],
     );

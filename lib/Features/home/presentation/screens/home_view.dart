@@ -1,45 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app/core/widgets/app_listview_builder.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../controllers/posts_providers/posts_provider.dart';
 import '../widgets/create_panel_view/create_panel.dart';
 import '../widgets/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_card_view.dart';
 import '../widgets/products_scroll_view/products_item_list.dart';
 import '../widgets/story_scroll_view/story_view.dart';
 
-class HomeView extends StatelessWidget
-{
+class HomeView extends ConsumerWidget {
   const HomeView({super.key});
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final postsAsync = ref.watch(postsProvider);
+
     return Scaffold(
       appBar: const CustomHomeAppBar(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
+          children: [
             AppSizes.size27.verticalSpace,
-            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders,),
-            SizedBox(height: 79.h, child: const ProductsItemList(),),
+            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders),
+            SizedBox(height: 79.h, child: const ProductsItemList()),
             AppSizes.size23.verticalSpace,
-            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders,),
+            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders),
             AppSizes.size12.verticalSpace,
             SizedBox(height: 148.h, child: const StroyList()),
             AppSizes.size12.verticalSpace,
-            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders,),
+            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders),
             AppSizes.size16.verticalSpace,
             const CreatePanel(),
-            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders,),
+            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders),
             AppSizes.size20.verticalSpace,
-            AppListviewBuilder(
-              itemBuilder: (context, index) => const PostsCard(),
-              itemCount: 4,
-              separatorBuilder: (context, index) => AppSizes.size20.verticalSpace,
+            postsAsync.when(
+              data: (posts) => AppListviewBuilder(
+                itemBuilder: (context, index) => PostsCard(post: posts[index]),
+                itemCount: posts.length,
+                separatorBuilder: (context, index) => AppSizes.size20.verticalSpace,
+              ),
+              loading: () => const Center(child: CircularProgressIndicator()),
+              error: (error, stack) => Center(child: Text('Error: $error')),
             ),
             AppSizes.size50.verticalSpace,
           ],

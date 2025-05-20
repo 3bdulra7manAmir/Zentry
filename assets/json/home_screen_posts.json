@@ -1,57 +1,67 @@
 [
   {
     "id": 1,
-    "userimage": "assets/images/profile/reueal.png",
+    "userimage": "assets/icons/Notifications/Ahmed4.png",
     "username": "REUEAL & Staging",
     "time": "Just Now",
     "carmodel": "Mercedes AMG G63",
     "carprice": "3,000,000 EGP",
     "carinfo": "Inside the wagon AMG, we don't know which is more\ncolor we don't know which is more\nsurprising Read more.....",
-    "postcarimage": "assets/images/cars/mercedes_g63.png",
-    "likesCount": "1262"
+    "postcarimage": "assets/icons/Inside_Post/Merc_Jeep.png",
+    "likesCount": "1262",
+    "commentsCount": "45",
+    "sharesCount": "12"
   },
   {
     "id": 2,
-    "userimage": "assets/images/profile/autohub.png",
+    "userimage": "assets/icons/Notifications/Ahmed3.png",
     "username": "AutoHub Egypt",
     "time": "2 hours ago",
     "carmodel": "BMW X6 2022",
     "carprice": "2,850,000 EGP",
     "carinfo": "Fully loaded with M-package and luxury features\nAvailable now in limited stock only\nContact us for exclusive offers",
-    "postcarimage": "assets/images/cars/bmw_x6.png",
-    "likesCount": "123"
+    "postcarimage": "assets/icons/Search_Result/Car_Frog.png",
+    "likesCount": "123",
+    "commentsCount": "15",
+    "sharesCount": "124"
   },
   {
     "id": 3,
-    "userimage": "assets/images/profile/luxdrive.png",
+    "userimage": "assets/icons/Join_Groups/Pet.png",
     "username": "LuxDrive",
     "time": "Yesterday",
     "carmodel": "Range Rover Vogue",
     "carprice": "5,100,000 EGP",
     "carinfo": "Top-tier performance, unmatched comfort\nWhite exterior with black leather interior\nDelivery available across Egypt",
-    "postcarimage": "assets/images/cars/range_rover_vogue.png",
-    "likesCount": "141"
+    "postcarimage": "assets/icons/Inside_Post/Merc_Jeep.png",
+    "likesCount": "141",
+    "commentsCount": "2145",
+    "sharesCount": "654"
   },
   {
     "id": 4,
-    "userimage": "assets/images/profile/citymotors.png",
+    "userimage": "assets/icons/Join_Groups/Laptop.png",
     "username": "City Motors",
     "time": "3 days ago",
     "carmodel": "Toyota Land Cruiser 2023",
     "carprice": "4,600,000 EGP",
     "carinfo": "Brand new shape, GCC specs with full options\nReady for off-road and luxury city driving\nFinancing and trade-in available",
-    "postcarimage": "assets/images/cars/land_cruiser_2023.png",
-    "likesCount": "6780"
+    "postcarimage": "assets/icons/Search_Result/Car_Audi.png",
+    "likesCount": "6780",
+    "commentsCount": "415",
+    "sharesCount": "13562"
   },
   {
     "id": 4,
-    "userimage": "assets/images/profile/citymotors.png",
+    "userimage": "assets/icons/Join_Groups/Pet.png",
     "username": "City Motors",
     "time": "3 days ago",
     "carmodel": "Toyota Land Cruiser 2023",
     "carprice": "4,600,000 EGP",
     "carinfo": "Brand new shape, GCC specs with full options\nReady for off-road and luxury city driving\nFinancing and trade-in available",
-    "postcarimage": "assets/images/cars/land_cruiser_2023.png",
-    "likesCount": "3278"
+    "postcarimage": "assets/icons/Search_Result/Car_Frog.png",
+    "likesCount": "3278",
+    "commentsCount": "451",
+    "sharesCount": "162"
   }
 ]

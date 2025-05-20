@@ -23,7 +23,7 @@ void showCommentsBottomSheet(BuildContext context)
           AppSizes.size11.verticalSpace,
           Padding(
             padding: EdgeInsetsDirectional.only(start: 13.w),
-            child: Image.asset("assets/icons/Commets_Card/Left_Black_Arrow.png",),
+            child: Image.asset("assets/icons/Comments_Card/Left_Black_Arrow.png",),
           ),
           AppSizes.size25.verticalSpace,
           Container(
@@ -32,7 +32,7 @@ void showCommentsBottomSheet(BuildContext context)
             margin: AppPadding.kApp10Padding,
             decoration: BoxDecoration(
               borderRadius: AppBorders.buttonBorder7,
-              image: const DecorationImage(image: AssetImage("assets/icons/Commets_Card/Merc_Jeep.png")),
+              image: const DecorationImage(image: AssetImage("assets/icons/Comments_Card/Merc_Jeep.png")),
             ),
           ),
           AppSizes.size30.verticalSpace,
@@ -42,7 +42,7 @@ void showCommentsBottomSheet(BuildContext context)
               mainAxisSize: MainAxisSize.min,
               children:
               [
-                Image.asset("assets/icons/Commets_Card/Hart.png"),
+                Image.asset("assets/icons/Comments_Card/Hart.png"),
                 const Spacer(),
                 Container(
                   width: 215.w,
@@ -54,11 +54,11 @@ void showCommentsBottomSheet(BuildContext context)
                   ),child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
                     fieldText: "Comment here !",
-                    fieldPrefixIcon: Image.asset("assets/icons/Commets_Card/User_Avatar.png"),
+                    fieldPrefixIcon: Image.asset("assets/icons/Comments_Card/User_Avatar.png"),
                   ),
                 ),
                 const Spacer(),
-                Image.asset("assets/icons/Commets_Card/Save.png")
+                Image.asset("assets/icons/Comments_Card/Save.png")
               ],
             ),
           ),
