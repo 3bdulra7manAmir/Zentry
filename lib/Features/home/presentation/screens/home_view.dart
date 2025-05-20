@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/widgets/app_listview_builder.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../widgets/create_panel_view/create_panel.dart';
@@ -35,7 +36,11 @@ class HomeView extends StatelessWidget
             const CreatePanel(),
             Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders,),
             AppSizes.size20.verticalSpace,
-            const PostsCard(),
+            AppListviewBuilder(
+              itemBuilder: (context, index) => const PostsCard(),
+              itemCount: 4,
+              separatorBuilder: (context, index) => AppSizes.size20.verticalSpace,
+            ),
             AppSizes.size50.verticalSpace,
           ],
         ),
