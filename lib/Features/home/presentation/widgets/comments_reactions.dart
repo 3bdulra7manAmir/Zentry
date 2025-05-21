@@ -54,6 +54,7 @@ class PostReactions extends StatelessWidget {
             Text(likesCount, style: AppStyles.textStyle10(),),
             AppSizes.size4.horizontalSpace,
             Text(AppLocalizations.of(context).likes, style: AppStyles.textStyle10(),),
+            const Spacer(),
             AppSizes.size15.horizontalSpace,
             Text(commentsCount, style: AppStyles.textStyle10(),),
             AppSizes.size4.horizontalSpace,
