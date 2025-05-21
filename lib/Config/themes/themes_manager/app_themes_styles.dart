@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/constants/app_borders.dart';
-import '../../core/constants/app_sizes.dart';
-import '../../core/constants/app_styles.dart';
-import 'color_system/app_colors.dart';
-import 'font_system/app_font_weights.dart';
+import '../../../core/constants/app_borders.dart';
+import '../../../core/constants/app_sizes.dart';
+import '../../../core/constants/app_styles.dart';
+import '../color_system/app_colors.dart';
+import '../font_system/font_weights.dart';
 
 abstract class AppThemesStyles
 {

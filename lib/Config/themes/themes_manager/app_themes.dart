@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../core/constants/app_styles.dart';
+import '../../../core/constants/app_styles.dart';
 import 'app_themes_styles.dart';
-import 'color_system/app_colors.dart';
+import '../color_system/app_colors.dart';
 
 class AppTheme
 {

@@ -7,7 +7,7 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/app_validation.dart';

@@ -1,6 +1,6 @@
-import 'font_manager/font_manager_base.dart';
-import 'font_manager/font_manager_roboto.dart';
-import 'font_manager/font_manager_cairo.dart';
+import 'font_manager_base.dart';
+import 'font_manager_roboto.dart';
+import 'font_manager_cairo.dart';
 
 class AppFonts
 {

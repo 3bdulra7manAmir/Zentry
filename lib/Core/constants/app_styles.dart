@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/themes/color_system/app_colors.dart';
-import '../../config/themes/font_system/app_font_sizes.dart';
+import '../../config/themes/font_system/font_sizes.dart';
 import 'app_sizes.dart';
-import '../../config/themes/font_system/app_font_weights.dart';
+import '../../config/themes/font_system/font_weights.dart';
 
 abstract class AppStyles
 {

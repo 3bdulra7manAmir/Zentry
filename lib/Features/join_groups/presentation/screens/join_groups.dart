@@ -6,7 +6,7 @@ import '../../../../core/constants/app_images.dart';
 import '../../domain/entities/join_groups_entity.dart';
 import '../controllers/join_groups_items_provider.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
-import '../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';

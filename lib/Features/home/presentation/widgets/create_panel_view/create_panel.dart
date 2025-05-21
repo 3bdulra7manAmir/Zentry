@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
-import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';

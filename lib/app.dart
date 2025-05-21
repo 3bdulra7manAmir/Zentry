@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'config/l10n/generated/app_localizations.dart';
 import 'config/router/app_router.dart';
-import 'config/themes/app_themes.dart';
+import 'config/themes/theming/app_themes.dart';
 import 'core/helpers/app_providers.dart';
 
 
