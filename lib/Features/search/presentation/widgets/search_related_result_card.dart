@@ -27,7 +27,7 @@ class SearchRelatedResultCard extends StatelessWidget {
         Text(
           category.title,
           style: AppStyles.textStyle14(
-            fontColor: AppColors.color.kSenaryTotalBlackText,
+            fontColor: AppColors.color.kBlack001,
             fontWeight: AppFontWeights.semiBoldWeight,
           ),
         ),
@@ -39,10 +39,10 @@ class SearchRelatedResultCard extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: AppBorders.buttonBorder10,
-            color: AppColors.color.kQuinarySemiBlueText,
+            color: AppColors.color.kBlue003,
           ),
           child: Text(category.number!, style: AppStyles.textStyle14(
-            fontColor: AppColors.color.kQuinarySemiBlueText,
+            fontColor: AppColors.color.kBlue003,
             fontWeight: AppFontWeights.semiBoldWeight),),
         ) : const SizedBox.shrink(),
         const Spacer(),

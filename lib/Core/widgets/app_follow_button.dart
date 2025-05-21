@@ -50,7 +50,7 @@ class CustomFollowButton extends ConsumerWidget
               side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.width1,),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kQuinarySemiBlueText,),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kBlue003,),
         ),
         onPressed: buttonOnPressed,
         child: Row(
@@ -60,7 +60,7 @@ class CustomFollowButton extends ConsumerWidget
           [
             Image.asset(AppAssets.iconsPNG.addButtonPNG),
             AppSizes.size4.horizontalSpace,
-            Text(buttonText ?? AppLocalizations.of(context).follow, style: buttonTextStyle ?? AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondaryWhite),),
+            Text(buttonText ?? AppLocalizations.of(context).follow, style: buttonTextStyle ?? AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001),),
           ],
         ),
       ),

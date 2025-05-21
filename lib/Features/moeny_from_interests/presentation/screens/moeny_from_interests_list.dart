@@ -51,7 +51,7 @@ class MoneyFromInterestsListView extends ConsumerWidget {
             error: (error, stackTrace) => Center(
               child: Text(
                 '${AppLocalizations.of(context).error}: $error',
-                style: AppStyles.textStyle12(fontColor: AppColors.color.kSenaryTotalBlackText),
+                style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001),
               ),
             ),
           ),
@@ -61,7 +61,7 @@ class MoneyFromInterestsListView extends ConsumerWidget {
           height: 79.h,
           padding: AppPadding.kNextButtonPadding,
           decoration: BoxDecoration(
-            color: AppColors.color.kFormButtonsFill,
+            color: AppColors.color.kGrey002,
           ),
           child: selectedCategoriesAsync.when(
             data: (selectedCategories) => CustomButton(
@@ -125,7 +125,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
               width: 48.w,
               height: 48.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kSecondaryWhite,
+                color: AppColors.color.kWhite001,
                 borderRadius: AppBorders.kProductItemRadius,
               ),
               child: Image.asset(category.image,
@@ -143,7 +143,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
                       Text(
                         "interested in",
                         style: AppStyles.textStyle12(
-                          fontColor: AppColors.color.kSenaryTotalBlackText,
+                          fontColor: AppColors.color.kBlack001,
                           fontWeight: AppFontWeights.semiBoldWeight,
                         ),
                       ),
@@ -152,7 +152,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
                         child: Text(
                           category.name,
                           style: AppStyles.textStyle12(
-                            fontColor: AppColors.color.kQuinarySemiBlueText,
+                            fontColor: AppColors.color.kBlue003,
                             fontWeight: AppFontWeights.semiBoldWeight,
                           ),
                           overflow: TextOverflow.ellipsis,
@@ -174,7 +174,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
       error: (error, stack) => Center(
         child: Text(
           '${AppLocalizations.of(context).error}: $error',
-          style: AppStyles.textStyle12(fontColor: AppColors.color.kSenaryTotalBlackText),
+          style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001),
         ),
       ),
     );

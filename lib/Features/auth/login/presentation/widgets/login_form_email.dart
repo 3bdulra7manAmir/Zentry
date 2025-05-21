@@ -47,9 +47,9 @@ class LoginFormWithEmail extends ConsumerWidget {
               Row(
                 children:
                 [
-                  Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+                  Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
-                  Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                  Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
                   AppSizes.size4.horizontalSpace,
                   GestureDetector(
                     onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
@@ -72,7 +72,7 @@ class LoginFormWithEmail extends ConsumerWidget {
                 fieldText: AppLocalizations.of(context).enterEmaill,
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
@@ -98,16 +98,16 @@ class LoginFormWithEmail extends ConsumerWidget {
                         ref.read(checkboxValueProvider.notifier).state = value;
                       }
                     },
-                    side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kFormButtonsBorders,),
+                    side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kGrey001,),
                   ),
-                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kTertiarySemiGrey,),),
+                  Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText004,),),
                   const Spacer(),
                   InkWell(
                     onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView,),
                     child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
-                        fontColor: AppColors.color.kQuinarySemiBlueText,
+                        fontColor: AppColors.color.kBlue003,
                         textDecoration: TextDecoration.underline,
-                        textDecorationColor: AppColors.color.kForgetPasswordUnderLine,
+                        textDecorationColor: AppColors.color.kBlue004,
                       ),
                     ),
                   ),
@@ -125,7 +125,7 @@ class LoginFormWithEmail extends ConsumerWidget {
                   AppLocalizations.of(context).orLoginWith,
                   style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
-                    fontColor: AppColors.color.kSenaryTotalBlackText,
+                    fontColor: AppColors.color.kBlack001,
                   ),
                 ),
               ),
@@ -140,9 +140,9 @@ class LoginFormWithEmail extends ConsumerWidget {
                         child: CustomSocialButton(
                           buttonText: AppLocalizations.of(context).facebook,
                           platformLogo: AppAssets.iconsPNG.faceBookPNG,
-                          buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                          buttonBackgroundColor: AppColors.color.kDark002,
                           buttonTextStyle: AppStyles.textStyle12(
-                            fontColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kBlack002,
                           ),
                         ),
                       ),
@@ -151,9 +151,9 @@ class LoginFormWithEmail extends ConsumerWidget {
                         child: CustomSocialButton(
                           buttonText: AppLocalizations.of(context).google,
                           platformLogo: AppAssets.iconsPNG.googlePNG,
-                          buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                          buttonBackgroundColor: AppColors.color.kDark002,
                           buttonTextStyle: AppStyles.textStyle12(
-                            fontColor: AppColors.color.kQuaternarySemiBlackText,
+                            fontColor: AppColors.color.kBlack002,
                           ),
                         ),
                       ),
@@ -168,9 +168,9 @@ class LoginFormWithEmail extends ConsumerWidget {
                             : AppAssets.iconsPNG.appleDarkPNG,
                     buttonWidth: 174.w,
                     isLogoSpace: false,
-                    buttonBackgroundColor: AppColors.color.kPrimaryDark,
+                    buttonBackgroundColor: AppColors.color.kDark002,
                     buttonTextStyle: AppStyles.textStyle12(
-                      fontColor: AppColors.color.kQuaternarySemiBlackText,
+                      fontColor: AppColors.color.kBlack002,
                     ),
                   ),
                 ],

@@ -64,7 +64,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                             Flexible(
                               child: Text(
                                 result.price,
-                                style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),
+                                style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
@@ -72,7 +72,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                               AppSizes.size6.horizontalSpace,
                               Text(
                                 AppLocalizations.of(context).cash,
-                                style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),
+                                style: AppStyles.textStyle8(fontColor: AppColors.color.kBlue003),
                               ),
                             ],
                           ],
@@ -91,7 +91,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                     result.title,
                     style: AppStyles.textStyle14(
                       fontWeight: AppFontWeights.regularWeight,
-                      fontColor: AppColors.color.kSenaryTotalBlackText
+                      fontColor: AppColors.color.kBlack001
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
@@ -160,11 +160,11 @@ class SearchResultCardDetailed extends StatelessWidget {
                       if (result.country.isNotEmpty) ...[
                         Image.asset(AppAssets.iconsPNG.locationPNG),
                         AppSizes.size6.horizontalSpace,
-                        Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                        Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
                       ],
                       if (result.month.isNotEmpty) ...[
                         AppSizes.size16.horizontalSpace,
-                        Text(result.month, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                        Text(result.month, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
                       ],
                     ],
                   ),

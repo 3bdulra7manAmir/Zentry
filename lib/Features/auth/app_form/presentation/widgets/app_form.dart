@@ -51,13 +51,13 @@ class AppFormView extends ConsumerWidget
               width: 73.w,
               height: 3.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kSecondarySemiGreyText,
+                color: AppColors.color.kGreyText002,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
             AppSizes.size24.verticalSpace,
             Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(
-              fontColor: AppColors.color.kPrimaryGreyText,
+              fontColor: AppColors.color.kGreyText001,
               ),
             ),
             AppSizes.size28.verticalSpace,
@@ -99,9 +99,9 @@ class AppFormView extends ConsumerWidget
             AppSizes.size16.verticalSpace,
             CustomButton(
               buttonText: AppLocalizations.of(context).signUp,
-              buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kPrimaryBlue,),
-              buttonBackgroundColor: AppColors.color.kSecondaryWhite,
-              buttonBorderColor: AppColors.color.kPrimaryBlue,
+              buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kBlue001,),
+              buttonBackgroundColor: AppColors.color.kWhite001,
+              buttonBorderColor: AppColors.color.kBlue001,
               //buttonOnPressed: () => AppRouter.router.pushNamed(AppRoutes.kTestView),
             ),
           ],

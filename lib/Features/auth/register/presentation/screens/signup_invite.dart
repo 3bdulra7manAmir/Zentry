@@ -44,7 +44,7 @@ class SignUpFormInvite extends ConsumerWidget
               Row(
                 children:
                 [
-                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+                  Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   GestureDetector(
                     onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(), //HERE //Needs Fix
@@ -65,7 +65,7 @@ class SignUpFormInvite extends ConsumerWidget
                   : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
@@ -84,7 +84,7 @@ class SignUpFormInvite extends ConsumerWidget
               AppSizes.size24.verticalSpace,
               Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                 fontWeight: AppFontWeights.mediumWeight,
-                fontColor: AppColors.color.kQuinarySemiBlueText,
+                fontColor: AppColors.color.kBlue003,
                 ),
               ),
               AppSizes.size8.verticalSpace,

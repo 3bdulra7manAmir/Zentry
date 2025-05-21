@@ -38,7 +38,7 @@ class UsersStory extends StatelessWidget
               decoration: BoxDecoration(
                 borderRadius: AppBorders.kProductItemRadius,
                 border: Border.all(
-                  color: AppColors.color.kRobotBoyRadiusColor,
+                  color: AppColors.color.kOrange003,
                   width: 2.w,
                 ),
               ),
@@ -49,7 +49,7 @@ class UsersStory extends StatelessWidget
             ),
             const Spacer(),
             Text(story.name, style: AppStyles.textStyle10(
-                fontColor: AppColors.color.kSecondaryWhite,
+                fontColor: AppColors.color.kWhite001,
                 fontWeight: AppFontWeights.extraBoldWeight,
               ),
               maxLines: 2,

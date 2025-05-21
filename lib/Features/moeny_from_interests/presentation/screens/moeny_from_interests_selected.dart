@@ -74,7 +74,7 @@
 //       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 11.h),
 //       width: 322.w,
 //       decoration: BoxDecoration(
-//         border: Border.all(color: AppColors.color.kRobotBoyRadiusColor, width: AppBorderWidths.width2),
+//         border: Border.all(color: AppColors.color.kOrange003, width: AppBorderWidths.width2),
 //         borderRadius: AppBorders.postPriceCard8,
 //       ),
 //       child: GridView.builder(

@@ -26,7 +26,7 @@ class CommentCard extends StatelessWidget
             width: 42.w,
             height: 40.h,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
               borderRadius: AppBorders.buttonBorder10,
               border: AppBoxBorders.commonborder,
             ),
@@ -40,7 +40,7 @@ class CommentCard extends StatelessWidget
             child: Container(
               height: 40.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kFormButtonsFill,
+                color: AppColors.color.kGrey002,
                 borderRadius: AppBorders.buttonBorder10,
                 border: AppBoxBorders.commonborder,
               ),
@@ -58,7 +58,7 @@ class CommentCard extends StatelessWidget
             width: 38.w,
             height: 40.h,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
               borderRadius: AppBorders.buttonBorder10,
               border: AppBoxBorders.commonborder,
             ),
@@ -74,7 +74,7 @@ class CommentCard extends StatelessWidget
             width: 38.w,
             height: 40.h,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
               borderRadius: AppBorders.buttonBorder10,
               border: AppBoxBorders.commonborder,
             ),

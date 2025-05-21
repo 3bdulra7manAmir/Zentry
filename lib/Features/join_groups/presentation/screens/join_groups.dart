@@ -55,7 +55,7 @@ void showJoinGroupsBottomSheet(BuildContext context) {
             height: 79.h,
             padding: AppPadding.kNextButtonPadding,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
             ),
             child: const CustomButton(
               buttonText: AppStrings.next,
@@ -120,16 +120,16 @@ class JoinGroupsCard extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: AppColors.color.kDatePicker.withOpacity(0.5),
+                color: AppColors.color.kOrange002.withOpacity(0.5),
                 blurRadius: 5,
                 offset: const Offset(0, 0),
                 spreadRadius: 0,
               ),
             ],
-            color: AppColors.color.kSecondaryWhite,
+            color: AppColors.color.kWhite001,
             borderRadius: AppBorders.buttonBorder10,
             border: Border.all(
-              color: AppColors.color.kDatePicker,
+              color: AppColors.color.kOrange002,
               width: AppBorderWidths.width2,
             ),
           ),
@@ -139,7 +139,7 @@ class JoinGroupsCard extends StatelessWidget {
               Text(
                 group.title,
                 style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kSenaryTotalBlackText,
+                  fontColor: AppColors.color.kBlack001,
                 ),
               ),
               AppSizes.size5.verticalSpace,
@@ -147,7 +147,7 @@ class JoinGroupsCard extends StatelessWidget {
                 group.membersCount,
                 style: AppStyles.textStyle10(
                   fontWeight: AppFontWeights.mediumWeight,
-                  fontColor: AppColors.color.kQuinarySemiBlueText,
+                  fontColor: AppColors.color.kBlue003,
                 ),
               ),
               AppSizes.size5.verticalSpace,

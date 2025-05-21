@@ -36,7 +36,7 @@ void showThemesBottomSheet(BuildContext context)
                   width: 44.w,
                   height: 4.h,
                   decoration: BoxDecoration(
-                    color: AppColors.color.kSecondarySemiGreyText,
+                    color: AppColors.color.kGreyText002,
                     borderRadius: AppBorders.dividerBorder,
                   ),
                 ),
@@ -57,7 +57,7 @@ void showThemesBottomSheet(BuildContext context)
                         }
                       },
                       title: Text(AppLocalizations.of(context).light),
-                      activeColor: AppColors.color.kPrimaryGreyText,
+                      activeColor: AppColors.color.kGreyText001,
                     ),
                     RadioListTile<ThemeMode>(
                       value: ThemeMode.dark,
@@ -71,7 +71,7 @@ void showThemesBottomSheet(BuildContext context)
                         }
                       },
                       title: Text(AppLocalizations.of(context).dark),
-                      activeColor: AppColors.color.kPrimaryGreyText,
+                      activeColor: AppColors.color.kGreyText001,
                     ),
                   ],
                 ),

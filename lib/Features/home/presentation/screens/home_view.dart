@@ -27,17 +27,17 @@ class HomeView extends ConsumerWidget
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppSizes.size27.verticalSpace,
-            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders),
+            Divider(height: AppSizes.size2, color: AppColors.color.kGrey001),
             SizedBox(height: 79.h, child: const ProductsItemList()),
             AppSizes.size23.verticalSpace,
-            Divider(height: AppSizes.size2, color: AppColors.color.kFormButtonsBorders),
+            Divider(height: AppSizes.size2, color: AppColors.color.kGrey001),
             AppSizes.size12.verticalSpace,
             SizedBox(height: 148.h, child: const StroyList()),
             AppSizes.size12.verticalSpace,
-            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders),
+            Divider(height: AppSizes.size4, color: AppColors.color.kGrey001),
             AppSizes.size16.verticalSpace,
             const CreatePanel(),
-            Divider(height: AppSizes.size4, color: AppColors.color.kFormButtonsBorders),
+            Divider(height: AppSizes.size4, color: AppColors.color.kGrey001),
             AppSizes.size20.verticalSpace,
             postsAsync.when(
               data: (posts) => AppListviewBuilder(

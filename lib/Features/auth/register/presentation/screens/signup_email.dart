@@ -43,7 +43,7 @@ class SignUpFormEmail extends ConsumerWidget
               Row(
                 children:
                 [
-                  Text(AppLocalizations.of(context).emailAddress, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+                  Text(AppLocalizations.of(context).emailAddress, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   AppSizes.size4.horizontalSpace,
                   GestureDetector(
@@ -61,7 +61,7 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldText: AppLocalizations.of(context).emailAddress,
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kQuaternarySemiBlackText,),),
+              Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
@@ -80,7 +80,7 @@ class SignUpFormEmail extends ConsumerWidget
               AppSizes.size24.verticalSpace,
               Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
                 fontWeight: AppFontWeights.mediumWeight,
-                fontColor: AppColors.color.kQuinarySemiBlueText,
+                fontColor: AppColors.color.kBlue003,
                 ),
               ),
               AppSizes.size8.verticalSpace,

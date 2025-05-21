@@ -3,109 +3,162 @@ import 'color_manager_base.dart';
 
 class LightColorScheme extends ColorManagerBase {
   @override
-  Color get kPrimaryGreyText => const Color(0xff5D5D5D);
+  /// [Transparent]
+  Color get kTransparent => Colors.transparent; // kTransparent
+
+  // Blue Color Range
+  @override
+  /// [Blue_001__003082]
+  Color get kBlue001 => const Color(0xff003082); // kBlue001
 
   @override
-  Color get kTransparent => Colors.transparent;
+  /// [Blue_002__233973]
+  Color get kBlue002 => const Color(0xff233973); // kBlue002
 
   @override
-  Color get kPrimaryBlue => const Color(0xff003082);
+  /// [Blue_003__3E6FCF]
+  Color get kBlue003 => const Color(0xff3E6FCF); // kBlue003
 
   @override
-  Color get kVerificationUnderLine => const Color(0xff233973);
-  
-  @override
-  Color get kWatchTutorialBGColor => const Color(0xff244d93);
+  /// [Blue_004__003082_3E6FCF]
+  Color get kBlue004 => const Color(0xff3E6FCF); // kBlue004
 
   @override
-  Color get kQuinarySemiBlueText => const Color(0xff3E6FCF);
-
-    @override
-  Color get kReadMorefontColor => const Color(0xff1963D6);
+  /// [Blue_005__1963D6]
+  Color get kBlue005 => const Color(0xff1963D6); // kBlue005
 
   @override
-  Color get kForgetPasswordUnderLine => const Color(0xff3E6FCF);
+  /// [Blue_006__244d93]
+  Color get kBlue006 => const Color(0xff244d93); // kBlue006
+
+  // White Color Range
+  @override
+  /// [White_001__FFFFFF]
+  Color get kWhite001 => const Color(0xffFFFFFF); // kWhite001
 
   @override
-  Color get kProductItemBackground => const Color(0xff87D1E5);
+  /// [White_002__F4F4F4]
+  Color get kWhite002 => const Color(0xffF4F4F4); // kWhite002
+
+  // Grey Color Range
+  @override
+  /// [Grey_001__EEEEEE]
+  Color get kGrey001 => const Color(0xffEEEEEE); // kGrey001
 
   @override
-  Color get kSecondaryWhite => const Color(0xffFFFFFF);
+  /// [Grey_002__F8F8F8]
+  Color get kGrey002 => const Color(0xffF8F8F8); // kGrey002
 
   @override
-  Color get kTertiaryWhiteText => const Color(0xffF4F4F4);
+  /// [Grey_003__E5E5E5]
+  Color get kGrey003 => const Color(0xffE5E5E5); // kGrey003
 
   @override
-  Color get kFormButtonsBorders => const Color(0xffEEEEEE);
+  /// [Grey_004__FBFBFB]
+  Color get kGrey004 => const Color(0xffFBFBFB); // kGrey004
 
   @override
-  Color get kFormButtonsFill => const Color(0xffF8F8F8);
+  /// [Grey_005__FAFAFA]
+  Color get kGrey005 => const Color(0xffFAFAFA); // kGrey005
+
+  // Grey Text Color Range
+  @override
+  /// [GreyText_001__5D5D5D]
+  Color get kGreyText001 => const Color(0xff5D5D5D); // kGreyText001
 
   @override
-  Color get kSocialBorder => const Color(0xffE5E5E5);
+  /// [GreyText_002__9E9E9E]
+  Color get kGreyText002 => const Color(0xff9E9E9E); // kGreyText002
 
   @override
-  Color get kAppBarBG => const Color(0xffFBFBFB);
+  /// [GreyText_003__717171]
+  Color get kGreyText003 => const Color(0xff717171); // kGreyText003
 
   @override
-  Color get kNumericButtonBG => const Color(0xffFAFAFA);
+  /// [GreyText_004__B4B4B4]
+  Color get kGreyText004 => const Color(0xffB4B4B4); // kGreyText004
 
   @override
-  Color get kNonarySemiGreyText => const Color(0xff717171);
-  @override //REVERSED
-  Color get kSemiGreyAgain => const Color(0xff9A9A9A);
-  @override
-  Color get kSemiGrey4 => const Color(0xff8C8C8C);
+  /// [GreyText_005__2E2E2E]
+  Color get kGreyText005 => const Color(0xff2E2E2E); // kGreyText005
 
   @override
-  Color get kSecondarySemiGreyText => const Color(0xff9E9E9E);
-  @override
-  Color get kSemiGrey2 => const Color(0xffECECEC);
-  @override
-  Color get kSemiGrey3 => const Color(0xffE4E4E4);
+  /// [GreyText_006__B6B6B6]
+  Color get kGreyText006 => const Color(0xffB6B6B6); // kGreyText006
 
   @override
-  Color get kTertiarySemiGrey => const Color(0xffB4B4B4);
+  /// [GreyText_007__F3F3F3]
+  Color get kGreyText007 => const Color(0xffF3F3F3); // kGreyText007
 
   @override
-  Color get kQuaternarySemiBlackText => const Color(0xff232633);
+  /// [GreyText_008__9A9A9A]
+  Color get kGreyText008 => const Color(0xff9A9A9A); // kGreyText008
 
   @override
-  Color get kAgainTextDark => const Color(0xff121212);
+  /// [GreyText_009__ECECEC]
+  Color get kGreyText009 => const Color(0xffECECEC); // kGreyText009
 
   @override
-  Color get kSenaryTotalBlackText => const Color(0xff000000);
+  /// [GreyText_010__E4E4E4]
+  Color get kGreyText010 => const Color(0xffE4E4E4); // kGreyText010
 
   @override
-  Color get kSeptenarySemiGreyText => const Color(0xff2E2E2E);
+  /// [GreyText_011__8C8C8C]
+  Color get kGreyText011 => const Color(0xff8C8C8C); // kGreyText011
+
+  // Black Color Range
+  @override
+  /// [Black_001__000000]
+  Color get kBlack001 => const Color(0xff000000); // kBlack001
 
   @override
-  Color get kOctonarySemiBlackText => const Color(0xff1F1F1F);
+  /// [Black_002__232633]
+  Color get kBlack002 => const Color(0xff232633); // kBlack002
 
   @override
-  Color get kTabBar => const Color(0xffFF7D00);
-  @override
-  Color get kDatePicker => const Color(0xffEE7D19);
-  @override
-  Color get kRobotBoyRadiusColor => const Color(0xffF08A31);
+  /// [Black_003__1F1F1F]
+  Color get kBlack003 => const Color(0xff1F1F1F); // kBlack003
 
   @override
-  Color get kFormButtonsBordersFillDark => const Color(0xff272626);
-
-  @override // REVERSED
-  Color get kPrimaryDark => const Color(0xffFFFFFF);
-
-  @override //REVERSED
-  Color get kSocialBorderDark => const Color(0xffE5E5E5);
+  /// [Black_004__D7D7D7]
+  Color get kBlack004 => const Color(0xffD7D7D7); // kBlack004
 
   @override
-  Color get kSecondarySemiGreyTextDark => const Color(0xff676767);
+  /// [Black_005__121212]
+  Color get kBlack005 => const Color(0xff121212); // kBlack005
+
+  // Orange Color Range
+  @override
+  /// [Orange_001__FF7D00]
+  Color get kOrange001 => const Color(0xffFF7D00); // kOrange001
 
   @override
-  Color get kQuaternarySemiBlackTextDark => const Color(0xffD7D7D7);
+  /// [Orange_002__EE7D19]
+  Color get kOrange002 => const Color(0xffEE7D19); // kOrange002
 
   @override
-  Color get kSemiGreyText => const Color(0xffB6B6B6);
+  /// [Orange_003__F08A31]
+  Color get kOrange003 => const Color(0xffF08A31); // kOrange003
+
+  // Cyan Color Range
   @override
-  Color get kSemiGrey => const Color(0xffF3F3F3);
+  /// [Cyan_001__87D1E5]
+  Color get kCyan001 => const Color(0xff87D1E5); // kCyan001
+
+  // Dark Mode Related Colors
+  @override
+  /// [Dark_001__272626]
+  Color get kDark001 => const Color(0xff272626); // kDark001
+
+  @override
+  /// [Dark_002__1B1B1B]
+  Color get kDark002 => const Color(0xffFFFFFF); // kDark002
+
+  @override
+  /// [Dark_003__313131]
+  Color get kDark003 => const Color(0xffE5E5E5); // kDark003
+
+  @override
+  /// [DarkText_001__676767]
+  Color get kDarkText001 => const Color(0xff676767); // kDarkText001
 }

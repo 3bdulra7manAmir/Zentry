@@ -31,7 +31,7 @@ class PostBio extends StatelessWidget {
             Text(
               carModel,
               style: AppStyles.textStyle14(
-                fontColor: AppColors.color.kSeptenarySemiGreyText,
+                fontColor: AppColors.color.kGreyText005,
                 fontWeight: AppFontWeights.semiBoldWeight,
               ),
             ),
@@ -41,7 +41,7 @@ class PostBio extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: AppBorders.postPriceCard8,
                 border: Border.all(
-                  color: AppColors.color.kFormButtonsBorders,
+                  color: AppColors.color.kGrey001,
                   width: AppBorderWidths.width2,
                 ),
               ),
@@ -50,7 +50,7 @@ class PostBio extends StatelessWidget {
                   carPrice,
                   style: AppStyles.textStyle14(
                     fontWeight: AppFontWeights.semiBoldWeight,
-                    fontColor: AppColors.color.kSeptenarySemiGreyText,
+                    fontColor: AppColors.color.kGreyText005,
                   ),
                 ),
               ),
@@ -67,11 +67,11 @@ class PostBio extends StatelessWidget {
           style: AppStyles.textStyle12(fontWeight: AppFontWeights.regularWeight),
           moreStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            fontColor: AppColors.color.kReadMorefontColor,
+            fontColor: AppColors.color.kBlue005,
           ),
           lessStyle: AppStyles.textStyle12(
             fontWeight: AppFontWeights.regularWeight,
-            fontColor: AppColors.color.kReadMorefontColor,
+            fontColor: AppColors.color.kBlue005,
           ),
         ),
       ],

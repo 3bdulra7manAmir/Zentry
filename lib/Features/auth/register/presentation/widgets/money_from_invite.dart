@@ -42,7 +42,7 @@ void showMoenyFromInviteBottomSheet(BuildContext context)
             height: 79.h,
             padding: AppPadding.kNextButtonPadding,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
             ),
             child: const CustomButton(buttonText: AppStrings.next,),
           ),
@@ -86,7 +86,7 @@ class MoenyFromInviteCard extends StatelessWidget
             children:
             [
               Text(AppLocalizations.of(context).addInvitationCode, style: AppStyles.textStyle12(
-                fontColor: AppColors.color.kSenaryTotalBlackText,
+                fontColor: AppColors.color.kBlack001,
                 fontWeight: AppFontWeights.semiBoldWeight)
               ),
               AppSizes.size8.verticalSpace,
@@ -105,7 +105,7 @@ class MoenyFromInviteCard extends StatelessWidget
               ),
               AppSizes.size24.verticalSpace,
               Text(AppLocalizations.of(context).myCode, style: AppStyles.textStyle12(
-                fontColor: AppColors.color.kSenaryTotalBlackText,
+                fontColor: AppColors.color.kBlack001,
                 fontWeight: AppFontWeights.semiBoldWeight)
               ),
               AppSizes.size8.verticalSpace,

@@ -47,7 +47,7 @@ Widget build(BuildContext context, WidgetRef ref)
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
           fontWeight: AppFontWeights.semiBoldWeight,
-          fontColor: AppColors.color.kSenaryTotalBlackText,
+          fontColor: AppColors.color.kBlack001,
         ),),
       ),
       body: SingleChildScrollView(
@@ -57,12 +57,12 @@ Widget build(BuildContext context, WidgetRef ref)
             children:
             [
               AppSizes.size46.verticalSpace,
-              Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(fontColor: AppColors.color.kSenaryTotalBlackText,),),
+              Text(AppLocalizations.of(context).forgotPassword, style: AppStyles.textStyle20(fontColor: AppColors.color.kBlack001,),),
               AppSizes.size13.verticalSpace,
-              Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(fontColor: AppColors.color.kSecondarySemiGreyText,),),
+              Text(AppLocalizations.of(context).enterPhoneNumberAssociated, style: AppStyles.textStyle16(fontColor: AppColors.color.kGreyText002,),),
               AppSizes.size7.verticalSpace,
               Text(AppLocalizations.of(context).withYourAccount, style: AppStyles.textStyle14(
-                  fontColor: AppColors.color.kSecondarySemiGreyText,
+                  fontColor: AppColors.color.kGreyText002,
                   fontWeight: AppFontWeights.regularWeight,
                 ),
               ),
@@ -77,7 +77,7 @@ Widget build(BuildContext context, WidgetRef ref)
                     Text(
                       AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle13(
                         fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kSeptenarySemiGreyText,
+                        fontColor: AppColors.color.kGreyText005,
                       ),
                     ),
                     AppSizes.size9.verticalSpace,
@@ -100,7 +100,7 @@ Widget build(BuildContext context, WidgetRef ref)
                       [
                         Text(AppLocalizations.of(context).dontHavePhone, style: AppStyles.textStyle14(
                             fontWeight: AppFontWeights.mediumWeight,
-                            fontColor: AppColors.color.kSeptenarySemiGreyText,
+                            fontColor: AppColors.color.kGreyText005,
                           ),
                         ),
                         AppSizes.size14.horizontalSpace,
@@ -108,9 +108,9 @@ Widget build(BuildContext context, WidgetRef ref)
                           onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView,),
                           child: Text(AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(
                               fontWeight: AppFontWeights.mediumWeight,
-                              fontColor: AppColors.color.kQuinarySemiBlueText,
+                              fontColor: AppColors.color.kBlue003,
                               textDecoration: TextDecoration.underline,
-                              textDecorationColor: AppColors.color.kQuinarySemiBlueText,
+                              textDecorationColor: AppColors.color.kBlue003,
                             ),
                           ),
                         ),

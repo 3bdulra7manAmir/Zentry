@@ -30,7 +30,7 @@ class CustomContainer extends StatelessWidget
       padding: AppPadding.kAppFormPadding,
       decoration: BoxDecoration(
         borderRadius: AppBorders.buttonBorder10,
-        color: AppColors.color.kFormButtonsFill,
+        color: AppColors.color.kGrey002,
       ),
       child: Row(
         children:

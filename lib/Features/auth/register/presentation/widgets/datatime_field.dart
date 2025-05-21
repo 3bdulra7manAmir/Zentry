@@ -28,20 +28,20 @@ class DataTimePicker extends ConsumerWidget
       crossAxisAlignment: CrossAxisAlignment.start,
       children:
       [
-        Text(AppLocalizations.of(context).date, style: AppStyles.textStyle12(fontColor: AppColors.color.kSeptenarySemiGreyText,),),
+        Text(AppLocalizations.of(context).date, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText005,),),
         AppSizes.size8.verticalSpace,
         Container(
           height: 48.h,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: AppColors.color.kFormButtonsFill,
+            color: AppColors.color.kGrey002,
             borderRadius: AppBorders.buttonBorder10,
           ),
           child: Row(
             children:
             [
               AppSizes.size20.horizontalSpace,
-              Text(displayDate, style: AppStyles.textStyle13(fontColor: AppColors.color.kSecondarySemiGreyText,),),
+              Text(displayDate, style: AppStyles.textStyle13(fontColor: AppColors.color.kGreyText002,),),
               const Spacer(),
               Image.asset(AppAssets.iconsPNG.downArrowPNG),
               AppSizes.size20.horizontalSpace,

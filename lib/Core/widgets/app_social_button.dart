@@ -46,12 +46,12 @@ class CustomSocialButton extends StatelessWidget {
             RoundedRectangleBorder(
               borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder10,
               side: BorderSide(
-                color: buttonBorderColor ?? AppColors.color.kSocialBorderDark,
+                color: buttonBorderColor ?? AppColors.color.kDark003,
                 width: buttonBorderWidth ?? AppBorderWidths.width1,
               ),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kPrimaryBlue,),
+          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kBlue001,),
           overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
           splashFactory: NoSplash.splashFactory,
           shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),

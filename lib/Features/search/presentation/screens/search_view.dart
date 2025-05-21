@@ -36,18 +36,18 @@ class SearchView extends ConsumerWidget
                 [
                   Text(AppLocalizations.of(context).categories, style: AppStyles.textStyle16(
                       fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: AppColors.color.kAgainTextDark,
+                      fontColor: AppColors.color.kBlack005,
                     ),
                   ),
                   Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(
                       fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: AppColors.color.kForgetPasswordUnderLine,
+                      fontColor: AppColors.color.kBlue004,
                     ),
                   ),
                 ],
               ),
               AppSizes.size3.verticalSpace,
-              Text(AppLocalizations.of(context).relatedResults, style: AppStyles.textStyle12(fontColor: AppColors.color.kSecondarySemiGreyText,),),
+              Text(AppLocalizations.of(context).relatedResults, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
               AppSizes.size16.verticalSpace,
               searchResults.when(
                 data: (categories)
@@ -56,7 +56,7 @@ class SearchView extends ConsumerWidget
                   {
                     return Center(
                       child: Text(AppLocalizations.of(context).search, style: AppStyles.textStyle14(
-                          fontColor: AppColors.color.kSecondarySemiGreyText,
+                          fontColor: AppColors.color.kGreyText002,
                           fontWeight: AppFontWeights.regularWeight,
                         ),
                       ),
@@ -75,7 +75,7 @@ class SearchView extends ConsumerWidget
                 loading: () => const Center(child: CircularProgressIndicator()),
                 error: (error, stack) => Center(
                   child: Text('${AppLocalizations.of(context).error}: $error', style: AppStyles.textStyle14(
-                      fontColor: AppColors.color.kSecondarySemiGreyText,
+                      fontColor: AppColors.color.kGreyText002,
                       fontWeight: AppFontWeights.regularWeight,
                     ),
                   ),

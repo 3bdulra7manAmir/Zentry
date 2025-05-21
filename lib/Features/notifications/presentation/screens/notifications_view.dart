@@ -25,7 +25,7 @@ class NotificationsView extends ConsumerWidget
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).notification, style: AppStyles.textStyle18(
-          fontColor: AppColors.color.kOctonarySemiBlackText,
+          fontColor: AppColors.color.kBlack003,
           fontWeight: AppFontWeights.regularWeight,),
         ),
         barActions: [Image.asset(AppAssets.iconsPNG.searchDarkPNG)],

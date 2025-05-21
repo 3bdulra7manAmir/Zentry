@@ -100,14 +100,14 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
               Image.asset(isActive ? item.activeIcon : item.inactiveIcon, width: 24.w,),
               const Spacer(),
               Text(item.label, style: AppStyles.textStyle12(
-                  fontColor: isActive ? AppColors.color.kRobotBoyRadiusColor : AppColors.color.kSemiGrey4,
+                  fontColor: isActive ? AppColors.color.kOrange003 : AppColors.color.kGreyText011,
                   fontWeight: isActive ? AppFontWeights.semiBoldWeight : AppFontWeights.regularWeight,
                 ),
               ),
             ],
           );
         },
-        backgroundColor: AppColors.color.kSecondaryWhite,
+        backgroundColor: AppColors.color.kWhite001,
         activeIndex: _bottomNavIndex,
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.defaultEdge,

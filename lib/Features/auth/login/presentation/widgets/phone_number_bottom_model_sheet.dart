@@ -34,7 +34,7 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kSecondarySemiGreyText,
+                color: AppColors.color.kGreyText002,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),

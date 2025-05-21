@@ -37,7 +37,7 @@ void showGenderPickerBottomSheet(BuildContext context)
                     Container(
                       width: 73.w,
                       height: 3.h,
-                      decoration: BoxDecoration(color: AppColors.color.kAgainTextDark, borderRadius: AppBorders.dividerBorder,),
+                      decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBorders.dividerBorder,),
                     ),
                     AppSizes.size30.verticalSpace,
                     Column(
@@ -117,14 +117,14 @@ class GenderOption extends StatelessWidget
               children:
               [
                 Image.asset(image),
-                Text(label, style: AppStyles.textStyle17(fontColor: AppColors.color.kOctonarySemiBlackText),),
+                Text(label, style: AppStyles.textStyle17(fontColor: AppColors.color.kBlack003),),
               ],
             ),
             Radio<String>(
               value: value,
               groupValue: groupValue,
               onChanged: (val) => onChanged(val!),
-              activeColor: AppColors.color.kOctonarySemiBlackText,
+              activeColor: AppColors.color.kBlack003,
             ),
           ],
         ),

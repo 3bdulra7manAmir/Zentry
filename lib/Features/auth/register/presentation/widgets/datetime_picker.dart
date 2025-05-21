@@ -50,12 +50,12 @@ void showDateTimeBottomSheet(BuildContext context)
                       width: 73.w,
                       height: 3.h,
                       decoration: BoxDecoration(
-                        color: AppColors.color.kSecondarySemiGreyText,
+                        color: AppColors.color.kGreyText002,
                         borderRadius: AppBorders.dividerBorder,
                       ),
                     ),
                     AppSizes.size35.verticalSpace,
-                    Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                    Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
                     AppSizes.size35.verticalSpace,
                     Row(
                       children:

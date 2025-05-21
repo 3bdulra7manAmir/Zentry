@@ -50,15 +50,15 @@ class CreatePanel extends StatelessWidget
             [
               Image.asset(AppAssets.iconsPNG.reelsPNG),
               AppSizes.size4.horizontalSpace,
-              Text(AppLocalizations.of(context).createReel, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createReel, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
               Image.asset(AppAssets.iconsPNG.postPNG),
               AppSizes.size4.horizontalSpace,
-              Text(AppLocalizations.of(context).createPost, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createPost, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
               Image.asset(AppAssets.iconsPNG.createStoryPNG),
               AppSizes.size4.horizontalSpace,
-              Text(AppLocalizations.of(context).createStory2, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createStory2, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
             ],
           )
         ],

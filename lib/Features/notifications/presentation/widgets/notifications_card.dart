@@ -22,7 +22,7 @@ class DefaultNotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.color.kSecondaryWhite,
+      color: AppColors.color.kWhite001,
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.6),
       shape: RoundedRectangleBorder(borderRadius: AppBorders.notificationsCard6,),
@@ -55,7 +55,7 @@ class DefaultNotificationCard extends StatelessWidget {
                               [
                                 Text(notification.username, style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
-                                    fontColor: AppColors.color.kQuinarySemiBlueText,
+                                    fontColor: AppColors.color.kBlue003,
                                   ),
                                 ),
                                 AppSizes.size3.horizontalSpace,
@@ -77,12 +77,12 @@ class DefaultNotificationCard extends StatelessWidget {
                         [
                           Text(AppStrings.iPhone14promax, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
-                              fontColor: AppColors.color.kSemiGreyText,
+                              fontColor: AppColors.color.kGreyText006,
                           ),),
                           const Spacer(),
                           Text(notification.time,style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
-                              fontColor: AppColors.color.kSemiGreyText,
+                              fontColor: AppColors.color.kGreyText006,
                           ),),
                           AppSizes.size10.horizontalSpace
                         ],

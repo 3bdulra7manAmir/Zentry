@@ -32,14 +32,14 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.savePNG),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.save, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.save, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
+                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
               ],
             ),
             AppSizes.size22.verticalSpace,
             Divider(
-              color: AppColors.color.kSemiGrey2, 
+              color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
               indent: 15,
               endIndent: 15,
@@ -51,12 +51,12 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.copyPNG),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],
             ),
             AppSizes.size22.verticalSpace,
             Divider(
-              color: AppColors.color.kSemiGrey2, 
+              color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
               indent: 15,
               endIndent: 15,
@@ -68,14 +68,14 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.billPNG),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kQuinarySemiBlueText),)
+                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
               ],
             ),
             AppSizes.size22.verticalSpace,
             Divider(
-              color: AppColors.color.kSemiGrey2, 
+              color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
               indent: 15,
               endIndent: 15,
@@ -87,7 +87,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.reportPNG),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.report, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.report, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],
             ),
             AppSizes.size32.verticalSpace,

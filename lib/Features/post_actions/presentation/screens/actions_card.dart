@@ -30,7 +30,7 @@ void showActionsBottomSheet(BuildContext context)
               width: 44.w,
               height: 5.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kAgainTextDark,
+                color: AppColors.color.kBlack005,
                 borderRadius: AppBorders.kCardRadius100,
               ),
             ),
@@ -41,7 +41,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionEyeCardPNG),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.view, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.view, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
               ],
@@ -52,7 +52,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionsReplayPNG),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
               ],
@@ -64,7 +64,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionsBlockPNG),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.block, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.block, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
               ],
@@ -76,7 +76,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+                Text(AppStrings.favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
               ],

@@ -18,7 +18,7 @@ class ProductsItem extends StatelessWidget
   {
     Color backgroundColor = product.backgroundColor != null
     ? Color(int.parse(product.backgroundColor!.replaceAll('#', '0xff')))
-    : AppColors.color.kProductItemBackground;
+    : AppColors.color.kCyan001;
 
     return Column(
       children:
@@ -36,7 +36,7 @@ class ProductsItem extends StatelessWidget
         if (product.title != null)
           Text(product.title!, style: AppStyles.textStyle10(
               fontWeight: AppFontWeights.semiBoldWeight,
-              fontColor: AppColors.color.kSeptenarySemiGreyText,
+              fontColor: AppColors.color.kGreyText005,
             ),
           ),
       ],

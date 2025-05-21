@@ -38,9 +38,9 @@
 //                 Row(
 //                   children:
 //                   [
-//                     Text(result.price, style: AppStyles.textStyle14(fontColor: AppColors.color.kSenaryTotalBlackText),),
+//                     Text(result.price, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
 //                     AppSizes.size6.horizontalSpace,
-//                     if (result.price != "Exchange") Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kQuinarySemiBlueText),),
+//                     if (result.price != "Exchange") Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kBlue003),),
 //                     AppSizes.size14.horizontalSpace,
 //                     Image.asset(AppAssets.iconsPNG.scanPNG),
 //                     AppSizes.size6.horizontalSpace,
@@ -48,7 +48,7 @@
 //                   ],
 //                 ),
 //                 AppSizes.size12.verticalSpace,
-//                 Text(result.title, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kSenaryTotalBlackText),),
+//                 Text(result.title, style: AppStyles.textStyle14(fontWeight: AppFontWeights.regularWeight, fontColor: AppColors.color.kBlack001),),
 //                 AppSizes.size18.verticalSpace,
 //                 Row(
 //                   children: [
@@ -78,11 +78,11 @@
                 //     if (result.country.isNotEmpty) ...[
                 //       Image.asset(AppAssets.iconsPNG.locationPNG),
                 //       AppSizes.size6.horizontalSpace,
-                //       Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                //       Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
                 //     ],
                 //     if (result.month.isNotEmpty) ...[
                 //       AppSizes.size16.horizontalSpace,
-                //       Text(result.month, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+                //       Text(result.month, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
 //                     ],
 //                   ],
 //                 ),

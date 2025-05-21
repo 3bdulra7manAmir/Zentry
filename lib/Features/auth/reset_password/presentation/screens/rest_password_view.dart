@@ -32,7 +32,7 @@ class RestPasswordView extends ConsumerWidget
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
           fontWeight: AppFontWeights.semiBoldWeight,
-          fontColor: AppColors.color.kSenaryTotalBlackText,
+          fontColor: AppColors.color.kBlack001,
         ),),
       ),
       body: Form(
@@ -54,7 +54,7 @@ class RestPasswordView extends ConsumerWidget
                   [
                     Text(AppLocalizations.of(context).newPassword, style: AppStyles.textStyle13(
                         fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kSeptenarySemiGreyText,
+                        fontColor: AppColors.color.kGreyText005,
                       ),
                     ),
                     AppSizes.size9.verticalSpace,
@@ -66,7 +66,7 @@ class RestPasswordView extends ConsumerWidget
                       fieldText: AppLocalizations.of(context).password,
                       fieldhintStyle: AppStyles.textStyle14(
                         fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kTertiarySemiGrey,
+                        fontColor: AppColors.color.kGreyText004,
                       ),
                       fieldsuffixIcon: GestureDetector(
                         onTap: ()
@@ -81,7 +81,7 @@ class RestPasswordView extends ConsumerWidget
                     ),
                     AppSizes.size24.verticalSpace,
                     Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kSeptenarySemiGreyText,),
+                        fontColor: AppColors.color.kGreyText005,),
                     ),
                     AppSizes.size9.verticalSpace,
                     CustomTextFormField(
@@ -92,7 +92,7 @@ class RestPasswordView extends ConsumerWidget
                       fieldText: AppLocalizations.of(context).confirmPassword,
                       fieldhintStyle: AppStyles.textStyle14(
                         fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kTertiarySemiGrey,
+                        fontColor: AppColors.color.kGreyText004,
                       ),
                       fieldsuffixIcon: GestureDetector(
                         onTap: ()

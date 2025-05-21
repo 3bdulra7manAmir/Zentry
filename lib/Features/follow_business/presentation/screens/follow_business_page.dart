@@ -53,7 +53,7 @@ class FollowBusinessPage extends ConsumerWidget {
               child: Text(
                 '${AppLocalizations.of(context).error}: $error',
                 style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kSenaryTotalBlackText,
+                  fontColor: AppColors.color.kBlack001,
                 ),
                 maxLines: 4,
               ),
@@ -65,7 +65,7 @@ class FollowBusinessPage extends ConsumerWidget {
           height: 79.h,
           padding: AppPadding.kNextButtonPadding,
           decoration: BoxDecoration(
-            color: AppColors.color.kFormButtonsFill,
+            color: AppColors.color.kGrey002,
           ),
           child: const CustomButton(buttonText: AppStrings.next),
         ),
@@ -96,7 +96,7 @@ class FollowBusinessCardHeader extends StatelessWidget {
               headerText,
               style: AppStyles.textStyle12(
                 fontWeight: AppFontWeights.semiBoldWeight,
-                fontColor: AppColors.color.kSenaryTotalBlackText,
+                fontColor: AppColors.color.kBlack001,
               ),
             ),
             const Spacer(),
@@ -105,7 +105,7 @@ class FollowBusinessCardHeader extends StatelessWidget {
           ],
         ),
         Divider(
-          color: AppColors.color.kSemiGrey3,
+          color: AppColors.color.kGreyText010,
           thickness: AppSizes.size2,
         ),
         AppSizes.size21.verticalSpace,
@@ -137,14 +137,14 @@ class FollowBusinessCard extends StatelessWidget {
               Text(
                 business.title,
                 style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kSenaryTotalBlackText,
+                  fontColor: AppColors.color.kBlack001,
                   fontWeight: AppFontWeights.semiBoldWeight,
                 ),
               ),
               Text(
                 business.subtitle,
                 style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kSemiGrey4,
+                  fontColor: AppColors.color.kGreyText011,
                   fontWeight: AppFontWeights.semiBoldWeight,
                 ),
               ),

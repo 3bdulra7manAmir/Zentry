@@ -40,7 +40,7 @@ class PostHeader extends StatelessWidget {
             Text(
               username,
               style: AppStyles.textStyle12(
-                fontColor: AppColors.color.kQuaternarySemiBlackText,
+                fontColor: AppColors.color.kBlack002,
                 fontWeight: AppFontWeights.semiBoldWeight,
               ),
             ),
@@ -48,7 +48,7 @@ class PostHeader extends StatelessWidget {
             Text(
               time,
               style: AppStyles.textStyle10(
-                fontColor: AppColors.color.kTertiarySemiGrey,
+                fontColor: AppColors.color.kGreyText004,
                 fontWeight: AppFontWeights.mediumWeight,
               ),
             ),

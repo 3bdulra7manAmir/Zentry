@@ -33,7 +33,7 @@ void showCompleteProfileBottomSheet(BuildContext context)
             height: 79.h,
             padding: AppPadding.kNextButtonPadding,
             decoration: BoxDecoration(
-              color: AppColors.color.kFormButtonsFill,
+              color: AppColors.color.kGrey002,
             ),
             child: const CustomButton(buttonText: AppStrings.next,),
           ),
@@ -60,9 +60,9 @@ class CompleteProfileCard extends StatelessWidget
           width: 326.w,
           height: 168.h,
           decoration: BoxDecoration(
-            color: AppColors.color.kFormButtonsFill,
+            color: AppColors.color.kGrey002,
             borderRadius: AppBorders.buttonBorder12,
-            border: Border.all(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width2,),
+            border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.width2,),
           ),
           child: Center(
             child: Column(
@@ -72,7 +72,7 @@ class CompleteProfileCard extends StatelessWidget
                 Image.asset(AppAssets.iconsPNG.completeProfileCameraPNG),
                 AppSizes.size10.verticalSpace,
                 Text(AppLocalizations.of(context).addCoverPhoto, style: AppStyles.textStyle10(
-                  fontColor: AppColors.color.kSecondarySemiGreyText,
+                  fontColor: AppColors.color.kGreyText002,
                   fontWeight: AppFontWeights.semiBoldWeight
                 ),),
               ],

@@ -36,7 +36,7 @@ class CreateStory extends StatelessWidget
             buttonHeight: 27.h,
             buttonBackgroundColor: const Color(0xffbbbbbb),
             buttonPadding: AppPadding.kApp15Padding,
-            buttonTextStyle: AppStyles.textStyle10(fontColor: AppColors.color.kSecondaryWhite, fontWeight: AppFontWeights.boldWeight),),
+            buttonTextStyle: AppStyles.textStyle10(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.boldWeight),),
         ],
       ),
     );

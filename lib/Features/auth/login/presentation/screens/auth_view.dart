@@ -12,7 +12,7 @@ class AuthView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: AppColors.color.kPrimaryBlue,
+      backgroundColor: AppColors.color.kBlue001,
       body: Column(
         children:
         [

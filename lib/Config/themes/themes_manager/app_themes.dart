@@ -13,12 +13,12 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.color.kSecondaryWhite,
-      cardColor: AppColors.color.kSecondaryWhite,
+      scaffoldBackgroundColor: AppColors.color.kWhite001,
+      cardColor: AppColors.color.kWhite001,
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.color.kFormButtonsFill,
+        fillColor: AppColors.color.kGrey002,
         focusedBorder: AppThemesStyles.inputBorderLight,
         enabledBorder: AppThemesStyles.inputBorderLight,
         errorBorder: AppThemesStyles.inputBorderLight,
@@ -29,7 +29,7 @@ class AppTheme
       tabBarTheme: AppThemesStyles.tabBarTheme,
       appBarTheme: AppBarTheme(
         
-        backgroundColor: AppColors.color.kAppBarBG,
+        backgroundColor: AppColors.color.kGrey004,
         centerTitle: true,
       ),
 
@@ -44,12 +44,12 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.color.kPrimaryDark,
-      cardColor: AppColors.color.kPrimaryDark,
+      scaffoldBackgroundColor: AppColors.color.kDark002,
+      cardColor: AppColors.color.kDark002,
 
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.color.kFormButtonsBordersFillDark,
+        fillColor: AppColors.color.kDark001,
         focusedBorder: AppThemesStyles.inputBorderDark,
         enabledBorder: AppThemesStyles.inputBorderDark,
         errorBorder: AppThemesStyles.inputBorderDark,
@@ -59,7 +59,7 @@ class AppTheme
       elevatedButtonTheme: AppThemesStyles.elevatedButtonTheme,
       tabBarTheme: AppThemesStyles.tabBarTheme,
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.color.kAppBarBG,
+        backgroundColor: AppColors.color.kGrey004,
         centerTitle: true,
       ),
 

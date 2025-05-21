@@ -13,7 +13,7 @@ abstract class AppThemesStyles
   static InputBorder? inputBorderLight = OutlineInputBorder(
     borderRadius: AppBorders.buttonBorder10,
     borderSide: BorderSide(
-      color: AppColors.color.kFormButtonsBorders,
+      color: AppColors.color.kGrey001,
       width: AppBorderWidths.width1,
     ),
   );
@@ -21,7 +21,7 @@ abstract class AppThemesStyles
   static InputBorder? inputBorderDark = OutlineInputBorder(
     borderRadius: AppBorders.buttonBorder10,
     borderSide: BorderSide(
-      color: AppColors.color.kFormButtonsBordersFillDark,
+      color: AppColors.color.kDark001,
       width: AppSizes.size1.w,
     ),
   );
@@ -34,7 +34,7 @@ abstract class AppThemesStyles
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.width1,),
         ),
       ),
-      backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kPrimaryBlue,),
+      backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kBlue001,),
       overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
       splashFactory: NoSplash.splashFactory,
       shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
@@ -45,10 +45,10 @@ abstract class AppThemesStyles
 
   static Object? tabBarTheme = TabBarTheme(
     indicatorSize: TabBarIndicatorSize.tab,
-    labelColor: AppColors.color.kTabBar,
-    labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kTabBar,),
-    unselectedLabelColor: AppColors.color.kSecondarySemiGreyText,
-    indicatorColor: AppColors.color.kTabBar,
+    labelColor: AppColors.color.kOrange001,
+    labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kOrange001,),
+    unselectedLabelColor: AppColors.color.kGreyText002,
+    indicatorColor: AppColors.color.kOrange001,
   );
 
 

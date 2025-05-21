@@ -11,7 +11,7 @@ class FormView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Scaffold(
-      backgroundColor: AppColors.color.kPrimaryBlue,
+      backgroundColor: AppColors.color.kBlue001,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:

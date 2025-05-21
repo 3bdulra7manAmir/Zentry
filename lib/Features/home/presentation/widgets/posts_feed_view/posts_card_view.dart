@@ -94,10 +94,10 @@ class PostsCard extends StatelessWidget {
 //                 width: 215.w,
 //                 height: 40.h,
 //                 decoration: BoxDecoration(
-//                   color: AppColors.color.kFormButtonsFill,
+//                   color: AppColors.color.kGrey002,
 //                   borderRadius: AppBorders.buttonBorder10,
 //                   border: Border.all(
-//                     color: AppColors.color.kFormButtonsBorders,
+//                     color: AppColors.color.kGrey001,
 //                     width: AppBorderWidths.width2,
 //                   ),
 //                 ),

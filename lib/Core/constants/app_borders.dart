@@ -78,5 +78,5 @@ abstract class AppBorderWidths
 abstract class AppBoxBorders
 {
   AppBoxBorders._();
-  static BoxBorder? commonborder = Border.all(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,);
+  static BoxBorder? commonborder = Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.width1,);
 }

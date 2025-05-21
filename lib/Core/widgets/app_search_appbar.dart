@@ -24,7 +24,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
         child: CustomTextFormField(
           fieldText: AppLocalizations.of(context).search,
           fieldKeyboardType: TextInputType.text,
-          fieldFillColor: AppColors.color.kSecondaryWhite,
+          fieldFillColor: AppColors.color.kWhite001,
           fieldsuffixIcon: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
@@ -32,7 +32,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
             [
               Image.asset(AppAssets.iconsPNG.locationPNG),
               AppSizes.size6.horizontalSpace,
-              Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kSecondarySemiGreyText,),),
+              Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
               AppSizes.size16.horizontalSpace,
             ],
           ),

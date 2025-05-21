@@ -33,7 +33,7 @@ class FormHeader extends ConsumerWidget
           clipBehavior: Clip.none,
           padding: AppPadding.appFormHeader,
           width: double.infinity,
-          color: AppColors.color.kPrimaryBlue,
+          color: AppColors.color.kBlue001,
           child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),
         ),
 
@@ -57,9 +57,9 @@ class FormHeader extends ConsumerWidget
                     onTap: upperRightTextOnTap,
                     child: Text(upperRightText ?? "",
                       style: AppStyles.textStyle13(
-                        fontColor: AppColors.color.kTertiaryWhiteText,
+                        fontColor: AppColors.color.kWhite002,
                         textDecoration: TextDecoration.underline,
-                        textDecorationColor: AppColors.color.kTertiaryWhiteText,
+                        textDecorationColor: AppColors.color.kWhite002,
                       ),
                     ),
                   ),

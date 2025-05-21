@@ -39,7 +39,7 @@ void showCountriesBottomSheet(BuildContext context)
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
-                color: AppColors.color.kSecondarySemiGreyText,
+                color: AppColors.color.kGreyText002,
                 borderRadius: AppBorders.dividerBorder,
               ),
             ),
@@ -76,7 +76,7 @@ void showCountriesBottomSheet(BuildContext context)
                             Icon(
                               Icons.check_circle,
                               size: AppSizes.size20,
-                              color: AppColors.color.kNonarySemiGreyText,
+                              color: AppColors.color.kGreyText003,
                             ),
                           AppSizes.size10.horizontalSpace,
                         ],

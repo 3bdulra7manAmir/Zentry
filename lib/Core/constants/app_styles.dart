@@ -25,7 +25,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kDatePicker,
+      color: fontColor ?? AppColors.color.kOrange002,
     );
   }
   /// FontWeight = [w700], FontColor = [_FFFFFF], FontFamily = [Roboto]
@@ -44,7 +44,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kSecondaryWhite,
+      color: fontColor ?? AppColors.color.kWhite001,
     );
   }
 
@@ -64,7 +64,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kPrimaryGreyText,
+      color: fontColor ?? AppColors.color.kGreyText001,
     );
   }
 
@@ -84,7 +84,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kSecondaryWhite,
+      color: fontColor ?? AppColors.color.kWhite001,
     );
   }
 
@@ -104,7 +104,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kPrimaryGreyText,
+      color: fontColor ?? AppColors.color.kGreyText001,
     );
   }
 
@@ -124,7 +124,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kPrimaryGreyText,
+      color: fontColor ?? AppColors.color.kGreyText001,
     );
   }
 
@@ -144,7 +144,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kSecondaryWhite,
+      color: fontColor ?? AppColors.color.kWhite001,
     );
   }
 
@@ -164,7 +164,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kPrimaryGreyText,
+      color: fontColor ?? AppColors.color.kGreyText001,
     );
   }
 
@@ -184,7 +184,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kSecondarySemiGreyText,
+      color: fontColor ?? AppColors.color.kGreyText002,
     );
   }
 
@@ -204,7 +204,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kSecondarySemiGreyText,
+      color: fontColor ?? AppColors.color.kGreyText002,
     );
   }
 
@@ -224,7 +224,7 @@ abstract class AppStyles
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
       overflow: textOverflow ?? TextOverflow.ellipsis,
-      color: fontColor ?? AppColors.color.kQuinarySemiBlueText,
+      color: fontColor ?? AppColors.color.kBlue003,
     );
   }
 }

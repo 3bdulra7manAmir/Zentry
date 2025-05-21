@@ -19,7 +19,7 @@ class WatchTutorial extends StatelessWidget
         body: Container(
           width: double.infinity,
           height: 210.h,
-          color: AppColors.color.kWatchTutorialBGColor  ,
+          color: AppColors.color.kBlue006  ,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -33,7 +33,7 @@ class WatchTutorial extends StatelessWidget
                     Image.asset(AppAssets.iconsPNG.playCirclePNG),
                     AppSizes.size10.verticalSpace,
                     Text(AppStrings.watchTutorial, style: AppStyles.textStyle14(
-                      fontColor: AppColors.color.kSecondaryWhite,
+                      fontColor: AppColors.color.kWhite001,
                       fontWeight: AppFontWeights.regularWeight)
                     ),
                   ],
