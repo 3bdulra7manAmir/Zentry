@@ -409,4 +409,52 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get menu => 'Menu';
+
+  @override
+  String get addInvitationCode => 'Add Invitation Code';
+
+  @override
+  String get invitationCodeExample2 => '#11231412351235462345';
+
+  @override
+  String get myCode => 'My Code';
+
+  @override
+  String get myCodeExample => '#11231412351235462345';
+
+  @override
+  String get completeProfile => 'Complete Profile';
+
+  @override
+  String get addCoverPhoto => 'Add Cover Photo';
+
+  @override
+  String get commentHere => 'Comment here !';
+
+  @override
+  String get likes => 'Likes';
+
+  @override
+  String get comments => 'Comments';
+
+  @override
+  String get shares => 'Shares';
+
+  @override
+  String get sellProduct => 'Sell product';
+
+  @override
+  String get addService => 'Add service';
+
+  @override
+  String get createReel => 'Create reel';
+
+  @override
+  String get createPost => 'Create post';
+
+  @override
+  String get createStory2 => 'Create story';
+
+  @override
+  String get error => 'Error';
 }

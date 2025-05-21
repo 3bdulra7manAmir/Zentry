@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:test_app/features/home/domain/entity/post_entity.dart';
-import 'package:test_app/features/home/domain/repository/posts_repository.dart';
+import '../../domain/entity/post_entity.dart';
+import '../../domain/repository/posts_repository.dart';
 
 class PostsRepositoryImpl implements PostsRepository {
   @override

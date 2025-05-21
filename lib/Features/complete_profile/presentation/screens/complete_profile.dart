@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -22,7 +24,7 @@ void showCompleteProfileBottomSheet(BuildContext context)
       return Column(
         children:
         [
-          const FollowBusinessCardHeader(headerText: "Complete Profile",),
+          FollowBusinessCardHeader(headerText: AppLocalizations.of(context).completeProfile,),
           AppSizes.size16.verticalSpace,
           const CompleteProfileCard(),
           const Spacer(),
@@ -67,9 +69,9 @@ class CompleteProfileCard extends StatelessWidget
               mainAxisAlignment: MainAxisAlignment.center,
               children:
               [
-                Image.asset("assets/icons/Complete_Profile/Camera.png"),
+                Image.asset(AppAssets.iconsPNG.completeProfileCameraPNG),
                 AppSizes.size10.verticalSpace,
-                Text("Add Cover Photo", style: AppStyles.textStyle10(
+                Text(AppLocalizations.of(context).addCoverPhoto, style: AppStyles.textStyle10(
                   fontColor: AppColors.color.kSecondarySemiGreyText,
                   fontWeight: AppFontWeights.semiBoldWeight
                 ),),
@@ -81,7 +83,7 @@ class CompleteProfileCard extends StatelessWidget
           left: 0,
           right: 150.w,
           bottom: -15.h,
-          child: Image.asset("assets/icons/Complete_Profile/Image_Picker.png", width: 38.w, height: 38.h, fit: BoxFit.contain,),
+          child: Image.asset(AppAssets.iconsPNG.completeProfileImagePickerPNG, width: 38.w, height: 38.h, fit: BoxFit.contain,),
         ),
       ],
     );

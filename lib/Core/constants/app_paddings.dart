@@ -47,6 +47,17 @@ abstract class AppPadding
 
   static EdgeInsetsDirectional kPostOptionsPadding =  EdgeInsetsDirectional.only(start: 25.w, end: 36.w);
 
+  ///
+  static EdgeInsetsDirectional appFormHeader = EdgeInsetsDirectional.only(start: 28.w, end: 17.w, top: 20.h, bottom: 0,);
+  static EdgeInsetsDirectional commentsSection = EdgeInsetsDirectional.only(start: 13.w);
+  static EdgeInsets commentsSection2 = EdgeInsets.symmetric(horizontal: 38.w);
+
+  static EdgeInsets postsInside = EdgeInsets.symmetric(horizontal: 38.w);
+  static EdgeInsets joinGroups = EdgeInsets.only(left: 30.0.w);
+
+  static EdgeInsets searchResultsCard = EdgeInsets.only(right: 3.w);
+  static EdgeInsets joinGroups2 = EdgeInsets.only(top: 20.h);
+
   /// [Zero]
   static EdgeInsets kZeroPadding = EdgeInsets.zero;
 }

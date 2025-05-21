@@ -1,5 +1,6 @@
-import 'package:test_app/features/home/domain/entity/post_entity.dart';
+import '../entity/post_entity.dart';
 
-abstract class PostsRepository {
+abstract class PostsRepository
+{
   Future<List<PostEntity>> getPosts();
 }

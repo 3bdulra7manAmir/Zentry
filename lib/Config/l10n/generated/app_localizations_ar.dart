@@ -409,4 +409,52 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get menu => 'القائمة';
+
+  @override
+  String get addInvitationCode => 'أضف رمز الدعوة';
+
+  @override
+  String get invitationCodeExample2 => '#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥';
+
+  @override
+  String get myCode => 'رمزي';
+
+  @override
+  String get myCodeExample => '#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥';
+
+  @override
+  String get completeProfile => 'أكمل الملف الشخصي';
+
+  @override
+  String get addCoverPhoto => 'أضف صورة غلاف';
+
+  @override
+  String get commentHere => 'اكتب تعليقًا هنا!';
+
+  @override
+  String get likes => 'إعجابات';
+
+  @override
+  String get comments => 'تعليقات';
+
+  @override
+  String get shares => 'مشاركات';
+
+  @override
+  String get sellProduct => 'بيع منتج';
+
+  @override
+  String get addService => 'إضافة خدمة';
+
+  @override
+  String get createReel => 'إنشاء ريل';
+
+  @override
+  String get createPost => 'إنشاء منشور';
+
+  @override
+  String get createStory2 => 'إنشاء قصة';
+
+  @override
+  String get error => 'خطأ';
 }

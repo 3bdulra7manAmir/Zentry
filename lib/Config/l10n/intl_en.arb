@@ -159,5 +159,22 @@
   "home": "Home",
   "category": "Category",
   "profile": "Profile",
-  "menu": "Menu"
+  "menu": "Menu",
+
+  "addInvitationCode": "Add Invitation Code",
+  "invitationCodeExample2": "#11231412351235462345",
+  "myCode": "My Code",
+  "myCodeExample": "#11231412351235462345",
+  "completeProfile": "Complete Profile",
+  "addCoverPhoto": "Add Cover Photo",
+  "commentHere": "Comment here !",
+  "likes": "Likes",
+  "comments": "Comments",
+  "shares": "Shares",
+  "sellProduct": "Sell product",
+  "addService": "Add service",
+  "createReel": "Create reel",
+  "createPost": "Create post",
+  "createStory2": "Create story",
+  "error": "Error"
 }

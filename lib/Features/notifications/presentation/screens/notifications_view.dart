@@ -5,7 +5,7 @@ import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_images.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_appbar.dart';
@@ -50,7 +50,7 @@ class NotificationsView extends ConsumerWidget
                     separatorBuilder: (context, index) => AppSizes.size14.verticalSpace,
                   ),
                   loading: () => const Center(child: CircularProgressIndicator()),
-                  error: (error, stackTrace) => Center(child: Text('Error: $error'),),
+                  error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error'),),
                 );
               },
             ),

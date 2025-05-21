@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../core/constants/app_images.dart';
 import '../../domain/entities/join_groups_entity.dart';
 import '../controllers/join_groups_items_provider.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -25,7 +27,7 @@ class JoinGroupsScreen extends ConsumerWidget {
         itemBuilder: (context, index) => JoinGroupsCard(group: groups[index]),
       ),
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stackTrace) => Center(child: Text('Error: $error')),
+      error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
     );
   }
 }
@@ -44,7 +46,7 @@ void showJoinGroupsBottomSheet(BuildContext context) {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: 30.0.w),
+              padding: AppPadding.joinGroups,
               child: const JoinGroupsScreen(),
             ),
           ),
@@ -90,7 +92,7 @@ class GridViewBuilder extends StatelessWidget {
     return GridView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
-      padding: EdgeInsets.only(top: 20.h),
+      padding: AppPadding.joinGroups2,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount ?? 2,
         mainAxisSpacing: mainAxisSpacing ?? 12.0,
@@ -149,7 +151,7 @@ class JoinGroupsCard extends StatelessWidget {
                 ),
               ),
               AppSizes.size5.verticalSpace,
-              Image.asset("assets/icons/Join_Groups/Members.png")
+              Image.asset(AppAssets.iconsPNG.membersPNG)
             ],
           ),
         ),

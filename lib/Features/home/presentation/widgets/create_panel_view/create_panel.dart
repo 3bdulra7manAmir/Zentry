@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/color_system/app_colors.dart';
-import 'package:test_app/core/constants/app_padding.dart';
-import 'package:test_app/core/constants/app_sizes.dart';
 
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_margins.dart';
+import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import 'create_panel_button.dart';
 
@@ -16,7 +18,7 @@ class CreatePanel extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppPadding.kCreatePanelPadding,
+      margin: AppMargins.kCreatePanelPadding,
       width: 355.w,
       height: 90.h,
       child: Column(
@@ -25,19 +27,19 @@ class CreatePanel extends StatelessWidget
           Row(
             children:
             [
-              Image.asset("assets/icons/Home/User_Profile.png"),
+              Image.asset(AppAssets.iconsPNG.userProfilePNG),
               AppSizes.size12.horizontalSpace,
-              const Expanded(
+              Expanded(
                 child: CreatePanelButton(
-                  buttonText: "Sell product",
-                  iconPath: "assets/icons/Home/Cube_Plus.png",
+                  buttonText: AppLocalizations.of(context).sellProduct,
+                  iconPath: AppAssets.iconsPNG.cubePlusPNG,
                 ),
               ),
               AppSizes.size6.horizontalSpace,
-              const Expanded(
+              Expanded(
                 child: CreatePanelButton(
-                  buttonText: "Add service",
-                  iconPath: "assets/icons/Home/Service.png",
+                  buttonText: AppLocalizations.of(context).addService,
+                  iconPath: AppAssets.iconsPNG.servicePNG,
                 ),
               ),
             ],
@@ -46,17 +48,17 @@ class CreatePanel extends StatelessWidget
           Row(
             children:
             [
-              Image.asset("assets/icons/Home/Reels.png"),
+              Image.asset(AppAssets.iconsPNG.reelsPNG),
               AppSizes.size4.horizontalSpace,
-              Text("Create reel", style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createReel, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
-              Image.asset("assets/icons/Home/Post.png"),
+              Image.asset(AppAssets.iconsPNG.postPNG),
               AppSizes.size4.horizontalSpace,
-              Text("Create post", style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createPost, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
-              Image.asset("assets/icons/Home/Create_Stroy.png"),
+              Image.asset(AppAssets.iconsPNG.createStoryPNG),
               AppSizes.size4.horizontalSpace,
-              Text("Create story", style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
+              Text(AppLocalizations.of(context).createStory2, style: AppStyles.textStyle12(fontColor: AppColors.color.kSemiGreyAgain, fontWeight: AppFontWeights.boldWeight),),
             ],
           )
         ],

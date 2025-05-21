@@ -315,7 +315,6 @@ abstract class AppStrings
   //App Moeny From Interests Card
   static const moenyFromInterests = "Moeny From Interests";
 
-
   //App Watch Tutorial
   static const watchTutorial = "Watch Tutorial";
 
@@ -339,5 +338,31 @@ abstract class AppStrings
   static const category = "Category";
   static const profile = "Profile";
   static const menu = "Menu";
-  
+
+  //Money From Invites
+  static const addInvitationCode = "Add Invitation Code";
+  static const invitationCodeExample2 = "#11231412351235462345";
+  static const myCode = "My Code";
+  static const myCodeExample = "#11231412351235462345";
+
+  //Complete Profile
+  static const completeProfile = "Complete Profile";
+  static const addCoverPhoto = "Add Cover Photo";
+
+  //App Comment Card
+  static const commentHere = "Comment here !";
+
+  //App Comment reaction
+  static const likes = "Likes";
+  static const comments = "Comments";
+  static const shares = "Shares";
+
+  //App Create Panel
+  static const sellProduct = "Sell product";
+  static const addService = "Add service";
+  static const createReel = "Create reel";
+  static const createPost = "Create post";
+  static const createStory2 = "Create story";
+
+  static const error = "Error";
 }

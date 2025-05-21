@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/app_text_form_field.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_margins.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
 
 void showCommentsBottomSheet(BuildContext context)
 {
@@ -22,27 +25,27 @@ void showCommentsBottomSheet(BuildContext context)
         [
           AppSizes.size11.verticalSpace,
           Padding(
-            padding: EdgeInsetsDirectional.only(start: 13.w),
-            child: Image.asset("assets/icons/Comments_Card/Left_Black_Arrow.png",),
+            padding: AppPadding.commentsSection,
+            child: Image.asset(AppAssets.iconsPNG.commentsBackArrowPNG,),
           ),
           AppSizes.size25.verticalSpace,
           Container(
             width: double.infinity,
             height: 283.h,
-            margin: AppPadding.kApp10Padding,
+            margin: AppMargins.kApp10Padding,
             decoration: BoxDecoration(
               borderRadius: AppBorders.buttonBorder7,
-              image: const DecorationImage(image: AssetImage("assets/icons/Comments_Card/Merc_Jeep.png")),
+              image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.mercJeepPNG)),
             ),
           ),
           AppSizes.size30.verticalSpace,
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 38.w),
+            padding: AppPadding.commentsSection2,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children:
               [
-                Image.asset("assets/icons/Comments_Card/Hart.png"),
+                Image.asset(AppAssets.iconsPNG.hartPNG),
                 const Spacer(),
                 Container(
                   width: 215.w,
@@ -53,12 +56,12 @@ void showCommentsBottomSheet(BuildContext context)
                     border: Border.all(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width2,),
                   ),child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
-                    fieldText: "Comment here !",
-                    fieldPrefixIcon: Image.asset("assets/icons/Comments_Card/User_Avatar.png"),
+                    fieldText: AppLocalizations.of(context).commentHere,
+                    fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.userAvatarCommentsCardPNG),
                   ),
                 ),
                 const Spacer(),
-                Image.asset("assets/icons/Comments_Card/Save.png")
+                Image.asset(AppAssets.iconsPNG.saveCommentsPNG)
               ],
             ),
           ),

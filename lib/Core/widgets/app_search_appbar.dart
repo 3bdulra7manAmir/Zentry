@@ -4,7 +4,7 @@ import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/app_colors.dart';
 import '../../config/themes/font_system/app_font_weights.dart';
 import '../constants/app_images.dart';
-import '../constants/app_padding.dart';
+import '../constants/app_paddings.dart';
 import '../constants/app_sizes.dart';
 import '../constants/app_styles.dart';
 import 'app_appbar.dart';

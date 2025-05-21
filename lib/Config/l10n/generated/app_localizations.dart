@@ -898,6 +898,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Menu'**
   String get menu;
+
+  /// No description provided for @addInvitationCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Invitation Code'**
+  String get addInvitationCode;
+
+  /// No description provided for @invitationCodeExample2.
+  ///
+  /// In en, this message translates to:
+  /// **'#11231412351235462345'**
+  String get invitationCodeExample2;
+
+  /// No description provided for @myCode.
+  ///
+  /// In en, this message translates to:
+  /// **'My Code'**
+  String get myCode;
+
+  /// No description provided for @myCodeExample.
+  ///
+  /// In en, this message translates to:
+  /// **'#11231412351235462345'**
+  String get myCodeExample;
+
+  /// No description provided for @completeProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete Profile'**
+  String get completeProfile;
+
+  /// No description provided for @addCoverPhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Cover Photo'**
+  String get addCoverPhoto;
+
+  /// No description provided for @commentHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment here !'**
+  String get commentHere;
+
+  /// No description provided for @likes.
+  ///
+  /// In en, this message translates to:
+  /// **'Likes'**
+  String get likes;
+
+  /// No description provided for @comments.
+  ///
+  /// In en, this message translates to:
+  /// **'Comments'**
+  String get comments;
+
+  /// No description provided for @shares.
+  ///
+  /// In en, this message translates to:
+  /// **'Shares'**
+  String get shares;
+
+  /// No description provided for @sellProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell product'**
+  String get sellProduct;
+
+  /// No description provided for @addService.
+  ///
+  /// In en, this message translates to:
+  /// **'Add service'**
+  String get addService;
+
+  /// No description provided for @createReel.
+  ///
+  /// In en, this message translates to:
+  /// **'Create reel'**
+  String get createReel;
+
+  /// No description provided for @createPost.
+  ///
+  /// In en, this message translates to:
+  /// **'Create post'**
+  String get createPost;
+
+  /// No description provided for @createStory2.
+  ///
+  /// In en, this message translates to:
+  /// **'Create story'**
+  String get createStory2;
+
+  /// No description provided for @error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

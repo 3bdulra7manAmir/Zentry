@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/themes/color_system/app_colors.dart';
 import '../constants/app_borders.dart';
-import '../constants/app_padding.dart';
+import '../constants/app_paddings.dart';
 import '../constants/app_sizes.dart';
 import '../constants/app_styles.dart';
 

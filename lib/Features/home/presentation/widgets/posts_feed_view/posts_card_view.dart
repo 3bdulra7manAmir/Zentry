@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/constants/app_margins.dart';
+import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../domain/entity/post_entity.dart';
 import '../comment_card.dart';
@@ -19,7 +20,7 @@ class PostsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: AppPadding.kAppFormPadding,
+      margin: AppMargins.kAppFormPadding,
       width: 360.w,
       child: Column(
         children: [
@@ -72,7 +73,7 @@ class PostsCard extends StatelessWidget {
 //         Container(
 //           width: double.infinity,
 //           height: 283.h,
-//           margin: AppPadding.kApp10Padding,
+//           margin: AppMargins.kApp10Padding,
 //           decoration: BoxDecoration(
 //             borderRadius: AppBorders.buttonBorder7,
 //             image: const DecorationImage(

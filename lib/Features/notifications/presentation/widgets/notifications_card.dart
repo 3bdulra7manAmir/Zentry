@@ -4,7 +4,8 @@ import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/app_font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../../core/constants/app_margins.dart';
+import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -25,7 +26,7 @@ class DefaultNotificationCard extends StatelessWidget {
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.6),
       shape: RoundedRectangleBorder(borderRadius: AppBorders.notificationsCard6,),
-      margin: AppPadding.kAppFormPadding,
+      margin: AppMargins.kAppFormPadding,
 
       child: Padding(
         padding: AppPadding.kTempPadding,

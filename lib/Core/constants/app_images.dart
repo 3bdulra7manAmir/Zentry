@@ -141,6 +141,55 @@ class _AppIconsPNG
   final String profileSelectedPNG = "assets/icons/Bottom_Nav_Bar/Profile.png";
   final String menuSelectedPNG = "assets/icons/Bottom_Nav_Bar/Menu.png";
 
+  //Money From Invites
+  final String videoThumnailPNG = "assets/icons/Money_From_Invites/Video_Thumnail.png";
+  final String playButtonPNG = "assets/icons/Money_From_Invites/Play_Button.png";
+
+  //App Complete Profile
+  final String completeProfileImagePickerPNG = "assets/icons/Complete_Profile/Image_Picker.png";
+  final String completeProfileCameraPNG = "assets/icons/Complete_Profile/Camera.png";
+
+  //App Comment Card
+  final String heart2PNG = "assets/icons/Comments_Card/Hart2.png";
+  final String userAvatarPNG = "assets/icons/Inside_Post/User_Avatar.png";
+  final String archivePNG = "assets/icons/Comments_Card/Archivead.png";
+  final String sharePNG = "assets/icons/Comments_Card/Share.png";
+
+  //App Comment Section
+  final String commentsBackArrowPNG = "assets/icons/Comments_Card/Left_Black_Arrow.png";
+  final String mercJeepPNG = "assets/icons/Comments_Card/Merc_Jeep.png";
+  final String hartPNG = "assets/icons/Comments_Card/Hart.png";
+  final String userAvatarCommentsCardPNG = "assets/icons/Comments_Card/User_Avatar.png";
+  final String saveCommentsPNG = "assets/icons/Comments_Card/Save.png";
+
+  //App Comments reqactions Section
+  final String commentHeartPNG = "assets/icons/Comments_Emoj_Card/Heart.png";
+  final String commentSmilingFacePNG = "assets/icons/Comments_Emoj_Card/Smiling_Face.png";
+  final String commentCryingFacePNG = "assets/icons/Comments_Emoj_Card/Crying_Face_.png";
+
+  //App Inside Post
+  final String insidePostBackArrowPNG = "assets/icons/Inside_Post/Left_Black_Arrow.png";
+  final String insidePostMercCarPNG = "assets/icons/Inside_Post/Merc_Jeep.png";
+
+  //App Create Panel
+  final String userProfilePNG = "assets/icons/Home/User_Profile.png";
+  final String cubePlusPNG = "assets/icons/Home/Cube_Plus.png";
+  final String servicePNG = "assets/icons/Home/Service.png";
+  final String reelsPNG = "assets/icons/Home/Reels.png";
+  final String postPNG = "assets/icons/Home/Post.png";
+  final String createStoryPNG = "assets/icons/Home/Create_Stroy.png";
+
+  //App Join Groups
+  final String membersPNG = "assets/icons/Join_Groups/Members.png";
+
+  //App Unknown Card
+  final String unkownPNG = "assets/icons/Unkown_Card/Unkown.png";
+  
+  
+
+  
+
+
   
 }
 

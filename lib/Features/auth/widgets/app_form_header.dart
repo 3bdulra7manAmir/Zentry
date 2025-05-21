@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Core/constants/app_images.dart';
 import '../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../core/constants/app_paddings.dart';
 import '../../../core/helpers/app_providers.dart';
 
 class FormHeader extends ConsumerWidget
@@ -30,12 +31,7 @@ class FormHeader extends ConsumerWidget
       [
         Container(
           clipBehavior: Clip.none,
-          padding: EdgeInsetsDirectional.only(
-            start: 28.w,
-            end: 17.w,
-            top: 20.h,
-            bottom: 0,
-          ),
+          padding: AppPadding.appFormHeader,
           width: double.infinity,
           color: AppColors.color.kPrimaryBlue,
           child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),

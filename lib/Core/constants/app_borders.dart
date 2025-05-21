@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../config/themes/color_system/app_colors.dart';
 
 abstract class AppBorders
 {
@@ -72,4 +73,10 @@ abstract class AppBorderWidths
 
   static double width1 = (1.0).w;
   static double width2 = (2.0).w;
+}
+
+abstract class AppBoxBorders
+{
+  AppBoxBorders._();
+  static BoxBorder? commonborder = Border.all(color: AppColors.color.kFormButtonsBorders, width: AppBorderWidths.width1,);
 }

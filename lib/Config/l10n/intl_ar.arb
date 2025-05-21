@@ -157,7 +157,24 @@
     "home": "الرئيسية",
     "category": "التصنيفات",
     "profile": "الملف الشخصي",
-    "menu": "القائمة"
+    "menu": "القائمة",
+
+    "addInvitationCode": "أضف رمز الدعوة",
+    "invitationCodeExample2": "#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥",
+    "myCode": "رمزي",
+    "myCodeExample": "#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥",
+    "completeProfile": "أكمل الملف الشخصي",
+    "addCoverPhoto": "أضف صورة غلاف",
+    "commentHere": "اكتب تعليقًا هنا!",
+    "likes": "إعجابات",
+    "comments": "تعليقات",
+    "shares": "مشاركات",
+    "sellProduct": "بيع منتج",
+    "addService": "إضافة خدمة",
+    "createReel": "إنشاء ريل",
+    "createPost": "إنشاء منشور",
+    "createStory2": "إنشاء قصة",
+    "error": "خطأ"
 
   }
   

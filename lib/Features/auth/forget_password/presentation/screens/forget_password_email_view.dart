@@ -4,9 +4,9 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
+import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/app_font_weights.dart';
-import '../../../../../core/constants/app_padding.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/app_appbar.dart';
@@ -51,7 +51,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
               AppSizes.size48.verticalSpace,
               Container(
                 alignment: Alignment.center,
-                margin: AppPadding.kAppFormPadding,
+                margin: AppMargins.kAppFormPadding,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../config/l10n/generated/app_localizations.dart';
 import '../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_padding.dart';
+import '../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../core/data/static/app_keyboard_numbers.dart';
 import '../verification_code/presentation/controllers/otp_input_controller.dart';

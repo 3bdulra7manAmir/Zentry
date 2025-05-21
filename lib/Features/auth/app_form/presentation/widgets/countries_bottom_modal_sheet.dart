@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
+import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
-import '../../../../../core/constants/app_padding.dart';
+import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/services/database/shared_preference/app_database.dart';
 import '../../../../../core/data/static/app_form_data/app_countries_list.dart';
@@ -33,7 +34,7 @@ void showCountriesBottomSheet(BuildContext context)
           [
             AppSizes.size8.verticalSpace,
             Container(
-              margin: AppPadding.kAppFormPadding,
+              margin: AppMargins.kAppFormPadding,
               alignment: Alignment.center,
               width: 44.w,
               height: 4.h,

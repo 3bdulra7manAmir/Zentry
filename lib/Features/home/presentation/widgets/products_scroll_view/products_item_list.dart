@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../../core/constants/app_padding.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/app_listview_builder.dart';
 import '../../controllers/products_items_providers/products_items_provider.dart';
@@ -18,7 +19,7 @@ class ProductsItemList extends ConsumerWidget
     
     return productsAsyncValue.when(
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stackTrace) => Center(child: Text('Error: $error')),
+      error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
       data: (products) => AppListviewBuilder(
         padding: AppPadding.kHomeListViewPadding,
         scrollDirection: Axis.horizontal,
