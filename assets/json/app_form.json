@@ -1,0 +1,48 @@
+{
+  "Languages":
+  [
+    {
+      "id": 1,
+      "LanguageFlag": "assets/icons/Home/Car_Blue.png",
+      "LanguageTitle": "Cars"
+    },
+    {
+      "id": 2,
+      "LanguageFlag": "assets/icons/Home/Car_Blue.png",
+      "LanguageTitle": "Cars"
+    }
+  ],
+  "Countries":
+  [
+    {
+      "id": 101,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    },
+    {
+      "id": 102,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    },
+    {
+      "id": 103,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    },
+    {
+      "id": 104,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    },
+    {
+      "id": 105,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    },
+    {
+      "id": 106,
+      "CountryFlag": "assets/icons/Home/Car_Blue.png",
+      "CountryTitle": "Cars"
+    }
+  ]
+}

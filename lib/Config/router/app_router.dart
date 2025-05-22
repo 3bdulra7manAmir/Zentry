@@ -1,5 +1,4 @@
 // ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
@@ -21,7 +20,7 @@ abstract class AppRouter
 {
   AppRouter._();
   static final router = GoRouter(
-    initialLocation: AppRoutes.kNotificationsSearchView,
+    initialLocation: AppRoutes.kAppFormView,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
     routes:
     [
@@ -114,6 +113,45 @@ abstract class AppRouter
         name: AppRoutes.kHomeView,
         builder: (context, state) => const HomeView(),
       ),
+
+      /// App Bottom Navigation Bar
+      // StatefulShellRoute.indexedStack(
+      //   builder: (context, state, navigationShell) => BottomNavExample(navigationShell: navigationShell),
+      //   branches: [
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.kHomeView,
+      //       routes: [
+      //         GoRoute(
+      //           name: AppRoutes.kHomeView,
+      //           path: AppRoutes.kHomeView,
+      //           builder: (context, state) => const HomePage(),
+      //         ),
+      //       ],
+      //     ),
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.kSearchView,
+      //       routes: [
+      //         GoRoute(
+      //           name: AppRoutes.kSearchView,
+      //           path: AppRoutes.kSearchView,
+      //           builder: (context, state) => const SearchPage(),
+      //         ),
+      //       ],
+      //     ),
+
+      //     StatefulShellBranch(
+      //       initialLocation: AppRoutes.kProfileView,
+      //       routes:
+      //       [
+      //         GoRoute(
+      //           name: AppRoutes.kProfileView,
+      //           path: AppRoutes.kProfileView,
+      //           builder: (context, state) => const ProfilePage(),
+      //         ),
+      //       ],
+      //     ),
+      //   ],
+      //),
     ],
   );
 }
