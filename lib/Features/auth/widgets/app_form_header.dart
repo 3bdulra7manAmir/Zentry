@@ -64,8 +64,8 @@ class FormHeader extends ConsumerWidget
                     ),
                   ),
                   Image.asset(provider.localeState.selectedLanguageIndex == 0
-                        ? AppAssets.iconsPNG.headerArrowLeft
-                        : AppAssets.iconsPNG.headerArrowRight,
+                      ? AppAssets.iconsPNG.headerArrowLeft
+                      : AppAssets.iconsPNG.headerArrowRight,
                   ),
                 ],
               ),

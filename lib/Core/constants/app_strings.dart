@@ -340,7 +340,7 @@ abstract class AppStrings
   static const menu = "Menu";
 
   //Money From Invites
-  static const moenyFromInvite = "Moeny From Invite";
+  static const moneyFromInvite = "Money From Invite";
   static const addInvitationCode = "Add Invitation Code";
   static const invitationCodeExample2 = "#11231412351235462345";
   static const myCode = "My Code";

@@ -25,7 +25,7 @@
 //     return Container(
 //       width: 359.w,
 //       height: 140.h,
-//       decoration: BoxDecoration(borderRadius: AppBorders.circular5,),
+//       decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular5,),
 //       child: Row(
 //         children: [
 //           Image.asset(result.car, width: 163.w, height: 140.h, fit: BoxFit.fill,),

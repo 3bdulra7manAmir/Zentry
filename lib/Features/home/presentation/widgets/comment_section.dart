@@ -15,7 +15,7 @@ void showCommentsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -34,7 +34,7 @@ void showCommentsBottomSheet(BuildContext context)
             height: 283.h,
             margin: AppMargins.horizontal10,
             decoration: BoxDecoration(
-              borderRadius: AppBorders.circular7,
+              borderRadius: AppBordersRadiuses.circular7,
               image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.commentSectionMercJeep)),
             ),
           ),
@@ -52,8 +52,8 @@ void showCommentsBottomSheet(BuildContext context)
                   height: 40.h,
                   decoration: BoxDecoration(
                     color: AppColors.color.kGrey002,
-                    borderRadius: AppBorders.circular10,
-                    border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.medium,),
+                    borderRadius: AppBordersRadiuses.circular10,
+                    border: AppFullBorders.completeProfileCard,
                   ),child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
                     fieldText: AppLocalizations.of(context).commentHere,

@@ -8,7 +8,6 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/app_follow_button.dart';
@@ -22,7 +21,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context) {
       return const FollowBusinessPage();
     },

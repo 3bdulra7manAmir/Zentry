@@ -20,8 +20,7 @@ class RestPasswordView extends ConsumerWidget
   RestPasswordView({super.key});
 
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -74,14 +73,16 @@ class RestPasswordView extends ConsumerWidget
                           ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
                         },
                         child: Image.asset(provider.obscureText
-                              ? AppAssets.iconsPNG.loginPasswordHidden
-                              : AppAssets.iconsPNG.loginPasswordVisible,
+                          ? AppAssets.iconsPNG.loginPasswordHidden
+                          : AppAssets.iconsPNG.loginPasswordVisible,
                         ),
                       ),
                     ),
                     AppSizes.size24.verticalSpace,
-                    Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(fontWeight: AppFontWeights.mediumWeight,
-                        fontColor: AppColors.color.kGreyText005,),
+                    Text(AppLocalizations.of(context).confirmPassword, style: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.mediumWeight,
+                        fontColor: AppColors.color.kGreyText005,
+                      ),
                     ),
                     AppSizes.size9.verticalSpace,
                     CustomTextFormField(

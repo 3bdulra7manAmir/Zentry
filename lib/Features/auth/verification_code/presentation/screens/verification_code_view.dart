@@ -45,12 +45,12 @@ class VerificationCodeView extends ConsumerWidget
               ),
               AppSizes.size4.horizontalSpace,
               Image.asset(provider.localeState.selectedLanguageIndex == 0
-                    ? (provider.themeMode == ThemeMode.dark
-                        ? AppAssets.iconsPNG.headerArrowLeft
-                        : AppAssets.iconsPNG.appBarBackRight)
-                    : (provider.themeMode == ThemeMode.dark
-                        ? AppAssets.iconsPNG.headerArrowRight
-                        : AppAssets.iconsPNG.appBarBackRight),
+                ? (provider.themeMode == ThemeMode.dark
+                  ? AppAssets.iconsPNG.headerArrowLeft
+                  : AppAssets.iconsPNG.appBarBackRight)
+                : (provider.themeMode == ThemeMode.dark
+                  ? AppAssets.iconsPNG.headerArrowRight
+                  : AppAssets.iconsPNG.appBarBackRight),
               ),
               AppSizes.size14.horizontalSpace,
             ],
@@ -102,11 +102,8 @@ class VerificationCodeView extends ConsumerWidget
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                               color: AppColors.color.kGrey002,
-                              border: Border.all(
-                                color: AppColors.color.kGrey001,
-                                width: AppSizes.size1.w,
-                              ),
-                              borderRadius: AppBorders.circular10,
+                              border: AppFullBorders.verificationCode,
+                              borderRadius: AppBordersRadiuses.circular10,
                             ),
                             child: Text(
                               index < provider.otpProvider.length ? provider.otpProvider[index] : '',

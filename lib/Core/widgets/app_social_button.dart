@@ -44,7 +44,7 @@ class CustomSocialButton extends StatelessWidget {
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: buttonBorderRadius ?? AppBorders.circular10,
+              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular10,
               side: BorderSide(
                 color: buttonBorderColor ?? AppColors.color.kDark003,
                 width: buttonBorderWidth ?? AppBorderWidths.thin,

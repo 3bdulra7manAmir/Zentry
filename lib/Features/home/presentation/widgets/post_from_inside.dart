@@ -13,7 +13,7 @@ void showCommentsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -32,7 +32,7 @@ void showCommentsBottomSheet(BuildContext context)
             height: 283.h,
             margin: AppMargins.horizontal10,
             decoration: BoxDecoration(
-              borderRadius: AppBorders.circular7,
+              borderRadius: AppBordersRadiuses.circular7,
               image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.postDetailMercJeep)),
             ),
           ),

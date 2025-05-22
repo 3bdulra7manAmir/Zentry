@@ -29,11 +29,11 @@ class GenderPicker extends ConsumerWidget
         AppSizes.size8.verticalSpace,
         InkWell(
           onTap: () => showGenderPickerBottomSheet(context),
-          borderRadius: AppBorders.circular10,
+          borderRadius: AppBordersRadiuses.circular10,
           child: Container(
             height: 48.h,
             alignment: Alignment.center,
-            decoration: BoxDecoration(color: AppColors.color.kGrey002, borderRadius: AppBorders.circular10,),
+            decoration: BoxDecoration(color: AppColors.color.kGrey002, borderRadius: AppBordersRadiuses.circular10,),
             child: Row(
               children:
               [

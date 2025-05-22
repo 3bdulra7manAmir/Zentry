@@ -38,7 +38,7 @@ class SearchRelatedResultCard extends StatelessWidget {
           width: 20.w,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            borderRadius: AppBorders.circular10,
+            borderRadius: AppBordersRadiuses.circular10,
             color: AppColors.color.kBlue003,
           ),
           child: Text(category.number!, style: AppStyles.textStyle14(

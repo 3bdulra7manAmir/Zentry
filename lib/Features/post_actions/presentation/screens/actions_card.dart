@@ -6,7 +6,6 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 
 void showActionsBottomSheet(BuildContext context)
@@ -16,7 +15,7 @@ void showActionsBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     //isScrollControlled: true,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly10),
     builder: (BuildContext context)
     {
       return Padding(
@@ -32,7 +31,7 @@ void showActionsBottomSheet(BuildContext context)
               height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kBlack005,
-                borderRadius: AppBorders.circular100,
+                borderRadius: AppBordersRadiuses.circular100,
               ),
             ),
             AppSizes.size17.verticalSpace,

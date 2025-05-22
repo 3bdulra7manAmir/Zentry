@@ -43,7 +43,7 @@ class CustomButton extends ConsumerWidget
           padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(buttonPadding),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: buttonBorderRadius ?? AppBorders.circular10,
+              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular10,
               side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.thin,),
             ),
           ),

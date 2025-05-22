@@ -5,7 +5,6 @@ import '../../config/themes/color_system/app_colors.dart';
 import '../../config/themes/font_system/font_weights.dart';
 import '../../core/constants/app_images.dart';
 import '../../core/constants/app_sizes.dart';
-import '../../core/constants/app_strings.dart';
 import '../../core/constants/app_styles.dart';
 
 class WatchTutorial extends StatelessWidget

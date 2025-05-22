@@ -19,7 +19,7 @@ void showDateTimeBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10),
     builder: (BuildContext context)
     {
       return Consumer( //HERE
@@ -51,7 +51,7 @@ void showDateTimeBottomSheet(BuildContext context)
                       height: 3.h,
                       decoration: BoxDecoration(
                         color: AppColors.color.kGreyText002,
-                        borderRadius: AppBorders.circular4,
+                        borderRadius: AppBordersRadiuses.circular4,
                       ),
                     ),
                     AppSizes.size35.verticalSpace,

@@ -38,13 +38,7 @@ class PostBio extends StatelessWidget {
             Container(
               width: 132.w,
               height: 28.h,
-              decoration: BoxDecoration(
-                borderRadius: AppBorders.circular8,
-                border: Border.all(
-                  color: AppColors.color.kGrey001,
-                  width: AppBorderWidths.medium,
-                ),
-              ),
+              decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular8, border: AppFullBorders.completeProfileCard,),
               child: Center(
                 child: Text(
                   carPrice,

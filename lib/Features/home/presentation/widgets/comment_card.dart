@@ -27,7 +27,7 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.circular10,
+              borderRadius: AppBordersRadiuses.circular10,
               border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
@@ -41,7 +41,7 @@ class CommentCard extends StatelessWidget
               height: 40.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGrey002,
-                borderRadius: AppBorders.circular10,
+                borderRadius: AppBordersRadiuses.circular10,
                 border: AppBoxBorders.standard,
               ),
               child: CustomTextFormField(
@@ -59,7 +59,7 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.circular10,
+              borderRadius: AppBordersRadiuses.circular10,
               border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
@@ -75,7 +75,7 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.circular10,
+              borderRadius: AppBordersRadiuses.circular10,
               border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,

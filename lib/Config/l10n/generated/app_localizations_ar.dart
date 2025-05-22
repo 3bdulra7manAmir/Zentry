@@ -537,5 +537,5 @@ class AppLocalizationsAr extends AppLocalizations {
   String get error => 'خطأ';
 
   @override
-  String get moneyFromInvite => 'Money From Invite';
+  String get moneyFromInvite => 'أرباح من الدعوات';
 }

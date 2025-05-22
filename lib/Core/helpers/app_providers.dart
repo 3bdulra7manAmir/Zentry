@@ -13,10 +13,6 @@ import '../../features/auth/register/presentation/controllers/obsecure_text_prov
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../services/localization/controller/localization_controller.dart';
 
-String getAppText(BuildContext context, String Function(AppLocalizations) selector,)
-{
-  return selector(AppLocalizations.of(context));
-}
 
 class AppProvidersProvider
 {
@@ -52,4 +48,9 @@ class AppProvidersProvider
   SignUpType get signUpType => ref.watch(signUpTypeProvider);
 
   String get otpProvider => ref.watch(otpInputProvider);
+}
+
+String getAppText(BuildContext context, String Function(AppLocalizations) selector,)
+{
+  return selector(AppLocalizations.of(context));
 }

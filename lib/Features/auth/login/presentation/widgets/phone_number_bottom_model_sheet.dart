@@ -17,7 +17,7 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10),
     builder: (BuildContext context)
     {
       final countriesList = CountryUtils.getCountryImageAndName(context);
@@ -35,7 +35,7 @@ void showCountriesPhoneNumberBottomSheet(BuildContext context)
               height: 4.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGreyText002,
-                borderRadius: AppBorders.circular4,
+                borderRadius: AppBordersRadiuses.circular4,
               ),
             ),
             AppSizes.size18.verticalSpace,

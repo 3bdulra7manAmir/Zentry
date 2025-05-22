@@ -7,7 +7,6 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 
 void showPostOptionsBottomSheet(BuildContext context)
@@ -17,7 +16,7 @@ void showPostOptionsBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     //isScrollControlled: true,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly16),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly16),
     builder: (BuildContext context)
     {
       return Padding(

@@ -6,7 +6,6 @@ import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_styles.dart';
@@ -20,7 +19,7 @@ void showMoenyFromInterestsBottomSheet(BuildContext context) {
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context) {
       return const MoneyFromInterestsListView();
     },
@@ -126,7 +125,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
               height: 48.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kWhite001,
-                borderRadius: AppBorders.circular50,
+                borderRadius: AppBordersRadiuses.circular50,
               ),
               child: Image.asset(category.image,
                 width: 45.w,

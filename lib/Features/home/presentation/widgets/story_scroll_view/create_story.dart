@@ -7,7 +7,6 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_paddings.dart';
-import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
 
@@ -23,7 +22,7 @@ class CreateStory extends StatelessWidget
       height: 148.h,
       width: 112.w,
       decoration:  BoxDecoration(
-        borderRadius: AppBorders.circular5,
+        borderRadius: AppBordersRadiuses.circular5,
         image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.homeStoryRobot), fit: BoxFit.cover),),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +30,7 @@ class CreateStory extends StatelessWidget
         [
           Image.asset(AppAssets.iconsPNG.homeStoryCreate, width: 48.w, height: 48.h,),
           CustomButton(
-            buttonBorderRadius: AppBorders.circular5,
+            buttonBorderRadius: AppBordersRadiuses.circular5,
             buttonText: AppLocalizations.of(context).createStory, buttonOnPressed: () {},
             buttonWidth: 88.w,
             buttonHeight: 27.h,

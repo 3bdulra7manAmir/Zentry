@@ -7,7 +7,6 @@ import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../follow_business/presentation/screens/follow_business_page.dart';
@@ -18,7 +17,7 @@ void showCompleteProfileBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -61,8 +60,8 @@ class CompleteProfileCard extends StatelessWidget
           height: 168.h,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
-            borderRadius: AppBorders.circular12,
-            border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.medium,),
+            borderRadius: AppBordersRadiuses.circular12,
+            border: AppFullBorders.completeProfileCard,
           ),
           child: Center(
             child: Column(

@@ -29,7 +29,7 @@ class CustomContainer extends StatelessWidget
       height: 48.h,
       padding: AppPadding.horizontal16,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.circular10,
+        borderRadius: AppBordersRadiuses.circular10,
         color: AppColors.color.kGrey002,
       ),
       child: Row(

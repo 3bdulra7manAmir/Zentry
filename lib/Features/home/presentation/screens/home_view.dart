@@ -25,7 +25,8 @@ class HomeView extends ConsumerWidget
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children:
+          [
             AppSizes.size27.verticalSpace,
             Divider(height: AppSizes.size2, color: AppColors.color.kGrey001),
             SizedBox(height: 79.h, child: const ProductsItemList()),

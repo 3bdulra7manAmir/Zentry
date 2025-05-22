@@ -75,7 +75,7 @@ class PostsCard extends StatelessWidget {
 //           height: 283.h,
 //           margin: AppMargins.horizontal10,
 //           decoration: BoxDecoration(
-//             borderRadius: AppBorders.circular7,
+//             borderRadius: AppBordersRadiuses.circular7,
 //             image: const DecorationImage(
 //               image: AssetImage("assets/icons/Inside_Post/Merc_Jeep.png"),
 //               fit: BoxFit.cover,
@@ -95,7 +95,7 @@ class PostsCard extends StatelessWidget {
 //                 height: 40.h,
 //                 decoration: BoxDecoration(
 //                   color: AppColors.color.kGrey002,
-//                   borderRadius: AppBorders.circular10,
+//                   borderRadius: AppBordersRadiuses.circular10,
 //                   border: Border.all(
 //                     color: AppColors.color.kGrey001,
 //                     width: AppBorderWidths.medium,

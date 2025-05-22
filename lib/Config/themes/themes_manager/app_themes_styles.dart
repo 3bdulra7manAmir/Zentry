@@ -11,7 +11,7 @@ abstract class AppThemesStyles
   AppThemesStyles._();
 
   static InputBorder? inputBorderLight = OutlineInputBorder(
-    borderRadius: AppBorders.circular10,
+    borderRadius: AppBordersRadiuses.circular10,
     borderSide: BorderSide(
       color: AppColors.color.kGrey001,
       width: AppBorderWidths.thin,
@@ -19,7 +19,7 @@ abstract class AppThemesStyles
   );
 
   static InputBorder? inputBorderDark = OutlineInputBorder(
-    borderRadius: AppBorders.circular10,
+    borderRadius: AppBordersRadiuses.circular10,
     borderSide: BorderSide(
       color: AppColors.color.kDark001,
       width: AppSizes.size1.w,
@@ -30,7 +30,7 @@ abstract class AppThemesStyles
     style: ButtonStyle(
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: AppBorders.circular10,
+          borderRadius: AppBordersRadiuses.circular10,
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.thin,),
         ),
       ),

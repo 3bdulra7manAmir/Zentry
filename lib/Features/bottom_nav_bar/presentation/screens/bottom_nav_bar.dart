@@ -1,27 +1,13 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
-
-class NavItem
-{
-  final String activeIcon;
-  final String inactiveIcon;
-  final String label;
-
-  NavItem({
-    required this.activeIcon,
-    required this.inactiveIcon,
-    required this.label,
-    
-  });
-}
+import '../widgets/nav_bar_list.dart';
 
 
 class MyHomePage extends StatefulWidget
@@ -29,16 +15,15 @@ class MyHomePage extends StatefulWidget
   const MyHomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
+class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
 {
-  int _bottomNavIndex = 0;
+  int bottomNavIndex = 0;
   late AnimationController fabAnimationController;
   late AnimationController hideBottomBarAnimationController;
   late Animation<double> fabAnimation;
-
   @override
   void initState()
   {
@@ -55,32 +40,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
   @override
   Widget build(BuildContext context)
   {
-    final List<NavItem> navItems =
-    [
-      NavItem(
-        activeIcon: AppAssets.iconsPNG.navHome,
-        inactiveIcon: AppAssets.iconsPNG.navHome,
-        label: AppLocalizations.of(context).home,
-      ),
-      NavItem(
-        activeIcon: AppAssets.iconsPNG.navCategory,
-        inactiveIcon: AppAssets.iconsPNG.navCategory,
-        label: AppLocalizations.of(context).category,
-      ),
-      NavItem(
-        activeIcon: AppAssets.iconsPNG.navProfile,
-        inactiveIcon: AppAssets.iconsPNG.navProfile,
-        label: AppLocalizations.of(context).profile,
-      ),
-      NavItem(
-        activeIcon: AppAssets.iconsPNG.navMenu,
-        inactiveIcon: AppAssets.iconsPNG.navMenu,
-        label: AppLocalizations.of(context).menu,
-      ),
-    ];
+    final navItems = getNavItems(context);
     return Scaffold(
       extendBody: true,
-      body: Center(child: Text('Page $_bottomNavIndex')), // Sample page body
+      body: Center(child: Text('Page $bottomNavIndex')), // Sample page body
       floatingActionButton: GestureDetector(
         onTap: () {},
         child: Image.asset(AppAssets.iconsPNG.navMiddle, fit: BoxFit.contain,),
@@ -108,19 +71,14 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
           );
         },
         backgroundColor: AppColors.color.kWhite001,
-        activeIndex: _bottomNavIndex,
+        activeIndex: bottomNavIndex,
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.defaultEdge,
         leftCornerRadius: 21.r,
         rightCornerRadius: 21.r,
-        onTap: (index) => setState(() => _bottomNavIndex = index),
+        onTap: (index) => setState(() => bottomNavIndex = index),
         hideAnimationController: hideBottomBarAnimationController,
-        shadow: BoxShadow(
-          offset: const Offset(0, 1),
-          blurRadius: 8.r,
-          spreadRadius: 0.5.r,
-          color: const Color(0x42000000),
-        ),
+        shadow: AppShadowBoxes.bottomNavBar,
       ),
     );
   }

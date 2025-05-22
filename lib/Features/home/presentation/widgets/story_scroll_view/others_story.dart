@@ -20,7 +20,7 @@ class UsersStory extends StatelessWidget
       height: 148.h,
       width: 112.w,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.circular5,
+        borderRadius: AppBordersRadiuses.circular5,
         image: DecorationImage(
           image: AssetImage(story.backgroundImage),
           fit: BoxFit.cover,
@@ -35,15 +35,9 @@ class UsersStory extends StatelessWidget
             Container(
               height: 40.h,
               width: 40.w,
-              decoration: BoxDecoration(
-                borderRadius: AppBorders.circular50,
-                border: Border.all(
-                  color: AppColors.color.kOrange003,
-                  width: 2.w,
-                ),
-              ),
+              decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular50, border: AppFullBorders.othersStoryCard,),
               child: ClipRRect(
-                borderRadius: AppBorders.circular50,
+                borderRadius: AppBordersRadiuses.circular50,
                 child: Image.asset(story.userAvatar, fit: BoxFit.cover,),
               ),
             ),

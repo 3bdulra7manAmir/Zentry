@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/themes/color_system/app_colors.dart';
 
-abstract class AppBorders
+abstract class AppBordersRadiuses
 {
-  AppBorders._();
+  AppBordersRadiuses._();
 
   /// Top Only Border Radius
   
@@ -65,7 +65,34 @@ abstract class AppBorders
   static BorderRadius circular100 = BorderRadius.circular(100.r);
 }
 
-abstract class AppBorderWidths {
+
+abstract class AppFullBorders
+{
+  AppFullBorders._();
+
+  static BoxBorder? verificationCode = Border.all(
+    color: AppColors.color.kGrey001,
+    width: AppBorderWidths.thin,
+  );
+
+  static BoxBorder? completeProfileCard = Border.all(
+    color: AppColors.color.kGrey001,
+    width: AppBorderWidths.medium,
+  );
+
+  static BoxBorder? othersStoryCard = Border.all(
+    color: AppColors.color.kOrange003,
+    width: 2.w,
+  );
+
+  static BoxBorder? joinGroupsCard = Border.all(
+    color: AppColors.color.kOrange002,
+    width: AppBorderWidths.medium,
+  );
+}
+
+abstract class AppBorderWidths
+{
   AppBorderWidths._();
 
   /// 1px width
@@ -75,7 +102,8 @@ abstract class AppBorderWidths {
   static double medium = (2.0).w;
 }
 
-abstract class AppBoxBorders {
+abstract class AppBoxBorders
+{
   AppBoxBorders._();
 
   /// Standard grey border

@@ -34,7 +34,7 @@ class SearchResultCardDetailed extends StatelessWidget {
     return Container(
       width: 370.w,
       height: 163.h,
-      decoration: BoxDecoration(borderRadius: AppBorders.circular5,),
+      decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular5,),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
