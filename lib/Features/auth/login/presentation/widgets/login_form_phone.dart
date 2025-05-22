@@ -19,6 +19,7 @@ import '../../../../../core/widgets/app_social_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../controllers/checkbox_controller.dart';
 import '../controllers/email_phone_switcher.dart';
+import '../controllers/login_controllers/login_providers.dart';
 import 'phone_number_bottom_model_sheet.dart';
 
 class LoginFormWithPhone extends ConsumerWidget
@@ -121,15 +122,28 @@ class LoginFormWithPhone extends ConsumerWidget
                 ],
               ),
               AppSizes.size16.verticalSpace,
-              CustomButton(
-                buttonText: AppLocalizations.of(context).login,
-                buttonOnPressed: ()
+              Consumer(
+                builder: (context, ref, child)
                 {
-                  if (loginPhoneFormKey.currentState!.validate()) //HERE
-                  {
-                    //AppRouter.router.
-                  }
-                },
+                  return CustomButton(
+                    buttonText: AppLocalizations.of(context).login,
+                    buttonOnPressed: () async
+                    {
+                      if (!loginPhoneFormKey.currentState!.validate() == true)
+                      {
+                        await ref.read(loginStateProvider.notifier).loginWithEmail(phoneNumberController.text, passwordController.text);
+                        final state = ref.read(loginStateProvider);
+                        state.whenData((success)
+                        {
+                          if (success)
+                          {
+                            AppRouter.router.pushNamed(AppRoutes.kHomeView);
+                          }
+                        });
+                      }
+                    },
+                  );
+                }
               ),
               AppSizes.size20.verticalSpace,
               Align(
