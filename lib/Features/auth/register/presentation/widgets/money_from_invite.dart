@@ -71,12 +71,12 @@ class MoenyFromInviteCard extends StatelessWidget
           height: 187.h,
           decoration: BoxDecoration(
             image:  DecorationImage(
-              image: AssetImage(AppAssets.iconsPNG.videoThumnailPNG),
+              image: AssetImage(AppAssets.iconsPNG.invitesVideoThumbnail),
               fit: BoxFit.cover,
             ),  
             borderRadius: AppBorders.buttonBorder10,
           ),
-          child: Image.asset(AppAssets.iconsPNG.playButtonPNG,),
+          child: Image.asset(AppAssets.iconsPNG.invitesPlayButton,),
         ),
         AppSizes.size24.verticalSpace,
         Padding(

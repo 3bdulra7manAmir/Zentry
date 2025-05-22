@@ -37,15 +37,15 @@ class PostReactions extends StatelessWidget {
                 [
                   Positioned(
                     left: 0,
-                    child: Image.asset(AppAssets.iconsPNG.commentHeartPNG,),
+                    child: Image.asset(AppAssets.iconsPNG.reactionHeart,),
                   ),
                   Positioned(
                     left: 6.w,
-                    child: Image.asset(AppAssets.iconsPNG.commentSmilingFacePNG,),
+                    child: Image.asset(AppAssets.iconsPNG.reactionSmile,),
                   ),
                   Positioned(
                     left: 11.w,
-                    child: Image.asset(AppAssets.iconsPNG.commentCryingFacePNG,),
+                    child: Image.asset(AppAssets.iconsPNG.reactionCry,),
                   ),
                 ],
               ),

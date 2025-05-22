@@ -14,8 +14,8 @@ class UnkownCard extends StatelessWidget
         body: Container(
           width: double.infinity,
           height: 210.h,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.unkownPNG), fit: BoxFit.cover,),),
-          child: Image.asset(AppAssets.iconsPNG.exitPNG, alignment: Alignment.topLeft,),
+          decoration: BoxDecoration(image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.unknownIcon), fit: BoxFit.cover,),),
+          child: Image.asset(AppAssets.iconsPNG.tutorialExit, alignment: Alignment.topLeft,),
         ),
       ),
     );

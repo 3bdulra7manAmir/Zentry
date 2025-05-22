@@ -31,7 +31,7 @@ class CommentCard extends StatelessWidget
               border: AppBoxBorders.commonborder,
             ),
             alignment: Alignment.center,
-            child: Center(child: Image.asset(AppAssets.iconsPNG.heart2PNG, fit: BoxFit.contain,),),
+            child: Center(child: Image.asset(AppAssets.iconsPNG.commentHeart, fit: BoxFit.contain,),),
           ),
           AppSizes.size8.horizontalSpace,
 
@@ -47,7 +47,7 @@ class CommentCard extends StatelessWidget
               child: CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
                 fieldText: AppLocalizations.of(context).commentHere,
-                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.userAvatarPNG),
+                fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.commentUserAvatar),
               ),
             ),
           ),
@@ -64,7 +64,7 @@ class CommentCard extends StatelessWidget
             ),
             alignment: Alignment.center,
             child: Center(
-              child: Image.asset(AppAssets.iconsPNG.archivePNG, fit: BoxFit.contain,),
+              child: Image.asset(AppAssets.iconsPNG.commentArchive, fit: BoxFit.contain,),
             ),
           ),
           AppSizes.size8.horizontalSpace,
@@ -79,7 +79,7 @@ class CommentCard extends StatelessWidget
               border: AppBoxBorders.commonborder,
             ),
             alignment: Alignment.center,
-            child: Center(child: Image.asset(AppAssets.iconsPNG.sharePNG, fit: BoxFit.contain,),),
+            child: Center(child: Image.asset(AppAssets.iconsPNG.commentShare, fit: BoxFit.contain,),),
           ),
         ],
       ),

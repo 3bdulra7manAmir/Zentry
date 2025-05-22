@@ -46,11 +46,11 @@ class VerificationCodeView extends ConsumerWidget
               AppSizes.size4.horizontalSpace,
               Image.asset(provider.localeState.selectedLanguageIndex == 0
                     ? (provider.themeMode == ThemeMode.dark
-                        ? AppAssets.iconsPNG.leftWhiteArrowPNG
-                        : AppAssets.iconsPNG.rightBackArrowBlackPNG)
+                        ? AppAssets.iconsPNG.headerArrowLeft
+                        : AppAssets.iconsPNG.appBarBackRight)
                     : (provider.themeMode == ThemeMode.dark
-                        ? AppAssets.iconsPNG.rightWhiteArrowPNG
-                        : AppAssets.iconsPNG.rightBackArrowBlackPNG),
+                        ? AppAssets.iconsPNG.headerArrowRight
+                        : AppAssets.iconsPNG.appBarBackRight),
               ),
               AppSizes.size14.horizontalSpace,
             ],

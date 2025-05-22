@@ -29,7 +29,7 @@ class _SplashViewState extends State<SplashView>
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Image.asset(AppAssets.iconsPNG.appLogoPNG)],
+          children: [Image.asset(AppAssets.iconsPNG.appLogo)],
         ),
       ),
     );

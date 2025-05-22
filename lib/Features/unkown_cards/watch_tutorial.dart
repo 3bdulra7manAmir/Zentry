@@ -24,13 +24,13 @@ class WatchTutorial extends StatelessWidget
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              Image.asset(AppAssets.iconsPNG.exitPNG),
+              Image.asset(AppAssets.iconsPNG.tutorialExit),
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:
                   [
-                    Image.asset(AppAssets.iconsPNG.playCirclePNG),
+                    Image.asset(AppAssets.iconsPNG.tutorialPlayCircle),
                     AppSizes.size10.verticalSpace,
                     Text(AppStrings.watchTutorial, style: AppStyles.textStyle14(
                       fontColor: AppColors.color.kWhite001,

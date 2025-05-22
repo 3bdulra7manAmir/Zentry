@@ -76,8 +76,8 @@ class SignUpFormInvite extends ConsumerWidget
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState,
                   child: Image.asset(provider.obscureText
-                    ? AppAssets.iconsPNG.corssedEyePNG
-                    : AppAssets.iconsPNG.eyePNG,
+                    ? AppAssets.iconsPNG.loginPasswordHidden
+                    : AppAssets.iconsPNG.loginPasswordVisible,
                   ),
                 ),
               ),

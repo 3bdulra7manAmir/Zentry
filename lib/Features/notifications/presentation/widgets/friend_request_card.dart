@@ -34,7 +34,7 @@ class FriendRequestCard extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Image.asset(AppAssets.iconsPNG.adhamPNG),
+                Image.asset(AppAssets.iconsPNG.notificationUserAdham),
                 AppSizes.size13.horizontalSpace,
                 Expanded(
                   child: Column(
@@ -64,7 +64,7 @@ class FriendRequestCard extends StatelessWidget
                               ],
                             ),
                           ),
-                          Image.asset(AppAssets.iconsPNG.horzintal3BlackDotsPNG),
+                          Image.asset(AppAssets.iconsPNG.notificationMenuDots),
                           AppSizes.size16.horizontalSpace,
                         ],
                       ),

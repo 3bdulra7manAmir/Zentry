@@ -40,7 +40,7 @@ class GenderPicker extends ConsumerWidget
                 AppSizes.size20.horizontalSpace,
                 Text(displayGender, style: AppStyles.textStyle13(fontColor: AppColors.color.kGreyText002,),),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.downArrowPNG),
+                Image.asset(AppAssets.iconsPNG.registerArrowDown),
                 AppSizes.size20.horizontalSpace,
               ],
             ),

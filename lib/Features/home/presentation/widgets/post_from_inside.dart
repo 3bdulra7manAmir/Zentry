@@ -24,7 +24,7 @@ void showCommentsBottomSheet(BuildContext context)
           AppSizes.size11.verticalSpace,
           Padding(
             padding: AppPadding.commentsSection,
-            child: Image.asset(AppAssets.iconsPNG.insidePostBackArrowPNG,),
+            child: Image.asset(AppAssets.iconsPNG.postDetailBackArrow,),
           ),
           AppSizes.size25.verticalSpace,
           Container(
@@ -33,7 +33,7 @@ void showCommentsBottomSheet(BuildContext context)
             margin: AppMargins.kApp10Padding,
             decoration: BoxDecoration(
               borderRadius: AppBorders.buttonBorder7,
-              image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.insidePostMercCarPNG)),
+              image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.postDetailMercJeep)),
             ),
           ),
           AppSizes.size30.verticalSpace,

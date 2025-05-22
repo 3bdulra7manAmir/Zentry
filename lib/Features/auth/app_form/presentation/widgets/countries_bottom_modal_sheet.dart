@@ -47,7 +47,7 @@ void showCountriesBottomSheet(BuildContext context)
             CustomContainer(
               fieldText: AppLocalizations.of(context).search,
               fieldhintStyle: AppStyles.textStyle10(),
-              fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.searchPNG),
+              fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.countrySearch),
             ),
             AppSizes.size16.verticalSpace,
             Consumer(

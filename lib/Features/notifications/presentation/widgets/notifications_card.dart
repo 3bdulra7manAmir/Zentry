@@ -67,7 +67,7 @@ class DefaultNotificationCard extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Image.asset(AppAssets.iconsPNG.threeHorzintalBlackDotsPNG),
+                          Image.asset(AppAssets.iconsPNG.notificationMenuDots),
                           AppSizes.size16.horizontalSpace,
                         ],
                       ),

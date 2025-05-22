@@ -30,7 +30,7 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.savePNG),
+                Image.asset(AppAssets.iconsPNG.postSave),
                 AppSizes.size12.horizontalSpace,
                 Text(AppStrings.save, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
@@ -49,7 +49,7 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.copyPNG),
+                Image.asset(AppAssets.iconsPNG.postCopy),
                 AppSizes.size12.horizontalSpace,
                 Text(AppStrings.copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],
@@ -66,7 +66,7 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.billPNG),
+                Image.asset(AppAssets.iconsPNG.postBill),
                 AppSizes.size12.horizontalSpace,
                 Text(AppStrings.turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
@@ -85,7 +85,7 @@ void showPostOptionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.reportPNG),
+                Image.asset(AppAssets.iconsPNG.postReport),
                 AppSizes.size12.horizontalSpace,
                 Text(AppStrings.report, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],

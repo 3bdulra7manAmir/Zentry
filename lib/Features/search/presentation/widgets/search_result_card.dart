@@ -42,9 +42,9 @@
 //                     AppSizes.size6.horizontalSpace,
 //                     if (result.price != "Exchange") Text(AppLocalizations.of(context).negotiation, style: AppStyles.textStyle8(fontColor: AppColors.color.kBlue003),),
 //                     AppSizes.size14.horizontalSpace,
-//                     Image.asset(AppAssets.iconsPNG.scanPNG),
+//                     Image.asset(AppAssets.iconsPNG.searchScan),
 //                     AppSizes.size6.horizontalSpace,
-//                     Image.asset(AppAssets.iconsPNG.heartPNG),
+//                     Image.asset(AppAssets.iconsPNG.searchHeart),
 //                   ],
 //                 ),
 //                 AppSizes.size12.verticalSpace,
@@ -53,19 +53,19 @@
 //                 Row(
 //                   children: [
 //                     if (result.ratingMin.isNotEmpty) ...[
-//                       Image.asset(AppAssets.iconsPNG.speedmeterPNG),
+//                       Image.asset(AppAssets.iconsPNG.searchSpeedometer),
 //                       AppSizes.size5.horizontalSpace,
 //                       Text("${result.ratingMin}-${result.ratingMax}", style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
 //                       AppSizes.size9.horizontalSpace,
 //                     ],
 //                     if (result.year.isNotEmpty) ...[
-//                       Image.asset(AppAssets.iconsPNG.calendarPNG),
+//                       Image.asset(AppAssets.iconsPNG.searchCalendar),
 //                       AppSizes.size7.horizontalSpace,
 //                       Text(result.year, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
 //                       AppSizes.size7.horizontalSpace,
 //                     ],
 //                     if (result.status.isNotEmpty) ...[
-//                       Image.asset(AppAssets.iconsPNG.unlockPNG),
+//                       Image.asset(AppAssets.iconsPNG.searchUnlock),
 //                       AppSizes.size5.horizontalSpace,
 //                       Text(result.status, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight),),
 //                     ],
@@ -76,7 +76,7 @@
                 //   children:
                 //   [
                 //     if (result.country.isNotEmpty) ...[
-                //       Image.asset(AppAssets.iconsPNG.locationPNG),
+                //       Image.asset(AppAssets.iconsPNG.notificationLocation),
                 //       AppSizes.size6.horizontalSpace,
                 //       Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
                 //     ],

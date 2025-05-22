@@ -23,12 +23,12 @@ class CreateStory extends StatelessWidget
       width: 112.w,
       decoration:  BoxDecoration(
         borderRadius: AppBorders.buttonBorder5,
-        image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.storyRobotPNG), fit: BoxFit.cover),),
+        image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.homeStoryRobot), fit: BoxFit.cover),),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          Image.asset(AppAssets.iconsPNG.storyCreate, width: 48.w, height: 48.h,),
+          Image.asset(AppAssets.iconsPNG.homeStoryCreate, width: 48.w, height: 48.h,),
           CustomButton(
             buttonBorderRadius: AppBorders.buttonBorder5,
             buttonText: AppStrings.createStory, buttonOnPressed: () {},

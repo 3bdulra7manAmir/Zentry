@@ -11,186 +11,174 @@ class _AppIconsPNG
 {
   _AppIconsPNG._();
 
-  ///App Splash
-  final String appLogoPNG = "assets/icons/Splash/App_Logo.png";
+  /// Splash Screen
+  final String appLogo = "assets/icons/Splash/App_Logo.png"; /// appLogo
 
-  ///AppHeader
-  final String cloudPNG = "assets/icons/AppHeader/App_Cloud.png";
-  final String fullHeaderPNG = "assets/icons/AppHeader/App_Logo_Cloud.png";
-  final String leftWhiteArrowPNG = "assets/icons/AppHeader/Left_White_Arrow.png";
-  final String rightWhiteArrowPNG = "assets/icons/AppHeader/Right_White_Arrow.png";
+  /// App Header
+  final String headerCloud = "assets/icons/AppHeader/App_Cloud.png"; /// headerCloud
+  final String headerFullLogo = "assets/icons/AppHeader/App_Logo_Cloud.png"; /// headerFullLogo
+  final String headerArrowLeft = "assets/icons/AppHeader/Left_White_Arrow.png"; /// headerArrowLeft
+  final String headerArrowRight = "assets/icons/AppHeader/Right_White_Arrow.png"; /// headerArrowRight
 
-  ///App Form
-  final String countryPNG = "assets/icons/AppForm/Country.png";
-  final String languagePNG = "assets/icons/AppForm/Language.png";
-  final String modePNG = "assets/icons/AppForm/Mode.png";
-  final String darkPNG = "assets/icons/AppForm/Dark_Mode.png";
-  final String lightPNG = "assets/icons/AppForm/Light_Mode.png";
-  final String leftBlackArrowPNG = "assets/icons/AppForm/Left_Arrow.png";
-  final String rightBlackArrowPNG = "assets/icons/AppForm/Right_Arrow.png";
+  /// App Form
+  final String formCountry = "assets/icons/AppForm/Country.png"; /// formCountry
+  final String formLanguage = "assets/icons/AppForm/Language.png"; /// formLanguage
+  final String formMode = "assets/icons/AppForm/Mode.png"; /// formMode
+  final String formDarkMode = "assets/icons/AppForm/Dark_Mode.png"; /// formDarkMode
+  final String formLightMode = "assets/icons/AppForm/Light_Mode.png"; /// formLightMode
+  final String formArrowLeft = "assets/icons/AppForm/Left_Arrow.png"; /// formArrowLeft
+  final String formArrowRight = "assets/icons/AppForm/Right_Arrow.png"; /// formArrowRight
 
-  ///App Login
-  final String egyptFlagPNG = "assets/icons/Login/Egypt_Flag.png";
-  final String corssedEyePNG = "assets/icons/Login/Crossed_Eye.png";
-  final String eyePNG = "assets/icons/Login/eyes.png";
-  final String faceBookPNG = "assets/icons/Login/FaceBook.png";
-  final String googlePNG = "assets/icons/Login/Google.png";
-  final String applePNG = "assets/icons/Login/Apple.png";
-  final String appleDarkPNG = "assets/icons/Login/Apple_Dark.png";
+  /// Authentication - Login
+  final String loginEgyptFlag = "assets/icons/Login/Egypt_Flag.png"; /// loginEgyptFlag
+  final String loginPasswordHidden = "assets/icons/Login/Crossed_Eye.png"; /// loginPasswordHidden
+  final String loginPasswordVisible = "assets/icons/Login/eyes.png"; /// loginPasswordVisible
+  final String loginFacebook = "assets/icons/Login/FaceBook.png"; /// loginFacebook
+  final String loginGoogle = "assets/icons/Login/Google.png"; /// loginGoogle
+  final String loginApple = "assets/icons/Login/Apple.png"; /// loginApple
+  final String loginAppleDark = "assets/icons/Login/Apple_Dark.png"; /// loginAppleDark
 
-  ///App AppBar
-  final String leftBackArrowBlackPNG = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png";
-  final String rightBackArrowBlackPNG = "assets/icons/ForgetPassword/Right_Back_Arrow_Black.png";
+  /// App Bar
+  final String appBarBackLeft = "assets/icons/ForgetPassword/Left_Back_Arrow_Black.png"; /// appBarBackLeft
+  final String appBarBackRight = "assets/icons/ForgetPassword/Right_Back_Arrow_Black.png"; /// appBarBackRight
 
-  ///App Rest Password
-  final String securityLockPNG = "assets/icons/RestPassword/SecurityLock.png";
+  /// Reset Password
+  final String resetPasswordLock = "assets/icons/RestPassword/SecurityLock.png"; /// resetPasswordLock
 
-  ///App Countries
-  final String searchPNG = "assets/icons/Countries/Search.png";
-  final String egFlagPNG = "assets/icons/Countries/Egypt.png";
-  final String saFlagPNG = "assets/icons/Countries/Saudi_Arabia.png";
-  final String uaeFlagPNG = "assets/icons/Countries/United_Arab_Emirates.png";
-  final String kuwaitFlagPNG = "assets/icons/Countries/Kuwait.png";
-  final String moroccoFlagPNG = "assets/icons/Countries/Morocco.png";
-  final String syriaFlagPNG = "assets/icons/Countries/Syrian_Arab_Republic.png";
-  final String unitedStatesFlagPNG = "assets/icons/Countries/United_States.png";
+  /// Countries
+  final String countrySearch = "assets/icons/Countries/Search.png"; /// countrySearch
+  final String countryEgypt = "assets/icons/Countries/Egypt.png"; /// countryEgypt
+  final String countrySaudiArabia = "assets/icons/Countries/Saudi_Arabia.png"; /// countrySaudiArabia
+  final String countryUAE = "assets/icons/Countries/United_Arab_Emirates.png"; /// countryUAE
+  final String countryKuwait = "assets/icons/Countries/Kuwait.png"; /// countryKuwait
+  final String countryMorocco = "assets/icons/Countries/Morocco.png"; /// countryUAE
+  final String countrySyria = "assets/icons/Countries/Syrian_Arab_Republic.png"; /// countrySyria
+  final String countryUSA = "assets/icons/Countries/United_States.png"; /// countryUSA
 
-  final String egFlagSelectedPNG = "assets/icons/Countries/Egypt_Selected.png";
-  final String saFlagSelectedPNG = "assets/icons/Countries/Saudi_Arabia_Selected.png";
-  final String uaeFlagSelectedPNG = "assets/icons/Countries/United_Arab_Emirates_Selected.png";
-  final String kuwaitFlagSelectedPNG = "assets/icons/Countries/Kuwait_Selected.png";
-  final String moroccoFlagSelectedPNG = "assets/icons/Countries/Morocco_Selected.png";
-  final String syriaFlagSelectedPNG = "assets/icons/Countries/Syrian_Arab_Republic_Selected.png";
-  final String unitedStatesFlagSelectedPNG = "assets/icons/Countries/United_States_Selected.png";
+  final String countryEgyptSelected = "assets/icons/Countries/Egypt_Selected.png"; /// countryEgyptSelected
+  final String countrySaudiArabiaSelected = "assets/icons/Countries/Saudi_Arabia_Selected.png"; /// countrySaudiArabiaSelected
+  final String countryUAESelected = "assets/icons/Countries/United_Arab_Emirates_Selected.png"; /// countryUAESelected
+  final String countryKuwaitSelected = "assets/icons/Countries/Kuwait_Selected.png"; /// countryKuwaitSelected
+  final String countryMoroccoSelected = "assets/icons/Countries/Morocco_Selected.png"; /// countryMoroccoSelected
+  final String countrySyriaSelected = "assets/icons/Countries/Syrian_Arab_Republic_Selected.png"; /// countrySyriaSelected
+  final String countryUSASelected = "assets/icons/Countries/United_States_Selected.png"; /// countryUSASelected
 
-  ///APP Register Or SignUp
-  final String femalePNG = "assets/icons/Register_FullName/Female.png";
-  final String malePNG = "assets/icons/Register_FullName/Male.png";
-  final String downArrowPNG = "assets/icons/Register/down_Arrow.png";
+  /// Register & Sign Up
+  final String registerFemale = "assets/icons/Register_FullName/Female.png"; /// registerFemale
+  final String registerMale = "assets/icons/Register_FullName/Male.png"; /// registerMale
+  final String registerArrowDown = "assets/icons/Register/down_Arrow.png"; /// registerArrowDown
 
+  /// Notifications
+  final String notificationSearchDark = "assets/icons/Notifications/Search.png"; /// notificationSearchDark
+  final String notificationUserAdham = "assets/icons/Notifications/Adham.png"; /// notificationUserAdham
+  final String notificationMenuDots = "assets/icons/Notifications/3Horzintal_Black_Dots.png"; /// notificationMenuDots, notificationMenuDots (duplicate)
+  final String ibrahimPNG = "assets/icons/Notifications/Ibrahim.png"; /// ibrahimPNG
+  final String notificationLocation = "assets/icons/Notifications/Location.png"; /// locationGreyPNG, notificationLocation (duplicate)
+  final String notificationLocationHighlighted = "assets/icons/Notifications/Location_Yellow.png"; /// notificationLocationHighlighted
 
-  ///APP Notifications View
-  final String searchDarkPNG = "assets/icons/Notifications/Search.png";
-  final String adhamPNG = "assets/icons/Notifications/Adham.png";
-  final String horzintal3BlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
-  final String ibrahimPNG = "assets/icons/Notifications/Ibrahim.png";
-  final String threeHorzintalBlackDotsPNG = "assets/icons/Notifications/3Horzintal_Black_Dots.png";
-  final String locationGreyPNG = "assets/icons/Notifications/Location.png";
-  final String locationYellowPNG = "assets/icons/Notifications/Location_Yellow.png";
+  /// Search Results
+  final String searchCarAudi = "assets/icons/Search_Result/Car_Audi.png"; /// searchCarAudi
+  final String searchScan = "assets/icons/Search_Result/Scan.png"; /// searchScan
+  final String searchHeart = "assets/icons/Search_Result/Heart.png"; /// searchHeart
+  final String searchSpeedometer = "assets/icons/Search_Result/speedmeter.png"; /// searchSpeedometer
+  final String searchCalendar = "assets/icons/Search_Result/Calendar.png"; /// searchCalendar
+  final String searchUnlock = "assets/icons/Search_Result/Unlock.png"; /// searchUnlock
+  final String searchWheelAudi = "assets/icons/Search_Result/Wheel_Audi.png"; /// searchWheelAudi
+  final String searchDriverSide = "assets/icons/Search_Result/Driver_Side.png"; /// searchDriverSide
+  final String searchMover = "assets/icons/Search_Result/Mover.png"; /// searchMover
+  final String searchCarFrog = "assets/icons/Search_Result/Car_Frog.png"; /// searchCarFrog
 
-  final String carAudiPNG = "assets/icons/Search_Result/Car_Audi.png";
-  final String scanPNG = "assets/icons/Search_Result/Scan.png";
-  final String heartPNG = "assets/icons/Search_Result/Heart.png";
-  final String speedmeterPNG = "assets/icons/Search_Result/speedmeter.png";
-  final String calendarPNG = "assets/icons/Search_Result/Calendar.png";
-  final String unlockPNG = "assets/icons/Search_Result/Unlock.png";
-  final String wheelAudiPNG = "assets/icons/Search_Result/Wheel_Audi.png";
-  final String driverSidePNG = "assets/icons/Search_Result/Driver_Side.png";
-  final String moverPNG = "assets/icons/Search_Result/Mover.png";
-  final String carFrogPNG = "assets/icons/Search_Result/Car_Frog.png";
-  final String locationPNG = "assets/icons/Notifications/Location.png";
+  /// Search Related Results
+  final String searchRelatedCat = "assets/icons/Search_Related_Results/Cat.png"; /// searchRelatedCat
+  final String searchRelatedWrong = "assets/icons/Search_Related_Results/Wrong.png"; /// searchRelatedWrong
 
-  //App Search Related Results
-  final String catPNG = "assets/icons/Search_Related_Results/Cat.png";
-  final String wrongPNG = "assets/icons/Search_Related_Results/Wrong.png";
-
-  //App Home View
-  final String robotBodySUIIZPNG = "assets/icons/Home/Robot_Boy_SUIIZ.png";
-  final String searchWithBgPNG = "assets/icons/Home/Search_With_Bg.png";
-  final String messagesWithBgPNG = "assets/icons/Home/Messages_With_Bg.png";
-  final String carBluePNG = "assets/icons/Home/Car_Blue.png";
-  final String storyRobotPNG = "assets/icons/Home/Story_Robot.png";
-  final String postUserIcon = "assets/icons/Home/Post_User_Icon.png";
-  final String threeGreyDotsPNG = "assets/icons/Home/3Grey_Dots.png";
-  final String carMercPNG = "assets/icons/Home/Car_Merc.png";
-  final String storyCreate = "assets/icons/Home/Story_Create.png";
-  final String camera = "assets/icons/Home/Camera.png";
-  final String robotBoySUIIZ = "assets/icons/Home/Robot_Boy_SUIIZ.png";
-
-  //App Actions Card
-  final String actionEyeCardPNG = "assets/icons/Actions/Eye.png";
-  final String actionsLeftBlackArrowPNG = "assets/icons/Actions/Left_Black_Arrow.png";
-  final String actionsReplayPNG = "assets/icons/Actions/Replay.png";
-  final String actionsBlockPNG = "assets/icons/Actions/Block.png";
-  final String actionsFavouritePNG = "assets/icons/Actions/Favourite.png";
-
-  //App Follow Business Page
-  final String vaultPNG = "assets/icons/Follow_Business_Page/Vault.png";
-  final String closePNG = "assets/icons/Follow_Business_Page/Close.png";
-  final String bmwPNG = "assets/icons/Follow_Business_Page/BMW_Logo.png";
-  final String addButtonPNG = "assets/icons/Follow_Business_Page/Add.png";
-
-  //App Post Card
-  final String savePNG = "assets/icons/Home/Save.png";
-  final String copyPNG = "assets/icons/Home/Copy.png";
-  final String billPNG = "assets/icons/Home/Bill.png";
-  final String reportPNG = "assets/icons/Home/Report.png";
-
-  //App Watch Tutorial
-  final String exitPNG = "assets/icons/WatchTutorial/Exit.png";
-  final String playCirclePNG = "assets/icons/WatchTutorial/Play_Circle.png";
-
-  //App Bottom Nav Bar
-  final String middlePNG = "assets/icons/Bottom_Nav_Bar/Middle.png";
-  final String homePNG = "assets/icons/Bottom_Nav_Bar/Home_Selected.png";
-  final String categoryPNG = "assets/icons/Bottom_Nav_Bar/Category.png";
-  final String profilePNG = "assets/icons/Bottom_Nav_Bar/Profile.png";
-  final String menuPNG = "assets/icons/Bottom_Nav_Bar/Menu.png";
-  final String homeSelectedPNG = "assets/icons/Bottom_Nav_Bar/Home_Selected.png";
-  final String categorySelectedPNG = "assets/icons/Bottom_Nav_Bar/Category.png";
-  final String profileSelectedPNG = "assets/icons/Bottom_Nav_Bar/Profile.png";
-  final String menuSelectedPNG = "assets/icons/Bottom_Nav_Bar/Menu.png";
-
-  //Money From Invites
-  final String videoThumnailPNG = "assets/icons/Money_From_Invites/Video_Thumnail.png";
-  final String playButtonPNG = "assets/icons/Money_From_Invites/Play_Button.png";
-
-  //App Complete Profile
-  final String completeProfileImagePickerPNG = "assets/icons/Complete_Profile/Image_Picker.png";
-  final String completeProfileCameraPNG = "assets/icons/Complete_Profile/Camera.png";
-
-  //App Comment Card
-  final String heart2PNG = "assets/icons/Comments_Card/Hart2.png";
-  final String userAvatarPNG = "assets/icons/Inside_Post/User_Avatar.png";
-  final String archivePNG = "assets/icons/Comments_Card/Archivead.png";
-  final String sharePNG = "assets/icons/Comments_Card/Share.png";
-
-  //App Comment Section
-  final String commentsBackArrowPNG = "assets/icons/Comments_Card/Left_Black_Arrow.png";
-  final String mercJeepPNG = "assets/icons/Comments_Card/Merc_Jeep.png";
-  final String hartPNG = "assets/icons/Comments_Card/Hart.png";
-  final String userAvatarCommentsCardPNG = "assets/icons/Comments_Card/User_Avatar.png";
-  final String saveCommentsPNG = "assets/icons/Comments_Card/Save.png";
-
-  //App Comments reqactions Section
-  final String commentHeartPNG = "assets/icons/Comments_Emoj_Card/Heart.png";
-  final String commentSmilingFacePNG = "assets/icons/Comments_Emoj_Card/Smiling_Face.png";
-  final String commentCryingFacePNG = "assets/icons/Comments_Emoj_Card/Crying_Face_.png";
-
-  //App Inside Post
-  final String insidePostBackArrowPNG = "assets/icons/Inside_Post/Left_Black_Arrow.png";
-  final String insidePostMercCarPNG = "assets/icons/Inside_Post/Merc_Jeep.png";
-
-  //App Create Panel
-  final String userProfilePNG = "assets/icons/Home/User_Profile.png";
-  final String cubePlusPNG = "assets/icons/Home/Cube_Plus.png";
-  final String servicePNG = "assets/icons/Home/Service.png";
-  final String reelsPNG = "assets/icons/Home/Reels.png";
-  final String postPNG = "assets/icons/Home/Post.png";
-  final String createStoryPNG = "assets/icons/Home/Create_Stroy.png";
-
-  //App Join Groups
-  final String membersPNG = "assets/icons/Join_Groups/Members.png";
-
-  //App Unknown Card
-  final String unkownPNG = "assets/icons/Unkown_Card/Unkown.png";
+  /// Home View
+  final String homeRobotBoy = "assets/icons/Home/Robot_Boy_SUIIZ.png"; /// homeRobotBoy, homeRobotBoy (duplicate)
+  final String homeSearchWithBg = "assets/icons/Home/Search_With_Bg.png"; /// homeSearchWithBg
+  final String homeMessagesWithBg = "assets/icons/Home/Messages_With_Bg.png"; /// homeMessagesWithBg
+  final String homeCarBlue = "assets/icons/Home/Car_Blue.png"; /// homeCarBlue
+  final String homeStoryRobot = "assets/icons/Home/Story_Robot.png"; /// homeStoryRobot
+  final String homePostUserIcon = "assets/icons/Home/Post_User_Icon.png"; /// homePostUserIcon
+  final String homeThreeDots = "assets/icons/Home/3Grey_Dots.png"; /// homeThreeDots
+  final String homeCarMerc = "assets/icons/Home/Car_Merc.png"; /// homeCarMerc
+  final String homeStoryCreate = "assets/icons/Home/Story_Create.png"; /// homeStoryCreate
+  final String homeCamera = "assets/icons/Home/homeCamera.png"; /// homeCamera
   
-  
+  //Start from Down of this line here
 
-  
+  /// Actions Card
+  final String actionEye = "assets/icons/Actions/Eye.png"; /// actionEye
+  final String actionArrowLeft = "assets/icons/Actions/Left_Black_Arrow.png"; /// actionArrowLeft
+  final String actionReplay = "assets/icons/Actions/Replay.png"; /// actionReplay
+  final String actionBlock = "assets/icons/Actions/Block.png"; /// actionBlock
+  final String actionFavorite = "assets/icons/Actions/Favourite.png"; /// actionFavorite
 
+  /// Follow Business Page
+  final String businessVault = "assets/icons/Follow_Business_Page/Vault.png"; /// businessVault
+  final String businessClose = "assets/icons/Follow_Business_Page/Close.png"; /// businessClose
+  final String businessBMWLogo = "assets/icons/Follow_Business_Page/BMW_Logo.png"; /// businessBMWLogo
+  final String businessAddButton = "assets/icons/Follow_Business_Page/Add.png"; /// businessAddButton
 
-  
+  /// Post Card
+  final String postSave = "assets/icons/Home/Save.png"; /// postSave
+  final String postCopy = "assets/icons/Home/Copy.png"; /// postCopy
+  final String postBill = "assets/icons/Home/Bill.png"; /// postBill
+  final String postReport = "assets/icons/Home/Report.png"; /// postReport
+
+  /// Watch Tutorial
+  final String tutorialExit = "assets/icons/WatchTutorial/Exit.png"; /// tutorialExit
+  final String tutorialPlayCircle = "assets/icons/WatchTutorial/Play_Circle.png"; /// tutorialPlayCircle
+
+  /// Bottom Navigation Bar
+  final String navMiddle = "assets/icons/Bottom_Nav_Bar/Middle.png"; /// navMiddle
+  final String navHome = "assets/icons/Bottom_Nav_Bar/Home_Selected.png"; /// navHome, navHome (duplicate)
+  final String navCategory = "assets/icons/Bottom_Nav_Bar/Category.png"; /// navCategory, navCategory (duplicate)
+  final String navProfile = "assets/icons/Bottom_Nav_Bar/Profile.png"; /// navProfile, navProfile (duplicate)
+  final String navMenu = "assets/icons/Bottom_Nav_Bar/Menu.png"; /// navMenu, navMenu (duplicate)
+
+  /// Money From Invites
+  final String invitesVideoThumbnail = "assets/icons/Money_From_Invites/Video_Thumnail.png"; /// invitesVideoThumbnail
+  final String invitesPlayButton = "assets/icons/Money_From_Invites/Play_Button.png"; /// invitesPlayButton
+
+  /// Complete Profile
+  final String profileImagePicker = "assets/icons/Complete_Profile/Image_Picker.png"; /// profileImagePicker
+  final String profileCamera = "assets/icons/Complete_Profile/homeCamera.png"; /// profileCamera
+
+  /// Comments Card
+  final String commentHeart = "assets/icons/Comments_Card/Hart2.png"; /// commentHeart
+  final String commentUserAvatar = "assets/icons/Inside_Post/User_Avatar.png"; /// commentUserAvatar
+  final String commentArchive = "assets/icons/Comments_Card/Archivead.png"; /// commentArchive
+  final String commentShare = "assets/icons/Comments_Card/Share.png"; /// commentShare
+
+  /// Comment Section
+  final String commentSectionBackArrow = "assets/icons/Comments_Card/Left_Black_Arrow.png"; /// commentSectionBackArrow
+  final String commentSectionMercJeep = "assets/icons/Comments_Card/Merc_Jeep.png"; /// commentSectionMercJeep
+  final String commentSectionHeart = "assets/icons/Comments_Card/Hart.png"; /// commentSectionHeart
+  final String commentSectionUserAvatar = "assets/icons/Comments_Card/User_Avatar.png"; /// commentSectionUserAvatar
+  final String commentSectionSave = "assets/icons/Comments_Card/Save.png"; /// commentSectionSave
+
+  /// Comments Reactions
+  final String reactionHeart = "assets/icons/Comments_Emoj_Card/Heart.png"; /// reactionHeart
+  final String reactionSmile = "assets/icons/Comments_Emoj_Card/Smiling_Face.png"; /// reactionSmile
+  final String reactionCry = "assets/icons/Comments_Emoj_Card/Crying_Face_.png"; /// reactionCry
+
+  /// Inside Post
+  final String postDetailBackArrow = "assets/icons/Inside_Post/Left_Black_Arrow.png"; /// postDetailBackArrow
+  final String postDetailMercJeep = "assets/icons/Inside_Post/Merc_Jeep.png"; /// postDetailMercJeep
+
+  /// Create Panel
+  final String createUserProfile = "assets/icons/Home/User_Profile.png"; /// createUserProfile
+  final String createCubePlus = "assets/icons/Home/Cube_Plus.png"; /// createCubePlus
+  final String createService = "assets/icons/Home/Service.png"; /// createService
+  final String createReels = "assets/icons/Home/Reels.png"; /// createReels
+  final String createPost = "assets/icons/Home/Post.png"; /// createPost
+  final String createStory = "assets/icons/Home/Create_Stroy.png"; /// createStory
+
+  /// Join Groups
+  final String groupMembers = "assets/icons/Join_Groups/Members.png"; /// groupMembers
+
+  /// Unknown Card
+  final String unknownIcon = "assets/icons/Unkown_Card/Unkown.png"; /// unknownIcon
 }
 
 ///-----------------------------------------------------------------//

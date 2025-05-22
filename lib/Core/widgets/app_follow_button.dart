@@ -58,7 +58,7 @@ class CustomFollowButton extends ConsumerWidget
           mainAxisSize: MainAxisSize.min,
           children:
           [
-            Image.asset(AppAssets.iconsPNG.addButtonPNG),
+            Image.asset(AppAssets.iconsPNG.businessAddButton),
             AppSizes.size4.horizontalSpace,
             Text(buttonText ?? AppLocalizations.of(context).follow, style: buttonTextStyle ?? AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001),),
           ],

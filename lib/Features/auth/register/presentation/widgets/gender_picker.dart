@@ -44,7 +44,7 @@ void showGenderPickerBottomSheet(BuildContext context)
                       children:
                       [
                         GenderOption(
-                          image: AppAssets.iconsPNG.femalePNG,
+                          image: AppAssets.iconsPNG.registerFemale,
                           label: AppLocalizations.of(context).female,
                           value: AppLocalizations.of(context).female,
                           groupValue: selectedGender,
@@ -57,7 +57,7 @@ void showGenderPickerBottomSheet(BuildContext context)
                         ),
                         AppSizes.size10.verticalSpace,
                         GenderOption(
-                          image: AppAssets.iconsPNG.malePNG,
+                          image: AppAssets.iconsPNG.registerMale,
                           label: AppLocalizations.of(context).male,
                           value: AppLocalizations.of(context).male,
                           groupValue: selectedGender,

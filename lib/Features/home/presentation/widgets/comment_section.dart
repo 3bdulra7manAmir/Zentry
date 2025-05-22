@@ -26,7 +26,7 @@ void showCommentsBottomSheet(BuildContext context)
           AppSizes.size11.verticalSpace,
           Padding(
             padding: AppPadding.commentsSection,
-            child: Image.asset(AppAssets.iconsPNG.commentsBackArrowPNG,),
+            child: Image.asset(AppAssets.iconsPNG.commentSectionBackArrow,),
           ),
           AppSizes.size25.verticalSpace,
           Container(
@@ -35,7 +35,7 @@ void showCommentsBottomSheet(BuildContext context)
             margin: AppMargins.kApp10Padding,
             decoration: BoxDecoration(
               borderRadius: AppBorders.buttonBorder7,
-              image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.mercJeepPNG)),
+              image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.commentSectionMercJeep)),
             ),
           ),
           AppSizes.size30.verticalSpace,
@@ -45,7 +45,7 @@ void showCommentsBottomSheet(BuildContext context)
               mainAxisSize: MainAxisSize.min,
               children:
               [
-                Image.asset(AppAssets.iconsPNG.hartPNG),
+                Image.asset(AppAssets.iconsPNG.commentSectionHeart),
                 const Spacer(),
                 Container(
                   width: 215.w,
@@ -57,11 +57,11 @@ void showCommentsBottomSheet(BuildContext context)
                   ),child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
                     fieldText: AppLocalizations.of(context).commentHere,
-                    fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.userAvatarCommentsCardPNG),
+                    fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.commentSectionUserAvatar),
                   ),
                 ),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.saveCommentsPNG)
+                Image.asset(AppAssets.iconsPNG.commentSectionSave)
               ],
             ),
           ),

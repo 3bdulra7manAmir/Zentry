@@ -39,22 +39,22 @@ void showActionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.actionEyeCardPNG),
+                Image.asset(AppAssets.iconsPNG.actionEye),
                 AppSizes.size16.horizontalSpace,
                 Text(AppStrings.view, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
+                Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
             ),
             AppSizes.size50.verticalSpace,
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.actionsReplayPNG),
+                Image.asset(AppAssets.iconsPNG.actionReplay),
                 AppSizes.size16.horizontalSpace,
                 Text(AppStrings.replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
+                Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
             ),
 
@@ -62,11 +62,11 @@ void showActionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.actionsBlockPNG),
+                Image.asset(AppAssets.iconsPNG.actionBlock),
                 AppSizes.size16.horizontalSpace,
                 Text(AppStrings.block, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.actionsLeftBlackArrowPNG),
+                Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
             ),
 
@@ -74,11 +74,11 @@ void showActionsBottomSheet(BuildContext context)
             Row(
               children:
               [
-                Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
+                Image.asset(AppAssets.iconsPNG.actionFavorite),
                 AppSizes.size16.horizontalSpace,
                 Text(AppStrings.favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Image.asset(AppAssets.iconsPNG.actionsFavouritePNG),
+                Image.asset(AppAssets.iconsPNG.actionFavorite),
               ],
             ),
             AppSizes.size45.verticalSpace,

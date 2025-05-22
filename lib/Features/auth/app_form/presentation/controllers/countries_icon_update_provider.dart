@@ -60,7 +60,7 @@ String getSelectedCountryImage(WidgetRef ref, BuildContext context)
     return selectedCountriesList[selectedIndex];
   }
 
-  return AppAssets.iconsPNG.countryPNG;
+  return AppAssets.iconsPNG.formCountry;
 }
 
 String getSelectedCountryName(WidgetRef ref, BuildContext context)

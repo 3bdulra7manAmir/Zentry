@@ -30,7 +30,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
             mainAxisSize: MainAxisSize.min,
             children:
             [
-              Image.asset(AppAssets.iconsPNG.locationPNG),
+              Image.asset(AppAssets.iconsPNG.notificationLocation),
               AppSizes.size6.horizontalSpace,
               Text(AppLocalizations.of(context).cairoEgypt, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
               AppSizes.size16.horizontalSpace,
@@ -38,7 +38,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
           ),
         ),
       ),
-      barActions: [AppSizes.size20.horizontalSpace, locationIcon ? ( actionsWidget ?? Image.asset(AppAssets.iconsPNG.locationYellowPNG) ) : const SizedBox.shrink(),],
+      barActions: [AppSizes.size20.horizontalSpace, locationIcon ? ( actionsWidget ?? Image.asset(AppAssets.iconsPNG.notificationLocationHighlighted) ) : const SizedBox.shrink(),],
       barActionsPadding: AppPadding.kSearchIconPadding,
     );
   }

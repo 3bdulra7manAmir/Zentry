@@ -100,7 +100,7 @@ class SignUpFormFullName extends ConsumerWidget
                       Expanded(
                         child: CustomSocialButton(
                           buttonText: AppLocalizations.of(context).facebook,
-                          platformLogo: AppAssets.iconsPNG.faceBookPNG,
+                          platformLogo: AppAssets.iconsPNG.loginFacebook,
                           buttonBackgroundColor: AppColors.color.kDark002,
                           buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),
                         ),
@@ -109,7 +109,7 @@ class SignUpFormFullName extends ConsumerWidget
                       Expanded(
                         child: CustomSocialButton(
                           buttonText: AppLocalizations.of(context).google,
-                          platformLogo: AppAssets.iconsPNG.googlePNG,
+                          platformLogo: AppAssets.iconsPNG.loginGoogle,
                           buttonBackgroundColor: AppColors.color.kDark002,
                           buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),
                         ),
@@ -119,7 +119,7 @@ class SignUpFormFullName extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
                   CustomSocialButton(
                     buttonText: AppLocalizations.of(context).apple,
-                    platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.applePNG : AppAssets.iconsPNG.appleDarkPNG,
+                    platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.loginApple : AppAssets.iconsPNG.loginAppleDark,
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kDark002,

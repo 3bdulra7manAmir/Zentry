@@ -20,9 +20,9 @@ String getSelectedLanguageImage(WidgetRef ref)
 
   return switch (languageCode)
   {
-    'ar' => AppAssets.iconsPNG.egFlagSelectedPNG,
-    'en' => AppAssets.iconsPNG.unitedStatesFlagSelectedPNG,
-    _ => AppAssets.iconsPNG.languagePNG,
+    'ar' => AppAssets.iconsPNG.countryEgyptSelected,
+    'en' => AppAssets.iconsPNG.countryUSASelected,
+    _ => AppAssets.iconsPNG.formLanguage,
   };
 }
 

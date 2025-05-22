@@ -28,7 +28,7 @@ class NotificationsView extends ConsumerWidget
           fontColor: AppColors.color.kBlack003,
           fontWeight: AppFontWeights.regularWeight,),
         ),
-        barActions: [Image.asset(AppAssets.iconsPNG.searchDarkPNG)],
+        barActions: [Image.asset(AppAssets.iconsPNG.notificationSearchDark)],
         barActionsPadding: AppPadding.kSearchIconPadding,
       ),
       backgroundColor: Theme.of(context).cardColor,

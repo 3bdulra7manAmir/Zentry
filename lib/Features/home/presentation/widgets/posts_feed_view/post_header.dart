@@ -57,7 +57,7 @@ class PostHeader extends StatelessWidget {
         const Spacer(),
         InkWell(
           onTap: () => showJoinGroupsBottomSheet(context),
-          child: Image.asset(AppAssets.iconsPNG.threeGreyDotsPNG),
+          child: Image.asset(AppAssets.iconsPNG.homeThreeDots),
         ),
       ],
     );

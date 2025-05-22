@@ -34,7 +34,7 @@ class FormHeader extends ConsumerWidget
           padding: AppPadding.appFormHeader,
           width: double.infinity,
           color: AppColors.color.kBlue001,
-          child: Image.asset(AppAssets.iconsPNG.fullHeaderPNG),
+          child: Image.asset(AppAssets.iconsPNG.headerFullLogo),
         ),
 
         (isText ?? false)
@@ -64,8 +64,8 @@ class FormHeader extends ConsumerWidget
                     ),
                   ),
                   Image.asset(provider.localeState.selectedLanguageIndex == 0
-                        ? AppAssets.iconsPNG.leftWhiteArrowPNG
-                        : AppAssets.iconsPNG.rightWhiteArrowPNG,
+                        ? AppAssets.iconsPNG.headerArrowLeft
+                        : AppAssets.iconsPNG.headerArrowRight,
                   ),
                 ],
               ),

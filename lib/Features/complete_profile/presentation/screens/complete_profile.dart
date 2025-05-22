@@ -69,7 +69,7 @@ class CompleteProfileCard extends StatelessWidget
               mainAxisAlignment: MainAxisAlignment.center,
               children:
               [
-                Image.asset(AppAssets.iconsPNG.completeProfileCameraPNG),
+                Image.asset(AppAssets.iconsPNG.profileCamera),
                 AppSizes.size10.verticalSpace,
                 Text(AppLocalizations.of(context).addCoverPhoto, style: AppStyles.textStyle10(
                   fontColor: AppColors.color.kGreyText002,
@@ -83,7 +83,7 @@ class CompleteProfileCard extends StatelessWidget
           left: 0,
           right: 150.w,
           bottom: -15.h,
-          child: Image.asset(AppAssets.iconsPNG.completeProfileImagePickerPNG, width: 38.w, height: 38.h, fit: BoxFit.contain,),
+          child: Image.asset(AppAssets.iconsPNG.profileImagePicker, width: 38.w, height: 38.h, fit: BoxFit.contain,),
         ),
       ],
     );

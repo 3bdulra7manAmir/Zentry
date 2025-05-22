@@ -151,7 +151,7 @@ class JoinGroupsCard extends StatelessWidget {
                 ),
               ),
               AppSizes.size5.verticalSpace,
-              Image.asset(AppAssets.iconsPNG.membersPNG)
+              Image.asset(AppAssets.iconsPNG.groupMembers)
             ],
           ),
         ),

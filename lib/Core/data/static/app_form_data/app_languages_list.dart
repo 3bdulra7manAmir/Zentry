@@ -7,12 +7,12 @@ List<List<dynamic>> getLanguagesList(BuildContext context)
   return
   [
     [
-      AppAssets.iconsPNG.egFlagPNG,
+      AppAssets.iconsPNG.countryEgypt,
       AppLocalizations.of(context).arabic,
       const Locale('ar'),
     ],
     [
-      AppAssets.iconsPNG.unitedStatesFlagPNG,
+      AppAssets.iconsPNG.countryUSA,
       AppLocalizations.of(context).english,
       const Locale('en'),
     ],

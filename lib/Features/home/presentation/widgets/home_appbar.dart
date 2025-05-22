@@ -16,23 +16,23 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
       backgroundColor: Theme.of(context).cardColor,
       leading: GestureDetector(
         onTap: () {},
-        child: Image.asset(AppAssets.iconsPNG.robotBodySUIIZPNG),
+        child: Image.asset(AppAssets.iconsPNG.homeRobotBoy),
       ),
       actions:
       [
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.searchWithBgPNG),
+          child: Image.asset(AppAssets.iconsPNG.homeSearchWithBg),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.messagesWithBgPNG),
+          child: Image.asset(AppAssets.iconsPNG.homeMessagesWithBg),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.searchWithBgPNG),
+          child: Image.asset(AppAssets.iconsPNG.homeSearchWithBg),
         ),
         AppSizes.size8.horizontalSpace,
       ],

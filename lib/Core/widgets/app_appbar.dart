@@ -31,11 +31,11 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
         onTap: () => AppRouter.router.pop(),
         child: barLeading ?? Image.asset(provider.localeState.selectedLanguageIndex == 0
         ? (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.rightWhiteArrowPNG
-          : AppAssets.iconsPNG.rightBackArrowBlackPNG)
+          ? AppAssets.iconsPNG.headerArrowRight
+          : AppAssets.iconsPNG.appBarBackRight)
         : (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.leftWhiteArrowPNG
-          : AppAssets.iconsPNG.leftBackArrowBlackPNG)),
+          ? AppAssets.iconsPNG.headerArrowLeft
+          : AppAssets.iconsPNG.appBarBackLeft)),
       ),
       leadingWidth: barLeadingWidth ?? 65.w,
       title: barTitle,

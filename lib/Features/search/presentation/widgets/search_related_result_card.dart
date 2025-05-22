@@ -46,7 +46,7 @@ class SearchRelatedResultCard extends StatelessWidget {
             fontWeight: AppFontWeights.semiBoldWeight),),
         ) : const SizedBox.shrink(),
         const Spacer(),
-        Image.asset(AppAssets.iconsPNG.wrongPNG),
+        Image.asset(AppAssets.iconsPNG.searchRelatedWrong),
       ],
     );
   }

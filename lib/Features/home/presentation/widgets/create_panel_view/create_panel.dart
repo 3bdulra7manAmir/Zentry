@@ -27,19 +27,19 @@ class CreatePanel extends StatelessWidget
           Row(
             children:
             [
-              Image.asset(AppAssets.iconsPNG.userProfilePNG),
+              Image.asset(AppAssets.iconsPNG.createUserProfile),
               AppSizes.size12.horizontalSpace,
               Expanded(
                 child: CreatePanelButton(
                   buttonText: AppLocalizations.of(context).sellProduct,
-                  iconPath: AppAssets.iconsPNG.cubePlusPNG,
+                  iconPath: AppAssets.iconsPNG.createCubePlus,
                 ),
               ),
               AppSizes.size6.horizontalSpace,
               Expanded(
                 child: CreatePanelButton(
                   buttonText: AppLocalizations.of(context).addService,
-                  iconPath: AppAssets.iconsPNG.servicePNG,
+                  iconPath: AppAssets.iconsPNG.createService,
                 ),
               ),
             ],
@@ -48,15 +48,15 @@ class CreatePanel extends StatelessWidget
           Row(
             children:
             [
-              Image.asset(AppAssets.iconsPNG.reelsPNG),
+              Image.asset(AppAssets.iconsPNG.createReels),
               AppSizes.size4.horizontalSpace,
               Text(AppLocalizations.of(context).createReel, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
-              Image.asset(AppAssets.iconsPNG.postPNG),
+              Image.asset(AppAssets.iconsPNG.createPost),
               AppSizes.size4.horizontalSpace,
               Text(AppLocalizations.of(context).createPost, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
               const Spacer(),
-              Image.asset(AppAssets.iconsPNG.createStoryPNG),
+              Image.asset(AppAssets.iconsPNG.createStory),
               AppSizes.size4.horizontalSpace,
               Text(AppLocalizations.of(context).createStory2, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),
             ],

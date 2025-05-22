@@ -11,12 +11,12 @@ class CountryUtils
     final locale = AppLocalizations.of(context);
     return
     [
-      [AppAssets.iconsPNG.egFlagPNG, locale.egypt],
-      [AppAssets.iconsPNG.saFlagPNG, locale.saudiArabia],
-      [AppAssets.iconsPNG.uaeFlagPNG, locale.unitedArabEmirates],
-      [AppAssets.iconsPNG.kuwaitFlagPNG, locale.kuwait],
-      [AppAssets.iconsPNG.moroccoFlagPNG, locale.morocco],
-      [AppAssets.iconsPNG.syriaFlagPNG, locale.syrianArab],
+      [AppAssets.iconsPNG.countryEgypt, locale.egypt],
+      [AppAssets.iconsPNG.countrySaudiArabia, locale.saudiArabia],
+      [AppAssets.iconsPNG.countryUAE, locale.unitedArabEmirates],
+      [AppAssets.iconsPNG.countryKuwait, locale.kuwait],
+      [AppAssets.iconsPNG.countryUAE, locale.morocco],
+      [AppAssets.iconsPNG.countrySyria, locale.syrianArab],
     ];
   }
 
@@ -24,12 +24,12 @@ class CountryUtils
   {
     return
     [
-      AppAssets.iconsPNG.egFlagSelectedPNG,
-      AppAssets.iconsPNG.saFlagSelectedPNG,
-      AppAssets.iconsPNG.uaeFlagSelectedPNG,
-      AppAssets.iconsPNG.kuwaitFlagSelectedPNG,
-      AppAssets.iconsPNG.moroccoFlagSelectedPNG,
-      AppAssets.iconsPNG.syriaFlagSelectedPNG,
+      AppAssets.iconsPNG.countryEgyptSelected,
+      AppAssets.iconsPNG.countrySaudiArabiaSelected,
+      AppAssets.iconsPNG.countryUAESelected,
+      AppAssets.iconsPNG.countryKuwaitSelected,
+      AppAssets.iconsPNG.countryMoroccoSelected,
+      AppAssets.iconsPNG.countrySyriaSelected,
     ];
   }
 }

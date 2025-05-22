@@ -90,7 +90,7 @@ class FollowBusinessCardHeader extends StatelessWidget {
         Row(
           children: [
             AppSizes.size10.horizontalSpace,
-            Image.asset(AppAssets.iconsPNG.closePNG),
+            Image.asset(AppAssets.iconsPNG.businessClose),
             const Spacer(),
             Text(
               headerText,
@@ -100,7 +100,7 @@ class FollowBusinessCardHeader extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            actionsIcon ?? Image.asset(AppAssets.iconsPNG.vaultPNG),
+            actionsIcon ?? Image.asset(AppAssets.iconsPNG.businessVault),
             AppSizes.size16.horizontalSpace,
           ],
         ),

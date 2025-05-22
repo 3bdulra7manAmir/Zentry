@@ -28,11 +28,11 @@ class AppFormView extends ConsumerWidget
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
     Image arrowImage = Image.asset(provider.localeState.selectedLanguageIndex == 0
           ? (provider.themeMode == ThemeMode.dark
-              ? AppAssets.iconsPNG.leftWhiteArrowPNG
-              : AppAssets.iconsPNG.leftBlackArrowPNG)
+              ? AppAssets.iconsPNG.headerArrowLeft
+              : AppAssets.iconsPNG.formArrowLeft)
           : (provider.themeMode == ThemeMode.dark
-              ? AppAssets.iconsPNG.rightWhiteArrowPNG
-              : AppAssets.iconsPNG.rightBlackArrowPNG),
+              ? AppAssets.iconsPNG.headerArrowRight
+              : AppAssets.iconsPNG.formArrowRight),
     );
     return Container(
       padding: AppPadding.kAppFormPadding,
@@ -84,8 +84,8 @@ class AppFormView extends ConsumerWidget
               child: CustomContainer(
                 fieldPrefixIcon: Image.asset(
                   provider.themeMode == Brightness.dark
-                    ? AppAssets.iconsPNG.darkPNG
-                    : AppAssets.iconsPNG.lightPNG,
+                    ? AppAssets.iconsPNG.formDarkMode
+                    : AppAssets.iconsPNG.formLightMode,
                 ),
                 fieldText: provider.themeLabel,
                 fieldsuffixIcon: arrowImage,

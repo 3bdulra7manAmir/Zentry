@@ -43,7 +43,7 @@ class RestPasswordView extends ConsumerWidget
             children:
             [
               AppSizes.size35.verticalSpace,
-              Image.asset(AppAssets.iconsPNG.securityLockPNG, alignment: Alignment.center,),
+              Image.asset(AppAssets.iconsPNG.resetPasswordLock, alignment: Alignment.center,),
               AppSizes.size24.verticalSpace,
               Container(
                 margin: AppMargins.kAppFormPadding,
@@ -74,8 +74,8 @@ class RestPasswordView extends ConsumerWidget
                           ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
                         },
                         child: Image.asset(provider.obscureText
-                              ? AppAssets.iconsPNG.corssedEyePNG
-                              : AppAssets.iconsPNG.eyePNG,
+                              ? AppAssets.iconsPNG.loginPasswordHidden
+                              : AppAssets.iconsPNG.loginPasswordVisible,
                         ),
                       ),
                     ),
@@ -99,7 +99,7 @@ class RestPasswordView extends ConsumerWidget
                         {
                           ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
                         },
-                        child: Image.asset(provider.obscureText2 ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                        child: Image.asset(provider.obscureText2 ? AppAssets.iconsPNG.loginPasswordHidden : AppAssets.iconsPNG.loginPasswordVisible,),
                       ),
                     ),
                     AppSizes.size24.verticalSpace,

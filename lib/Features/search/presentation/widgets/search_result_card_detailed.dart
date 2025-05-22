@@ -79,9 +79,9 @@ class SearchResultCardDetailed extends StatelessWidget {
                         ),
                       ),
                       AppSizes.size10.horizontalSpace,
-                      Image.asset(AppAssets.iconsPNG.scanPNG),
+                      Image.asset(AppAssets.iconsPNG.searchScan),
                       AppSizes.size6.horizontalSpace,
-                      Image.asset(AppAssets.iconsPNG.heartPNG),
+                      Image.asset(AppAssets.iconsPNG.searchHeart),
                     ],
                   ),
                   
@@ -105,7 +105,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         if (result.ratingMin.isNotEmpty) ...[
-                          Image.asset(AppAssets.iconsPNG.speedmeterPNG),
+                          Image.asset(AppAssets.iconsPNG.searchSpeedometer),
                           AppSizes.size5.horizontalSpace,
                           Text(
                             "${result.ratingMin}-${result.ratingMax}",
@@ -115,7 +115,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                         ],
                         
                         if (result.year.isNotEmpty) ...[
-                          Image.asset(AppAssets.iconsPNG.calendarPNG),
+                          Image.asset(AppAssets.iconsPNG.searchCalendar),
                           AppSizes.size7.horizontalSpace,
                           Text(
                             result.year,
@@ -125,7 +125,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                         ],
                         
                         if (result.status.isNotEmpty) ...[
-                          Image.asset(AppAssets.iconsPNG.unlockPNG),
+                          Image.asset(AppAssets.iconsPNG.searchUnlock),
                           AppSizes.size5.horizontalSpace,
                           Text(
                             result.status,
@@ -158,7 +158,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                     [
                       AppSizes.size4.horizontalSpace,
                       if (result.country.isNotEmpty) ...[
-                        Image.asset(AppAssets.iconsPNG.locationPNG),
+                        Image.asset(AppAssets.iconsPNG.notificationLocation),
                         AppSizes.size6.horizontalSpace,
                         Text(result.country, style: AppStyles.textStyle10(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText002,),),
                       ],

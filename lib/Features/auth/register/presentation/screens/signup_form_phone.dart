@@ -74,7 +74,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState3,
-                  child: Image.asset(provider.obscureText3 ? AppAssets.iconsPNG.corssedEyePNG : AppAssets.iconsPNG.eyePNG,),
+                  child: Image.asset(provider.obscureText3 ? AppAssets.iconsPNG.loginPasswordHidden : AppAssets.iconsPNG.loginPasswordVisible,),
                 ),
               ),
               AppSizes.size24.verticalSpace,

@@ -58,23 +58,23 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
     final List<NavItem> navItems =
     [
       NavItem(
-        activeIcon: AppAssets.iconsPNG.homeSelectedPNG,
-        inactiveIcon: AppAssets.iconsPNG.homePNG,
+        activeIcon: AppAssets.iconsPNG.navHome,
+        inactiveIcon: AppAssets.iconsPNG.navHome,
         label: AppLocalizations.of(context).home,
       ),
       NavItem(
-        activeIcon: AppAssets.iconsPNG.categorySelectedPNG,
-        inactiveIcon: AppAssets.iconsPNG.categoryPNG,
+        activeIcon: AppAssets.iconsPNG.navCategory,
+        inactiveIcon: AppAssets.iconsPNG.navCategory,
         label: AppLocalizations.of(context).category,
       ),
       NavItem(
-        activeIcon: AppAssets.iconsPNG.profileSelectedPNG,
-        inactiveIcon: AppAssets.iconsPNG.profilePNG,
+        activeIcon: AppAssets.iconsPNG.navProfile,
+        inactiveIcon: AppAssets.iconsPNG.navProfile,
         label: AppLocalizations.of(context).profile,
       ),
       NavItem(
-        activeIcon: AppAssets.iconsPNG.menuSelectedPNG,
-        inactiveIcon: AppAssets.iconsPNG.menuPNG,
+        activeIcon: AppAssets.iconsPNG.navMenu,
+        inactiveIcon: AppAssets.iconsPNG.navMenu,
         label: AppLocalizations.of(context).menu,
       ),
     ];
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
       body: Center(child: Text('Page $_bottomNavIndex')), // Sample page body
       floatingActionButton: GestureDetector(
         onTap: () {},
-        child: Image.asset(AppAssets.iconsPNG.middlePNG, fit: BoxFit.contain,),
+        child: Image.asset(AppAssets.iconsPNG.navMiddle, fit: BoxFit.contain,),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar.builder(
