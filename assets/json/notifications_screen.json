@@ -1,10 +1,12 @@
 {
-  "notifications": [
+  "notifications":
+  [
     {
       "id": 1001,
       "userImage": "assets/icons/Notifications/Adham.png",
       "username": "Adham",
       "action": "commented on your listing",
+      "device" : "Samgung Galaxy S23",
       "time": "5m"
     },
     {
@@ -12,6 +14,7 @@
       "userImage": "assets/icons/Notifications/Ahmed.png",
       "username": "Ahmed",
       "action": "liked your listing",
+      "device" : "iPhone 14 Pro",
       "time": "15m"
     },
     {
@@ -19,6 +22,7 @@
       "userImage": "assets/icons/Notifications/Ahmed2.png",
       "username": "Daniel",
       "action": "sent you a message",
+      "device" : "iPhone 12 Pro",
       "time": "30m"
     },
     {
@@ -26,6 +30,7 @@
       "userImage": "assets/icons/Notifications/Ahmed3.png",
       "username": "Adham",
       "action": "made an offer on your listing",
+      "device" : "iPhone 17 Pro",
       "time": "1h"
     },
     {
@@ -33,6 +38,7 @@
       "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "James",
       "action": "shared your listing",
+      "device" : "iPhone 11 Pro",
       "time": "2h"
     },
     {
@@ -40,6 +46,7 @@
       "userImage": "assets/icons/Notifications/Ahmed5.png",
       "username": "Daniel",
       "action": "commented on your listing",
+      "device" : "Samgung S29 Max",
       "time": "3h"
     },
     {
@@ -47,6 +54,7 @@
       "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 17 Pro",
       "time": "7h"
     },
     {
@@ -54,6 +62,7 @@
       "userImage": "assets/icons/Notifications/Ahmed3.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 17 Pro",
       "time": "3h"
     },
     {
@@ -61,6 +70,7 @@
       "userImage": "assets/icons/Notifications/Ahmed2.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "M22 Moto 12 Pro",
       "time": "1h"
     },
     {
@@ -68,6 +78,7 @@
       "userImage": "assets/icons/Notifications/Ahmed.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 14 Pro",
       "time": "5h"
     },
     {
@@ -75,6 +86,7 @@
       "userImage": "assets/icons/Notifications/Ibrahim.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 17 Pro",
       "time": "5h"
     },
     {
@@ -82,6 +94,7 @@
       "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 11 Pro",
       "time": "30m"
     },
     {
@@ -89,6 +102,7 @@
       "userImage": "assets/icons/Notifications/Ibrahim2.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "Samgung S29 Ultra Max",
       "time": "10m"
     },
     {
@@ -96,6 +110,7 @@
       "userImage": "assets/icons/Notifications/Ibrahim.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "M22 Moto 12 Pro",
       "time": "5h"
     },
     {
@@ -103,6 +118,7 @@
       "userImage": "assets/icons/Notifications/Ahmed4.png",
       "username": "William",
       "action": "viewed your profile",
+      "device" : "iPhone 14 Pro",
       "time": "4m"
     },
     {
@@ -110,6 +126,7 @@
       "userImage": "assets/icons/Notifications/Ibrahim2.png",
       "username": "James",
       "action": "added your listing to favorites",
+      "device" : "iPhone 17 Pro",
       "time": "1d"
     }
   ]

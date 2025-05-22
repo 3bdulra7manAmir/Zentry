@@ -6,7 +6,8 @@ abstract class NotificationsLocalDataSource {
   Future<List<NotificationEntity>> getNotifications();
 }
 
-class NotificationsLocalDataSourceImpl implements NotificationsLocalDataSource {
+class NotificationsLocalDataSourceImpl implements NotificationsLocalDataSource
+{
   @override
   Future<List<NotificationEntity>> getNotifications() async {
     try {

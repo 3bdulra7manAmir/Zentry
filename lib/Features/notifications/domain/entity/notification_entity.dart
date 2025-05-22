@@ -3,6 +3,7 @@ class NotificationEntity {
   final String userImage;
   final String username;
   final String action;
+  final String device;
   final String time;
 
   NotificationEntity({
@@ -10,6 +11,7 @@ class NotificationEntity {
     required this.userImage,
     required this.username,
     required this.action,
+    required this.device,
     required this.time,
   });
 
@@ -19,6 +21,7 @@ class NotificationEntity {
       userImage: json['userImage'] as String,
       username: json['username'] as String,
       action: json['action'] as String,
+      device: json['device'] as String,
       time: json['time'] as String,
     );
   }
@@ -29,6 +32,7 @@ class NotificationEntity {
       'userImage': userImage,
       'username': username,
       'action': action,
+      'device': device,
       'time': time,
     };
   }
