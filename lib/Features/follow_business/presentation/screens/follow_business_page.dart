@@ -13,7 +13,7 @@ import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/app_follow_button.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../../domain/entity/business.dart';
-import '../controllers/business_providers.dart';
+import '../controllers/businesses_controller.dart';
 
 void showFollowBusinessPageBottomSheet(BuildContext context)
 {

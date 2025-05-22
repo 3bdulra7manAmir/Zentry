@@ -1,8 +1,11 @@
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'get_join_groups_usecase_provider.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final joinGroupsItemsProvider = FutureProvider((ref) async {
+part 'join_groups_items_provider.g.dart';
+
+@riverpod
+Future<dynamic> joinGroupsItems(JoinGroupsItemsRef ref) async {
   final usecase = ref.watch(getJoinGroupsUseCaseProvider);
   final result = await usecase.call();
   return result;
-});
+}

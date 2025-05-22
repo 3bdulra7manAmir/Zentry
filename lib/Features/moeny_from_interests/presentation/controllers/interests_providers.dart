@@ -1,26 +1,31 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../data/datasources/interests_local_data_source.dart';
 import '../../data/repository/interests_repository_impl.dart';
 import '../../data/model/interest_category.dart';
 import '../../domain/repository/interests_repository.dart';
 
-// Provider for the interests repository
-final interestsRepositoryProvider = Provider<InterestsRepository>((ref) {
+part 'interests_providers.g.dart';
+
+@riverpod
+InterestsRepository interestsRepository(InterestsRepositoryRef ref) {
   final dataSource = InterestsLocalDataSource();
   return InterestsRepositoryImpl(dataSource);
-});
+}
 
-// Provider for all interest categories
-final interestCategoriesProvider = FutureProvider<List<InterestCategory>>((ref) async {
+@riverpod
+Future<List<InterestCategory>> interestCategories(InterestCategoriesRef ref) {
   final repository = ref.watch(interestsRepositoryProvider);
   return repository.getInterestCategories();
-});
+}
 
-// Provider for selected categories
-final selectedCategoriesProvider = FutureProvider<List<InterestCategory>>((ref) async {
+@riverpod
+Future<List<InterestCategory>> selectedCategories(SelectedCategoriesRef ref) {
   final repository = ref.watch(interestsRepositoryProvider);
   return repository.getSelectedCategories();
-});
+}
 
-// Provider to track the selection state
-final isCategorySelectedProvider = StateProvider.family<bool, int>((ref, categoryId) => false);
+@riverpod
+class IsCategorySelected extends _$IsCategorySelected {
+  @override
+  bool build(int categoryId) => false;
+}

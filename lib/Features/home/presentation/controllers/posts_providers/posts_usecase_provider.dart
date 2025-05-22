@@ -1,8 +1,11 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../domain/usecases/posts_usecase.dart';
 import 'posts_repository_provider.dart';
 
-final postsUsecaseProvider = Provider<PostsUsecase>((ref) {
+part 'posts_usecase_provider.g.dart';
+
+@riverpod
+PostsUsecase postsUsecase(PostsUsecaseRef ref) {
   final repository = ref.watch(postsRepositoryProvider);
   return PostsUsecase(repository);
-});
+}
