@@ -14,7 +14,6 @@ import '../../../../core/widgets/app_listview_builder.dart';
 import '../widgets/friend_request_card.dart';
 import '../widgets/notifications_card.dart';
 
-
 class NotificationsView extends ConsumerWidget
 {
   const NotificationsView({super.key});

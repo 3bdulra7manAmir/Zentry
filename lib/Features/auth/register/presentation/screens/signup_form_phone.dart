@@ -27,7 +27,6 @@ class SignUpFormPhoneNumber extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    //final signUpType = ref.watch(signUpTypeProvider);
     final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
@@ -47,8 +46,12 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                   Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   GestureDetector(
-                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(), //HERE //Needs Fix
-                    child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight,),),),
+                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(),
+                    child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
+                      fontWeight: AppFontWeights.boldWeight,
+                      textDecoration: TextDecoration.underline,
+                    ),),
+                  ),
                 ],
               ),
               AppSizes.size8.verticalSpace,

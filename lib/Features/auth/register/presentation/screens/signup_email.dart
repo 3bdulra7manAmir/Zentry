@@ -13,7 +13,7 @@ import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../login/presentation/controllers/email_phone_switcher.dart';
+import '../controllers/email_or_phone_provider.dart';
 
 
 class SignUpFormEmail extends ConsumerWidget
@@ -47,7 +47,7 @@ class SignUpFormEmail extends ConsumerWidget
                   const Spacer(),
                   AppSizes.size4.horizontalSpace,
                   GestureDetector(
-                    onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
+                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(),
                     child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight,),),
                   ),
                 ],

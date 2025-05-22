@@ -9,8 +9,9 @@ import '../../../../core/constants/app_styles.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../widgets/follow_business_card.dart';
-import '../widgets/follow_business_card_header.dart';
+import 'follow_business_card.dart';
+import 'follow_business_card_header.dart';
+
 
 class FollowBusinessPage extends ConsumerWidget
 {

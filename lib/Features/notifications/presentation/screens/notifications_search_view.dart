@@ -5,8 +5,8 @@ import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../widgets/notifications_card.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
+import '../widgets/notifications_card.dart';
 
 
 class NotificationsSearchView extends StatelessWidget
