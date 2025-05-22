@@ -31,6 +31,14 @@ class DarkColorScheme extends ColorManagerBase {
   /// [Blue_006__244d93]
   Color get kBlue006 => const Color(0xff244d93); // kBlue006
 
+  @override
+  /// [Blue_007__FFFFFF]
+  Color get kBlue007 => const Color(0xffFFFFFF); // kBlue006
+
+  @override
+  /// [Blue_008__FFFFFF]
+  Color get kBlue008 => const Color(0xffFFFFFF); // kBlue006
+
   // White Color Range
   @override
   /// [White_001__FFFFFF]
@@ -39,6 +47,16 @@ class DarkColorScheme extends ColorManagerBase {
   @override
   /// [White_002__F4F4F4]
   Color get kWhite002 => const Color(0xffF4F4F4); // kWhite002
+
+  @override
+  /// [White_003__FFFFFF]
+  Color get kWhite003 => const Color(0xffFFFFFF); // kWhite003
+
+  @override
+  /// [White_004__1B1B1B]
+  Color get kWhite004 => const Color(0xff1B1B1B); // kWhite003
+
+  
 
   // Grey Color Range
   @override
@@ -60,6 +78,10 @@ class DarkColorScheme extends ColorManagerBase {
   @override
   /// [Grey_005__FAFAFA]
   Color get kGrey005 => const Color(0xff1B1B1B); // kGrey005
+
+  @override
+  /// [Grey_006__EEEEEE]
+  Color get kGrey006 => const Color(0xff272626); // kGrey001
 
   // Grey Text Color Range
   @override

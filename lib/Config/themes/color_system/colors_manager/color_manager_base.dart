@@ -23,11 +23,23 @@ abstract class ColorManagerBase
   /// [Blue_006__244d93]
   Color get kBlue006; // kBlue006
 
+  /// [Blue_004__003082_3E6FCF]
+  Color get kBlue007; // kBlue004
+
+  /// [Blue_004__003082_3E6FCF]
+  Color get kBlue008; // kBlue004
+
   /// [White_001__FFFFFF]
   Color get kWhite001; // kWhite001
 
   /// [White_002__F4F4F4]
   Color get kWhite002; // kWhite002
+
+  /// [White_003__FFFFFF]
+  Color get kWhite003; // kWhite003
+
+  /// [White_004__FFFFFF]
+  Color get kWhite004; // kWhite003
 
   /// [Grey_001__EEEEEE]
   Color get kGrey001; // kGrey001
@@ -43,6 +55,9 @@ abstract class ColorManagerBase
 
   /// [Grey_005__FAFAFA]
   Color get kGrey005; // kGrey005
+
+  /// [Grey_001__EEEEEE]
+  Color get kGrey006; // kGrey001
 
   /// [GreyText_001__5D5D5D]
   Color get kGreyText001; // kGreyText001

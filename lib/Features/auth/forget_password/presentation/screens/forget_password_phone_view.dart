@@ -119,7 +119,7 @@ Widget build(BuildContext context, WidgetRef ref)
                     AppSizes.size24.verticalSpace,
                     CustomButton(
                       buttonText: AppLocalizations.of(context).verify,
-                      buttonTextStyle: AppStyles.textStyle22(),
+                      buttonTextStyle: AppStyles.textStyle22(fontColor: AppColors.color.kWhite003,),
                       buttonOnPressed: ()
                       {
                         if (phoneNumberFormKey.currentState!.validate())

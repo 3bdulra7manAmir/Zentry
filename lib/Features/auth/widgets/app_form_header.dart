@@ -36,16 +36,14 @@ class FormHeader extends ConsumerWidget
           color: AppColors.color.kBlue001,
           child: Image.asset(AppAssets.iconsPNG.headerFullLogo),
         ),
-
         (isText ?? false)
             ? Positioned(
               top: 100.h,
               left: provider.localeState.selectedLanguageIndex == 1 ? 17.w : 0.w,
               right: provider.localeState.selectedLanguageIndex == 1 ? 0.w : 17.w,
-              child: Text(downleftText ?? "", style: AppStyles.textStyle18()),
+              child: Text(downleftText ?? "", style: AppStyles.textStyle18(fontColor: AppColors.color.kWhite003)),
             )
             : const SizedBox.shrink(),
-
         (isText ?? false)
             ? Positioned(
               top: 44.h,

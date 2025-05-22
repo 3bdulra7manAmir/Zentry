@@ -98,7 +98,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
                         AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView,);
                       },
                       buttonText: AppLocalizations.of(context).verify,
-                      buttonTextStyle: AppStyles.textStyle22(),
+                      buttonTextStyle: AppStyles.textStyle22(fontColor: AppColors.color.kWhite003),
                     ),
                   ],
                 ),

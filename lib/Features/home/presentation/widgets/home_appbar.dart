@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_sizes.dart';
 
@@ -22,17 +23,26 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
       [
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.homeSearchWithBg),
+          child: CircleAvatar(
+            backgroundColor: AppColors.color.kGrey002,
+            child: Image.asset(AppAssets.iconsPNG.homeSearch)
+          ),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.homeMessagesWithBg),
+          child: CircleAvatar(
+            backgroundColor: AppColors.color.kGrey002,
+            child: Image.asset(AppAssets.iconsPNG.homeMessages)
+          ),
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
           onTap: () {},
-          child: Image.asset(AppAssets.iconsPNG.homeSearchWithBg),
+          child: CircleAvatar(
+            backgroundColor: AppColors.color.kGrey002,
+            child: Image.asset(AppAssets.iconsPNG.homeNotificationsBill)
+          ),
         ),
         AppSizes.size8.horizontalSpace,
       ],

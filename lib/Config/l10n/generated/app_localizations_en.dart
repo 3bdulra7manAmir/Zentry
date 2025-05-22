@@ -538,4 +538,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get moneyFromInvite => 'Money From Invite';
+
+  @override
+  String get invitationCodeIsRequired => 'Invitation code is required.';
+
+  @override
+  String get invalidInvitationCode => 'Invalid invitation code format.';
+
+  @override
+  String get noResultFound => 'No results found.';
 }

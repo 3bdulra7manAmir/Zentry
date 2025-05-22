@@ -94,8 +94,9 @@ class _AppIconsPNG
 
   /// Home View
   final String homeRobotBoy = "assets/icons/Home/Robot_Boy_SUIIZ.png"; /// homeRobotBoy, homeRobotBoy (duplicate)
-  final String homeSearchWithBg = "assets/icons/Home/Search_With_Bg.png"; /// homeSearchWithBg
-  final String homeMessagesWithBg = "assets/icons/Home/Messages_With_Bg.png"; /// homeMessagesWithBg
+  final String homeSearch = "assets/icons/Home/Search.png"; /// homeSearchWithBg
+  final String homeMessages = "assets/icons/Home/Messages.png"; /// homeMessagesWithBg
+  final String homeNotificationsBill = "assets/icons/Home/Notifications_Bill.png"; /// homeMessagesWithBg
   final String homeCarBlue = "assets/icons/Home/Car_Blue.png"; /// homeCarBlue
   final String homeStoryRobot = "assets/icons/Home/Story_Robot.png"; /// homeStoryRobot
   final String homePostUserIcon = "assets/icons/Home/Post_User_Icon.png"; /// homePostUserIcon

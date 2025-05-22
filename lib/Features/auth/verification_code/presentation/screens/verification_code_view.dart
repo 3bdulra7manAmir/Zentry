@@ -145,7 +145,7 @@ class VerificationCodeView extends ConsumerWidget
                     buttonText: AppLocalizations.of(context).resendIn60s,
                     buttonTextStyle: AppStyles.textStyle16(
                       fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: AppColors.color.kWhite001,
+                      fontColor: AppColors.color.kWhite003,
                     ),
                   ),
                 ],

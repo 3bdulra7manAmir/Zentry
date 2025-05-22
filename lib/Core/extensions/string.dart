@@ -60,7 +60,12 @@ extension GetStringUtils on String?
     final fullNameRegExp = RegExp(r"^(?!.*[^\p{L} \-'])[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$", unicode: true,);
     return fullNameRegExp.hasMatch(this!.trim());
   }
-  
+
+  bool get isInvitationCode
+  {
+    if (this == null) return false;
+    return RegExp(r'^#[A-Z][a-zA-Z]*\d+$').hasMatch(this!);
+  }
 
   String? get convertNumbers
   {

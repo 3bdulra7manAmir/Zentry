@@ -175,6 +175,7 @@ abstract class AppStrings
 
   ///[Search]
   static const search = "Search";
+  static const noResultFound = "No results found";
 
   ///[Arabic]
   static const arabic = "Arabic";
@@ -248,6 +249,8 @@ abstract class AppStrings
   static const month = "Month";
   static const day = "Day";
   static const confirm = "Confirm";
+  static const invitationCodeIsRequired = "Invitation code is required.";
+  static const invalidInvitationCode = "Invalid invitation code format.";
 
   //App Notification
   static const cairoEgypt = "Cairo,Egypt";

@@ -50,7 +50,7 @@ class CustomButton extends ConsumerWidget
           backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kBlue001,),
         ),
         onPressed: buttonOnPressed,
-        child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(),),
+        child: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle14(fontColor: AppColors.color.kWhite003,),),
       ),
     );
   }

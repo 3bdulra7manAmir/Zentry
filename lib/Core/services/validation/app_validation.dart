@@ -139,6 +139,30 @@ abstract class AppValidation
     }
   }
 
+  static String invitationCodeValidation(String? value, BuildContext context)
+  {
+  try {
+    final cleanedValue = value?.convertNumbers?.trim();
+
+    if (cleanedValue == null || cleanedValue.isEmpty)
+    {
+      return AppLocalizations.of(context).invitationCodeIsRequired;
+    }
+
+    if (!cleanedValue.isInvitationCode)
+    {
+      return AppLocalizations.of(context).invalidInvitationCode;
+    }
+
+    return "";
+  }
+  on Exception catch (e)
+  {
+    return e.toString();
+  }
+}
+
+
 }
 
 

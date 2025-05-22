@@ -1156,6 +1156,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Money From Invite'**
   String get moneyFromInvite;
+
+  /// No description provided for @invitationCodeIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Invitation code is required.'**
+  String get invitationCodeIsRequired;
+
+  /// No description provided for @invalidInvitationCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid invitation code format.'**
+  String get invalidInvitationCode;
+
+  /// No description provided for @noResultFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No results found.'**
+  String get noResultFound;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

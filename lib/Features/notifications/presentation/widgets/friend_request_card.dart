@@ -19,7 +19,7 @@ class FriendRequestCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Card(
-      color: AppColors.color.kWhite001,
+      color: AppColors.color.kWhite004,
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.3),
       shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular6),
@@ -87,7 +87,7 @@ class FriendRequestCard extends StatelessWidget
                   flex: 2,
                   child: CustomButton(
                     buttonText: AppLocalizations.of(context).accept,
-                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001),
+                    buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite003),
                     buttonWidth: 114.w,
                     buttonHeight: 33.h,
                     buttonBorderRadius: AppBordersRadiuses.circular5,

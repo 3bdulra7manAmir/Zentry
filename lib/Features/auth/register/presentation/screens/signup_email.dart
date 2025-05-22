@@ -86,7 +86,7 @@ class SignUpFormEmail extends ConsumerWidget
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
-                fieldValidator: (value) => AppValidation.passwordValidation(value, context),
+                fieldValidator: (value) => AppValidation.invitationCodeValidation(value, context),
                 fieldController: passwordController,
                 fieldObscureText: provider.obscureText,
                 fieldText: AppLocalizations.of(context).invitationCodeExample,

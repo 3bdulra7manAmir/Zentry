@@ -11,7 +11,8 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../domain/entity/notification_entity.dart';
 
-class DefaultNotificationCard extends StatelessWidget {
+class DefaultNotificationCard extends StatelessWidget
+{
   final NotificationEntity notification;
   
   const DefaultNotificationCard({
@@ -20,9 +21,10 @@ class DefaultNotificationCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Card(
-      color: AppColors.color.kWhite001,
+      color: AppColors.color.kWhite004,
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.6),
       shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular6,),
@@ -67,6 +69,7 @@ class DefaultNotificationCard extends StatelessWidget {
                               ],
                             ),
                           ),
+                          AppSizes.size16.horizontalSpace,
                           Image.asset(AppAssets.iconsPNG.notificationMenuDots),
                           AppSizes.size16.horizontalSpace,
                         ],

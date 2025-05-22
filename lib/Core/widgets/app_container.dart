@@ -30,7 +30,7 @@ class CustomContainer extends StatelessWidget
       padding: AppPadding.horizontal16,
       decoration: BoxDecoration(
         borderRadius: AppBordersRadiuses.circular10,
-        color: AppColors.color.kGrey002,
+        color: AppColors.color.kGrey006,
       ),
       child: Row(
         children:

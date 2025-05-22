@@ -106,7 +106,7 @@ class RestPasswordView extends ConsumerWidget
                     AppSizes.size24.verticalSpace,
                     CustomButton(
                       buttonText: AppLocalizations.of(context).resetPassword,
-                      buttonTextStyle: AppStyles.textStyle22(),
+                      buttonTextStyle: AppStyles.textStyle22(fontColor: AppColors.color.kWhite003),
                       buttonOnPressed: ()
                       {
                         if (resetPasswordFormKey.currentState!.validate())

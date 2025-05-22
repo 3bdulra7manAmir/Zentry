@@ -176,5 +176,8 @@
   "createPost": "Create post",
   "createStory2": "Create story",
   "error": "Error",
-  "moneyFromInvite": "Money From Invite"
+  "moneyFromInvite": "Money From Invite",
+  "invitationCodeIsRequired": "Invitation code is required.",
+  "invalidInvitationCode": "Invalid invitation code format.",
+  "noResultFound": "No results found."
 }

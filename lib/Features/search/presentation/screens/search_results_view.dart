@@ -62,7 +62,7 @@ class SearchResultsView extends ConsumerWidget {
                   if (results.isEmpty)
                   {
                     return Center(
-                      child: Text('No results found', style: AppStyles.textStyle14(
+                      child: Text(AppLocalizations.of(context).noResultFound, style: AppStyles.textStyle14(
                           fontColor: AppColors.color.kGreyText002,
                           fontWeight: AppFontWeights.regularWeight,
                         ),

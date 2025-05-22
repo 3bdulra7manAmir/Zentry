@@ -42,7 +42,7 @@ class SearchRelatedResultCard extends StatelessWidget {
             color: AppColors.color.kBlue003,
           ),
           child: Text(category.number!, style: AppStyles.textStyle14(
-            fontColor: AppColors.color.kBlue003,
+            fontColor: AppColors.color.kWhite003,
             fontWeight: AppFontWeights.semiBoldWeight),),
         ) : const SizedBox.shrink(),
         const Spacer(),

@@ -538,4 +538,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get moneyFromInvite => 'أرباح من الدعوات';
+
+  @override
+  String get invitationCodeIsRequired => 'رمز الدعوة مطلوب.';
+
+  @override
+  String get invalidInvitationCode => 'تنسيق رمز الدعوة غير صالح.';
+
+  @override
+  String get noResultFound => 'لم يتم العثور على نتائج.';
 }

@@ -176,6 +176,9 @@
   "createPost": "إنشاء منشور",
   "createStory2": "إنشاء قصة",
   "error": "خطأ",
-  "moneyFromInvite": "أرباح من الدعوات"
+  "moneyFromInvite": "أرباح من الدعوات",
+  "invitationCodeIsRequired": "رمز الدعوة مطلوب.",
+  "invalidInvitationCode": "تنسيق رمز الدعوة غير صالح.",
+  "noResultFound": "لم يتم العثور على نتائج."
 
 }

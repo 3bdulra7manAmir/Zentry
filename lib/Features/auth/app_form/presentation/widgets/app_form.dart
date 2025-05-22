@@ -27,12 +27,12 @@ class AppFormView extends ConsumerWidget
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
     Image arrowImage = Image.asset(provider.localeState.selectedLanguageIndex == 0
-          ? (provider.themeMode == ThemeMode.dark
-              ? AppAssets.iconsPNG.headerArrowLeft
-              : AppAssets.iconsPNG.formArrowLeft)
-          : (provider.themeMode == ThemeMode.dark
-              ? AppAssets.iconsPNG.headerArrowRight
-              : AppAssets.iconsPNG.formArrowRight),
+      ? (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.headerArrowLeft
+          : AppAssets.iconsPNG.formArrowLeft)
+      : (provider.themeMode == ThemeMode.dark
+          ? AppAssets.iconsPNG.headerArrowRight
+          : AppAssets.iconsPNG.formArrowRight),
     );
     return Container(
       padding: AppPadding.horizontal16,
@@ -94,14 +94,15 @@ class AppFormView extends ConsumerWidget
             AppSizes.size27.verticalSpace,
             CustomButton(
               buttonText: AppLocalizations.of(context).login,
+              buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kWhite003,),
               buttonOnPressed: () => AppRouter.router.push(AppRoutes.kAuthView),
             ),
             AppSizes.size16.verticalSpace,
             CustomButton(
               buttonText: AppLocalizations.of(context).signUp,
-              buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kBlue001,),
-              buttonBackgroundColor: AppColors.color.kWhite001,
-              buttonBorderColor: AppColors.color.kBlue001,
+              buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kBlue007,),
+              buttonBackgroundColor: AppColors.color.kWhite004,
+              buttonBorderColor: AppColors.color.kBlue008,
               //buttonOnPressed: () => AppRouter.router.pushNamed(AppRoutes.kTestView),
             ),
           ],
