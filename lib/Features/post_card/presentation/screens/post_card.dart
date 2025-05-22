@@ -58,7 +58,7 @@ void showPostOptionsBottomSheet(BuildContext context)
             Divider(
               color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
-              indent: 15,
+              indent: AppSizes.size15,
               endIndent: 15,
             ),
 
@@ -77,8 +77,8 @@ void showPostOptionsBottomSheet(BuildContext context)
             Divider(
               color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
-              indent: 15,
-              endIndent: 15,
+              indent: AppSizes.size15,
+              endIndent: AppSizes.size15,
             ),
 
             AppSizes.size22.verticalSpace,

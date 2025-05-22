@@ -56,8 +56,11 @@ abstract class ColorManagerBase
   /// [Grey_005__FAFAFA]
   Color get kGrey005; // kGrey005
 
-  /// [Grey_001__EEEEEE]
+  /// [Grey_006__EEEEEE]
   Color get kGrey006; // kGrey001
+
+  /// [Grey_007__bbbbbb]
+  Color get kGrey007; // kGrey001
 
   /// [GreyText_001__5D5D5D]
   Color get kGreyText001; // kGreyText001

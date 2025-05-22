@@ -547,4 +547,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noResultFound => 'No results found.';
+
+  @override
+  String get interestedIn => 'interested in';
+
+  @override
+  String get otherUsers => 'Other users';
+
+  @override
+  String get readMore => ' Read more.....';
+
+  @override
+  String get showLess => ' Show less';
 }

@@ -14,10 +14,7 @@ class DefaultNotificationCard extends StatelessWidget
 {
   final NotificationEntity notification;
   
-  const DefaultNotificationCard({
-    super.key,
-    required this.notification,
-  });
+  const DefaultNotificationCard({super.key, required this.notification,});
 
   @override
   Widget build(BuildContext context)
@@ -56,8 +53,7 @@ class DefaultNotificationCard extends StatelessWidget
                               [
                                 Text(notification.username, style: AppStyles.textStyle14(
                                     fontWeight: AppFontWeights.semiBoldWeight,
-                                    fontColor: AppColors.color.kBlue003,
-                                  ),
+                                    fontColor: AppColors.color.kBlue003,),
                                 ),
                                 AppSizes.size3.horizontalSpace,
                                 Flexible(
@@ -80,9 +76,7 @@ class DefaultNotificationCard extends StatelessWidget
                           Text(notification.device, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kGreyText006,
-                              textOverflow: TextOverflow.ellipsis,
-                            ),
-                          ),
+                              textOverflow: TextOverflow.ellipsis,),),
                           const Spacer(),
                           Text(notification.time, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,

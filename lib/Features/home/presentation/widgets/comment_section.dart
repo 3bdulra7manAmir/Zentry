@@ -54,7 +54,8 @@ void showCommentsBottomSheet(BuildContext context)
                     color: AppColors.color.kGrey002,
                     borderRadius: AppBordersRadiuses.circular10,
                     border: AppFullBorders.completeProfileCard,
-                  ),child: CustomTextFormField(
+                  ),
+                  child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
                     fieldText: AppLocalizations.of(context).commentHere,
                     fieldPrefixIcon: Image.asset(AppAssets.iconsPNG.commentSectionUserAvatar),

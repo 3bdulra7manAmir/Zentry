@@ -30,7 +30,8 @@ class UsersStory extends StatelessWidget
         padding: AppPadding.startOnly12,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children:
+          [
             AppSizes.size9.verticalSpace,
             Container(
               height: 40.h,
@@ -45,9 +46,7 @@ class UsersStory extends StatelessWidget
             Text(story.name, style: AppStyles.textStyle10(
                 fontColor: AppColors.color.kWhite001,
                 fontWeight: AppFontWeights.extraBoldWeight,
-              ),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
+              ),maxLines: 2, overflow: TextOverflow.ellipsis,
             ),
             AppSizes.size10.verticalSpace,
           ],

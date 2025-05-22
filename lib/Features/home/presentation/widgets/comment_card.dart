@@ -21,7 +21,6 @@ class CommentCard extends StatelessWidget
       child: Row(
         children:
         [
-          // Heart button
           Container(
             width: 42.w,
             height: 40.h,
@@ -34,8 +33,6 @@ class CommentCard extends StatelessWidget
             child: Center(child: Image.asset(AppAssets.iconsPNG.commentHeart, fit: BoxFit.contain,),),
           ),
           AppSizes.size8.horizontalSpace,
-
-          // Comment text field - using Expanded instead of fixed width
           Expanded(
             child: Container(
               height: 40.h,
@@ -52,8 +49,6 @@ class CommentCard extends StatelessWidget
             ),
           ),
           AppSizes.size8.horizontalSpace,
-
-          // Archive button
           Container(
             width: 38.w,
             height: 40.h,
@@ -63,13 +58,9 @@ class CommentCard extends StatelessWidget
               border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
-            child: Center(
-              child: Image.asset(AppAssets.iconsPNG.commentArchive, fit: BoxFit.contain,),
-            ),
+            child: Center(child: Image.asset(AppAssets.iconsPNG.commentArchive, fit: BoxFit.contain,),),
           ),
           AppSizes.size8.horizontalSpace,
-
-          // Share button
           Container(
             width: 38.w,
             height: 40.h,

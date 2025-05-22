@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+import '../../../../core/constants/app_borders.dart';
+import '../widgets/moeny_from_interests_list.dart';
+
+void showMoenyFromInterestsBottomSheet(BuildContext context)
+{
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: Theme.of(context).cardColor,
+    isDismissible: true,
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
+    builder: (BuildContext context)
+    {
+      return const MoneyFromInterestsListView();
+    },
+  );
+}
+
+

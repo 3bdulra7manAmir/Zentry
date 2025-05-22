@@ -179,6 +179,10 @@
   "moneyFromInvite": "أرباح من الدعوات",
   "invitationCodeIsRequired": "رمز الدعوة مطلوب.",
   "invalidInvitationCode": "تنسيق رمز الدعوة غير صالح.",
-  "noResultFound": "لم يتم العثور على نتائج."
+  "noResultFound": "لم يتم العثور على نتائج.",
+  "interestedIn": "مهتم بـ",
+  "otherUsers": "مستخدمون آخرون",
+  "readMore": " اقرأ المزيد.....",
+  "showLess": " عرض أقل"
 
 }

@@ -12,13 +12,14 @@ import '../../../../core/widgets/app_search_appbar.dart';
 import '../controllers/search_result_providers/search_result_providers.dart';
 import '../widgets/search_result_card_detailed.dart';
 
-class SearchResultsView extends ConsumerWidget {
+class SearchResultsView extends ConsumerWidget
+{
   const SearchResultsView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     final searchResults = ref.watch(searchResultsListProvider);
-
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true),
       body: Padding(
@@ -31,34 +32,29 @@ class SearchResultsView extends ConsumerWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(AppLocalizations.of(context).products, 
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlack001)),
+                children:
+                [
+                  Text(AppLocalizations.of(context).products, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlack001)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).services,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).services, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).posts,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).posts, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).reels,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).reels, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).users,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).users, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).pages,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).pages, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                   AppSizes.size16.horizontalSpace,
-                  Text(AppLocalizations.of(context).groups,
-                    style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
+                  Text(AppLocalizations.of(context).groups, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kGreyText008)),
                 ],
               ),
             ),
             AppSizes.size14.verticalSpace,
             Expanded(
               child: searchResults.when(
-                data: (results) {
+                data: (results)
+                {
                   if (results.isEmpty)
                   {
                     return Center(

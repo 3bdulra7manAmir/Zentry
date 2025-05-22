@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +5,6 @@ import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../controllers/notifications_providers/notifications_items_provider.dart';
-import '../widgets/friend_request_card.dart';
 import '../widgets/notifications_card.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 

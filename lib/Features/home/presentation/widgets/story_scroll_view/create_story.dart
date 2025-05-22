@@ -34,7 +34,7 @@ class CreateStory extends StatelessWidget
             buttonText: AppLocalizations.of(context).createStory, buttonOnPressed: () {},
             buttonWidth: 88.w,
             buttonHeight: 27.h,
-            buttonBackgroundColor: const Color(0xffbbbbbb),
+            buttonBackgroundColor: AppColors.color.kGrey007,
             buttonPadding: AppPadding.horizontal15,
             buttonTextStyle: AppStyles.textStyle10(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.boldWeight),),
         ],

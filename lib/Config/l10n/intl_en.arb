@@ -179,5 +179,9 @@
   "moneyFromInvite": "Money From Invite",
   "invitationCodeIsRequired": "Invitation code is required.",
   "invalidInvitationCode": "Invalid invitation code format.",
-  "noResultFound": "No results found."
+  "noResultFound": "No results found.",
+  "interestedIn": "interested in",
+  "otherUsers": "Other users",
+  "readMore": " Read more.....",
+  "showLess": " Show less"
 }

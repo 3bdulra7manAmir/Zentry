@@ -79,7 +79,11 @@ class LightColorScheme extends ColorManagerBase {
 
   @override
   /// [Grey_006__EEEEEE]
-  Color get kGrey006 => const Color(0xffEEEEEE); // kGrey001
+  Color get kGrey006 => const Color(0xffEEEEEE); // kGrey006
+
+  @override
+  /// [Grey_007__bbbbbb]
+  Color get kGrey007 => const Color(0xffbbbbbb); // kGrey007
 
   // Grey Text Color Range
   @override

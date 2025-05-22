@@ -1174,6 +1174,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No results found.'**
   String get noResultFound;
+
+  /// No description provided for @interestedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'interested in'**
+  String get interestedIn;
+
+  /// No description provided for @otherUsers.
+  ///
+  /// In en, this message translates to:
+  /// **'Other users'**
+  String get otherUsers;
+
+  /// No description provided for @readMore.
+  ///
+  /// In en, this message translates to:
+  /// **' Read more.....'**
+  String get readMore;
+
+  /// No description provided for @showLess.
+  ///
+  /// In en, this message translates to:
+  /// **' Show less'**
+  String get showLess;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

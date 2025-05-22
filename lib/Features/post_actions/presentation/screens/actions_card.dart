@@ -35,7 +35,6 @@ void showActionsBottomSheet(BuildContext context)
               ),
             ),
             AppSizes.size17.verticalSpace,
-
             Row(
               children:
               [
@@ -57,7 +56,6 @@ void showActionsBottomSheet(BuildContext context)
                 Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
             ),
-
             AppSizes.size50.verticalSpace,
             Row(
               children:
@@ -69,7 +67,6 @@ void showActionsBottomSheet(BuildContext context)
                 Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
             ),
-
             AppSizes.size50.verticalSpace,
             Row(
               children:
@@ -82,7 +79,6 @@ void showActionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size45.verticalSpace,
-
           ],
         ),
       );

@@ -547,4 +547,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noResultFound => 'لم يتم العثور على نتائج.';
+
+  @override
+  String get interestedIn => 'مهتم بـ';
+
+  @override
+  String get otherUsers => 'مستخدمون آخرون';
+
+  @override
+  String get readMore => ' اقرأ المزيد.....';
+
+  @override
+  String get showLess => ' عرض أقل';
 }

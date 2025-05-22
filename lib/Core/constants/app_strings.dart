@@ -317,6 +317,8 @@ abstract class AppStrings
 
   //App Moeny From Interests Card
   static const moenyFromInterests = "Moeny From Interests";
+  static const interestedIn = "interested in";
+  static const otherUsers = "Other users";
 
   //App Watch Tutorial
   static const watchTutorial = "Watch Tutorial";
@@ -329,6 +331,9 @@ abstract class AppStrings
   static const threeHundredEGP = "3,000,000 EGP";
   static const reuealAndStaging = "REUEAL & Staging";
   static const justNow = "Just Now";
+  static const readMore = " Read more.....";
+  static const showLess = " Show less";
+  
 
   //Create Story
   static const createStory = "Create Story";

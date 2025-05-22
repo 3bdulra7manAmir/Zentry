@@ -14,10 +14,7 @@ import '../../domain/entities/search_result.dart';
 class SearchResultCardDetailed extends StatelessWidget
 {
   final SearchResult result;
-  const SearchResultCardDetailed({
-    super.key,
-    required this.result,
-  });
+  const SearchResultCardDetailed({super.key, required this.result,});
 
   @override
   Widget build(BuildContext context)
