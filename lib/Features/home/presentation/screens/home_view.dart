@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../controllers/posts_providers/posts_provider.dart';
 import '../widgets/create_panel_view/create_panel.dart';
 import '../widgets/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_card_view.dart';
@@ -19,7 +19,7 @@ class HomeView extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final postsAsync = ref.watch(postsProvider);
+    final provider = AppProvidersProvider(ref, context);
     return Scaffold(
       appBar: const CustomHomeAppBar(),
       body: SingleChildScrollView(
@@ -40,7 +40,7 @@ class HomeView extends ConsumerWidget
             const CreatePanel(),
             Divider(height: AppSizes.size4, color: AppColors.color.kGrey001),
             AppSizes.size20.verticalSpace,
-            postsAsync.when(
+            provider.postsAsync.when(
               data: (posts) => AppListviewBuilder(
                 itemBuilder: (context, index) => PostsCard(post: posts[index]),
                 itemCount: posts.length,

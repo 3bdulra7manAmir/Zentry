@@ -9,7 +9,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../../../follow_business/presentation/screens/follow_business_page.dart';
+import '../../../follow_business/presentation/widgets/follow_business_card_header.dart';
 import '../../data/model/interest_category.dart';
 import '../controllers/interests_providers.dart';
 import 'moeny_from_interests_card.dart';

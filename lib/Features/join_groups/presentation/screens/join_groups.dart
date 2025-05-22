@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
-import '../controllers/join_groups_items_provider.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../widgets/join_groups_card.dart';
 import '../widgets/join_groups_gridbuilder.dart';
 
@@ -12,8 +12,8 @@ class JoinGroupsScreen extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final joinGroupsAsyncValue = ref.watch(joinGroupsItemsProvider);
-    return joinGroupsAsyncValue.when(
+    final provider = AppProvidersProvider(ref, context);
+    return provider.joinGroupsAsyncValue.when(
       data: (groups) => GridViewBuilder(
         itemCount: groups.length,
         itemBuilder: (context, index) => JoinGroupsCard(group: groups[index]),

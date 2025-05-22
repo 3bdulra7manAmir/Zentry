@@ -7,9 +7,9 @@ import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
-import '../controllers/search_result_providers/search_result_providers.dart';
 import '../widgets/search_result_card_detailed.dart';
 
 class SearchResultsView extends ConsumerWidget
@@ -19,7 +19,7 @@ class SearchResultsView extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final searchResults = ref.watch(searchResultsListProvider);
+    final provider = AppProvidersProvider(ref, context);
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true),
       body: Padding(
@@ -52,7 +52,7 @@ class SearchResultsView extends ConsumerWidget
             ),
             AppSizes.size14.verticalSpace,
             Expanded(
-              child: searchResults.when(
+              child: provider.searchResults.when(
                 data: (results)
                 {
                   if (results.isEmpty)

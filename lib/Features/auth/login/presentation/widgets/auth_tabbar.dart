@@ -52,7 +52,7 @@ class AuthTabs extends ConsumerWidget
                 //SignUpFormInvite(),
                 //SignUpFormFullName(),
                 //SignUpFormPhoneNumber(),
-                SignUpFormEmail(),
+                //SignUpFormEmail(),
               ],
             ),
           ),

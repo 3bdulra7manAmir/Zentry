@@ -1,29 +1,31 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:test_app/core/helpers/app_providers.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../controller/bottom_nav_index_provider.dart';
 import '../widgets/nav_bar_list.dart';
 
-
-class MyHomePage extends StatefulWidget
+class MyHomePage extends ConsumerStatefulWidget
 {
   const MyHomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => MyHomePageState();
+  ConsumerState<MyHomePage> createState() => MyHomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
+class MyHomePageState extends ConsumerState<MyHomePage> with TickerProviderStateMixin
 {
-  int bottomNavIndex = 0;
   late AnimationController fabAnimationController;
   late AnimationController hideBottomBarAnimationController;
   late Animation<double> fabAnimation;
+
   @override
   void initState()
   {
@@ -41,9 +43,10 @@ class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
   Widget build(BuildContext context)
   {
     final navItems = getNavItems(context);
+    final provider = AppProvidersProvider(ref, context);
     return Scaffold(
       extendBody: true,
-      body: Center(child: Text('Page $bottomNavIndex')), // Sample page body
+      body: Center(child: Text('Page ${provider.bottomNavIndex}')),
       floatingActionButton: GestureDetector(
         onTap: () {},
         child: Image.asset(AppAssets.iconsPNG.navMiddle, fit: BoxFit.contain,),
@@ -71,12 +74,12 @@ class MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin
           );
         },
         backgroundColor: AppColors.color.kWhite001,
-        activeIndex: bottomNavIndex,
+        activeIndex: provider.bottomNavIndex,
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.defaultEdge,
         leftCornerRadius: 21.r,
         rightCornerRadius: 21.r,
-        onTap: (index) => setState(() => bottomNavIndex = index),
+        onTap: (index) => ref.read(bottomNavIndexProvider.notifier).setIndex(index),
         hideAnimationController: hideBottomBarAnimationController,
         shadow: AppShadowBoxes.bottomNavBar,
       ),

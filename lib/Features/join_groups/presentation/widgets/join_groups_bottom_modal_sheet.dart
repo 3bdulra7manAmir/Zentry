@@ -5,7 +5,7 @@ import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/widgets/app_button.dart';
-import '../../../follow_business/presentation/screens/follow_business_page.dart';
+import '../../../follow_business/presentation/widgets/follow_business_card_header.dart';
 import '../screens/join_groups.dart';
 
 void showJoinGroupsBottomSheet(BuildContext context)

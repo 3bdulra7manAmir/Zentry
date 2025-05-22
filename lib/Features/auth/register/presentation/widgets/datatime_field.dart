@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../controllers/date_provider.dart';
+import '../../../../../core/helpers/app_providers.dart';
 
 class DataTimePicker extends ConsumerWidget
 {
@@ -18,10 +18,9 @@ class DataTimePicker extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final selectedDate = ref.watch(selectedDateProvider);
-
-    final displayDate = selectedDate != null
-      ? "${selectedDate.year} / ${selectedDate.month.toString().padLeft(2, '0')} / ${selectedDate.day.toString().padLeft(2, '0')}"
+    final provider = AppProvidersProvider(ref, context);
+    final displayDate = provider.selectedDate != null
+      ? "${provider.selectedDate.year} / ${provider.selectedDate.month.toString().padLeft(2, '0')} / ${provider.selectedDate.day.toString().padLeft(2, '0')}"
       : AppLocalizations.of(context).selectDate;
 
     return Column(

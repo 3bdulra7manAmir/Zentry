@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/helpers/app_providers.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../controllers/gender_provider.dart';
 import 'gender_picker.dart';
 
 class GenderPicker extends ConsumerWidget
@@ -17,9 +17,9 @@ class GenderPicker extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final selectedGender = ref.watch(selectedGenderProvider);
-    final displayGender = (selectedGender?.isNotEmpty ?? false)
-      ? (selectedGender == AppLocalizations.of(context).male ? AppLocalizations.of(context).male :
+    final provider = AppProvidersProvider(ref, context);
+    final displayGender = (provider.selectedGender?.isNotEmpty ?? false)
+      ? (provider.selectedGender == AppLocalizations.of(context).male ? AppLocalizations.of(context).male :
       AppLocalizations.of(context).female) : AppLocalizations.of(context).male;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

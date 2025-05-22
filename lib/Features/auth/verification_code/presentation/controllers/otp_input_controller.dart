@@ -1,19 +1,24 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final otpInputProvider = StateNotifierProvider<OtpInputNotifier, String>(
-  (ref) => OtpInputNotifier(),
-);
+part 'otp_input_controller.g.dart';
 
-class OtpInputNotifier extends StateNotifier<String> {
-  OtpInputNotifier() : super('');
-  void addDigit(String digit, {required int maxLength}) {
-    if (state.length < maxLength) {
+@riverpod
+class OtpInput extends _$OtpInput
+{
+  @override
+  String build() => '';
+
+  void addDigit(String digit, {required int maxLength})
+  {
+    if (state.length < maxLength)
+    {
       state += digit;
     }
   }
 
   void removeDigit() {
-    if (state.isNotEmpty) {
+    if (state.isNotEmpty)
+    {
       state = state.substring(0, state.length - 1);
     }
   }

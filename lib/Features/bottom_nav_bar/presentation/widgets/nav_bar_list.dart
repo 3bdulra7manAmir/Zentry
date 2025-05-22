@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../core/constants/app_images.dart';
 

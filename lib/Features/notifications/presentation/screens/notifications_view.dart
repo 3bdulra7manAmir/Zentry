@@ -8,9 +8,9 @@ import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../controllers/notifications_providers/notifications_items_provider.dart';
 import '../widgets/friend_request_card.dart';
 import '../widgets/notifications_card.dart';
 
@@ -42,8 +42,8 @@ class NotificationsView extends ConsumerWidget
             Consumer(
               builder: (context, ref, _)
               {
-                final notificationsAsyncValue = ref.watch(notificationsItemsProvider);
-                return notificationsAsyncValue.when(
+                final provider = AppProvidersProvider(ref, context);
+                return provider.notificationsAsyncValue.when(
                   data: (notifications) => AppListviewBuilder(
                     itemBuilder: (context, index) => DefaultNotificationCard(notification: notifications[index],),
                     itemCount: notifications.length,

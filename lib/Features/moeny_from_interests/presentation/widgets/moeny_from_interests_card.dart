@@ -7,6 +7,7 @@ import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../../data/model/interest_category.dart';
 import '../controllers/interests_providers.dart';
 
@@ -22,8 +23,8 @@ class MoenyFromInterestsCard extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final selectedCategories = ref.watch(selectedCategoriesProvider);
-    return selectedCategories.when(
+    final provider = AppProvidersProvider(ref, context);
+    return provider.selectedCategories.when(
       data: (selected)
       {
         final isSelected = selected.any((cat) => cat.id == category.id);
