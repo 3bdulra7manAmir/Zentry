@@ -8,6 +8,7 @@ import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/widgets/app_divider.dart';
 
 void showPostOptionsBottomSheet(BuildContext context)
 {
@@ -38,13 +39,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size22.verticalSpace,
-            Divider(
-              color: AppColors.color.kGreyText009, 
-              thickness: AppSizes.size1,
-              indent: 15,
-              endIndent: 15,
-            ),
-
+            const AppDivider(),
             AppSizes.size22.verticalSpace,
             Row(
               children:
@@ -55,13 +50,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size22.verticalSpace,
-            Divider(
-              color: AppColors.color.kGreyText009, 
-              thickness: AppSizes.size1,
-              indent: AppSizes.size15,
-              endIndent: 15,
-            ),
-
+            const AppDivider(),
             AppSizes.size22.verticalSpace,
             Row(
               children:

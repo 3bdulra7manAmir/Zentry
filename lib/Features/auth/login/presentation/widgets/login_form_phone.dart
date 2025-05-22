@@ -13,6 +13,7 @@ import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_social_button.dart';
@@ -129,18 +130,7 @@ class LoginFormWithPhone extends ConsumerWidget
                     buttonText: AppLocalizations.of(context).login,
                     buttonOnPressed: () async
                     {
-                      if (!loginPhoneFormKey.currentState!.validate() == true)
-                      {
-                        await ref.read(loginStateProvider.notifier).loginWithEmail(phoneNumberController.text, passwordController.text);
-                        final state = ref.read(loginStateProvider);
-                        state.whenData((success)
-                        {
-                          if (success)
-                          {
-                            AppRouter.router.pushNamed(AppRoutes.kHomeView);
-                          }
-                        });
-                      }
+                      await loginValidation(loginPhoneFormKey, ref);
                     },
                   );
                 }
@@ -186,10 +176,8 @@ class LoginFormWithPhone extends ConsumerWidget
                   ),
                   AppSizes.size12.verticalSpace,
                   CustomSocialButton(
-                    buttonText: AppLocalizations.of(context).apple, platformLogo:
-                    provider.themeMode == ThemeMode.light
-                            ? AppAssets.iconsPNG.loginApple
-                            : AppAssets.iconsPNG.loginAppleDark,
+                    buttonText: AppLocalizations.of(context).apple,
+                    platformLogo: AppImages.platformLogo(context, ref),
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kDark002,
@@ -203,5 +191,21 @@ class LoginFormWithPhone extends ConsumerWidget
         ),
       ),
     );
+  }
+
+  Future<void> loginValidation(GlobalKey<FormState> loginPhoneFormKey, WidgetRef ref) async
+  {
+    if (!loginPhoneFormKey.currentState!.validate() == true)
+    {
+      await ref.read(loginStateProvider.notifier).loginWithEmail(phoneNumberController.text, passwordController.text);
+      final state = ref.read(loginStateProvider);
+      state.whenData((success)
+      {
+        if (success)
+        {
+          AppRouter.router.pushNamed(AppRoutes.kHomeView);
+        }
+      });
+    }
   }
 }

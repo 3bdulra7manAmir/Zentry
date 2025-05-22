@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../core/constants/app_paddings.dart';
 
-class GridViewBuilder extends StatelessWidget {
+class GridViewBuilder extends StatelessWidget
+{
   const GridViewBuilder({
     super.key,
     required this.itemCount,
@@ -22,7 +23,8 @@ class GridViewBuilder extends StatelessWidget {
   final double? childAspectRatio;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return GridView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,

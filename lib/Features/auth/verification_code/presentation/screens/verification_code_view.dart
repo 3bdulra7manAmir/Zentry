@@ -9,9 +9,9 @@ import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
+import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../widgets/numeric_keyboard.dart';
@@ -44,14 +44,7 @@ class VerificationCodeView extends ConsumerWidget
                 ),
               ),
               AppSizes.size4.horizontalSpace,
-              Image.asset(provider.localeState.selectedLanguageIndex == 0
-                ? (provider.themeMode == ThemeMode.dark
-                  ? AppAssets.iconsPNG.headerArrowLeft
-                  : AppAssets.iconsPNG.appBarBackRight)
-                : (provider.themeMode == ThemeMode.dark
-                  ? AppAssets.iconsPNG.headerArrowRight
-                  : AppAssets.iconsPNG.appBarBackRight),
-              ),
+              Image.asset(AppImages.appBarBackSmartArrow(context, ref),),
               AppSizes.size14.horizontalSpace,
             ],
           ),

@@ -24,25 +24,27 @@ class ForgetPasswordWithPhoneView extends ConsumerWidget
   final TextEditingController phoneNumbrerController = TextEditingController();
   final GlobalKey<FormState> phoneNumberFormKey = GlobalKey<FormState>();
 
-  @override
-Widget build(BuildContext context, WidgetRef ref)
-{
-  final provider = AppProvidersProvider(ref, context);
-  final int? maxLength;
-  if (provider.phoneNumberHolder != null && provider.phoneNumberHolder == 1)
+  void syncOtpWithController(String otp)
   {
-    maxLength = 12;
+    if (phoneNumbrerController.text != otp)
+    {
+      phoneNumbrerController.text = otp;
+      phoneNumbrerController.selection = TextSelection.fromPosition(
+        TextPosition(offset: phoneNumbrerController.text.length),
+      );
+    }
   }
-  else
+  int getMaxLength(int? holder)
   {
-    maxLength = 11;
+    return (holder != null && holder == 1) ? 12 : 11;
   }
 
-  if (phoneNumbrerController.text != provider.otpProvider)
+  @override
+  Widget build(BuildContext context, WidgetRef ref)
   {
-    phoneNumbrerController.text = provider.otpProvider;
-    phoneNumbrerController.selection = TextSelection.fromPosition(TextPosition(offset: phoneNumbrerController.text.length),);
-  }
+    final provider = AppProvidersProvider(ref, context);
+    final maxLength = getMaxLength(provider.phoneNumberHolder);
+    syncOtpWithController(provider.otpProvider);
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(

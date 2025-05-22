@@ -2,8 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/router/app_router.dart';
-import '../constants/app_images.dart';
-import '../helpers/app_providers.dart';
+import '../utils/app_reference.dart';
 
 class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
 {
@@ -25,17 +24,10 @@ class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final provider = AppProvidersProvider(ref, context);
     return AppBar(
       leading: GestureDetector(
         onTap: () => AppRouter.router.pop(),
-        child: barLeading ?? Image.asset(provider.localeState.selectedLanguageIndex == 0
-        ? (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.headerArrowRight
-          : AppAssets.iconsPNG.appBarBackRight)
-        : (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.headerArrowLeft
-          : AppAssets.iconsPNG.appBarBackLeft)),
+        child: barLeading ?? AppImages.appBarBackArrow(context, ref),
       ),
       leadingWidth: barLeadingWidth ?? 65.w,
       title: barTitle,

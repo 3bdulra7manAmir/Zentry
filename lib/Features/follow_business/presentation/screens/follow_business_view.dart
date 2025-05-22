@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/constants/app_borders.dart';
 import '../widgets/follow_business_page.dart';
 

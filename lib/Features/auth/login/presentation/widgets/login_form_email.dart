@@ -14,6 +14,7 @@ import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_social_button.dart';
@@ -123,18 +124,7 @@ class LoginFormWithEmail extends ConsumerWidget
                     buttonText: AppLocalizations.of(context).login,
                     buttonOnPressed: () async
                     {
-                      if (!loginEmailFormKey.currentState!.validate() == true)
-                      {
-                        await ref.read(loginStateProvider.notifier).loginWithEmail(emailController.text, passwordController.text);
-                        final state = ref.read(loginStateProvider);
-                        state.whenData((success)
-                        {
-                          if (success)
-                          {
-                            AppRouter.router.pushNamed(AppRoutes.kHomeView);
-                          }
-                        });
-                      }
+                      await loginValidation(ref);
                     },
                   );
                 }
@@ -183,16 +173,11 @@ class LoginFormWithEmail extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
                   CustomSocialButton(
                     buttonText: AppLocalizations.of(context).apple,
-                    platformLogo:
-                        provider.themeMode == ThemeMode.light
-                            ? AppAssets.iconsPNG.loginApple
-                            : AppAssets.iconsPNG.loginAppleDark,
+                    platformLogo: AppImages.platformLogo(context, ref),
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kDark002,
-                    buttonTextStyle: AppStyles.textStyle12(
-                      fontColor: AppColors.color.kBlack002,
-                    ),
+                    buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),
                   ),
                 ],
               ),
@@ -202,5 +187,20 @@ class LoginFormWithEmail extends ConsumerWidget
         ),
       ),
     );
+  }
+
+  Future<void> loginValidation(WidgetRef ref) async {
+    if (!loginEmailFormKey.currentState!.validate() == true)
+    {
+      await ref.read(loginStateProvider.notifier).loginWithEmail(emailController.text, passwordController.text);
+      final state = ref.read(loginStateProvider);
+      state.whenData((success)
+      {
+        if (success)
+        {
+          AppRouter.router.pushNamed(AppRoutes.kHomeView);
+        }
+      });
+    }
   }
 }

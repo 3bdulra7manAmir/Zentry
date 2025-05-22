@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/widgets/app_circular_indicator.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/helpers/app_providers.dart';
@@ -34,7 +35,7 @@ class NotificationsSearchView extends StatelessWidget
                     itemCount: notifications.length,
                     separatorBuilder: (context, index) => AppSizes.size14.verticalSpace,
                   ),
-                  loading: () => const Center(child: CircularProgressIndicator()),
+                  loading: () => const Center(child: AppCircularIndicator()),
                   error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error'),),
                 );
               },

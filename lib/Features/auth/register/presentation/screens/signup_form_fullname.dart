@@ -8,8 +8,8 @@ import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/services/validation/app_validation.dart';
+import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_social_button.dart';
@@ -28,7 +28,6 @@ class SignUpFormFullName extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> fullNameFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
@@ -119,7 +118,7 @@ class SignUpFormFullName extends ConsumerWidget
                   AppSizes.size12.verticalSpace,
                   CustomSocialButton(
                     buttonText: AppLocalizations.of(context).apple,
-                    platformLogo: provider.themeMode == ThemeMode.light ? AppAssets.iconsPNG.loginApple : AppAssets.iconsPNG.loginAppleDark,
+                    platformLogo: AppImages.platformLogo(context, ref),
                     buttonWidth: 174.w,
                     isLogoSpace: false,
                     buttonBackgroundColor: AppColors.color.kDark002,

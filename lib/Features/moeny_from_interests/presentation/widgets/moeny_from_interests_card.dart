@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/widgets/app_circular_indicator.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
@@ -64,12 +65,7 @@ class MoenyFromInterestsCard extends ConsumerWidget
                       Text(AppLocalizations.of(context).interestedIn, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight,),),
                       AppSizes.size5.horizontalSpace,
                       Flexible(
-                        child: Text(
-                          category.name,
-                          style: AppStyles.textStyle12(
-                            fontColor: AppColors.color.kBlue003,
-                            fontWeight: AppFontWeights.semiBoldWeight,
-                          ),
+                        child: Text(category.name, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlue003, fontWeight: AppFontWeights.semiBoldWeight,),
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -82,11 +78,9 @@ class MoenyFromInterestsCard extends ConsumerWidget
           ],
         );
       },
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => const Center(child: AppCircularIndicator()),
       error: (error, stack) => Center(
-        child: Text(
-          '${AppLocalizations.of(context).error}: $error',
-          style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001),
+        child: Text('${AppLocalizations.of(context).error}: $error', style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001),
         ),
       ),
     );

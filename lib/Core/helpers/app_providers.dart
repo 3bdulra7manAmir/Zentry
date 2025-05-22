@@ -27,7 +27,9 @@ import '../../features/moeny_from_interests/data/model/interest_category.dart';
 import '../../features/moeny_from_interests/presentation/controllers/interests_providers.dart';
 import '../../features/notifications/domain/entity/notification_entity.dart';
 import '../../features/notifications/presentation/controllers/notifications_providers/notifications_items_provider.dart';
+import '../../features/search/domain/entities/search_category.dart';
 import '../../features/search/domain/entities/search_result.dart';
+import '../../features/search/presentation/controllers/search_providers/search_providers.dart';
 import '../../features/search/presentation/controllers/search_result_providers/search_result_providers.dart';
 import '../services/localization/controller/localization_controller.dart';
 
@@ -80,6 +82,7 @@ class AppProvidersProvider
   AsyncValue<List<InterestCategory>> get selectedCategories => ref.watch(selectedCategoriesProvider);
   AsyncValue<List<NotificationEntity>> get notificationsAsyncValue => ref.watch(notificationsItemsProvider);
   AsyncValue<List<SearchResult>> get searchResults => ref.watch(searchResultsListProvider);
+  AsyncValue<List<SearchCategory>> get searchResultsCategory => ref.watch(searchResultsProvider);
 }
 
 String getAppText(BuildContext context, String Function(AppLocalizations) selector,)

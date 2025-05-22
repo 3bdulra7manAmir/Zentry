@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/widgets/app_circular_indicator.dart';
 
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
@@ -77,7 +78,7 @@ class SearchResultsView extends ConsumerWidget
                     },
                   );
                 },
-                loading: () => const Center(child: CircularProgressIndicator()),
+                loading: () => const Center(child: AppCircularIndicator()),
                 error: (error, stack) => Center(
                   child: Text('${AppLocalizations.of(context).error}: $error', style: AppStyles.textStyle14(
                       fontColor: AppColors.color.kGreyText002,

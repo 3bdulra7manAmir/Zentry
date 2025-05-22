@@ -12,10 +12,7 @@ import '../../domain/entity/business.dart';
 class FollowBusinessCard extends StatelessWidget
 {
   final Business business;
-  const FollowBusinessCard({
-    super.key,
-    required this.business,
-  });
+  const FollowBusinessCard({super.key, required this.business,});
 
   @override
   Widget build(BuildContext context)
@@ -23,27 +20,16 @@ class FollowBusinessCard extends StatelessWidget
     return Padding(
       padding: AppPadding.horizontal21,
       child: Row(
-        children: [
-          // Use business avatar here
+        children:
+        [
           Image.asset(business.image),
           AppSizes.size12.horizontalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                business.title,
-                style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kBlack001,
-                  fontWeight: AppFontWeights.semiBoldWeight,
-                ),
-              ),
-              Text(
-                business.subtitle,
-                style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kGreyText011,
-                  fontWeight: AppFontWeights.semiBoldWeight,
-                ),
-              ),
+            children:
+            [
+              Text(business.title, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.semiBoldWeight,),),
+              Text(business.subtitle, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText011, fontWeight: AppFontWeights.semiBoldWeight,),),
             ],
           ),
           const Spacer(),

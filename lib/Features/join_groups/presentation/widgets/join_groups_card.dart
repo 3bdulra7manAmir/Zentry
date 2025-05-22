@@ -19,7 +19,8 @@ class JoinGroupsCard extends StatelessWidget
   {
     return Stack(
       clipBehavior: Clip.none,
-      children: [
+      children:
+      [
         Container(
           width: 149.w,
           height: 105.h,
@@ -33,20 +34,9 @@ class JoinGroupsCard extends StatelessWidget
             children:
             [
               AppSizes.size20.verticalSpace,
-              Text(
-                group.title,
-                style: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kBlack001,
-                ),
-              ),
+              Text(group.title, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack001,),),
               AppSizes.size5.verticalSpace,
-              Text(
-                group.membersCount,
-                style: AppStyles.textStyle10(
-                  fontWeight: AppFontWeights.mediumWeight,
-                  fontColor: AppColors.color.kBlue003,
-                ),
-              ),
+              Text(group.membersCount, style: AppStyles.textStyle10(fontWeight: AppFontWeights.mediumWeight, fontColor: AppColors.color.kBlue003,),),
               AppSizes.size5.verticalSpace,
               Image.asset(AppAssets.iconsPNG.groupMembers)
             ],

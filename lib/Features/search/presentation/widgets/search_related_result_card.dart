@@ -22,9 +22,7 @@ class SearchRelatedResultCard extends StatelessWidget
       [
         Image.asset(category.image),
         AppSizes.size16.horizontalSpace,
-        Text(
-          category.title,
-          style: AppStyles.textStyle14(
+        Text(category.title, style: AppStyles.textStyle14(
             fontColor: AppColors.color.kBlack001,
             fontWeight: AppFontWeights.semiBoldWeight,
           ),

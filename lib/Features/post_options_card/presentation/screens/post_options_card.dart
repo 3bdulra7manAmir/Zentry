@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/widgets/app_divider.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
@@ -58,8 +59,8 @@ void showPostOptionsBottomSheet(BuildContext context)
             Divider(
               color: AppColors.color.kGreyText009, 
               thickness: AppSizes.size1,
-              indent: 15,
-              endIndent: 15,
+              indent: AppSizes.size15,
+              endIndent: AppSizes.size15,
             ),
 
             AppSizes.size22.verticalSpace,
@@ -74,13 +75,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size22.verticalSpace,
-            Divider(
-              color: AppColors.color.kGreyText009, 
-              thickness: AppSizes.size1,
-              indent: 15,
-              endIndent: 15,
-            ),
-
+            const AppDivider(),
             AppSizes.size22.verticalSpace,
             Row(
               children:

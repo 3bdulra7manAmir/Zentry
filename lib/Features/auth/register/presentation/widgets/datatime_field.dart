@@ -22,7 +22,6 @@ class DataTimePicker extends ConsumerWidget
     final displayDate = provider.selectedDate != null
       ? "${provider.selectedDate.year} / ${provider.selectedDate.month.toString().padLeft(2, '0')} / ${provider.selectedDate.day.toString().padLeft(2, '0')}"
       : AppLocalizations.of(context).selectDate;
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children:

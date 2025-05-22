@@ -10,6 +10,7 @@ import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/helpers/app_providers.dart';
+import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_container.dart';
@@ -26,14 +27,6 @@ class AppFormView extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
-    Image arrowImage = Image.asset(provider.localeState.selectedLanguageIndex == 0
-      ? (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.headerArrowLeft
-          : AppAssets.iconsPNG.formArrowLeft)
-      : (provider.themeMode == ThemeMode.dark
-          ? AppAssets.iconsPNG.headerArrowRight
-          : AppAssets.iconsPNG.formArrowRight),
-    );
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,
@@ -66,7 +59,7 @@ class AppFormView extends ConsumerWidget
               child: CustomContainer(
                 fieldPrefixIcon: Image.asset(provider.languageFlag),
                 fieldText: provider.languageLabel,
-                fieldsuffixIcon: arrowImage,
+                fieldsuffixIcon: AppImages.arrowImage(context, ref),
               ),
             ),
             AppSizes.size16.verticalSpace,
@@ -75,7 +68,7 @@ class AppFormView extends ConsumerWidget
               child: CustomContainer(
                 fieldPrefixIcon: Image.asset(provider.countryFlag),
                 fieldText: provider.countryLabel,
-                fieldsuffixIcon: arrowImage,
+                fieldsuffixIcon: AppImages.arrowImage(context, ref),
               ),
             ),
             AppSizes.size16.verticalSpace,
@@ -88,7 +81,7 @@ class AppFormView extends ConsumerWidget
                     : AppAssets.iconsPNG.formLightMode,
                 ),
                 fieldText: provider.themeLabel,
-                fieldsuffixIcon: arrowImage,
+                fieldsuffixIcon: AppImages.arrowImage(context, ref),
               ),
             ),
             AppSizes.size27.verticalSpace,

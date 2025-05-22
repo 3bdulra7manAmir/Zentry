@@ -21,7 +21,7 @@ class MoenyFromInviteCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Column(
-      mainAxisSize: MainAxisSize.min, // Use minimum space needed
+      mainAxisSize: MainAxisSize.min,
       children:
       [
         Container(
@@ -29,10 +29,7 @@ class MoenyFromInviteCard extends StatelessWidget
           width: 326.w,
           height: 187.h,
           decoration: BoxDecoration(
-            image:  DecorationImage(
-              image: AssetImage(AppAssets.iconsPNG.invitesVideoThumbnail),
-              fit: BoxFit.cover,
-            ),  
+            image:  DecorationImage(image: AssetImage(AppAssets.iconsPNG.invitesVideoThumbnail), fit: BoxFit.cover,),  
             borderRadius: AppBordersRadiuses.circular10,
           ),
           child: Image.asset(AppAssets.iconsPNG.invitesPlayButton,),
