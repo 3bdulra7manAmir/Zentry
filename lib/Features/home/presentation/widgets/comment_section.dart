@@ -15,7 +15,7 @@ void showCommentsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -25,22 +25,22 @@ void showCommentsBottomSheet(BuildContext context)
         [
           AppSizes.size11.verticalSpace,
           Padding(
-            padding: AppPadding.commentsSection,
+            padding: AppPadding.startOnly13,
             child: Image.asset(AppAssets.iconsPNG.commentSectionBackArrow,),
           ),
           AppSizes.size25.verticalSpace,
           Container(
             width: double.infinity,
             height: 283.h,
-            margin: AppMargins.kApp10Padding,
+            margin: AppMargins.horizontal10,
             decoration: BoxDecoration(
-              borderRadius: AppBorders.buttonBorder7,
+              borderRadius: AppBorders.circular7,
               image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.commentSectionMercJeep)),
             ),
           ),
           AppSizes.size30.verticalSpace,
           Padding(
-            padding: AppPadding.commentsSection2,
+            padding: AppPadding.horizontal38,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children:
@@ -52,8 +52,8 @@ void showCommentsBottomSheet(BuildContext context)
                   height: 40.h,
                   decoration: BoxDecoration(
                     color: AppColors.color.kGrey002,
-                    borderRadius: AppBorders.buttonBorder10,
-                    border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.width2,),
+                    borderRadius: AppBorders.circular10,
+                    border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.medium,),
                   ),child: CustomTextFormField(
                     fieldKeyboardType: TextInputType.text,
                     fieldText: AppLocalizations.of(context).commentHere,

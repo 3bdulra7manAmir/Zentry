@@ -36,7 +36,7 @@ class CreatePanelButton extends StatelessWidget
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
           backgroundColor: buttonBackgroundColor ?? AppColors.color.kGrey002,
-          shape: RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.buttonBorder5),
+          shape: RoundedRectangleBorder(borderRadius: buttonBorderRadius ?? AppBorders.circular5),
         ),
         icon: Image.asset(iconPath),
         label: Text(buttonText, style: buttonTextStyle ?? AppStyles.textStyle12(fontColor: AppColors.color.kGreyText008, fontWeight: AppFontWeights.boldWeight),),

@@ -29,7 +29,7 @@ class SignUpFormEmail extends ConsumerWidget
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> signUpEmailFormKey = GlobalKey<FormState>();
     return Container(
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
@@ -91,7 +91,7 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldObscureText: provider.obscureText,
                 fieldText: AppLocalizations.of(context).invitationCodeExample,
                 fieldsuffixIcon: Padding(
-                  padding: AppPadding.kPastePadding,
+                  padding: AppPadding.endOnly15,
                   child: SizedBox(
                     width: 60.w,
                     child: Align(

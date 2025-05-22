@@ -31,7 +31,7 @@ class FormHeader extends ConsumerWidget
       [
         Container(
           clipBehavior: Clip.none,
-          padding: AppPadding.appFormHeader,
+          padding: AppPadding.formHeader,
           width: double.infinity,
           color: AppColors.color.kBlue001,
           child: Image.asset(AppAssets.iconsPNG.headerFullLogo),

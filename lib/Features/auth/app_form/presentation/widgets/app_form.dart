@@ -35,10 +35,10 @@ class AppFormView extends ConsumerWidget
               : AppAssets.iconsPNG.formArrowRight),
     );
     return Container(
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.formBorder,
+        borderRadius: AppBorders.topOnly20,
         color: Theme.of(context).cardColor,
       ),
       child: AppForm(
@@ -52,7 +52,7 @@ class AppFormView extends ConsumerWidget
               height: 3.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGreyText002,
-                borderRadius: AppBorders.dividerBorder,
+                borderRadius: AppBorders.circular4,
               ),
             ),
             AppSizes.size24.verticalSpace,

@@ -25,12 +25,12 @@
 //     return Container(
 //       width: 359.w,
 //       height: 140.h,
-//       decoration: BoxDecoration(borderRadius: AppBorders.buttonBorder5,),
+//       decoration: BoxDecoration(borderRadius: AppBorders.circular5,),
 //       child: Row(
 //         children: [
 //           Image.asset(result.car, width: 163.w, height: 140.h, fit: BoxFit.fill,),
 //           Padding(
-//             padding: AppPadding.kSearchResultCardPadding,
+//             padding: AppPadding.all6,
 //             child: Column(
 //               crossAxisAlignment: CrossAxisAlignment.start,
 //               children:

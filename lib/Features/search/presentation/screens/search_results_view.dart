@@ -22,7 +22,7 @@ class SearchResultsView extends ConsumerWidget {
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true),
       body: Padding(
-        padding: AppPadding.kAppFormPadding,
+        padding: AppPadding.horizontal16,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -30,7 +30,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
     //final signUpType = ref.watch(signUpTypeProvider);
     final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
     return Container(
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(

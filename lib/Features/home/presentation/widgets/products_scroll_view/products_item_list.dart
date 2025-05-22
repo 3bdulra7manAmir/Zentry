@@ -21,7 +21,7 @@ class ProductsItemList extends ConsumerWidget
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
       data: (products) => AppListviewBuilder(
-        padding: AppPadding.kHomeListViewPadding,
+        padding: AppPadding.startOnly12,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => ProductsItem(product: products[index],),
         separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,

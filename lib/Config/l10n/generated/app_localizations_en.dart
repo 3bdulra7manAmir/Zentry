@@ -15,7 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get welcomeBack => 'Welcome Back';
 
   @override
-  String get language => 'Langauage';
+  String get language => 'Language';
 
   @override
   String get country => 'Country';
@@ -75,9 +75,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get apple => 'Apple';
 
   @override
-  String get signUpPage => 'Sign Up Form Goes Here';
-
-  @override
   String get fullName => 'Full Name';
 
   @override
@@ -91,6 +88,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get female => 'Female';
+
+  @override
+  String get signUpPage => 'Sign Up Form Goes Here';
 
   @override
   String get resetPassword => 'Reset Password';
@@ -150,45 +150,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get resendIn60s => 'Resend in 60s';
 
   @override
-  String get search => 'Search';
-
-  @override
-  String get default_ => 'default';
-
-  @override
-  String get selected => 'Selected';
-
-  @override
-  String get light => 'Light';
-
-  @override
-  String get dark => 'Dark';
-
-  @override
-  String get morocco => 'Morocco';
-
-  @override
-  String get kuwait => 'Kuwait';
-
-  @override
-  String get egypt => 'Egypt';
-
-  @override
-  String get syrianArab => 'Syrian Arab';
-
-  @override
-  String get unitedArabEmirates => 'United Arab Emirates';
-
-  @override
-  String get saudiArabia => 'Saudi Arabia (SA)';
-
-  @override
-  String get arabic => 'Arabic';
-
-  @override
-  String get english => 'English';
-
-  @override
   String get num0 => '0';
 
   @override
@@ -223,6 +184,45 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backSpace => '⌫';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get arabic => 'Arabic';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get egypt => 'Egypt';
+
+  @override
+  String get saudiArabia => 'Saudi Arabia (SA)';
+
+  @override
+  String get unitedArabEmirates => 'United Arab Emirates';
+
+  @override
+  String get kuwait => 'Kuwait';
+
+  @override
+  String get morocco => 'Morocco';
+
+  @override
+  String get syrianArab => 'Syrian Arab';
+
+  @override
+  String get dark => 'Dark';
+
+  @override
+  String get light => 'Light';
+
+  @override
+  String get default_ => 'default';
+
+  @override
+  String get selected => 'Selected';
 
   @override
   String get emailIsRequired => 'Email is required';
@@ -306,6 +306,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get confirm => 'Confirm';
 
   @override
+  String get cairoEgypt => 'Cairo,Egypt';
+
+  @override
   String get notification => 'Notification';
 
   @override
@@ -360,6 +363,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get audiRs7Quattro => 'Audi Rs7 Quattro';
 
   @override
+  String get bmw320Model2019 => 'Bmw 320 model 2019';
+
+  @override
   String get k5k10 => '5k-10k';
 
   @override
@@ -375,13 +381,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get negotiation => 'Negotiation';
 
   @override
-  String get cairoEgypt => 'Cairo, Egypt';
-
-  @override
-  String get bmw320Model2019 => 'Bmw 320 model 2019';
-
-  @override
-  String get categories => 'Categories';
+  String get categories => 'categories';
 
   @override
   String get clear => 'Clear';
@@ -393,10 +393,88 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pets => 'Pets';
 
   @override
-  String get vehciles => 'Vehciles';
+  String get ibrahim => 'Ibrahim';
+
+  @override
+  String get commentOnYourProduct => 'Comment on your product';
+
+  @override
+  String get iPhone14promax => 'iPhone 14 pro max';
+
+  @override
+  String get oneDayAgo => '1 Day Ago';
+
+  @override
+  String get view => 'View';
+
+  @override
+  String get replay => 'Replay';
+
+  @override
+  String get block => 'Block';
+
+  @override
+  String get favourite => 'Favourite';
+
+  @override
+  String get followBusinessPage => 'Follow Business page';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get elSayadMotor => 'El Sayad Motor';
+
+  @override
+  String get carServices => 'Car Services';
 
   @override
   String get follow => 'Follow';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get seeAll => 'See All';
+
+  @override
+  String get copyLinks => 'Copy Links';
+
+  @override
+  String get turnOnNotification => 'Turn on Notification';
+
+  @override
+  String get report => 'Report';
+
+  @override
+  String get joinGroups => 'Join Groups';
+
+  @override
+  String get moenyFromInterests => 'Moeny From Interests';
+
+  @override
+  String get watchTutorial => 'Watch Tutorial';
+
+  @override
+  String get vehicles => 'Vehicles';
+
+  @override
+  String get mercedesAMGG63 => 'Mercedes AMG G63';
+
+  @override
+  String get threeHundredEGP => '3,000,000 EGP';
+
+  @override
+  String get reuealAndStaging => 'REUEAL & Staging';
+
+  @override
+  String get justNow => 'Just Now';
+
+  @override
+  String get createStory => 'Create Story';
+
+  @override
+  String get elHawiMotors => 'El Hawi Motors';
 
   @override
   String get home => 'Home';
@@ -457,4 +535,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get error => 'Error';
+
+  @override
+  String get moneyFromInvite => 'Money From Invite';
 }

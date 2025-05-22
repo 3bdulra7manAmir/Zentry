@@ -20,14 +20,14 @@ class UsersStory extends StatelessWidget
       height: 148.h,
       width: 112.w,
       decoration: BoxDecoration(
-        borderRadius: AppBorders.buttonBorder5,
+        borderRadius: AppBorders.circular5,
         image: DecorationImage(
           image: AssetImage(story.backgroundImage),
           fit: BoxFit.cover,
         ),
       ),
       child: Padding(
-        padding: AppPadding.kHomeListViewPadding,
+        padding: AppPadding.startOnly12,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -36,14 +36,14 @@ class UsersStory extends StatelessWidget
               height: 40.h,
               width: 40.w,
               decoration: BoxDecoration(
-                borderRadius: AppBorders.kProductItemRadius,
+                borderRadius: AppBorders.circular50,
                 border: Border.all(
                   color: AppColors.color.kOrange003,
                   width: 2.w,
                 ),
               ),
               child: ClipRRect(
-                borderRadius: AppBorders.kProductItemRadius,
+                borderRadius: AppBorders.circular50,
                 child: Image.asset(story.userAvatar, fit: BoxFit.cover,),
               ),
             ),

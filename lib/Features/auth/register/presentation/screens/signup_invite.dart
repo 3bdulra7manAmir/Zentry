@@ -30,7 +30,7 @@ class SignUpFormInvite extends ConsumerWidget
     final provider = AppProvidersProvider(ref, context);
     final GlobalKey<FormState> inviteFormKey = GlobalKey<FormState>();
     return Container(
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(

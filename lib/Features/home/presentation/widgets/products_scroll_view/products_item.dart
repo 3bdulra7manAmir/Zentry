@@ -29,7 +29,7 @@ class ProductsItem extends StatelessWidget
           decoration: BoxDecoration(
             color: backgroundColor,
             image: product.image != null ? DecorationImage(image: AssetImage(product.image!)) : null,
-            borderRadius: AppBorders.kProductItemRadius,
+            borderRadius: AppBorders.circular50,
           ),
         ),
         AppSizes.size8.verticalSpace,

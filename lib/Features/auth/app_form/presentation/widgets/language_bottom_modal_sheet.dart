@@ -17,25 +17,25 @@ void showLanguageBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
     builder: (BuildContext context)
     {
       final List<dynamic> languagesList = getLanguagesList(context);
       return Padding(
-        padding: AppPadding.kAppFormPadding,
+        padding: AppPadding.horizontal16,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children:
           [
             AppSizes.size8.verticalSpace,
             Container(
-              margin: AppMargins.kAppFormPadding,
+              margin: AppMargins.horizontal16,
               alignment: Alignment.center,
               width: 44.w,
               height: 4.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGreyText002,
-                borderRadius: AppBorders.dividerBorder,
+                borderRadius: AppBorders.circular4,
               ),
             ),
             AppSizes.size18.verticalSpace,

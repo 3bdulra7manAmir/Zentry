@@ -51,7 +51,7 @@ class ForgetPasswordWithEmailView extends StatelessWidget
               AppSizes.size48.verticalSpace,
               Container(
                 alignment: Alignment.center,
-                margin: AppMargins.kAppFormPadding,
+                margin: AppMargins.horizontal16,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:

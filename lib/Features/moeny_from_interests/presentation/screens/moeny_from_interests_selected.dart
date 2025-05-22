@@ -18,11 +18,11 @@
 //     backgroundColor: Theme.of(context).cardColor,
 //     isDismissible: true,
 //     //isScrollControlled: true,
-//     shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+//     shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
 //     builder: (BuildContext context)
 //     {
 //       return Padding(
-//         padding: AppPadding.kFollowingBusinessPagePadding,
+//         padding: AppPadding.horizontal21,
 //         child: Column(
 //           children:
 //           [
@@ -41,7 +41,7 @@
 //             Container(
 //               width: double.infinity,
 //               height: 79.h,
-//               padding: AppPadding.kNextButtonPadding,
+//               padding: AppPadding.nextButton,
 //               decoration: BoxDecoration(
 //                 color: AppColors.color.kGrey200FormFill,
 //               ),
@@ -74,8 +74,8 @@
 //       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 11.h),
 //       width: 322.w,
 //       decoration: BoxDecoration(
-//         border: Border.all(color: AppColors.color.kOrange003, width: AppBorderWidths.width2),
-//         borderRadius: AppBorders.postPriceCard8,
+//         border: Border.all(color: AppColors.color.kOrange003, width: AppBorderWidths.medium),
+//         borderRadius: AppBorders.circular8,
 //       ),
 //       child: GridView.builder(
 //         physics: const NeverScrollableScrollPhysics(),
@@ -103,7 +103,7 @@
 //                       height: 45.h, width: 45.w,
 //                       decoration: BoxDecoration(
 //                         color: isSelected ? AppColors.color.kOrangeRobotBoyRadius : AppColors.color.kWhite100Secondary,
-//                         borderRadius: AppBorders.kProductItemRadius,
+//                         borderRadius: AppBorders.circular50,
 //                       ),
 //                       child: Image.asset("assets/icons/Money_From_Interests/Car.png", width: 45.w, height: 45.h, fit: BoxFit.contain,),
 //                     ),

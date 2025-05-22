@@ -77,7 +77,7 @@ class VerificationCodeView extends ConsumerWidget
             ),
             AppSizes.size51.verticalSpace,
             Container(
-              margin: AppMargins.kAppFormPadding,
+              margin: AppMargins.horizontal16,
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,7 +106,7 @@ class VerificationCodeView extends ConsumerWidget
                                 color: AppColors.color.kGrey001,
                                 width: AppSizes.size1.w,
                               ),
-                              borderRadius: AppBorders.buttonBorder10,
+                              borderRadius: AppBorders.circular10,
                             ),
                             child: Text(
                               index < provider.otpProvider.length ? provider.otpProvider[index] : '',

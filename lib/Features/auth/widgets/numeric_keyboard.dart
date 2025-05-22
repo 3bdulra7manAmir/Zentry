@@ -18,7 +18,7 @@ class NumericKeyboard extends ConsumerWidget
   {
     final List<String> keys = getNumbersList(context);
     return GridView.builder( //HERE
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       itemCount: 12,
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -43,7 +43,7 @@ class NumericKeyboard extends ConsumerWidget
             }
           },
           child: Container(
-            decoration: BoxDecoration(color: AppColors.color.kGrey005, borderRadius: AppBorders.buttonBorder10,),
+            decoration: BoxDecoration(color: AppColors.color.kGrey005, borderRadius: AppBorders.circular10,),
             alignment: Alignment.center,
             child: Text(keys[index], style: AppStyles.textStyle18(fontColor: AppColors.color.kGreyText005,),),
           ),

@@ -46,7 +46,7 @@ class RestPasswordView extends ConsumerWidget
               Image.asset(AppAssets.iconsPNG.resetPasswordLock, alignment: Alignment.center,),
               AppSizes.size24.verticalSpace,
               Container(
-                margin: AppMargins.kAppFormPadding,
+                margin: AppMargins.horizontal16,
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

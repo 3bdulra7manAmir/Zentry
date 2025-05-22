@@ -29,7 +29,7 @@ class NotificationsView extends ConsumerWidget
           fontWeight: AppFontWeights.regularWeight,),
         ),
         barActions: [Image.asset(AppAssets.iconsPNG.notificationSearchDark)],
-        barActionsPadding: AppPadding.kSearchIconPadding,
+        barActionsPadding: AppPadding.endOnly20,
       ),
       backgroundColor: Theme.of(context).cardColor,
       body: SingleChildScrollView(

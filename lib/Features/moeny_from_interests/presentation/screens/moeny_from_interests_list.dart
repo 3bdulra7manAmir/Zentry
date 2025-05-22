@@ -20,7 +20,7 @@ void showMoenyFromInterestsBottomSheet(BuildContext context) {
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context) {
       return const MoneyFromInterestsListView();
     },
@@ -37,7 +37,7 @@ class MoneyFromInterestsListView extends ConsumerWidget {
 
     return Column(
       children: [
-        const FollowBusinessCardHeader(headerText: AppStrings.moenyFromInterests),
+        FollowBusinessCardHeader(headerText: AppLocalizations.of(context).moenyFromInterests),
         Expanded(
           child: categoriesAsyncValue.when(
             data: (categories) => AppListviewBuilder(
@@ -59,23 +59,23 @@ class MoneyFromInterestsListView extends ConsumerWidget {
         Container(
           width: double.infinity,
           height: 79.h,
-          padding: AppPadding.kNextButtonPadding,
+          padding: AppPadding.nextButton,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
           ),
           child: selectedCategoriesAsync.when(
             data: (selectedCategories) => CustomButton(
-              buttonText: AppStrings.next,
+              buttonText: AppLocalizations.of(context).next,
               buttonOnPressed: selectedCategories.isNotEmpty 
                 ? () => _onNextPressed(context, selectedCategories)
                 : null,
             ),
-            loading: () => const CustomButton(
-              buttonText: AppStrings.next,
+            loading: () => CustomButton(
+              buttonText: AppLocalizations.of(context).next,
               buttonOnPressed: null,
             ),
-            error: (_, __) => const CustomButton(
-              buttonText: AppStrings.next,
+            error: (_, __) => CustomButton(
+              buttonText: AppLocalizations.of(context).next,
               buttonOnPressed: null,
             ),
           ),
@@ -126,7 +126,7 @@ class MoenyFromInterestsCard extends ConsumerWidget {
               height: 48.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kWhite001,
-                borderRadius: AppBorders.kProductItemRadius,
+                borderRadius: AppBorders.circular50,
               ),
               child: Image.asset(category.image,
                 width: 45.w,

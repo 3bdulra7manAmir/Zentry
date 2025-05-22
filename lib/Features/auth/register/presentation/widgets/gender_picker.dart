@@ -18,7 +18,7 @@ void showGenderPickerBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
     builder: (BuildContext context)
     {
       return Consumer(
@@ -29,7 +29,7 @@ void showGenderPickerBottomSheet(BuildContext context)
             builder: (BuildContext context, StateSetter setState)
             {
               return Padding(
-                padding: AppPadding.kTabBarPadding,
+                padding: AppPadding.symmetric16,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children:
@@ -37,7 +37,7 @@ void showGenderPickerBottomSheet(BuildContext context)
                     Container(
                       width: 73.w,
                       height: 3.h,
-                      decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBorders.dividerBorder,),
+                      decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBorders.circular4,),
                     ),
                     AppSizes.size30.verticalSpace,
                     Column(
@@ -105,10 +105,10 @@ class GenderOption extends StatelessWidget
   {
     return InkWell(
       onTap: () => onChanged(value),
-      borderRadius: AppBorders.buttonBorder10,
+      borderRadius: AppBorders.circular10,
       child: Container(
-        padding: AppPadding.kAppFormPadding,
-        decoration: BoxDecoration(borderRadius: AppBorders.buttonBorder10,),
+        padding: AppPadding.horizontal16,
+        decoration: BoxDecoration(borderRadius: AppBorders.circular10,),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:

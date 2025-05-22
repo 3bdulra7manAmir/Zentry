@@ -27,8 +27,8 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.buttonBorder10,
-              border: AppBoxBorders.commonborder,
+              borderRadius: AppBorders.circular10,
+              border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
             child: Center(child: Image.asset(AppAssets.iconsPNG.commentHeart, fit: BoxFit.contain,),),
@@ -41,8 +41,8 @@ class CommentCard extends StatelessWidget
               height: 40.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGrey002,
-                borderRadius: AppBorders.buttonBorder10,
-                border: AppBoxBorders.commonborder,
+                borderRadius: AppBorders.circular10,
+                border: AppBoxBorders.standard,
               ),
               child: CustomTextFormField(
                 fieldKeyboardType: TextInputType.text,
@@ -59,8 +59,8 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.buttonBorder10,
-              border: AppBoxBorders.commonborder,
+              borderRadius: AppBorders.circular10,
+              border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
             child: Center(
@@ -75,8 +75,8 @@ class CommentCard extends StatelessWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBorders.buttonBorder10,
-              border: AppBoxBorders.commonborder,
+              borderRadius: AppBorders.circular10,
+              border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
             child: Center(child: Image.asset(AppAssets.iconsPNG.commentShare, fit: BoxFit.contain,),),

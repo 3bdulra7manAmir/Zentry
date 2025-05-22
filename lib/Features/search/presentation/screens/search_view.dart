@@ -23,7 +23,7 @@ class SearchView extends ConsumerWidget
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true),
       body: Padding(
-        padding: AppPadding.kAppFormPadding,
+        padding: AppPadding.horizontal16,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

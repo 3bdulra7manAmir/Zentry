@@ -18,7 +18,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get language => 'اللغة';
 
   @override
-  String get country => 'الدولة';
+  String get country => 'البلد';
 
   @override
   String get mode => 'الوضع';
@@ -42,10 +42,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get phone => 'الهاتف';
 
   @override
-  String get egyptCountryCode => '+٢٠  |  رقم الهاتف';
+  String get egyptCountryCode => '+20 | رقم الهاتف';
 
   @override
-  String get saudiArabiaCountryCode => '+٩٦٦  |  رقم الجوال';
+  String get saudiArabiaCountryCode => '+966 | رقم الهاتف';
 
   @override
   String get enterEmaill => 'أدخل البريد الإلكتروني';
@@ -60,10 +60,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get forgetPassword => 'نسيت كلمة المرور';
 
   @override
-  String get orLoginWith => 'أو سجل الدخول باستخدام';
+  String get orLoginWith => 'أو تسجيل الدخول باستخدام';
 
   @override
-  String get orSignUpWith => 'أو سجل باستخدام';
+  String get orSignUpWith => 'أو التسجيل باستخدام';
 
   @override
   String get facebook => 'فيسبوك';
@@ -72,25 +72,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get google => 'جوجل';
 
   @override
-  String get apple => 'أبل';
+  String get apple => 'آبل';
 
   @override
-  String get signUpPage => 'تسجيل';
-
-  @override
-  String get fullName => 'الاسم كامل';
+  String get fullName => 'الاسم الكامل';
 
   @override
   String get date => 'التاريخ';
 
   @override
-  String get gender => 'النوع';
+  String get gender => 'الجنس';
 
   @override
   String get male => 'ذكر';
 
   @override
-  String get female => 'انثي';
+  String get female => 'أنثى';
+
+  @override
+  String get signUpPage => 'نموذج التسجيل هنا';
 
   @override
   String get resetPassword => 'إعادة تعيين كلمة المرور';
@@ -108,13 +108,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emailAddress => 'عنوان البريد الإلكتروني';
 
   @override
-  String get dontHavePhone => 'ليس لديك رقم هاتف؟';
+  String get dontHavePhone => 'لا تملك هاتفًا؟';
 
   @override
-  String get dontHaveEmail => 'ليس لديك بريد إلكتروني؟';
+  String get dontHaveEmail => 'لا تملك بريدًا إلكترونيًا؟';
 
   @override
-  String get tryAnotherWay => 'جرّب طريقة أخرى';
+  String get tryAnotherWay => 'جرب طريقة أخرى';
 
   @override
   String get verify => 'تحقق';
@@ -126,67 +126,28 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirmPassword => 'تأكيد كلمة المرور';
 
   @override
-  String get verifyLater => 'تحقق لاحقًا';
+  String get verifyLater => 'التحقق لاحقًا';
 
   @override
   String get verificationCode => 'رمز التحقق';
 
   @override
-  String get pleaseEnter5DigitalCodeSendTo => 'يرجى إدخال رمز مكون من ٥ أرقام تم إرساله إلى';
+  String get pleaseEnter5DigitalCodeSendTo => 'يرجى إدخال رمز مكون من 5 أرقام المرسل إلى';
 
   @override
   String get appgmailcom => 'APP@gmail.com';
 
   @override
-  String get enterYourCode => 'أدخل الرمز الخاص بك';
+  String get enterYourCode => 'أدخل رمزك';
 
   @override
-  String get dontReceiveACode => 'لم تستلم الرمز؟';
+  String get dontReceiveACode => 'لم تستلم رمزًا؟';
 
   @override
   String get requestPhoneCall => 'طلب مكالمة هاتفية';
 
   @override
-  String get resendIn60s => 'إعادة الإرسال خلال ٦٠ ثانية';
-
-  @override
-  String get search => 'بحث';
-
-  @override
-  String get default_ => 'افتراضي';
-
-  @override
-  String get selected => 'محدد';
-
-  @override
-  String get light => 'فاتح';
-
-  @override
-  String get dark => 'داكن';
-
-  @override
-  String get morocco => 'المغرب';
-
-  @override
-  String get kuwait => 'الكويت';
-
-  @override
-  String get egypt => 'مصر';
-
-  @override
-  String get syrianArab => 'سوريا';
-
-  @override
-  String get unitedArabEmirates => 'الامارات';
-
-  @override
-  String get saudiArabia => 'السعودية';
-
-  @override
-  String get arabic => 'العربية';
-
-  @override
-  String get english => 'الانجليزية';
+  String get resendIn60s => 'إعادة الإرسال خلال 60 ثانية';
 
   @override
   String get num0 => '٠';
@@ -225,16 +186,55 @@ class AppLocalizationsAr extends AppLocalizations {
   String get backSpace => '⌫';
 
   @override
+  String get search => 'بحث';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get english => 'الإنجليزية';
+
+  @override
+  String get egypt => 'مصر';
+
+  @override
+  String get saudiArabia => 'المملكة العربية السعودية (SA)';
+
+  @override
+  String get unitedArabEmirates => 'الإمارات العربية المتحدة';
+
+  @override
+  String get kuwait => 'الكويت';
+
+  @override
+  String get morocco => 'المغرب';
+
+  @override
+  String get syrianArab => 'سوريا';
+
+  @override
+  String get dark => 'داكن';
+
+  @override
+  String get light => 'فاتح';
+
+  @override
+  String get default_ => 'افتراضي';
+
+  @override
+  String get selected => 'محدد';
+
+  @override
   String get emailIsRequired => 'البريد الإلكتروني مطلوب';
 
   @override
   String get invalidEmailSymbol => 'يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.';
 
   @override
-  String get invalidEmailDomain => 'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثال: .com، .org).';
+  String get invalidEmailDomain => 'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).';
 
   @override
-  String get validateFailurEmail => 'حدث خطأ أثناء التحقق من البريد الإلكتروني:';
+  String get validateFailurEmail => 'خطأ في التحقق من البريد الإلكتروني:';
 
   @override
   String get phoneNumberIsRequired => 'رقم الهاتف مطلوب';
@@ -249,10 +249,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get invalidPassword => 'كلمة المرور غير صالحة';
 
   @override
-  String get validateFailurPassword => 'حدث خطأ أثناء التحقق من كلمة المرور:';
+  String get validateFailurPassword => 'خطأ في التحقق من كلمة المرور:';
 
   @override
-  String get passwordLength8Character => 'يجب أن تتكون كلمة المرور من ٨ أحرف على الأقل.';
+  String get passwordLength8Character => 'يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل.';
 
   @override
   String get passwordOneUpperCase => 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
@@ -270,10 +270,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get fullNameIsRequired => 'الاسم الكامل مطلوب.';
 
   @override
-  String get invalidFullName => 'يرجى إدخال اسم كامل صحيح.';
+  String get invalidFullName => 'يرجى إدخال اسم كامل صالح.';
 
   @override
-  String get validateFailureFullName => 'فشل التحقق من صحة الاسم الكامل:';
+  String get validateFailureFullName => 'فشل التحقق من الاسم الكامل:';
 
   @override
   String get invitationCode => 'رمز الدعوة';
@@ -285,7 +285,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get paste => 'لصق';
 
   @override
-  String get exElSuisy => 'مثال السويّسي';
+  String get exElSuisy => 'مثال: السويّسي';
 
   @override
   String get selectDate => 'اختر التاريخ';
@@ -306,16 +306,19 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirm => 'تأكيد';
 
   @override
-  String get notification => 'الإشعارات';
+  String get cairoEgypt => 'القاهرة، مصر';
+
+  @override
+  String get notification => 'إشعار';
 
   @override
   String get adham => 'أدهم';
 
   @override
-  String get sentYouAnInvitationToJoin => 'أرسل لك دعوة للانضمام';
+  String get sentYouAnInvitationToJoin => 'أرسل لك دعوة للانضمام إلى';
 
   @override
-  String get yourContacts => 'جهات اتصالك';
+  String get yourContacts => 'جهات الاتصال الخاصة بك';
 
   @override
   String get accept => 'قبول';
@@ -324,7 +327,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reject => 'رفض';
 
   @override
-  String get dayAgo1 => 'منذ يوم';
+  String get dayAgo1 => 'منذ يوم واحد';
 
   @override
   String get products => 'المنتجات';
@@ -336,7 +339,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get posts => 'المنشورات';
 
   @override
-  String get reels => 'ريلز';
+  String get reels => 'الريلز';
 
   @override
   String get users => 'المستخدمين';
@@ -348,7 +351,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get groups => 'المجموعات';
 
   @override
-  String get threeHundred => '٣,٠٠٠,٠٠٠';
+  String get threeHundred => '٣٬٠٠٠٬٠٠٠';
 
   @override
   String get le => 'ج.م';
@@ -357,10 +360,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get cash => 'نقدًا';
 
   @override
-  String get audiRs7Quattro => 'أودي Rs7 كواترو';
+  String get audiRs7Quattro => 'أودي RS7 كواترو';
 
   @override
-  String get k5k10 => '5 آلاف - 10 آلاف';
+  String get bmw320Model2019 => 'بي إم دبليو 320 موديل 2019';
+
+  @override
+  String get k5k10 => '٥ آلاف - ١٠ آلاف';
 
   @override
   String get k2023 => '٢٠٢٣';
@@ -369,16 +375,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get used => 'مستعمل';
 
   @override
-  String get k800000 => '٨٠٠,٠٠٠';
+  String get k800000 => '٨٠٠٬٠٠٠';
 
   @override
   String get negotiation => 'قابل للتفاوض';
-
-  @override
-  String get cairoEgypt => 'القاهرة، مصر';
-
-  @override
-  String get bmw320Model2019 => 'بي إم دبليو 320 موديل 2019';
 
   @override
   String get categories => 'الفئات';
@@ -393,16 +393,94 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pets => 'الحيوانات الأليفة';
 
   @override
-  String get vehciles => 'مركبات';
+  String get ibrahim => 'إبراهيم';
+
+  @override
+  String get commentOnYourProduct => 'علق على منتجك';
+
+  @override
+  String get iPhone14promax => 'آيفون 14 برو ماكس';
+
+  @override
+  String get oneDayAgo => 'منذ يوم واحد';
+
+  @override
+  String get view => 'عرض';
+
+  @override
+  String get replay => 'رد';
+
+  @override
+  String get block => 'حظر';
+
+  @override
+  String get favourite => 'مفضل';
+
+  @override
+  String get followBusinessPage => 'متابعة صفحة الأعمال';
+
+  @override
+  String get next => 'التالي';
+
+  @override
+  String get elSayadMotor => 'الصياد موتور';
+
+  @override
+  String get carServices => 'خدمات السيارات';
 
   @override
   String get follow => 'متابعة';
 
   @override
+  String get save => 'حفظ';
+
+  @override
+  String get seeAll => 'عرض الكل';
+
+  @override
+  String get copyLinks => 'نسخ الروابط';
+
+  @override
+  String get turnOnNotification => 'تفعيل الإشعارات';
+
+  @override
+  String get report => 'إبلاغ';
+
+  @override
+  String get joinGroups => 'انضم إلى المجموعات';
+
+  @override
+  String get moenyFromInterests => 'أرباح من الاهتمامات';
+
+  @override
+  String get watchTutorial => 'مشاهدة الدليل';
+
+  @override
+  String get vehicles => 'المركبات';
+
+  @override
+  String get mercedesAMGG63 => 'مرسيدس AMG G63';
+
+  @override
+  String get threeHundredEGP => '٣٬٠٠٠٬٠٠٠ ج.م';
+
+  @override
+  String get reuealAndStaging => 'REUEAL & Staging';
+
+  @override
+  String get justNow => 'الآن';
+
+  @override
+  String get createStory => 'إنشاء قصة';
+
+  @override
+  String get elHawiMotors => 'الهاوي موتورز';
+
+  @override
   String get home => 'الرئيسية';
 
   @override
-  String get category => 'التصنيفات';
+  String get category => 'الفئة';
 
   @override
   String get profile => 'الملف الشخصي';
@@ -414,13 +492,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get addInvitationCode => 'أضف رمز الدعوة';
 
   @override
-  String get invitationCodeExample2 => '#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥';
+  String get invitationCodeExample2 => '#11231412351235462345';
 
   @override
   String get myCode => 'رمزي';
 
   @override
-  String get myCodeExample => '#١١٢٣١٤١٢٣٥١٢٣٥٤٦٢٣٤٥';
+  String get myCodeExample => '#11231412351235462345';
 
   @override
   String get completeProfile => 'أكمل الملف الشخصي';
@@ -429,16 +507,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get addCoverPhoto => 'أضف صورة غلاف';
 
   @override
-  String get commentHere => 'اكتب تعليقًا هنا!';
+  String get commentHere => 'علق هنا!';
 
   @override
-  String get likes => 'إعجابات';
+  String get likes => 'الإعجابات';
 
   @override
-  String get comments => 'تعليقات';
+  String get comments => 'التعليقات';
 
   @override
-  String get shares => 'مشاركات';
+  String get shares => 'المشاركات';
 
   @override
   String get sellProduct => 'بيع منتج';
@@ -457,4 +535,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get error => 'خطأ';
+
+  @override
+  String get moneyFromInvite => 'Money From Invite';
 }

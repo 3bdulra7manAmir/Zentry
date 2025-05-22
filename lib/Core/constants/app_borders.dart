@@ -6,77 +6,81 @@ abstract class AppBorders
 {
   AppBorders._();
 
-  //Form Border
-  /// [TopLeft_20.TopRight_20]
-  static BorderRadiusGeometry formBorder = BorderRadius.only(
-    topLeft: Radius.circular(20.r),
-    topRight: Radius.circular(20.r),
-  );
-
-  /// [TopLeft_16.TopRight_16]
-  static BorderRadiusGeometry smallCardActionsBorder = BorderRadius.only(
-    topLeft: Radius.circular(16.r),
-    topRight: Radius.circular(16.r),
-  );
-
-  /// [TopLeft_12.TopRight_12]
-  static BorderRadiusGeometry indicatorBorder = BorderRadius.only(
-    topLeft: Radius.circular(12.r),
-    topRight: Radius.circular(12.r),
-  );
-
-  /// [TopLeft_10.TopRight_10]
-  static BorderRadiusGeometry followBusinessPageBorder = BorderRadius.only(
+  /// Top Only Border Radius
+  
+  /// Business page top radius
+  static BorderRadiusGeometry topOnly10 = BorderRadius.only(
     topLeft: Radius.circular(10.r),
     topRight: Radius.circular(10.r),
-  );
+  ); /// followBusinessPageBorder
 
-  //Divider
-  /// [Circular_4]
-  static BorderRadius dividerBorder = BorderRadius.circular(4.r);
+  /// Indicator top radius
+  static BorderRadiusGeometry topOnly12 = BorderRadius.only(
+    topLeft: Radius.circular(12.r),
+    topRight: Radius.circular(12.r),
+  ); /// indicatorBorder
 
-  /// [Circular_7]
-  static BorderRadius buttonBorder7 = BorderRadius.circular(7.r);
+  /// Small card actions top radius
+  static BorderRadiusGeometry topOnly16 = BorderRadius.only(
+    topLeft: Radius.circular(16.r),
+    topRight: Radius.circular(16.r),
+  ); /// smallCardActionsBorder
 
-  /// [Circular_10]
-  static BorderRadius buttonBorder10 = BorderRadius.circular(10.r);
+  /// Form top radius
+  static BorderRadiusGeometry topOnly20 = BorderRadius.only(
+    topLeft: Radius.circular(20.r),
+    topRight: Radius.circular(20.r),
+  ); /// formBorder
 
-  /// [Circular_12]
-  static BorderRadius buttonBorder12 = BorderRadius.circular(12.r);
-
-  /// [Circular_8]
-  static BorderRadius postPriceCard8 = BorderRadius.circular(8.r);
-
-  /// [Circular_6]
-  static BorderRadius notificationsCard6 = BorderRadius.circular(6.r);
-
-  /// [Circular_5]
-  static BorderRadius buttonBorder5 = BorderRadius.circular(5.r);
-
-  //Text Form Field
-  /// [Circular_50]
-  static BorderRadius kProductItemRadius = BorderRadius.circular(50.r);
-
-  //Text Form Field
-  /// [Circular_100]
-  static BorderRadius kCardRadius100 = BorderRadius.circular(100.r);
-
-  //Text Form Field
-  /// [Circular_1]
-  static BorderRadius datePicker1 = BorderRadius.circular(1.r);
+  /// Circular Border Radius
+  
+  /// Date picker radius
+  static BorderRadius circular1 = BorderRadius.circular(1.r);
+  
+  /// Divider radius
+  static BorderRadius circular4 = BorderRadius.circular(4.r);
+  
+  /// Small button radius
+  static BorderRadius circular5 = BorderRadius.circular(5.r);
+  
+  /// Notification card radius
+  static BorderRadius circular6 = BorderRadius.circular(6.r);
+  
+  /// Medium button radius
+  static BorderRadius circular7 = BorderRadius.circular(7.r);
+  
+  /// Price card radius
+  static BorderRadius circular8 = BorderRadius.circular(8.r);
+  
+  /// Large button radius
+  static BorderRadius circular10 = BorderRadius.circular(10.r); 
+  
+  /// Extra large button radius
+  static BorderRadius circular12 = BorderRadius.circular(12.r);
+  
+  /// Product item radius
+  static BorderRadius circular50 = BorderRadius.circular(50.r);
+  
+  /// Full round radius
+  static BorderRadius circular100 = BorderRadius.circular(100.r);
 }
 
-
-abstract class AppBorderWidths
-{
+abstract class AppBorderWidths {
   AppBorderWidths._();
 
-  static double width1 = (1.0).w;
-  static double width2 = (2.0).w;
+  /// 1px width
+  static double thin = (1.0).w;
+  
+  /// 2px width
+  static double medium = (2.0).w;
 }
 
-abstract class AppBoxBorders
-{
+abstract class AppBoxBorders {
   AppBoxBorders._();
-  static BoxBorder? commonborder = Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.width1,);
+
+  /// Standard grey border
+  static BoxBorder? standard = Border.all(
+    color: AppColors.color.kGrey001,
+    width: AppBorderWidths.thin,
+  );
 }

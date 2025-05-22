@@ -20,7 +20,7 @@ class PostsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: AppMargins.kAppFormPadding,
+      margin: AppMargins.horizontal16,
       width: 360.w,
       child: Column(
         children: [
@@ -48,7 +48,7 @@ class PostsCard extends StatelessWidget {
             sharesCount: post.sharesCount,
           ),
           AppSizes.size14.verticalSpace,
-          CommentCard(padding: AppPadding.kZeroPadding),
+          CommentCard(padding: AppPadding.zero),
         ],
       ),
     );
@@ -73,9 +73,9 @@ class PostsCard extends StatelessWidget {
 //         Container(
 //           width: double.infinity,
 //           height: 283.h,
-//           margin: AppMargins.kApp10Padding,
+//           margin: AppMargins.horizontal10,
 //           decoration: BoxDecoration(
-//             borderRadius: AppBorders.buttonBorder7,
+//             borderRadius: AppBorders.circular7,
 //             image: const DecorationImage(
 //               image: AssetImage("assets/icons/Inside_Post/Merc_Jeep.png"),
 //               fit: BoxFit.cover,
@@ -95,10 +95,10 @@ class PostsCard extends StatelessWidget {
 //                 height: 40.h,
 //                 decoration: BoxDecoration(
 //                   color: AppColors.color.kGrey002,
-//                   borderRadius: AppBorders.buttonBorder10,
+//                   borderRadius: AppBorders.circular10,
 //                   border: Border.all(
 //                     color: AppColors.color.kGrey001,
-//                     width: AppBorderWidths.width2,
+//                     width: AppBorderWidths.medium,
 //                   ),
 //                 ),
 //                 child: CustomTextFormField(

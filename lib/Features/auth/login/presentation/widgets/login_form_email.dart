@@ -33,7 +33,7 @@ class LoginFormWithEmail extends ConsumerWidget {
   {
     final provider = AppProvidersProvider(ref, context);
     return Container(
-      padding: AppPadding.kAppFormPadding,
+      padding: AppPadding.horizontal16,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
@@ -98,7 +98,7 @@ class LoginFormWithEmail extends ConsumerWidget {
                         ref.read(checkboxValueProvider.notifier).state = value;
                       }
                     },
-                    side: BorderSide(width: AppBorderWidths.width2, color: AppColors.color.kGrey001,),
+                    side: BorderSide(width: AppBorderWidths.medium, color: AppColors.color.kGrey001,),
                   ),
                   Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText004,),),
                   const Spacer(),

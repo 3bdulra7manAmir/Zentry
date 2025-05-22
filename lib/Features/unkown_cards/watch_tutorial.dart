@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/app_colors.dart';
 import '../../config/themes/font_system/font_weights.dart';
 import '../../core/constants/app_images.dart';
@@ -32,7 +33,7 @@ class WatchTutorial extends StatelessWidget
                   [
                     Image.asset(AppAssets.iconsPNG.tutorialPlayCircle),
                     AppSizes.size10.verticalSpace,
-                    Text(AppStrings.watchTutorial, style: AppStyles.textStyle14(
+                    Text(AppLocalizations.of(context).watchTutorial, style: AppStyles.textStyle14(
                       fontColor: AppColors.color.kWhite001,
                       fontWeight: AppFontWeights.regularWeight)
                     ),

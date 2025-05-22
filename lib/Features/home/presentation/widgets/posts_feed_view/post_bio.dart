@@ -39,10 +39,10 @@ class PostBio extends StatelessWidget {
               width: 132.w,
               height: 28.h,
               decoration: BoxDecoration(
-                borderRadius: AppBorders.postPriceCard8,
+                borderRadius: AppBorders.circular8,
                 border: Border.all(
                   color: AppColors.color.kGrey001,
-                  width: AppBorderWidths.width2,
+                  width: AppBorderWidths.medium,
                 ),
               ),
               child: Center(

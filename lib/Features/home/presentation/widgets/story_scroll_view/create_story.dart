@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
@@ -18,11 +19,11 @@ class CreateStory extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppMargins.kHomeListViewPadding,
+      margin: AppMargins.startOnly12,
       height: 148.h,
       width: 112.w,
       decoration:  BoxDecoration(
-        borderRadius: AppBorders.buttonBorder5,
+        borderRadius: AppBorders.circular5,
         image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.homeStoryRobot), fit: BoxFit.cover),),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -30,12 +31,12 @@ class CreateStory extends StatelessWidget
         [
           Image.asset(AppAssets.iconsPNG.homeStoryCreate, width: 48.w, height: 48.h,),
           CustomButton(
-            buttonBorderRadius: AppBorders.buttonBorder5,
-            buttonText: AppStrings.createStory, buttonOnPressed: () {},
+            buttonBorderRadius: AppBorders.circular5,
+            buttonText: AppLocalizations.of(context).createStory, buttonOnPressed: () {},
             buttonWidth: 88.w,
             buttonHeight: 27.h,
             buttonBackgroundColor: const Color(0xffbbbbbb),
-            buttonPadding: AppPadding.kApp15Padding,
+            buttonPadding: AppPadding.horizontal15,
             buttonTextStyle: AppStyles.textStyle10(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.boldWeight),),
         ],
       ),

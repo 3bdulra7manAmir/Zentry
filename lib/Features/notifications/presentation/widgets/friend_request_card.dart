@@ -22,10 +22,10 @@ class FriendRequestCard extends StatelessWidget
       color: AppColors.color.kWhite001,
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.3),
-      shape: RoundedRectangleBorder(borderRadius: AppBorders.notificationsCard6),
-      margin: AppMargins.kAppFormPadding,
+      shape: RoundedRectangleBorder(borderRadius: AppBorders.circular6),
+      margin: AppMargins.horizontal16,
       child: Padding(
-        padding: AppPadding.kTempPadding,
+        padding: AppPadding.all5,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
@@ -90,7 +90,7 @@ class FriendRequestCard extends StatelessWidget
                     buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001),
                     buttonWidth: 114.w,
                     buttonHeight: 33.h,
-                    buttonBorderRadius: AppBorders.buttonBorder5,
+                    buttonBorderRadius: AppBorders.circular5,
                     buttonBackgroundColor: AppColors.color.kBlue003,
                   ),
                 ),
@@ -102,7 +102,7 @@ class FriendRequestCard extends StatelessWidget
                     buttonTextStyle: AppStyles.textStyle13(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kDarkText001),
                     buttonWidth: 114.w,
                     buttonHeight: 33.h,
-                    buttonBorderRadius: AppBorders.buttonBorder5,
+                    buttonBorderRadius: AppBorders.circular5,
                     buttonBackgroundColor: AppColors.color.kGreyText007,
                   ),
                 ),

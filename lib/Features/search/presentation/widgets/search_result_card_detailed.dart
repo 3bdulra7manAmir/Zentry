@@ -34,7 +34,7 @@ class SearchResultCardDetailed extends StatelessWidget {
     return Container(
       width: 370.w,
       height: 163.h,
-      decoration: BoxDecoration(borderRadius: AppBorders.buttonBorder5,),
+      decoration: BoxDecoration(borderRadius: AppBorders.circular5,),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -51,7 +51,7 @@ class SearchResultCardDetailed extends StatelessWidget {
           // Content section
           Expanded(
             child: Padding(
-              padding: AppPadding.kSearchResultCardPadding,
+              padding: AppPadding.all6,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -145,7 +145,7 @@ class SearchResultCardDetailed extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           ...result.subimages.map((image) => Padding(
-                            padding: AppPadding.searchResultsCard,
+                            padding: AppPadding.rightOnly3,
                             child: Image.asset(image),
                           )),
                         ],

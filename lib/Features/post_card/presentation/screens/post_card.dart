@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
@@ -16,11 +17,11 @@ void showPostOptionsBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     //isScrollControlled: true,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.smallCardActionsBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly16),
     builder: (BuildContext context)
     {
       return Padding(
-        padding: AppPadding.kPostOptionsPadding,
+        padding: AppPadding.postOptions,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -32,9 +33,9 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.postSave),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.save, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).save, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
+                Text(AppLocalizations.of(context).seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -51,7 +52,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.postCopy),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).copyLinks, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -68,9 +69,9 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.postBill),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).turnOnNotification, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
-                Text(AppStrings.seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
+                Text(AppLocalizations.of(context).seeAll, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight, fontColor: AppColors.color.kBlue003),)
               ],
             ),
             AppSizes.size22.verticalSpace,
@@ -87,7 +88,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.postReport),
                 AppSizes.size12.horizontalSpace,
-                Text(AppStrings.report, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).report, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
               ],
             ),
             AppSizes.size32.verticalSpace,

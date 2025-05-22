@@ -13,7 +13,7 @@ void showCommentsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -23,21 +23,21 @@ void showCommentsBottomSheet(BuildContext context)
         [
           AppSizes.size11.verticalSpace,
           Padding(
-            padding: AppPadding.commentsSection,
+            padding: AppPadding.startOnly13,
             child: Image.asset(AppAssets.iconsPNG.postDetailBackArrow,),
           ),
           AppSizes.size25.verticalSpace,
           Container(
             width: double.infinity,
             height: 283.h,
-            margin: AppMargins.kApp10Padding,
+            margin: AppMargins.horizontal10,
             decoration: BoxDecoration(
-              borderRadius: AppBorders.buttonBorder7,
+              borderRadius: AppBorders.circular7,
               image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.postDetailMercJeep)),
             ),
           ),
           AppSizes.size30.verticalSpace,
-          CommentCard(padding: AppPadding.postsInside),
+          CommentCard(padding: AppPadding.horizontal38),
           AppSizes.size18.verticalSpace,
         ],
       );

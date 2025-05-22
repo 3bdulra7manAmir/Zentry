@@ -22,7 +22,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context) {
       return const FollowBusinessPage();
     },
@@ -38,7 +38,7 @@ class FollowBusinessPage extends ConsumerWidget {
 
     return Column(
       children: [
-        const FollowBusinessCardHeader(headerText: AppStrings.followBusinessPage),
+        FollowBusinessCardHeader(headerText: AppLocalizations.of(context).followBusinessPage),
         Expanded(
           child: businessesAsyncValue.when(
             data: (businesses) => AppListviewBuilder(
@@ -63,11 +63,11 @@ class FollowBusinessPage extends ConsumerWidget {
         Container(
           width: double.infinity,
           height: 79.h,
-          padding: AppPadding.kNextButtonPadding,
+          padding: AppPadding.nextButton,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
           ),
-          child: const CustomButton(buttonText: AppStrings.next),
+          child: CustomButton(buttonText: AppLocalizations.of(context).next),
         ),
       ],
     );
@@ -125,7 +125,7 @@ class FollowBusinessCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: AppPadding.kFollowingBusinessPagePadding,
+      padding: AppPadding.horizontal21,
       child: Row(
         children: [
           // Use business avatar here

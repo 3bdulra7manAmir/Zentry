@@ -10,16 +10,17 @@ import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_button.dart';
 import '../../../follow_business/presentation/screens/follow_business_page.dart';
 
-class JoinGroupsScreen extends ConsumerWidget {
+class JoinGroupsScreen extends ConsumerWidget
+{
   const JoinGroupsScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref)
+  {
     final joinGroupsAsyncValue = ref.watch(joinGroupsItemsProvider);
     return joinGroupsAsyncValue.when(
       data: (groups) => GridViewBuilder(
@@ -32,34 +33,31 @@ class JoinGroupsScreen extends ConsumerWidget {
   }
 }
 
-void showJoinGroupsBottomSheet(BuildContext context) {
+void showJoinGroupsBottomSheet(BuildContext context)
+{
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
-    builder: (BuildContext context) {
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
+    builder: (BuildContext context)
+    {
       return Column(
-        children: [
-          const FollowBusinessCardHeader(
-            headerText: AppStrings.joinGroups,
-          ),
+        children:
+        [
+          FollowBusinessCardHeader(headerText: AppLocalizations.of(context).joinGroups,),
           Expanded(
             child: Padding(
-              padding: AppPadding.joinGroups,
+              padding: AppPadding.leftOnly30,
               child: const JoinGroupsScreen(),
             ),
           ),
           Container(
             width: double.infinity,
             height: 79.h,
-            padding: AppPadding.kNextButtonPadding,
-            decoration: BoxDecoration(
-              color: AppColors.color.kGrey002,
-            ),
-            child: const CustomButton(
-              buttonText: AppStrings.next,
-            ),
+            padding: AppPadding.nextButton,
+            decoration: BoxDecoration(color: AppColors.color.kGrey002,),
+            child: CustomButton(buttonText: AppLocalizations.of(context).next,),
           ),
         ],
       );
@@ -92,7 +90,7 @@ class GridViewBuilder extends StatelessWidget {
     return GridView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
-      padding: AppPadding.joinGroups2,
+      padding: AppPadding.topOnly20,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount ?? 2,
         mainAxisSpacing: mainAxisSpacing ?? 12.0,
@@ -127,10 +125,10 @@ class JoinGroupsCard extends StatelessWidget {
               ),
             ],
             color: AppColors.color.kWhite001,
-            borderRadius: AppBorders.buttonBorder10,
+            borderRadius: AppBorders.circular10,
             border: Border.all(
               color: AppColors.color.kOrange002,
-              width: AppBorderWidths.width2,
+              width: AppBorderWidths.medium,
             ),
           ),
           child: Column(

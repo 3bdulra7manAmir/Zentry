@@ -110,7 +110,7 @@ abstract class AppLocalizations {
   /// No description provided for @language.
   ///
   /// In en, this message translates to:
-  /// **'Langauage'**
+  /// **'Language'**
   String get language;
 
   /// No description provided for @country.
@@ -227,12 +227,6 @@ abstract class AppLocalizations {
   /// **'Apple'**
   String get apple;
 
-  /// No description provided for @signUpPage.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign Up Form Goes Here'**
-  String get signUpPage;
-
   /// No description provided for @fullName.
   ///
   /// In en, this message translates to:
@@ -262,6 +256,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Female'**
   String get female;
+
+  /// No description provided for @signUpPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up Form Goes Here'**
+  String get signUpPage;
 
   /// No description provided for @resetPassword.
   ///
@@ -377,84 +377,6 @@ abstract class AppLocalizations {
   /// **'Resend in 60s'**
   String get resendIn60s;
 
-  /// No description provided for @search.
-  ///
-  /// In en, this message translates to:
-  /// **'Search'**
-  String get search;
-
-  /// No description provided for @default_.
-  ///
-  /// In en, this message translates to:
-  /// **'default'**
-  String get default_;
-
-  /// No description provided for @selected.
-  ///
-  /// In en, this message translates to:
-  /// **'Selected'**
-  String get selected;
-
-  /// No description provided for @light.
-  ///
-  /// In en, this message translates to:
-  /// **'Light'**
-  String get light;
-
-  /// No description provided for @dark.
-  ///
-  /// In en, this message translates to:
-  /// **'Dark'**
-  String get dark;
-
-  /// No description provided for @morocco.
-  ///
-  /// In en, this message translates to:
-  /// **'Morocco'**
-  String get morocco;
-
-  /// No description provided for @kuwait.
-  ///
-  /// In en, this message translates to:
-  /// **'Kuwait'**
-  String get kuwait;
-
-  /// No description provided for @egypt.
-  ///
-  /// In en, this message translates to:
-  /// **'Egypt'**
-  String get egypt;
-
-  /// No description provided for @syrianArab.
-  ///
-  /// In en, this message translates to:
-  /// **'Syrian Arab'**
-  String get syrianArab;
-
-  /// No description provided for @unitedArabEmirates.
-  ///
-  /// In en, this message translates to:
-  /// **'United Arab Emirates'**
-  String get unitedArabEmirates;
-
-  /// No description provided for @saudiArabia.
-  ///
-  /// In en, this message translates to:
-  /// **'Saudi Arabia (SA)'**
-  String get saudiArabia;
-
-  /// No description provided for @arabic.
-  ///
-  /// In en, this message translates to:
-  /// **'Arabic'**
-  String get arabic;
-
-  /// No description provided for @english.
-  ///
-  /// In en, this message translates to:
-  /// **'English'**
-  String get english;
-
   /// No description provided for @num0.
   ///
   /// In en, this message translates to:
@@ -526,6 +448,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'⌫'**
   String get backSpace;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @arabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get arabic;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @egypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt'**
+  String get egypt;
+
+  /// No description provided for @saudiArabia.
+  ///
+  /// In en, this message translates to:
+  /// **'Saudi Arabia (SA)'**
+  String get saudiArabia;
+
+  /// No description provided for @unitedArabEmirates.
+  ///
+  /// In en, this message translates to:
+  /// **'United Arab Emirates'**
+  String get unitedArabEmirates;
+
+  /// No description provided for @kuwait.
+  ///
+  /// In en, this message translates to:
+  /// **'Kuwait'**
+  String get kuwait;
+
+  /// No description provided for @morocco.
+  ///
+  /// In en, this message translates to:
+  /// **'Morocco'**
+  String get morocco;
+
+  /// No description provided for @syrianArab.
+  ///
+  /// In en, this message translates to:
+  /// **'Syrian Arab'**
+  String get syrianArab;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @default_.
+  ///
+  /// In en, this message translates to:
+  /// **'default'**
+  String get default_;
+
+  /// No description provided for @selected.
+  ///
+  /// In en, this message translates to:
+  /// **'Selected'**
+  String get selected;
 
   /// No description provided for @emailIsRequired.
   ///
@@ -689,6 +689,12 @@ abstract class AppLocalizations {
   /// **'Confirm'**
   String get confirm;
 
+  /// No description provided for @cairoEgypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Cairo,Egypt'**
+  String get cairoEgypt;
+
   /// No description provided for @notification.
   ///
   /// In en, this message translates to:
@@ -797,6 +803,12 @@ abstract class AppLocalizations {
   /// **'Audi Rs7 Quattro'**
   String get audiRs7Quattro;
 
+  /// No description provided for @bmw320Model2019.
+  ///
+  /// In en, this message translates to:
+  /// **'Bmw 320 model 2019'**
+  String get bmw320Model2019;
+
   /// No description provided for @k5k10.
   ///
   /// In en, this message translates to:
@@ -827,22 +839,10 @@ abstract class AppLocalizations {
   /// **'Negotiation'**
   String get negotiation;
 
-  /// No description provided for @cairoEgypt.
-  ///
-  /// In en, this message translates to:
-  /// **'Cairo, Egypt'**
-  String get cairoEgypt;
-
-  /// No description provided for @bmw320Model2019.
-  ///
-  /// In en, this message translates to:
-  /// **'Bmw 320 model 2019'**
-  String get bmw320Model2019;
-
   /// No description provided for @categories.
   ///
   /// In en, this message translates to:
-  /// **'Categories'**
+  /// **'categories'**
   String get categories;
 
   /// No description provided for @clear.
@@ -863,17 +863,173 @@ abstract class AppLocalizations {
   /// **'Pets'**
   String get pets;
 
-  /// No description provided for @vehciles.
+  /// No description provided for @ibrahim.
   ///
   /// In en, this message translates to:
-  /// **'Vehciles'**
-  String get vehciles;
+  /// **'Ibrahim'**
+  String get ibrahim;
+
+  /// No description provided for @commentOnYourProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment on your product'**
+  String get commentOnYourProduct;
+
+  /// No description provided for @iPhone14promax.
+  ///
+  /// In en, this message translates to:
+  /// **'iPhone 14 pro max'**
+  String get iPhone14promax;
+
+  /// No description provided for @oneDayAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'1 Day Ago'**
+  String get oneDayAgo;
+
+  /// No description provided for @view.
+  ///
+  /// In en, this message translates to:
+  /// **'View'**
+  String get view;
+
+  /// No description provided for @replay.
+  ///
+  /// In en, this message translates to:
+  /// **'Replay'**
+  String get replay;
+
+  /// No description provided for @block.
+  ///
+  /// In en, this message translates to:
+  /// **'Block'**
+  String get block;
+
+  /// No description provided for @favourite.
+  ///
+  /// In en, this message translates to:
+  /// **'Favourite'**
+  String get favourite;
+
+  /// No description provided for @followBusinessPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Follow Business page'**
+  String get followBusinessPage;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @elSayadMotor.
+  ///
+  /// In en, this message translates to:
+  /// **'El Sayad Motor'**
+  String get elSayadMotor;
+
+  /// No description provided for @carServices.
+  ///
+  /// In en, this message translates to:
+  /// **'Car Services'**
+  String get carServices;
 
   /// No description provided for @follow.
   ///
   /// In en, this message translates to:
   /// **'Follow'**
   String get follow;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @seeAll.
+  ///
+  /// In en, this message translates to:
+  /// **'See All'**
+  String get seeAll;
+
+  /// No description provided for @copyLinks.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy Links'**
+  String get copyLinks;
+
+  /// No description provided for @turnOnNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on Notification'**
+  String get turnOnNotification;
+
+  /// No description provided for @report.
+  ///
+  /// In en, this message translates to:
+  /// **'Report'**
+  String get report;
+
+  /// No description provided for @joinGroups.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Groups'**
+  String get joinGroups;
+
+  /// No description provided for @moenyFromInterests.
+  ///
+  /// In en, this message translates to:
+  /// **'Moeny From Interests'**
+  String get moenyFromInterests;
+
+  /// No description provided for @watchTutorial.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch Tutorial'**
+  String get watchTutorial;
+
+  /// No description provided for @vehicles.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicles'**
+  String get vehicles;
+
+  /// No description provided for @mercedesAMGG63.
+  ///
+  /// In en, this message translates to:
+  /// **'Mercedes AMG G63'**
+  String get mercedesAMGG63;
+
+  /// No description provided for @threeHundredEGP.
+  ///
+  /// In en, this message translates to:
+  /// **'3,000,000 EGP'**
+  String get threeHundredEGP;
+
+  /// No description provided for @reuealAndStaging.
+  ///
+  /// In en, this message translates to:
+  /// **'REUEAL & Staging'**
+  String get reuealAndStaging;
+
+  /// No description provided for @justNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Just Now'**
+  String get justNow;
+
+  /// No description provided for @createStory.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Story'**
+  String get createStory;
+
+  /// No description provided for @elHawiMotors.
+  ///
+  /// In en, this message translates to:
+  /// **'El Hawi Motors'**
+  String get elHawiMotors;
 
   /// No description provided for @home.
   ///
@@ -994,6 +1150,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Error'**
   String get error;
+
+  /// No description provided for @moneyFromInvite.
+  ///
+  /// In en, this message translates to:
+  /// **'Money From Invite'**
+  String get moneyFromInvite;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

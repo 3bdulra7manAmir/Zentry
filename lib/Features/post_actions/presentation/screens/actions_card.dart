@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
@@ -15,11 +16,11 @@ void showActionsBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     //isScrollControlled: true,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.followBusinessPageBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly10),
     builder: (BuildContext context)
     {
       return Padding(
-        padding: AppPadding.kActionsCardPadding,
+        padding: AppPadding.horizontal22,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
@@ -31,7 +32,7 @@ void showActionsBottomSheet(BuildContext context)
               height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kBlack005,
-                borderRadius: AppBorders.kCardRadius100,
+                borderRadius: AppBorders.circular100,
               ),
             ),
             AppSizes.size17.verticalSpace,
@@ -41,7 +42,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionEye),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.view, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).view, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
@@ -52,7 +53,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionReplay),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).replay, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
@@ -64,7 +65,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionBlock),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.block, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).block, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionArrowLeft),
               ],
@@ -76,7 +77,7 @@ void showActionsBottomSheet(BuildContext context)
               [
                 Image.asset(AppAssets.iconsPNG.actionFavorite),
                 AppSizes.size16.horizontalSpace,
-                Text(AppStrings.favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
+                Text(AppLocalizations.of(context).favourite, style: AppStyles.textStyle14(fontColor: AppColors.color.kBlack001),),
                 const Spacer(),
                 Image.asset(AppAssets.iconsPNG.actionFavorite),
               ],

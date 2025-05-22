@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
@@ -25,11 +26,11 @@ class DefaultNotificationCard extends StatelessWidget {
       color: AppColors.color.kWhite001,
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.6),
-      shape: RoundedRectangleBorder(borderRadius: AppBorders.notificationsCard6,),
-      margin: AppMargins.kAppFormPadding,
+      shape: RoundedRectangleBorder(borderRadius: AppBorders.circular6,),
+      margin: AppMargins.horizontal16,
 
       child: Padding(
-        padding: AppPadding.kTempPadding,
+        padding: AppPadding.all5,
         child: Column(
           children:
           [
@@ -75,7 +76,7 @@ class DefaultNotificationCard extends StatelessWidget {
                       Row(
                         children:
                         [
-                          Text(AppStrings.iPhone14promax, style: AppStyles.textStyle12(
+                          Text(AppLocalizations.of(context).iPhone14promax, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kGreyText006,
                           ),),

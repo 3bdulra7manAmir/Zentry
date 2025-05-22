@@ -18,7 +18,7 @@ void showCompleteProfileBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
@@ -31,11 +31,11 @@ void showCompleteProfileBottomSheet(BuildContext context)
           Container(
             width: double.infinity,
             height: 79.h,
-            padding: AppPadding.kNextButtonPadding,
+            padding: AppPadding.nextButton,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
             ),
-            child: const CustomButton(buttonText: AppStrings.next,),
+            child: CustomButton(buttonText: AppLocalizations.of(context).next,),
           ),
         ],
       );
@@ -61,8 +61,8 @@ class CompleteProfileCard extends StatelessWidget
           height: 168.h,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
-            borderRadius: AppBorders.buttonBorder12,
-            border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.width2,),
+            borderRadius: AppBorders.circular12,
+            border: Border.all(color: AppColors.color.kGrey001, width: AppBorderWidths.medium,),
           ),
           child: Center(
             child: Column(

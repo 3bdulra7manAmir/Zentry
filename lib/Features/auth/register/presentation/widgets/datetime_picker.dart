@@ -19,7 +19,7 @@ void showDateTimeBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
     builder: (BuildContext context)
     {
       return Consumer( //HERE
@@ -41,7 +41,7 @@ void showDateTimeBottomSheet(BuildContext context)
             builder: (BuildContext context, StateSetter setState)
             {
               return Padding(
-                padding: AppPadding.kTabBarPadding,
+                padding: AppPadding.symmetric16,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children:
@@ -51,7 +51,7 @@ void showDateTimeBottomSheet(BuildContext context)
                       height: 3.h,
                       decoration: BoxDecoration(
                         color: AppColors.color.kGreyText002,
-                        borderRadius: AppBorders.dividerBorder,
+                        borderRadius: AppBorders.circular4,
                       ),
                     ),
                     AppSizes.size35.verticalSpace,

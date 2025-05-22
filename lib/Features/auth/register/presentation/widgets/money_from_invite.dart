@@ -8,7 +8,6 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
@@ -21,14 +20,14 @@ void showMoenyFromInviteBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     //isScrollControlled: true,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.indicatorBorder),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.topOnly12),
     builder: (BuildContext context)
     {
       return Column(
         mainAxisSize: MainAxisSize.min, // Use minimum space needed
         children:
         [
-          const FollowBusinessCardHeader(headerText: "Moeny From Invite",),
+          FollowBusinessCardHeader(headerText: AppLocalizations.of(context).moneyFromInvite,),
           AppSizes.size20.verticalSpace,
           const Expanded(
             child: SingleChildScrollView(
@@ -36,15 +35,14 @@ void showMoenyFromInviteBottomSheet(BuildContext context)
             ),
           ),
 
-
           Container(
             width: double.infinity,
             height: 79.h,
-            padding: AppPadding.kNextButtonPadding,
+            padding: AppPadding.nextButton,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
             ),
-            child: const CustomButton(buttonText: AppStrings.next,),
+            child: CustomButton(buttonText: AppLocalizations.of(context).next,),
           ),
         ],
       );
@@ -66,7 +64,7 @@ class MoenyFromInviteCard extends StatelessWidget
       children:
       [
         Container(
-          margin: AppMargins.kAppFormPadding,
+          margin: AppMargins.horizontal16,
           width: 326.w,
           height: 187.h,
           decoration: BoxDecoration(
@@ -74,13 +72,13 @@ class MoenyFromInviteCard extends StatelessWidget
               image: AssetImage(AppAssets.iconsPNG.invitesVideoThumbnail),
               fit: BoxFit.cover,
             ),  
-            borderRadius: AppBorders.buttonBorder10,
+            borderRadius: AppBorders.circular10,
           ),
           child: Image.asset(AppAssets.iconsPNG.invitesPlayButton,),
         ),
         AppSizes.size24.verticalSpace,
         Padding(
-          padding: AppPadding.kCreatePanelPadding,
+          padding: AppPadding.horizontal18,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -93,7 +91,7 @@ class MoenyFromInviteCard extends StatelessWidget
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text, fieldText: AppLocalizations.of(context).invitationCodeExample2,
                 fieldsuffixIcon: Padding( //HERE //FIX //Temp
-                  padding: AppPadding.kPastePadding,
+                  padding: AppPadding.endOnly15,
                   child: SizedBox(
                     width: 60,
                     child: Align(
@@ -112,7 +110,7 @@ class MoenyFromInviteCard extends StatelessWidget
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text, fieldText: AppLocalizations.of(context).myCodeExample,
                 fieldsuffixIcon: Padding( //HERE //FIX //Temp
-                  padding: AppPadding.kPastePadding,
+                  padding: AppPadding.endOnly15,
                   child: SizedBox(
                     width: 60.w,
                     child: Align(

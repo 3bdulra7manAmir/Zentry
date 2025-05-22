@@ -17,7 +17,7 @@ void showThemesBottomSheet(BuildContext context)
     isDismissible: true,
     isScrollControlled: true,
     backgroundColor: Theme.of(context).cardColor,
-    shape: RoundedRectangleBorder(borderRadius: AppBorders.buttonBorder10),
+    shape: RoundedRectangleBorder(borderRadius: AppBorders.circular10),
     builder: (BuildContext context)
     {
       return Consumer(
@@ -25,19 +25,19 @@ void showThemesBottomSheet(BuildContext context)
         {
           final provider = AppProvidersProvider(ref, context);
           return Padding(
-            padding: AppPadding.kAppFormPadding,
+            padding: AppPadding.horizontal16,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 AppSizes.size8.verticalSpace,
                 Container(
-                  margin: AppMargins.kAppFormPadding,
+                  margin: AppMargins.horizontal16,
                   alignment: Alignment.center,
                   width: 44.w,
                   height: 4.h,
                   decoration: BoxDecoration(
                     color: AppColors.color.kGreyText002,
-                    borderRadius: AppBorders.dividerBorder,
+                    borderRadius: AppBorders.circular4,
                   ),
                 ),
                 AppSizes.size30.verticalSpace,
