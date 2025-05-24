@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:test_app/core/helpers/app_providers.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
+import '../../../../core/helpers/app_providers.dart';
 import '../controller/bottom_nav_index_provider.dart';
 import '../widgets/nav_bar_list.dart';
 

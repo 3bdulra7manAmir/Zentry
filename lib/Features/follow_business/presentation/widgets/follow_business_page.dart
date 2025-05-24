@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/app_circular_indicator.dart';
-import 'package:test_app/core/widgets/app_next_button.dart';
+import 'package:test_app/features/follow_business/presentation/widgets/follow_business_card.dart';
+import 'package:test_app/features/follow_business/presentation/widgets/follow_business_card_header.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/helpers/app_providers.dart';
+import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import 'follow_business_card.dart';
-import 'follow_business_card_header.dart';
+import '../../../../core/widgets/app_next_button.dart';
 
 
 class FollowBusinessPage extends ConsumerWidget
