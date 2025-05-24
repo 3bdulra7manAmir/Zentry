@@ -15,7 +15,6 @@ void showPostOptionsBottomSheet(BuildContext context)
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
-    //isScrollControlled: true,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly16),
     builder: (BuildContext context)
@@ -39,13 +38,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size22.verticalSpace,
-            Divider(
-              color: AppColors.color.kGreyText009, 
-              thickness: AppSizes.size1,
-              indent: 15,
-              endIndent: 15,
-            ),
-
+            const AppDivider(),
             AppSizes.size22.verticalSpace,
             Row(
               children:
@@ -56,13 +49,7 @@ void showPostOptionsBottomSheet(BuildContext context)
               ],
             ),
             AppSizes.size22.verticalSpace,
-            Divider(
-              color: AppColors.color.kGreyText009, 
-              thickness: AppSizes.size1,
-              indent: AppSizes.size15,
-              endIndent: AppSizes.size15,
-            ),
-
+            const AppDivider(),
             AppSizes.size22.verticalSpace,
             Row(
               children:

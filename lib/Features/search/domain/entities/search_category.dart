@@ -1,5 +1,5 @@
-// Model class for search category
-class SearchCategory {
+class SearchCategory
+{
   final int id;
   final String image;
   final String title;

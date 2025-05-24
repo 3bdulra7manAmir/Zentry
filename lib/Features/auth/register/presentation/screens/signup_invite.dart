@@ -47,7 +47,7 @@ class SignUpFormInvite extends ConsumerWidget
                   Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   GestureDetector(
-                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(), //HERE //Needs Fix
+                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(),
                     child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight,),),),
                 ],
               ),
@@ -102,7 +102,7 @@ class SignUpFormInvite extends ConsumerWidget
                 {
                   if (inviteFormKey.currentState!.validate())
                   {
-                    //HERE
+                    
                   }
                 },
               ),

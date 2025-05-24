@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-abstract class AppPadding {
+abstract class AppPadding
+{
   AppPadding._();
 
   /// All Sides Padding

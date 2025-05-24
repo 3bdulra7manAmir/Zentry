@@ -48,16 +48,7 @@ class MoenyFromInviteCard extends StatelessWidget
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text, fieldText: AppLocalizations.of(context).invitationCodeExample2,
-                fieldsuffixIcon: Padding( //HERE //FIX //Temp
-                  padding: AppPadding.endOnly15,
-                  child: SizedBox(
-                    width: 60,
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(AppLocalizations.of(context).paste, style: AppStyles.textStyle12(),),
-                    ),
-                  ),
-                ),
+                fieldsuffixIcon: const PastePadding(),
               ),
               AppSizes.size24.verticalSpace,
               Text(AppLocalizations.of(context).myCode, style: AppStyles.textStyle12(
@@ -67,22 +58,34 @@ class MoenyFromInviteCard extends StatelessWidget
               AppSizes.size8.verticalSpace,
               CustomTextFormField(
                 fieldKeyboardType: TextInputType.text, fieldText: AppLocalizations.of(context).myCodeExample,
-                fieldsuffixIcon: Padding( //HERE //FIX //Temp
-                  padding: AppPadding.endOnly15,
-                  child: SizedBox(
-                    width: 60.w,
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(AppLocalizations.of(context).paste, style: AppStyles.textStyle12(),),
-                    ),
-                  ),
-                ),
+                fieldsuffixIcon: const PastePadding(),
               ),
             ],
           ),
         ),
         AppSizes.size43.verticalSpace,
       ],
+    );
+  }
+}
+
+
+class PastePadding extends StatelessWidget
+{
+  const PastePadding({super.key});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Padding(
+      padding: AppPadding.endOnly15,
+      child: SizedBox(
+        width: 60.w,
+        child: Align(
+          alignment: Alignment.centerRight,
+          child: Text(AppLocalizations.of(context).paste, style: AppStyles.textStyle12(),),
+        ),
+      ),
     );
   }
 }

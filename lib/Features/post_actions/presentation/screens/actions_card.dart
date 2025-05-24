@@ -13,7 +13,6 @@ void showActionsBottomSheet(BuildContext context)
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
-    //isScrollControlled: true,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly10),
     builder: (BuildContext context)

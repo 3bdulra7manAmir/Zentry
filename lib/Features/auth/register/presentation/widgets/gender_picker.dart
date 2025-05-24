@@ -8,8 +8,9 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../controllers/gender_provider.dart';
+import 'gender_options.dart';
 
 void showGenderPickerBottomSheet(BuildContext context)
 {
@@ -24,111 +25,53 @@ void showGenderPickerBottomSheet(BuildContext context)
       return Consumer(
         builder: (context, ref, _)
         {
-          String selectedGender = ref.read(selectedGenderProvider) ?? ""; //HERE
-          return StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState)
-            {
-              return Padding(
-                padding: AppPadding.symmetric16,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
+          final provider = AppProvidersProvider(ref, context);
+          return Padding(
+            padding: AppPadding.symmetric16,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children:
+              [
+                Container(
+                  width: 73.w,
+                  height: 3.h,
+                  decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBordersRadiuses.circular4,),
+                ),
+                AppSizes.size30.verticalSpace,
+                Column(
                   children:
                   [
-                    Container(
-                      width: 73.w,
-                      height: 3.h,
-                      decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBordersRadiuses.circular4,),
+                    GenderOption(
+                      image: AppAssets.iconsPNG.registerFemale,
+                      label: AppLocalizations.of(context).female,
+                      value: AppLocalizations.of(context).female,
+                      groupValue: provider.selectedGender ?? "",
+                      onChanged: (value)
+                      {
+                        ref.read(selectedGenderProvider.notifier).state = value;
+                        AppRouter.router.pop();
+                      },
                     ),
-                    AppSizes.size30.verticalSpace,
-                    Column(
-                      children:
-                      [
-                        GenderOption(
-                          image: AppAssets.iconsPNG.registerFemale,
-                          label: AppLocalizations.of(context).female,
-                          value: AppLocalizations.of(context).female,
-                          groupValue: selectedGender,
-                          onChanged: (value)
-                          {
-                            setState(() => selectedGender = value);
-                            ref.read(selectedGenderProvider.notifier).state = value;
-                            AppRouter.router.pop();
-                          },
-                        ),
-                        AppSizes.size10.verticalSpace,
-                        GenderOption(
-                          image: AppAssets.iconsPNG.registerMale,
-                          label: AppLocalizations.of(context).male,
-                          value: AppLocalizations.of(context).male,
-                          groupValue: selectedGender,
-                          onChanged: (value)
-                          {
-                            setState(() => selectedGender = value);
-                            ref.read(selectedGenderProvider.notifier).state = value;
-                            AppRouter.router.pop();
-                          },
-                        ),
-                      ],
+                    AppSizes.size10.verticalSpace,
+                    GenderOption(
+                      image: AppAssets.iconsPNG.registerMale,
+                      label: AppLocalizations.of(context).male,
+                      value: AppLocalizations.of(context).male,
+                      groupValue: provider.selectedGender ?? "",
+                      onChanged: (value)
+                      {
+                        ref.read(selectedGenderProvider.notifier).state = value;
+                        AppRouter.router.pop();
+                      },
                     ),
-                    AppSizes.size24.verticalSpace,
                   ],
                 ),
-              );
-            },
+                AppSizes.size24.verticalSpace,
+              ],
+            ),
           );
         },
       );
     },
   );
-}
-
-
-class GenderOption extends StatelessWidget
-{
-  final String image;
-  final String label;
-  final String value;
-  final String groupValue;
-  final ValueChanged<String> onChanged;
-
-  const GenderOption({
-    super.key, 
-    required this.image,
-    required this.label,
-    required this.value,
-    required this.groupValue,
-    required this.onChanged,
-  });
-
-  @override
-  Widget build(BuildContext context)
-  {
-    return InkWell(
-      onTap: () => onChanged(value),
-      borderRadius: AppBordersRadiuses.circular10,
-      child: Container(
-        padding: AppPadding.horizontal16,
-        decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular10,),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:
-          [
-            Row(
-              children:
-              [
-                Image.asset(image),
-                Text(label, style: AppStyles.textStyle17(fontColor: AppColors.color.kBlack003),),
-              ],
-            ),
-            Radio<String>(
-              value: value,
-              groupValue: groupValue,
-              onChanged: (val) => onChanged(val!),
-              activeColor: AppColors.color.kBlack003,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

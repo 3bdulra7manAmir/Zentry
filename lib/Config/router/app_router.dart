@@ -5,6 +5,7 @@ import '../../features/auth/forget_password/presentation/screens/forget_password
 import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
 import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
+import '../../features/auth/register/presentation/screens/signup_invite.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../features/bottom_nav_bar/presentation/screens/bottom_nav_bar.dart';
@@ -50,6 +51,13 @@ abstract class AppRouter
         path: AppRoutes.kAuthView,
         name: AppRoutes.kAuthView,
         builder: (context, state) => const AuthView(),
+      ),
+
+      /// App Login or SignUp Form View
+      GoRoute(
+        path: AppRoutes.kSignUpInviteView,
+        name: AppRoutes.kSignUpInviteView,
+        builder: (context, state) => SignUpFormInvite(),
       ),
 
       /// App Forget Password With Phone View

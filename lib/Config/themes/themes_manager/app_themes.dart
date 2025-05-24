@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../core/constants/app_styles.dart';
 import 'app_themes_styles.dart';
 import '../color_system/app_colors.dart';
 
@@ -19,23 +17,20 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kGrey002,
-        focusedBorder: AppThemesStyles.inputBorderLight,
-        enabledBorder: AppThemesStyles.inputBorderLight,
-        errorBorder: AppThemesStyles.inputBorderLight,
-        disabledBorder: AppThemesStyles.inputBorderLight,
+        focusedBorder: AppLightStyles.inputBorderLight,
+        enabledBorder: AppLightStyles.inputBorderLight,
+        errorBorder: AppLightStyles.inputBorderLight,
+        disabledBorder: AppLightStyles.inputBorderLight,
       ),
 
-      elevatedButtonTheme: AppThemesStyles.elevatedButtonTheme,
-      tabBarTheme: AppThemesStyles.tabBarTheme,
+      elevatedButtonTheme: AppLightStyles.elevatedButtonTheme,
+      tabBarTheme: AppLightStyles.tabBarTheme,
       appBarTheme: AppBarTheme(
-        
         backgroundColor: AppColors.color.kGrey004,
         centerTitle: true,
       ),
 
-      cupertinoOverrideTheme:  CupertinoThemeData(
-        textTheme: CupertinoTextThemeData(pickerTextStyle: AppStyles.textStyle26(),),
-      ),
+      cupertinoOverrideTheme: AppLightStyles.cupertinoLightOverrideTheme
     );
   }
 
@@ -50,22 +45,20 @@ class AppTheme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.color.kDark001,
-        focusedBorder: AppThemesStyles.inputBorderDark,
-        enabledBorder: AppThemesStyles.inputBorderDark,
-        errorBorder: AppThemesStyles.inputBorderDark,
-        disabledBorder: AppThemesStyles.inputBorderDark,
+        focusedBorder: AppDarkStyles.inputBorderDark,
+        enabledBorder: AppDarkStyles.inputBorderDark,
+        errorBorder: AppDarkStyles.inputBorderDark,
+        disabledBorder: AppDarkStyles.inputBorderDark,
       ),
 
-      elevatedButtonTheme: AppThemesStyles.elevatedButtonTheme,
-      tabBarTheme: AppThemesStyles.tabBarTheme,
+      elevatedButtonTheme: AppDarkStyles.elevatedButtonTheme,
+      tabBarTheme: AppDarkStyles.tabBarTheme,
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.color.kGrey004,
         centerTitle: true,
       ),
 
-      cupertinoOverrideTheme:  CupertinoThemeData(
-        textTheme: CupertinoTextThemeData(pickerTextStyle: AppStyles.textStyle26(),),
-      ),
+    cupertinoOverrideTheme: AppDarkStyles.cupertinoDarkOverrideTheme
     );
   }
 }

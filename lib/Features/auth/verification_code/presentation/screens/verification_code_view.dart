@@ -131,7 +131,7 @@ class VerificationCodeView extends ConsumerWidget
                   ),
                   AppSizes.size24.verticalSpace,
                   CustomButton(
-                    buttonOnPressed: () //HERE
+                    buttonOnPressed: ()
                     {
                       //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
                     },

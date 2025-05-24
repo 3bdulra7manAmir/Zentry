@@ -1,7 +1,11 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/config/router/app_router.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
@@ -81,11 +85,14 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                 ),
               ),
               AppSizes.size24.verticalSpace,
-              Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
-                  fontWeight: AppFontWeights.mediumWeight,
-                  fontColor: AppColors.color.kBlue003,
-                  textDecoration: TextDecoration.underline,
-                  textDecorationColor: AppColors.color.kBlue003,
+              InkWell(
+                //onTap: () => AppRouter.router.pushNamed(AppRoutes.kSignUpInviteView),
+                child: Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
+                    fontWeight: AppFontWeights.mediumWeight,
+                    fontColor: AppColors.color.kBlue003,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationColor: AppColors.color.kBlue003,
+                  ),
                 ),
               ),
               AppSizes.size32.verticalSpace,
@@ -95,7 +102,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                 {
                   if (signUpPhoneNumberFormKey.currentState!.validate())
                   {
-                    //HERE
+                    
                   }
                 },
               ),

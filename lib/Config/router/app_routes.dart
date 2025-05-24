@@ -9,6 +9,8 @@ abstract class AppRoutes
   static const kAppFormView = '/kAppFormView';
   // APP Login (Auth Tabs) View
   static const kAuthView = '/kAuthView';
+  // APP Login (Auth Tabs) View
+  static const kSignUpInviteView = '/kSignUpInviteView';
   // APP Forget Password Phone View
   static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
   // APP Forget Password Email View

@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/core/widgets/app_gridbuilder.dart';
 import '../../../config/l10n/generated/app_localizations.dart';
 import '../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_borders.dart';
@@ -17,10 +18,9 @@ class NumericKeyboard extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final List<String> keys = getNumbersList(context);
-    return GridView.builder( //HERE
+    return AppGridbuilder(
       padding: AppPadding.horizontal16,
       itemCount: 12,
-      shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         mainAxisSpacing: 10,

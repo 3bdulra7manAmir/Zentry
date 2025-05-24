@@ -12,7 +12,6 @@ void showMoenyFromInviteBottomSheet(BuildContext context)
   showModalBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
-    //isScrollControlled: true,
     isDismissible: true,
     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context)
