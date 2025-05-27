@@ -10,7 +10,7 @@ import '../../../register/presentation/controllers/email_or_phone_provider.dart'
 import '../../../register/presentation/screens/signup_form_fullname.dart';
 import '../../../register/presentation/screens/signup_form_phone.dart';
 import '../controllers/email_phone_switcher.dart';
-import 'login_form_email.dart';
+import '../screens/login_view.dart';
 import 'login_form_phone.dart';
 
 class AuthTabs extends ConsumerWidget
@@ -49,7 +49,7 @@ class AuthTabs extends ConsumerWidget
             child: TabBarView(
               children:
               [
-                provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginFormWithEmail(),
+                provider.loginType == LoginType.phone ? LoginFormWithPhone() : LoginScreen(),
                 provider.signUpType == SignUpType.phone ? SignUpFormPhoneNumber() : SignUpFormFullName(),
               ],
             ),
