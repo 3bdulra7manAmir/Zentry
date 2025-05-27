@@ -1204,6 +1204,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter the email address associated'**
   String get enterEmailAddressAssociated;
+
+  /// No description provided for @unsupportedPhoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Un-Supported phone number'**
+  String get unsupportedPhoneNumber;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/app_paddings.dart';
 
+
 class AppGridbuilder extends StatelessWidget
 {
   const AppGridbuilder({super.key, required this.itemBuilder, required this.itemCount, this.physics, this.padding, required this.gridDelegate});
@@ -18,7 +19,7 @@ class AppGridbuilder extends StatelessWidget
       itemBuilder: itemBuilder,
       itemCount: itemCount,
       shrinkWrap: true,
-      physics: physics ?? const BouncingScrollPhysics(),
+      physics: physics ?? const ScrollPhysics(),
       padding: padding ?? AppPadding.zero,
       gridDelegate: gridDelegate,
     );

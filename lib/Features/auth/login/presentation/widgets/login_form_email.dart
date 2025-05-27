@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -122,10 +124,7 @@ class LoginFormWithEmail extends ConsumerWidget
                 {
                   return CustomButton(
                     buttonText: AppLocalizations.of(context).login,
-                    buttonOnPressed: () async
-                    {
-                      await loginValidation(ref);
-                    },
+                    buttonOnPressed: () async => await loginValidation(ref),
                   );
                 }
               ),
@@ -189,14 +188,15 @@ class LoginFormWithEmail extends ConsumerWidget
     );
   }
 
-  Future<void> loginValidation(WidgetRef ref) async {
-    if (!loginEmailFormKey.currentState!.validate() == true)
+  Future<void> loginValidation(WidgetRef ref) async
+  {
+    if (!loginEmailFormKey.currentState!.validate())
     {
       await ref.read(loginStateProvider.notifier).loginWithEmail(emailController.text, passwordController.text);
       final state = ref.read(loginStateProvider);
       state.whenData((success)
       {
-        if (success)
+        if (!success)
         {
           AppRouter.router.pushNamed(AppRoutes.kHomeView);
         }

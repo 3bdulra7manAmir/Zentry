@@ -40,12 +40,16 @@ extension GetStringUtils on String?
   bool get isEgyptianPhone
   {
     if (this == null) return false;
+    final cleaned = this!.replaceAll(RegExp(r'\D'), '');
+    if (cleaned.length != 11 && cleaned.length != 13) return false;
     return RegExp(r'^(?:\+20|0)?1[0125]\d{8}$').hasMatch(this!);
   }
 
   bool get isSaudiPhone
   {
     if (this == null) return false;
+    final cleaned = this!.replaceAll(RegExp(r'\D'), '');
+    if (cleaned.length != 9 && cleaned.length != 12) return false;
     return RegExp(r'^(?:\+966|0)?5\d{8}$').hasMatch(this!);
   }
 
@@ -54,8 +58,15 @@ extension GetStringUtils on String?
     return isEgyptianPhone || isSaudiPhone;
   }
 
-   bool get isFullName
-   {
+  bool get isFullPhoneLength
+  {
+    if (this == null) return false;
+    final cleaned = this!.replaceAll(RegExp(r'\D'), '');
+    return cleaned.length >= 10 && cleaned.length <= 13;
+  }
+
+  bool get isFullName
+  {
     if (this == null) return false;
     final fullNameRegExp = RegExp(r"^(?!.*[^\p{L} \-'])[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$", unicode: true,);
     return fullNameRegExp.hasMatch(this!.trim());

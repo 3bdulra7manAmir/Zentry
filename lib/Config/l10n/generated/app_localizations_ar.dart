@@ -562,4 +562,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get enterEmailAddressAssociated => 'أدخل عنوان البريد الإلكتروني المرتبط';
+
+  @override
+  String get unsupportedPhoneNumber => 'رقم الهاتف غير مدعوم حالياً';
 }

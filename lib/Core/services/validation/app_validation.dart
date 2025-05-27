@@ -27,7 +27,6 @@ abstract class AppValidation
       {
         return AppLocalizations.of(context).enterEmaill;
       }
-
       return "";
     }
     catch (e)
@@ -56,25 +55,25 @@ abstract class AppValidation
     }
   }
 
-  static String languageValidation(String? value)
-  {
-    try
-    {
-      if (value == null || value.isEmpty || value == "Language" || value == "اللغة")
-      {
-        return 'Language is required';
-      }
-      if (!value.isLanguage)
-      {
-        return 'Invalid Language';
-      }
-      return "";
-    }
-    on Exception catch (e)
-    {
-      return e.toString();
-    }
-  }
+  // static String languageValidation(String? value)
+  // {
+  //   try
+  //   {
+  //     if (value == null || value.isEmpty || value == "Language" || value == "اللغة")
+  //     {
+  //       return 'Language is required';
+  //     }
+  //     if (!value.isLanguage)
+  //     {
+  //       return 'Invalid Language';
+  //     }
+  //     return "";
+  //   }
+  //   on Exception catch (e)
+  //   {
+  //     return e.toString();
+  //   }
+  // }
 
   static String passwordValidation(String? value, BuildContext context)
   {
@@ -118,28 +117,33 @@ abstract class AppValidation
     }
   }
 
-  static String phoneNumberValidation(String? value, BuildContext context)
+  static String? phoneNumberValidation(String? value, BuildContext context)
   {
-    try
+  try
+  {
+    final cleanedValue = value?.convertNumbers;
+    if (cleanedValue == null || cleanedValue.isEmpty)
     {
-      final cleanedValue = value?.convertNumbers;
-      if (cleanedValue == null || cleanedValue.isEmpty)
-      {
-        return AppLocalizations.of(context).phoneNumberIsRequired;
-      }
-      if (!cleanedValue.isPhoneNumber)
-      {
-        return AppLocalizations.of(context).invalidPhoneNumber;
-      }
-      return "";
+      return AppLocalizations.of(context).phoneNumberIsRequired;
     }
-    on Exception catch (e)
+    if (!cleanedValue.isPhoneNumber)
     {
-      return e.toString();
+      if (cleanedValue.isFullPhoneLength)
+      {
+        return AppLocalizations.of(context).unsupportedPhoneNumber;
+      }
+      return AppLocalizations.of(context).invalidPhoneNumber;
     }
+    return null;
   }
+  on Exception catch (e)
+  {
+    return e.toString();
+  }
+}
 
-  static String? invitationCodeValidation(String? value, BuildContext context)
+
+  static String invitationCodeValidation(String? value, BuildContext context)
   {
   try {
     final cleanedValue = value?.convertNumbers?.trim();
@@ -148,13 +152,12 @@ abstract class AppValidation
     {
       return AppLocalizations.of(context).invitationCodeIsRequired;
     }
-
     if (!cleanedValue.isInvitationCode)
     {
       return AppLocalizations.of(context).invalidInvitationCode;
     }
 
-    return null;
+    return "";
   }
   on Exception catch (e)
   {

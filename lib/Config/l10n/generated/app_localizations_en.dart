@@ -562,4 +562,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get enterEmailAddressAssociated => 'Enter the email address associated';
+
+  @override
+  String get unsupportedPhoneNumber => 'Un-Supported phone number';
 }

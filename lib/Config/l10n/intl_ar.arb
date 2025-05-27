@@ -184,6 +184,7 @@
   "otherUsers": "مستخدمون آخرون",
   "readMore": " اقرأ المزيد.....",
   "showLess": " عرض أقل",
-  "enterEmailAddressAssociated": "أدخل عنوان البريد الإلكتروني المرتبط"
+  "enterEmailAddressAssociated": "أدخل عنوان البريد الإلكتروني المرتبط",
+  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً"
 
 }

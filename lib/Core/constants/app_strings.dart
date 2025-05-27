@@ -386,6 +386,8 @@ abstract class AppStrings
   
   ///[Invalid_Phone_Number]
   static const invalidPhoneNumber = "Invalid phone number";
+  ///[Invalid_Phone_Number]
+  static const unsupportedPhoneNumber = "Un-Supported phone number";
 
   // Password Validation
   ///[Password_Is_Required]

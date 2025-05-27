@@ -15,6 +15,7 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_container.dart';
 import '../../../../../core/widgets/app_form.dart';
+import '../controllers/initial_tabbar_controller.dart';
 import 'countries_bottom_modal_sheet.dart';
 import 'language_bottom_modal_sheet.dart';
 import 'themes_bottom_modal_sheet.dart';
@@ -85,7 +86,11 @@ class AppSettings extends ConsumerWidget
             CustomButton(
               buttonText: AppLocalizations.of(context).login,
               buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kWhite003,),
-              buttonOnPressed: () => AppRouter.router.push(AppRoutes.kAuthView),
+              buttonOnPressed: ()
+              {
+                ref.read(tabIndexProvider.notifier).setIndex(0);
+                AppRouter.router.pushNamed(AppRoutes.kAuthView, queryParameters: {'tab': '0'});
+              },
             ),
             AppSizes.size16.verticalSpace,
             CustomButton(
@@ -93,7 +98,10 @@ class AppSettings extends ConsumerWidget
               buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kBlue007,),
               buttonBackgroundColor: AppColors.color.kWhite004,
               buttonBorderColor: AppColors.color.kBlue008,
-              //buttonOnPressed: () => AppRouter.router.pushNamed(AppRoutes.kTestView),
+              buttonOnPressed: () {
+                ref.read(tabIndexProvider.notifier).setIndex(1);
+                AppRouter.router.pushNamed(AppRoutes.kAuthView, queryParameters: {'tab': '1'});
+              },
             ),
           ],
         ),

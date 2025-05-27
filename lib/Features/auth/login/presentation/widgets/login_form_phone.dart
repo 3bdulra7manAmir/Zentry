@@ -201,7 +201,7 @@ class LoginFormWithPhone extends ConsumerWidget
       final state = ref.read(loginStateProvider);
       state.whenData((success)
       {
-        if (success)
+        if (!success)
         {
           AppRouter.router.pushNamed(AppRoutes.kHomeView);
         }
