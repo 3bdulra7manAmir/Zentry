@@ -19,9 +19,9 @@ import 'countries_bottom_modal_sheet.dart';
 import 'language_bottom_modal_sheet.dart';
 import 'themes_bottom_modal_sheet.dart';
 
-class AppFormView extends ConsumerWidget
+class AppSettings extends ConsumerWidget
 {
-  const AppFormView({super.key});
+  const AppSettings({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
@@ -49,10 +49,7 @@ class AppFormView extends ConsumerWidget
               ),
             ),
             AppSizes.size24.verticalSpace,
-            Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(
-              fontColor: AppColors.color.kGreyText001,
-              ),
-            ),
+            Text(AppLocalizations.of(context).welcomeBack, style: AppStyles.textStyle18(fontColor: AppColors.color.kGreyText001,),),
             AppSizes.size28.verticalSpace,
             GestureDetector(
               onTap: () => showLanguageBottomSheet(context),

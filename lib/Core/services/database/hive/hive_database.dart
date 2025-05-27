@@ -1,5 +1,5 @@
 // import 'package:hive_flutter/adapters.dart';
-// import '../../../../features/auth/app_form/domain/entity/app_form_entity.dart';
+// import '../../../../features/app_settings/domain/entity/app_form_entity.dart';
 // import 'hive_boxes_names.dart';
 
 // class HiveLocalSourceDatabase

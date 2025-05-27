@@ -1198,6 +1198,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **' Show less'**
   String get showLess;
+
+  /// No description provided for @enterEmailAddressAssociated.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the email address associated'**
+  String get enterEmailAddressAssociated;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

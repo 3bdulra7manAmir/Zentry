@@ -14,7 +14,6 @@ import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
-import '../../../widgets/numeric_keyboard.dart';
 
 class VerificationCodeView extends ConsumerWidget
 {
@@ -144,9 +143,7 @@ class VerificationCodeView extends ConsumerWidget
                 ],
               ),
             ),
-            AppSizes.size60.verticalSpace,
-            const NumericKeyboard(maxLength: 5),
-            AppSizes.size20.verticalSpace,
+            AppSizes.size25.verticalSpace,
           ],
         ),
       ),

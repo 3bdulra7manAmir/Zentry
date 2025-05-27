@@ -72,10 +72,11 @@ class RestPasswordView extends ConsumerWidget
                         {
                           ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
                         },
-                        child: Image.asset(provider.obscureText
-                          ? AppAssets.iconsPNG.loginPasswordHidden
-                          : AppAssets.iconsPNG.loginPasswordVisible,
-                        ),
+                        // child: Image.asset(provider.obscureText
+                        //   ? AppAssets.iconsPNG.loginPasswordHidden
+                        //   : AppAssets.iconsPNG.loginPasswordVisible,
+                        // ),
+                        child: const Icon(Icons.remove_red_eye_outlined),
                       ),
                     ),
                     AppSizes.size24.verticalSpace,

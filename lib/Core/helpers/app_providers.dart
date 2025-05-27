@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../Features/auth/app_form/presentation/controllers/language_icon_update_provider.dart';
+import '../../Features/auth/app_settings/presentation/controllers/language_icon_update_provider.dart';
 import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/controller/theme_controller.dart';
-import '../../features/auth/app_form/presentation/controllers/countries_icon_update_provider.dart';
-import '../../features/auth/app_form/presentation/controllers/theme_mode_text_provide.dart';
+import '../../features/auth/app_settings/presentation/controllers/countries_icon_update_provider.dart';
+import '../../features/auth/app_settings/presentation/controllers/theme_mode_text_provide.dart';
 import '../../features/auth/login/presentation/controllers/checkbox_controller.dart';
 import '../../features/auth/login/presentation/controllers/email_phone_switcher.dart';
 import '../../features/auth/login/presentation/controllers/obsecure_text_controller.dart';

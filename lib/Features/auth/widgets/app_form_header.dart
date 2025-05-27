@@ -34,7 +34,11 @@ class FormHeader extends ConsumerWidget
           padding: AppPadding.formHeader,
           width: double.infinity,
           color: AppColors.color.kBlue001,
-          child: Image.asset(AppAssets.iconsPNG.headerFullLogo),
+          child: Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.identity()..scale(provider.localeState.selectedLanguageIndex == 0 ? -1.0 : 1.0, 1.0),
+            child: Image.asset(AppAssets.iconsPNG.headerFullLogo),
+          ),
         ),
         (isText ?? false)
             ? Positioned(

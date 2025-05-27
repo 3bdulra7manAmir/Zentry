@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../widgets/app_form_header.dart';
-import '../widgets/app_form.dart';
+import '../widgets/app_settings.dart';
 
-class FormView extends StatelessWidget
+class AppSettingsView extends StatelessWidget
 {
-  const FormView({super.key});
+  const AppSettingsView({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -17,7 +17,7 @@ class FormView extends StatelessWidget
         children:
         [
           Expanded(flex: 1, child: FormHeader()),
-          Expanded(flex: 3, child: AppFormView()),
+          Expanded(flex: 3, child: AppSettings()),
         ],
       ),
     );

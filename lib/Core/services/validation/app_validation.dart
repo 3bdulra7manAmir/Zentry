@@ -139,7 +139,7 @@ abstract class AppValidation
     }
   }
 
-  static String invitationCodeValidation(String? value, BuildContext context)
+  static String? invitationCodeValidation(String? value, BuildContext context)
   {
   try {
     final cleanedValue = value?.convertNumbers?.trim();
@@ -154,7 +154,7 @@ abstract class AppValidation
       return AppLocalizations.of(context).invalidInvitationCode;
     }
 
-    return "";
+    return null;
   }
   on Exception catch (e)
   {

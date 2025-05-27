@@ -169,6 +169,9 @@ abstract class AppStrings
   
   ///[Enter_Phone_Number_Associated]
   static const enterPhoneNumberAssociated = "Enter the phone number associated";
+
+  ///[Enter_Email_Address_Associated]
+  static const enterEmailAddressAssociated = "Enter the email address associated";
   
   ///[With_Your_Account]
   static const withYourAccount = "with your account";

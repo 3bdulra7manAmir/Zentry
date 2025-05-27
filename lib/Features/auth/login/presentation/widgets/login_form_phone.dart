@@ -46,7 +46,7 @@ class LoginFormWithPhone extends ConsumerWidget
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              AppSizes.size28.verticalSpace,
+              AppSizes.size13.verticalSpace,
               Row(
                 children:
                 [
@@ -112,7 +112,7 @@ class LoginFormWithPhone extends ConsumerWidget
                   Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText004,),),
                   const Spacer(),
                   InkWell(
-                    onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordPhoneView,),
+                    onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPassword,),
                     child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
                         fontColor: AppColors.color.kBlue003,
                         textDecoration: TextDecoration.underline,

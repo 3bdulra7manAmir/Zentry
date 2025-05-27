@@ -559,4 +559,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get showLess => ' Show less';
+
+  @override
+  String get enterEmailAddressAssociated => 'Enter the email address associated';
 }

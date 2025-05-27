@@ -12,7 +12,7 @@ abstract class AppRoutes
   // APP Login (Auth Tabs) View
   static const kSignUpInviteView = '/kSignUpInviteView';
   // APP Forget Password Phone View
-  static const kForgetPasswordPhoneView = '/kForgetPasswordPhoneView';
+  static const kForgetPassword = '/kForgetPasswordPhoneView';
   // APP Forget Password Email View
   static const kForgetPasswordEmailView = '/kForgetPasswordEmailView';
   // APP Reset Password View

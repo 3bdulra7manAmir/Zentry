@@ -1,9 +1,8 @@
 // ignore_for_file: unused_import
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/auth/forget_password/presentation/screens/forget_password_email_view.dart';
-import '../../features/auth/forget_password/presentation/screens/forget_password_phone_view.dart';
-import '../../features/auth/app_form/presentation/screens/app_form_view.dart';
+import '../../features/auth/forget_password/presentation/screens/forget_password_view.dart';
+import '../../features/auth/app_settings/presentation/screens/app_settings_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
 import '../../features/auth/register/presentation/screens/signup_invite.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
@@ -43,7 +42,7 @@ abstract class AppRouter
       GoRoute(
         path: AppRoutes.kAppFormView,
         name: AppRoutes.kAppFormView,
-        builder: (context, state) => const FormView(),
+        builder: (context, state) => const AppSettingsView(),
       ),
 
       /// App Login or SignUp Form View
@@ -62,16 +61,16 @@ abstract class AppRouter
 
       /// App Forget Password With Phone View
       GoRoute(
-        path: AppRoutes.kForgetPasswordPhoneView,
-        name: AppRoutes.kForgetPasswordPhoneView,
-        builder: (context, state) => ForgetPasswordWithPhoneView(),
+        path: AppRoutes.kForgetPassword,
+        name: AppRoutes.kForgetPassword,
+        builder: (context, state) => ForgetPassword(),
       ),
 
       /// App Forget Password With Email View
       GoRoute(
         path: AppRoutes.kForgetPasswordEmailView,
         name: AppRoutes.kForgetPasswordEmailView,
-        builder: (context, state) => ForgetPasswordWithEmailView(),
+        builder: (context, state) => ForgetPassword(),
       ),
 
       /// App Rest Password View

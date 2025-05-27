@@ -559,4 +559,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get showLess => ' عرض أقل';
+
+  @override
+  String get enterEmailAddressAssociated => 'أدخل عنوان البريد الإلكتروني المرتبط';
 }
