@@ -30,7 +30,7 @@ class PostsCard extends StatelessWidget
           PostBio(carModel: post.carModel, carPrice: post.carPrice, carInfo: post.carInfo,),
           AppSizes.size12.verticalSpace,
           GestureDetector(
-            onTap: () => showCommentsBottomSheet(context),
+            onTap: () => showCommentsBottomSheet(context, post.postCarImage),
             child: Image.asset(post.postCarImage, fit: BoxFit.cover, width: 360.w,)
           ),
           AppSizes.size8.verticalSpace,

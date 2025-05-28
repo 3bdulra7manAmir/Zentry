@@ -5,7 +5,7 @@ import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../post_actions/actions_card.dart';
+import '../post_actions/post_options_card.dart';
 
 class PostHeader extends StatelessWidget
 {
@@ -39,7 +39,7 @@ class PostHeader extends StatelessWidget
         ),
         const Spacer(),
         InkWell(
-          onTap: () => showActionsBottomSheet(context),
+          onTap: () => showPostOptionsBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.homeThreeDots),
         ),
       ],
