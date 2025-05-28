@@ -13,7 +13,6 @@ import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_appbar.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
-import '../widgets/friend_request_card.dart';
 
 
 class NotificationsView extends ConsumerWidget
@@ -38,8 +37,6 @@ class NotificationsView extends ConsumerWidget
           children:
           [
             AppSizes.size10.verticalSpace,
-            const FriendRequestCard(),
-            AppSizes.size14.verticalSpace,
             Consumer(
               builder: (context, ref, _)
               {

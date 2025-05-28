@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
+import '../../../../core/widgets/app_button.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
 import '../../../../core/constants/app_images.dart';
@@ -78,7 +80,7 @@ class DefaultNotificationCard extends StatelessWidget
                               fontColor: AppColors.color.kGreyText006,
                               textOverflow: TextOverflow.ellipsis,),),
                           const Spacer(),
-                          Text(notification.time, style: AppStyles.textStyle12(
+                          if (notification.isFriendRequest != "Yes") Text(notification.time, style: AppStyles.textStyle12(
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kGreyText006,
                           ),),
@@ -90,6 +92,53 @@ class DefaultNotificationCard extends StatelessWidget
                 ),
               ],
             ),
+            if (notification.isFriendRequest == "Yes") ...[
+              AppSizes.size13.verticalSpace,
+              Row(
+                children:
+                [
+                  AppSizes.size12.horizontalSpace,
+                  Expanded(
+                    flex: 2,
+                    child: CustomButton(
+                      buttonText: AppLocalizations.of(context).accept,
+                      buttonTextStyle: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.semiBoldWeight,
+                        fontColor: AppColors.color.kWhite003
+                      ),
+                      buttonWidth: 114.w,
+                      buttonHeight: 33.h,
+                      buttonBorderRadius: AppBordersRadiuses.circular5,
+                      buttonBackgroundColor: AppColors.color.kBlue003,
+                      buttonOnPressed: () {},
+                    ),
+                  ),
+                  AppSizes.size8.horizontalSpace,
+                  Expanded(
+                    flex: 2,
+                    child: CustomButton(
+                      buttonText: AppLocalizations.of(context).reject,
+                      buttonTextStyle: AppStyles.textStyle13(
+                        fontWeight: AppFontWeights.semiBoldWeight,
+                        fontColor: AppColors.color.kBlack001
+                      ),
+                      buttonWidth: 114.w,
+                      buttonHeight: 33.h,
+                      buttonBorderRadius: AppBordersRadiuses.circular5,
+                      buttonBackgroundColor: AppColors.color.kGreyText007,
+                      buttonOnPressed: () {},
+                    ),
+                  ),
+                  AppSizes.size35.horizontalSpace,
+                  if (notification.isFriendRequest == "Yes")
+                  Text(notification.time, style: AppStyles.textStyle12(
+                    fontWeight: AppFontWeights.semiBoldWeight,
+                    fontColor: AppColors.color.kGreyText006,
+                  ),),
+                  AppSizes.size12.horizontalSpace,
+                ],
+              ),
+            ],
           ],
         ),
       ),

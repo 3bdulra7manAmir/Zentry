@@ -7,7 +7,8 @@
       "username": "Adham",
       "action": "commented on your listing",
       "device" : "Samgung Galaxy S23",
-      "time": "5m"
+      "time": "5m",
+      "isFriendRequest": "Yes"
     },
     {
       "id": 1002,
@@ -15,7 +16,8 @@
       "username": "Ahmed",
       "action": "liked your listing",
       "device" : "iPhone 14 Pro",
-      "time": "15m"
+      "time": "15m",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1003,
@@ -23,7 +25,8 @@
       "username": "Daniel",
       "action": "sent you a message",
       "device" : "iPhone 12 Pro",
-      "time": "30m"
+      "time": "30m",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1004,
@@ -31,7 +34,8 @@
       "username": "Adham",
       "action": "made an offer on your listing",
       "device" : "iPhone 17 Pro",
-      "time": "1h"
+      "time": "1h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1005,
@@ -39,7 +43,8 @@
       "username": "James",
       "action": "shared your listing",
       "device" : "iPhone 11 Pro",
-      "time": "2h"
+      "time": "2h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1006,
@@ -47,7 +52,8 @@
       "username": "Daniel",
       "action": "commented on your listing",
       "device" : "Samgung S29 Max",
-      "time": "3h"
+      "time": "3h",
+      "isFriendRequest": "Yes" 
     },
     {
       "id": 1007,
@@ -55,7 +61,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 17 Pro",
-      "time": "7h"
+      "time": "7h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1008,
@@ -63,7 +70,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 17 Pro",
-      "time": "3h"
+      "time": "3h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1009,
@@ -71,7 +79,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "M22 Moto 12 Pro",
-      "time": "1h"
+      "time": "1h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1010,
@@ -79,7 +88,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 14 Pro",
-      "time": "5h"
+      "time": "5h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1011,
@@ -87,7 +97,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 17 Pro",
-      "time": "5h"
+      "time": "5h",
+      "isFriendRequest": "Yes" 
     },
     {
       "id": 1012,
@@ -95,7 +106,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 11 Pro",
-      "time": "30m"
+      "time": "30m",
+      "isFriendRequest": "Yes" 
     },
     {
       "id": 1013,
@@ -103,7 +115,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "Samgung S29 Ultra Max",
-      "time": "10m"
+      "time": "10m",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1014,
@@ -111,7 +124,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "M22 Moto 12 Pro",
-      "time": "5h"
+      "time": "5h",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1015,
@@ -119,7 +133,8 @@
       "username": "William",
       "action": "viewed your profile",
       "device" : "iPhone 14 Pro",
-      "time": "4m"
+      "time": "4m",
+      "isFriendRequest": "No" 
     },
     {
       "id": 1016,
@@ -127,7 +142,8 @@
       "username": "James",
       "action": "added your listing to favorites",
       "device" : "iPhone 17 Pro",
-      "time": "1d"
+      "time": "1d",
+      "isFriendRequest": "Yes" 
     }
   ]
 }

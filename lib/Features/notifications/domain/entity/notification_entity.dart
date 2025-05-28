@@ -5,6 +5,7 @@ class NotificationEntity {
   final String action;
   final String device;
   final String time;
+  final String isFriendRequest;
 
   NotificationEntity({
     required this.id,
@@ -13,6 +14,8 @@ class NotificationEntity {
     required this.action,
     required this.device,
     required this.time,
+    required this.isFriendRequest,
+
   });
 
   factory NotificationEntity.fromJson(Map<String, dynamic> json) {
@@ -23,6 +26,7 @@ class NotificationEntity {
       action: json['action'] as String,
       device: json['device'] as String,
       time: json['time'] as String,
+      isFriendRequest: json['isFriendRequest'] as String,
     );
   }
 
@@ -34,6 +38,7 @@ class NotificationEntity {
       'action': action,
       'device': device,
       'time': time,
+      'isFriendRequest': isFriendRequest,
     };
   }
 }
