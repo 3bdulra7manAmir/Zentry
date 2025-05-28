@@ -19,12 +19,14 @@ class StroyListBuilder extends ConsumerWidget
       data: (stories) => AppListviewBuilder(
         scrollDirection: Axis.horizontal,
         itemCount: stories.length,
-        itemBuilder: (context, index) => UsersStory(story: stories[index]),
+        itemBuilder: (context, index) => GestureDetector(
+          //onTap: () => ,
+          child: UsersStory(story: stories[index])
+        ),
         separatorBuilder: (context, index) => AppSizes.size9.horizontalSpace,
       ),
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stackTrace) => Center(
-        child: Text('${AppLocalizations.of(context).error}: $error'),
+      error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error'),
       ),
     );
   }

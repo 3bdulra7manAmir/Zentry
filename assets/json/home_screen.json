@@ -48,8 +48,26 @@
     },
     {
       "id": 103,
-      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "userAvatar": "assets/icons/Join_Groups/Pet.png",
       "backgroundImage": "assets/icons/Home/Car_Merc.png",
+      "name": "Muhammed KH"
+    },
+    {
+      "id": 104,
+      "userAvatar": "assets/icons/Home/Pepsi.png",
+      "backgroundImage": "assets/icons/Search_Result/Car_Frog.png",
+      "name": "El Hawi Motors"
+    },
+    {
+      "id": 105,
+      "userAvatar": "assets/icons/Home/Robot_Boy_SUIIZ.png",
+      "backgroundImage": "assets/icons/Search_Result/Car_Audi.png",
+      "name": "Batman"
+    },
+    {
+      "id": 106,
+      "userAvatar": "assets/icons/Join_Groups/Laptop.png",
+      "backgroundImage": "assets/icons/Home/Milk.png",
       "name": "Al Karsh"
     }
   ]

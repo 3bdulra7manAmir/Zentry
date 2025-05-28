@@ -19,6 +19,7 @@ class UsersStory extends StatelessWidget
     return Container(
       height: 148.h,
       width: 112.w,
+      padding: AppPadding.startOnly12,
       decoration: BoxDecoration(
         borderRadius: AppBordersRadiuses.circular5,
         image: DecorationImage(
@@ -26,31 +27,28 @@ class UsersStory extends StatelessWidget
           fit: BoxFit.cover,
         ),
       ),
-      child: Padding(
-        padding: AppPadding.startOnly12,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:
-          [
-            AppSizes.size9.verticalSpace,
-            Container(
-              height: 40.h,
-              width: 40.w,
-              decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular50, border: AppFullBorders.othersStoryCard,),
-              child: ClipRRect(
-                borderRadius: AppBordersRadiuses.circular50,
-                child: Image.asset(story.userAvatar, fit: BoxFit.cover,),
-              ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children:
+        [
+          AppSizes.size9.verticalSpace,
+          Container(
+            height: 40.h,
+            width: 40.w,
+            decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular50, border: AppFullBorders.othersStoryCard,),
+            child: ClipRRect(
+              borderRadius: AppBordersRadiuses.circular50,
+              child: Image.asset(story.userAvatar, fit: BoxFit.cover,),
             ),
-            const Spacer(),
-            Text(story.name, style: AppStyles.textStyle10(
-                fontColor: AppColors.color.kWhite001,
-                fontWeight: AppFontWeights.extraBoldWeight,
-              ),maxLines: 2, overflow: TextOverflow.ellipsis,
-            ),
-            AppSizes.size10.verticalSpace,
-          ],
-        ),
+          ),
+          const Spacer(),
+          Text(story.name, style: AppStyles.textStyle10(
+              fontColor: AppColors.color.kWhite001,
+              fontWeight: AppFontWeights.extraBoldWeight,
+            ),maxLines: 2, overflow: TextOverflow.ellipsis,
+          ),
+          AppSizes.size10.verticalSpace,
+        ],
       ),
     );
   }
