@@ -21,9 +21,7 @@ import 'app_routes.dart';
 abstract class AppRouter
 {
   AppRouter._();
-
   static final navigatorState = GlobalKey<NavigatorState>(debugLabel: 'root');
-
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,

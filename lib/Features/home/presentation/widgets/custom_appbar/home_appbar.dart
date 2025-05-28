@@ -1,11 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/router/app_router.dart';
-import 'package:test_app/config/router/app_routes.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../complete_profile/complete_profile_view.dart';
 
 class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
 {
@@ -18,7 +19,7 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
       leadingWidth: 65.w,
       backgroundColor: Theme.of(context).cardColor,
       leading: GestureDetector(
-        onTap: () {},
+        onTap: () => showCompleteProfileBottomSheet(context),
         child: Image.asset(AppAssets.iconsPNG.homeRobotBoy),
       ),
       actions:

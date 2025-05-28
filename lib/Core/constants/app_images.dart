@@ -143,7 +143,7 @@ class _AppIconsPNG
 
   /// Complete Profile
   final String profileImagePicker = "assets/icons/Complete_Profile/Image_Picker.png"; /// profileImagePicker
-  final String profileCamera = "assets/icons/Complete_Profile/homeCamera.png"; /// profileCamera
+  final String profileCamera = "assets/icons/Complete_Profile/Camera.png"; /// profileCamera
 
   /// Comments Card
   final String commentHeart = "assets/icons/Comments_Card/Hart2.png"; /// commentHeart
