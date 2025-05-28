@@ -14,9 +14,9 @@ import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 
 
-class SearchResultsView extends ConsumerWidget
+class SearchResultsScreen extends ConsumerWidget
 {
-  const SearchResultsView({super.key});
+  const SearchResultsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

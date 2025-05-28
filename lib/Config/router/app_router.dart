@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test_app/core/widgets/app_circular_indicator.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_view.dart';
 import '../../features/auth/app_settings/presentation/screens/app_settings_view.dart';
 import '../../features/auth/login/presentation/screens/auth_view.dart';
@@ -19,106 +21,97 @@ import 'app_routes.dart';
 abstract class AppRouter
 {
   AppRouter._();
+
+  static final navigatorState = GlobalKey<NavigatorState>(debugLabel: 'root');
+
   static final router = GoRouter(
-    initialLocation: AppRoutes.kHomeView,
-    errorBuilder: (_, _) => const Scaffold(body: Center(child: CircularProgressIndicator.adaptive()),),
+    navigatorKey: navigatorState,
+    debugLogDiagnostics: kDebugMode,
+    initialLocation: AppRoutes.kAuthTabs,
+    errorBuilder: (_, _) => const Scaffold(body: Center(child: AppCircularIndicator()),),
     routes:
     [
-      ///App Splash View
+      ///App Bottom Nav Bar Temp
       GoRoute(
-        path: AppRoutes.kTestView,
-        name: AppRoutes.kTestView,
+        path: AppRoutes.kTest,
+        name: AppRoutes.kTest,
         builder: (context, state) => const MyHomePage(),
       ),
       
       ///App Splash View
       GoRoute(
-        path: AppRoutes.kSplashView,
-        name: AppRoutes.kSplashView,
-        builder: (context, state) => const SplashView(),
+        path: AppRoutes.kSplash,
+        name: AppRoutes.kSplash,
+        builder: (context, state) => const SplashScreen(),
       ),
 
       ///App Form View
       GoRoute(
-        path: AppRoutes.kAppFormView,
-        name: AppRoutes.kAppFormView,
-        builder: (context, state) => const AppSettingsView(),
+        path: AppRoutes.kAppSettings,
+        name: AppRoutes.kAppSettings,
+        builder: (context, state) => const AppSettingsScreen(),
       ),
 
       /// App Login or SignUp Form View
       GoRoute(
-        path: AppRoutes.kAuthView,
-        name: AppRoutes.kAuthView,
-        builder: (context, state) => const AuthView(),
-      ),
-
-      /// App Login or SignUp Form View
-      GoRoute(
-        path: AppRoutes.kSignUpInviteView,
-        name: AppRoutes.kSignUpInviteView,
-        builder: (context, state) => SignUpFormInvite(),
+        path: AppRoutes.kAuthTabs,
+        name: AppRoutes.kAuthTabs,
+        builder: (context, state) => const AuthScreen(),
       ),
 
       /// App Forget Password With Phone View
       GoRoute(
         path: AppRoutes.kForgetPassword,
         name: AppRoutes.kForgetPassword,
-        builder: (context, state) => ForgetPassword(),
-      ),
-
-      /// App Forget Password With Email View
-      GoRoute(
-        path: AppRoutes.kForgetPasswordEmailView,
-        name: AppRoutes.kForgetPasswordEmailView,
-        builder: (context, state) => ForgetPassword(),
+        builder: (context, state) => ForgetPasswordScreen(),
       ),
 
       /// App Rest Password View
       GoRoute(
-        path: AppRoutes.kResetPasswordView,
-        name: AppRoutes.kResetPasswordView,
-        builder: (context, state) => RestPasswordView(),
+        path: AppRoutes.kResetPassword,
+        name: AppRoutes.kResetPassword,
+        builder: (context, state) => RestPasswordScreen(),
       ),
 
       /// App Verification Code View
       GoRoute(
-        path: AppRoutes.kVerificationCodeView,
-        name: AppRoutes.kVerificationCodeView,
-        builder: (context, state) => const VerificationCodeView(),
+        path: AppRoutes.kVerification,
+        name: AppRoutes.kVerification,
+        builder: (context, state) => const VerificationScreen(),
       ),
 
       /// App Notifications View
       GoRoute(
-        path: AppRoutes.kNotificationsView,
-        name: AppRoutes.kNotificationsView,
-        builder: (context, state) => const NotificationsView(),
+        path: AppRoutes.kNotifications,
+        name: AppRoutes.kNotifications,
+        builder: (context, state) => const NotificationsScreen(),
       ),
 
       /// App Search Notifications View
       GoRoute(
-        path: AppRoutes.kNotificationsSearchView,
-        name: AppRoutes.kNotificationsSearchView,
-        builder: (context, state) => const NotificationsSearchView(),
+        path: AppRoutes.kNotificationsSearch,
+        name: AppRoutes.kNotificationsSearch,
+        builder: (context, state) => const NotificationsSearchScreen(),
       ),
 
       /// App Search Notifications View
       GoRoute(
-        path: AppRoutes.kSearchView,
-        name: AppRoutes.kSearchView,
-        builder: (context, state) => const SearchView(),
+        path: AppRoutes.kSearch,
+        name: AppRoutes.kSearch,
+        builder: (context, state) => const SearchScreen(),
       ),
 
       GoRoute(
-        path: AppRoutes.kSearchResultsView,
-        name: AppRoutes.kSearchResultsView,
-        builder: (context, state) => const SearchResultsView(),
+        path: AppRoutes.kSearchResults,
+        name: AppRoutes.kSearchResults,
+        builder: (context, state) => const SearchResultsScreen(),
       ),
 
       /// App Notifications View
       GoRoute(
-        path: AppRoutes.kHomeView,
-        name: AppRoutes.kHomeView,
-        builder: (context, state) => const HomeView(),
+        path: AppRoutes.kHome,
+        name: AppRoutes.kHome,
+        builder: (context, state) => const HomeScreen(),
       ),
 
       /// App Bottom Navigation Bar

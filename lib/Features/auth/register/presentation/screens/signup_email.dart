@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -71,10 +70,8 @@ class SignUpFormEmail extends ConsumerWidget
                 fieldText: "**************",
                 fieldsuffixIcon: GestureDetector(
                   onTap: () => provider.obscureTextState,
-                  child: Image.asset(provider.obscureText
-                    ? AppAssets.iconsPNG.loginPasswordHidden
-                    : AppAssets.iconsPNG.loginPasswordVisible,
-                  ),
+                  child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+                  : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
                 ),
               ),
               AppSizes.size24.verticalSpace,

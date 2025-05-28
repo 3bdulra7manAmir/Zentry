@@ -7,7 +7,6 @@ import '../../../../../../config/router/app_router.dart';
 import '../../../../../../config/router/app_routes.dart';
 import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../core/constants/app_borders.dart';
-import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/helpers/app_providers.dart';
@@ -39,7 +38,8 @@ class LoginPassword extends ConsumerWidget
           fieldText: AppLocalizations.of(context).password,
           fieldsuffixIcon: GestureDetector(
             onTap: () => provider.obscureTextState,
-            child: Image.asset(provider.obscureText ? AppAssets.iconsPNG.loginPasswordHidden : AppAssets.iconsPNG.loginPasswordVisible,),
+            child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+            : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
           ),
         ),
         AppSizes.size16.verticalSpace,
@@ -60,7 +60,7 @@ class LoginPassword extends ConsumerWidget
             Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText004,),),
             const Spacer(),
             InkWell(
-              onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPasswordEmailView,),
+              onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPassword,),
               child: Text(AppLocalizations.of(context).forgetPassword, style: AppStyles.textStyle12(
                   fontColor: AppColors.color.kBlue003,
                   textDecoration: TextDecoration.underline,

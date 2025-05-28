@@ -15,9 +15,9 @@ import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 
 
-class NotificationsView extends ConsumerWidget
+class NotificationsScreen extends ConsumerWidget
 {
-  const NotificationsView({super.key});
+  const NotificationsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

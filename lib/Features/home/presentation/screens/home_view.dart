@@ -12,9 +12,9 @@ import '../widgets/posts_feed_view/posts_card_view.dart';
 import '../widgets/products_scroll_view/products_item_list.dart';
 import '../widgets/story_scroll_view/story_view.dart';
 
-class HomeView extends ConsumerWidget
+class HomeScreen extends ConsumerWidget
 {
-  const HomeView({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

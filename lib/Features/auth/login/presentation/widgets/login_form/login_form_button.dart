@@ -59,7 +59,7 @@ class LoginFormButton extends ConsumerWidget
       {
         if (!success)
         {
-          AppRouter.router.pushNamed(AppRoutes.kHomeView);
+          AppRouter.router.pushNamed(AppRoutes.kHome);
         }
       });
     }

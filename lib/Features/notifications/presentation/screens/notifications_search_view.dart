@@ -10,9 +10,9 @@ import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 
 
-class NotificationsSearchView extends StatelessWidget
+class NotificationsSearchScreen extends StatelessWidget
 {
-  const NotificationsSearchView({super.key});
+  const NotificationsSearchScreen({super.key});
 
   @override
   Widget build(BuildContext context)

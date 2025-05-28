@@ -15,9 +15,9 @@ import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
 
-class VerificationCodeView extends ConsumerWidget
+class VerificationScreen extends ConsumerWidget
 {
-  const VerificationCodeView({super.key});
+  const VerificationScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -117,7 +117,7 @@ class VerificationCodeView extends ConsumerWidget
                       ),
                       AppSizes.size6.horizontalSpace,
                       GestureDetector(
-                        onTap: () => AppRouter.router.push(AppRoutes.kResetPasswordView,),
+                        onTap: () => AppRouter.router.push(AppRoutes.kResetPassword,),
                         child: Text(AppLocalizations.of(context).requestPhoneCall, style: AppStyles.textStyle14(
                             fontWeight: AppFontWeights.mediumWeight,
                             fontColor: AppColors.color.kBlue002,

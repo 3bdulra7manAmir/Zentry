@@ -19,9 +19,9 @@ import '../widgets/forget_password_email/email_address_header.dart';
 import '../widgets/forget_password_phone/phone_number.dart';
 import '../widgets/forget_password_phone/phone_number_header.dart';
 
-class ForgetPassword extends ConsumerWidget
+class ForgetPasswordScreen extends ConsumerWidget
 {
-  ForgetPassword({super.key});
+  ForgetPasswordScreen({super.key});
   final GlobalKey<FormState> forgetPasswordFormKey = GlobalKey<FormState>();
   
   @override
@@ -61,7 +61,7 @@ class ForgetPassword extends ConsumerWidget
                       {
                         if (forgetPasswordFormKey.currentState!.validate())
                         {
-                          AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView,)
+                          AppRouter.router.pushNamed(AppRoutes.kVerification,)
                         }
                       },
                     ),

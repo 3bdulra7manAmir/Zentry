@@ -3,9 +3,9 @@ import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../widgets/app_form_header.dart';
 import '../widgets/app_settings.dart';
 
-class AppSettingsView extends StatelessWidget
+class AppSettingsScreen extends StatelessWidget
 {
-  const AppSettingsView({super.key});
+  const AppSettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context)

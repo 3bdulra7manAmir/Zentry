@@ -13,9 +13,9 @@ import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../../../../core/widgets/app_search_appbar.dart';
 
-class SearchView extends ConsumerWidget
+class SearchScreen extends ConsumerWidget
 {
-  const SearchView({super.key});
+  const SearchScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

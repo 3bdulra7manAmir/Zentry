@@ -89,7 +89,7 @@ class AppSettings extends ConsumerWidget
               buttonOnPressed: ()
               {
                 ref.read(tabIndexProvider.notifier).setIndex(0);
-                AppRouter.router.pushNamed(AppRoutes.kAuthView, queryParameters: {'tab': '0'});
+                AppRouter.router.pushNamed(AppRoutes.kAuthTabs, queryParameters: {'tab': '0'});
               },
             ),
             AppSizes.size16.verticalSpace,
@@ -100,7 +100,7 @@ class AppSettings extends ConsumerWidget
               buttonBorderColor: AppColors.color.kBlue008,
               buttonOnPressed: () {
                 ref.read(tabIndexProvider.notifier).setIndex(1);
-                AppRouter.router.pushNamed(AppRoutes.kAuthView, queryParameters: {'tab': '1'});
+                AppRouter.router.pushNamed(AppRoutes.kAuthTabs, queryParameters: {'tab': '1'});
               },
             ),
           ],

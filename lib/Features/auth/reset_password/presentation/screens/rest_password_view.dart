@@ -15,9 +15,9 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../login/presentation/controllers/obsecure_text_controller.dart';
 
-class RestPasswordView extends ConsumerWidget
+class RestPasswordScreen extends ConsumerWidget
 {
-  RestPasswordView({super.key});
+  RestPasswordScreen({super.key});
 
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
@@ -72,11 +72,8 @@ class RestPasswordView extends ConsumerWidget
                         {
                           ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
                         },
-                        // child: Image.asset(provider.obscureText
-                        //   ? AppAssets.iconsPNG.loginPasswordHidden
-                        //   : AppAssets.iconsPNG.loginPasswordVisible,
-                        // ),
-                        child: const Icon(Icons.remove_red_eye_outlined),
+                        child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+                        : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
                       ),
                     ),
                     AppSizes.size24.verticalSpace,
@@ -101,7 +98,8 @@ class RestPasswordView extends ConsumerWidget
                         {
                           ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
                         },
-                        child: Image.asset(provider.obscureText2 ? AppAssets.iconsPNG.loginPasswordHidden : AppAssets.iconsPNG.loginPasswordVisible,),
+                        child: provider.obscureText2 ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+                        : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
                       ),
                     ),
                     AppSizes.size24.verticalSpace,

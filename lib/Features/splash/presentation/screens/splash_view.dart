@@ -4,21 +4,21 @@ import '../../../../config/router/app_routes.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../core/constants/app_images.dart';
 
-class SplashView extends StatefulWidget
+class SplashScreen extends StatefulWidget
 {
-  const SplashView({super.key});
+  const SplashScreen({super.key});
 
   @override
-  State<SplashView> createState() => _SplashViewState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashViewState extends State<SplashView>
+class _SplashScreenState extends State<SplashScreen>
 {
   @override
   void initState()
   {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacementNamed(AppRoutes.kAppFormView),);
+    Future.delayed(const Duration(seconds: 2), () => AppRouter.router.pushReplacementNamed(AppRoutes.kAppSettings),);
   }
 
   @override

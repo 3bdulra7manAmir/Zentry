@@ -2,41 +2,35 @@ abstract class AppRoutes
 {
   AppRoutes._();
 
-  ///App AUTH
-  // APP Splash View
-  static const kSplashView = '/kSplashView';
-  // APP FORM View
-  static const kAppFormView = '/kAppFormView';
-  // APP Login (Auth Tabs) View
-  static const kAuthView = '/kAuthView';
-  // APP Login (Auth Tabs) View
-  static const kSignUpInviteView = '/kSignUpInviteView';
-  // APP Forget Password Phone View
-  static const kForgetPassword = '/kForgetPasswordPhoneView';
-  // APP Forget Password Email View
-  static const kForgetPasswordEmailView = '/kForgetPasswordEmailView';
-  // APP Reset Password View
-  static const kResetPasswordView = '/kResetPasswordView';
-  // APP Verification Code View
-  static const kVerificationCodeView = '/kVerificationCodeView';
+  ///[App_AUTH]
+  // APP Splash 
+  static const kSplash = '/Splash';
+  // APP FORM 
+  static const kAppSettings = '/AppForm';
+  // APP Login (Auth Tabs) 
+  static const kAuthTabs = '/Auth';
+  // APP Forget Password
+  static const kForgetPassword = '/ForgetPasswordPhone';
+  // APP Reset Password 
+  static const kResetPassword = '/ResetPassword';
+  // APP Verification Code 
+  static const kVerification = '/VerificationCode';
 
+  ///[App_Notifications]
+  // APP Notifications 
+  static const kNotifications = '/Notifications';
+  // APP Notifications Details 
+  static const kNotificationsSearch = '/SearchNotifications';
 
-  ///App Notifications
-  // APP Notifications View
-  static const kNotificationsView = '/kNotificationsView';
-  // APP Notifications Details View
-  static const kNotificationsSearchView = '/kSearchNotificationsView';
+  ///[App_Search]
+  // APP Search 
+  static const kSearch = '/Search';
+  // APP Search Results 
+  static const kSearchResults = '/SearchResults';
 
-  ///App Search
-  // APP Search View
-  static const kSearchView = '/kSearchView';
-  // APP Search Results View
-  static const kSearchResultsView = '/kSearchResultsView';
-
-
-  /// APP Home
-  //App Home View
-  static const kHomeView = '/kHomeView';
-  static const kTestView = '/kTestView';
+  ///[APP_Home]
+  //App Home 
+  static const kHome = '/Home';
+  static const kTest = '/Test';
 
 }

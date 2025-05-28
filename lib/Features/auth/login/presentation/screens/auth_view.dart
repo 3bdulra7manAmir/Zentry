@@ -4,9 +4,9 @@ import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../widgets/app_form_header.dart';
 import '../widgets/auth_tabbar.dart';
 
-class AuthView extends StatelessWidget
+class AuthScreen extends StatelessWidget
 {
-  const AuthView({super.key});
+  const AuthScreen({super.key});
 
   @override
   Widget build(BuildContext context)

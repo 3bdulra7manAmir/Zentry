@@ -24,7 +24,7 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
       actions:
       [
         GestureDetector(
-          onTap: () => AppRouter.router.pushNamed(AppRoutes.kSearchView),
+          onTap: () => AppRouter.router.pushNamed(AppRoutes.kSearch),
           child: CircleAvatar(
             backgroundColor: AppColors.color.kGrey002,
             child: Image.asset(AppAssets.iconsPNG.homeSearch)
@@ -40,7 +40,7 @@ class CustomHomeAppBar extends ConsumerWidget implements PreferredSizeWidget
         ),
         AppSizes.size8.horizontalSpace,
         GestureDetector(
-          onTap: () => AppRouter.router.pushNamed(AppRoutes.kNotificationsView),
+          onTap: () => AppRouter.router.pushNamed(AppRoutes.kNotifications),
           child: CircleAvatar(
             backgroundColor: AppColors.color.kGrey002,
             child: Image.asset(AppAssets.iconsPNG.homeNotificationsBill)
