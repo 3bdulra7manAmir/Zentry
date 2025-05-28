@@ -16,15 +16,18 @@ void showCompleteProfileBottomSheet(BuildContext context)
     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
     builder: (BuildContext context)
     {
-      return Column(
-        children:
-        [
-          FollowBusinessCardHeader(headerText: AppLocalizations.of(context).completeProfile,),
-          AppSizes.size16.verticalSpace,
-          const CompleteProfileCard(),
-          const Spacer(),
-          const AppNextButton(),
-        ],
+      return SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children:
+          [
+            FollowBusinessCardHeader(headerText: AppLocalizations.of(context).completeProfile,),
+            AppSizes.size16.verticalSpace,
+            const CompleteProfileCard(),
+            AppSizes.size33.verticalSpace,
+            const AppNextButton(),
+          ],
+        ),
       );
     },
   );

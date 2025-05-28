@@ -35,7 +35,6 @@ class FollowBusinessCardHeader extends StatelessWidget
           ],
         ),
         Divider(color: AppColors.color.kGreyText010, thickness: AppSizes.size2,),
-        AppSizes.size21.verticalSpace,
       ],
     );
   }
