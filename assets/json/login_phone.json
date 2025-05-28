@@ -1,14 +1,26 @@
 [
   {
-    "phone": "+1234567890",
-    "password": "@P_password123"
+    "phone": "+201001234567",
+    "password": "@Pword123!"
   },
   {
-    "phone": "+1234567890",
-    "password": "@P_securePass456"
+    "phone": "01098765432",
+    "password": "SecreT_456$"
   },
   {
-    "phone": "+1234567890",
-    "password": "@P_securePass789"
+    "phone": "+201112223334",
+    "password": "Valid#Pass1"
+  },
+  {
+    "phone": "0551234567",
+    "password": "S@udiPass9"
+  },
+  {
+    "phone": "+966501234567",
+    "password": "Pa$$word8"
+  },
+  {
+    "phone": "+966598765432",
+    "password": "A1_safe*Pwd"
   }
 ]

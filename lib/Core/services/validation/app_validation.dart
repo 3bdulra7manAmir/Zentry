@@ -75,7 +75,7 @@ abstract class AppValidation
   //   }
   // }
 
-  static String passwordValidation(String? value, BuildContext context)
+  static String? passwordValidation(String? value, BuildContext context)
   {
     try
     {
@@ -109,7 +109,7 @@ abstract class AppValidation
       {
         return AppLocalizations.of(context).invalidPassword;
       }
-      return "";
+      return null;
     }
     catch (e)
     {

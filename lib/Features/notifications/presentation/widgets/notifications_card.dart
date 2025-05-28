@@ -84,7 +84,7 @@ class DefaultNotificationCard extends StatelessWidget
                               fontWeight: AppFontWeights.semiBoldWeight,
                               fontColor: AppColors.color.kGreyText006,
                           ),),
-                          AppSizes.size10.horizontalSpace
+                          AppSizes.size12.horizontalSpace
                         ],
                       ),
                     ],
@@ -132,9 +132,10 @@ class DefaultNotificationCard extends StatelessWidget
                   AppSizes.size35.horizontalSpace,
                   if (notification.isFriendRequest == "Yes")
                   Text(notification.time, style: AppStyles.textStyle12(
-                    fontWeight: AppFontWeights.semiBoldWeight,
-                    fontColor: AppColors.color.kGreyText006,
-                  ),),
+                      fontWeight: AppFontWeights.semiBoldWeight,
+                      fontColor: AppColors.color.kGreyText006,
+                    ),
+                  ),
                   AppSizes.size12.horizontalSpace,
                 ],
               ),

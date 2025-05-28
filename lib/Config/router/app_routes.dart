@@ -32,5 +32,4 @@ abstract class AppRoutes
   //App Home 
   static const kHome = '/Home';
   static const kTest = '/Test';
-
 }
