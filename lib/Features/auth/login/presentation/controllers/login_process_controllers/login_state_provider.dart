@@ -8,7 +8,8 @@ part 'login_state_provider.g.dart';
 class LoginState extends _$LoginState
 {
   @override
-  AsyncValue<bool> build() {
+  AsyncValue<bool> build()
+  {
     return const AsyncValue.data(false);
   }
 
@@ -19,33 +20,33 @@ class LoginState extends _$LoginState
     try
     {
       final loginRepo = ref.read(loginRepositoryProvider);
-      final result = await loginRepo.loginWithEmail(
-        LoginEntity.withEmail(email: email, password: password)
-      );
+      final result = await loginRepo.loginWithEmail(LoginEntity.withEmail(email: email, password: password));
       
       state = result.fold(
         (failure) => AsyncValue.error(failure, StackTrace.current),
         (success) => AsyncValue.data(success)
       );
-    } catch (e, stack) {
+    }
+    catch (e, stack)
+    {
       state = AsyncValue.error(e, stack);
     }
   }
 
-  Future<void> loginWithPhone(String phone, String password) async {
+  Future<void> loginWithPhone(String phone, String password) async
+  {
     state = const AsyncValue.loading();
-    
-    try {
+    try
+    {
       final loginRepo = ref.read(loginRepositoryProvider);
-      final result = await loginRepo.loginWithPhone(
-        LoginEntity.withPhone(phone: phone, password: password)
-      );
-      
+      final result = await loginRepo.loginWithPhone(LoginEntity.withPhone(phone: phone, password: password));
       state = result.fold(
         (failure) => AsyncValue.error(failure, StackTrace.current),
         (success) => AsyncValue.data(success)
       );
-    } catch (e, stack) {
+    }
+    catch (e, stack)
+    {
       state = AsyncValue.error(e, stack);
     }
   }

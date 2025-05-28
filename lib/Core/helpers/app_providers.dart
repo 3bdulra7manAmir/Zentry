@@ -6,7 +6,6 @@ import '../../features/auth/app_settings/presentation/controllers/settings_contr
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/language_icon_update_provider.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/theme_mode_text_provide.dart';
 import '../../features/auth/login/presentation/controllers/checkbox_controller.dart';
-import '../../features/auth/login/presentation/controllers/email_phone_switcher.dart';
 import '../../features/auth/login/presentation/controllers/obsecure_text_controller.dart';
 import '../../features/auth/register/presentation/controllers/email_or_phone_provider.dart';
 import '../../features/auth/register/presentation/controllers/gender_provider.dart';
@@ -63,7 +62,6 @@ class AppProvidersProvider
   bool get isChecked => ref.watch(checkboxValueProvider);
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);
 
-  LoginType get loginType => ref.watch(loginTypeProvider);
   SignUpType get signUpType => ref.watch(signUpTypeProvider);
 
   String get otpProvider => ref.watch(otpInputProvider);

@@ -5,7 +5,7 @@ import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../join_groups/presentation/widgets/join_groups_bottom_modal_sheet.dart';
+import '../post_actions/actions_card.dart';
 
 class PostHeader extends StatelessWidget
 {
@@ -39,7 +39,7 @@ class PostHeader extends StatelessWidget
         ),
         const Spacer(),
         InkWell(
-          onTap: () => showJoinGroupsBottomSheet(context),
+          onTap: () => showActionsBottomSheet(context),
           child: Image.asset(AppAssets.iconsPNG.homeThreeDots),
         ),
       ],

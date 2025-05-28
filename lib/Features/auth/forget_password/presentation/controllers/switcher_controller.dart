@@ -1,3 +1,3 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final switcherProvider = StateProvider<bool>((ref) => true);
+final forgetPasswordMethodSwitcherProvider = StateProvider<bool>((ref) => true);

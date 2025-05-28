@@ -17,15 +17,17 @@ class ForgetPasswordAnotherWay extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final current = ref.read(switcherProvider);
+    final current = ref.read(forgetPasswordMethodSwitcherProvider);
     return Row(
       children:
       [
-        Text(recoveryMethod, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
-          fontColor: AppColors.color.kGreyText005,),),
+        Text(recoveryMethod, style: AppStyles.textStyle14(
+          fontWeight: AppFontWeights.mediumWeight, 
+          fontColor: AppColors.color.kGreyText005,),
+        ),
         AppSizes.size14.horizontalSpace,
         GestureDetector(
-          onTap: () => ref.read(switcherProvider.notifier).state = !current,
+          onTap: () => ref.read(forgetPasswordMethodSwitcherProvider.notifier).state = !current,
           child: Text(
             AppLocalizations.of(context).tryAnotherWay, style: AppStyles.textStyle14(fontWeight: AppFontWeights.mediumWeight,
               fontColor: AppColors.color.kBlue003,

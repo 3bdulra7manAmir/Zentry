@@ -7,7 +7,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_listview_builder.dart';
 import '../widgets/create_panel_view/create_panel.dart';
-import '../widgets/home_appbar.dart';
+import '../widgets/custom_appbar/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_card_view.dart';
 import '../widgets/products_scroll_view/products_item_list.dart';
 import '../widgets/story_scroll_view/story_view.dart';
@@ -42,8 +42,8 @@ class HomeView extends ConsumerWidget
             AppSizes.size20.verticalSpace,
             provider.postsAsync.when(
               data: (posts) => AppListviewBuilder(
-                itemBuilder: (context, index) => PostsCard(post: posts[index]),
                 itemCount: posts.length,
+                itemBuilder: (context, index) => PostsCard(post: posts[index]),
                 separatorBuilder: (context, index) => AppSizes.size20.verticalSpace,
               ),
               loading: () => const Center(child: CircularProgressIndicator()),

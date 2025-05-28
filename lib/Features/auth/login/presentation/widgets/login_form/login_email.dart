@@ -8,7 +8,7 @@ import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/services/validation/app_validation.dart';
 import '../../../../../../core/widgets/app_text_form_field.dart';
-import '../../controllers/email_phone_switcher.dart';
+import '../../controllers/switcher_controller.dart';
 
 class LoginEmail extends ConsumerWidget
 {
@@ -19,6 +19,7 @@ class LoginEmail extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
+    final current = ref.read(loginMethodSwitcherProvider);
     return Column(
       children:
       [
@@ -30,7 +31,7 @@ class LoginEmail extends ConsumerWidget
             Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
             AppSizes.size4.horizontalSpace,
             GestureDetector(
-              onTap: () => ref.read(loginTypeProvider.notifier).toggleLoginType(),
+              onTap: () => ref.read(loginMethodSwitcherProvider.notifier).state = !current,
               child: Text(AppLocalizations.of(context).phone, style: AppStyles.textStyle12(
                   fontWeight: AppFontWeights.boldWeight,
                   textDecoration: TextDecoration.underline,

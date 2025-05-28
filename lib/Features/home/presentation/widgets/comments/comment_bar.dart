@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../config/l10n/generated/app_localizations.dart';
-import '../../../../config/themes/color_system/app_colors.dart';
-import '../../../../core/constants/app_borders.dart';
-import '../../../../core/constants/app_images.dart';
-import '../../../../core/constants/app_sizes.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/themes/color_system/app_colors.dart';
+import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
 
 class CommentCard extends StatelessWidget
 {
   const CommentCard({super.key, required this.padding});
-
   final EdgeInsetsGeometry padding;
 
   @override

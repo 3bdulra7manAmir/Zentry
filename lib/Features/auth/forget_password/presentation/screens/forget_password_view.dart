@@ -23,13 +23,11 @@ class ForgetPassword extends ConsumerWidget
 {
   ForgetPassword({super.key});
   final GlobalKey<FormState> forgetPasswordFormKey = GlobalKey<FormState>();
-  final GlobalKey<FormState> forgetPasswordFumberFormKey = GlobalKey<FormState>();
   
-
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isPhoneNumber = ref.watch(switcherProvider);
+    final isPhoneNumber = ref.watch(forgetPasswordMethodSwitcherProvider);
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, 

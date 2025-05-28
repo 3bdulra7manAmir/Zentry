@@ -9,7 +9,7 @@ import '../../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/widgets/app_button.dart';
-import '../../controllers/login_controllers/login_state_provider.dart';
+import '../../controllers/login_process_controllers/login_state_provider.dart';
 import 'login_email.dart';
 import 'login_form_password.dart';
 
