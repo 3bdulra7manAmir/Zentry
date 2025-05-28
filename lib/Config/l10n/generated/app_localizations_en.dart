@@ -132,7 +132,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get verificationCode => 'Verification Code';
 
   @override
-  String get pleaseEnter5DigitalCodeSendTo => 'Please Enter 5 digital code send to';
+  String get pleaseEnter5DigitalCodeSendTo =>
+      'Please Enter 5 digital code send to';
 
   @override
   String get appgmailcom => 'APP@gmail.com';
@@ -231,7 +232,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get invalidEmailSymbol => 'Email must contain \'@\' symbol.';
 
   @override
-  String get invalidEmailDomain => 'Email must end with a valid domain (e.g., .com, .org).';
+  String get invalidEmailDomain =>
+      'Email must end with a valid domain (e.g., .com, .org).';
 
   @override
   String get validateFailurEmail => 'Error validating email: ';
@@ -252,19 +254,23 @@ class AppLocalizationsEn extends AppLocalizations {
   String get validateFailurPassword => 'Error validating password:';
 
   @override
-  String get passwordLength8Character => 'Password must be at least 8 characters long.';
+  String get passwordLength8Character =>
+      'Password must be at least 8 characters long.';
 
   @override
-  String get passwordOneUpperCase => 'Password must contain at least one uppercase letter.';
+  String get passwordOneUpperCase =>
+      'Password must contain at least one uppercase letter.';
 
   @override
-  String get passwordOneLowerCase => 'Password must contain at least one lowercase letter.';
+  String get passwordOneLowerCase =>
+      'Password must contain at least one lowercase letter.';
 
   @override
   String get passwordOneNumber => 'Password must contain at least one number.';
 
   @override
-  String get passwordOneSpecialCharacter => 'Password must contain at least one special character.';
+  String get passwordOneSpecialCharacter =>
+      'Password must contain at least one special character.';
 
   @override
   String get fullNameIsRequired => 'Full name is required.';
@@ -561,7 +567,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get showLess => ' Show less';
 
   @override
-  String get enterEmailAddressAssociated => 'Enter the email address associated';
+  String get enterEmailAddressAssociated =>
+      'Enter the email address associated';
 
   @override
   String get unsupportedPhoneNumber => 'Un-Supported phone number';

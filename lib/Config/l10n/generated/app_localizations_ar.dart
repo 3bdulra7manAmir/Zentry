@@ -132,7 +132,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get verificationCode => 'رمز التحقق';
 
   @override
-  String get pleaseEnter5DigitalCodeSendTo => 'يرجى إدخال رمز مكون من 5 أرقام المرسل إلى';
+  String get pleaseEnter5DigitalCodeSendTo =>
+      'يرجى إدخال رمز مكون من 5 أرقام المرسل إلى';
 
   @override
   String get appgmailcom => 'APP@gmail.com';
@@ -228,10 +229,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emailIsRequired => 'البريد الإلكتروني مطلوب';
 
   @override
-  String get invalidEmailSymbol => 'يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.';
+  String get invalidEmailSymbol =>
+      'يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.';
 
   @override
-  String get invalidEmailDomain => 'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).';
+  String get invalidEmailDomain =>
+      'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).';
 
   @override
   String get validateFailurEmail => 'خطأ في التحقق من البريد الإلكتروني:';
@@ -252,19 +255,24 @@ class AppLocalizationsAr extends AppLocalizations {
   String get validateFailurPassword => 'خطأ في التحقق من كلمة المرور:';
 
   @override
-  String get passwordLength8Character => 'يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل.';
+  String get passwordLength8Character =>
+      'يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل.';
 
   @override
-  String get passwordOneUpperCase => 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
+  String get passwordOneUpperCase =>
+      'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
 
   @override
-  String get passwordOneLowerCase => 'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.';
+  String get passwordOneLowerCase =>
+      'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.';
 
   @override
-  String get passwordOneNumber => 'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.';
+  String get passwordOneNumber =>
+      'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.';
 
   @override
-  String get passwordOneSpecialCharacter => 'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
+  String get passwordOneSpecialCharacter =>
+      'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.';
 
   @override
   String get fullNameIsRequired => 'الاسم الكامل مطلوب.';
@@ -561,7 +569,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get showLess => ' عرض أقل';
 
   @override
-  String get enterEmailAddressAssociated => 'أدخل عنوان البريد الإلكتروني المرتبط';
+  String get enterEmailAddressAssociated =>
+      'أدخل عنوان البريد الإلكتروني المرتبط';
 
   @override
   String get unsupportedPhoneNumber => 'رقم الهاتف غير مدعوم حالياً';

@@ -36,7 +36,7 @@ abstract class AppLightStyles
     ),
   );
 
-  static Object? tabBarTheme = TabBarTheme(
+  static TabBarThemeData? tabBarTheme = TabBarThemeData(
     indicatorSize: TabBarIndicatorSize.tab,
     labelColor: AppColors.color.kOrange001,
     labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kOrange001,),
@@ -88,7 +88,7 @@ abstract class AppDarkStyles
     ),
   );
 
-  static Object? tabBarTheme = TabBarTheme(
+  static TabBarThemeData? tabBarTheme = TabBarThemeData(
     indicatorSize: TabBarIndicatorSize.tab,
     labelColor: AppColors.color.kOrange001,
     labelStyle: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kOrange001,),
