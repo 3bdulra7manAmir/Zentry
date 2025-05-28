@@ -6,8 +6,8 @@ import '../../../../../core/constants/app_sizes.dart';
 import '../../../domain/entity/post_entity.dart';
 import '../comments/comment_bar.dart';
 import '../comments/comments_reactions.dart';
-import 'comment_section.dart';
 import 'post_bio.dart';
+import 'post_from_inside.dart';
 import 'post_header.dart';
 
 class PostsCard extends StatelessWidget
