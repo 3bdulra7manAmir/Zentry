@@ -5,8 +5,7 @@ abstract class AppPadding
 {
   AppPadding._();
 
-  /// All Sides Padding
-  
+  /// [All_Sides_Padding]
   /// 5px all sides
   static EdgeInsets all5 = const EdgeInsets.all(5);
   
@@ -16,8 +15,7 @@ abstract class AppPadding
   /// 10px all sides
   static EdgeInsets all10 = const EdgeInsets.all(10);
 
-  /// Horizontal Symmetric Padding
-  
+  /// [Horizontal_Symmetric_Padding]
   /// 10px horizontal
   static EdgeInsets horizontal10 = EdgeInsets.symmetric(horizontal: 10.w);
   
@@ -38,8 +36,7 @@ abstract class AppPadding
   /// 38px horizontal
   static EdgeInsets horizontal38 = EdgeInsets.symmetric(horizontal: 38.w);
 
-  /// Vertical Symmetric Padding
-  
+  /// [Vertical_Symmetric_Padding]
   /// 12px vertical
   static EdgeInsets vertical12 = EdgeInsets.symmetric(vertical: 12.w);
 
@@ -64,8 +61,7 @@ abstract class AppPadding
   /// 13px start only
   static EdgeInsetsDirectional startOnly13 = EdgeInsetsDirectional.only(start: 13.w);
 
-  /// Directional Padding - Complex
-  
+  /// [Directional_Padding_Complex]
   /// Form header padding
   static EdgeInsetsDirectional formHeader = EdgeInsetsDirectional.only(
     start: 28.w,
@@ -88,8 +84,7 @@ abstract class AppPadding
     end: 36.w,
   );
 
-  /// Single Side Padding
-  
+  /// [Single_Side_Padding]
   /// 30px left only
   static EdgeInsets leftOnly30 = EdgeInsets.only(left: 30.0.w);
   

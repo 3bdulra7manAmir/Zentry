@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/helpers/app_providers.dart';
-import '../controllers/gender_provider.dart';
+import '../controllers/fullname_controllers/gender_provider.dart';
 import 'gender_options.dart';
 
 void showGenderPickerBottomSheet(BuildContext context)

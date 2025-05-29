@@ -2,13 +2,16 @@ abstract class AppRoutes
 {
   AppRoutes._();
 
-  ///[App_AUTH]
-  // APP Splash 
+  // APP Splash
   static const kSplash = '/Splash';
-  // APP FORM 
+  // APP Settings 
   static const kAppSettings = '/AppForm';
+
+  ///[App_AUTH]
+  
   // APP Login (Auth Tabs) 
   static const kAuthTabs = '/Auth';
+
   // APP Forget Password
   static const kForgetPassword = '/ForgetPasswordPhone';
   // APP Reset Password 

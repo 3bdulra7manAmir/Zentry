@@ -47,6 +47,7 @@ class LoginPassword extends ConsumerWidget
           children:
           [
             Checkbox(
+              activeColor: AppColors.color.kBlue003,
               value: provider.isChecked,
               onChanged: (value)
               {
@@ -57,7 +58,12 @@ class LoginPassword extends ConsumerWidget
               },
               side: BorderSide(width: AppBorderWidths.medium, color: AppColors.color.kGrey001,),
             ),
-            Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText004,),),
+            Text(AppLocalizations.of(context).remember, style: AppStyles.textStyle12(
+                fontColor: AppColors.color.kBlue004,
+                textDecoration: TextDecoration.underline,
+                textDecorationColor: AppColors.color.kBlue004,
+              ),
+              ),
             const Spacer(),
             InkWell(
               onTap: () => AppRouter.router.pushNamed(AppRoutes.kForgetPassword,),

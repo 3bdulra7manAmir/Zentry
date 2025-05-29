@@ -31,7 +31,7 @@ class AppListviewBuilder extends StatelessWidget
       padding: padding,
       reverse: reverse ?? false,
       shrinkWrap: true,
-      physics: physics ?? const BouncingScrollPhysics(),
+      physics: physics ?? const ScrollPhysics(),
     );
   }
 }

@@ -14,14 +14,13 @@ import '../widgets/login_form/login_social.dart';
 
 class LoginScreen extends ConsumerWidget
 {
-  LoginScreen({super.key, this.loginMethod});
+  LoginScreen({super.key,});
   final GlobalKey<FormState> loginEmailFormKey = GlobalKey<FormState>();
-  final bool? loginMethod;
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isPhoneNumber = ref.watch(loginMethodSwitcherProvider);
+    final isLoginMethodEmail = ref.watch(loginMethodSwitcherProvider);
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,
@@ -34,7 +33,7 @@ class LoginScreen extends ConsumerWidget
             children:
             [
               AppSizes.size13.verticalSpace,
-              isPhoneNumber ? const LoginPhone() : const LoginEmail(),
+              isLoginMethodEmail ? const LoginEmail() : const LoginPhone(),
               AppSizes.size24.verticalSpace,
               const LoginPassword(),
               AppSizes.size16.verticalSpace,

@@ -15,6 +15,7 @@ class StroyList extends StatelessWidget
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
+        mainAxisSize: MainAxisSize.max,
         children:
         [
           const CreateStory(),

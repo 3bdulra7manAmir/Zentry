@@ -12,7 +12,7 @@ import '../../../../../core/services/validation/app_validation.dart';
 import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../controllers/email_or_phone_provider.dart';
+import '../controllers/phone_number_controllers/switcher_controller.dart';
 
 
 class SignUpFormEmail extends ConsumerWidget
@@ -45,9 +45,27 @@ class SignUpFormEmail extends ConsumerWidget
                   Text(AppLocalizations.of(context).emailAddress, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   AppSizes.size4.horizontalSpace,
-                  GestureDetector(
-                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(),
-                    child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontWeight: AppFontWeights.boldWeight,),),
+                  Row(
+                    children:
+                    [
+                      GestureDetector(
+                        onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpEmailPhone(),
+                        child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
+                          fontWeight: AppFontWeights.boldWeight,
+                          textDecoration: TextDecoration.underline,),
+                        ),
+                      ),
+                      AppSizes.size3.horizontalSpace,
+                      Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
+                      AppSizes.size3.horizontalSpace,
+                      GestureDetector(
+                        onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpFullnameInvite(),
+                        child: Text(AppLocalizations.of(context).fullName, style: AppStyles.textStyle12(
+                          fontWeight: AppFontWeights.boldWeight,
+                          textDecoration: TextDecoration.underline,),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

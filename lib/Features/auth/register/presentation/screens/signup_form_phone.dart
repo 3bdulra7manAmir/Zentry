@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
 import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -17,7 +18,8 @@ import '../../../../../core/widgets/app_button.dart';
 import '../../../../../core/widgets/app_form.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../login/presentation/widgets/phone_number_bottom_model_sheet.dart';
-import '../controllers/email_or_phone_provider.dart';
+import '../controllers/phone_number_controllers/invite_code_enabler.dart';
+import '../controllers/phone_number_controllers/switcher_controller.dart';
 
 
 class SignUpFormPhoneNumber extends ConsumerWidget
@@ -30,6 +32,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
+    final invitationCode = ref.watch(invitationCodeEnabler);
     final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
@@ -49,7 +52,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                   Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   GestureDetector(
-                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpType(),
+                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpEmailPhone(),
                     child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                       fontWeight: AppFontWeights.boldWeight,
                       textDecoration: TextDecoration.underline,
@@ -86,15 +89,25 @@ class SignUpFormPhoneNumber extends ConsumerWidget
               ),
               AppSizes.size24.verticalSpace,
               InkWell(
-                //onTap: () => AppRouter.router.pushNamed(AppRoutes.kSignUpInviteView),
+                onTap: () => ref.read(invitationCodeEnabler.notifier).state = true,
                 child: Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
-                    fontWeight: AppFontWeights.mediumWeight,
-                    fontColor: AppColors.color.kBlue003,
+                    fontWeight: AppFontWeights.mediumWeight, fontColor: AppColors.color.kBlue003,
                     textDecoration: TextDecoration.underline,
                     textDecorationColor: AppColors.color.kBlue003,
                   ),
                 ),
               ),
+              if (invitationCode)...
+              [
+                AppSizes.size8.verticalSpace,
+                CustomTextFormField(
+                  fieldKeyboardType: TextInputType.text,
+                  fieldValidator: (value) => AppValidation.invitationCodeValidation(value, context),
+                  fieldController: passwordController,
+                  fieldObscureText: provider.obscureText,
+                  fieldText: AppLocalizations.of(context).invitationCodeExample,
+                ),
+              ],
               AppSizes.size32.verticalSpace,
               CustomButton(
                 buttonText: AppLocalizations.of(context).signUp,

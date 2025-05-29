@@ -6,6 +6,7 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_listview_builder.dart';
+import 'inside_story.dart';
 
 class StroyListBuilder extends ConsumerWidget
 {
@@ -20,7 +21,7 @@ class StroyListBuilder extends ConsumerWidget
         scrollDirection: Axis.horizontal,
         itemCount: stories.length,
         itemBuilder: (context, index) => GestureDetector(
-          //onTap: () => ,
+          onTap: () => showInsideStoryBottomSheet(context, UsersStory(story: stories[index]).story.backgroundImage),
           child: UsersStory(story: stories[index])
         ),
         separatorBuilder: (context, index) => AppSizes.size9.horizontalSpace,

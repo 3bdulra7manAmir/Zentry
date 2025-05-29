@@ -7,10 +7,10 @@ import '../../features/auth/app_settings/presentation/controllers/settings_contr
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/theme_mode_text_provide.dart';
 import '../../features/auth/login/presentation/controllers/checkbox_controller.dart';
 import '../../features/auth/login/presentation/controllers/obsecure_text_controller.dart';
-import '../../features/auth/register/presentation/controllers/email_or_phone_provider.dart';
-import '../../features/auth/register/presentation/controllers/gender_provider.dart';
-import '../../features/auth/register/presentation/controllers/obsecure_text_provider.dart';
-import '../../features/auth/register/presentation/controllers/selected_date_provider.dart';
+import '../../features/auth/register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
+import '../../features/auth/register/presentation/controllers/fullname_controllers/gender_provider.dart';
+import '../../features/auth/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
+import '../../features/auth/register/presentation/controllers/fullname_controllers/selected_date_provider.dart';
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../../features/bottom_nav_bar/presentation/controller/bottom_nav_index_provider.dart';
 import '../../features/follow_business/domain/entity/business.dart';

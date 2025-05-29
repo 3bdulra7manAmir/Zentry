@@ -22,10 +22,7 @@ class UsersStory extends StatelessWidget
       padding: AppPadding.startOnly12,
       decoration: BoxDecoration(
         borderRadius: AppBordersRadiuses.circular5,
-        image: DecorationImage(
-          image: AssetImage(story.backgroundImage),
-          fit: BoxFit.cover,
-        ),
+        image: DecorationImage(image: AssetImage(story.backgroundImage), fit: BoxFit.cover,),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
