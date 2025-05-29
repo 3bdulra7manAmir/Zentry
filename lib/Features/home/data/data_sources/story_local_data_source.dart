@@ -14,6 +14,7 @@ class StoryLocalDataSourceImpl implements StoryLocalDataSource
   {
     try
     {
+      await Future.delayed(const Duration(seconds: 4));
       final String jsonString = await rootBundle.loadString('assets/json/home_screen.json');
       final Map<String, dynamic> jsonData = json.decode(jsonString);
       final List<dynamic> storiesJson = jsonData['stories'];

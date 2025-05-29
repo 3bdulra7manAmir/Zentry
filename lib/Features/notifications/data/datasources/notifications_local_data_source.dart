@@ -14,6 +14,7 @@ class NotificationsLocalDataSourceImpl implements NotificationsLocalDataSource
   {
     try
     {
+      await Future.delayed(const Duration(seconds: 3));
       final String jsonString = await rootBundle.loadString('assets/json/notifications_screen.json'); // Load JSON file
       final Map<String, dynamic> jsonData = json.decode(jsonString);
       final List<dynamic> notificationsJson = jsonData['notifications'] ?? []; // Parse notifications array
