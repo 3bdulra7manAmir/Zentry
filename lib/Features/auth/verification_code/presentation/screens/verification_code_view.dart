@@ -14,6 +14,7 @@ import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_appbar.dart';
 import '../../../../../core/widgets/app_button.dart';
+import '../controllers/count_down_controller.dart';
 
 class VerificationScreen extends ConsumerWidget
 {
@@ -23,6 +24,9 @@ class VerificationScreen extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
+    final secondsLeft = ref.watch(resendCountdownProvider(context));
+    final isEnabled = secondsLeft == 0;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
@@ -43,7 +47,7 @@ class VerificationScreen extends ConsumerWidget
                 ),
               ),
               AppSizes.size4.horizontalSpace,
-              Image.asset(AppImages.appBarBackSmartArrow(context, ref),),
+              Image.asset(AppImages.appBarBackSmartArrow2(context, ref),),
               AppSizes.size14.horizontalSpace,
             ],
           ),
@@ -130,15 +134,10 @@ class VerificationScreen extends ConsumerWidget
                   ),
                   AppSizes.size24.verticalSpace,
                   CustomButton(
-                    buttonOnPressed: ()
-                    {
-                      //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
-                    },
-                    buttonText: AppLocalizations.of(context).resendIn60s,
-                    buttonTextStyle: AppStyles.textStyle16(
-                      fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: AppColors.color.kWhite003,
-                    ),
+                    buttonOnPressed: isEnabled ? () => ref.read(resendCountdownProvider(context).notifier).reset() : null,
+                    buttonText: isEnabled ? l10n.resend : l10n.resendIn60s(secondsLeft),
+                    buttonTextStyle: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight,
+                      fontColor: isEnabled ? AppColors.color.kWhite003 : AppColors.color.kWhite003.withOpacity(0.5),),
                   ),
                 ],
               ),

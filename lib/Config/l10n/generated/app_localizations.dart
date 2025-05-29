@@ -374,11 +374,17 @@ abstract class AppLocalizations {
   /// **'Request phone call'**
   String get requestPhoneCall;
 
-  /// No description provided for @resendIn60s.
+  /// Countdown text for resend button
   ///
   /// In en, this message translates to:
-  /// **'Resend in 60s'**
-  String get resendIn60s;
+  /// **'Resend in {seconds}s'**
+  String resendIn60s(int seconds);
+
+  /// No description provided for @resend.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend'**
+  String get resend;
 
   /// No description provided for @num0.
   ///

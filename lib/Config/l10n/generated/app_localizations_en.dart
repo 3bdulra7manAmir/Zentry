@@ -148,7 +148,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get requestPhoneCall => 'Request phone call';
 
   @override
-  String get resendIn60s => 'Resend in 60s';
+  String resendIn60s(int seconds) {
+    return 'Resend in ${seconds}s';
+  }
+
+  @override
+  String get resend => 'Resend';
 
   @override
   String get num0 => '0';

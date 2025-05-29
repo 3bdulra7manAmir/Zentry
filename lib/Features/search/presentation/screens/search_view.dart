@@ -22,7 +22,7 @@ class SearchScreen extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     return Scaffold(
-      appBar: const CustomSearchAppBar(locationIcon: true),
+      appBar: const CustomSearchAppBar(locationIcon: true), //HERE For NOW
       body: Padding(
         padding: AppPadding.horizontal16,
         child: SingleChildScrollView(

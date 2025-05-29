@@ -42,10 +42,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get phone => 'الهاتف';
 
   @override
-  String get egyptCountryCode => '+20 | رقم الهاتف';
+  String get egyptCountryCode => '+٢٠ | رقم الهاتف';
 
   @override
-  String get saudiArabiaCountryCode => '+966 | رقم الهاتف';
+  String get saudiArabiaCountryCode => '+٩٦٦ | رقم الهاتف';
 
   @override
   String get enterEmaill => 'أدخل البريد الإلكتروني';
@@ -133,7 +133,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get pleaseEnter5DigitalCodeSendTo =>
-      'يرجى إدخال رمز مكون من 5 أرقام المرسل إلى';
+      'يرجى إدخال رمز مكون من ٥ أرقام المرسل إلى';
 
   @override
   String get appgmailcom => 'APP@gmail.com';
@@ -148,7 +148,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get requestPhoneCall => 'طلب مكالمة هاتفية';
 
   @override
-  String get resendIn60s => 'إعادة الإرسال خلال 60 ثانية';
+  String resendIn60s(int seconds) {
+    return 'إعادة الإرسال خلال $seconds ثانية';
+  }
+
+  @override
+  String get resend => 'إعادة الإرسال';
 
   @override
   String get num0 => '٠';
@@ -256,7 +261,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get passwordLength8Character =>
-      'يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل.';
+      'يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.';
 
   @override
   String get passwordOneUpperCase =>
@@ -287,7 +292,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get invitationCode => 'رمز الدعوة';
 
   @override
-  String get invitationCodeExample => 'مثال: #Alsuisy123';
+  String get invitationCodeExample => 'مثال: #Alsuisy١٢٣';
 
   @override
   String get paste => 'لصق';
@@ -500,13 +505,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get addInvitationCode => 'أضف رمز الدعوة';
 
   @override
-  String get invitationCodeExample2 => '#11231412351235462345';
+  String get invitationCodeExample2 => '#١١٢٣1٥١٢٥٥١٢٣٥٥٣٢٣٥٥';
 
   @override
   String get myCode => 'رمزي';
 
   @override
-  String get myCodeExample => '#11231412351235462345';
+  String get myCodeExample => '#١١٢٣١4١٢٣5١٢٣546٢٣45';
 
   @override
   String get completeProfile => 'أكمل الملف الشخصي';

@@ -46,7 +46,17 @@
   "enterYourCode": "Enter your Code",
   "dontReceiveACode": "Don't Receive a code?",
   "requestPhoneCall": "Request phone call",
-  "resendIn60s": "Resend in 60s",
+  "resendIn60s": "Resend in {seconds}s",
+  "resend": "Resend",
+  "@resendIn60s": {
+    "description": "Countdown text for resend button",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "example": "60"
+      }
+    }
+  },
   "num0": "0",
   "num1": "1",
   "num2": "2",

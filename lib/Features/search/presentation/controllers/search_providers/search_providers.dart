@@ -7,25 +7,31 @@ import '../../../domain/repository/search_repository.dart';
 part 'search_providers.g.dart';
 
 @riverpod
-SearchRepository searchRepository(SearchRepositoryRef ref) {
+SearchRepository searchRepository(SearchRepositoryRef ref)
+{
   final dataSource = SearchLocalDataSource();
   return SearchRepositoryImpl(dataSource);
 }
 
 @riverpod
-class SearchQuery extends _$SearchQuery {
+class SearchQuery extends _$SearchQuery
+{
   @override
   String build() => '';
 }
 
 @riverpod
-Future<List<SearchCategory>> searchResults(SearchResultsRef ref) async {
+Future<List<SearchCategory>> searchResults(SearchResultsRef ref) async
+{
   final repository = ref.watch(searchRepositoryProvider);
   final query = ref.watch(searchQueryProvider);
 
-  if (query.isEmpty) {
+  if (query.isEmpty)
+  {
     return repository.getSearchCategories();
-  } else {
+  }
+  else
+  {
     return repository.searchCategories(query);
   }
 }
