@@ -8,6 +8,7 @@ import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/widgets/app_form/app_textform_field.dart';
 import '../../../controllers/likes_count_controller.dart';
+import 'post_share_bottom_modal_sheet.dart';
 
 class CommentCard extends ConsumerWidget
 {
@@ -66,16 +67,19 @@ class CommentCard extends ConsumerWidget
             child: Center(child: Image.asset(AppAssets.iconsPNG.commentArchive, fit: BoxFit.contain,),),
           ),
           AppSizes.size8.horizontalSpace,
-          Container(
-            width: 38.w,
-            height: 40.h,
-            decoration: BoxDecoration(
-              color: AppColors.color.kGrey002,
-              borderRadius: AppBordersRadiuses.circular10,
-              border: AppBoxBorders.standard,
+          GestureDetector(
+            onTap: () => showSharePostBottomSheet(context),
+            child: Container(
+              width: 38.w,
+              height: 40.h,
+              decoration: BoxDecoration(
+                color: AppColors.color.kGrey002,
+                borderRadius: AppBordersRadiuses.circular10,
+                border: AppBoxBorders.standard,
+              ),
+              alignment: Alignment.center,
+              child: Center(child: Image.asset(AppAssets.iconsPNG.commentShare, fit: BoxFit.contain,),),
             ),
-            alignment: Alignment.center,
-            child: Center(child: Image.asset(AppAssets.iconsPNG.commentShare, fit: BoxFit.contain,),),
           ),
         ],
       ),
