@@ -8,7 +8,7 @@ import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
-import '../../../../../../core/widgets/app_button.dart';
+import '../../../../../../core/widgets/app_buttons/app_button.dart';
 import '../../controllers/login_process_controllers/login_state_provider.dart';
 import 'login_email.dart';
 import 'login_form_password.dart';
@@ -57,7 +57,7 @@ class LoginFormButton extends ConsumerWidget
       final state = ref.read(loginStateProvider);
       state.whenData((success)
       {
-        if (!success)
+        if (success)
         {
           AppRouter.router.pushNamed(AppRoutes.kHome);
         }

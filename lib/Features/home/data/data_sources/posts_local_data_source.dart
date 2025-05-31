@@ -14,7 +14,7 @@ class PostsLocalDataSourceImpl implements PostsLocalDataSource
   {
     try
     {
-      await Future.delayed(const Duration(seconds: 4));
+      await Future.delayed(const Duration(seconds: 7));
       final String jsonString = await rootBundle.loadString('assets/json/home_screen_posts.json');
       final List<dynamic> jsonData = json.decode(jsonString);
       return jsonData.map((post) => PostEntity.fromJson(post)).toList();

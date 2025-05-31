@@ -10,9 +10,9 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/helpers/app_providers.dart';
-import '../../../../core/widgets/app_appbar.dart';
+import '../../../../core/widgets/app_appbars/app_appbar.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
-import '../../../../core/widgets/app_listview_builder.dart';
+import '../../../../core/widgets/app_lists/app_listview_builder.dart';
 
 
 class NotificationsScreen extends ConsumerWidget

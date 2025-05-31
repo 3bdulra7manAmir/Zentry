@@ -6,8 +6,8 @@ import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
-import '../../../../core/widgets/app_listview_builder.dart';
-import '../../../../core/widgets/app_search_appbar.dart';
+import '../../../../core/widgets/app_lists/app_listview_builder.dart';
+import '../../../../core/widgets/app_appbars/app_search_appbar.dart';
 
 
 class NotificationsSearchScreen extends StatelessWidget

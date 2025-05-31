@@ -10,7 +10,7 @@ import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../core/widgets/app_form/app_textform_field.dart';
 
 class MoenyFromInviteCard extends StatelessWidget
 {

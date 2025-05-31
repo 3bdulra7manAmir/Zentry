@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/app_form.dart';
+import 'package:test_app/core/widgets/app_form/app_form.dart';
 import 'package:test_app/features/auth/login/presentation/widgets/login_form/login_form_phone.dart';
 
 import '../../../../../core/constants/app_paddings.dart';

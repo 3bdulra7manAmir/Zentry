@@ -7,7 +7,7 @@ import '../widgets/create_panel_view/create_panel.dart';
 import '../widgets/custom_appbar/home_appbar.dart';
 import '../widgets/posts_feed_view/posts_list.dart';
 import '../widgets/products_scroll_view/products_item_list.dart';
-import '../widgets/story_scroll_view/story_view.dart';
+import '../widgets/stories_scroll_view/story_view.dart';
 
 class HomeScreen extends ConsumerWidget
 {

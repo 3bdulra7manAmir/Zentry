@@ -12,8 +12,8 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/utils/app_reference.dart';
-import '../../../../../core/widgets/app_appbar.dart';
-import '../../../../../core/widgets/app_button.dart';
+import '../../../../../core/widgets/app_appbars/app_appbar.dart';
+import '../../../../../core/widgets/app_buttons/app_button.dart';
 import '../controllers/count_down_controller.dart';
 
 class VerificationScreen extends ConsumerWidget

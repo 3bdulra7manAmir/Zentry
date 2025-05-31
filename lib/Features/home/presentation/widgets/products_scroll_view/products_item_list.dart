@@ -6,7 +6,8 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/helpers/app_providers.dart';
-import '../../../../../core/widgets/app_listview_builder.dart';
+import '../../../../../core/widgets/app_lists/app_listview_builder.dart';
+import '../shimmers/product_shimmer.dart';
 
 class ProductsItemList extends ConsumerWidget
 {
@@ -17,7 +18,13 @@ class ProductsItemList extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     return provider.productsAsyncValue.when(
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => AppListviewBuilder(
+      padding: AppPadding.startOnly12,
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (context, index) => const ProductsItemShimmer(),
+      separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,
+      itemCount: 5,
+    ),
       error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
       data: (products) => AppListviewBuilder(
         padding: AppPadding.startOnly12,

@@ -57,6 +57,9 @@ abstract class AppBordersRadiuses
   
   /// Extra large button radius
   static BorderRadius circular12 = BorderRadius.circular(12.r);
+
+  /// User image Avatar Shimmer radius
+  static BorderRadius circular20 = BorderRadius.circular(20.r);
   
   /// Product item radius
   static BorderRadius circular50 = BorderRadius.circular(50.r);

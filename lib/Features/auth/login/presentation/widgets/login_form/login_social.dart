@@ -7,7 +7,7 @@ import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/utils/app_reference.dart';
-import '../../../../../../core/widgets/app_social_button.dart';
+import '../../../../../../core/widgets/app_buttons/app_social_button.dart';
 
 class LoginSocial extends ConsumerWidget
 {

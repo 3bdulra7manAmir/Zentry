@@ -12,7 +12,7 @@ import '../../features/auth/register/presentation/controllers/fullname_controlle
 import '../../features/auth/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
 import '../../features/auth/register/presentation/controllers/fullname_controllers/selected_date_provider.dart';
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
-import '../../features/bottom_nav_bar/presentation/controller/bottom_nav_index_provider.dart';
+import '../widgets/bottom_nav_bar/controller/bottom_nav_index_provider.dart';
 import '../../features/follow_business/domain/entity/business.dart';
 import '../../features/follow_business/presentation/controllers/businesses_controller.dart';
 import '../../features/home/domain/entity/post_entity.dart';

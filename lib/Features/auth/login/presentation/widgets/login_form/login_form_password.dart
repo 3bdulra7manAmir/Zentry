@@ -11,7 +11,7 @@ import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/helpers/app_providers.dart';
 import '../../../../../../core/services/validation/app_validation.dart';
-import '../../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../../core/widgets/app_form/app_textform_field.dart';
 import '../../controllers/checkbox_controller.dart';
 
 class LoginPassword extends ConsumerWidget
