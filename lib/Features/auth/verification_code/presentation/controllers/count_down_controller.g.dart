@@ -6,7 +6,7 @@ part of 'count_down_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$resendCountdownHash() => r'b20db7c9cfa0a1ffe92e75279570d3a690c41892';
+String _$resendCountdownHash() => r'a63ad00c6884ed52b63850cb8e9441d347eb519b';
 
 /// Copied from Dart SDK
 class _SystemHash {

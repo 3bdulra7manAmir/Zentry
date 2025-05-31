@@ -6,7 +6,8 @@ class PostEntity {
   final String carModel;
   final String carPrice;
   final String carInfo;
-  final String postCarImage;  final String likesCount;
+  final String postCarImage;
+  final int likesCount;
   final String commentsCount;
   final String sharesCount;
 
@@ -33,7 +34,7 @@ class PostEntity {
       carPrice: json['carprice'] as String,
       carInfo: json['carinfo'] as String,
       postCarImage: json['postcarimage'] as String,
-      likesCount: json['likesCount'] as String,
+      likesCount: int.tryParse(json['likesCount'].toString()) ?? 0,
       commentsCount: json['commentsCount'] as String,
       sharesCount: json['sharesCount'] as String,
     );

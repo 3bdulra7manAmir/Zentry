@@ -4,22 +4,24 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/widgets/app_shimmer.dart';
 
-class ProductsItemShimmer extends StatelessWidget {
+
+class ProductsItemShimmer extends StatelessWidget
+{
   const ProductsItemShimmer({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Column(
-      children: [
+      children:
+      [
         ShimmerContainer(
-          width: 55.w,
-          height: 55.h,
+          width: 55.w, height: 55.h,
           borderRadius: AppBordersRadiuses.circular50,
         ),
         AppSizes.size8.verticalSpace,
         ShimmerContainer(
-          width: 50.w,
-          height: 10.h,
+          width: 50.w, height: 10.h,
           borderRadius: AppBordersRadiuses.circular4,
         ),
       ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../config/router/app_router.dart';
+import '../../../../../../config/router/app_routes.dart';
 import '../../../../../../core/constants/app_margins.dart';
 import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
@@ -7,7 +9,6 @@ import '../../../../domain/entity/post_entity.dart';
 import '../post_comments/post_comment_bar.dart';
 import '../post_comments/post_reactions.dart';
 import 'post_bio.dart';
-import '../post_opened_view.dart';
 import 'post_header.dart';
 
 class PostsCard extends StatelessWidget
@@ -30,13 +31,13 @@ class PostsCard extends StatelessWidget
           PostBio(carModel: post.carModel, carPrice: post.carPrice, carInfo: post.carInfo,),
           AppSizes.size12.verticalSpace,
           GestureDetector(
-            onTap: () => showCommentsBottomSheet(context, post.postCarImage),
+            onTap: () => AppRouter.router.pushNamed(AppRoutes.kStroy, extra: post.postCarImage),
             child: Image.asset(post.postCarImage, fit: BoxFit.cover, width: 360.w,)
           ),
           AppSizes.size8.verticalSpace,
           PostReactions(likesCount: post.likesCount, commentsCount: post.commentsCount, sharesCount: post.sharesCount,),
           AppSizes.size14.verticalSpace,
-          CommentCard(padding: AppPadding.zero),
+          CommentCard(padding: AppPadding.zero, likesCount: post.likesCount,),
         ],
       ),
     );
