@@ -10,9 +10,9 @@ import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/widgets/app_buttons/app_button.dart';
 
-class CreateStory extends StatelessWidget
+class StoryCreate extends StatelessWidget
 {
-  const CreateStory({super.key});
+  const StoryCreate({super.key});
 
   @override
   Widget build(BuildContext context)

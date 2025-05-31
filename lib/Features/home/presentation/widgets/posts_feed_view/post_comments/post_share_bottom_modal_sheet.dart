@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/config/themes/color_system/app_colors.dart';
-import 'package:test_app/core/constants/app_sizes.dart';
-import 'package:test_app/core/constants/app_styles.dart';
+import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../core/constants/app_borders.dart';
+import '../../../../../../core/constants/app_sizes.dart';
+import '../../../../../../core/constants/app_styles.dart';
 
 
 void showSharePostBottomSheet(BuildContext context)

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import 'create_story.dart';
+import 'story_create.dart';
 import 'story_list.dart';
 
 
@@ -18,7 +18,7 @@ class StroyList extends StatelessWidget
         mainAxisSize: MainAxisSize.max,
         children:
         [
-          const CreateStory(),
+          const StoryCreate(),
           AppSizes.size9.horizontalSpace,
           const StroyListBuilder(),
         ],

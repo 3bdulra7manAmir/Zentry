@@ -11,6 +11,7 @@ import '../../features/auth/verification_code/presentation/screens/verification_
 import '../../core/widgets/bottom_nav_bar/screens/bottom_nav_bar.dart';
 import '../../features/home/presentation/screens/home_view.dart';
 import '../../features/home/presentation/widgets/posts_feed_view/post_opened_view.dart';
+import '../../features/home/presentation/widgets/stories_scroll_view/story_opened.dart';
 import '../../features/notifications/presentation/screens/notifications_search_view.dart';
 import '../../features/notifications/presentation/screens/notifications_view.dart';
 import '../../features/search/presentation/screens/search_results_view.dart';
@@ -110,11 +111,26 @@ abstract class AppRouter
         name: AppRoutes.kHome,
         builder: (context, state) => const HomeScreen(),
       ),
+
       GoRoute(
-        path: AppRoutes.kStroy,
-        name: AppRoutes.kStroy,
-        builder: (context, state) => const OpenedStory(),
+        path: AppRoutes.kPostOpened,
+        name: AppRoutes.kPostOpened,
+        builder: (context, state)
+        {
+          final imagePath = state.extra as String;
+          return PostOpened(carImage: imagePath);
+        },
       ),
+      
+      GoRoute(
+      path: AppRoutes.kStoryOpened,
+      name: AppRoutes.kStoryOpened,
+      builder: (context, state)
+      {
+        final imagePath = state.extra as String;
+        return StoryOpened(storyImage: imagePath);
+      },
+    ),
 
 
 

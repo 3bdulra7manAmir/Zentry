@@ -1,15 +1,16 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/widgets/app_form/app_form.dart';
-import 'package:test_app/features/auth/login/presentation/widgets/login_form/login_form_phone.dart';
+
 
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
+import '../../../../../core/widgets/app_form/app_form.dart';
 import '../controllers/switcher_controller.dart';
 import '../widgets/login_form/login_email.dart';
 import '../widgets/login_form/login_form_button.dart';
 import '../widgets/login_form/login_form_password.dart';
+import '../widgets/login_form/login_form_phone.dart';
 import '../widgets/login_form/login_social.dart';
 
 class LoginScreen extends ConsumerWidget

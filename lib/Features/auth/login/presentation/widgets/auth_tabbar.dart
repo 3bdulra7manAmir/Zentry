@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/features/auth/register/presentation/screens/signup_email.dart';
-import 'package:test_app/features/auth/register/presentation/screens/signup_invite.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -9,7 +7,9 @@ import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/helpers/app_providers.dart';
 import '../../../app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../../register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
+import '../../../register/presentation/screens/signup_email.dart';
 import '../../../register/presentation/screens/signup_form_phone.dart';
+import '../../../register/presentation/screens/signup_invite.dart';
 import '../screens/login_view.dart';
 
 class AuthTabs extends ConsumerWidget

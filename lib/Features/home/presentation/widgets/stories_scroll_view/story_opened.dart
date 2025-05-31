@@ -6,13 +6,11 @@ import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import 'post_comments/post_comment_bar.dart';
-import 'post_comments/post_comment_list_builder.dart';
 
-class PostOpened extends StatelessWidget
+class StoryOpened extends StatelessWidget
 {
-  final String carImage;
-  const PostOpened({super.key, required this.carImage});
+  final String storyImage;
+  const StoryOpened({super.key, required this.storyImage});
 
   @override
   Widget build(BuildContext context)
@@ -41,15 +39,12 @@ class PostOpened extends StatelessWidget
                 decoration: BoxDecoration(
                   borderRadius: AppBordersRadiuses.circular7,
                   image: DecorationImage(
-                    image: AssetImage(carImage),
+                    image: AssetImage(storyImage),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               AppSizes.size30.verticalSpace,
-              CommentCard(padding: AppPadding.horizontal16,),
-              AppSizes.size18.verticalSpace,
-              const PostCommentListBuilder(),
             ],
           ),
         ),

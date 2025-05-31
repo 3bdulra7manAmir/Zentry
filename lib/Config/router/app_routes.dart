@@ -34,7 +34,8 @@ abstract class AppRoutes
   ///[APP_Home]
   //App Home 
   static const kHome = '/Home';
-  static const kStroy = '/Story';
+  static const kPostOpened = '/PostOpened';
+  static const kStoryOpened = '/StoryOpened';
 
 
   static const kTest = '/Test';
