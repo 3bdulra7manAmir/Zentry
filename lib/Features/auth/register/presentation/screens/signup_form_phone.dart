@@ -52,7 +52,7 @@ class SignUpFormPhoneNumber extends ConsumerWidget
                   Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
                   const Spacer(),
                   GestureDetector(
-                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUpEmailPhone(),
+                    onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.email),
                     child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                       fontWeight: AppFontWeights.boldWeight,
                       textDecoration: TextDecoration.underline,

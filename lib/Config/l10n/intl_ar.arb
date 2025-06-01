@@ -195,6 +195,7 @@
   "readMore": " اقرأ المزيد.....",
   "showLess": " عرض أقل",
   "enterEmailAddressAssociated": "أدخل عنوان البريد الإلكتروني المرتبط",
-  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً"
+  "unsupportedPhoneNumber": "رقم الهاتف غير مدعوم حالياً",
+  "incorrectEmailOrPassword": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
 
 }

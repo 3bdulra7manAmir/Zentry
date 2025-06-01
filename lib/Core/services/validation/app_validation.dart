@@ -80,7 +80,6 @@ abstract class AppValidation
     try
     {
       final password = value ?? "";
-
       if (password.isEmpty)
       {
         return AppLocalizations.of(context).passwordIsRequired;

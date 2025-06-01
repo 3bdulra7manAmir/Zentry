@@ -8,6 +8,7 @@ import '../../../../../core/helpers/app_providers.dart';
 import '../../../app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../../register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
 import '../../../register/presentation/screens/signup_email.dart';
+import '../../../register/presentation/screens/signup_form_fullname.dart';
 import '../../../register/presentation/screens/signup_form_phone.dart';
 import '../../../register/presentation/screens/signup_invite.dart';
 import '../screens/login_view.dart';
@@ -49,12 +50,13 @@ class AuthTabs extends ConsumerWidget
               children:
               [
                 LoginScreen(),
-                provider.signUpType == SignUpType.email
-                ? SignUpFormEmail()
-                : provider.signUpType == SignUpType.phone
-                    ? SignUpFormPhoneNumber()
-                    : SignUpFormInvite(), // <-- third "else" case
-
+                switch (provider.signUpType)
+                {
+                  SignUpType.email => SignUpFormEmail(),
+                  SignUpType.phone => SignUpFormPhoneNumber(),
+                  SignUpType.fullname => SignUpFormFullName(),
+                  SignUpType.invite => SignUpFormInvite(),
+                },
               ],
             ),
           ),

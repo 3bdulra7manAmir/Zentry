@@ -31,7 +31,7 @@ class LoginPassword extends ConsumerWidget
         Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
         AppSizes.size8.verticalSpace,
         CustomTextFormField(
-          fieldKeyboardType: TextInputType.visiblePassword,
+          fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: passwordController,
           fieldObscureText: provider.obscureText,

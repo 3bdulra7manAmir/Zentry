@@ -577,4 +577,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get unsupportedPhoneNumber => 'Un-Supported phone number';
+
+  @override
+  String get incorrectEmailOrPassword => 'Incorrect email or password';
 }

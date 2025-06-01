@@ -5,6 +5,9 @@ abstract class AppMargins
 {
   AppMargins._();
 
+  /// Horizontal Margins - 9px
+  static EdgeInsets horizontal9 = EdgeInsets.symmetric(horizontal: 9.w); /// horizontal9
+
   /// Horizontal Margins - 10px
   static EdgeInsets horizontal10 = EdgeInsets.symmetric(horizontal: 10.w); /// horizontal10
 

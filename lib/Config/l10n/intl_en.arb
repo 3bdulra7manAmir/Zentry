@@ -195,5 +195,6 @@
   "readMore": " Read more.....",
   "showLess": " Show less",
   "enterEmailAddressAssociated": "Enter the email address associated",
-  "unsupportedPhoneNumber": "Un-Supported phone number"
+  "unsupportedPhoneNumber": "Un-Supported phone number",
+  "incorrectEmailOrPassword": "Incorrect email or password"
 }

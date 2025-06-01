@@ -1219,6 +1219,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Un-Supported phone number'**
   String get unsupportedPhoneNumber;
+
+  /// No description provided for @incorrectEmailOrPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect email or password'**
+  String get incorrectEmailOrPassword;
 }
 
 class _AppLocalizationsDelegate

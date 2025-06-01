@@ -10,8 +10,10 @@ import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/widgets/app_buttons/app_button.dart';
 import '../../controllers/login_process_controllers/login_state_provider.dart';
+import '../../controllers/switcher_controller.dart';
 import 'login_email.dart';
 import 'login_form_password.dart';
+import 'login_form_phone.dart';
 
 class LoginFormButton extends ConsumerWidget
 {
@@ -30,7 +32,7 @@ class LoginFormButton extends ConsumerWidget
           {
             return CustomButton(
               buttonText: AppLocalizations.of(context).login,
-              buttonOnPressed: () async => await loginValidation(ref),
+              buttonOnPressed: () async => await loginEmailValidation(ref, context),
             );
           }
         ),
@@ -49,19 +51,40 @@ class LoginFormButton extends ConsumerWidget
     );
   }
 
-  Future<void> loginValidation(WidgetRef ref) async
+  Future<void> loginEmailValidation(WidgetRef ref, BuildContext context) async
   {
-    if (!formKey.currentState!.validate())
+    if (!formKey.currentState!.validate()) return;
+    final isEmailLogin = ref.read(loginMethodSwitcherProvider);
+    final loginNotifier = ref.read(loginStateProvider.notifier);
+    final password = LoginPassword.passwordController.text;
+
+    if (isEmailLogin)
     {
-      await ref.read(loginStateProvider.notifier).loginWithEmail(LoginEmail.emailController.text, LoginPassword.passwordController.text);
-      final state = ref.read(loginStateProvider);
-      state.whenData((success)
-      {
-        if (success)
-        {
-          AppRouter.router.pushNamed(AppRoutes.kHome);
-        }
-      });
+      final email = LoginEmail.emailController.text;
+      await loginNotifier.loginWithEmail(email, password);
     }
-  }
+    else
+    {
+      final phone = LoginPhone.phoneNumberController.text;
+      await loginNotifier.loginWithPhone(phone, password);
+    }
+
+  final state = ref.read(loginStateProvider);
+  state.when(
+    data: (success)
+    {
+      if (success)
+      {
+        AppRouter.router.pushNamed(AppRoutes.kHome);
+      }
+      else
+      {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context).incorrectEmailOrPassword),),);
+      }
+    },
+    error: (e, _) {},
+    loading: () {},
+  );
+}
+
 }

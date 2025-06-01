@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/core/constants/app_margins.dart';
 import 'package:test_app/features/home/presentation/widgets/stories_scroll_view/story_others.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/router/app_router.dart';
@@ -20,6 +21,7 @@ class StroyListBuilder extends ConsumerWidget
     final provider = AppProvidersProvider(ref, context);
     return provider.storiesAsyncValue.when(
       data: (stories) => AppListviewBuilder(
+        padding: AppMargins.horizontal9,
         scrollDirection: Axis.horizontal,
         itemCount: stories.length,
         itemBuilder: (context, index) => GestureDetector(
@@ -32,7 +34,7 @@ class StroyListBuilder extends ConsumerWidget
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) => const UsersStoryShimmer(),
-        separatorBuilder: (context, index) => AppSizes.size9.horizontalSpace,
+        separatorBuilder: (context, index) => AppSizes.size0.horizontalSpace,
       ),
       error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error'),
       ),

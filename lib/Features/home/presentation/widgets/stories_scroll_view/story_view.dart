@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/constants/app_sizes.dart';
 import 'story_create.dart';
 import 'story_list.dart';
 
@@ -12,15 +10,14 @@ class StroyList extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children:
         [
-          const StoryCreate(),
-          AppSizes.size9.horizontalSpace,
-          const StroyListBuilder(),
+          StoryCreate(),
+          StroyListBuilder(),
         ],
       ),
     );

@@ -579,4 +579,8 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get unsupportedPhoneNumber => 'رقم الهاتف غير مدعوم حالياً';
+
+  @override
+  String get incorrectEmailOrPassword =>
+      'البريد الإلكتروني أو كلمة المرور غير صحيحة';
 }
