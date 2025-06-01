@@ -59,7 +59,7 @@ class ForgetPasswordScreen extends ConsumerWidget
                       buttonTextStyle: AppStyles.textStyle22(fontColor: AppColors.color.kWhite003),
                       buttonOnPressed: () =>
                       {
-                        if (!forgetPasswordFormKey.currentState!.validate())
+                        if (forgetPasswordFormKey.currentState!.validate())
                         {
                           AppRouter.router.pushNamed(AppRoutes.kVerification,)
                         }
