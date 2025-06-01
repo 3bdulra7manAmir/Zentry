@@ -11,6 +11,7 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../domain/entity/notification_entity.dart';
+import 'notifications_actions.dart';
 
 class DefaultNotificationCard extends StatelessWidget
 {
@@ -67,7 +68,9 @@ class DefaultNotificationCard extends StatelessWidget
                             ),
                           ),
                           AppSizes.size16.horizontalSpace,
-                          Image.asset(AppAssets.iconsPNG.notificationMenuDots),
+                          GestureDetector(
+                            onTap: () => showActionsBottomSheet(context),
+                            child: Image.asset(AppAssets.iconsPNG.notificationMenuDots)),
                           AppSizes.size16.horizontalSpace,
                         ],
                       ),

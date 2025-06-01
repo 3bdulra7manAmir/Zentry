@@ -5,7 +5,7 @@ abstract class AppRoutes
   // APP Splash
   static const kSplash = '/Splash';
   // APP Settings 
-  static const kAppSettings = '/AppForm';
+  static const kAppSettings = '/AppSettings';
 
   ///[App_AUTH]
   
