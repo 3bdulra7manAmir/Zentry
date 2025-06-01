@@ -5,7 +5,7 @@ import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
-import '../../../controllers/likes_count_controller.dart';
+import '../../../controllers/posts_controllers/post_likes/likes_count_controller.dart';
 
 class PostReactions extends ConsumerWidget 
 {

@@ -10,7 +10,7 @@ import '../../features/auth/reset_password/presentation/screens/rest_password_vi
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../core/widgets/bottom_nav_bar/screens/bottom_nav_bar.dart';
 import '../../features/home/presentation/screens/home_view.dart';
-import '../../features/home/presentation/widgets/posts_feed_view/post_opened_view.dart';
+import '../../features/home/presentation/widgets/posts_feed_view/post_card/post_opened.dart';
 import '../../features/home/presentation/widgets/stories_scroll_view/story_opened.dart';
 import '../../features/notifications/presentation/screens/notifications_search_view.dart';
 import '../../features/notifications/presentation/screens/notifications_view.dart';
@@ -26,7 +26,7 @@ abstract class AppRouter
   static final router = GoRouter(
     navigatorKey: navigatorState,
     debugLogDiagnostics: kDebugMode,
-    initialLocation: AppRoutes.kAppSettings,
+    initialLocation: AppRoutes.kHome,
     errorBuilder: (_, _) => const Scaffold(body: Center(child: AppCircularIndicator()),),
     routes:
     [

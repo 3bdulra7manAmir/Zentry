@@ -19,6 +19,7 @@ class CustomTextFormField extends StatelessWidget
     this.fieldFocusedColor,
     this.fieldBorderRadius,
     this.fieldSuffixStyle,
+    this.onFieldSubmitted,
   });
 
   final Widget? fieldPrefixIcon;
@@ -35,6 +36,7 @@ class CustomTextFormField extends StatelessWidget
   final Color? fieldFocusedColor;
   final BorderRadius? fieldBorderRadius;
   final TextStyle? fieldSuffixStyle;
+  final void Function(String)? onFieldSubmitted;
 
   @override
   Widget build(BuildContext context)
@@ -46,6 +48,7 @@ class CustomTextFormField extends StatelessWidget
       obscureText: fieldObscureText ?? false,
       controller: fieldController,
       validator: fieldValidator,
+      onFieldSubmitted: onFieldSubmitted,
       
       decoration: InputDecoration(
         hintText: fieldText,

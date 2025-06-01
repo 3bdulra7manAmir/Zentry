@@ -18,9 +18,9 @@ import '../../features/follow_business/presentation/controllers/businesses_contr
 import '../../features/home/domain/entity/post_entity.dart';
 import '../../features/home/domain/entity/products_items_entity.dart';
 import '../../features/home/domain/entity/story_entity.dart';
-import '../../features/home/presentation/controllers/posts_providers/posts_provider.dart';
-import '../../features/home/presentation/controllers/products_items_providers/products_items_provider.dart';
-import '../../features/home/presentation/controllers/stories_provider/stories_items_provider.dart';
+import '../../features/home/presentation/controllers/posts_controllers/post_fetch/posts_provider.dart';
+import '../../features/home/presentation/controllers/products_items_controllers/products_items_provider.dart';
+import '../../features/home/presentation/controllers/stories_controllers/stories_items_provider.dart';
 import '../../features/join_groups/presentation/controllers/join_groups_items_provider.dart';
 import '../../features/moeny_from_interests/data/model/interest_category.dart';
 import '../../features/moeny_from_interests/presentation/controllers/interests_providers.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/features/home/presentation/widgets/posts_feed_view/post_card/post_card_view.dart';
+import 'package:test_app/features/home/presentation/widgets/posts_feed_view/post_card_view.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/helpers/app_providers.dart';
