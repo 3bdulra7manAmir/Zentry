@@ -11,8 +11,12 @@ import '../../domain/entities/search_category.dart';
 class SearchRelatedResultCard extends StatelessWidget
 {
   final SearchCategory category;
+  final VoidCallback? onRemove;
 
-  const SearchRelatedResultCard({super.key, required this.category,});
+  const SearchRelatedResultCard({super.key,
+    required this.category,
+    this.onRemove,
+  });
 
   @override
   Widget build(BuildContext context)
@@ -42,7 +46,9 @@ class SearchRelatedResultCard extends StatelessWidget
             fontWeight: AppFontWeights.semiBoldWeight),),
         ) : const SizedBox.shrink(),
         const Spacer(),
-        Image.asset(AppAssets.iconsPNG.searchRelatedWrong),
+        GestureDetector(
+          onTap: onRemove,
+          child: Image.asset(AppAssets.iconsPNG.searchRelatedWrong)),
       ],
     );
   }

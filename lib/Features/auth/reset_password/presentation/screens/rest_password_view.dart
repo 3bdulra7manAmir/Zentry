@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../config/router/app_router.dart';
+import '../../../../../config/router/app_routes.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -110,7 +112,7 @@ class RestPasswordScreen extends ConsumerWidget
                       {
                         if (resetPasswordFormKey.currentState!.validate())
                         {
-                          //AppRouter.router.pushNamed(AppRoutes.kVerificationCodeView);
+                          AppRouter.router.pushNamed(AppRoutes.kAuthTabs);
                         }
                       },
                     ),

@@ -56,5 +56,22 @@ final searchQueryProvider =
 );
 
 typedef _$SearchQuery = AutoDisposeNotifier<String>;
+String _$localSearchResultsHash() =>
+    r'060f18a2e1e75639a46388d8edb10d53f25d2876';
+
+/// See also [LocalSearchResults].
+@ProviderFor(LocalSearchResults)
+final localSearchResultsProvider = AutoDisposeNotifierProvider<
+    LocalSearchResults, List<SearchCategory>>.internal(
+  LocalSearchResults.new,
+  name: r'localSearchResultsProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$localSearchResultsHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$LocalSearchResults = AutoDisposeNotifier<List<SearchCategory>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -35,3 +35,36 @@ Future<List<SearchCategory>> searchResults(SearchResultsRef ref) async
     return repository.searchCategories(query);
   }
 }
+
+
+//Remover
+@riverpod
+class LocalSearchResults extends _$LocalSearchResults
+{
+  bool _initialized = false;
+
+  @override
+  List<SearchCategory> build()
+  {
+    return [];
+  }
+
+  void initialize(List<SearchCategory> initial)
+  {
+    if (!_initialized) {
+      state = [...initial];
+      _initialized = true;
+    }
+  }
+
+  void removeAt(int index)
+  {
+    state = [...state]..removeAt(index);
+  }
+
+  void clear()
+  {
+    state = [];
+  }
+}
+

@@ -12,6 +12,7 @@ import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_lists/app_listview_builder.dart';
 import '../../../../core/widgets/app_appbars/app_search_appbar.dart';
+import '../controllers/search_providers/search_providers.dart';
 
 class SearchScreen extends ConsumerWidget
 {
@@ -40,9 +41,12 @@ class SearchScreen extends ConsumerWidget
                       fontColor: AppColors.color.kBlack005,
                     ),
                   ),
-                  Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(
-                      fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: AppColors.color.kBlue004,
+                  GestureDetector(
+                    onTap: () => ref.read(localSearchResultsProvider.notifier).clear(),
+                    child: Text(AppLocalizations.of(context).clear, style: AppStyles.textStyle14(
+                        fontWeight: AppFontWeights.semiBoldWeight,
+                        fontColor: AppColors.color.kBlue004,
+                      ),
                     ),
                   ),
                 ],
@@ -53,23 +57,33 @@ class SearchScreen extends ConsumerWidget
               provider.searchResultsCategory.when(
                 data: (categories)
                 {
-                  if (categories.isEmpty)
+                  final localResults = ref.watch(localSearchResultsProvider);
+                  // Initialize once if localResults is empty but actual categories are available
+                  if (localResults.isEmpty && categories.isNotEmpty)
                   {
-                    return Center(
-                      child: Text(AppLocalizations.of(context).search, style: AppStyles.textStyle14(
-                          fontColor: AppColors.color.kGreyText002,
-                          fontWeight: AppFontWeights.regularWeight,
-                        ),
-                      ),
+                    WidgetsBinding.instance.addPostFrameCallback((_)
+                    {
+                      ref.read(localSearchResultsProvider.notifier).initialize(categories);
+                    });
+                  }
+                  if (localResults.isEmpty)
+                  {
+                    return Center(child: Text(AppLocalizations.of(context).search,
+                        style: AppStyles.textStyle14(fontColor: AppColors.color.kGreyText002, fontWeight: AppFontWeights.regularWeight,),),
                     );
                   }
                   return AppListviewBuilder(
-                    itemCount: categories.length,
+                    itemCount: localResults.length,
                     separatorBuilder: (context, index) => AppSizes.size12.verticalSpace,
-                    itemBuilder: (context, index)
-                    {
-                      final category = categories[index];
-                      return SearchRelatedResultCard(category: category);
+                    itemBuilder: (context, index) {
+                      final category = localResults[index];
+                      return SearchRelatedResultCard(
+                        category: category,
+                        onRemove: ()
+                        {
+                          ref.read(localSearchResultsProvider.notifier).removeAt(index);
+                        },
+                      );
                     },
                   );
                 },

@@ -59,4 +59,14 @@ class AppImages
     : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.formArrowRight);
   }
 
+  static String appBarBackSmartArrow3(BuildContext context, WidgetRef ref)
+  {
+    final provider = AppProvidersProvider(ref, context);
+    final isArabic = provider.localeState.selectedLanguageIndex == 0;
+    final isDark = provider.themeMode == ThemeMode.dark;
+
+    return isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.formArrowLeft)
+    : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.formArrowRight);
+  }
+
 }

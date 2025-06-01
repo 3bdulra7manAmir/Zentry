@@ -35,21 +35,24 @@ class VerificationScreen extends ConsumerWidget
         ),),
         barActions:
         [
-          Row(
-            children:
-            [
-              Text(
-                AppLocalizations.of(context).verifyLater, style: AppStyles.textStyle12(
-                  fontWeight: AppFontWeights.semiBoldWeight,
-                  fontColor: AppColors.color.kGreyText004,
-                  textDecoration: TextDecoration.underline,
-                  textDecorationColor: AppColors.color.kGreyText004,
+          GestureDetector(
+            onTap: () => AppRouter.router.pushNamed(AppRoutes.kAuthTabs),
+            child: Row(
+              children:
+              [
+                Text(
+                  AppLocalizations.of(context).verifyLater, style: AppStyles.textStyle12(
+                    fontWeight: AppFontWeights.semiBoldWeight,
+                    fontColor: AppColors.color.kGreyText004,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationColor: AppColors.color.kGreyText004,
+                  ),
                 ),
-              ),
-              AppSizes.size4.horizontalSpace,
-              Image.asset(AppImages.appBarBackSmartArrow2(context, ref),),
-              AppSizes.size14.horizontalSpace,
-            ],
+                AppSizes.size4.horizontalSpace,
+                Image.asset(AppImages.appBarBackSmartArrow3(context, ref),),
+                AppSizes.size14.horizontalSpace,
+              ],
+            ),
           ),
         ],
       ),
