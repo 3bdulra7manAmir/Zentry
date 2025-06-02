@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:test_app/core/widgets/app_circular_indicator.dart';
 import '../../features/auth/forget_password/presentation/screens/forget_password_view.dart';
 import '../../features/auth/app_settings/presentation/screens/app_settings_view.dart';
-import '../../features/auth/login/presentation/screens/auth_view.dart';
+import '../../features/auth/login_and_register/auth_view.dart';
 import '../../features/auth/reset_password/presentation/screens/rest_password_view.dart';
 import '../../features/auth/verification_code/presentation/screens/verification_code_view.dart';
 import '../../core/widgets/bottom_nav_bar/screens/bottom_nav_bar.dart';

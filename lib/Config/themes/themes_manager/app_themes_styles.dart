@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_borders.dart';
-import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_styles.dart';
 import '../color_system/app_colors.dart';
 import '../font_system/font_weights.dart';
@@ -67,7 +65,7 @@ abstract class AppDarkStyles
     borderRadius: AppBordersRadiuses.circular10,
     borderSide: BorderSide(
       color: AppColors.color.kDark001,
-      width: AppSizes.size1.w,
+      width: AppBorderWidths.thin,
     ),
   );
 

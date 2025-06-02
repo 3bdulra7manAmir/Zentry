@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/controller/theme_controller.dart';
+import '../../features/auth/app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/countries_icon_update_provider.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/language_icon_update_provider.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/theme_mode_text_provide.dart';
-import '../../features/auth/login/presentation/controllers/checkbox_controller.dart';
-import '../../features/auth/login/presentation/controllers/obsecure_text_controller.dart';
-import '../../features/auth/register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
-import '../../features/auth/register/presentation/controllers/fullname_controllers/gender_provider.dart';
-import '../../features/auth/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
-import '../../features/auth/register/presentation/controllers/fullname_controllers/selected_date_provider.dart';
+import '../../features/auth/login_and_register/login/presentation/controllers/checkbox_controller.dart';
+import '../../features/auth/login_and_register/login/presentation/controllers/obsecure_text_controller.dart';
+import '../../features/auth/login_and_register/login/presentation/controllers/switcher_controller.dart';
+import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
+import '../../features/auth/login_and_register/register/presentation/controllers/fullname_controllers/gender_provider.dart';
+import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
+import '../../features/auth/login_and_register/register/presentation/controllers/fullname_controllers/selected_date_provider.dart';
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../widgets/bottom_nav_bar/controller/bottom_nav_index_provider.dart';
 import '../../features/follow_business/domain/entity/business.dart';
@@ -52,6 +54,12 @@ class AppProvidersProvider
   String get countryLabel => getSelectedCountryName(ref, context);
   String get countryFlag => getSelectedCountryImage(ref, context);
 
+  void get tabIndexLogin => ref.read(tabIndexProvider.notifier).setIndex(0);
+  void get tabIndexRegister => ref.read(tabIndexProvider.notifier).setIndex(1);
+
+  void get signUpPhoneSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.phone);
+  void get signUpFullNameSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.fullname);
+
   bool get obscureText => ref.watch(obscurePasswordProvider);
   bool get obscureText2 => ref.watch(obscurePasswordProvider2);
   bool get obscureText3 => ref.watch(obscurePasswordProvider3);
@@ -60,6 +68,11 @@ class AppProvidersProvider
   bool get obscureTextState3 => ref.read(obscurePasswordProvider3.notifier).state = !ref.read(obscurePasswordProvider3.notifier).state;
 
   bool get isChecked => ref.watch(checkboxValueProvider);
+
+  bool get isLoginMethodEmail => ref.watch(loginMethodSwitcherProvider);
+  bool get current => ref.read(loginMethodSwitcherProvider);
+  void get currentNotifier => ref.read(loginMethodSwitcherProvider.notifier).state = !current;
+
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);
 
   SignUpType get signUpType => ref.watch(signUpTypeProvider);

@@ -18,7 +18,7 @@ class TestApp extends ConsumerWidget
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       builder: (context, child) => DevicePreview(
-        enabled: true,
+        enabled: false,
         builder: (context) => MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.router,

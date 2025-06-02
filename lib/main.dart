@@ -6,8 +6,7 @@ import 'core/services/database/shared_preference/app_database.dart';
 void main() async
 {
   WidgetsFlutterBinding.ensureInitialized();
-  UserPreferences.instance.init();
-  //HiveLocalSourceDatabase.instance.initHiveDataBase();
-
+  await UserPreferences.instance.init();
   runApp(const ProviderScope(child: TestApp()));
 }
+
