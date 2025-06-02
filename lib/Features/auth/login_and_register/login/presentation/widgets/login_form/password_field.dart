@@ -14,9 +14,9 @@ import '../../../../../../../core/services/validation/app_validation.dart';
 import '../../../../../../../core/widgets/app_form/app_textform_field.dart';
 import '../../controllers/checkbox_controller.dart';
 
-class LoginPassword extends ConsumerWidget
+class LoginPasswordField extends ConsumerWidget
 {
-  const LoginPassword({super.key});
+  const LoginPasswordField({super.key});
 
   static TextEditingController passwordController = TextEditingController();
 

@@ -32,13 +32,13 @@ class LoginScreen extends ConsumerWidget
             children:
             [
               AppSizes.size13.verticalSpace,
-              provider.isLoginMethodEmail ? const LoginEmail() : const LoginPhone(),
+              provider.isLoginMethodEmail ? const LoginEmailField() : const LoginPhoneField(),
               AppSizes.size24.verticalSpace,
-              const LoginPassword(),
+              const LoginPasswordField(),
               AppSizes.size16.verticalSpace,
               LoginFormButton(formKey: loginEmailFormKey,),
               AppSizes.size20.verticalSpace,
-              const LoginSocial(),
+              const LoginSocialButtons(),
               AppSizes.size20.verticalSpace,
             ],
           ),

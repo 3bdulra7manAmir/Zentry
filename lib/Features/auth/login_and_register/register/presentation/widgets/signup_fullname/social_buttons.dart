@@ -9,9 +9,9 @@ import '../../../../../../../core/constants/app_styles.dart';
 import '../../../../../../../core/utils/app_reference.dart';
 import '../../../../../../../core/widgets/app_buttons/app_social_button.dart';
 
-class LoginSocialButtons extends ConsumerWidget
+class SignUpSocialButtons extends ConsumerWidget
 {
-  const LoginSocialButtons({super.key});
+  const SignUpSocialButtons({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
@@ -27,9 +27,7 @@ class LoginSocialButtons extends ConsumerWidget
                 buttonText: AppLocalizations.of(context).facebook,
                 platformLogo: AppAssets.iconsPNG.loginFacebook,
                 buttonBackgroundColor: AppColors.color.kDark002,
-                buttonTextStyle: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kBlack002,
-                ),
+                buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),
               ),
             ),
             AppSizes.size12.horizontalSpace,
@@ -38,9 +36,7 @@ class LoginSocialButtons extends ConsumerWidget
                 buttonText: AppLocalizations.of(context).google,
                 platformLogo: AppAssets.iconsPNG.loginGoogle,
                 buttonBackgroundColor: AppColors.color.kDark002,
-                buttonTextStyle: AppStyles.textStyle12(
-                  fontColor: AppColors.color.kBlack002,
-                ),
+                buttonTextStyle: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),
               ),
             ),
           ],

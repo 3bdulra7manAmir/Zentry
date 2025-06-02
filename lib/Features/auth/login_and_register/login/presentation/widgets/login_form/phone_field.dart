@@ -11,9 +11,9 @@ import '../../../../../../../core/services/validation/app_validation.dart';
 import '../../../../../../../core/widgets/app_form/app_textform_field.dart';
 import '../phone_number_bottom_model_sheet.dart';
 
-class LoginPhone extends ConsumerWidget
+class LoginPhoneField extends ConsumerWidget
 {
-  const LoginPhone({super.key});
+  const LoginPhoneField({super.key});
   static TextEditingController phoneNumberController = TextEditingController();
 
   @override

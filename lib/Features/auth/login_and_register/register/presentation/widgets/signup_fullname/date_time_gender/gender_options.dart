@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../config/themes/color_system/app_colors.dart';
-import '../../../../../../core/constants/app_borders.dart';
-import '../../../../../../core/constants/app_paddings.dart';
-import '../../../../../../core/constants/app_styles.dart';
+import '../../../../../../../../config/themes/color_system/app_colors.dart';
+import '../../../../../../../../core/constants/app_borders.dart';
+import '../../../../../../../../core/constants/app_paddings.dart';
+import '../../../../../../../../core/constants/app_styles.dart';
 
 class GenderOption extends StatelessWidget
 {

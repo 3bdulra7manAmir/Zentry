@@ -56,16 +56,16 @@ class LoginFormButton extends ConsumerWidget
     if (!formKey.currentState!.validate()) return;
     final isEmailLogin = ref.read(loginMethodSwitcherProvider);
     final loginNotifier = ref.read(loginStateProvider.notifier);
-    final password = LoginPassword.passwordController.text;
+    final password = LoginPasswordField.passwordController.text;
 
     if (isEmailLogin)
     {
-      final email = LoginEmail.emailController.text;
+      final email = LoginEmailField.emailController.text;
       await loginNotifier.loginWithEmail(email, password);
     }
     else
     {
-      final phone = LoginPhone.phoneNumberController.text;
+      final phone = LoginPhoneField.phoneNumberController.text;
       await loginNotifier.loginWithPhone(phone, password);
     }
 

@@ -7,10 +7,10 @@ import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/helpers/app_providers.dart';
 import '../../../../app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../../register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
-import '../../../register/presentation/screens/signup_email.dart';
+import '../../../register/presentation/screens/signup_form_email.dart';
 import '../../../register/presentation/screens/signup_form_fullname.dart';
 import '../../../register/presentation/screens/signup_form_phone.dart';
-import '../../../register/presentation/screens/signup_invite.dart';
+import '../../../register/presentation/screens/signup_form_invite.dart';
 import '../screens/login_view.dart';
 
 class AuthTabs extends ConsumerWidget
@@ -52,9 +52,9 @@ class AuthTabs extends ConsumerWidget
                 LoginScreen(),
                 switch (provider.signUpType)
                 {
-                  SignUpType.email => SignUpFormEmail(),
+                  SignUpType.email => const SignUpFormEmail(),
                   SignUpType.phone => SignUpFormPhoneNumber(),
-                  SignUpType.fullname => SignUpFormFullName(),
+                  SignUpType.fullname => const SignUpFormFullName(),
                   SignUpType.invite => SignUpFormInvite(),
                 },
               ],
