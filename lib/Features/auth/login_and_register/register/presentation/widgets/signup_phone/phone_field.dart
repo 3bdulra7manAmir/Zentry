@@ -1,0 +1,59 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../../../config/l10n/generated/app_localizations.dart';
+import '../../../../../../../config/themes/color_system/app_colors.dart';
+import '../../../../../../../config/themes/font_system/font_weights.dart';
+import '../../../../../../../core/constants/app_sizes.dart';
+import '../../../../../../../core/constants/app_styles.dart';
+import '../../../../../../../core/helpers/app_providers.dart';
+import '../../../../../../../core/services/validation/app_validation.dart';
+import '../../../../../../../core/widgets/app_form/app_textform_field.dart';
+import '../../../../login/presentation/widgets/phone_number_bottom_model_sheet.dart';
+import '../../controllers/phone_number_controllers/switcher_controller.dart';
+
+class SignUpPhoneField extends ConsumerWidget
+{
+  SignUpPhoneField({super.key});
+
+  final TextEditingController phoneNumberController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref)
+  {
+    final provider = AppProvidersProvider(ref, context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children:
+      [
+        Row(
+          children:
+          [
+            Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
+            const Spacer(),
+            GestureDetector(
+              onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.email),
+              child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
+                fontWeight: AppFontWeights.boldWeight,
+                textDecoration: TextDecoration.underline,
+              ),),
+            ),
+          ],
+        ),
+        AppSizes.size8.verticalSpace,
+        CustomTextFormField(
+          fieldKeyboardType: TextInputType.phone,
+          fieldValidator:
+              (value) => AppValidation.phoneNumberValidation(value, context),
+          fieldController: phoneNumberController,
+          fieldPrefixIcon: InkWell(
+            onTap: () => showCountriesPhoneNumberBottomSheet(context),
+            child: Image.asset(provider.countryFlag),
+          ),
+          fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
+        ),
+      ],
+    );
+  }
+}

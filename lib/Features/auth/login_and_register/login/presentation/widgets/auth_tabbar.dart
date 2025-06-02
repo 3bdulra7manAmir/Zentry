@@ -53,7 +53,7 @@ class AuthTabs extends ConsumerWidget
                 switch (provider.signUpType)
                 {
                   SignUpType.email => const SignUpFormEmail(),
-                  SignUpType.phone => SignUpFormPhoneNumber(),
+                  SignUpType.phone => const SignUpFormPhoneNumber(),
                   SignUpType.fullname => const SignUpFormFullName(),
                   SignUpType.invite => SignUpFormInvite(),
                 },

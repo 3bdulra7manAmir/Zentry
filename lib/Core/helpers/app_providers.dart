@@ -9,6 +9,7 @@ import '../../features/auth/app_settings/presentation/controllers/settings_contr
 import '../../features/auth/login_and_register/login/presentation/controllers/checkbox_controller.dart';
 import '../../features/auth/login_and_register/login/presentation/controllers/obsecure_text_controller.dart';
 import '../../features/auth/login_and_register/login/presentation/controllers/switcher_controller.dart';
+import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/invite_code_enabler.dart';
 import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
 import '../../features/auth/login_and_register/register/presentation/controllers/fullname_controllers/gender_provider.dart';
 import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
@@ -56,6 +57,7 @@ class AppProvidersProvider
 
   void get tabIndexLogin => ref.read(tabIndexProvider.notifier).setIndex(0);
   void get tabIndexRegister => ref.read(tabIndexProvider.notifier).setIndex(1);
+  void get invitationCodeField => ref.read(invitationCodeEnabler.notifier).state = true;
 
   void get signUpPhoneSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.phone);
   void get signUpFullNameSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.fullname);
@@ -76,6 +78,8 @@ class AppProvidersProvider
   int? get phoneNumberHolder => ref.watch(countryControllerProvider);
 
   SignUpType get signUpType => ref.watch(signUpTypeProvider);
+
+  bool get invitationCode => ref.watch(invitationCodeEnabler);
 
   String get otpProvider => ref.watch(otpInputProvider);
 
