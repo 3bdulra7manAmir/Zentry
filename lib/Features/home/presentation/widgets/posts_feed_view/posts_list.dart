@@ -16,7 +16,7 @@ class PostsList extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return provider.postsAsync.when(
+    return provider.homePosts.when(
       data: (posts) => AppListviewBuilder(
         itemBuilder: (context, index) => PostsCard(post: posts[index]),
         separatorBuilder: (context, index) => AppSizes.size20.verticalSpace,

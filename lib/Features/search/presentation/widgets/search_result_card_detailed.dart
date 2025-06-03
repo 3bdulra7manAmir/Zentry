@@ -34,7 +34,7 @@ class SearchResultCardDetailed extends StatelessWidget
           ),
           Expanded(
             child: Padding(
-              padding: AppPadding.all6,
+              padding: AppPadding.all.xSmallAll,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
@@ -111,7 +111,7 @@ class SearchResultCardDetailed extends StatelessWidget
                         mainAxisSize: MainAxisSize.min,
                         children:
                         [
-                          ...result.subimages.map((image) => Padding(padding: AppPadding.rightOnly3, child: Image.asset(image),)),
+                          ...result.subimages.map((image) => Padding(padding: AppPadding.single.xxSmallRight, child: Image.asset(image),)),
                         ],
                       ),
                     ),

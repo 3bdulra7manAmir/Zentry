@@ -22,7 +22,7 @@ class CompleteProfileCard extends StatelessWidget
         Container(
           width: 326.w,
           height: 168.h,
-          margin: AppMargins.horizontal16,
+          margin: AppMargins.symmetric.medium,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
             borderRadius: AppBordersRadiuses.circular12,

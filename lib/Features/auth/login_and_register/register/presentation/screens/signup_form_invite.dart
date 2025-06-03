@@ -29,7 +29,7 @@ class SignUpFormInvite extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     return Container(
-      padding: AppPadding.horizontal16,
+      padding: AppPadding.symmetric.largeHorizontal,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
@@ -57,9 +57,9 @@ class SignUpFormInvite extends ConsumerWidget
                 fieldController: phoneNumberController,
                 fieldPrefixIcon: InkWell(
                   onTap: () => showCountriesPhoneNumberBottomSheet(context),
-                  child: Image.asset(provider.countryFlag),
+                  child: Image.asset(provider.selectedCountryFlag),
                 ),
-                fieldText: provider.phoneNumberHolder == 0
+                fieldText: provider.selectedPhoneCountryCode == 0
                   ? AppLocalizations.of(context).egyptCountryCode
                   : AppLocalizations.of(context).saudiArabiaCountryCode,
               ),
@@ -70,11 +70,11 @@ class SignUpFormInvite extends ConsumerWidget
                 fieldKeyboardType: TextInputType.text,
                 fieldValidator: (value) => AppValidation.passwordValidation(value, context),
                 fieldController: passwordController,
-                fieldObscureText: provider.obscureText,
+                fieldObscureText: provider.isLoginPasswordObscured,
                 fieldText: AppLocalizations.of(context).password,
                 fieldsuffixIcon: GestureDetector(
-                  onTap: () => provider.obscureTextState,
-                  child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+                  onTap: () => provider.toggleLoginPassword,
+                  child: provider.isLoginPasswordObscured ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
                   : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
                 ),
               ),
@@ -89,7 +89,7 @@ class SignUpFormInvite extends ConsumerWidget
                 fieldKeyboardType: TextInputType.text,
                 fieldValidator: (value) => AppValidation.passwordValidation(value, context),
                 fieldController: passwordController,
-                fieldObscureText: provider.obscureText,
+                fieldObscureText: provider.isLoginPasswordObscured,
                 fieldText: AppLocalizations.of(context).exElSuisy,
               ),
               AppSizes.size32.verticalSpace,

@@ -29,7 +29,7 @@ class PostOpened extends ConsumerWidget
             [
               AppSizes.size11.verticalSpace,
               Padding(
-                padding: AppPadding.startOnly13,
+                padding: AppPadding.directional.mediumPlusStart,
                 child: GestureDetector(
                   onTap: () => AppRouter.router.pop(),
                   child: AppImages.appBarBackArrow(context, ref),
@@ -39,14 +39,14 @@ class PostOpened extends ConsumerWidget
               Container(
                 width: double.infinity,
                 height: 283.h,
-                margin: AppMargins.horizontal10,
+                margin: AppMargins.symmetric.xSmall,
                 decoration: BoxDecoration(
                   borderRadius: AppBordersRadiuses.circular7,
                   image: DecorationImage(image: AssetImage(carImage), fit: BoxFit.cover,),
                 ),
               ),
               AppSizes.size20.verticalSpace,
-              CommentCard(padding: AppPadding.horizontal10,),
+              CommentCard(padding: AppPadding.symmetric.smallHorizontal,),
               AppSizes.size18.verticalSpace,
               const PostCommentListBuilder(),
             ],

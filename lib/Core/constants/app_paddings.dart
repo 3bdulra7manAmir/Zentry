@@ -4,98 +4,121 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 abstract class AppPadding
 {
   AppPadding._();
+  static final all = PaddingsAll._();
+  static final symmetric = PaddingsSymmetric._();
+  static final directional = PaddingsDirectional._();
+  static final single = PaddingsSingle._();
+  static final special = PaddingsSpecial._();
+}
 
-  /// [All_Sides_Padding]
+/// [_all_]
+class PaddingsAll
+{
+  PaddingsAll._();
+
   /// 5px all sides
-  static EdgeInsets all5 = const EdgeInsets.all(5);
-  
+  final EdgeInsets xxSmallAll = const EdgeInsets.all(5); // xxSmallAll
+
   /// 6px all sides
-  static EdgeInsets all6 = const EdgeInsets.all(6.0);
-  
+  final EdgeInsets xSmallAll = const EdgeInsets.all(6.0); // xSmallAll
+
   /// 10px all sides
-  static EdgeInsets all10 = const EdgeInsets.all(10);
+  final EdgeInsets smallAll = const EdgeInsets.all(10); // smallAll
+}
 
-  /// [Horizontal_Symmetric_Padding]
+/// [_symmetric_]
+class PaddingsSymmetric
+{
+  PaddingsSymmetric._();
+
   /// 10px horizontal
-  static EdgeInsets horizontal10 = EdgeInsets.symmetric(horizontal: 10.w);
-  
+  final EdgeInsets smallHorizontal = EdgeInsets.symmetric(horizontal: 10.w);
+
   /// 15px horizontal
-  static EdgeInsets horizontal15 = EdgeInsets.symmetric(horizontal: 15.w);
-  
+  final EdgeInsets mediumHorizontal = EdgeInsets.symmetric(horizontal: 15.w);
+
   /// 16px horizontal
-  static EdgeInsets horizontal16 = EdgeInsets.symmetric(horizontal: 16.w);
+  final EdgeInsets largeHorizontal = EdgeInsets.symmetric(horizontal: 16.w);
+
   /// 18px horizontal
-  static EdgeInsets horizontal18 = EdgeInsets.symmetric(horizontal: 18.w);
-  
+  final EdgeInsets xLargeHorizontal = EdgeInsets.symmetric(horizontal: 18.w);
+
   /// 21px horizontal
-  static EdgeInsets horizontal21 = EdgeInsets.symmetric(horizontal: 21.w);
-  
+  final EdgeInsets xxLargeHorizontal = EdgeInsets.symmetric(horizontal: 21.w);
+
   /// 22px horizontal
-  static EdgeInsets horizontal22 = EdgeInsets.symmetric(horizontal: 22.w);
-  
+  final EdgeInsets xxxLargeHorizontal = EdgeInsets.symmetric(horizontal: 22.w);
+
   /// 38px horizontal
-  static EdgeInsets horizontal38 = EdgeInsets.symmetric(horizontal: 38.w);
+  final EdgeInsets hugeHorizontal = EdgeInsets.symmetric(horizontal: 38.w);
 
-  /// [Vertical_Symmetric_Padding]
   /// 12px vertical
-  static EdgeInsets vertical12 = EdgeInsets.symmetric(vertical: 12.w);
+  final EdgeInsets mediumVertical = EdgeInsets.symmetric(vertical: 12.w);
 
-  /// Horizontal & Vertical Symmetric Padding
-  
   /// 16px all symmetric
-  static EdgeInsets symmetric16 = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w);
+  final EdgeInsets mediumAllSymmetric = EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w);
+}
 
-  /// Directional Padding - End Only
-  
+/// [_directional_]
+class PaddingsDirectional
+{
+  PaddingsDirectional._();
+
   /// 15px end only
-  static EdgeInsetsDirectional endOnly15 = EdgeInsetsDirectional.only(end: 15.w);
-  
+  final EdgeInsetsDirectional mediumEnd = EdgeInsetsDirectional.only(end: 15.w);
+
   /// 20px end only
-  static EdgeInsetsDirectional endOnly20 = EdgeInsetsDirectional.only(end: 20.w);
+  final EdgeInsetsDirectional largeEnd = EdgeInsetsDirectional.only(end: 20.w);
 
-  /// Directional Padding - Start Only
-  
   /// 12px start only
-  static EdgeInsetsDirectional startOnly12 = EdgeInsetsDirectional.only(start: 12.w);
-  
-  /// 13px start only
-  static EdgeInsetsDirectional startOnly13 = EdgeInsetsDirectional.only(start: 13.w);
+  final EdgeInsetsDirectional mediumStart = EdgeInsetsDirectional.only(start: 12.w);
 
-  /// [Directional_Padding_Complex]
+  /// 13px start only
+  final EdgeInsetsDirectional mediumPlusStart = EdgeInsetsDirectional.only(start: 13.w);
+
   /// Form header padding
-  static EdgeInsetsDirectional formHeader = EdgeInsetsDirectional.only(
+  final EdgeInsetsDirectional formHeader = EdgeInsetsDirectional.only(
     start: 28.w,
     end: 17.w,
     top: 20.h,
     bottom: 0,
-  );
+  ); // formHeader
 
   /// Next button padding
-  static EdgeInsetsDirectional nextButton = EdgeInsetsDirectional.only(
+  final EdgeInsetsDirectional nextButton = EdgeInsetsDirectional.only(
     start: 16.w,
     end: 16.w,
     top: 11.h,
     bottom: 20.h,
-  );
+  ); // nextButton
 
   /// Post options padding
-  static EdgeInsetsDirectional postOptions = EdgeInsetsDirectional.only(
+  final EdgeInsetsDirectional postOptions = EdgeInsetsDirectional.only(
     start: 25.w,
     end: 36.w,
-  );
+  ); // postOptions
+}
 
-  /// [Single_Side_Padding]
+/// [_single_]
+class PaddingsSingle
+{
+  PaddingsSingle._();
+
   /// 30px left only
-  static EdgeInsets leftOnly30 = EdgeInsets.only(left: 30.0.w);
-  
-  /// 3px right only
-  static EdgeInsets rightOnly3 = EdgeInsets.only(right: 3.w);
-  
-  /// 20px top only
-  static EdgeInsets topOnly20 = EdgeInsets.only(top: 20.h);
+  final EdgeInsets largeLeft = EdgeInsets.only(left: 30.0.w);
 
-  /// Special Cases
-  
+  /// 3px right only
+  final EdgeInsets xxSmallRight = EdgeInsets.only(right: 3.w);
+
+  /// 20px top only
+  final EdgeInsets largeTop = EdgeInsets.only(top: 20.h);
+}
+
+/// [_special_]
+class PaddingsSpecial
+{
+  PaddingsSpecial._();
+
   /// Zero padding
-  static EdgeInsets zero = EdgeInsets.zero;
+  final EdgeInsets zero = EdgeInsets.zero;
 }

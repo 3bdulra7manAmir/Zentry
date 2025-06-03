@@ -29,7 +29,7 @@ class NotificationsSearchScreen extends StatelessWidget
               builder: (context, ref, _)
               {
                 final provider = AppProvidersProvider(ref, context);
-                return provider.notificationsAsyncValue.when(
+                return provider.allNotifications.when(
                   data: (notifications) => AppListviewBuilder(
                     itemBuilder: (context, index) => DefaultNotificationCard(notification: notifications[index],),
                     itemCount: notifications.length,

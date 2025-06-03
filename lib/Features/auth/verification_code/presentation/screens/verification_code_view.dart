@@ -58,7 +58,7 @@ class VerificationScreen extends ConsumerWidget
             const VerificationCodeTitle(),
             AppSizes.size51.verticalSpace,
             Padding(
-              padding: AppMargins.horizontal16,
+              padding: AppMargins.symmetric.medium,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:

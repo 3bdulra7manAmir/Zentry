@@ -17,7 +17,7 @@ class PostCardShimmer extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppMargins.horizontal16,
+      margin: AppMargins.symmetric.medium,
       width: 360.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

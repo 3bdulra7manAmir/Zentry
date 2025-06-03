@@ -17,8 +17,8 @@ class CountryField extends ConsumerWidget
     return GestureDetector(
       onTap: () => showCountriesBottomSheet(context),
       child: CustomContainer(
-        fieldPrefixIcon: Image.asset(provider.countryFlag),
-        fieldText: provider.countryLabel,
+        fieldPrefixIcon: Image.asset(provider.selectedCountryFlag),
+        fieldText: provider.selectedCountryLabel,
         fieldsuffixIcon: AppImages.arrowImage(context, ref),
       ),
     );

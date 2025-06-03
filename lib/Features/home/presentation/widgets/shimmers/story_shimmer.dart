@@ -15,7 +15,7 @@ class UsersStoryShimmer extends StatelessWidget
   {
     return Container(
       height: 148.h, width: 112.w,
-      padding: AppPadding.startOnly12,
+      padding: AppPadding.directional.mediumStart,
       decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular5, color: AppColors.color.kGrey001),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

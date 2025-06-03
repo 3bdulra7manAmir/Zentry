@@ -28,7 +28,7 @@ class MoneyFromInterestsListView extends ConsumerWidget
       [
         FollowBusinessCardHeader(headerText: AppLocalizations.of(context).moenyFromInterests),
         Expanded(
-          child: provider.categoriesAsyncValue.when(
+          child: provider.allInterestCategories.when(
             data: (categories) => AppListviewBuilder(
               itemBuilder: (context, index) => MoenyFromInterestsCard(category: categories[index],),
               itemCount: categories.length,
@@ -43,11 +43,11 @@ class MoneyFromInterestsListView extends ConsumerWidget
         Container(
           width: double.infinity,
           height: 79.h,
-          padding: AppPadding.nextButton,
+          padding: AppPadding.directional.nextButton,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
           ),
-          child: provider.selectedCategoriesAsync.when(
+          child: provider.selectedInterestCategories.when(
             data: (selectedCategories) => CustomButton(
               buttonText: AppLocalizations.of(context).next,
               buttonOnPressed: selectedCategories.isNotEmpty ? () => onNextPressed(context, selectedCategories) : null,

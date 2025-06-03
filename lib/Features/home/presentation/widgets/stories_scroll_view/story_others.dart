@@ -19,7 +19,7 @@ class UsersStory extends StatelessWidget
     return Container(
       height: 148.h,
       width: 112.w,
-      padding: AppPadding.startOnly12,
+      padding: AppPadding.directional.mediumStart,
       decoration: BoxDecoration(
         borderRadius: AppBordersRadiuses.circular5,
         image: DecorationImage(image: AssetImage(story.backgroundImage), fit: BoxFit.cover,),

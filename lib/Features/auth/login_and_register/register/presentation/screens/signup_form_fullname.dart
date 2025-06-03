@@ -18,7 +18,7 @@ class SignUpFormFullName extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     return Container(
-      padding: AppPadding.horizontal16,
+      padding: AppPadding.symmetric.largeHorizontal,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(

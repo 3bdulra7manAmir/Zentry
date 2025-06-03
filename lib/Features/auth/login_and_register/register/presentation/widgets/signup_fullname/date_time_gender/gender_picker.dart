@@ -27,7 +27,7 @@ void showGenderPickerBottomSheet(BuildContext context)
         {
           final provider = AppProvidersProvider(ref, context);
           return Padding(
-            padding: AppPadding.symmetric16,
+            padding: AppPadding.symmetric.mediumAllSymmetric,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children:

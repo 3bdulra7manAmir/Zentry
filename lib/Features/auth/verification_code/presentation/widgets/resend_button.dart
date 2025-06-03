@@ -16,10 +16,10 @@ class ResendButton extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isEnabled = provider.secondsLeft == 0;
+    final isEnabled = provider.resendOtpCountdown == 0;
     return CustomButton(
       buttonOnPressed: isEnabled ? () => ref.read(resendCountdownProvider(context).notifier).reset() : null,
-      buttonText: isEnabled ? AppLocalizations.of(context).resend : AppLocalizations.of(context).resendIn60s(provider.secondsLeft),
+      buttonText: isEnabled ? AppLocalizations.of(context).resend : AppLocalizations.of(context).resendIn60s(provider.resendOtpCountdown),
       buttonTextStyle: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight,
         fontColor: isEnabled ? AppColors.color.kWhite003 : AppColors.color.kWhite003.withOpacity(0.5),),
     );

@@ -17,9 +17,9 @@ class ProductsItemList extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return provider.productsAsyncValue.when(
+    return provider.homeProducts.when(
       loading: () => AppListviewBuilder(
-      padding: AppPadding.startOnly12,
+      padding: AppPadding.directional.mediumStart,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) => const ProductsItemShimmer(),
       separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,
@@ -27,7 +27,7 @@ class ProductsItemList extends ConsumerWidget
     ),
       error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
       data: (products) => AppListviewBuilder(
-        padding: AppPadding.startOnly12,
+        padding: AppPadding.directional.mediumStart,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => ProductsItem(product: products[index],),
         separatorBuilder: (context, index) => AppSizes.size16.horizontalSpace,

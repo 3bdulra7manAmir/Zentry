@@ -25,7 +25,7 @@ class StoryOpened extends StatelessWidget
             [
               AppSizes.size11.verticalSpace,
               Padding(
-                padding: AppPadding.startOnly13,
+                padding: AppPadding.directional.mediumPlusStart,
                 child: GestureDetector(
                   onTap: () => AppRouter.router.pop(),
                   child: Image.asset(AppAssets.iconsPNG.postDetailBackArrow),
@@ -35,7 +35,7 @@ class StoryOpened extends StatelessWidget
               Container(
                 width: double.infinity,
                 height: 283.h,
-                margin: AppMargins.horizontal10,
+                margin: AppMargins.symmetric.xSmall,
                 decoration: BoxDecoration(
                   borderRadius: AppBordersRadiuses.circular7,
                   image: DecorationImage(

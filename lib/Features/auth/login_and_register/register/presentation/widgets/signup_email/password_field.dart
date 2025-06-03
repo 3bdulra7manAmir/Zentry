@@ -30,11 +30,11 @@ class SignUpPasswordField extends ConsumerWidget
           fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: passwordController,
-          fieldObscureText: provider.obscureText,
+          fieldObscureText: provider.isLoginPasswordObscured,
           fieldText: "**************",
           fieldsuffixIcon: GestureDetector(
-            onTap: () => provider.obscureTextState,
-            child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+            onTap: () => provider.toggleLoginPassword,
+            child: provider.isLoginPasswordObscured ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
             : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
           ),
         ),

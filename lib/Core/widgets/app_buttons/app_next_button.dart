@@ -17,7 +17,7 @@ class AppNextButton extends StatelessWidget
     return Container(
       width: double.infinity,
       height: 79.h,
-      padding: AppPadding.nextButton,
+      padding: AppPadding.directional.nextButton,
       decoration: BoxDecoration(color: AppColors.color.kGrey002,),
       child: CustomButton(
         buttonOnPressed: onPressed,

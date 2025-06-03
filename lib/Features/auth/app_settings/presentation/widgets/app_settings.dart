@@ -23,7 +23,7 @@ class AppSettings extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      padding: AppPadding.horizontal16,
+      padding: AppPadding.symmetric.largeHorizontal,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: AppBordersRadiuses.topOnly20,

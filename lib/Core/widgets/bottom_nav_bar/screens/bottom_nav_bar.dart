@@ -46,7 +46,7 @@ class MyHomePageState extends ConsumerState<MyHomePage> with TickerProviderState
     final provider = AppProvidersProvider(ref, context);
     return Scaffold(
       extendBody: true,
-      body: Center(child: Text('Page ${provider.bottomNavIndex}')),
+      body: Center(child: Text('Page ${provider.currentBottomNavIndex}')),
       floatingActionButton: GestureDetector(
         onTap: () {},
         child: Image.asset(AppAssets.iconsPNG.navMiddle, fit: BoxFit.contain,),
@@ -74,7 +74,7 @@ class MyHomePageState extends ConsumerState<MyHomePage> with TickerProviderState
           );
         },
         backgroundColor: AppColors.color.kWhite001,
-        activeIndex: provider.bottomNavIndex,
+        activeIndex: provider.currentBottomNavIndex,
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.defaultEdge,
         leftCornerRadius: 21.r,

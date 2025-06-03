@@ -33,8 +33,8 @@ class LoginPhoneField extends ConsumerWidget
             GestureDetector(
               onTap: ()
               {
-                provider.currentLoginMethod;
-                provider.currentLoginMethodNotifier;
+                provider.currentLoginToggleValue;
+                provider.toggleLoginMethod;
               },
               child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                   fontWeight: AppFontWeights.boldWeight,
@@ -51,9 +51,9 @@ class LoginPhoneField extends ConsumerWidget
           fieldController: phoneNumberController,
           fieldPrefixIcon: InkWell(
             onTap: () => showCountriesPhoneNumberBottomSheet(context),
-            child: Image.asset(provider.countryFlag),
+            child: Image.asset(provider.selectedCountryFlag),
           ),
-          fieldText: provider.phoneNumberHolder == 0
+          fieldText: provider.selectedPhoneCountryCode == 0
             ? AppLocalizations.of(context).egyptCountryCode
             : AppLocalizations.of(context).saudiArabiaCountryCode,
         ),

@@ -32,7 +32,7 @@ class SignUpPhoneField extends ConsumerWidget
             Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
             const Spacer(),
             GestureDetector(
-              onTap: () => provider.emailSignUp,
+              onTap: () => provider.selectEmailSignUp,
               child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                 fontWeight: AppFontWeights.boldWeight,
                 textDecoration: TextDecoration.underline,
@@ -48,9 +48,9 @@ class SignUpPhoneField extends ConsumerWidget
           fieldController: phoneNumberController,
           fieldPrefixIcon: InkWell(
             onTap: () => showCountriesPhoneNumberBottomSheet(context),
-            child: Image.asset(provider.countryFlag),
+            child: Image.asset(provider.selectedCountryFlag),
           ),
-          fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
+          fieldText: provider.selectedPhoneCountryCode == 0 ? AppLocalizations.of(context).egyptCountryCode : AppLocalizations.of(context).saudiArabiaCountryCode,
         ),
       ],
     );

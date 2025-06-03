@@ -17,8 +17,8 @@ class LanguageField extends ConsumerWidget
     return GestureDetector(
       onTap: () => showLanguageBottomSheet(context),
       child: CustomContainer(
-        fieldPrefixIcon: Image.asset(provider.languageFlag),
-        fieldText: provider.languageLabel,
+        fieldPrefixIcon: Image.asset(provider.currentLanguageFlag),
+        fieldText: provider.currentLanguageLabel,
         fieldsuffixIcon: AppImages.arrowImage(context, ref),
       ),
     );

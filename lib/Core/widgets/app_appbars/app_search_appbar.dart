@@ -39,7 +39,7 @@ class CustomSearchAppBar extends StatelessWidget implements PreferredSizeWidget
         ),
       ),
       barActions: [AppSizes.size20.horizontalSpace, locationIcon ? ( actionsWidget ?? Image.asset(AppAssets.iconsPNG.notificationLocationHighlighted) ) : const SizedBox.shrink(),],
-      barActionsPadding: AppPadding.endOnly20,
+      barActionsPadding: AppPadding.directional.largeEnd,
     );
   }
   @override

@@ -35,7 +35,7 @@ class SignUpFullNameField extends ConsumerWidget
                 Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
                 AppSizes.size3.horizontalSpace,
                 GestureDetector(
-                  onTap: () => provider.signUpPhoneSwitcher,
+                  onTap: () => provider.selectPhoneSignUp,
                   child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,
                     textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kGrey001,),),
                 ),

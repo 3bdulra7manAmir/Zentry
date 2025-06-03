@@ -40,18 +40,18 @@ class ForgetPasswordScreen extends ConsumerWidget
             children:
             [
               AppSizes.size46.verticalSpace,
-              provider.isPhoneNumber ? const ForgetPasswordPhoneTitle() : const ForgetPasswordEmailTitle(),
+              provider.isForgetPasswordPhone ? const ForgetPasswordPhoneTitle() : const ForgetPasswordEmailTitle(),
               AppSizes.size48.verticalSpace,
               Container(
                 alignment: Alignment.center,
-                margin: AppMargins.horizontal16,
+                margin: AppMargins.symmetric.medium,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:
                   [
-                    provider.isPhoneNumber ? ForgetPasswordPhoneNumber() : ForgetPasswordEmail(),
+                    provider.isForgetPasswordPhone ? ForgetPasswordPhoneNumber() : ForgetPasswordEmail(),
                     AppSizes.size27.verticalSpace,
-                    provider.isPhoneNumber ? ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHavePhone,)
+                    provider.isForgetPasswordPhone ? ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHavePhone,)
                     : ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHaveEmail,),
                     AppSizes.size24.verticalSpace,
                     CustomButton(

@@ -26,15 +26,15 @@ void showDateTimeBottomSheet(BuildContext context)
       builder: (context, ref, _)
       { //HERE //FIX //Temp
         final provider = AppProvidersProvider(ref, context);
-        final state = ref.watch(datePickerStateProvider(provider.currentDate));
-        final notifier = ref.read(datePickerStateProvider(provider.currentDate).notifier);
+        final state = ref.watch(datePickerStateProvider(provider.currentBirthDate));
+        final notifier = ref.read(datePickerStateProvider(provider.currentBirthDate).notifier);
         final years = List.generate(100, (i) => DateTime.now().year - i);
         final months = List.generate(12, (i) => i + 1);
         final days = List.generate(DateTime(state.year, state.month + 1, 0).day,
         (i) => i + 1,
         );
         return Padding(
-          padding: AppPadding.symmetric16,
+          padding: AppPadding.symmetric.mediumAllSymmetric,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children:

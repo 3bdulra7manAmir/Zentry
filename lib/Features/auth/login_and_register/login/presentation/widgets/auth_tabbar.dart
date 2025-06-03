@@ -22,7 +22,7 @@ class AuthTabs extends ConsumerWidget
     final provider = AppProvidersProvider(ref, context);
     
     return DefaultTabController(
-      initialIndex: provider.selectedTabIndex,
+      initialIndex: provider.activeAuthTabIndex,
       length: 2,
       child: Column(
         children:
@@ -35,7 +35,7 @@ class AuthTabs extends ConsumerWidget
             ),
             child: TabBar(
               
-              padding: AppPadding.symmetric16,
+              padding: AppPadding.symmetric.mediumAllSymmetric,
               indicatorWeight: AppSizes.size4,
               tabs:
               [
@@ -49,7 +49,7 @@ class AuthTabs extends ConsumerWidget
               children:
               [
                 LoginScreen(),
-                switch (provider.signUpType)
+                switch (provider.currentSignUpType)
                 {
                   SignUpType.email => SignUpFormEmail(),
                   SignUpType.phone => SignUpFormPhoneNumber(),

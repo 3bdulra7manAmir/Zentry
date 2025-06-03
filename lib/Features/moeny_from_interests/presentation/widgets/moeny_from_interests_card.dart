@@ -25,7 +25,7 @@ class MoenyFromInterestsCard extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return provider.selectedCategories.when(
+    return provider.selectedInterestCategories.when(
       data: (selected)
       {
         final isSelected = selected.any((cat) => cat.id == category.id);

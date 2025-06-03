@@ -15,7 +15,7 @@ class PostCommentCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppMargins.horizontal16,
+      margin: AppMargins.symmetric.medium,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children:

@@ -44,7 +44,7 @@ class VerificationCodeField extends ConsumerWidget
                     borderRadius: AppBordersRadiuses.circular10,
                   ),
                   child: Text(
-                    index < provider.otpProvider.length ? provider.otpProvider[index] : '',
+                    index < provider.otpCode.length ? provider.otpCode[index] : '',
                     style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001,),
                   ),
                 );

@@ -18,7 +18,7 @@ class StoryCreate extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppMargins.startOnly12,
+      margin: AppMargins.directional.small,
       height: 148.h,
       width: 112.w,
       decoration:  BoxDecoration(
@@ -35,7 +35,7 @@ class StoryCreate extends StatelessWidget
             buttonWidth: 88.w,
             buttonHeight: 27.h,
             buttonBackgroundColor: AppColors.color.kGrey007,
-            buttonPadding: AppPadding.horizontal15,
+            buttonPadding: AppPadding.symmetric.mediumHorizontal,
             buttonTextStyle: AppStyles.textStyle10(fontColor: AppColors.color.kWhite001, fontWeight: AppFontWeights.boldWeight),),
         ],
       ),

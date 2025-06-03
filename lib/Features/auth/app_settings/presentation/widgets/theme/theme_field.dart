@@ -22,7 +22,7 @@ class ThemeField extends ConsumerWidget
             ? AppAssets.iconsPNG.formDarkMode
             : AppAssets.iconsPNG.formLightMode,
         ),
-        fieldText: provider.themeLabel,
+        fieldText: provider.currentThemeLabel,
         fieldsuffixIcon: AppImages.arrowImage(context, ref),
       ),
     );

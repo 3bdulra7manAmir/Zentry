@@ -32,7 +32,7 @@ class ConfirmPasswordField extends ConsumerWidget
         ),
         AppSizes.size9.verticalSpace,
         CustomTextFormField(
-          fieldObscureText: provider.obscureText2,
+          fieldObscureText: provider.isRegisterPasswordObscured,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: confirmPasswordController,
           fieldKeyboardType: TextInputType.text,
@@ -46,7 +46,7 @@ class ConfirmPasswordField extends ConsumerWidget
             {
               ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
             },
-            child: provider.obscureText2 ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+            child: provider.isRegisterPasswordObscured ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
             : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
           ),
         ),

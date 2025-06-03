@@ -34,11 +34,11 @@ class LoginPasswordField extends ConsumerWidget
           fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: passwordController,
-          fieldObscureText: provider.obscureText,
+          fieldObscureText: provider.isLoginPasswordObscured,
           fieldText: AppLocalizations.of(context).password,
           fieldsuffixIcon: GestureDetector(
-            onTap: () => provider.obscureTextState,
-            child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+            onTap: () => provider.toggleLoginPassword,
+            child: provider.isLoginPasswordObscured ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
             : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
           ),
         ),
@@ -48,7 +48,7 @@ class LoginPasswordField extends ConsumerWidget
           [
             Checkbox(
               activeColor: AppColors.color.kBlue003,
-              value: provider.isChecked,
+              value: provider.isRememberMeChecked,
               onChanged: (value)
               {
                 if (value != null)

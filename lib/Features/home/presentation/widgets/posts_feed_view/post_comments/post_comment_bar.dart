@@ -23,7 +23,7 @@ class CommentCard extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     return Padding(
-      padding: padding ?? AppPadding.zero,
+      padding: padding ?? AppPadding.special.zero,
       child: Row(
         children:
         [

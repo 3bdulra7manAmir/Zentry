@@ -39,7 +39,7 @@ class RestPasswordScreen extends ConsumerWidget
               const ResetPasswordImage(),
               AppSizes.size24.verticalSpace,
               Padding(
-                padding: AppMargins.horizontal16,
+                padding: AppMargins.symmetric.medium,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:

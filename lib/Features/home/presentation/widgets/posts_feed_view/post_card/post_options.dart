@@ -20,7 +20,7 @@ void showPostOptionsBottomSheet(BuildContext context)
     builder: (BuildContext context)
     {
       return Padding(
-        padding: AppPadding.postOptions,
+        padding: AppPadding.directional.postOptions,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,

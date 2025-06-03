@@ -29,7 +29,7 @@ class NotificationsScreen extends ConsumerWidget
           fontWeight: AppFontWeights.regularWeight,),
         ),
         barActions: [Image.asset(AppAssets.iconsPNG.notificationSearchDark)],
-        barActionsPadding: AppPadding.endOnly20,
+        barActionsPadding: AppPadding.directional.largeEnd,
       ),
       backgroundColor: Theme.of(context).cardColor,
       body: SingleChildScrollView(
@@ -41,7 +41,7 @@ class NotificationsScreen extends ConsumerWidget
               builder: (context, ref, _)
               {
                 final provider = AppProvidersProvider(ref, context);
-                return provider.notificationsAsyncValue.when(
+                return provider.allNotifications.when(
                   data: (notifications) => AppListviewBuilder(
                     itemBuilder: (context, index) => DefaultNotificationCard(notification: notifications[index],),
                     itemCount: notifications.length,

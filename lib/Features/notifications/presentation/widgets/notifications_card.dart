@@ -27,10 +27,10 @@ class DefaultNotificationCard extends StatelessWidget
       elevation: 1.0,
       shadowColor: Colors.black.withOpacity(0.6),
       shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular6,),
-      margin: AppMargins.horizontal16,
+      margin: AppMargins.symmetric.medium,
 
       child: Padding(
-        padding: AppPadding.all5,
+        padding: AppPadding.all.xxSmallAll,
         child: Column(
           children:
           [

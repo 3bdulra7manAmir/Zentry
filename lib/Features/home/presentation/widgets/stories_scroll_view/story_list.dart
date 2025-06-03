@@ -19,9 +19,9 @@ class StroyListBuilder extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return provider.storiesAsyncValue.when(
+    return provider.homeStories.when(
       data: (stories) => AppListviewBuilder(
-        padding: AppMargins.horizontal9,
+        padding: AppMargins.symmetric.xxSmall,
         scrollDirection: Axis.horizontal,
         itemCount: stories.length,
         itemBuilder: (context, index) => GestureDetector(

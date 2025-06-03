@@ -21,7 +21,7 @@ class LoginButton extends ConsumerWidget
       buttonTextStyle: AppStyles.textStyle14(fontColor: AppColors.color.kWhite003,),
       buttonOnPressed: ()
       {
-        provider.tabIndexLogin;
+        provider.switchToLoginTab;
         AppRouter.router.pushNamed(AppRoutes.kAuthTabs, queryParameters: {'tab': '0'});
       },
     );

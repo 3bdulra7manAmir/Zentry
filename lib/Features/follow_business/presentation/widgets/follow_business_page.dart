@@ -26,7 +26,7 @@ class FollowBusinessPage extends ConsumerWidget
       [
         FollowBusinessCardHeader(headerText: AppLocalizations.of(context).followBusinessPage),
         Expanded(
-          child: provider.businessesAsyncValue.when(
+          child: provider.followedBusinesses.when(
             data: (businesses) => AppListviewBuilder(
               itemBuilder: (context, index) => FollowBusinessCard(business: businesses[index],),
               separatorBuilder: (context, index) => AppSizes.size16.verticalSpace,

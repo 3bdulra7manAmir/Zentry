@@ -19,7 +19,7 @@ void showActionsBottomSheet(BuildContext context)
     builder: (BuildContext context)
     {
       return Padding(
-        padding: AppPadding.horizontal22,
+        padding: AppPadding.symmetric.xxxLargeHorizontal,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,

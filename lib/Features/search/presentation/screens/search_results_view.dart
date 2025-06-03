@@ -25,7 +25,7 @@ class SearchResultsScreen extends ConsumerWidget
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true),
       body: Padding(
-        padding: AppPadding.horizontal16,
+        padding: AppPadding.symmetric.largeHorizontal,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -54,7 +54,7 @@ class SearchResultsScreen extends ConsumerWidget
             ),
             AppSizes.size14.verticalSpace,
             Expanded(
-              child: provider.searchResults.when(
+              child: provider.searchResultsList.when(
                 data: (results)
                 {
                   if (results.isEmpty)

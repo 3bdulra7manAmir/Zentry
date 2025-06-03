@@ -16,7 +16,7 @@ class JoinGroupsScreen extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return provider.joinGroupsAsyncValue.when(
+    return provider.joinGroupItems.when(
       data: (groups) => AppGridbuilder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -24,7 +24,7 @@ class JoinGroupsScreen extends ConsumerWidget
         crossAxisSpacing: 12.0,
         childAspectRatio: 1.4,
       ),
-        padding: AppPadding.topOnly20,
+        padding: AppPadding.single.largeTop,
         itemCount: groups.length,
         itemBuilder: (context, index) => JoinGroupsCard(group: groups[index]),
       ),

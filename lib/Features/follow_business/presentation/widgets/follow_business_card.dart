@@ -18,7 +18,7 @@ class FollowBusinessCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Padding(
-      padding: AppPadding.horizontal21,
+      padding: AppPadding.symmetric.xxLargeHorizontal,
       child: Row(
         children:
         [

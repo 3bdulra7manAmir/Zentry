@@ -25,7 +25,7 @@ class SignUpInvitationField extends ConsumerWidget
       children:
       [
         InkWell(
-          onTap: () => provider.invitationCodeField,
+          onTap: () => provider.enableInvitationCodeField,
           child: Text(AppLocalizations.of(context).invitationCode, style: AppStyles.textStyle13(
               fontWeight: AppFontWeights.mediumWeight, fontColor: AppColors.color.kBlue003,
               textDecoration: TextDecoration.underline,
@@ -33,14 +33,14 @@ class SignUpInvitationField extends ConsumerWidget
             ),
           ),
         ),
-        if (provider.invitationCode)...
+        if (provider.isInvitationCodeEnabled)...
         [
           AppSizes.size8.verticalSpace,
           CustomTextFormField(
             fieldKeyboardType: TextInputType.text,
             fieldValidator: (value) => AppValidation.invitationCodeValidation(value, context),
             fieldController: invitationController,
-            fieldObscureText: provider.obscureText,
+            fieldObscureText: provider.isLoginPasswordObscured,
             fieldText: AppLocalizations.of(context).invitationCodeExample,
           ),
         ],

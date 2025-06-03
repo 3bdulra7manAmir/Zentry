@@ -20,7 +20,7 @@ class AppGridbuilder extends StatelessWidget
       itemCount: itemCount,
       shrinkWrap: true,
       physics: physics ?? const ScrollPhysics(),
-      padding: padding ?? AppPadding.zero,
+      padding: padding ?? AppPadding.special.zero,
       gridDelegate: gridDelegate,
     );
   }

@@ -25,7 +25,7 @@ class MoenyFromInviteCard extends StatelessWidget
       children:
       [
         Container(
-          margin: AppMargins.horizontal16,
+          margin: AppMargins.symmetric.medium,
           width: 326.w,
           height: 187.h,
           decoration: BoxDecoration(
@@ -36,7 +36,7 @@ class MoenyFromInviteCard extends StatelessWidget
         ),
         AppSizes.size24.verticalSpace,
         Padding(
-          padding: AppPadding.horizontal18,
+          padding: AppPadding.symmetric.xLargeHorizontal,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -78,7 +78,7 @@ class PastePadding extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Padding(
-      padding: AppPadding.endOnly15,
+      padding: AppPadding.directional.mediumEnd,
       child: SizedBox(
         width: 60.w,
         child: Align(

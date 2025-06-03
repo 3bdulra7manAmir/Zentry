@@ -23,7 +23,7 @@ class RegisterButton extends ConsumerWidget
       buttonBorderColor: AppColors.color.kBlue008,
       buttonOnPressed: ()
       {
-        provider.tabIndexRegister;
+        provider.switchToRegisterTab;
         AppRouter.router.pushNamed(AppRoutes.kAuthTabs, queryParameters: {'tab': '1'});
       },
     );

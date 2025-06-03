@@ -34,9 +34,9 @@ class ForgetPasswordPhoneNumber extends ConsumerWidget
             fieldKeyboardType: TextInputType.number,
             fieldPrefixIcon: InkWell(
               onTap: () => showCountriesPhoneNumberBottomSheet(context),
-              child: Image.asset(provider.countryFlag),
+              child: Image.asset(provider.selectedCountryFlag),
             ),
-            fieldText: provider.phoneNumberHolder == 0 ? AppLocalizations.of(context).egyptCountryCode
+            fieldText: provider.selectedPhoneCountryCode == 0 ? AppLocalizations.of(context).egyptCountryCode
             : AppLocalizations.of(context,).saudiArabiaCountryCode,
           ),
       ],

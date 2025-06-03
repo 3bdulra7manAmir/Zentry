@@ -25,7 +25,7 @@ class SearchScreen extends ConsumerWidget
     return Scaffold(
       appBar: const CustomSearchAppBar(locationIcon: true), //HERE For NOW
       body: Padding(
-        padding: AppPadding.horizontal16,
+        padding: AppPadding.symmetric.largeHorizontal,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,27 +54,27 @@ class SearchScreen extends ConsumerWidget
               AppSizes.size3.verticalSpace,
               Text(AppLocalizations.of(context).relatedResults, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
               AppSizes.size16.verticalSpace,
-              provider.searchResultsCategory.when(
+              provider.searchCategories.when(
                 data: (categories)
                 {
-                  if (provider.localResults.isEmpty && categories.isNotEmpty)
+                  if (provider.localSearchSuggestions.isEmpty && categories.isNotEmpty)
                   {
                     WidgetsBinding.instance.addPostFrameCallback((_)
                     {
                       ref.read(localSearchResultsProvider.notifier).initialize(categories);
                     });
                   }
-                  if (provider.localResults.isEmpty)
+                  if (provider.localSearchSuggestions.isEmpty)
                   {
                     return Center(child: Text(AppLocalizations.of(context).search,
                         style: AppStyles.textStyle14(fontColor: AppColors.color.kGreyText002, fontWeight: AppFontWeights.regularWeight,),),
                     );
                   }
                   return AppListviewBuilder(
-                    itemCount: provider.localResults.length,
+                    itemCount: provider.localSearchSuggestions.length,
                     separatorBuilder: (context, index) => AppSizes.size12.verticalSpace,
                     itemBuilder: (context, index) {
-                      final category = provider.localResults[index];
+                      final category = provider.localSearchSuggestions[index];
                       return SearchRelatedResultCard(
                         category: category,
                         onRemove: ()

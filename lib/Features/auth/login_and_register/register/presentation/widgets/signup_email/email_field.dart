@@ -35,7 +35,7 @@ class SignUpEmailField extends ConsumerWidget
               children:
               [
                 GestureDetector(
-                  onTap: () => provider.signUpPhoneSwitcher,
+                  onTap: () => provider.selectPhoneSignUp,
                   child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
                     textDecoration: TextDecoration.underline,),
@@ -45,7 +45,7 @@ class SignUpEmailField extends ConsumerWidget
                 Text(AppLocalizations.of(context).or, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
                 AppSizes.size3.horizontalSpace,
                 GestureDetector(
-                  onTap: () => provider.signUpFullNameSwitcher,
+                  onTap: () => provider.selectFullNameSignUp,
                   child: Text(AppLocalizations.of(context).fullName, style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
                     textDecoration: TextDecoration.underline,),

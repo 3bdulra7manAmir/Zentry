@@ -21,7 +21,7 @@ void showJoinGroupsBottomSheet(BuildContext context)
           FollowBusinessCardHeader(headerText: AppLocalizations.of(context).joinGroups,),
           Expanded(
             child: Padding(
-              padding: AppPadding.leftOnly30,
+              padding: AppPadding.single.largeLeft,
               child: const JoinGroupsScreen(),
             ),
           ),

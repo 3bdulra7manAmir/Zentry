@@ -15,7 +15,7 @@ class PostCommentListBuilder extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context); 
-    final allComments = [...provider.tempComments, ...commentsList];
+    final allComments = [...provider.tempPostComments, ...commentsList];
     return AppListviewBuilder(
       itemBuilder: (context, index) => PostCommentCard(commentText: allComments[index]),
       separatorBuilder: (context, index) => AppSizes.size5.verticalSpace,

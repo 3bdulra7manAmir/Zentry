@@ -4,19 +4,34 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 abstract class AppMargins
 {
   AppMargins._();
+  static final symmetric = MarginsSymmetric._();
+  static final directional = MarginsDirectional._();
 
-  /// Horizontal Margins - 9px
-  static EdgeInsets horizontal9 = EdgeInsets.symmetric(horizontal: 9.w); /// horizontal9
+}
 
-  /// Horizontal Margins - 10px
-  static EdgeInsets horizontal10 = EdgeInsets.symmetric(horizontal: 10.w); /// horizontal10
 
-  /// Horizontal Margins - 16px  
-  static EdgeInsets horizontal16 = EdgeInsets.symmetric(horizontal: 16.w); /// horizontal16
+class MarginsSymmetric
+{
+  MarginsSymmetric._();
 
-  /// Horizontal Margins - 18px
-  static EdgeInsets horizontal18 = EdgeInsets.symmetric(horizontal: 18.w); /// horizontal18
+  /// [_horizontal_9.w] Extra Extra Small Margin (9px)
+  final EdgeInsets xxSmall = EdgeInsets.symmetric(horizontal: 9.w);
 
-  /// Directional Margins - Start 12px
-  static EdgeInsetsDirectional startOnly12 = EdgeInsetsDirectional.only(start: 12.w); /// startOnly12
+  /// [_horizontal_10.w] Extra Small Margin (10px)
+  final EdgeInsets xSmall = EdgeInsets.symmetric(horizontal: 10.w);
+
+  /// [_horizontal_16.w] Small-Medium Margin (16px)
+  final EdgeInsets medium = EdgeInsets.symmetric(horizontal: 16.w);
+
+  /// [_horizontal_18.w] Medium Margin (18px)
+  final EdgeInsets large = EdgeInsets.symmetric(horizontal: 18.w);
+}
+
+
+class MarginsDirectional
+{
+  MarginsDirectional._();
+
+  /// [_directional_12.w] Start Directional Margin (12px)
+  final EdgeInsetsDirectional small = EdgeInsetsDirectional.only(start: 12.w);
 }

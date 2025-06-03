@@ -18,7 +18,7 @@ class CreatePanel extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: AppMargins.horizontal18,
+      margin: AppMargins.symmetric.large,
       width: 355.w,
       height: 90.h,
       child: Column(

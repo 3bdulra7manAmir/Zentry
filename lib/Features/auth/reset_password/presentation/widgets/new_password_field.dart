@@ -32,7 +32,7 @@ class NewPasswordField extends ConsumerWidget
         ),
         AppSizes.size9.verticalSpace,
         CustomTextFormField(
-          fieldObscureText: provider.obscureText,
+          fieldObscureText: provider.isLoginPasswordObscured,
           fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: passwordController,
@@ -46,7 +46,7 @@ class NewPasswordField extends ConsumerWidget
             {
               ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
             },
-            child: provider.obscureText ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
+            child: provider.isLoginPasswordObscured ? Icon(Icons.visibility_off_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
             : Icon(Icons.visibility_outlined, color: AppColors.color.kGreyText011, size: 20.w,) 
           ),
         ),

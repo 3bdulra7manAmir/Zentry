@@ -21,7 +21,7 @@ class LoginScreen extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     return Container(
-      padding: AppPadding.horizontal16,
+      padding: AppPadding.symmetric.largeHorizontal,
       width: double.infinity,
       color: Theme.of(context).cardColor,
       child: SingleChildScrollView(
@@ -32,7 +32,7 @@ class LoginScreen extends ConsumerWidget
             children:
             [
               AppSizes.size13.verticalSpace,
-              provider.isLoginMethodEmail ? const LoginEmailField() : const LoginPhoneField(),
+              provider.isLoginWithEmail ? const LoginEmailField() : const LoginPhoneField(),
               AppSizes.size24.verticalSpace,
               const LoginPasswordField(),
               AppSizes.size16.verticalSpace,

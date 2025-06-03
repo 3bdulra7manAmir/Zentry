@@ -27,14 +27,14 @@ void showCountriesBottomSheet(BuildContext context)
     {
       final countriesList = CountryUtils.getCountryImageAndName(context);
       return Padding(
-        padding: AppPadding.horizontal16,
+        padding: AppPadding.symmetric.largeHorizontal,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children:
           [
             AppSizes.size8.verticalSpace,
             Container(
-              margin: AppMargins.horizontal16,
+              margin: AppMargins.symmetric.medium,
               alignment: Alignment.center,
               width: 44.w,
               height: 4.h,

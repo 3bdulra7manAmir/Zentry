@@ -32,10 +32,10 @@ class SignUpInvitationCodeField extends ConsumerWidget
       CustomTextFormField(
         fieldKeyboardType: TextInputType.text,
         fieldValidator: (value) => AppValidation.invitationCodeValidation(value, context),
-        fieldObscureText: provider.obscureText,
+        fieldObscureText: provider.isLoginPasswordObscured,
         fieldText: AppLocalizations.of(context).invitationCodeExample,
         fieldsuffixIcon: Padding(
-          padding: AppPadding.endOnly15,
+          padding: AppPadding.directional.mediumEnd,
           child: SizedBox(
             width: 60.w,
             child: Align(

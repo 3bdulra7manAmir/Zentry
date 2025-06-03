@@ -29,7 +29,7 @@ class GenderOption extends StatelessWidget
       onTap: () => onChanged(value),
       borderRadius: AppBordersRadiuses.circular10,
       child: Container(
-        padding: AppPadding.horizontal16,
+        padding: AppPadding.symmetric.largeHorizontal,
         decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular10,),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
