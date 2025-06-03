@@ -9,10 +9,11 @@ import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/widgets/app_divider.dart';
+import '../../../../../../core/widgets/app_modal_bottom_sheet.dart';
 
 void showPostOptionsBottomSheet(BuildContext context)
 {
-  showModalBottomSheet(
+  showAppBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,

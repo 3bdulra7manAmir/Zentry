@@ -9,10 +9,11 @@ import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/helpers/app_providers.dart';
+import '../../../../../../core/widgets/app_modal_bottom_sheet.dart';
 
 void showThemesBottomSheet(BuildContext context)
 {
-  showModalBottomSheet(
+  showAppBottomSheet(
     context: context,
     isDismissible: true,
     isScrollControlled: true,

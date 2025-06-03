@@ -11,12 +11,13 @@ import '../../../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../../../core/constants/app_styles.dart';
 import '../../../../../../../../core/helpers/app_providers.dart';
 import '../../../../../../../../core/widgets/app_buttons/app_button.dart';
+import '../../../../../../../../core/widgets/app_modal_bottom_sheet.dart';
 import '../../../controllers/fullname_controllers/datetime_picker_provider.dart';
 import '../../../controllers/fullname_controllers/selected_date_provider.dart';
 
 void showDateTimeBottomSheet(BuildContext context)
 {
-  showModalBottomSheet(
+  showAppBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,

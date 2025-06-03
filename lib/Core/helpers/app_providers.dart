@@ -19,7 +19,7 @@ import '../../features/auth/verification_code/presentation/controllers/count_dow
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
 import '../../features/home/presentation/controllers/posts_controllers/post_comments/temp_comments_controller.dart';
 import '../widgets/bottom_nav_bar/controller/bottom_nav_index_provider.dart';
-import '../../features/follow_business/domain/entity/business.dart';
+import '../../features/follow_business/domain/entity/business_entity.dart';
 import '../../features/follow_business/presentation/controllers/businesses_controller.dart';
 import '../../features/home/domain/entity/post_entity.dart';
 import '../../features/home/domain/entity/products_items_entity.dart';

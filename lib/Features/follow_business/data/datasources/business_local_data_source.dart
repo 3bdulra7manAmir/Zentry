@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import '../../domain/entity/business.dart';
+import '../../domain/entity/business_entity.dart';
 
 class BusinessLocalDataSource {
   Future<List<Business>> getBusinesses() async {

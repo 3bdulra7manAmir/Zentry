@@ -9,12 +9,13 @@ import '../../../../../../../../core/constants/app_images.dart';
 import '../../../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../../../core/helpers/app_providers.dart';
+import '../../../../../../../../core/widgets/app_modal_bottom_sheet.dart';
 import '../../../controllers/fullname_controllers/gender_provider.dart';
 import 'gender_options.dart';
 
 void showGenderPickerBottomSheet(BuildContext context)
 {
-  showModalBottomSheet(
+  showAppBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,

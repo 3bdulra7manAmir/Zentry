@@ -1,4 +1,4 @@
-import '../../domain/entity/business.dart';
+import '../../domain/entity/business_entity.dart';
 import '../../domain/repository/business_repository.dart';
 import '../datasources/business_local_data_source.dart';
 

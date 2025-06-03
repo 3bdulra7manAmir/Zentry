@@ -7,7 +7,7 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../../../core/widgets/app_buttons/app_follow_button.dart';
-import '../../domain/entity/business.dart';
+import '../../domain/entity/business_entity.dart';
 
 class FollowBusinessCard extends StatelessWidget
 {

@@ -4,11 +4,12 @@ import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
+import '../../../../../../core/widgets/app_modal_bottom_sheet.dart';
 
 
 void showSharePostBottomSheet(BuildContext context)
 {
-  showModalBottomSheet(
+  showAppBottomSheet(
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,

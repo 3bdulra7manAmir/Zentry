@@ -1,4 +1,4 @@
-import '../entity/business.dart';
+import '../entity/business_entity.dart';
 
 abstract class BusinessRepository {
   Future<List<Business>> getBusinesses();
