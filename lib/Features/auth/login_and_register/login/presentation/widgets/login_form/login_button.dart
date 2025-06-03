@@ -37,7 +37,6 @@ class LoginFormButton extends ConsumerWidget
         ),
         AppSizes.size20.verticalSpace,
         Align(
-          alignment: Alignment.center,
           child: Text(
             AppLocalizations.of(context).orLoginWith,
             style: AppStyles.textStyle12(

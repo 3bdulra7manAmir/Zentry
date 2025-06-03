@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../data/datasources/search_local_data_source.dart';
 import '../../../data/repository/search_repository_impl.dart';
@@ -7,7 +8,7 @@ import '../../../domain/repository/search_repository.dart';
 part 'search_providers.g.dart';
 
 @riverpod
-SearchRepository searchRepository(SearchRepositoryRef ref)
+SearchRepository searchRepository(Ref ref)
 {
   final dataSource = SearchLocalDataSource();
   return SearchRepositoryImpl(dataSource);
@@ -21,7 +22,7 @@ class SearchQuery extends _$SearchQuery
 }
 
 @riverpod
-Future<List<SearchCategory>> searchResults(SearchResultsRef ref) async
+Future<List<SearchCategory>> searchResults(Ref ref) async
 {
   final repository = ref.watch(searchRepositoryProvider);
   final query = ref.watch(searchQueryProvider);

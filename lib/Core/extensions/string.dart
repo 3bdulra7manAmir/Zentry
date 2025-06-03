@@ -98,7 +98,7 @@ extension GetStringUtils on String?
     {
       if (this!.runes.any((r) => arToEn.containsKey(String.fromCharCode(r))))
       {
-        return this!.split('').map((char) => arToEn[char] ?? char).join('');
+        return this!.split('').map((char) => arToEn[char] ?? char).join();
       }
     }
 

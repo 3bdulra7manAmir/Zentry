@@ -21,7 +21,7 @@ class AppFonts
       return i._fonts;
     }
 
-    catch (e, stackTrace)
+    catch (e)
     {
       return FontManagerRoboto();
     }
@@ -52,7 +52,7 @@ class AppFonts
       }
     }
 
-    catch (e, stackTrace)
+    catch (e)
     {
       return FontManagerRoboto();
     }

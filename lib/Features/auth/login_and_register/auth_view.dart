@@ -17,7 +17,6 @@ class AuthScreen extends StatelessWidget
         children:
         [
           Expanded(
-            flex: 1,
             child: FormHeader(
               isText: true,
               downleftText: AppLocalizations.of(context).welcomeBack,

@@ -14,10 +14,8 @@ abstract class AppShadowBoxes
   );
 
   static BoxShadow joinGroupsCard = BoxShadow(
-    color: AppColors.color.kOrange002.withOpacity(0.5),
+    color: AppColors.color.kOrange002.withAlpha((0.5 * 255).round()),
     blurRadius: 5,
-    offset: const Offset(0, 0),
-    spreadRadius: 0,
   );
 
 }

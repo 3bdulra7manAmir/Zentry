@@ -81,7 +81,6 @@ class PaddingsDirectional
     start: 28.w,
     end: 17.w,
     top: 20.h,
-    bottom: 0,
   ); // formHeader
 
   /// Next button padding

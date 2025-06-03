@@ -16,7 +16,7 @@ class AppSettingsScreen extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          const Expanded(flex: 1, child: FormHeader()),
+          const Expanded(child: FormHeader()),
           Expanded(flex: 3, child: AppSettings()),
         ],
       ),

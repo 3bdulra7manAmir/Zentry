@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../domain/entity/story_entity.dart';
 import 'story_usecase_provider.dart';
@@ -5,7 +6,8 @@ import 'story_usecase_provider.dart';
 part 'stories_items_provider.g.dart';
 
 @riverpod
-Future<List<StoryEntity>> storiesItems(StoriesItemsRef ref) async {
+Future<List<StoryEntity>> storiesItems(Ref ref) async
+{
   final usecase = ref.watch(storyUsecaseProvider);
   final result = await usecase.call();
   return result.fold(

@@ -16,7 +16,7 @@ class ProductsItem extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    Color backgroundColor = product.backgroundColor != null
+    final Color backgroundColor = product.backgroundColor != null
     ? Color(int.parse(product.backgroundColor!.replaceAll('#', '0xff')))
     : AppColors.color.kCyan001;
     return Column(

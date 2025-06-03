@@ -28,7 +28,6 @@ class TestApp extends ConsumerWidget
           themeMode: provider.currentThemeMode,
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
-          useInheritedMediaQuery: true,
         ),
       ),
     );

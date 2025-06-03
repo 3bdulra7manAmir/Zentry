@@ -54,11 +54,9 @@ class MoneyFromInterestsListView extends ConsumerWidget
             ),
             loading: () => CustomButton(
               buttonText: AppLocalizations.of(context).next,
-              buttonOnPressed: null,
             ),
             error: (_, __) => CustomButton(
               buttonText: AppLocalizations.of(context).next,
-              buttonOnPressed: null,
             ),
           ),
         ),

@@ -47,7 +47,6 @@ class PostBio extends StatelessWidget
         AppSizes.size15.verticalSpace,
         ReadMoreText(
           carInfo,
-          trimLines: 2,
           trimMode: TrimMode.Line,
           trimCollapsedText: AppLocalizations.of(context).readMore,
           trimExpandedText: AppLocalizations.of(context).showLess,

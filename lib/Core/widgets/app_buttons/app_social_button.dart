@@ -42,7 +42,7 @@ class CustomSocialButton extends StatelessWidget {
       height: buttonHeight ?? 48.h,
       child: ElevatedButton(
         style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular10,
               side: BorderSide(
@@ -51,18 +51,18 @@ class CustomSocialButton extends StatelessWidget {
               ),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kBlue001,),
-          overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+          backgroundColor: WidgetStateProperty.all<Color>(buttonBackgroundColor ?? AppColors.color.kBlue001,),
+          overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
           splashFactory: NoSplash.splashFactory,
-          shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-          elevation: MaterialStateProperty.all(0),
+          shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+          elevation: WidgetStateProperty.all(0),
           alignment: Alignment.center,
         ),
         onPressed: buttonOnPressed,
         child: Row(
           children:
           [
-            Expanded(flex: 1, child: Image.asset(platformLogo)),
+            Expanded(child: Image.asset(platformLogo)),
             (isLogoSpace ?? false) ? const Spacer() : (spaceAmount ?? 20).horizontalSpace,
             Expanded(
               flex: 2,

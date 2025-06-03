@@ -19,17 +19,17 @@ abstract class AppLightStyles
 
   static ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
     style: ButtonStyle(
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: AppBordersRadiuses.circular10,
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.thin,),
         ),
       ),
-      backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kBlue001,),
-      overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlue001,),
+      overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
       splashFactory: NoSplash.splashFactory,
-      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-      elevation: MaterialStateProperty.all(0),
+      shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+      elevation: WidgetStateProperty.all(0),
       alignment: Alignment.center,
     ),
   );
@@ -71,17 +71,17 @@ abstract class AppDarkStyles
 
   static ElevatedButtonThemeData? elevatedButtonTheme = ElevatedButtonThemeData(
     style: ButtonStyle(
-      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: AppBordersRadiuses.circular10,
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.thin,),
         ),
       ),
-      backgroundColor: MaterialStateProperty.all<Color>(AppColors.color.kBlue001,),
-      overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlue001,),
+      overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
       splashFactory: NoSplash.splashFactory,
-      shadowColor: MaterialStateProperty.all<Color>(Colors.transparent),
-      elevation: MaterialStateProperty.all(0),
+      shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+      elevation: WidgetStateProperty.all(0),
       alignment: Alignment.center,
     ),
   );

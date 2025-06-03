@@ -7,7 +7,7 @@ import '../../../../../../config/themes/color_system/controller/theme_controller
 part 'theme_mode_text_provide.g.dart';
 
 @riverpod
-String selectedThemeLabel(SelectedThemeLabelRef ref)
+String selectedThemeLabel(Ref ref)
 {
   final themeMode = ref.watch(themeControllerProvider);
   return themeMode == ThemeMode.dark ? 'dark' : 'light';

@@ -22,7 +22,6 @@ void showActionsBottomSheet(BuildContext context)
       return Padding(
         padding: AppPadding.symmetric.xxxLargeHorizontal,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children:
           [

@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../data/datasources/login_local_data_source.dart';
 import '../../../data/repository/login_repository_impl.dart';
@@ -7,13 +8,13 @@ import '../../../domain/repository/login_repository.dart';
 part 'login_providers.g.dart';
 
 @riverpod
-LoginLocalDataSource loginLocalDataSource(LoginLocalDataSourceRef ref)
+LoginLocalDataSource loginLocalDataSource(Ref ref)
 {
   return LoginLocalDataSourceImpl();
 }
 
 @riverpod
-LoginRepo loginRepository(LoginRepositoryRef ref)
+LoginRepo loginRepository(Ref ref)
 {
   final localDataSource = ref.watch(loginLocalDataSourceProvider);
   return LoginRepoImpl(localDataSource: localDataSource);

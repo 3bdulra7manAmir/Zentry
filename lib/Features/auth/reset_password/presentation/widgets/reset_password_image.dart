@@ -8,6 +8,6 @@ class ResetPasswordImage extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Image.asset(AppAssets.iconsPNG.resetPasswordLock, alignment: Alignment.center,);
+    return Image.asset(AppAssets.iconsPNG.resetPasswordLock,);
   }
 }

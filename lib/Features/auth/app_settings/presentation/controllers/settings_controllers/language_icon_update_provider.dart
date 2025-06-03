@@ -8,7 +8,7 @@ import '../../../../../../core/services/localization/controller/localization_con
 part 'language_icon_update_provider.g.dart';
 
 @riverpod
-String selectedLanguage(SelectedLanguageRef ref)
+String selectedLanguage(Ref ref)
 {
   final locale = ref.watch(localizationControllerProvider);
   return locale.languageCode;
