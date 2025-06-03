@@ -15,10 +15,10 @@ class NotificationsLocalDataSourceImpl implements NotificationsLocalDataSource
     try
     {
       await Future.delayed(const Duration(seconds: 3));
-      final String jsonString = await rootBundle.loadString('assets/json/notifications_screen.json'); // Load JSON file
+      final String jsonString = await rootBundle.loadString('assets/json/notifications_screen.json');
       final Map<String, dynamic> jsonData = json.decode(jsonString);
-      final List<dynamic> notificationsJson = jsonData['notifications'] ?? []; // Parse notifications array
-      return notificationsJson.map((notification) => NotificationEntity.fromJson(notification)).toList(); // Map JSON data to NotificationEntity objects
+      final List<dynamic> notificationsJson = jsonData['notifications'] ?? [];
+      return notificationsJson.map((notification) => NotificationEntity.fromJson(notification)).toList();
     }
     catch (e)
     {

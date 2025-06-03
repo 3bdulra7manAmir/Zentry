@@ -5,7 +5,8 @@ import 'notifications_usecase_provider.dart';
 part 'notifications_items_provider.g.dart';
 
 @riverpod
-Future<List<NotificationEntity>> notificationsItems(NotificationsItemsRef ref) async {
+Future<List<NotificationEntity>> notificationsItems(NotificationsItemsRef ref) async
+{
   final usecase = ref.watch(notificationsUsecaseProvider);
   final result = await usecase.call();
   return result.fold(

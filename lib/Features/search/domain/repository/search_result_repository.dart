@@ -1,5 +1,6 @@
 import '../entities/search_result.dart';
 
-abstract class SearchResultRepository {
+abstract class SearchResultRepository
+{
   Future<List<SearchResult>> getSearchResults();
 }

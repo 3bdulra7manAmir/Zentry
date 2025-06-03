@@ -1,4 +1,5 @@
-class InterestCategory {
+class InterestCategory
+{
   final int id;
   final String image;
   final String name;
@@ -11,7 +12,8 @@ class InterestCategory {
     required this.activeUsers,
   });
 
-  factory InterestCategory.fromJson(Map<String, dynamic> json) {
+  factory InterestCategory.fromJson(Map<String, dynamic> json)
+  {
     return InterestCategory(
       id: json['id'] as int,
       image: json['image'] as String,
@@ -20,8 +22,10 @@ class InterestCategory {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
+  Map<String, dynamic> toJson()
+  {
+    return
+    {
       'id': id,
       'image': image,
       'name': name,

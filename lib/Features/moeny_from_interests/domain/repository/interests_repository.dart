@@ -1,6 +1,7 @@
 import '../../data/model/interest_category.dart';
 
-abstract class InterestsRepository {
+abstract class InterestsRepository
+{
   Future<List<InterestCategory>> getInterestCategories();
   Future<void> selectCategory(int categoryId);
   Future<void> unselectCategory(int categoryId);

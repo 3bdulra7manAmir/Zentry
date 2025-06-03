@@ -7,25 +7,29 @@ import '../../domain/repository/interests_repository.dart';
 part 'interests_providers.g.dart';
 
 @riverpod
-InterestsRepository interestsRepository(InterestsRepositoryRef ref) {
+InterestsRepository interestsRepository(InterestsRepositoryRef ref)
+{
   final dataSource = InterestsLocalDataSource();
   return InterestsRepositoryImpl(dataSource);
 }
 
 @riverpod
-Future<List<InterestCategory>> interestCategories(InterestCategoriesRef ref) {
+Future<List<InterestCategory>> interestCategories(InterestCategoriesRef ref)
+{
   final repository = ref.watch(interestsRepositoryProvider);
   return repository.getInterestCategories();
 }
 
 @riverpod
-Future<List<InterestCategory>> selectedCategories(SelectedCategoriesRef ref) {
+Future<List<InterestCategory>> selectedCategories(SelectedCategoriesRef ref)
+{
   final repository = ref.watch(interestsRepositoryProvider);
   return repository.getSelectedCategories();
 }
 
 @riverpod
-class IsCategorySelected extends _$IsCategorySelected {
+class IsCategorySelected extends _$IsCategorySelected
+{
   @override
   bool build(int categoryId) => false;
 }

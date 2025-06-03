@@ -4,6 +4,7 @@ import '../../data/datasources/local_data_source.dart';
 part 'join_groups_local_data_source_provider.g.dart';
 
 @riverpod
-JoinGroupsLocalDataSource joinGroupsLocalDataSource(JoinGroupsLocalDataSourceRef ref) {
+JoinGroupsLocalDataSource joinGroupsLocalDataSource(JoinGroupsLocalDataSourceRef ref)
+{
   return JoinGroupsLocalDataSource();
 }
