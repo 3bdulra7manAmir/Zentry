@@ -57,26 +57,24 @@ class SearchScreen extends ConsumerWidget
               provider.searchResultsCategory.when(
                 data: (categories)
                 {
-                  final localResults = ref.watch(localSearchResultsProvider);
-                  // Initialize once if localResults is empty but actual categories are available
-                  if (localResults.isEmpty && categories.isNotEmpty)
+                  if (provider.localResults.isEmpty && categories.isNotEmpty)
                   {
                     WidgetsBinding.instance.addPostFrameCallback((_)
                     {
                       ref.read(localSearchResultsProvider.notifier).initialize(categories);
                     });
                   }
-                  if (localResults.isEmpty)
+                  if (provider.localResults.isEmpty)
                   {
                     return Center(child: Text(AppLocalizations.of(context).search,
                         style: AppStyles.textStyle14(fontColor: AppColors.color.kGreyText002, fontWeight: AppFontWeights.regularWeight,),),
                     );
                   }
                   return AppListviewBuilder(
-                    itemCount: localResults.length,
+                    itemCount: provider.localResults.length,
                     separatorBuilder: (context, index) => AppSizes.size12.verticalSpace,
                     itemBuilder: (context, index) {
-                      final category = localResults[index];
+                      final category = provider.localResults[index];
                       return SearchRelatedResultCard(
                         category: category,
                         onRemove: ()

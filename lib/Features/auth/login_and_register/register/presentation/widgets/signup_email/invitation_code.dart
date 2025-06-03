@@ -39,7 +39,7 @@ class SignUpInvitationCodeField extends ConsumerWidget
           child: SizedBox(
             width: 60.w,
             child: Align(
-              alignment: provider.localeState.selectedLanguageIndex == 0 ? Alignment.centerLeft : Alignment.centerRight,
+              alignment: provider.localeController.selectedLanguageIndex == 0 ? Alignment.centerLeft : Alignment.centerRight,
               child: Text(AppLocalizations.of(context).paste, style: AppStyles.textStyle12(),),
             ),
           ),

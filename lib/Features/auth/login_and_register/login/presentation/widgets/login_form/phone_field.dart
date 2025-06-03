@@ -33,8 +33,8 @@ class LoginPhoneField extends ConsumerWidget
             GestureDetector(
               onTap: ()
               {
-                provider.current;
-                provider.currentNotifier;
+                provider.currentLoginMethod;
+                provider.currentLoginMethodNotifier;
               },
               child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                   fontWeight: AppFontWeights.boldWeight,

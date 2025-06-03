@@ -52,7 +52,7 @@ void showLanguageBottomSheet(BuildContext context)
                     return InkWell(
                       onTap: ()
                       {
-                        provider.localeState.setLocale(languagesList[index][2] as Locale, index,);
+                        provider.localeController.setLocale(languagesList[index][2] as Locale, index,);
                         AppRouter.router.pop();
                       },
                       child: Row(
@@ -62,7 +62,7 @@ void showLanguageBottomSheet(BuildContext context)
                           AppSizes.size12.horizontalSpace,
                           Text(languagesList[index][1]),
                           const Spacer(),
-                          if (index == provider.localeState.selectedLanguageIndex)
+                          if (index == provider.localeController.selectedLanguageIndex)
                             Icon(
                               Icons.check_circle,
                               size: AppSizes.size20,

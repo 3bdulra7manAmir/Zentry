@@ -18,7 +18,7 @@ class ThemeField extends ConsumerWidget
       onTap: () => showThemesBottomSheet(context),
       child: CustomContainer(
         fieldPrefixIcon: Image.asset(
-          provider.themeMode == Brightness.dark
+          provider.currentThemeMode == Brightness.dark
             ? AppAssets.iconsPNG.formDarkMode
             : AppAssets.iconsPNG.formLightMode,
         ),

@@ -9,10 +9,10 @@ import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
+import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/widgets/app_appbars/app_appbar.dart';
 import '../../../../../core/widgets/app_buttons/app_button.dart';
 import '../../../../../core/widgets/app_form/app_form.dart';
-import '../controllers/switcher_controller.dart';
 import '../widgets/another_way.dart';
 import '../widgets/forget_password_email/email_address.dart';
 import '../widgets/forget_password_email/email_address_header.dart';
@@ -27,7 +27,7 @@ class ForgetPasswordScreen extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final isPhoneNumber = ref.watch(forgetPasswordMethodSwitcherProvider);
+    final provider = AppProvidersProvider(ref, context);
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, 
@@ -40,7 +40,7 @@ class ForgetPasswordScreen extends ConsumerWidget
             children:
             [
               AppSizes.size46.verticalSpace,
-              isPhoneNumber ? const ForgetPasswordPhoneTitle() : const ForgetPasswordEmailTitle(),
+              provider.isPhoneNumber ? const ForgetPasswordPhoneTitle() : const ForgetPasswordEmailTitle(),
               AppSizes.size48.verticalSpace,
               Container(
                 alignment: Alignment.center,
@@ -49,9 +49,9 @@ class ForgetPasswordScreen extends ConsumerWidget
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:
                   [
-                    isPhoneNumber ? ForgetPasswordPhoneNumber() : ForgetPasswordEmail(),
+                    provider.isPhoneNumber ? ForgetPasswordPhoneNumber() : ForgetPasswordEmail(),
                     AppSizes.size27.verticalSpace,
-                    isPhoneNumber ? ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHavePhone,)
+                    provider.isPhoneNumber ? ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHavePhone,)
                     : ForgetPasswordAnotherWay(recoveryMethod: AppLocalizations.of(context).dontHaveEmail,),
                     AppSizes.size24.verticalSpace,
                     CustomButton(

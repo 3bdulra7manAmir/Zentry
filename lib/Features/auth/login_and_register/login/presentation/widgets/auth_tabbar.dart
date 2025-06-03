@@ -5,7 +5,6 @@ import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/helpers/app_providers.dart';
-import '../../../../app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../../register/presentation/controllers/phone_number_controllers/switcher_controller.dart';
 import '../../../register/presentation/screens/signup_form_email.dart';
 import '../../../register/presentation/screens/signup_form_fullname.dart';
@@ -21,9 +20,9 @@ class AuthTabs extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final selectedTabIndex = ref.watch(tabIndexProvider);
+    
     return DefaultTabController(
-      initialIndex: selectedTabIndex,
+      initialIndex: provider.selectedTabIndex,
       length: 2,
       child: Column(
         children:

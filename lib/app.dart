@@ -22,10 +22,10 @@ class TestApp extends ConsumerWidget
         builder: (context) => MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.router,
-          locale: provider.locale,
+          locale: provider.currentLocale,
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          themeMode: provider.themeMode,
+          themeMode: provider.currentThemeMode,
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
           useInheritedMediaQuery: true,

@@ -10,8 +10,8 @@ class AppImages
   static Image arrowImage(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isArabic = provider.localeState.selectedLanguageIndex == 0;
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isArabic = provider.localeController.selectedLanguageIndex == 0;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     final assetPath = isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.formArrowLeft)
     : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.formArrowRight);
@@ -22,8 +22,8 @@ class AppImages
   static Image appBarBackArrow(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isArabic = provider.localeState.selectedLanguageIndex == 0;
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isArabic = provider.localeController.selectedLanguageIndex == 0;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     final assetPath = isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.appBarBackRight)
     : (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.appBarBackLeft);
@@ -34,7 +34,7 @@ class AppImages
   static String platformLogo(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     return isDark ? AppAssets.iconsPNG.loginAppleDark : AppAssets.iconsPNG.loginApple;
   }
@@ -42,8 +42,8 @@ class AppImages
   static String appBarBackSmartArrow(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isArabic = provider.localeState.selectedLanguageIndex == 0;
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isArabic = provider.localeController.selectedLanguageIndex == 0;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     return isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.appBarBackRight)
     : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.appBarBackRight);
@@ -52,8 +52,8 @@ class AppImages
   static String appBarBackSmartArrow2(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isArabic = provider.localeState.selectedLanguageIndex == 0;
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isArabic = provider.localeController.selectedLanguageIndex == 0;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     return isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.appBarBackRight)
     : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.formArrowRight);
@@ -62,8 +62,8 @@ class AppImages
   static String appBarBackSmartArrow3(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final isArabic = provider.localeState.selectedLanguageIndex == 0;
-    final isDark = provider.themeMode == ThemeMode.dark;
+    final isArabic = provider.localeController.selectedLanguageIndex == 0;
+    final isDark = provider.currentThemeMode == ThemeMode.dark;
 
     return isArabic ? (isDark ? AppAssets.iconsPNG.headerArrowLeft : AppAssets.iconsPNG.formArrowLeft)
     : (isDark ? AppAssets.iconsPNG.headerArrowRight : AppAssets.iconsPNG.formArrowRight);

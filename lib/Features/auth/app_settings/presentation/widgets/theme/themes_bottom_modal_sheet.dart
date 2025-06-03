@@ -47,7 +47,7 @@ void showThemesBottomSheet(BuildContext context)
                   [
                     RadioListTile<ThemeMode>(
                       value: ThemeMode.light,
-                      groupValue: provider.themeMode,
+                      groupValue: provider.currentThemeMode,
                       onChanged: (value)
                       {
                         if (value != null)
@@ -61,7 +61,7 @@ void showThemesBottomSheet(BuildContext context)
                     ),
                     RadioListTile<ThemeMode>(
                       value: ThemeMode.dark,
-                      groupValue: provider.themeMode,
+                      groupValue: provider.currentThemeMode,
                       onChanged: (value)
                       {
                         if (value != null)

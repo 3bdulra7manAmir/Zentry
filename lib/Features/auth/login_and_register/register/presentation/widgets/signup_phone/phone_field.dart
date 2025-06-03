@@ -11,7 +11,6 @@ import '../../../../../../../core/helpers/app_providers.dart';
 import '../../../../../../../core/services/validation/app_validation.dart';
 import '../../../../../../../core/widgets/app_form/app_textform_field.dart';
 import '../../../../login/presentation/widgets/phone_number_bottom_model_sheet.dart';
-import '../../controllers/phone_number_controllers/switcher_controller.dart';
 
 class SignUpPhoneField extends ConsumerWidget
 {
@@ -33,7 +32,7 @@ class SignUpPhoneField extends ConsumerWidget
             Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
             const Spacer(),
             GestureDetector(
-              onTap: () => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.email),
+              onTap: () => provider.emailSignUp,
               child: Text(AppLocalizations.of(context).email, style: AppStyles.textStyle12(
                 fontWeight: AppFontWeights.boldWeight,
                 textDecoration: TextDecoration.underline,

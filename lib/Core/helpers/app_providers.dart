@@ -6,6 +6,7 @@ import '../../features/auth/app_settings/presentation/controllers/initial_tabbar
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/countries_icon_update_provider.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/language_icon_update_provider.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/theme_mode_text_provide.dart';
+import '../../features/auth/forget_password/presentation/controllers/switcher_controller.dart';
 import '../../features/auth/login_and_register/login/presentation/controllers/checkbox_controller.dart';
 import '../../features/auth/login_and_register/login/presentation/controllers/obsecure_text_controller.dart';
 import '../../features/auth/login_and_register/login/presentation/controllers/switcher_controller.dart';
@@ -14,7 +15,9 @@ import '../../features/auth/login_and_register/register/presentation/controllers
 import '../../features/auth/login_and_register/register/presentation/controllers/fullname_controllers/gender_provider.dart';
 import '../../features/auth/login_and_register/register/presentation/controllers/phone_number_controllers/obsecure_text_controller.dart';
 import '../../features/auth/login_and_register/register/presentation/controllers/fullname_controllers/selected_date_provider.dart';
+import '../../features/auth/verification_code/presentation/controllers/count_down_controller.dart';
 import '../../features/auth/verification_code/presentation/controllers/otp_input_controller.dart';
+import '../../features/home/presentation/controllers/posts_controllers/post_comments/temp_comments_controller.dart';
 import '../widgets/bottom_nav_bar/controller/bottom_nav_index_provider.dart';
 import '../../features/follow_business/domain/entity/business.dart';
 import '../../features/follow_business/presentation/controllers/businesses_controller.dart';
@@ -42,63 +45,92 @@ class AppProvidersProvider
   final BuildContext context;
   AppProvidersProvider(this.ref, this.context);
 
-  LocalizationController get localeState => ref.read(localizationControllerProvider.notifier);
-  Locale get locale => ref.watch(localizationControllerProvider);
+  // 🌍 Localization & Theme
+  LocalizationController get localeController => ref.read(localizationControllerProvider.notifier); // new name here: localeController
+  Locale get currentLocale => ref.watch(localizationControllerProvider); // new name here: currentLocale
 
-  ThemeController get themeController => ref.read(themeControllerProvider.notifier);
-  ThemeMode get themeMode => ref.watch(themeControllerProvider);
-  String get themeLabel => getSelectedThemeLabel(ref, context);
+  ThemeController get themeController => ref.read(themeControllerProvider.notifier); // new name here: themeController
+  ThemeMode get currentThemeMode => ref.watch(themeControllerProvider); // new name here: currentThemeMode
+  String get themeLabel => getSelectedThemeLabel(ref, context); // new name here: currentThemeLabel
 
-  String get languageLabel => getSelectedLanguageLabel(ref, context);
-  String get languageFlag => getSelectedLanguageImage(ref);
+  // 🌐 App Settings - Language & Country
+  String get languageLabel => getSelectedLanguageLabel(ref, context); // new name here: currentLanguageLabel
+  String get languageFlag => getSelectedLanguageImage(ref); // new name here: currentLanguageFlag
 
-  String get countryLabel => getSelectedCountryName(ref, context);
-  String get countryFlag => getSelectedCountryImage(ref, context);
+  String get countryLabel => getSelectedCountryName(ref, context); // new name here: selectedCountryLabel
+  String get countryFlag => getSelectedCountryImage(ref, context); // new name here: selectedCountryFlag
 
-  void get tabIndexLogin => ref.read(tabIndexProvider.notifier).setIndex(0);
-  void get tabIndexRegister => ref.read(tabIndexProvider.notifier).setIndex(1);
-  void get invitationCodeField => ref.read(invitationCodeEnabler.notifier).state = true;
+  // 👤 Auth - TabBar & Sign Up Switchers
+  void get tabIndexLogin => ref.read(tabIndexProvider.notifier).setIndex(0); // new name here: switchToLoginTab
+  void get tabIndexRegister => ref.read(tabIndexProvider.notifier).setIndex(1); // new name here: switchToRegisterTab
+  void get invitationCodeField => ref.read(invitationCodeEnabler.notifier).state = true; // new name here: enableInvitationCodeField
 
-  void get signUpPhoneSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.phone);
-  void get signUpFullNameSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.fullname);
+  void get signUpPhoneSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.phone); // new name here: selectPhoneSignUp
+  void get signUpFullNameSwitcher => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.fullname); // new name here: selectFullNameSignUp
+  void get emailSignUp => ref.read(signUpTypeProvider.notifier).toggleSignUp(SignUpType.email); // new name here: selectEmailSignUp
 
-  bool get obscureText => ref.watch(obscurePasswordProvider);
-  bool get obscureText2 => ref.watch(obscurePasswordProvider2);
-  bool get obscureText3 => ref.watch(obscurePasswordProvider3);
-  bool get obscureTextState => ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state;
-  bool get obscureTextState2 => ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state;
-  bool get obscureTextState3 => ref.read(obscurePasswordProvider3.notifier).state = !ref.read(obscurePasswordProvider3.notifier).state;
+  // 🔒 Auth - Obscure Passwords
+  bool get obscureText => ref.watch(obscurePasswordProvider); // new name here: isLoginPasswordObscured
+  bool get obscureText2 => ref.watch(obscurePasswordProvider2); // new name here: isRegisterPasswordObscured
+  bool get obscureText3 => ref.watch(obscurePasswordProvider3); // new name here: isConfirmPasswordObscured
 
-  bool get isChecked => ref.watch(checkboxValueProvider);
+  bool get obscureTextState => ref.read(obscurePasswordProvider.notifier).state = !ref.read(obscurePasswordProvider.notifier).state; // new name here: toggleLoginPassword
+  bool get obscureTextState2 => ref.read(obscurePasswordProvider2.notifier).state = !ref.read(obscurePasswordProvider2.notifier).state; // new name here: toggleRegisterPassword
+  bool get obscureTextState3 => ref.read(obscurePasswordProvider3.notifier).state = !ref.read(obscurePasswordProvider3.notifier).state; // new name here: toggleConfirmPassword
 
-  bool get isLoginMethodEmail => ref.watch(loginMethodSwitcherProvider);
-  bool get current => ref.read(loginMethodSwitcherProvider);
-  void get currentNotifier => ref.read(loginMethodSwitcherProvider.notifier).state = !current;
+  // ✅ UI State
+  bool get isChecked => ref.watch(checkboxValueProvider); // new name here: isRememberMeChecked
 
-  int? get phoneNumberHolder => ref.watch(countryControllerProvider);
+  bool get isLoginMethodEmail => ref.watch(loginMethodSwitcherProvider); // new name here: isLoginWithEmail
+  bool get currentLoginMethod => ref.read(loginMethodSwitcherProvider); // new name here: currentLoginToggleValue
+  void get currentLoginMethodNotifier => ref.read(loginMethodSwitcherProvider.notifier).state = !currentLoginMethod; // new name here: toggleLoginMethod
 
-  SignUpType get signUpType => ref.watch(signUpTypeProvider);
+  dynamic get currentForgetPasswordMethod => ref.read(forgetPasswordMethodSwitcherProvider); // new name here: forgetPasswordMethod
+  dynamic get currentForgetPasswordMethodNotifier => ref.read(forgetPasswordMethodSwitcherProvider.notifier).state; // new name here: forgetPasswordNotifier
 
-  bool get invitationCode => ref.watch(invitationCodeEnabler);
+  // 📱 Auth Inputs
+  int? get phoneNumberHolder => ref.watch(countryControllerProvider); // new name here: selectedPhoneCountryCode
+  bool get isPhoneNumber => ref.watch(forgetPasswordMethodSwitcherProvider); // new name here: isForgetPasswordPhone
+  String get otpProvider => ref.watch(otpInputProvider); // new name here: otpCode
 
-  String get otpProvider => ref.watch(otpInputProvider);
+  int get selectedTabIndex => ref.watch(tabIndexProvider); // new name here: activeAuthTabIndex
+  int get secondsLeft => ref.watch(resendCountdownProvider(context)); // new name here: resendOtpCountdown
 
-  int get bottomNavIndex => ref.watch(bottomNavIndexProvider);
+  // 🗨️ Post Comments
+  List<String> get tempComments => ref.watch(tempCommentsProvider); // new name here: tempPostComments
 
-  DateTime get selectedDate => ref.watch(selectedDateProvider);
-  DateTime get currentDate => ref.watch(selectedDateProvider);
-  String? get selectedGender => ref.watch(selectedGenderProvider);
+  // 🧠 Interests
+  AsyncValue<List<InterestCategory>> get categoriesAsyncValue => ref.watch(interestCategoriesProvider); // new name here: allInterestCategories
+  AsyncValue<List<InterestCategory>> get selectedCategoriesAsync => ref.watch(selectedCategoriesProvider); // new name here: selectedInterestCategories
 
-  AsyncValue<List<Business>> get businessesAsyncValue => ref.watch(businessesProvider);
-  AsyncValue<List<PostEntity>> get postsAsync => ref.watch(postsProvider);
-  AsyncValue<List<ProductsItemsEntity>> get productsAsyncValue => ref.watch(productsItemsProvider);
-  AsyncValue<List<StoryEntity>> get storiesAsyncValue => ref.watch(storiesItemsProvider);
-  AsyncValue<dynamic> get joinGroupsAsyncValue => ref.watch(joinGroupsItemsProvider);
-  AsyncValue<List<InterestCategory>> get selectedCategories => ref.watch(selectedCategoriesProvider);
-  AsyncValue<List<NotificationEntity>> get notificationsAsyncValue => ref.watch(notificationsItemsProvider);
-  AsyncValue<List<SearchResult>> get searchResults => ref.watch(searchResultsListProvider);
-  AsyncValue<List<SearchCategory>> get searchResultsCategory => ref.watch(searchResultsProvider);
+  // 📊 Entities
+  AsyncValue<List<Business>> get businessesAsyncValue => ref.watch(businessesProvider); // new name here: followedBusinesses
+  AsyncValue<List<PostEntity>> get postsAsync => ref.watch(postsProvider); // new name here: homePosts
+  AsyncValue<List<ProductsItemsEntity>> get productsAsyncValue => ref.watch(productsItemsProvider); // new name here: homeProducts
+  AsyncValue<List<StoryEntity>> get storiesAsyncValue => ref.watch(storiesItemsProvider); // new name here: homeStories
+  AsyncValue<dynamic> get joinGroupsAsyncValue => ref.watch(joinGroupsItemsProvider); // new name here: joinGroupItems
+  AsyncValue<List<InterestCategory>> get selectedCategories => ref.watch(selectedCategoriesProvider); // new name here: selectedInterestCategories (duplicate—can merge or rename)
+
+  // 🔔 Notifications
+  AsyncValue<List<NotificationEntity>> get notificationsAsyncValue => ref.watch(notificationsItemsProvider); // new name here: allNotifications
+
+  // 🔎 Search
+  List<SearchCategory> get localResults => ref.watch(localSearchResultsProvider); // new name here: localSearchSuggestions
+  AsyncValue<List<SearchResult>> get searchResults => ref.watch(searchResultsListProvider); // new name here: searchResultsList
+  AsyncValue<List<SearchCategory>> get searchResultsCategory => ref.watch(searchResultsProvider); // new name here: searchCategories
+
+  // 👤 Register Info
+  SignUpType get signUpType => ref.watch(signUpTypeProvider); // new name here: currentSignUpType
+  bool get invitationCode => ref.watch(invitationCodeEnabler); // new name here: isInvitationCodeEnabled
+
+  DateTime get selectedDate => ref.watch(selectedDateProvider); // new name here: selectedBirthDate
+  DateTime get currentDate => ref.watch(selectedDateProvider); // new name here: currentBirthDate
+  String? get selectedGender => ref.watch(selectedGenderProvider); // new name here: selectedGender
+
+  // ⬇️ Bottom Nav
+  int get bottomNavIndex => ref.watch(bottomNavIndexProvider); // new name here: currentBottomNavIndex
 }
+
 
 String getAppText(BuildContext context, String Function(AppLocalizations) selector,)
 {
