@@ -8,13 +8,15 @@ import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
-import '../../../../../core/constants/app_borders.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/helpers/app_providers.dart';
 import '../../../../../core/utils/app_reference.dart';
 import '../../../../../core/widgets/app_appbars/app_appbar.dart';
 import '../../../../../core/widgets/app_buttons/app_button.dart';
 import '../controllers/count_down_controller.dart';
+import '../widgets/no_code.dart';
+import '../widgets/resend_button.dart';
+import '../widgets/verification_code_field.dart';
+import '../widgets/verification_code_title.dart';
 
 class VerificationScreen extends ConsumerWidget
 {
@@ -23,10 +25,6 @@ class VerificationScreen extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final provider = AppProvidersProvider(ref, context);
-    final secondsLeft = ref.watch(resendCountdownProvider(context));
-    final isEnabled = secondsLeft == 0;
-    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: CustomAppBar(
         barTitle: Text(AppLocalizations.of(context).resetPassword, style: AppStyles.textStyle14(
@@ -42,10 +40,8 @@ class VerificationScreen extends ConsumerWidget
               [
                 Text(
                   AppLocalizations.of(context).verifyLater, style: AppStyles.textStyle12(
-                    fontWeight: AppFontWeights.semiBoldWeight,
-                    fontColor: AppColors.color.kGreyText004,
-                    textDecoration: TextDecoration.underline,
-                    textDecorationColor: AppColors.color.kGreyText004,
+                    fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText004,
+                    textDecoration: TextDecoration.underline, textDecorationColor: AppColors.color.kGreyText004,
                   ),
                 ),
                 AppSizes.size4.horizontalSpace,
@@ -61,91 +57,22 @@ class VerificationScreen extends ConsumerWidget
           children:
           [
             AppSizes.size46.verticalSpace,
-            Text(AppLocalizations.of(context).verificationCode, style: AppStyles.textStyle20(
-                fontWeight: AppFontWeights.semiBoldWeight,
-                fontColor: AppColors.color.kBlack001,
-              ),
-            ),
-            AppSizes.size13.verticalSpace,
-            Text(AppLocalizations.of(context).pleaseEnter5DigitalCodeSendTo, style: AppStyles.textStyle16(fontColor: AppColors.color.kGreyText002,),),
-            AppSizes.size7.verticalSpace,
-            Text(AppLocalizations.of(context).appgmailcom, style: AppStyles.textStyle14(
-                fontColor: AppColors.color.kGreyText002,
-                fontWeight: AppFontWeights.regularWeight,
-              ),
-            ),
+            const VerificationCodeTitle(),
             AppSizes.size51.verticalSpace,
-            Container(
-              margin: AppMargins.horizontal16,
-              width: double.infinity,
+            Padding(
+              padding: AppMargins.horizontal16,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
-                  Text(AppLocalizations.of(context).enterYourCode, style: AppStyles.textStyle13(
-                      fontWeight: AppFontWeights.mediumWeight,
-                      fontColor: AppColors.color.kGreyText002,
-                    ),
-                  ),
-                  AppSizes.size10.verticalSpace,
-                  Consumer(
-                    builder: (context, ref, _)
-                    {
-                      return Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: List.generate(5, (index)
-                        {
-                          return Container(
-                            width: AppSizes.size60.w,
-                            height: AppSizes.size48.h,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: AppColors.color.kGrey002,
-                              border: AppFullBorders.verificationCode,
-                              borderRadius: AppBordersRadiuses.circular10,
-                            ),
-                            child: Text(
-                              index < provider.otpProvider.length ? provider.otpProvider[index] : '',
-                              style: AppStyles.textStyle12(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kWhite001,),
-                            ),
-                          );
-                        }),
-                      );
-                    },
-                  ),
+                  const VerificationCodeField(),
                   AppSizes.size26.verticalSpace,
-                  Row(
-                    children:
-                    [
-                      Text(AppLocalizations.of(context).dontReceiveACode, style: AppStyles.textStyle14(
-                          fontWeight: AppFontWeights.mediumWeight,
-                          fontColor: AppColors.color.kGreyText005,
-                        ),
-                      ),
-                      AppSizes.size6.horizontalSpace,
-                      GestureDetector(
-                        onTap: () => AppRouter.router.push(AppRoutes.kResetPassword,),
-                        child: Text(AppLocalizations.of(context).requestPhoneCall, style: AppStyles.textStyle14(
-                            fontWeight: AppFontWeights.mediumWeight,
-                            fontColor: AppColors.color.kBlue002,
-                            textDecoration: TextDecoration.underline,
-                            textDecorationColor: AppColors.color.kBlue002,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  const NoVerificationCode(),
                   AppSizes.size24.verticalSpace,
-                  CustomButton(
-                    buttonOnPressed: isEnabled ? () => ref.read(resendCountdownProvider(context).notifier).reset() : null,
-                    buttonText: isEnabled ? l10n.resend : l10n.resendIn60s(secondsLeft),
-                    buttonTextStyle: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight,
-                      fontColor: isEnabled ? AppColors.color.kWhite003 : AppColors.color.kWhite003.withOpacity(0.5),),
-                  ),
+                  const ResendButton(),
                 ],
               ),
             ),
-            AppSizes.size25.verticalSpace,
           ],
         ),
       ),

@@ -52,9 +52,9 @@ class AuthTabs extends ConsumerWidget
                 LoginScreen(),
                 switch (provider.signUpType)
                 {
-                  SignUpType.email => const SignUpFormEmail(),
-                  SignUpType.phone => const SignUpFormPhoneNumber(),
-                  SignUpType.fullname => const SignUpFormFullName(),
+                  SignUpType.email => SignUpFormEmail(),
+                  SignUpType.phone => SignUpFormPhoneNumber(),
+                  SignUpType.fullname => SignUpFormFullName(),
                   SignUpType.invite => SignUpFormInvite(),
                 },
               ],

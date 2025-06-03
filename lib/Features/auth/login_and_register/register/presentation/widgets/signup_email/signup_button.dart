@@ -5,7 +5,6 @@ import '../../../../../../../core/widgets/app_buttons/app_button.dart';
 class SignupButton extends StatelessWidget
 {
   const SignupButton({super.key, required this.formKey});
-
   final GlobalKey<FormState> formKey;
 
   @override

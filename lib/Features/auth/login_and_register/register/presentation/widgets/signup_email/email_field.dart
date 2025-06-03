@@ -35,7 +35,7 @@ class SignUpEmailField extends ConsumerWidget
               children:
               [
                 GestureDetector(
-                  onTap: () => provider.signUpPhoneSwitcher ,
+                  onTap: () => provider.signUpPhoneSwitcher,
                   child: Text(AppLocalizations.of(context).phoneNumber, style: AppStyles.textStyle12(
                     fontWeight: AppFontWeights.boldWeight,
                     textDecoration: TextDecoration.underline,),

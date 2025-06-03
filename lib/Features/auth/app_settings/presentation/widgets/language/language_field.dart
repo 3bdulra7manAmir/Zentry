@@ -6,9 +6,9 @@ import '../../../../../../core/utils/app_reference.dart';
 import '../../../../../../core/widgets/app_container.dart';
 import '../country/countries_bottom_modal_sheet.dart';
 
-class LanguageField extends ConsumerWidget
+class CountryField extends ConsumerWidget
 {
-  const LanguageField({super.key});
+  const CountryField({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref)

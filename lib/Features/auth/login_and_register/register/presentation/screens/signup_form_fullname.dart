@@ -12,13 +12,11 @@ import '../widgets/signup_fullname/social_buttons.dart';
 
 class SignUpFormFullName extends ConsumerWidget
 {
-  const SignUpFormFullName({super.key});
-  
-
+  SignUpFormFullName({super.key});
+  final GlobalKey<FormState> fullNameFormKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final GlobalKey<FormState> fullNameFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,

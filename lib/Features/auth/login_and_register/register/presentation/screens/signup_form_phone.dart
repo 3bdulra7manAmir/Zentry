@@ -12,12 +12,12 @@ import '../widgets/signup_phone/signup_button.dart';
 
 class SignUpFormPhoneNumber extends ConsumerWidget
 {
-  const SignUpFormPhoneNumber({super.key});
+  SignUpFormPhoneNumber({super.key});
+  final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
-  {
-    final GlobalKey<FormState> signUpPhoneNumberFormKey = GlobalKey<FormState>();
+  { 
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,

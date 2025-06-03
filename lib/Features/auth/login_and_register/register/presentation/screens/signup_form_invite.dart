@@ -22,12 +22,12 @@ class SignUpFormInvite extends ConsumerWidget
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final GlobalKey<FormState> inviteFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    final GlobalKey<FormState> inviteFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,

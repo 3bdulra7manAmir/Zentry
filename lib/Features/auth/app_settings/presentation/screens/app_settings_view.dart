@@ -12,11 +12,11 @@ class AppSettingsScreen extends StatelessWidget
   {
     return Scaffold(
       backgroundColor: AppColors.color.kBlue001,
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:
         [
-          Expanded(flex: 1, child: FormHeader()),
+          const Expanded(flex: 1, child: FormHeader()),
           Expanded(flex: 3, child: AppSettings()),
         ],
       ),

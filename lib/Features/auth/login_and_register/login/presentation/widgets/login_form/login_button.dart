@@ -18,7 +18,6 @@ import 'phone_field.dart';
 class LoginFormButton extends ConsumerWidget
 {
   const LoginFormButton({super.key, required this.formKey});
-
   final GlobalKey<FormState> formKey;
 
   @override

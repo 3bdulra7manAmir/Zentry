@@ -16,11 +16,12 @@ import 'theme/theme_field.dart';
 
 class AppSettings extends StatelessWidget
 {
-  const AppSettings({super.key});
+  AppSettings({super.key});
+  final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context)
   {
-    final GlobalKey<FormState> appFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,

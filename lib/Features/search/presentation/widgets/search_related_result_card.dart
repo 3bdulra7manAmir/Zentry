@@ -8,6 +8,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_styles.dart';
 import '../../domain/entities/search_category.dart';
 
+
 class SearchRelatedResultCard extends StatelessWidget
 {
   final SearchCategory category;

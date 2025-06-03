@@ -12,15 +12,12 @@ import '../widgets/signup_email/signup_button.dart';
 
 class SignUpFormEmail extends ConsumerWidget
 {
-  const SignUpFormEmail({super.key});
-
-  
-  
+  SignUpFormEmail({super.key});
+  final GlobalKey<FormState> signUpEmailFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    final GlobalKey<FormState> signUpEmailFormKey = GlobalKey<FormState>();
     return Container(
       padding: AppPadding.horizontal16,
       width: double.infinity,
