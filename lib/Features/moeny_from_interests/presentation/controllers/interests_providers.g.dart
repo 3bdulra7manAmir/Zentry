@@ -7,7 +7,7 @@ part of 'interests_providers.dart';
 // **************************************************************************
 
 String _$interestsRepositoryHash() =>
-    r'24f6f5eddb683ae92a89d08ae18c73768ea5fab7';
+    r'9517e6033015a1d114a559f0e5feca372eaaa3d2';
 
 /// See also [interestsRepository].
 @ProviderFor(interestsRepository)
@@ -26,7 +26,7 @@ final interestsRepositoryProvider =
 // ignore: unused_element
 typedef InterestsRepositoryRef = AutoDisposeProviderRef<InterestsRepository>;
 String _$interestCategoriesHash() =>
-    r'8bfbfa4f1ebddf1a1082731ef7bb7f5a90056b23';
+    r'612555228089693dfe2001d936f9d40c2ae376f8';
 
 /// See also [interestCategories].
 @ProviderFor(interestCategories)
@@ -46,7 +46,7 @@ final interestCategoriesProvider =
 typedef InterestCategoriesRef
     = AutoDisposeFutureProviderRef<List<InterestCategory>>;
 String _$selectedCategoriesHash() =>
-    r'556151a43368d8193c279f5c84c9cb04562112b3';
+    r'84bafe3cacc544797adf47eadd5e23a26e7aedca';
 
 /// See also [selectedCategories].
 @ProviderFor(selectedCategories)

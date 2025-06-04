@@ -6,7 +6,7 @@ part of 'story_usecase_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storyUsecaseHash() => r'c6a4061007d4a04b6dfe7f840a38821eca1fc630';
+String _$storyUsecaseHash() => r'3c19eaa0d78ca678b32f7ff6d6c2b80c4380eb6b';
 
 /// See also [storyUsecase].
 @ProviderFor(storyUsecase)

@@ -7,7 +7,7 @@ part of 'join_groups_local_data_source_provider.dart';
 // **************************************************************************
 
 String _$joinGroupsLocalDataSourceHash() =>
-    r'996f6abbe2fec704c6658d0f30aa9244a60b0ec4';
+    r'c089c31682a774e1701925133eeaddec14201110';
 
 /// See also [joinGroupsLocalDataSource].
 @ProviderFor(joinGroupsLocalDataSource)

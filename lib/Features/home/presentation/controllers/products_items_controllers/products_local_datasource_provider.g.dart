@@ -7,7 +7,7 @@ part of 'products_local_datasource_provider.dart';
 // **************************************************************************
 
 String _$productsLocalDataSourceHash() =>
-    r'8e400a516efe1260791a5fc6b9ca5400a691271f';
+    r'211057918ee84e17e224de250881a54b24799fd5';
 
 /// See also [productsLocalDataSource].
 @ProviderFor(productsLocalDataSource)

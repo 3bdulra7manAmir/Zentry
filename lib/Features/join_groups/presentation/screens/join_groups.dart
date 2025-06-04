@@ -5,6 +5,7 @@ import '../../../../core/constants/app_paddings.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_lists/app_gridview_builder.dart';
+import '../../domain/entities/join_groups_entity.dart';
 import '../widgets/join_groups_card.dart';
 
 
@@ -17,17 +18,21 @@ class JoinGroupsScreen extends ConsumerWidget
   {
     final provider = AppProvidersProvider(ref, context);
     return provider.joinGroupItems.when(
-      data: (groups) => AppGridbuilder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 12.0,
-        crossAxisSpacing: 12.0,
-        childAspectRatio: 1.4,
-      ),
+      data: (groups) 
+      {
+        final groupList = groups as List<JoinGroupsEntity>;
+        return AppGridbuilder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 12.0,
+          crossAxisSpacing: 12.0,
+          childAspectRatio: 1.4,
+        ),
         padding: AppPadding.single.largeTop,
-        itemCount: groups.length,
-        itemBuilder: (context, index) => JoinGroupsCard(group: groups[index]),
-      ),
+        itemBuilder: (context, index) => JoinGroupsCard(group: groupList[index]),
+        itemCount: groupList.length,
+       );
+      },
       loading: () => const Center(child: AppCircularIndicator()),
       error: (error, stackTrace) => Center(child: Text('${AppLocalizations.of(context).error}: $error')),
     );

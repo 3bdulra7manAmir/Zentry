@@ -6,7 +6,7 @@ part of 'join_groups_usecase_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$joinGroupsUseCaseHash() => r'be55f5781dac7cdcc4d1aaa4737043d4d1f7a313';
+String _$joinGroupsUseCaseHash() => r'e41f363f58474895c87a28e9b384da88af0ac8ac';
 
 /// See also [joinGroupsUseCase].
 @ProviderFor(joinGroupsUseCase)

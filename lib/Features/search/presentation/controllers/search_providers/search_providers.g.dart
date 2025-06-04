@@ -6,7 +6,7 @@ part of 'search_providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$searchRepositoryHash() => r'0917547633c36a54c6ece4598abf368d289916ec';
+String _$searchRepositoryHash() => r'201ce5a79d3679d472abc4831ad69d31523d4f1f';
 
 /// See also [searchRepository].
 @ProviderFor(searchRepository)
@@ -23,7 +23,7 @@ final searchRepositoryProvider = AutoDisposeProvider<SearchRepository>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef SearchRepositoryRef = AutoDisposeProviderRef<SearchRepository>;
-String _$searchResultsHash() => r'388c6e7f78443e15ee930f4b4a3f3be28402e022';
+String _$searchResultsHash() => r'42f886292022f80205055f3537e8f2dab20fd7f9';
 
 /// See also [searchResults].
 @ProviderFor(searchResults)

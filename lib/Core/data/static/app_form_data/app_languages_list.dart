@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../config/l10n/generated/app_localizations.dart';
 import '../../../constants/app_images.dart';
 
-List<List<dynamic>> getLanguagesList(BuildContext context)
+List<List<Object>> getLanguagesList(BuildContext context)
 {
   return
   [

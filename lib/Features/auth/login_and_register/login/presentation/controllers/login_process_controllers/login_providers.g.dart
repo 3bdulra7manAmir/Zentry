@@ -7,7 +7,7 @@ part of 'login_providers.dart';
 // **************************************************************************
 
 String _$loginLocalDataSourceHash() =>
-    r'1d8db381dc8b4fdd7160f2b95f30a1aabb03d7c5';
+    r'dbf91ea49332b8a5c6deec1540af818aa0dab836';
 
 /// See also [loginLocalDataSource].
 @ProviderFor(loginLocalDataSource)
@@ -25,7 +25,7 @@ final loginLocalDataSourceProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef LoginLocalDataSourceRef = AutoDisposeProviderRef<LoginLocalDataSource>;
-String _$loginRepositoryHash() => r'f6c767c640f036b73d8bd5bc4aa41fcb95d08d08';
+String _$loginRepositoryHash() => r'f687ed8e96a578c546b9299e8ca2d4976b3aabe0';
 
 /// See also [loginRepository].
 @ProviderFor(loginRepository)

@@ -25,7 +25,7 @@ class DefaultNotificationCard extends StatelessWidget
     return Card(
       color: AppColors.color.kWhite004,
       elevation: 1.0,
-      shadowColor: Colors.black.withOpacity(0.6),
+      shadowColor: Colors.black.withAlpha((0.6 * 255).round()),
       shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular6,),
       margin: AppMargins.symmetric.medium,
 

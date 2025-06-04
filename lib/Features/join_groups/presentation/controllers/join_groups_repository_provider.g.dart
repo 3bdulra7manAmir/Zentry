@@ -7,7 +7,7 @@ part of 'join_groups_repository_provider.dart';
 // **************************************************************************
 
 String _$joinGroupsRepositoryHash() =>
-    r'97226ad93d3fda78a2f38ffcb690757c130188ec';
+    r'a896410b141c8a23dc0697ebefbdf6c802742a37';
 
 /// See also [joinGroupsRepository].
 @ProviderFor(joinGroupsRepository)

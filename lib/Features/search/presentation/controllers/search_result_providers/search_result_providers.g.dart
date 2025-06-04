@@ -7,7 +7,7 @@ part of 'search_result_providers.dart';
 // **************************************************************************
 
 String _$searchResultDataSourceHash() =>
-    r'3143b27da2b379a4624cad1eb8ead40a3540f76a';
+    r'f49f51e0fca3a7f4bbf0dd0ea53304639d3ff718';
 
 /// See also [searchResultDataSource].
 @ProviderFor(searchResultDataSource)
@@ -27,7 +27,7 @@ final searchResultDataSourceProvider =
 typedef SearchResultDataSourceRef
     = AutoDisposeProviderRef<SearchResultLocalDataSource>;
 String _$searchResultRepositoryHash() =>
-    r'd39d97c0ef9c239cc9f351d2fecef6f19a89ce97';
+    r'638cd12bb7d0e70311cb4668def0e764726061a1';
 
 /// See also [searchResultRepository].
 @ProviderFor(searchResultRepository)
@@ -46,7 +46,7 @@ final searchResultRepositoryProvider =
 // ignore: unused_element
 typedef SearchResultRepositoryRef
     = AutoDisposeProviderRef<SearchResultRepository>;
-String _$searchResultsListHash() => r'fc720b23d997f1b566a03cd1fda78471dadc44f2';
+String _$searchResultsListHash() => r'995c0676f167d2ac94d6aa1fd2f007a63af94a1a';
 
 /// See also [searchResultsList].
 @ProviderFor(searchResultsList)

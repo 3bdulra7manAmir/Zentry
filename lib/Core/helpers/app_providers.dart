@@ -52,6 +52,11 @@ class AppProvidersProvider
   ThemeController get themeController => ref.read(themeControllerProvider.notifier);
   ThemeMode get currentThemeMode => ref.watch(themeControllerProvider);
   String get currentThemeLabel => getSelectedThemeLabel(ref, context);
+  
+  bool isDarkMode(BuildContext context)
+  {
+    return currentThemeMode == ThemeMode.dark || (currentThemeMode == ThemeMode.system && MediaQuery.of(context).platformBrightness == Brightness.dark);
+  }
 
   // 🌐 App Settings - Language & Country
   String get currentLanguageLabel => getSelectedLanguageLabel(ref, context);

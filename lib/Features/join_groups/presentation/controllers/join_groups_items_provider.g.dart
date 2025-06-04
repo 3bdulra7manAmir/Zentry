@@ -6,7 +6,7 @@ part of 'join_groups_items_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$joinGroupsItemsHash() => r'ea8a0b5f6a665296680c54f5cf56b3142072198e';
+String _$joinGroupsItemsHash() => r'3b24b36b35e45263951f87ba878b8f47e00d8f31';
 
 /// See also [joinGroupsItems].
 @ProviderFor(joinGroupsItems)

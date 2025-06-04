@@ -6,7 +6,7 @@ part of 'stories_items_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storiesItemsHash() => r'e554dca36144331e4a371d242ac4ea91981a7bf7';
+String _$storiesItemsHash() => r'9b6887e59235b4b637c26e4c31278babc01535c4';
 
 /// See also [storiesItems].
 @ProviderFor(storiesItems)

@@ -21,7 +21,7 @@ void showLanguageBottomSheet(BuildContext context)
     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10),
     builder: (BuildContext context)
     {
-      final List<dynamic> languagesList = getLanguagesList(context);
+      final List<List<Object>> languagesList = getLanguagesList(context);
       return Padding(
         padding: AppPadding.symmetric.largeHorizontal,
         child: Column(
@@ -59,9 +59,9 @@ void showLanguageBottomSheet(BuildContext context)
                       child: Row(
                         children:
                         [
-                          Image.asset(languagesList[index][0]),
+                          Image.asset(languagesList[index][0] as String),
                           AppSizes.size12.horizontalSpace,
-                          Text(languagesList[index][1]),
+                          Text(languagesList[index][1] as String),
                           const Spacer(),
                           if (index == provider.localeController.selectedLanguageIndex)
                             Icon(

@@ -6,7 +6,7 @@ part of 'businesses_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$businessesHash() => r'9bbc3f87f539c4fb276fa6ef9c8be7282c20f0f0';
+String _$businessesHash() => r'24e8e3efd3b3dd8e21557ea4dd7709309047ed40';
 
 /// See also [businesses].
 @ProviderFor(businesses)

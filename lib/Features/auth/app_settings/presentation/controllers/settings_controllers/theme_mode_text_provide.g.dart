@@ -7,7 +7,7 @@ part of 'theme_mode_text_provide.dart';
 // **************************************************************************
 
 String _$selectedThemeLabelHash() =>
-    r'2d2218fc2c123c4b89daf3c404edbee448d593b1';
+    r'11a4a5e7c62ea47352997dca5915a8865c80bee2';
 
 /// See also [selectedThemeLabel].
 @ProviderFor(selectedThemeLabel)

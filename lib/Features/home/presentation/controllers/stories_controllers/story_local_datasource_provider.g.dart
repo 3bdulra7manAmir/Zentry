@@ -7,7 +7,7 @@ part of 'story_local_datasource_provider.dart';
 // **************************************************************************
 
 String _$storyLocalDataSourceHash() =>
-    r'4b2c9b5314e8ecf4f36bd3abf9c00137b0022f0a';
+    r'973497d3cc79e198b224d184dfeb14ec00e775e2';
 
 /// See also [storyLocalDataSource].
 @ProviderFor(storyLocalDataSource)

@@ -21,7 +21,7 @@ class ResendButton extends ConsumerWidget
       buttonOnPressed: isEnabled ? () => ref.read(resendCountdownProvider(context).notifier).reset() : null,
       buttonText: isEnabled ? AppLocalizations.of(context).resend : AppLocalizations.of(context).resendIn60s(provider.resendOtpCountdown),
       buttonTextStyle: AppStyles.textStyle16(fontWeight: AppFontWeights.semiBoldWeight,
-        fontColor: isEnabled ? AppColors.color.kWhite003 : AppColors.color.kWhite003.withOpacity(0.5),),
+        fontColor: isEnabled ? AppColors.color.kWhite003 : AppColors.color.kWhite003.withAlpha((0.5 * 255).round())),
     );
   }
 }

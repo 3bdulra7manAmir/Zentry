@@ -17,11 +17,7 @@ class ThemeField extends ConsumerWidget
     return GestureDetector(
       onTap: () => showThemesBottomSheet(context),
       child: CustomContainer(
-        fieldPrefixIcon: Image.asset(
-          provider.currentThemeMode == Brightness.dark
-            ? AppAssets.iconsPNG.formDarkMode
-            : AppAssets.iconsPNG.formLightMode,
-        ),
+        fieldPrefixIcon: Image.asset(provider.isDarkMode(context) ? AppAssets.iconsPNG.formDarkMode : AppAssets.iconsPNG.formLightMode,),
         fieldText: provider.currentThemeLabel,
         fieldsuffixIcon: AppImages.arrowImage(context, ref),
       ),
