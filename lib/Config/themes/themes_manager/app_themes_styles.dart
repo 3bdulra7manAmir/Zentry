@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../core/constants/app_borders.dart';
+import '../../../core/constants/app_borders_styles.dart';
 import '../../../core/constants/app_styles.dart';
 import '../color_system/app_colors.dart';
 import '../font_system/font_weights.dart';
@@ -10,7 +11,7 @@ abstract class AppLightStyles
   AppLightStyles._();
 
   static InputBorder? inputBorderLight = OutlineInputBorder(
-    borderRadius: AppBordersRadiuses.circular10,
+    borderRadius: AppBordersRadiuses.circular.largeButton,
     borderSide: BorderSide(
       color: AppColors.color.kGrey001,
       width: AppBorderWidths.thin,
@@ -21,7 +22,7 @@ abstract class AppLightStyles
     style: ButtonStyle(
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: AppBordersRadiuses.circular10,
+          borderRadius: AppBordersRadiuses.circular.largeButton,
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.thin,),
         ),
       ),
@@ -54,7 +55,7 @@ abstract class AppDarkStyles
   AppDarkStyles._();
 
   static InputBorder? inputBorderLight = OutlineInputBorder(
-    borderRadius: AppBordersRadiuses.circular10,
+    borderRadius: AppBordersRadiuses.circular.largeButton,
     borderSide: BorderSide(
       color: AppColors.color.kGrey001,
       width: AppBorderWidths.thin,
@@ -62,7 +63,7 @@ abstract class AppDarkStyles
   );
 
   static InputBorder? inputBorderDark = OutlineInputBorder(
-    borderRadius: AppBordersRadiuses.circular10,
+    borderRadius: AppBordersRadiuses.circular.largeButton,
     borderSide: BorderSide(
       color: AppColors.color.kDark001,
       width: AppBorderWidths.thin,
@@ -73,7 +74,7 @@ abstract class AppDarkStyles
     style: ButtonStyle(
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: AppBordersRadiuses.circular10,
+          borderRadius: AppBordersRadiuses.circular.largeButton,
           side: BorderSide(color: AppColors.color.kTransparent, width: AppBorderWidths.thin,),
         ),
       ),

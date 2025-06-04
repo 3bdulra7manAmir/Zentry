@@ -9,7 +9,7 @@ void showMoenyFromInterestsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.indicator),
     builder: (BuildContext context)
     {
       return const MoneyFromInterestsListView();

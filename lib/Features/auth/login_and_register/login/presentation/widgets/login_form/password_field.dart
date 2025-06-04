@@ -1,12 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../../config/router/app_router.dart';
 import '../../../../../../../config/router/app_routes.dart';
 import '../../../../../../../config/themes/color_system/app_colors.dart';
-import '../../../../../../../core/constants/app_borders.dart';
+import '../../../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../../core/constants/app_styles.dart';
 import '../../../../../../../core/helpers/app_providers.dart';

@@ -16,7 +16,7 @@ void showActionsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.businessPage),
     builder: (BuildContext context)
     {
       return Padding(
@@ -31,7 +31,7 @@ void showActionsBottomSheet(BuildContext context)
               height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kBlack005,
-                borderRadius: AppBordersRadiuses.circular100,
+                borderRadius: AppBordersRadiuses.circular.fullRound,
               ),
             ),
             AppSizes.size17.verticalSpace,

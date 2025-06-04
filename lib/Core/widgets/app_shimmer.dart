@@ -36,7 +36,7 @@ class ShimmerContainer extends StatelessWidget
         alignment: alignment,
         decoration: BoxDecoration(
           color: borderRadiusColor ?? AppColors.color.kWhite001, 
-          borderRadius: borderRadius ?? AppBordersRadiuses.circular5,
+          borderRadius: borderRadius ?? AppBordersRadiuses.circular.smallButton,
         ),
       ),
     );

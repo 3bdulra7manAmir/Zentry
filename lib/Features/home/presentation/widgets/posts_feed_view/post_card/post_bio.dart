@@ -5,6 +5,7 @@ import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../../core/constants/app_borders.dart';
+import '../../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 
@@ -37,7 +38,7 @@ class PostBio extends StatelessWidget
             Container(
               width: 132.w,
               height: 28.h,
-              decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular8, border: AppFullBorders.completeProfileCard,),
+              decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular.priceCard, border: AppFullBorders.completeProfileCard,),
               child: Center(
                 child: Text(carPrice, style: AppStyles.textStyle14(fontWeight: AppFontWeights.semiBoldWeight, fontColor: AppColors.color.kGreyText005,),),
               ),

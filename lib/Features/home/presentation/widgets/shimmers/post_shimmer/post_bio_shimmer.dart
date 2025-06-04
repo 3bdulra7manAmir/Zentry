@@ -16,7 +16,7 @@ class PostBioShimmer extends StatelessWidget
         children:
         [
           ShimmerContainer(width: 150.w, height: 14.h),
-          ShimmerContainer(width: 132.w, height: 28.h, borderRadius: AppBordersRadiuses.circular8),
+          ShimmerContainer(width: 132.w, height: 28.h, borderRadius: AppBordersRadiuses.circular.priceCard),
         ],
       );
   }

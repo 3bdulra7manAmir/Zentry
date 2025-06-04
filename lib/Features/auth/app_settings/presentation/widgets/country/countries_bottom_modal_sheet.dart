@@ -22,7 +22,7 @@ void showCountriesBottomSheet(BuildContext context)
 {
   showAppBottomSheet(
     context: context,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.indicator),
     builder: (context)
     {
       final countriesList = CountryUtils.getCountryImageAndName(context);
@@ -40,7 +40,7 @@ void showCountriesBottomSheet(BuildContext context)
               height: 4.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGreyText002,
-                borderRadius: AppBordersRadiuses.circular4,
+                borderRadius: AppBordersRadiuses.circular.divider,
               ),
             ),
             AppSizes.size18.verticalSpace,

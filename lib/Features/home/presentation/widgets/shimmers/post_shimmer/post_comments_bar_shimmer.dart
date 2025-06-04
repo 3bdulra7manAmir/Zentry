@@ -15,13 +15,13 @@ class PostCommentsBarShimmer extends StatelessWidget
     return Row(
         children:
         [
-          ShimmerContainer(width: 42.w, height: 40.h, borderRadius: AppBordersRadiuses.circular10),
+          ShimmerContainer(width: 42.w, height: 40.h, borderRadius: AppBordersRadiuses.circular.largeButton),
           AppSizes.size8.horizontalSpace,
-          ShimmerContainer(width: 190.w, height: 40.h, borderRadius: AppBordersRadiuses.circular10),
+          ShimmerContainer(width: 190.w, height: 40.h, borderRadius: AppBordersRadiuses.circular.largeButton),
           AppSizes.size8.horizontalSpace,
-          ShimmerContainer(width: 38.w, height: 40.h, borderRadius: AppBordersRadiuses.circular10),
+          ShimmerContainer(width: 38.w, height: 40.h, borderRadius: AppBordersRadiuses.circular.largeButton),
           AppSizes.size8.horizontalSpace,
-          ShimmerContainer(width: 38.w, height: 40.h, borderRadius: AppBordersRadiuses.circular10),
+          ShimmerContainer(width: 38.w, height: 40.h, borderRadius: AppBordersRadiuses.circular.largeButton),
         ],
       );
   }

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
@@ -21,7 +22,7 @@ class UsersStory extends StatelessWidget
       width: 112.w,
       padding: AppPadding.directional.mediumStart,
       decoration: BoxDecoration(
-        borderRadius: AppBordersRadiuses.circular5,
+        borderRadius: AppBordersRadiuses.circular.smallButton,
         image: DecorationImage(image: AssetImage(story.backgroundImage), fit: BoxFit.cover,),
       ),
       child: Column(
@@ -32,9 +33,9 @@ class UsersStory extends StatelessWidget
           Container(
             height: 40.h,
             width: 40.w,
-            decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular50, border: AppFullBorders.othersStoryCard,),
+            decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular.productItem, border: AppFullBorders.othersStoryCard,),
             child: ClipRRect(
-              borderRadius: AppBordersRadiuses.circular50,
+              borderRadius: AppBordersRadiuses.circular.productItem,
               child: Image.asset(story.userAvatar, fit: BoxFit.cover,),
             ),
           ),

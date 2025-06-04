@@ -17,12 +17,12 @@ class ProductsItemShimmer extends StatelessWidget
       [
         ShimmerContainer(
           width: 55.w, height: 55.h,
-          borderRadius: AppBordersRadiuses.circular50,
+          borderRadius: AppBordersRadiuses.circular.productItem,
         ),
         AppSizes.size8.verticalSpace,
         ShimmerContainer(
           width: 50.w, height: 10.h,
-          borderRadius: AppBordersRadiuses.circular4,
+          borderRadius: AppBordersRadiuses.circular.divider,
         ),
       ],
     );

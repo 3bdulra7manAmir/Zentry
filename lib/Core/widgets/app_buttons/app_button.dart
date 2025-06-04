@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../config/themes/color_system/app_colors.dart';
 import '../../constants/app_borders.dart';
+import '../../constants/app_borders_styles.dart';
 import '../../constants/app_styles.dart';
 
 class CustomButton extends ConsumerWidget
@@ -43,7 +44,7 @@ class CustomButton extends ConsumerWidget
           padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(buttonPadding),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular10,
+              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular.largeButton,
               side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.thin,),
             ),
           ),

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../core/constants/app_borders.dart';
+import '../../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
@@ -34,7 +35,7 @@ class CommentCard extends ConsumerWidget
               height: 40.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGrey002,
-                borderRadius: AppBordersRadiuses.circular10,
+                borderRadius: AppBordersRadiuses.circular.largeButton,
                 border: AppBoxBorders.standard,
               ),
               alignment: Alignment.center,
@@ -47,7 +48,7 @@ class CommentCard extends ConsumerWidget
               height: 40.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGrey002,
-                borderRadius: AppBordersRadiuses.circular10,
+                borderRadius: AppBordersRadiuses.circular.largeButton,
                 border: AppBoxBorders.standard,
               ),
               child: CustomTextFormField(
@@ -69,7 +70,7 @@ class CommentCard extends ConsumerWidget
             height: 40.h,
             decoration: BoxDecoration(
               color: AppColors.color.kGrey002,
-              borderRadius: AppBordersRadiuses.circular10,
+              borderRadius: AppBordersRadiuses.circular.largeButton,
               border: AppBoxBorders.standard,
             ),
             alignment: Alignment.center,
@@ -83,7 +84,7 @@ class CommentCard extends ConsumerWidget
               height: 40.h,
               decoration: BoxDecoration(
                 color: AppColors.color.kGrey002,
-                borderRadius: AppBordersRadiuses.circular10,
+                borderRadius: AppBordersRadiuses.circular.largeButton,
                 border: AppBoxBorders.standard,
               ),
               alignment: Alignment.center,

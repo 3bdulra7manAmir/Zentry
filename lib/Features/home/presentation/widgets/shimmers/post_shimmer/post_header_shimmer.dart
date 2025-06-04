@@ -17,7 +17,7 @@ class PostHeaderShimmer extends StatelessWidget
         [
           ShimmerContainer(
             width: 40.w, height: 40.w,
-            borderRadius: AppBordersRadiuses.circular20,
+            borderRadius: AppBordersRadiuses.circular.avatarShimmer,
           ),
           AppSizes.size8.horizontalSpace,
           Column(

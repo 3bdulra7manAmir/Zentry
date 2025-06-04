@@ -5,6 +5,7 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 import '../../../../../core/helpers/app_providers.dart';
@@ -41,7 +42,7 @@ class VerificationCodeField extends ConsumerWidget
                   decoration: BoxDecoration(
                     color: AppColors.color.kGrey002,
                     border: AppFullBorders.verificationCode,
-                    borderRadius: AppBordersRadiuses.circular10,
+                    borderRadius: AppBordersRadiuses.circular.largeButton,
                   ),
                   child: Text(
                     index < provider.otpCode.length ? provider.otpCode[index] : '',

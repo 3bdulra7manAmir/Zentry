@@ -50,7 +50,7 @@ class MoenyFromInterestsCard extends ConsumerWidget
             Container(
               width: 48.w,
               height: 48.h,
-              decoration: BoxDecoration(color: AppColors.color.kWhite001, borderRadius: AppBordersRadiuses.circular50,),
+              decoration: BoxDecoration(color: AppColors.color.kWhite001, borderRadius: AppBordersRadiuses.circular.productItem,),
               child: Image.asset(category.image, width: 45.w, height: 25.h,),
             ),
             AppSizes.size8.horizontalSpace,

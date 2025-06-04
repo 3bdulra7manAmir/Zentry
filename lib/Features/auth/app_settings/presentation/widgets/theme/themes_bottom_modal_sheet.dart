@@ -18,7 +18,7 @@ void showThemesBottomSheet(BuildContext context)
     isDismissible: true,
     isScrollControlled: true,
     backgroundColor: Theme.of(context).cardColor,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.largeButton),
     builder: (BuildContext context)
     {
       return Consumer(
@@ -38,7 +38,7 @@ void showThemesBottomSheet(BuildContext context)
                   height: 4.h,
                   decoration: BoxDecoration(
                     color: AppColors.color.kGreyText002,
-                    borderRadius: AppBordersRadiuses.circular4,
+                    borderRadius: AppBordersRadiuses.circular.divider,
                   ),
                 ),
                 AppSizes.size30.verticalSpace,

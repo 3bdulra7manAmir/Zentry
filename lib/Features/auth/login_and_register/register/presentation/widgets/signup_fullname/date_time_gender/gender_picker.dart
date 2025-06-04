@@ -20,7 +20,7 @@ void showGenderPickerBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.largeButton),
     builder: (BuildContext context)
     {
       return Consumer(
@@ -36,7 +36,7 @@ void showGenderPickerBottomSheet(BuildContext context)
                 Container(
                   width: 73.w,
                   height: 3.h,
-                  decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBordersRadiuses.circular4,),
+                  decoration: BoxDecoration(color: AppColors.color.kBlack005, borderRadius: AppBordersRadiuses.circular.divider,),
                 ),
                 AppSizes.size30.verticalSpace,
                 Column(

@@ -22,7 +22,7 @@ class StoryCreate extends StatelessWidget
       height: 148.h,
       width: 112.w,
       decoration:  BoxDecoration(
-        borderRadius: AppBordersRadiuses.circular5,
+        borderRadius: AppBordersRadiuses.circular.smallButton,
         image: DecorationImage(image: AssetImage(AppAssets.iconsPNG.homeStoryRobot), fit: BoxFit.cover),),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class StoryCreate extends StatelessWidget
         [
           Image.asset(AppAssets.iconsPNG.homeStoryCreate, width: 48.w, height: 48.h,),
           CustomButton(
-            buttonBorderRadius: AppBordersRadiuses.circular5,
+            buttonBorderRadius: AppBordersRadiuses.circular.smallButton,
             buttonText: AppLocalizations.of(context).createStory, buttonOnPressed: () {},
             buttonWidth: 88.w,
             buttonHeight: 27.h,

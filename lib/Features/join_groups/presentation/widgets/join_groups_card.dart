@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/themes/color_system/app_colors.dart';
 import '../../../../config/themes/font_system/font_weights.dart';
 import '../../../../core/constants/app_borders.dart';
+import '../../../../core/constants/app_borders_styles.dart';
 import '../../../../core/constants/app_images.dart';
 import '../../../../core/constants/app_shadow_boxes.dart';
 import '../../../../core/constants/app_sizes.dart';
@@ -27,7 +28,7 @@ class JoinGroupsCard extends StatelessWidget
           decoration: BoxDecoration(
             boxShadow: [AppShadowBoxes.joinGroupsCard,],
             color: AppColors.color.kWhite001,
-            borderRadius: AppBordersRadiuses.circular10,
+            borderRadius: AppBordersRadiuses.circular.largeButton,
             border: AppFullBorders.joinGroupsCard,
           ),
           child: Column(

@@ -1,117 +1,78 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../config/themes/color_system/app_colors.dart';
+
 
 abstract class AppBordersRadiuses
 {
   AppBordersRadiuses._();
 
-  /// Top Only Border Radius
-  
-  /// Business page top radius
-  static BorderRadiusGeometry topOnly10 = BorderRadius.only(
+  static final top = BorderTopOnly._();
+  static final circular = BorderCircular._();
+}
+
+class BorderTopOnly
+{
+  BorderTopOnly._();
+
+  /// [topOnly10] → Business page top radius
+  final BorderRadiusGeometry businessPage = BorderRadius.only(
     topLeft: Radius.circular(10.r),
     topRight: Radius.circular(10.r),
-  ); /// followBusinessPageBorder
+  ); // topOnly10
 
-  /// Indicator top radius
-  static BorderRadiusGeometry topOnly12 = BorderRadius.only(
+  /// [topOnly12] → Indicator top radius
+  final BorderRadiusGeometry indicator = BorderRadius.only(
     topLeft: Radius.circular(12.r),
     topRight: Radius.circular(12.r),
-  ); /// indicatorBorder
+  ); // topOnly12
 
-  /// Small card actions top radius
-  static BorderRadiusGeometry topOnly16 = BorderRadius.only(
+  /// [topOnly16] → Small card actions top radius
+  final BorderRadiusGeometry smallCardActions = BorderRadius.only(
     topLeft: Radius.circular(16.r),
     topRight: Radius.circular(16.r),
-  ); /// smallCardActionsBorder
+  ); // topOnly16
 
-  /// Form top radius
-  static BorderRadiusGeometry topOnly20 = BorderRadius.only(
+  /// [topOnly20] → Form top radius
+  final BorderRadiusGeometry form = BorderRadius.only(
     topLeft: Radius.circular(20.r),
     topRight: Radius.circular(20.r),
-  ); /// formBorder
-
-  /// Circular Border Radius
-  
-  /// Date picker radius
-  static BorderRadius circular1 = BorderRadius.circular(1.r);
-  
-  /// Divider radius
-  static BorderRadius circular4 = BorderRadius.circular(4.r);
-  
-  /// Small button radius
-  static BorderRadius circular5 = BorderRadius.circular(5.r);
-  
-  /// Notification card radius
-  static BorderRadius circular6 = BorderRadius.circular(6.r);
-  
-  /// Medium button radius
-  static BorderRadius circular7 = BorderRadius.circular(7.r);
-  
-  /// Price card radius
-  static BorderRadius circular8 = BorderRadius.circular(8.r);
-  
-  /// Large button radius
-  static BorderRadius circular10 = BorderRadius.circular(10.r); 
-  
-  /// Extra large button radius
-  static BorderRadius circular12 = BorderRadius.circular(12.r);
-
-  /// User image Avatar Shimmer radius
-  static BorderRadius circular20 = BorderRadius.circular(20.r);
-  
-  /// Product item radius
-  static BorderRadius circular50 = BorderRadius.circular(50.r);
-  
-  /// Full round radius
-  static BorderRadius circular100 = BorderRadius.circular(100.r);
+  ); // topOnly20
 }
 
-
-abstract class AppFullBorders
+class BorderCircular
 {
-  AppFullBorders._();
+  BorderCircular._();
 
-  static BoxBorder? verificationCode = Border.all(
-    color: AppColors.color.kGrey001,
-    width: AppBorderWidths.thin,
-  );
+  /// [circular1] → Date picker radius
+  final BorderRadius datePicker = BorderRadius.circular(1.r); // circular1
 
-  static BoxBorder? completeProfileCard = Border.all(
-    color: AppColors.color.kGrey001,
-    width: AppBorderWidths.medium,
-  );
+  /// [circular4] → Divider radius
+  final BorderRadius divider = BorderRadius.circular(4.r); // circular4
 
-  static BoxBorder? othersStoryCard = Border.all(
-    color: AppColors.color.kOrange003,
-    width: 2.w,
-  );
+  /// [circular5] → Small button radius
+  final BorderRadius smallButton = BorderRadius.circular(5.r); // circular5
 
-  static BoxBorder? joinGroupsCard = Border.all(
-    color: AppColors.color.kOrange002,
-    width: AppBorderWidths.medium,
-  );
-}
+  /// [circular6] → Notification card radius
+  final BorderRadius notificationCard = BorderRadius.circular(6.r); // circular6
 
-abstract class AppBorderWidths
-{
-  AppBorderWidths._();
+  /// [circular7] → Medium button radius
+  final BorderRadius mediumButton = BorderRadius.circular(7.r); // circular7
 
-  /// 1px width
-  static double thin = (1.0).w;
-  
-  /// 2px width
-  static double medium = (2.0).w;
-}
+  /// [circular8] → Price card radius
+  final BorderRadius priceCard = BorderRadius.circular(8.r); // circular8
 
-abstract class AppBoxBorders
-{
-  AppBoxBorders._();
+  /// [circular10] → Large button radius
+  final BorderRadius largeButton = BorderRadius.circular(10.r); // circular10
 
-  /// Standard grey border
-  static BoxBorder? standard = Border.all(
-    color: AppColors.color.kGrey001,
-    width: AppBorderWidths.thin,
-  );
+  /// [circular12] → Extra large button radius
+  final BorderRadius extraLargeButton = BorderRadius.circular(12.r); // circular12
+
+  /// [circular20] → Avatar shimmer radius
+  final BorderRadius avatarShimmer = BorderRadius.circular(20.r); // circular20
+
+  /// [circular50] → Product item radius
+  final BorderRadius productItem = BorderRadius.circular(50.r); // circular50
+
+  /// [circular100] → Full round radius
+  final BorderRadius fullRound = BorderRadius.circular(100.r); // circular100
 }

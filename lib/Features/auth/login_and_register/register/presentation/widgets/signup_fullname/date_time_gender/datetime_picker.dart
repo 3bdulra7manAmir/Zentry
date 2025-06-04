@@ -22,7 +22,7 @@ void showDateTimeBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: false,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular10,),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.largeButton,),
     builder: (_) => Consumer(
       builder: (context, ref, _)
       { //HERE //FIX //Temp
@@ -43,7 +43,7 @@ void showDateTimeBottomSheet(BuildContext context)
               Container(
                 width: 73.w,
                 height: 3.h,
-                decoration: BoxDecoration(color: AppColors.color.kGreyText002, borderRadius: AppBordersRadiuses.circular4,),
+                decoration: BoxDecoration(color: AppColors.color.kGreyText002, borderRadius: AppBordersRadiuses.circular.divider,),
               ),
               AppSizes.size35.verticalSpace,
               Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),

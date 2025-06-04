@@ -4,6 +4,7 @@ import '../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
+import '../../../../../core/constants/app_borders_styles.dart';
 import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
@@ -25,7 +26,7 @@ class CompleteProfileCard extends StatelessWidget
           margin: AppMargins.symmetric.medium,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
-            borderRadius: AppBordersRadiuses.circular12,
+            borderRadius: AppBordersRadiuses.circular.extraLargeButton,
             border: AppFullBorders.completeProfileCard,
           ),
           child: Center(

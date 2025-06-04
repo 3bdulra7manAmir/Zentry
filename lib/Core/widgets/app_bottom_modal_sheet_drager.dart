@@ -21,7 +21,7 @@ class AppBottomModalSheetDrager extends StatelessWidget
       height: height ?? 3.h,
       decoration: BoxDecoration(
         color: color ?? AppColors.color.kGreyText002,
-        borderRadius: borderRadius ?? AppBordersRadiuses.circular4,
+        borderRadius: borderRadius ?? AppBordersRadiuses.circular.divider,
       ),
     );
   }

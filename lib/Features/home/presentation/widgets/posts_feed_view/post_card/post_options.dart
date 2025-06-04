@@ -17,7 +17,7 @@ void showPostOptionsBottomSheet(BuildContext context)
     context: context,
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly16),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.smallCardActions),
     builder: (BuildContext context)
     {
       return Padding(

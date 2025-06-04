@@ -61,7 +61,7 @@ class CreatePanelShimmer extends StatelessWidget
 //   {
 //     return ShimmerContainer(
 //       width: width, height: 12.h,
-//       borderRadius: AppBordersRadiuses.circular5,
+//       borderRadius: AppBordersRadiuses.circular.smallButton,
 //     );
 //   }
 
@@ -69,7 +69,7 @@ class CreatePanelShimmer extends StatelessWidget
 //   {
 //     return ShimmerContainer(
 //       width: 153.w, height: 31.h,
-//       borderRadius: AppBordersRadiuses.circular5,
+//       borderRadius: AppBordersRadiuses.circular.smallButton,
 //     );
 //   }
 }

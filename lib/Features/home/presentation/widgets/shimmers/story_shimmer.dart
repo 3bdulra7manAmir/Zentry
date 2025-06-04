@@ -16,7 +16,7 @@ class UsersStoryShimmer extends StatelessWidget
     return Container(
       height: 148.h, width: 112.w,
       padding: AppPadding.directional.mediumStart,
-      decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular5, color: AppColors.color.kGrey001),
+      decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular.smallButton, color: AppColors.color.kGrey001),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children:
@@ -26,14 +26,14 @@ class UsersStoryShimmer extends StatelessWidget
             baseColor: AppColors.color.kGrey002,
             highlightColor: AppColors.color.kGrey002,
             width: 40.w, height: 40.h,
-            borderRadius: AppBordersRadiuses.circular50,
+            borderRadius: AppBordersRadiuses.circular.productItem,
           ),
           const Spacer(),
           ShimmerContainer(
             baseColor: AppColors.color.kGrey003,
             highlightColor: AppColors.color.kGrey003,
             width: 40.w, height: 10.h,
-            borderRadius: AppBordersRadiuses.circular5,
+            borderRadius: AppBordersRadiuses.circular.smallButton,
           ),
           AppSizes.size10.verticalSpace,
         ],

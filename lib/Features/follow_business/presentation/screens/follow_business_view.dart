@@ -7,7 +7,7 @@ void showFollowBusinessPageBottomSheet(BuildContext context)
 {
   showAppBottomSheet(
     context: context,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.indicator),
     builder: (context) => const FollowBusinessPage(),
   );
 }

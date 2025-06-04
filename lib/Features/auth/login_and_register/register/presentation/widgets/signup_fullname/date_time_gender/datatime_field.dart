@@ -33,7 +33,7 @@ class DataTimePicker extends ConsumerWidget
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: AppColors.color.kGrey002,
-            borderRadius: AppBordersRadiuses.circular10,
+            borderRadius: AppBordersRadiuses.circular.largeButton,
           ),
           child: Row(
             children:

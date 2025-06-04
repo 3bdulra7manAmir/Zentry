@@ -26,7 +26,7 @@ class DefaultNotificationCard extends StatelessWidget
       color: AppColors.color.kWhite004,
       elevation: 1.0,
       shadowColor: Colors.black.withAlpha((0.6 * 255).round()),
-      shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular6,),
+      shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.notificationCard,),
       margin: AppMargins.symmetric.medium,
 
       child: Padding(
@@ -111,7 +111,7 @@ class DefaultNotificationCard extends StatelessWidget
                       ),
                       buttonWidth: 114.w,
                       buttonHeight: 33.h,
-                      buttonBorderRadius: AppBordersRadiuses.circular5,
+                      buttonBorderRadius: AppBordersRadiuses.circular.smallButton,
                       buttonBackgroundColor: AppColors.color.kBlue003,
                       buttonOnPressed: () {},
                     ),
@@ -127,7 +127,7 @@ class DefaultNotificationCard extends StatelessWidget
                       ),
                       buttonWidth: 114.w,
                       buttonHeight: 33.h,
-                      buttonBorderRadius: AppBordersRadiuses.circular5,
+                      buttonBorderRadius: AppBordersRadiuses.circular.smallButton,
                       buttonBackgroundColor: AppColors.color.kGreyText007,
                       buttonOnPressed: () {},
                     ),

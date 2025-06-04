@@ -39,7 +39,7 @@ class SearchRelatedResultCard extends StatelessWidget
           width: 20.w,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            borderRadius: AppBordersRadiuses.circular10,
+            borderRadius: AppBordersRadiuses.circular.largeButton,
             color: AppColors.color.kBlue003,
           ),
           child: Text(category.number!, style: AppStyles.textStyle14(

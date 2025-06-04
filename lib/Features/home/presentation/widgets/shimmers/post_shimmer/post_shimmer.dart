@@ -31,7 +31,7 @@ class PostCardShimmer extends StatelessWidget
           AppSizes.size8.verticalSpace,
           ShimmerContainer(width: 280.w, height: 12.h),
           AppSizes.size12.verticalSpace,
-          ShimmerContainer(width: 360.w, height: 180.h, borderRadius: AppBordersRadiuses.circular8), // === Image Section ===
+          ShimmerContainer(width: 360.w, height: 180.h, borderRadius: AppBordersRadiuses.circular.priceCard), // === Image Section ===
           AppSizes.size8.verticalSpace,
           const PostReactionsShimmer(),
           AppSizes.size14.verticalSpace,

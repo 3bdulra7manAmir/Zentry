@@ -30,7 +30,7 @@ class AuthTabs extends ConsumerWidget
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: AppBordersRadiuses.topOnly20,
+              borderRadius: AppBordersRadiuses.top.form,
               color: Theme.of(context).cardColor,
             ),
             child: TabBar(

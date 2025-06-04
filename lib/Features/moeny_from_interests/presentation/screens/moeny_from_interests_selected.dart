@@ -18,7 +18,7 @@
 //     backgroundColor: Theme.of(context).cardColor,
 //     isDismissible: true,
 //     //isScrollControlled: true,
-//     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.topOnly12),
+//     shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.top.indicator),
 //     builder: (BuildContext context)
 //     {
 //       return Padding(
@@ -75,7 +75,7 @@
 //       width: 322.w,
 //       decoration: BoxDecoration(
 //         border: Border.all(color: AppColors.color.kOrange003, width: AppBorderWidths.medium),
-//         borderRadius: AppBordersRadiuses.circular8,
+//         borderRadius: AppBordersRadiuses.circular.priceCard,
 //       ),
 //       child: GridView.builder(
 //         physics: const NeverScrollableScrollPhysics(),
@@ -103,7 +103,7 @@
 //                       height: 45.h, width: 45.w,
 //                       decoration: BoxDecoration(
 //                         color: isSelected ? AppColors.color.kOrangeRobotBoyRadius : AppColors.color.kWhite100Secondary,
-//                         borderRadius: AppBordersRadiuses.circular50,
+//                         borderRadius: AppBordersRadiuses.circular.productItem,
 //                       ),
 //                       child: Image.asset("assets/icons/Money_From_Interests/Car.png", width: 45.w, height: 45.h, fit: BoxFit.contain,),
 //                     ),

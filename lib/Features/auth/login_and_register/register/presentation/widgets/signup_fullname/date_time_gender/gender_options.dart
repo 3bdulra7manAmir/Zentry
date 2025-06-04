@@ -27,10 +27,10 @@ class GenderOption extends StatelessWidget
   {
     return InkWell(
       onTap: () => onChanged(value),
-      borderRadius: AppBordersRadiuses.circular10,
+      borderRadius: AppBordersRadiuses.circular.largeButton,
       child: Container(
         padding: AppPadding.symmetric.largeHorizontal,
-        decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular10,),
+        decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular.largeButton,),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:

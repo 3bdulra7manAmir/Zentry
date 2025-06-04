@@ -26,7 +26,7 @@ class AppSettings extends StatelessWidget
       padding: AppPadding.symmetric.largeHorizontal,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: AppBordersRadiuses.topOnly20,
+        borderRadius: AppBordersRadiuses.top.form,
         color: Theme.of(context).cardColor,
       ),
       child: AppForm(

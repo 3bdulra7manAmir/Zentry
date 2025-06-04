@@ -5,6 +5,7 @@ import '../../../config/l10n/generated/app_localizations.dart';
 import '../../../config/themes/color_system/app_colors.dart';
 import '../../../config/themes/font_system/font_weights.dart';
 import '../../constants/app_borders.dart';
+import '../../constants/app_borders_styles.dart';
 import '../../constants/app_images.dart';
 import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
@@ -46,7 +47,7 @@ class CustomFollowButton extends ConsumerWidget
           padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(buttonPadding),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular10,
+              borderRadius: buttonBorderRadius ?? AppBordersRadiuses.circular.largeButton,
               side: BorderSide(color: buttonBorderColor ?? AppColors.color.kTransparent, width: buttonBorderWidth ?? AppBorderWidths.thin,),
             ),
           ),

@@ -22,7 +22,7 @@ class SearchResultCardDetailed extends StatelessWidget
     return Container(
       width: 370.w,
       height: 163.h,
-      decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular5,),
+      decoration: BoxDecoration(borderRadius: AppBordersRadiuses.circular.smallButton,),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children:

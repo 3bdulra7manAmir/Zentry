@@ -37,7 +37,7 @@ class StoryOpened extends StatelessWidget
                 height: 283.h,
                 margin: AppMargins.symmetric.xSmall,
                 decoration: BoxDecoration(
-                  borderRadius: AppBordersRadiuses.circular7,
+                  borderRadius: AppBordersRadiuses.circular.mediumButton,
                   image: DecorationImage(
                     image: AssetImage(storyImage),
                     fit: BoxFit.cover,
