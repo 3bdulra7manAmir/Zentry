@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/widgets/app_form/app_form.dart';
+import '../../../../widgets/app_auth_container.dart';
 import '../widgets/signup_email/email_field.dart';
 import '../widgets/signup_email/invitation_code.dart';
 import '../widgets/signup_email/password_field.dart';
@@ -18,10 +18,7 @@ class SignUpFormEmail extends ConsumerWidget
   @override
   Widget build(BuildContext context, WidgetRef ref)
   {
-    return Container(
-      padding: AppPadding.symmetric.largeHorizontal,
-      width: double.infinity,
-      color: Theme.of(context).cardColor,
+    return AppAuthContainer(
       child: SingleChildScrollView(
         child: AppForm(
           formKey: signUpEmailFormKey,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../config/l10n/generated/app_localizations.dart';
 import '../../../config/themes/color_system/app_colors.dart';
-import '../widgets/app_form_header.dart';
+import '../widgets/app_auth_header.dart';
 import 'login/presentation/widgets/auth_tabbar.dart';
 
 class AuthScreen extends StatelessWidget

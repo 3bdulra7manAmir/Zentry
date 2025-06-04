@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/helpers/app_providers.dart';
 import '../../../../../../core/widgets/app_form/app_form.dart';
+import '../../../../widgets/app_auth_container.dart';
 import '../widgets/login_form/email_field.dart';
 import '../widgets/login_form/login_button.dart';
 import '../widgets/login_form/password_field.dart';
@@ -20,10 +20,7 @@ class LoginScreen extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return Container(
-      padding: AppPadding.symmetric.largeHorizontal,
-      width: double.infinity,
-      color: Theme.of(context).cardColor,
+    return AppAuthContainer(
       child: SingleChildScrollView(
         child: AppForm(
           formKey: loginEmailFormKey,

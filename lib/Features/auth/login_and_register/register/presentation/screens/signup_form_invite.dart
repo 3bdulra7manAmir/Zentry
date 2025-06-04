@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../config/themes/font_system/font_weights.dart';
-import '../../../../../../core/constants/app_paddings.dart';
 import '../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/helpers/app_providers.dart';
@@ -12,6 +11,7 @@ import '../../../../../../core/services/validation/app_validation.dart';
 import '../../../../../../core/widgets/app_buttons/app_button.dart';
 import '../../../../../../core/widgets/app_form/app_form.dart';
 import '../../../../../../core/widgets/app_form/app_textform_field.dart';
+import '../../../../widgets/app_auth_container.dart';
 import '../../../login/presentation/widgets/phone_number_bottom_model_sheet.dart';
 import '../controllers/phone_number_controllers/switcher_controller.dart';
 
@@ -28,10 +28,7 @@ class SignUpFormInvite extends ConsumerWidget
   Widget build(BuildContext context, WidgetRef ref)
   {
     final provider = AppProvidersProvider(ref, context);
-    return Container(
-      padding: AppPadding.symmetric.largeHorizontal,
-      width: double.infinity,
-      color: Theme.of(context).cardColor,
+    return AppAuthContainer(
       child: SingleChildScrollView(
         child: AppForm(
           formKey: inviteFormKey,
