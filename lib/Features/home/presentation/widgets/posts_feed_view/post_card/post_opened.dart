@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/core/utils/app_reference.dart';
+import 'package:test_app/core/helpers/app_reference.dart';
 import '../../../../../../config/router/app_router.dart';
 import '../../../../../../core/constants/app_borders.dart';
 import '../../../../../../core/constants/app_margins.dart';

@@ -5,7 +5,8 @@ import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../core/constants/app_images.dart';
 import '../../../../../../core/services/localization/controller/localization_controller.dart';
 
-part 'language_icon_update_provider.g.dart';
+part 'languages_icon_controller.g.dart';
+
 
 @riverpod
 String selectedLanguage(Ref ref)

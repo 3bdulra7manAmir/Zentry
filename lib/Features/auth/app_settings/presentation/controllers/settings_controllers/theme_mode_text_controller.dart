@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../config/themes/color_system/controller/theme_controller.dart';
 
-part 'theme_mode_text_provide.g.dart';
+part 'theme_mode_text_controller.g.dart';
 
 @riverpod
 String selectedThemeLabel(Ref ref)

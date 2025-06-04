@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../constants/app_images.dart';
-import '../helpers/app_providers.dart';
+import 'app_providers.dart';
 
 class AppImages
 {

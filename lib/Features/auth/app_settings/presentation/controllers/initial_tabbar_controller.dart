@@ -8,6 +8,7 @@ class TabIndexNotifier extends StateNotifier<int>
 }
 
 
-final tabIndexProvider = StateNotifierProvider<TabIndexNotifier, int>((ref) {
+final tabIndexProvider = StateNotifierProvider<TabIndexNotifier, int>((ref)
+{
   return TabIndexNotifier();
 });

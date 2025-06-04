@@ -9,7 +9,7 @@ import '../../../../../core/constants/app_margins.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../config/themes/font_system/font_weights.dart';
 import '../../../../../core/constants/app_styles.dart';
-import '../../../../../core/utils/app_reference.dart';
+import '../../../../../core/helpers/app_reference.dart';
 import '../../../../../core/widgets/app_appbars/app_appbar.dart';
 import '../widgets/no_code.dart';
 import '../widgets/resend_button.dart';

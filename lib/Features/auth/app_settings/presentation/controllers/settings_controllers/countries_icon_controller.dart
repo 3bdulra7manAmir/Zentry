@@ -6,7 +6,7 @@ import '../../../../../../core/services/database/shared_preference/app_database.
 import '../../../../../../core/data/static/app_form_data/app_countries_list.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'countries_icon_update_provider.g.dart';
+part 'countries_icon_controller.g.dart';
 
 @riverpod
 class CountryController extends _$CountryController

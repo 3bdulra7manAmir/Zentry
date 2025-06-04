@@ -6,7 +6,7 @@ import '../../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../../core/constants/app_images.dart';
 import '../../../../../../../core/constants/app_sizes.dart';
 import '../../../../../../../core/constants/app_styles.dart';
-import '../../../../../../../core/utils/app_reference.dart';
+import '../../../../../../../core/helpers/app_reference.dart';
 import '../../../../../../../core/widgets/app_buttons/app_social_button.dart';
 
 class SignUpSocialButtons extends ConsumerWidget
