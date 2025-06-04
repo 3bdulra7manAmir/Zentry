@@ -27,6 +27,7 @@ class SignUpPasswordField extends ConsumerWidget
         Text(AppLocalizations.of(context).password, style: AppStyles.textStyle12(fontColor: AppColors.color.kBlack002,),),
         AppSizes.size8.verticalSpace,
         CustomTextFormField(
+          fieldReadOnly: !provider.isConfirmPasswordObscured,
           fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: passwordController,

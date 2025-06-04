@@ -32,6 +32,7 @@ class NewPasswordField extends ConsumerWidget
         ),
         AppSizes.size9.verticalSpace,
         CustomTextFormField(
+          fieldReadOnly: !provider.isLoginPasswordObscured,
           fieldObscureText: provider.isLoginPasswordObscured,
           fieldKeyboardType: TextInputType.text,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),

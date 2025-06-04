@@ -32,6 +32,7 @@ class ConfirmPasswordField extends ConsumerWidget
         ),
         AppSizes.size9.verticalSpace,
         CustomTextFormField(
+          fieldReadOnly: !provider.isRegisterPasswordObscured,
           fieldObscureText: provider.isRegisterPasswordObscured,
           fieldValidator: (value) => AppValidation.passwordValidation(value, context),
           fieldController: confirmPasswordController,
