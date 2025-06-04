@@ -1,18 +1,19 @@
-class Business {
+class BusinessEntity {
   final int id;
   final String image;
   final String title;
   final String subtitle;
 
-  Business({
+  BusinessEntity({
     required this.id,
     required this.image,
     required this.title,
     required this.subtitle,
   });
 
-  factory Business.fromJson(Map<String, dynamic> json) {
-    return Business(
+  factory BusinessEntity.fromJson(Map<String, dynamic> json)
+  {
+    return BusinessEntity(
       id: json['id'] as int,
       image: json['image'] as String,
       title: json['title'] as String,
@@ -20,8 +21,10 @@ class Business {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
+  Map<String, dynamic> toJson()
+  {
+    return
+    {
       'id': id,
       'image': image,
       'title': title,

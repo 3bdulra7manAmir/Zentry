@@ -5,14 +5,31 @@ import '../app_colors.dart';
 
 part 'theme_controller.g.dart';
 
+enum AppTheme
+{
+  light,
+  dark;
+
+  static AppTheme fromString(String value)
+  {
+    final lower = value.toLowerCase();
+    if (lower == 'dark' || lower == 'داكن') return AppTheme.dark;
+    return AppTheme.light;
+  }
+
+  ThemeMode get mode => this == AppTheme.dark ? ThemeMode.dark : ThemeMode.light;
+}
+
 @riverpod
 class ThemeController extends _$ThemeController
 {
+  bool _isChanging = false;
+
   @override
   ThemeMode build()
   {
-    AppColors.i.themeMode = 'light';
-    loadSavedTheme();
+    Future.microtask(loadSavedTheme); // Asynchronously load saved theme after build returns
+    AppColors.i.themeMode = 'light'; // Temporary initial fallback
     return ThemeMode.light;
   }
 
@@ -34,11 +51,9 @@ class ThemeController extends _$ThemeController
 
   Future<void> setTheme(ThemeMode mode) async
   {
-    if (mode == ThemeMode.system) 
-    {
-      return;
-    }
+    if (_isChanging || mode == ThemeMode.system) return;
 
+    _isChanging = true;
     try
     {
       final isDarkMode = mode == ThemeMode.dark;
@@ -51,12 +66,15 @@ class ThemeController extends _$ThemeController
       state = ThemeMode.light;
       AppColors.i.themeMode = 'light';
     }
+    finally
+    {
+      _isChanging = false;
+    }
   }
 
   void setThemeFromString(String value)
   {
-    final lower = value.toLowerCase();
-    final themeMode = (lower == 'dark' || lower == 'داكن') ? ThemeMode.dark : ThemeMode.light;
-    setTheme(themeMode);
+    final theme = AppTheme.fromString(value);
+    setTheme(theme.mode);
   }
 }

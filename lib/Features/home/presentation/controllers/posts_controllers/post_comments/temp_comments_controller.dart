@@ -1,13 +1,12 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final tempCommentsProvider =
-    StateNotifierProvider<TempCommentsController, List<String>>(
-  (ref) => TempCommentsController(),
-);
+part 'temp_comments_controller.g.dart';
 
-class TempCommentsController extends StateNotifier<List<String>>
+@riverpod
+class TempComments extends _$TempComments
 {
-  TempCommentsController() : super([]);
+  @override
+  List<String> build() => [];
 
   void addComment(String comment)
   {

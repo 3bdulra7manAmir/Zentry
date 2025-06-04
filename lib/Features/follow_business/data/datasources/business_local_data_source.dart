@@ -4,7 +4,7 @@ import '../../domain/entity/business_entity.dart';
 
 class BusinessLocalDataSource
 {
-  Future<List<Business>> getBusinesses() async
+  Future<List<BusinessEntity>> getBusinesses() async
   {
     try
     {
@@ -12,7 +12,7 @@ class BusinessLocalDataSource
       final Map<String, dynamic> jsonData = json.decode(jsonString);
       
       final List<dynamic> businessList = jsonData['businesses'] as List<dynamic>;
-      return businessList.map((json) => Business.fromJson(json)).toList();
+      return businessList.map((json) => BusinessEntity.fromJson(json)).toList();
     }
     catch (e)
     {

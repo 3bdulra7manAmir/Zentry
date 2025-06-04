@@ -1,0 +1,17 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '../../../domain/entity/notification_entity.dart';
+import 'notifications_usecase_controller.dart';
+
+part 'notifications_items_controller.g.dart';
+
+@riverpod
+Future<List<NotificationEntity>> notificationsItems(Ref ref) async
+{
+  final usecase = ref.watch(notificationsUsecaseProvider);
+  final result = await usecase.call();
+  return result.fold(
+    (failure) => throw failure,
+    (notifications) => notifications,
+  );
+}

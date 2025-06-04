@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:test_app/features/follow_business/presentation/controllers/businesses_items_controller.dart';
 import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/color_system/controller/theme_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/initial_tabbar_controller.dart';
@@ -20,22 +21,21 @@ import '../../features/auth/verification_code/presentation/controllers/otp_input
 import '../../features/home/presentation/controllers/posts_controllers/post_comments/temp_comments_controller.dart';
 import '../widgets/bottom_nav_bar/controller/bottom_nav_index_provider.dart';
 import '../../features/follow_business/domain/entity/business_entity.dart';
-import '../../features/follow_business/presentation/controllers/businesses_controller.dart';
 import '../../features/home/domain/entity/post_entity.dart';
 import '../../features/home/domain/entity/products_items_entity.dart';
 import '../../features/home/domain/entity/story_entity.dart';
-import '../../features/home/presentation/controllers/posts_controllers/post_fetch/posts_provider.dart';
-import '../../features/home/presentation/controllers/products_items_controllers/products_items_provider.dart';
-import '../../features/home/presentation/controllers/stories_controllers/stories_items_provider.dart';
-import '../../features/join_groups/presentation/controllers/join_groups_items_provider.dart';
+import '../../features/home/presentation/controllers/posts_controllers/post_fetch/posts_controller.dart';
+import '../../features/home/presentation/controllers/products_items_controllers/products_items_controller.dart';
+import '../../features/home/presentation/controllers/stories_controllers/stories_items_controller.dart';
+import '../../features/join_groups/presentation/controllers/join_groups_items_controller.dart';
 import '../../features/moeny_from_interests/data/model/interest_category.dart';
-import '../../features/moeny_from_interests/presentation/controllers/interests_providers.dart';
+import '../../features/moeny_from_interests/presentation/controllers/interests_controller.dart';
 import '../../features/notifications/domain/entity/notification_entity.dart';
-import '../../features/notifications/presentation/controllers/notifications_providers/notifications_items_provider.dart';
+import '../../features/notifications/presentation/controllers/notifications_providers/notifications_items_controller.dart';
 import '../../features/search/domain/entities/search_category.dart';
 import '../../features/search/domain/entities/search_result.dart';
-import '../../features/search/presentation/controllers/search_providers/search_providers.dart';
-import '../../features/search/presentation/controllers/search_result_providers/search_result_providers.dart';
+import '../../features/search/presentation/controllers/search_providers/search_controller.dart';
+import '../../features/search/presentation/controllers/search_result_providers/search_result_controller.dart';
 import '../services/localization/controller/localization_controller.dart';
 
 
@@ -109,7 +109,7 @@ class AppProvidersProvider
   AsyncValue<List<InterestCategory>> get selectedInterestCategories => ref.watch(selectedCategoriesProvider);
 
   // 📊 Entities
-  AsyncValue<List<Business>> get followedBusinesses => ref.watch(businessesProvider);
+  AsyncValue<List<BusinessEntity>> get followedBusinesses => ref.watch(businessItemsProvider);
   AsyncValue<List<PostEntity>> get homePosts => ref.watch(postsProvider);
   AsyncValue<List<ProductsItemsEntity>> get homeProducts => ref.watch(productsItemsProvider);
   AsyncValue<List<StoryEntity>> get homeStories => ref.watch(storiesItemsProvider);

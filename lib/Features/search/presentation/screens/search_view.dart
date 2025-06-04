@@ -12,7 +12,7 @@ import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../../../core/widgets/app_lists/app_listview_builder.dart';
 import '../../../../core/widgets/app_appbars/app_search_appbar.dart';
-import '../controllers/search_providers/search_providers.dart';
+import '../controllers/search_providers/search_controller.dart';
 
 class SearchScreen extends ConsumerWidget
 {

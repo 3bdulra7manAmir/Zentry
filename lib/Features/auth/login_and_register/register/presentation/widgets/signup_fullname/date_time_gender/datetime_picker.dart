@@ -22,75 +22,62 @@ void showDateTimeBottomSheet(BuildContext context)
     backgroundColor: Theme.of(context).cardColor,
     isDismissible: true,
     isScrollControlled: false,
-    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.largeButton,),
+    shape: RoundedRectangleBorder(borderRadius: AppBordersRadiuses.circular.largeButton),
     builder: (_) => Consumer(
       builder: (context, ref, _)
-      { //HERE //FIX //Temp
+      {
         final provider = AppProvidersProvider(ref, context);
         final state = ref.watch(datePickerStateProvider(provider.currentBirthDate));
         final notifier = ref.read(datePickerStateProvider(provider.currentBirthDate).notifier);
+
         final years = List.generate(100, (i) => DateTime.now().year - i);
         final months = List.generate(12, (i) => i + 1);
-        final days = List.generate(DateTime(state.year, state.month + 1, 0).day,
-        (i) => i + 1,
-        );
+        final days = List.generate(DateTime(state.year, state.month + 1, 0).day, (i) => i + 1);
+
+        Widget picker(List<int> values, int initial, void Function(int) onChange)
+        {
+          return Expanded(
+            child: CupertinoPicker(
+              scrollController: FixedExtentScrollController(initialItem: initial),
+              itemExtent: 75.h,
+              onSelectedItemChanged: (i) => onChange(values[i]),
+              children: values.map((e) => Center(child: Text('$e'))).toList(),
+            ),
+          );
+        }
+
+        final labels =
+        [
+          AppLocalizations.of(context).year,
+          AppLocalizations.of(context).month,
+          AppLocalizations.of(context).day,
+        ];
+
         return Padding(
           padding: AppPadding.symmetric.mediumAllSymmetric,
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children:
-            [
+            children: [
               Container(
                 width: 73.w,
                 height: 3.h,
-                decoration: BoxDecoration(color: AppColors.color.kGreyText002, borderRadius: AppBordersRadiuses.circular.divider,),
+                decoration: BoxDecoration(
+                  color: AppColors.color.kGreyText002,
+                  borderRadius: AppBordersRadiuses.circular.divider,
+                ),
               ),
               AppSizes.size35.verticalSpace,
-              Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002,),),
-              AppSizes.size35.verticalSpace,
-              Row(
-                children:
-                [
-                  for (final label in
-                  [
-                    AppLocalizations.of(context).year,
-                    AppLocalizations.of(context).month,
-                    AppLocalizations.of(context).day
-                  ])
-                    Expanded(
-                      child: Center(child: Text(label, style: AppStyles.textStyle12()),),
-                    ),
-                ],
+              Text(AppLocalizations.of(context).selectBirthDate, style: AppStyles.textStyle12(fontColor: AppColors.color.kGreyText002),
               ),
+              AppSizes.size35.verticalSpace,
+              Row(children: labels.map((l) => Expanded(child: Center(child: Text(l, style: AppStyles.textStyle12())))).toList(),),
               AppSizes.size16.verticalSpace,
               Row(
                 children:
                 [
-                  Expanded(
-                    child: CupertinoPicker(
-                      scrollController: FixedExtentScrollController(initialItem: years.indexOf(state.year),),
-                      itemExtent: 75.h,
-                      onSelectedItemChanged: (index) => notifier.setYear(years[index]),
-                      children: years.map((e) => Center(child: Text('$e'))).toList(),
-                      
-                    ),
-                  ),
-                  Expanded(
-                    child: CupertinoPicker(
-                      scrollController: FixedExtentScrollController(initialItem: state.month - 1,),
-                      itemExtent: 75.h,
-                      onSelectedItemChanged: (index) => notifier.setMonth(months[index]),
-                      children: months.map((e) => Center(child: Text('$e'))).toList(),
-                    ),
-                  ),
-                  Expanded(
-                    child: CupertinoPicker(
-                      scrollController: FixedExtentScrollController(initialItem: state.day - 1,),
-                      itemExtent: 75.h,
-                      onSelectedItemChanged: (index) => notifier.setDay(days[index]),
-                      children: days.map((e) => Center(child: Text('$e'))).toList(),
-                    ),
-                  ),
+                  picker(years, years.indexOf(state.year), notifier.setYear),
+                  picker(months, state.month - 1, notifier.setMonth),
+                  picker(days, state.day - 1, notifier.setDay),
                 ],
               ),
               AppSizes.size16.verticalSpace,

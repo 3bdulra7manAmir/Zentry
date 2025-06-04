@@ -10,7 +10,7 @@ import '../../../../core/constants/app_styles.dart';
 import '../../../../core/helpers/app_providers.dart';
 import '../../../../core/widgets/app_circular_indicator.dart';
 import '../../data/model/interest_category.dart';
-import '../controllers/interests_providers.dart';
+import '../controllers/interests_controller.dart';
 
 class MoenyFromInterestsCard extends ConsumerWidget
 {

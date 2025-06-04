@@ -7,12 +7,13 @@ part 'localization_controller.g.dart';
 @riverpod
 class LocalizationController extends _$LocalizationController
 {
-  int selectedLanguageIndex = 1;
+  int selectedLanguageIndex = 1; // Default index: 1 => English
+  bool _isChanging = false;
 
   @override
   Locale build()
   {
-    loadLocale();
+    Future.microtask(loadLocale); // Safe async call after build
     return const Locale('en');
   }
 
@@ -20,11 +21,10 @@ class LocalizationController extends _$LocalizationController
   {
     try
     {
-      final languageCode = await UserPreferences.instance.getLanguage();
-      state = Locale(languageCode);
-      selectedLanguageIndex = languageCode == 'ar' ? 0 : 1;
-    }
-    catch (_)
+      final code = await UserPreferences.instance.getLanguage();
+      state = Locale(code);
+      selectedLanguageIndex = code == 'ar' ? 0 : 1;
+    } catch (e)
     {
       state = const Locale('en');
       selectedLanguageIndex = 1;
@@ -33,19 +33,35 @@ class LocalizationController extends _$LocalizationController
 
   Future<void> setLocale(Locale locale, int index) async
   {
+    if (_isChanging) return;
+    _isChanging = true;
+
     try
     {
-      if (locale.languageCode == 'en' || locale.languageCode == 'ar')
+      final code = locale.languageCode.toLowerCase();
+      if (code != 'en' && code != 'ar')
       {
-        state = locale;
-        selectedLanguageIndex = index;
-        await UserPreferences.instance.saveLanguage(locale.languageCode);
+        return;
       }
-    }
-    catch (_)
-    {
       state = locale;
+      selectedLanguageIndex = index;
+      await UserPreferences.instance.saveLanguage(code);
+    }
+    catch (e)
+    {
+      state = const Locale('en');
       selectedLanguageIndex = 1;
     }
+    finally
+    {
+      _isChanging = false;
+    }
+  }
+
+  Future<void> setLocaleFromCode(String code) async /// Helper method to set language by string
+  {
+    final lower = code.toLowerCase();
+    final index = lower == 'ar' ? 0 : 1;
+    await setLocale(Locale(lower), index);
   }
 }

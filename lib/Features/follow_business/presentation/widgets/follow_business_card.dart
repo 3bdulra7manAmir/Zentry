@@ -11,7 +11,7 @@ import '../../domain/entity/business_entity.dart';
 
 class FollowBusinessCard extends StatelessWidget
 {
-  final Business business;
+  final BusinessEntity business;
   const FollowBusinessCard({super.key, required this.business,});
 
   @override
