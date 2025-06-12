@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../../core/services/database/shared_preference/app_database.dart';
-import '../app_colors.dart';
+import '../../../core/services/database/shared_preference/app_database.dart';
+import '../color_system/app_colors.dart';
 
 part 'theme_controller.g.dart';
 

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
@@ -19,16 +21,20 @@ class TestApp extends ConsumerWidget
       designSize: const Size(390, 844),
       builder: (context, child) => DevicePreview(
         enabled: false,
-        builder: (context) => MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          routerConfig: AppRouter.router,
-          locale: provider.currentLocale,
-          supportedLocales: AppLocalizations.supportedLocales,
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          themeMode: provider.currentThemeMode,
-          theme: AppTheme.lightTheme(),
-          darkTheme: AppTheme.darkTheme(),
-        ),
+        builder: (context)
+        {
+          log("Radius at startup: ${50.r}");
+            return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            routerConfig: AppRouter.router,
+            locale: provider.currentLocale,
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            themeMode: provider.currentThemeMode,
+            theme: AppTheme.lightTheme(),
+            darkTheme: AppTheme.darkTheme(),
+          );
+        },
       ),
     );
   }

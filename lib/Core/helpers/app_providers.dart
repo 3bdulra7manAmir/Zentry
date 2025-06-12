@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_app/features/follow_business/presentation/controllers/businesses_items_controller.dart';
 import '../../config/l10n/generated/app_localizations.dart';
-import '../../config/themes/color_system/controller/theme_controller.dart';
+import '../../config/themes/controller/theme_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/countries_icon_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/languages_icon_controller.dart';
