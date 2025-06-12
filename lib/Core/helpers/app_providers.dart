@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_app/features/follow_business/presentation/controllers/businesses_items_controller.dart';
-import '../../config/l10n/generated/app_localizations.dart';
 import '../../config/themes/controller/theme_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/initial_tabbar_controller.dart';
 import '../../features/auth/app_settings/presentation/controllers/settings_controllers/countries_icon_controller.dart';
@@ -47,6 +46,7 @@ class AppProvidersProvider
 
   // 🌍 Localization & Theme
   LocalizationController get localeController => ref.read(localizationControllerProvider.notifier);
+  LocalizationController get localeControllerWatcher => ref.watch(localizationControllerProvider.notifier);
   Locale get currentLocale => ref.watch(localizationControllerProvider);
 
   ThemeController get themeController => ref.read(themeControllerProvider.notifier);
@@ -64,6 +64,8 @@ class AppProvidersProvider
 
   String get selectedCountryLabel => getSelectedCountryName(ref, context);
   String get selectedCountryFlag => getSelectedCountryImage(ref, context);
+
+  //AsyncValue<bool> get isFirstLaunch => ref.watch(isFirstLaunchProvider);
 
   // 👤 Auth - TabBar & Sign Up Switchers
   void get switchToLoginTab => ref.read(tabIndexProvider.notifier).setIndex(0);
@@ -133,10 +135,4 @@ class AppProvidersProvider
 
   // ⬇️ Bottom Nav
   int get currentBottomNavIndex => ref.watch(bottomNavIndexProvider);
-}
-
-
-String getAppText(BuildContext context, String Function(AppLocalizations) selector,)
-{
-  return selector(AppLocalizations.of(context));
 }

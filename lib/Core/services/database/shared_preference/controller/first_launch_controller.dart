@@ -1,10 +1,9 @@
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 // import '../app_database.dart';
 
 // final isFirstLaunchProvider = FutureProvider<bool>((ref) async
 // {
-//   return await UserPreferences.instance.getIsFirstLaunch();
+//   return await UserPreferences.instance.getCachedIsFirstLaunch();
 // });
 
 

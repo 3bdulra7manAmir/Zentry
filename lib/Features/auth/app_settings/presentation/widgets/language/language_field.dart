@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../../core/helpers/app_providers.dart';
 import '../../../../../../core/helpers/app_reference.dart';
 import '../../../../../../core/widgets/app_container.dart';

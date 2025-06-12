@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/config/router/app_router_navigator.dart';
 import '../../../../../../config/l10n/generated/app_localizations.dart';
 import '../../../../../../config/router/app_router.dart';
-import '../../../../../../config/router/app_routes.dart';
 import '../../../../../../config/themes/color_system/app_colors.dart';
 import '../../../../../../core/constants/app_styles.dart';
 import '../../../../../../core/helpers/app_providers.dart';
@@ -22,7 +22,7 @@ class LoginButton extends ConsumerWidget
       buttonOnPressed: ()
       {
         provider.switchToLoginTab;
-        AppRouter.router.pushNamed(AppRoutes.kAuthTabs, queryParameters: {'tab': '0'});
+        AppRouter.router.pushAuthTab(tabInxdex: '0');
       },
     );
   }
